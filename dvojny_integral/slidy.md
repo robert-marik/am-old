@@ -213,7 +213,7 @@ Nejsnáze se při výpočtu dvojného integrálu pracuje s obdélníkovými
 množinami, tj. s množinami charakterizovanými nerovnostmi pro jednotlivé
 proměnné a konstantním omezením pro tyto proměnné. Analogicky se bude
 snadno pracovat v polárních souřadnicích s množinami, které by se staly
-obdélníky pro překreslení do souřadné soustavy $r$ a $\phi$. Takové
+obdélníky pro překreslení do souřadné soustavy $r$ a $\varphi$. Takové
 množiny jsou zobrazeny na následujících obrázcích.
 
 <style>
