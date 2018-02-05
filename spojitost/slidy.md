@@ -113,12 +113,16 @@ Elementární funkce jsou tedy všechny funkce, které umíme v konečném
   tvaru vyjádřit explicitním vzorcem za použití funkcí známých ze
   střední školy a cyklometrických funkcí.
 
+<i><small>Elementární neznamená jednoduchý. 
+Funkce $$f(x,y)=\frac{x^2+\sin(x^2-y^2)}{\ln(x^2+y^2-1)},\quad g(x,y)=\frac{1}{1+\frac x{1+\frac {y}{x^2}}} $$ jsou elemenárními funkcemi ve smyslu výše uvedené definice. Funkce $$h(x,y)=\begin{cases} 1 & x=0 \text{ nebo }y=0\\0 &\text{jinak}\end{cases}$$ není elementární funkce.
+</small>
+</i>
 
 Následující věta ukazuje, že u elementárních funkcí je spojitost v
 libovolném bodě zaručena již tím, že je funkce v tomto bodě
 definována.
 
 
-> Všechny [elementární funkce](http://cs.wikipedia.org/wiki/Elementární_funkce}) jsou spojité v každém vnitřním bodě svého definičního oboru.
+> **Věta:** Všechny [elementární funkce](http://cs.wikipedia.org/wiki/Elementární_funkce}) jsou spojité v každém vnitřním bodě svého definičního oboru.
 
 
