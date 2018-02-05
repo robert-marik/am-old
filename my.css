@@ -1,0 +1,87 @@
+img {max-width:80%; width:80%;  margin-right:auto; margin-left:auto; text-align:center; display:block;}
+
+.sloupce{-moz-column-count:2; /* Firefox */
+-webkit-column-count:2; /* Safari and Chrome */
+column-count:2;
+
+
+-webkit-column-rule:2px solid #999; /* Chrome, Safari, Opera */
+-moz-column-rule:2px solid #999; /* Firefox */
+column-rule:2px solid #999;
+}
+
+.sloupce div {display: inline-block; width:100%; maw-width:100%;}
+
+.red{color:red;}
+
+.title, .author {text-align:center;}
+
+li {
+    -webkit-column-break-inside:avoid;
+       -moz-column-break-inside:avoid;
+            column-break-inside:avoid;
+}
+
+.caption{color:gray; margin-right:auto; margin-left:auto; font-size:80%; text-align:center;}
+
+blockquote{
+-moz-border-radius: 8px;
+border-radius: 8px;
+color:black; 
+background-color:#d2ffd2; 
+padding:5px; 
+border:solid #006131;
+}
+
+blockquote em {color:red;}
+
+def blockquote{
+-moz-border-radius: 8px;
+background-color:#eee; 
+border-radius: 8px;
+color:black; 
+padding:5px; 
+}
+
+.slide h1 {border-bottom:solid 5px #006131; color: #006131;}
+
+.titlepage h1 {border-bottom:none; color: #222; color: #006131;}
+
+div.toolbar {background-color: #006131;}
+.toolbar  a:link {color: white;}
+.toolbar  a {color: white;}
+.toolbar  a:visited {color: white;}
+.toolbar  {color: white;}
+div.toolbar {color: white;}
+
+div.slidy_toc {background: none repeat scroll 0 0 #006131; }
+div.slidy_toc, div.slidy_toc a{color: white; }
+
+.sloupce_ .figure{max-width:30%; display:inline-block;  vertical-align:top;}
+
+.sloupce_ p, .sloupce_ ul, .sloupce_ blockquote{width:60%; display:inline-block;  vertical-align:top;}
+
+.sloupce_ blockquote p {width:95%;}
+
+.sloupce_ blockquote ul  {width:95%;}
+
+blockquote {display:inline-block; padding:2px; margin:5px; width:96%;}
+
+blockquote p {margin:5px;}
+
+sloupce div {display:inline-block;}
+
+
+.sloupce3{-moz-column-count:3; /* Firefox */
+-webkit-column-count:3; /* Safari and Chrome */
+column-count:3;}
+.sloupce4{-moz-column-count:4; /* Firefox */
+-webkit-column-count:4; /* Safari and Chrome */
+column-count:4;}
+.sloupce5{-moz-column-count:5; /* Firefox */
+-webkit-column-count:5; /* Safari and Chrome */
+column-count:5;}
+.sloupce6{-moz-column-count:6; /* Firefox */
+-webkit-column-count:6; /* Safari and Chrome */
+column-count:6;}
+.sloupce4 ul li {display:inline-block; max-width:100%;}

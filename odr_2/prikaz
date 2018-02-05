@@ -1,0 +1,4 @@
+pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.slidy -s slidy.md -o index.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 
+#pandoc -t html --css my.css -s slidy.md -o index_p.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 
+pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.deck -s slidy.md -o index_d.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+pandoc -t html  --css ../my.css -s slidy.md -o index_h.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML

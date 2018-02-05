@@ -1,0 +1,424 @@
+% Lineární diferenciální rovnice druhého řádu
+% Robert Mařík
+% jaro 2014
+
+# Lineární diferenciální rovnice druhého řádu
+
+<def>
+
+> **Definice.** Buďte $p$, $q$ a $f$
+> funkce definované a spojité na intervalu $I$. Diferenciální rovnice
+> $$
+>     y''+p(x)y'+q(x)y=f(x) \tag{LDE}\label{LDE}$$
+> se nazývá *lineární diferenciální rovnice druhého řádu*. *Řešením
+> rovnice* (nebo též *integrálem rovnice*) na intervalu $I$ rozumíme
+> funkci, která má spojité derivace do řádu $2$ na
+> intervalu $I$ a po dosazení identicky splňuje rovnost (LDE) na $I$.
+> Úloha nalézt řešení rovnice, které splňuje v\ bodě $x_0\in I$ *počáteční
+> podmínky*
+> $$\tag{IC}
+>     \begin{cases}
+>       y(x_0)=y_0,\\y'(x_0)=y'_0,
+>     \end{cases}$$
+> kde $y_0$ a $y'_0$ jsou reálná čísla, se nazývá *počáteční úloha*
+> (*Cauchyova úloha*). Řešení počáteční úlohy se nazývá *partikulární
+> řešení rovnice.*
+
+</def>
+
+**Zkratky:** LDE - lineární diferenciální rovnice, IC - počáteční podmínka, IVP - počáteční úloha 
+
+**Příklad:** Kmity tělesa o\ hmotnosti $m$ pružně připevněného k\ nehybné podložce spojem tuhosti $k$ jsou popsány diferenciální rovnicí
+${\ddot y+\frac km y=0}.$ Zde navíc používáme fyzikální úzus označovat
+derivace podle času pomocí tečky a ne čárky. Symbol $\ddot y$ tedy
+značí druhou derivaci funkce $y$, kde $y$ bereme jako funkci času.
+
+# Řešitelnost LDE druhého řádu
+
+<div class=sloupce>
+
+$$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
+
+> **Věta o existenci a jednoznačnosti řešení LDE druhého řádu.** Každá
+> počáteční úloha pro LDE druhého řádu má řešení, které je určeno
+> jednoznačně a toto řešení je definované na celém intervalu $I$.
+
+<def>
+
+> **Definice (speciální typy LDE druhého řádu).** Platí-li v\ rovnici (LDE) $f(x)=0$
+> pro všechna $x\in I$, nazývá se rovnice (LDE) *homogenní*, v\ opačném
+> případě *nehomogenní*. 
+> 
+> Jsou-li koeficienty $p(x)$ a $q(x)$ na intervalu
+> $I$ konstantní funkce, nazývá se (LDE) *rovnice s\ konstantními
+> koeficienty*.
+
+</def>
+
+<def>
+
+> **Definice (triviální řešení).** Funkce $y(x)\equiv 0$ je řešením
+> homogenní LDE druhého řádu vždy, bez ohledu na tvar koeficientů $p$,
+> $q$. Toto řešení nazýváme *triviální řešení
+> rovnice LDE*.
+
+</def>
+
+<def>
+
+> **Definice (asociovaná homogenní rovnice).** Nahradíme-li v\ nehomogenní LDE
+> pravou stranu (tj. funkci $f$) nulovou funkcí obdržíme rovnici
+> $$ y''+p(x)y'+q(x)y=0.$$
+> Tato rovnice se nazývá *asociovaná homogenní rovnice k\ rovnici (LDE)*.
+
+</def>
+
+<def>
+
+> **Definice (obecné řešení).** Všechna řešení LDE druhého řádu 
+> lze vyjádřit ve tvaru obsahujícím dvě nezávislé konstanty $C_1$,
+> $C_2\in\mathbb{R}$. Takovýto předpis se nazývá *obecné řešení rovnice (LDE)*.
+
+</def>
+
+
+</div>
+
+
+# Operátorová symbolika
+
+$$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
+
+<div class="sloupce__">
+
+<div>
+
+Podobně jako lineární diferenciální rovnice
+prvního řádu, i\ u (LDE) často pravou stranu rovnice často zkracujeme do
+tvaru $L[y](x)$. Definujeme-li tedy
+$$  L[y](x)=y''(x)+p(x)y'(x)+q(x)y(x),$$
+je tímto předpisem definován operátor, který každé dvakrát
+diferencovatelné funkci přiřazuje levou stranu rovnice (LDE). Rovnici
+(LDE) je potom možno zapsat ve tvaru $$L[y]=f(x).$$
+
+</div>
+
+> **Věta o linearitě.** Operátor $L[y]$ zachovává lineární kombinaci funkcí,
+> tj. pro libovolné dvě funkce $y_1$ a $y_2$ a libovolné reálné
+> konstanty $C_1$ a $C_2$ platí
+> $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2].$$
+
+</div>
+
+# Důsledky linearity
+
+Jako speciální případ vztahu  $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2].$$ dostáváme implikace
+
+$$\begin{aligned}
+ &L[y_2]=0  \text{ a } L[y_1]=f(x)\ \implies\  L[y_1+y_2]=f(x), \\
+ &L[y_1]=L[y_2]=f(x)\ \implies\  L[y_1-y_2]=0,\\ 
+ &L[y_1]=L[y_2]=0\ \implies \  L[C_1y_1+C_2y_2]=0,\\ \end{aligned}$$
+
+-   Součet řešení nehomogenní a asociované homogenní LDE je
+    řešením původní nehomogenní rovnice.
+
+-   Rozdíl dvou řešení nehomogenní LDE je řešením asociované homogenní
+    rovnice.
+
+-   Každá lineární kombinace dvou řešení homogenní LDE je opět řešením
+    této rovnice.
+
+
+# Důsledky linearity prakticky
+
+Vztah
+$$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$$
+poslouží (podoně jako u lineárních rovnic prvního řádu), abychom popsali strukturu množiny všech řešení rovnice a dokázali tuto množinu vytvořit jenom na základě znalosti několika prvků.
+
+Rovnice $$y''+y=x\tag{1}$$ má partikulární řešení $y=x$. 
+
+Asociovaná homogenní rovnice je $$y''+y=0.\tag{2}$$ Tato rovnice má řešení
+například $y=\sin x$, $y=\cos x$. Z linearity plyne
+
+* Funkce $y=C_1 \sin x+C_2 \cos x$ je řešením rovnice (1) pro libovolná reálná $C_1$, $C_2$. 
+
+* Funkce $y=C_1 \sin x+C_2\cos x +x$ je řešením rovnice (2) pro libovolná reálná $C_1$, $C_2$. 
+
+* Je-li funkce $y_p$ řešením rovnice (1), potom je $y_p-x$ řešením rovnice (2).
+
+
+
+# Kdy pomocí linearity získáme obecné řešení?
+
+Budeme studovat homogenní LDE druhého řádu, tj.
+rovnici 
+$$y''+p(x)y'+q(x)y=0,$$
+kterou můžeme zkráceně zapsat jako $L[y]=0$, kde operátor $L$ je
+lineární diferenciální operátor druhého řádu.
+
+**Motivace.** Budeme předpokládat že funkce $y_1(x)$ a $y_2(x)$ jsou obě
+řešeními a budeme hledat podmínky, za kterých je funkce
+
+$$y(x)=C_1y_1(x)+C_2y_2(x)$$
+
+obecným řešením. Derivováním tohoto vztahu získáváme
+
+$$y'(x)=C_1y'_1(x)+C_2y'_2(x)$$
+
+a dosazení počátečních podmínek $y(\alpha)=\beta$, $y'(\alpha)=\gamma$
+vede k\ následující soustavě lineárních rovnic s\ neznámými $C_1$, $C_2$
+
+$$
+\begin{aligned}
+  \beta&{}=C_1y_1(\alpha)+C_2y_2(\alpha),\\
+  \gamma&{}=C_1y'_1(\alpha)+C_2y'_2(\alpha).
+\end{aligned}$$
+
+Jak je známo z\ lineární algebry, tato soustava má právě jedno řešení pro
+libovolnou volbu čísel $\beta$, $\gamma$ právě tehdy, když matice
+soustavy, tj. matice $\begin{pmatrix}
+  y_1(\alpha)&y_2(\alpha)\\
+  y_1'(\alpha)&y_2'(\alpha)
+\end{pmatrix},$ je regulární. Tato matice je regulární právě tehdy, když její
+determinant je nenulový a to nastane právě tehdy když jeden sloupec není
+násobkem druhého. 
+
+
+# Homogenní LDE 2. řádu (wronskián, lineárně nezávislá řešení)
+
+$$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
+
+<def>
+
+> **Definice (lineární (ne-)závislost funkcí).** Buďte $y_1$ a $y_2$ funkce definované
+> na intervalu $I$. Řekneme, že funkce $y_1$ a $y_2$ jsou na intervalu $I$
+> *lineárně závislé*, jestliže jedna z\ nich je na intervalu $I$ násobkem
+> druhé, tj. jestliže existuje reálné číslo $k\in\mathbb{R}$ s\ vlastností
+> $$y_1(x)=ky_2(x) \qquad\text{pro všechna $x\in I$},$$
+> nebo
+> $$y_2(x)=ky_1(x) \qquad\text{pro všechna $x\in I$}.$$
+> V\ opačném případě říkáme, že funkce $y_1$, $y_2$ jsou na intervalu $I$
+> *lineárně nezávislé*.
+
+</def>
+
+<def>
+
+> **Definice (Wronskián).** Buďte $y_1(x)$ a $y_2(x)$ dvě libovolná
+> řešení homogenní rovnice (LDE0). *Wronskiánem* funkcí $y_1(x)$,
+> $y_2(x)$ rozumíme determinant
+> $$
+>     W[y_1, y_2](x)=
+>     \begin{vmatrix}
+>       y_1(x)&y_2(x)\\y_1'(x)&y_2'(x)
+>     \end{vmatrix}.
+>  $$
+
+</def>
+
+> **Věta o lineární (ne)závislostí řešení.** Buďte $y_1(x)$ a $y_2(x)$ dvě řešení rovnice
+> (LDE0) na intervalu $I$. Tato řešení jsou lineárně nezávislá právě
+> tehdy když je jejich Wronskián různý od nuly na intervalu $I$.
+
+
+# Homogenní LDE 2. řádu (obecné řešení)
+
+$$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
+
+<def>
+
+> **Definice (obecné řešení homogenní LDE)** Jsou-li $y_1$ a $y_2$ dvě
+> netriviální lineárně nezávislá řešení rovnice (LDE0) na intervalu
+> $I$, pak funkce $y$ definovaná vztahem
+> $$    y(x, C_1, C_2)=C_1y_1(x)+C_2y_2(x),$$
+> kde $C_{1,2}\in\mathbb{R}$, je obecným řešením rovnice (LDE0) na intervalu
+> $I$.
+
+</def>
+
+<def>
+
+> **Definice (fundamentální systém řešení).** Dvojici funkcí $y_1$ a $y_2$ z\ předchozí
+> věty nazýváme *fundamentální systém řešení rovnice (LDE0)*.
+
+</def>
+
+# Homogenní LDE 2. řádu s\ konstantními koeficienty
+
+
+Budeme studovat rovnici tvaru
+$$y''+py'+qy=0,$$
+kde $p,q\in \mathbb{R}$. Všimněme si nejprve následujícího faktu: Dosadíme-li do
+levé strany rovnice $y=e^{zx}$, kde $z$ je reálné číslo, po výpočtu
+derivací a po vytknutí faktoru $e^{zx}$ získáváme
+$$y''+py'+qy=e^{zx}(z^2+pz+q).$$
+Protože exponenciální faktor na pravé straně je vždy nenulový, bude
+výraz na pravé straně roven nule pokud bude splněna podmínka
+$$z^2+pz+q=0.$$
+Pouze v\ tomto případě bude uvažovaná funkce řešením rovnice (1).
+
+
+<def>
+
+> **Definice (charakteristická rovnice).** Kvadratická rovnice
+> $$z^2+pz+q=0$$ s\ neznámou $z$ se nazývá *charakteristická rovnice*
+> pro rovnici $$y''+py'+qy=0.$$
+
+</def>
+
+# Homogenní LDE 2. řádu s\ konstantními koeficienty
+
+> **Věta o obecném řešení LDE s\ konstantními koeficienty.**
+>  Uvažujme LDE $$y''+py'+qy=0,\tag{1}$$ a její charakteristickou rovnici
+>  $$z^2+pz+q=0.$$
+> 
+> -   Jsou-li $z_1,z_2\in\mathbb{R}$ dva různé reálné kořeny charakteristické
+>     rovnice, definujme $${y_1=e^{z_1 x}}, \qquad{y_2=e^{z_2 x}}.$$
+> 
+> -   Je-li $z_1\in\mathbb{R}$ dvojnásobným kořenem charakteristické
+>     rovnice, definujme $${y_1=e^{z_1 x}}, \qquad{y_2=xe^{z_1 x}}.$$
+> 
+> -   Jsou-li $z_{1,2}=\alpha\pm i\beta\not\in\mathbb{R}$ dva komplexně sdružené
+>     kořeny charakteristické rovnice, definujme $${y_1(x)=e^{\alpha x}\cos(\beta x)}, \qquad
+>     {y_2(x)=e^{\alpha x}\sin(\beta x)}.$$
+> 
+> Potom obecné řešení rovnice (1) je
+> $$y(x,C_1,C_2)=C_1y_1(x)+C_2y_2(x),\qquad C_1\in\mathbb{R},\ C_2\in\mathbb{R}.$$
+
+
+# Nehomogenní LDE 2. řádu
+
+
+> **Věta o obecném řešní nehomogenní LDE.** Součet libovolného partikulárního řešení
+> nehomogenní lineární diferenciální rovnice a obecného řešení asociované
+> homogenní rovnice je obecným řešením původní nehomogenní rovnice
+
+
+Následující věta udává jednu z\ metod nalezení partikulárního řešení,
+pokud je diferenciální rovnice do jisté míry speciální: má konstantní
+koeficienty a polynomiální pravou stranu.
+
+> **Věta (metoda neurčitých koeficientů).** Uvažujme lineární diferenciální rovnici
+> druhého řádu
+> $$y''+py'+qy=P_n(x),$$
+> kde $p\in\mathbb{R}$ je konstanta, $q\in\mathbb{R}\setminus\{0\}$ je nenulová konstanta
+> a $P_n(x)$ je polynom stupně $n$. Existuje polynom stupně $n$, který je
+> partikulárním řešením této diferenciální rovnice.
+
+V\ praxi polynom který má být řešením napíšeme s\ neurčitými koeficienty a
+dosazením do rovnice určíme potřebné hodnoty těchto koeficientů.
+
+
+# Dirichletova okrajová úloha, vlastní čísla
+
+Někdy je nutné řešit diferenciální rovnice druhého řádu s jinými než
+počátečními podmínkami. Ukážeme si na jednoduchém příkladě odlišnost
+od počáteční úlohy. Následující úloha má velké uplatnění při studiu
+kmitavých pohybů.
+
+
+Pro parametr $\lambda\in\mathbb{R}$ najděte řešení rovnice 
+$$y''+\lambda y=0 \tag{*}$$
+splňující podmínky
+$$y(0)=0=y(1). \tag{**}$$
+
+<def>
+
+> **Definice (okrajová úloha).** Úloha najít řešení diferenciální
+> rovnice (\*), které splňuje podmínky (\*\*) se nazývá (Dirichletova)
+> *okrajová úloha*.
+
+</def>
+
+Odlišnost Dirichletovy úlohy od (Cauchyovy) počáteční úlohy je v tom,
+že nezadáváme funkční hodnotu a derivaci v jednom bodě, ale funkční
+hodnotu ve dvou různých bodech.
+
+
+Jedno z\ řešení Dirichletovy úlohy je triviální řešení
+$y(x)=0$. Ukazuje se, že netriviální řešení existuje jen pro některé
+hodnoty parametru $\lambda$.  
+
+<def>
+
+> **Definice (vlastní funkce, vlastní hodnota).** Hodnota $\lambda$,
+> pro kterou existuje netriviální řešení Dirichletovy okrajové úlohy
+> se nazývá *vlastní hodnota okrajové úlohy* a příslušné řešení se
+> nazývá *vlastní funkce okrajové úlohy*.
+
+</def>
+
+# Výpočet vlastních hodnot
+
+<div class=sloupce>
+
+<div>
+
+Je-li $\lambda>0$, je řešením rovnice $$y''+\lambda y=0 \tag{*}$$
+funkce
+$$y(x)=C_1\sin(\sqrt \lambda x)+C_2\cos(\sqrt \lambda x).$$
+Z\ podmínky $y(0)=0$ dostáváme $C_2=0$. Tedy
+$$y(x)=C_1\sin(\sqrt\lambda x).$$
+
+Z\ podmínky $y(1)=0$ dostáváme 
+$$0=C_1\sin(\sqrt\lambda),$$
+která je splněna pokud $C_1=0$, nebo $\sqrt\lambda=k\pi$, $k\in\mathbb{Z}$
+
+
+Okrajová úloha $$y''+\lambda y=0, \quad y(0)=0=y(1)$$ má vlastní hodnoty 
+$\lambda=(k\pi)^2$, $k\in\mathbb{Z}$
+
+
+</div>
+
+<div>
+
+**Kmity struny**
+
+Při kmitání struny délky $l$ upevněné na koncích se ukazuje, že proces
+je možno modelovat okrajovou úlohou $$y''+\lambda^2 y=0,
+y(0)=0=y(l).$$ Rovnice má obecné řešení $$y(x)=C_1\sin( \lambda
+x)+C_2\cos( \lambda x)$$ Z\ podmínky $y(0)=0$ dostáváme $C_2=0$ a z
+podmínky $y(l)=0$ dostáváme $$y(x)=C_1\sin(\lambda x)$$ pokud
+$$\lambda l=k\pi \tag{***}$$ a $y=0$ jinak. Při podrobnějším popisu
+(jedna ze závěrečných přednášek semestru) se ukazuje, že $\lambda$
+souvisí s hmotností struny, napětím ve struně a frekvencí, kterou
+slyšíme. Podmínka (\*\*\*) určuje spektrum slyšitelných frekvencí, na
+kterých může struna kmitat, výsledný pohyb (a zvuk) je složením
+jednotlivých variant.
+
+</div>
+
+</div>
+
+
+# Neumannova a smíšená okrajová úloha
+
+
+
+Při řešení Dirichletovy úlohy hledáme řešení diferenciální rovnice
+druhého řádu s předepsanými hodnotami ve dvou různých bodech
+$$y(a)=\alpha,\quad y(b)=\beta.$$
+Tento požadavek se uplatní při studiu kmitů struny nebo tyče s pevnými
+konci.
+
+V praxi je možné si představit i jiné podmínky. Například v
+termodynamice se používají podmínky na hodnotu derivací ve dvou
+různých bodech $$y'(a)=\alpha, \quad y'(b)=\beta.$$ Takové podmínky se
+nazývají Neumannovy podmínky a úloha najít řešení rovnice, které tyto
+podmínky splňuje se nazývá **Neummannova okrajová úloha**, též
+**Neumannova úloha**.
+
+<div class='sloupce'>
+
+Existují i smíšené úlohy, například při kmitání tělesa s\ jedním
+upevněným a jedním volným koncem je přirozené formulovat **smíšenou
+okrajovou podmínku** $$y(a)=0,\quad y'(b)=0,$$ kde $a$ je upevněný konec a
+$b$ volný konec.
+
+
+![Array mbira - hudební nástroj se smíšenou okrajovou úlohou](array_mbira.jpg) 
+
+
+</div>
+
