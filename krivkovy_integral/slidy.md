@@ -327,7 +327,7 @@ Tato vlastnost je stejná jako u křivkového integrálu prvního druhu.
 <div class="sloupce">
 
 Nechť je dána křivka $C$ s lineární hustotou $\tau(x,y)$.
-Nechť křivka $C$ splňuje $\int_C \tau(x,y)\;\mathrm{d}s=0$, tj. nechť
+Nechť křivka $C$ splňuje $\int_C x \tau(x,y)\;\mathrm{d}s=0$, tj. nechť
 osa $y$ prochází těžištěm křivky $C$. Určete moment setrvačnosti
 křivky vhledem k ose $o$ rovnoběžné s $y$ ve vzdálenosti $d$ od osy $y$.
 
