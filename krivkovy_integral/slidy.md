@@ -1,6 +1,6 @@
 % Křivkový integrál
 % Robert Mařík
-% jaro 2014
+% jaro 2014, 2018
 
 # Křivkový integrál
 
@@ -111,7 +111,7 @@ $$
 $$
 a integrál má tvar
 $$
-\int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{\varphi'^2(t)+\psi'^2(t)+\xi^2}\;\mathrm{d} t.
+\int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{\varphi'^2(t)+\psi'^2(t)+\xi^2(t)}\;\mathrm{d} t.
 $$
 
 # Vlastnosti křivkového integrálu prvního druhu
@@ -332,20 +332,21 @@ osa $y$ prochází těžištěm křivky $C$. Určete moment setrvačnosti
 křivky vhledem k ose $o$ rovnoběžné s $y$ ve vzdálenosti $d$ od osy $y$.
 
 *Řešení*
+Podle toho zda osa $o$ je nalevo nebo napravo od osy $y$ dostáváme jednu z následujících variant.
 $$\begin{aligned}
-J_o&=\int_C(x+d)^2\tau \;\mathrm{d}s\\
-&=\int_C(x^2+2xd+d^2)\tau \;\mathrm{d}s\\
-&=\int_C x^2\tau \;\mathrm{d}s + 2d\int_C x\tau \;\mathrm{d}s + d^2 \int_C \tau \;\mathrm{d}s.
+J_o&=\int_C(x\pm d)^2\tau \;\mathrm{d}s\\
+&=\int_C(x^2\pm 2xd+d^2)\tau \;\mathrm{d}s\\
+&=\int_C x^2\tau \;\mathrm{d}s \pm 2d\int_C x\tau \;\mathrm{d}s + d^2 \int_C \tau \;\mathrm{d}s.
 \end{aligned}
 $$
-Na pravé straně vidíme moment otáčení vzhledem k ose $y$
-$$J_{yT}=\int_C x^2\tau \;\mathrm{d}s$$ a hmotnost křivky
-$$m_C=\int_C \tau \;\mathrm{d}s.$$
-Dále ze zadání vidíme, že jeden ze členů je roven nule.
+Na pravé straně vidíme, že prvním členem je moment otáčení vzhledem k ose $y$
+$$J_{yT}=\int_C x^2\tau \;\mathrm{d}s$$ a ve třetím členu je obsažena hmotnost křivky
+$$m=\int_C \tau \;\mathrm{d}s.$$
+Dále ze zadání vidíme, že prostřední člen je roven nule.
 V označení výše náš vztah dostává tvar
-$$J_o=J_{yT}+m_C d^2.$$
+$$J_o=J_{yT}+m d^2.$$
 Tento vztah se nazývá Steinerova věta. Ukazuje, že moment setrvačnosti
-je nejmenší vzhledem k ose otáční procházející těžišťěm (člen $m_C
+je nejmenší vzhledem k ose otáční procházející těžišťěm (člen $m
 d^2$ je vždy nezáporný) a umožňuje přepočet momentu setrvačnosti pro
 rovnoběžné osy.
 
