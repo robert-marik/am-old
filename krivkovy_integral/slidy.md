@@ -91,7 +91,7 @@ $$\mathrm{d}s=|\mathrm{d}\vec r(t)|=\sqrt{(\varphi'(t))^2 + (\psi'(t))^2}\mathrm
 Tím se křivkový integrál prvního druhu funkce $f(x,y)$ po křivce $C$
 transformuje na Riemannův integrál
 $$
-\int_C f\;\mathrm{d} s=\int_\alpha^\beta F(\varphi(t),\psi(t))\sqrt{\varphi'^2(t)+\psi'^2(t)}\;\mathrm{d} t.
+\int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t))\sqrt{\varphi'^2(t)+\psi'^2(t)}\;\mathrm{d} t.
 $$
 
 ![Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky](delkovy_element.png)

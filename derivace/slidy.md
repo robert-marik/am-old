@@ -169,11 +169,11 @@ tj. $f(x_0,y_0)=C$.
 <div class='sloupce'>
 
 * Normálový vektor tečny je 
-  $$ \nabla f(x_0,y_0)=\left(\frac{\partial f}{\partial x}(x_0,y_0), \frac{\partial f}{\partial y}(x_0,y_0)\right),$$
+  $$ \nabla f(x_0,y_0)=\left(\frac{\partial f (x_0,y_0)} {\partial x}, \frac{\partial f (x_0,y_0)}{\partial y}\right),$$
   k němu kolmý je vektor
-  $$ \left(-\frac{\partial f}{\partial y}(x_0,y_0), \frac{\partial f}{\partial x}(x_0,y_0)\right)$$
+  $$ \left(-\frac{\partial f (x_0,y_0)}{\partial y}, \frac{\partial f (x_0,y_0)}{\partial x}\right)$$
   a po znormování první komponenty dostáváme směrový vektor tečny ve tvaru 
-  $$ \left(1, -\frac{\frac{\partial f}{\partial x}(x_0,y_0)}{\frac{\partial f}{\partial y}(x_0,y_0)}\right).$$
+  $$ \left(1, -\frac{\frac{\partial f (x_0,y_0)}{\partial x}}{\frac{\partial f (x_0,y_0)}{\partial y}}\right).$$
   Druhá komponenta tohoto vektoru je derivací funkce, která je dána implicitně rovnicí (1).
   To vše za podmínky, že první komponenta normálového vektoru je nenulová.
 * Poznámka: bez újmy na obecnosti většinou při definici implicitní funkce bereme $C=0$. Vskutku,
@@ -196,13 +196,13 @@ tj. $f(x_0,y_0)=C$.
 >  Rovnice $$f(x,y)=0$$ vrstevnice na úrovni $0$ popisuje křivku
 >   procházející bodem $(x_0, y_0)$.
 >
-> * Platí-li $$\frac{\partial f}{\partial y}(x_0, y_0)\neq 0,$$ je rovnicí
+> * Platí-li $$\frac{\partial f (x_0,y_0)}{\partial y}\neq 0,$$ je rovnicí
 >    $f(x,y)=0$ v okolí bodu $(x_0, y_0)$ implicitně určena
 >    **právě jedna spojitá funkce** $y=g(x)$ (tj. vrstevnice je
 >    v okolí bodu $(x_0, y_0)$ grafem nějaké spojité funkce $g$).
 > * Funkce $g$ z předchozího bodu **má v $x_0$ derivaci**
 >   $$
->      g'(x_0)=-\frac{\frac{\partial f}{\partial x}(x_0, y_0)}{\frac{\partial f}{\partial y}(x_0, y_0)}.
+>      g'(x_0)=-\frac{\frac{\partial f (x_0,y_0)}{\partial x}}{\frac{\partial f (x_0,y_0)}{\partial y}}.
 >   $$
 
 ![Tečna k vrstevnici](implicitni_3.png) 
