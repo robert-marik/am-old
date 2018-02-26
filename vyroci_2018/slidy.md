@@ -100,6 +100,47 @@ $$ab > 1+\frac{3}{2} \pi.$$
 > zapsat jako lineární kombinace hladkých sinusovek resp. kosinusovek,
 > se setkáme na konci semestru u Fourierova rozvoje funkcí.
 
+
+
+# Týden 26.2. až 4.3.  (1/2)
+
+
+![](Cantor.jpg)
+
+**Georg Ferdinand Ludwig Philipp Cantor** 
+(3. března 1845 Petrohrad až 6. ledna, 1918 Halle), byl významný německý
+matematik a logik.
+
+Definoval reálná čísla!
+
+Zakladel teorie množiny. Studoval "škaredé" množiny (např. Cantorovo
+diskontinuum), dnes zahrnuté mezi fraktály.
+
+Dokázal větu dnes pojmenovanou po něm, která říká, že (silně
+zjednodušeno) množina všech podmnožin dané množiny obsahuje více prvků
+než původní množina. To je celkem zřejmé pro konečné množiny, ale
+revolučnost této věty je v tom, že platí i pro nekonečné množiny. V
+konečném důsledku to znamená, že existuje více nekonečen než jedno.
+Dokázal větu, že počet bodů na úsečce je „stejný“ jako počet bodů ve
+čtverci resp. v krychli jakékoli (spočetné) dimenze. Je to natolik
+paradoxní tvrzení, že i sám Cantor se svému důkazu podivoval a napsal
+Dedekindovi: Vidím to před sebou, ale nemohu tomu uvěřit.
+
+# Týden 26.2. až 4.3.  (2/2)
+
+
+![](Hamann.jpg)
+![](meR27.jpg)
+![](Curta.jpg)
+
+**Christel Hamann**
+(27. února 1870 až 9. června 1948) německý inženýr.
+
+* sestrojil hned několik konstrukčně odlišných komerčně úspěšných kalkulátorů, které dokázaly samočinně dělit,
+* sestrojil první kalkulátor který dokázal všechny čtyři základní aritmetické operace provádět plně automaticky, bez zásahu uživatele (Mercedes Euklid)
+* sestrojil kalkulátor velice kompaktního provedení, který později sloužil jako předobraz prvního (a jediného) kapesního mechanického kalkulátoru (Curta vynálezce Curta Herzstarka).
+
+
 <!--
 
 # Týden 20.2. až 26.2.

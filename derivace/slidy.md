@@ -115,7 +115,7 @@ označovaný **zákon šíření chyb**.
   parciální derivaci $\frac{\partial f}{\partial x}$.
 * Gradient je v každém bodě kolmý k vrstevnici.
 * Využití:
-    * síla působící na těleso v silovém poli ve kterém je možno zavést potenciální energii je gradientem potenciální energie.
+    * síla působící na těleso v silovém poli ve kterém je možno zavést potenciální energii je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient).
     * majáková navigace při migraci živočichů
     * posouzení jak rychle se mění veličina v prostoru (gradient je velký, jsou-li vrstevnice nahusto)
 * [nakreslit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=sage&in=f%28x%2Cy%29%3Dx%5E2%2Ay-x%2Ay%5E3%0D%0Amezex%3D%28x%2C1%2C4%29%0D%0Amezey%3D%28y%2C-1%2C2%29%0D%0Ahladiny%3D40%0D%0Ashow%28html%28%22%3Ch2%3EVrstevnice+a+gradient%3C%2Fh2%3E+Funkce%3A+%24+f%28x%2Cy%29%3D+%25s+%24%22%25+latex%28f%28x%2Cy%29%29%29%29%0D%0A%0D%0Ashow%28html%28r%27Gradient%3A+%24%5Cnabla+f%28x%2Cy%29%3D%28%25s%2C%25s%29%24%27%25%28latex%28f%28x%2Cy%29.diff%28x%29%29%2C+latex%28f%28x%2Cy%29.diff%28y%29%29%29%29%29%0D%0A%0D%0AP%3Dcontour_plot%28f%2Cmezex%2Cmezey%2C+contours%3Dhladiny%2C+cmap%3D%27jet%27%2C+fill%3DFalse%29%0D%0AP%3DP%2Bplot_vector_field%28f.gradient%28%29%2Fnorm%28f.gradient%28%29%29%2C+mezex%2C+mezey%29%0D%0A%0D%0Ashow%28P%2C+figsize%3D10%2C+aspect_ratio%3D1%29)
@@ -284,6 +284,30 @@ k vrstevnici, tj. na vektor $\left(\frac{\mathrm{d} x}{\mathrm{d} t}, \frac{\mat
 
 
 
+# Druhá derivace
+
+* Druhá derivace je derivace první derivace. U funkce dvou proměnných připadají v úvahu čtyři kombinace.
+  $$
+\frac{\partial}{\partial x}\frac{\partial}{\partial x}f,\quad 
+\frac{\partial}{\partial x}\frac{\partial}{\partial y}f,\quad 
+\frac{\partial}{\partial y}\frac{\partial}{\partial x}f,\quad 
+\frac{\partial}{\partial y}\frac{\partial}{\partial y}f.
+$$
+
+> **Věta (Schwarzova).** Jsou-li smíšené derivace hladké na otevřené množině, jsou zde stejné, tj. platí  $$ \frac{\partial }{\partial x}
+  \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}
+  \frac{\partial f}{\partial x}.$$
+
+Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát
+  $$
+\frac{\partial^2}{\partial x^2}f,\quad 
+\frac{\partial^2}{\partial x \partial y}f,\quad 
+\frac{\partial^2}{\partial y^2}f
+$$
+nebo
+$$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
+
+
 
 
 # Separace proměnných
@@ -340,31 +364,6 @@ $$
 
 
 
-# Druhá derivace
-
-* Druhá derivace je derivace první derivace. U funkce dvou proměnných připadají v úvahu čtyři kombinace.
-  $$
-\frac{\partial}{\partial x}\frac{\partial}{\partial x}f,\quad 
-\frac{\partial}{\partial x}\frac{\partial}{\partial y}f,\quad 
-\frac{\partial}{\partial y}\frac{\partial}{\partial x}f,\quad 
-\frac{\partial}{\partial y}\frac{\partial}{\partial y}f.
-$$
-
-> **Věta (Schwarzova).** Jsou-li smíšené derivace hladké na otevřené množině, jsou zde stejné, tj. platí  $$ \frac{\partial }{\partial x}
-  \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}
-  \frac{\partial f}{\partial x}.$$
-
-Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát
-  $$
-\frac{\partial^2}{\partial x^2}f,\quad 
-\frac{\partial^2}{\partial x \partial y}f,\quad 
-\frac{\partial^2}{\partial y^2}f
-$$
-nebo
-$$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
-
-
-
 
 # Laplaceův operátor
 
@@ -388,6 +387,8 @@ $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
 * Laplaceův operátor vystupuje v problémech týkajících se
   elektrického nebo gravitačního potenciálu, difuze, nebo kmitů a
   šíření vln.
+    * Vlnová rovnice popisující vlnění resp. chvění je rovnice $$\frac{1}{c^2} \frac{\partial ^2 u}{\partial t^2} = \nabla^2 u.$$ Například u kmitání struny nebo membrány je v odovození této rovnice i lineární aproximace $\sin x\approx x$.
+    * Vedení tepla  v prostředí bez zdrojů nebo spotřebičů tepla je popsáno rovnicí $$\frac{\partial u}{\partial t}=D\nabla^2 u.$$
 
 
 
