@@ -141,6 +141,89 @@ Dedekindovi: Vidím to před sebou, ale nemohu tomu uvěřit.
 * sestrojil kalkulátor velice kompaktního provedení, který později sloužil jako předobraz prvního (a jediného) kapesního mechanického kalkulátoru (Curta vynálezce Curta Herzstarka).
 
 
+# Týden 5.3. až 12.3.  (1/3)
+
+![](Verrier.jpg)
+
+**Urbain Jean Joseph Le Verrier** (11. března, 1811 – 23. září, 1877)
+  byl francouzský matematik, který se zabýval nebeskou mechanikou.
+
+Celosvětové slávy se dočkal po propočítání přesných souřadnic místa,
+kde by se měla nacházet osmá planeta sluneční soustavy – Neptun.
+
+Byl to obrovský úspěch vědy. Podařilo se předpovědět planetu
+teoreticky a poté byla tato planeta opravdu nalezena.
+
+*Wikipedie:* Největším Le Verrierovým úspěchem byla matematická předpověď existence
+a výpočet pozice v té době neznámé planety Neptun, jež provedl na
+základě astronomických pozorování a výpočtů Alexise Bouvarda. Do této
+práce se pustil z podnětu tehdejšího ředitele pařížské hvězdárny
+Françoise Araga. Jako podklad mu posloužila pouze
+matematická a astronomická pozorování oběžné dráhy tehdy poslední
+známé planety naší sluneční soustavy Uranu. Na dlouhé měsíce se Le
+Verrier ponořil do složitých výpočtů, jež měly vysvětlit malé, avšak
+neustále se opakující nesrovnalosti mezi Newtonovým gravitačním
+zákonem a Bouvardovým pozorováním oběžné dráhy Uranu.
+
+
+# Týden 5.3. až 12.3.  (2/3)
+
+![](Bush.jpg)
+
+**Vannevar Bush** (11. března 1890 – 30. června 1974) byl americký
+vědec, státní úředník, vizionář, profesor MIT, viceprezident MIT a
+děkan z jedné fakult.
+
+V roce 1927 zkonstruoval analyzátor diferenciálních rovnic --
+mechanický počítač na řešení diferenciálních rovnic a jejich soustav.
+
+[Video 1](https://youtu.be/TQj3PsSDoUo), [Video 2](https://youtu.be/hIinz4fKGpo)
+
+Účastnil se projektu Manhattan.  Patřil mezi nejvlivnější vědce ve
+Spojených státech amerických. Byl tak významný, že o něm tehdy jeden z
+vědců prohlásil: „Z mužů, jejichž smrt by pro USA byla v létě 1940
+největší katastrofou, by byl na prvním místě pan prezident a
+Dr. Vannevar Bush na místě druhém či třetím.“
+
+V roce 1945 navrhl projekt zařízení Memex, fungujícího na princípu
+hypertextu. Tím se zařadil mezi vizionáře, kteří nastínili funkci
+dnešního Internetu.
+
+
+# Týden 5.3. až 12.3.  (3/3)
+
+
+![](Gamow.jpg)
+
+**George Gamow** (4. března 1904 – 20. srpna 1968) byl americký fyzik
+  původem z Ukrajiny. Zabýval se kvantovou mechanikou, atomovou a
+  jadernou fyzikou, astrofyzikou a kosmologií. Koncem 40.let také
+  předpověděl, že by celý vesmír mělo rovnoměrně vyplňovat chladné
+  mikrovlnné záření, které je pozůstatkem prvotního výbuchu. Jeho
+  revoluční myšlenka: ,,Náš vesmír je vlastně obrovská exploze, která
+  pokračuje dodnes!" Jako první přišel s teorií vzniku vesmíru, kterou
+  jeho odpůrce Hoyle posměšně označil jako „velký třesk“.
+
+George Gamow byl velkým popularizátorem moderní fyziky a vědy vůbec. V
+zimě roku 1938 napsal krátkou, vědecko-fantastickou povídku, v níž se
+pokoušel populárně vysvětlit základní myšlenky teorie zakřiveného
+prostoru a expandujícího vesmíru. V povídce se rozhodl zvětšit
+existující relativistické efekty do takové míry, aby je mohl snadno
+pozorovat hrdina povídky C.G.H. Tompkins, bankovní úředník zajímající
+se o moderní vědu (iniciály pana Tompkinse vznikly ze tří základních
+fyzikálních konstant – rychlosti světla c, gravitační konstanty G a
+Planckovy kvantové konstanty h).
+
+Tak se v časopise Discovery objevila řada povídek o panu Tompkinsovi,
+v nichž byla popularizována teorie relativity a kvantová teorie. V
+roce 1940 vydavatelství navrhlo Gamowovi, aby články dále rozšířil o
+několik dalších povídek a vydal je jako knihu. Kniha vyšla pod názvem
+Pan Tompkins v říši divů v roce 1940. Kniha vyšla i v češtině.
+
+
+
+
+
 <!--
 
 # Týden 20.2. až 26.2.
@@ -182,37 +265,6 @@ počítal z hlavy.
 # Týden 27.2. až 5.3. (1/2)
 
 
-![](Laplace.jpg)
-![](bolid.jpg)
-
-
-**Pierre Simon de Laplace** (23. března 1749 - 5. března 1827) byl francouzský matematik, fyzik, astronom a politik. 
-Laplace je právem považován za jednoho z největších vědců
-vůbec. Zanechal monumentální dílo již svým rozsahem.  Zabýval se
-matematickou analýzou, teorií pravděpodobnosti, nebeskou mechanikou.
-
-Laplace je také více než mnoho jiných velikánů vědy spojován se
-zakořeněnými pověrami a názory, které nikdy prokazatelně nehlásal. Je
-zejména často zcela neprávem považován za naivního propagátora
-představy absolutně deterministického vesmíru, analogického
-kolosálnímu hodinovému stroji, který by po zadání všech rovnic a
-počátečních podmínek všech částic ve vesmíru umožňoval absolutně
-přesně předvídat budoucnost. Jde však o pouhou tradovanou
-pověru. Laplace zastával názor právě opačný.
-
-**Nebeská mechanika**
-
-* Laplace Napoleonovi dedikoval svou knihu o nebeské mechanice. Též se
-  vypráví, že Laplace byl Napoleonem žertem tázán, proč se ve své
-  knize o nebeské mechanice nikde nemluví o Bohu. Laplace prý
-  odpověděl slavnou větou: „Občane první konzule, tuto hypotézu jsem
-  nikde nepotřeboval“.
-* Jeho práce přispěly významně k tomu, že dnes umíme počítat [zatmění
-  Slunce a Měsíce](http://astro.sci.muni.cz/zatmeni/) (letos bude
-  21.8.2017 v USA) nebo počítat [dráhy
-  meteoritů](http://www.astro.cz/clanek/6538).
-* Shodou okolností je nejstarší zaznamenané zatmění Slunce datováno na 5. března 1223 př.n.l., 3050 let před Laplaceovou smrtí.
-
 
 # Týden 27.2. až 5.3. (2/2)
 
@@ -245,55 +297,6 @@ několik dalších povídek a vydal je jako knihu. Kniha vyšla pod názvem
 Pan Tompkins v říši divů v roce 1940. Kniha vyšla i v češtině.
 
 
-
-# Týden 7.3. až 13.3.
-
-![](Bush.jpg)
-
-**Vannevar Bush** (11. března 1890 – 30. června 1974) byl americký
-vědec, státní úředník, vizionář, profesor MIT, viceprezident MIT a
-děkan z jedné fakult.
-
-V roce 1927 zkonstruoval analyzátor diferenciálních rovnic --
-mechanický počítač na řešení diferenciálních rovnic a jejich soustav.
-
-[Video 1](https://youtu.be/TQj3PsSDoUo), [Video 2](https://youtu.be/hIinz4fKGpo)
-
-Účastnil se projektu Manhattan.  Patřil mezi nejvlivnější vědce ve
-Spojených státech amerických. Byl tak významný, že o něm tehdy jeden z
-vědců prohlásil: „Z mužů, jejichž smrt by pro USA byla v létě 1940
-největší katastrofou, by byl na prvním místě pan prezident a
-Dr. Vannevar Bush na místě druhém či třetím.“
-
-V roce 1945 navrhl projekt zařízení Memex, fungujícího na princípu
-hypertextu. Tím se zařadil mezi vizionáře, kteří nastínili funkci
-dnešního Internetu.
-
-
-# Týden 7.3. až 13.3.(2/2)
-
-
-![](Verrier.jpg)
-
-**Urbain Jean Joseph Le Verrier** (11. března, 1811 – 23. září, 1877)
-  byl francouzský matematik, který se zabýval nebeskou mechanikou.
-
-Celosvětové slávy se dočkal po propočítání přesných souřadnic místa,
-kde by se měla nacházet osmá planeta sluneční soustavy – Neptun.
-
-Byl to obrovský úspěch vědy. Podařilo se předpovědět planetu
-teoreticky a poté byla tato planeta opravdu nalezena.
-
-*Wikipedie:* Největším Le Verrierovým úspěchem byla matematická předpověď existence
-a výpočet pozice v té době neznámé planety Neptun, jež provedl na
-základě astronomických pozorování a výpočtů Alexise Bouvarda. Do této
-práce se pustil z podnětu tehdejšího ředitele pařížské hvězdárny
-Françoise Araga. Jako podklad mu posloužila pouze
-matematická a astronomická pozorování oběžné dráhy tehdy poslední
-známé planety naší sluneční soustavy Uranu. Na dlouhé měsíce se Le
-Verrier ponořil do složitých výpočtů, jež měly vysvětlit malé, avšak
-neustále se opakující nesrovnalosti mezi Newtonovým gravitačním
-zákonem a Bouvardovým pozorováním oběžné dráhy Uranu.
 
 # Týden 14.3. až 20.3.
 

@@ -7,7 +7,7 @@ používanými v\ matematické fyzice. Jedná se o\ rovnice zachycující
 matematicky děje okolo nás. Protože se bude jednat o\ rovnice, kde
 neznámé jsou funkce více proměnných a v\ rovnicích vystupují i\ derivace
 těchto funkcí, patří tyto rovnice do kategorie parciálních
-diferenciálních rovnic.parciální diferenciální rovnice Naprostá většina
+diferenciálních rovnic. Naprostá většina
 fyzikálních zákonů a procesů je matematicky formulována právě pomocí
 parciálních diferenciálních rovnic nebo jejich integrálních ekvivalentů
 a vztahy, které známe například ze střední školy, jsou aproximacemi
@@ -34,7 +34,7 @@ podkapitolách vynechávat (položíme je rovny jedné). Toto není na úkor
 obecnosti, protože číselné velikosti konstant lze měnit vhodnou volbou
 fyzikálních jednotek. Můžeme například délku měřit v\ tak obrovských
 jednotkách, že rychlost světla ve vakuu bude rovna jedné. Že je taková
-jednotka velmi nepraktická při měření prováděná v\ běžném životě není pro
+jednotka velmi nepraktická při měření v\ běžném životě není pro
 matematické studium povahy problému nijak podstatné.
 
 # Rovnice kontinuity (bilance množství stavové veličiny)

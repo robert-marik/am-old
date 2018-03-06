@@ -129,8 +129,8 @@ Použijeme definici divergence, větu o derivaci součtu a přeskupíme sčítan
 \frac{\partial }{\partial x}\left(\frac{\partial R}{\partial y}-\frac{\partial
     Q}{\partial z}\right) +
     \frac{\partial }{\partial y}\left( \frac{\partial P}{\partial z}-\frac{\partial
-    R}{\partial x}\right)
-    \frac{\partial }{\partial z}+ \left( \frac{\partial Q}{\partial x}-\frac{\partial
+    R}{\partial x}\right) +
+    \frac{\partial }{\partial z} \left( \frac{\partial Q}{\partial x}-\frac{\partial
     P}{\partial y}\right)
 \\
   &=\frac{\partial }{\partial x}\frac{\partial R}{\partial y}
