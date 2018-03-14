@@ -141,7 +141,7 @@ Dedekindovi: Vidím to před sebou, ale nemohu tomu uvěřit.
 * sestrojil kalkulátor velice kompaktního provedení, který později sloužil jako předobraz prvního (a jediného) kapesního mechanického kalkulátoru (Curta vynálezce Curta Herzstarka).
 
 
-# Týden 5.3. až 12.3.  (1/3)
+# Týden 5.3. až 11.3.  (1/3)
 
 ![](Verrier.jpg)
 
@@ -166,7 +166,7 @@ neustále se opakující nesrovnalosti mezi Newtonovým gravitačním
 zákonem a Bouvardovým pozorováním oběžné dráhy Uranu.
 
 
-# Týden 5.3. až 12.3.  (2/3)
+# Týden 5.3. až 11.3.  (2/3)
 
 ![](Bush.jpg)
 
@@ -190,7 +190,7 @@ hypertextu. Tím se zařadil mezi vizionáře, kteří nastínili funkci
 dnešního Internetu.
 
 
-# Týden 5.3. až 12.3.  (3/3)
+# Týden 5.3. až 11.3.  (3/3)
 
 
 ![](Gamow.jpg)
@@ -220,6 +220,45 @@ roce 1940 vydavatelství navrhlo Gamowovi, aby články dále rozšířil o
 několik dalších povídek a vydal je jako knihu. Kniha vyšla pod názvem
 Pan Tompkins v říši divů v roce 1940. Kniha vyšla i v češtině.
 
+
+# Týden 12.3. až 18.3.
+
+
+![](Einstein.jpg)
+![](Einstein_vysvedceni.jpg)
+
+
+**Albert Einstein** (14. 3. 1879 – 18. 4. 1955) byl teoretický fyzik,
+jeden z nejvýznamnějších vědců všech dob. Poté, co zformuloval
+obecnou teorii relativity, se stal známým po celém světě, což je pro
+vědce nevídaný úspěch. V pozdějších letech jeho sláva zastínila
+ostatní vědce a Einstein se stal synonymem pro člověka s velmi vysokou
+inteligencí nebo zkrátka génia. 
+
+Nobelovu cenu získal Albert Einstein v roce 1922 za objev zákona
+fotoelektrického jevu. I když k tomu Královská švédská akademie
+zároveň dodala poněkud neurčité zdůvodnění, které znělo “jako uznání
+za práce pro rozvoj teoretické fyziky”, jeho teorie relativity, jeden
+z nejbrilantnějších objevů lidského ducha, nikdy Nobelovou cenou
+oceněna nebyla.
+
+
+
+Jde o jednoho z mála vědců, jehož tvář je slavnější než tvář hereček
+či politiků. Není tedy divu, že si Einsteinovo jméno vypůjčují různé
+anekdoty, příběhy, legendy. 
+Rozšířeným mýtem je, že se Einstein **nedostal na vysokou školu**.
+Skutečnost je taková, že se na prestižní švýcarskou vysokou školu
+hlásil v patnácti letech, tedy s dvouletým předstihem, což staví jeho
+výkon u přijímacího řízení do zcela jiného světla.
+Další mýtus tvrdí, že Einstein **propadal z matematiky**. I samotný Einstein se v roce 1935 pobavil, když mu kolega na
+Princentonské univerzitě ukázal článek v novinách: "Největší žijící
+  matematik propadal z matematiky." 
+Původ mýtu o propadajícím Einsteinovi je v odlišném systému známkování
+v tehdejší době. Einsteinovo maturitní vysvědčení totiž hodnotí
+výborný výsledek šestkou, zatímco jednička je známkou nejhorší.
+**Z matematiky, fyziky, geometrie i deskriptivní geometrie měl
+  u maturity Einstein šestky, tedy prošel na výbornou.**
 
 
 
@@ -299,43 +338,6 @@ Pan Tompkins v říši divů v roce 1940. Kniha vyšla i v češtině.
 
 
 # Týden 14.3. až 20.3.
-
-
-![](Einstein.jpg)
-![](Einstein_vysvedceni.jpg)
-
-
-**Albert Einstein** (14. 3. 1879 – 18. 4. 1955) byl teoretický fyzik,
-jeden z nejvýznamnějších vědců všech dob. Poté, co zformuloval
-obecnou teorii relativity, se stal známým po celém světě, což je pro
-vědce nevídaný úspěch. V pozdějších letech jeho sláva zastínila
-ostatní vědce a Einstein se stal synonymem pro člověka s velmi vysokou
-inteligencí nebo zkrátka génia. 
-
-Nobelovu cenu získal Albert Einstein v roce 1922 za objev zákona
-fotoelektrického jevu. I když k tomu Královská švédská akademie
-zároveň dodala poněkud neurčité zdůvodnění, které znělo “jako uznání
-za práce pro rozvoj teoretické fyziky”, jeho teorie relativity, jeden
-z nejbrilantnějších objevů lidského ducha, nikdy Nobelovou cenou
-oceněna nebyla.
-
-
-
-Jde o jednoho z mála vědců, jehož tvář je slavnější než tvář hereček
-či politiků. Není tedy divu, že si Einsteinovo jméno vypůjčují různé
-anekdoty, příběhy, legendy. 
-Rozšířeným mýtem je, že se Einstein **nedostal na vysokou školu**.
-Skutečnost je taková, že se na prestižní švýcarskou vysokou školu
-hlásil v patnácti letech, tedy s dvouletým předstihem, což staví jeho
-výkon u přijímacího řízení do zcela jiného světla.
-Další mýtus tvrdí, že Einstein **propadal z matematiky**. I samotný Einstein se v roce 1935 pobavil, když mu kolega na
-Princentonské univerzitě ukázal článek v novinách: "Největší žijící
-  matematik propadal z matematiky." 
-Původ mýtu o propadajícím Einsteinovi je v odlišném systému známkování
-v tehdejší době. Einsteinovo maturitní vysvědčení totiž hodnotí
-výborný výsledek šestkou, zatímco jednička je známkou nejhorší.
-**Z matematiky, fyziky, geometrie i deskriptivní geometrie měl
-  u maturity Einstein šestky, tedy prošel na výbornou.**
 
 
 # Týdny 20.3. až 3.4. (1/2)
