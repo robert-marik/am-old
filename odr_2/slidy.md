@@ -1,6 +1,6 @@
 % Lineární diferenciální rovnice prvního a druhého řádu
 % Robert Mařík
-% jaro 2014, jaro 20180
+% jaro 2014, jaro 2018
 
 # Lineární operátor
 
@@ -218,17 +218,22 @@ $$y'+a(x)y=b(x),$$ je obecným řešením této rovnice
 $$y(x)=Cy_{p0}(x)+y_p(x),$$
 kde $Cy_{p0}(x)$ je obecným řešením asociované homogenní LDE.
 
-Vskutku, jestliže $L[y_p]=b(x)$ a $L[y_{p0}(x)]=0$, potom 
-$$L[y]=L[Cy_{p0}+y_p]=CL[y_{p0}]+L[y_p]=C\cdot 0+b(x)=b(x).$$
-Funkce $y(x)$ tedy je řešením. 
-
-Pokud potřebujeme splnit libovolnou počáteční podmínku $y(x_0)=y_0$,
-kde $x_0,y_0\in\mathbb{R}$, stačí vzít řešení
-$$y(x)=\frac{y_0-y_{p}(x_0)}{y_{p0}(x_0)}y_{p0}(x)+y_p(x),$$
+**Závěr:** Stačí mít jedno řešení nehomogenní rovnice a jedno nenulové
+  řešení asociované homogenní rovnice. Protože množina všech řešení má
+  pevnou strukturu, dokážeme z těchto informací napsat libovolné
+  řešení.
 
 
+* Vskutku, jestliže $L[y_p]=b(x)$ a $L[y_{p0}(x)]=0$, potom 
+  $$L[y]=L[Cy_{p0}+y_p]=CL[y_{p0}]+L[y_p]=C\cdot 0+b(x)=b(x).$$
+  Funkce $y(x)$ tedy je řešením.
+* Pokud potřebujeme splnit libovolnou počáteční podmínku $y(x_0)=y_0$,
+  kde $x_0,y_0\in\mathbb{R}$, stačí vzít řešení
+  $$y(x)=\frac{y_0-y_{p}(x_0)}{y_{p0}(x_0)}y_{p0}(x)+y_p(x),$$
 
-# Obecné řešení nehomogenní LDE ještě jednou
+
+
+# Obecné řešení nehomogenní LDE ještě jednou a prakticky
 
 <div class=sloupce>
 Slovně:
@@ -294,7 +299,6 @@ $$y=Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\ma
 
 Zůstává otázka, jak najít partikulární řešení nehomogenní rovnice.
 
- <div class=sloupce>
 Protože platí
 $$\left(y e^{\int a(x)\mathrm{d}x}\right)'=y'e^{\int a(x)\mathrm{d}x}+y a(x) e^{\int a(x)\mathrm{d}x},$$
 je možno rovinci 
@@ -307,7 +311,6 @@ Integrací dostáváme
 $$y e^{\int a(x)\mathrm{d}x}=\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x+C$$
 a explicitní tvar řešení je
 $$y =Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$
-</div>
 
 Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x.$$
 
@@ -394,6 +397,7 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 </div>
 
 
+<!--
 # Operátorová symbolika
 
 $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
@@ -419,41 +423,43 @@ diferencovatelné funkci přiřazuje levou stranu rovnice (LDE). Rovnici
 
 </div>
 
+-->
+
 # Důsledky linearity
 
-Jako speciální případ vztahu  $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2].$$ dostáváme implikace
+Jako speciální případ vztahu  $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$$ dostáváme následující. 
 
-$$\begin{aligned}
- &L[y_2]=0  \text{ a } L[y_1]=f(x)\ \implies\  L[y_1+y_2]=f(x), \\
- &L[y_1]=L[y_2]=f(x)\ \implies\  L[y_1-y_2]=0,\\ 
- &L[y_1]=L[y_2]=0\ \implies \  L[C_1y_1+C_2y_2]=0,\\ \end{aligned}$$
 
--   Součet řešení nehomogenní a asociované homogenní LDE je
-    řešením původní nehomogenní rovnice.
-
--   Rozdíl dvou řešení nehomogenní LDE je řešením asociované homogenní
-    rovnice.
-
--   Každá lineární kombinace dvou řešení homogenní LDE je opět řešením
-    této rovnice.
-
+* Platí $$L[y_1]=L[y_2]=0\ \implies \ L[C_1y_1+C_2y_2]=0,$$ tj. každá
+  lineární kombinace dvou řešení homogenní LDE je opět řešením této
+  rovnice. Pokud se nám navíc podaří volbou konstant $C_1$ a $C_2$
+  splnit libovolnou počáteční podmínku, je jistota, že máme obecné
+  řešení.
+* Platí $$L[y_2]=0 \text{ a } L[y_1]=f(x)\ \implies\
+    L[y_1+y_2]=f(x),$$ tj. součet řešení nehomogenní a asociované
+    homogenní LDE je řešením původní nehomogenní rovnice. Pokud je
+    navíc $y_2$ obecným řešením homogenní rovnice, je $y_1+y_2$
+    obecným řešením nehomogenní rovnice, protože se podaří splnit
+    libovolnou počáteční podmínku.
 
 # Důsledky linearity prakticky
 
 Vztah
 $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$$
-poslouží (podoně jako u lineárních rovnic prvního řádu), abychom popsali strukturu množiny všech řešení rovnice a dokázali tuto množinu vytvořit jenom na základě znalosti několika prvků.
+poslouží (podobně jako u lineárních rovnic prvního řádu), abychom popsali strukturu množiny všech řešení rovnice a dokázali tuto množinu vytvořit jenom na základě znalosti několika prvků.
 
 Rovnice $$y''+y=x\tag{1}$$ má partikulární řešení $y=x$. 
 
 Asociovaná homogenní rovnice je $$y''+y=0.\tag{2}$$ Tato rovnice má řešení
 například $y=\sin x$, $y=\cos x$. Z linearity plyne
 
-* Funkce $y=C_1 \sin x+C_2 \cos x$ je řešením rovnice (1) pro libovolná reálná $C_1$, $C_2$. 
+* Funkce $y=C_1 \sin x+C_2 \cos x$ je řešením rovnice (1) pro
+  libovolná reálná $C_1$, $C_2$. Protože platí $y(0)=C_2$ a
+  $y'(0)=C_1$, je možné splnit libovolnou podmínku $y(0)=\alpha$,
+  $y'(0)=\beta$ volbou $C_2=\alpha$ a $C_1=\beta$. Jedná se tedy o
+  obecné řešení.
 
-* Funkce $y=C_1 \sin x+C_2\cos x +x$ je řešením rovnice (2) pro libovolná reálná $C_1$, $C_2$. 
-
-* Je-li funkce $y_p$ řešením rovnice (1), potom je $y_p-x$ řešením rovnice (2).
+* Funkce $y=C_1 \sin x+C_2\cos x +x$ je obecným řešením rovnice (2). 
 
 
 
@@ -534,16 +540,12 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 
 $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 
-<def>
-
-> **Definice (obecné řešení homogenní LDE)** Jsou-li $y_1$ a $y_2$ dvě
+> **Věta (obecné řešení homogenní LDE)** Jsou-li $y_1$ a $y_2$ dvě
 > netriviální lineárně nezávislá řešení rovnice (LDE0) na intervalu
 > $I$, pak funkce $y$ definovaná vztahem
 > $$    y(x, C_1, C_2)=C_1y_1(x)+C_2y_2(x),$$
 > kde $C_{1,2}\in\mathbb{R}$, je obecným řešením rovnice (LDE0) na intervalu
 > $I$.
-
-</def>
 
 <def>
 

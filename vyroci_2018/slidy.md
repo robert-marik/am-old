@@ -261,6 +261,76 @@ výborný výsledek šestkou, zatímco jednička je známkou nejhorší.
   u maturity Einstein šestky, tedy prošel na výbornou.**
 
 
+# Týden 26.3. až 1.4. (1/3)
+
+![](Newton.jpg)
+
+
+**Isaac Newton** (25. 12. 1642 – 20.3. 1727 v Londýně - bráno podle
+  kalendáře platného v Newtonově době, 4. ledna 1643 až 31.3. 1727
+  podle současného kalendáře) byl anglický fyzik, matematik, astronom,
+  přírodní filosof, alchymista a teolog, jenž bývá často považován za
+  jednu z nejvlivnějších osob v dějinách lidstva. Jeho publikace
+  Philosophiæ Naturalis Principia Mathematica, vydaná v roce 1687,
+  položila základy klasické mechaniky a dnes bývá řazena mezi
+  nejdůležitější knihy v historii vědy. Newton v ní popisuje zákon
+  všeobecné gravitace a tři zákony pohybu, které se na další tři
+  staletí staly základem vědeckého pohledu na fyzický vesmír. Newton
+  propojil Keplerovy zákony pohybu planet s vlastní teorií gravitace a
+  dokázal, že pohyb předmětů na Zemi se řídí stejnými pravidly jako
+  pohyb vesmírných těles.
+
+
+> Jestliže jsem viděl dále, bylo to proto, že jsem stál na ramenou obrů.
+
+
+Úspěšně vedl anglickou Královskou společnost, jež se stala v jeho době
+nejprestižnější vědeckou institucí světa.
+
+## Druhý Newtonův zákon (zákon síly)
+
+*Jestliže na těleso působí síla, pak se těleso pohybuje se zrychlením,
+které je přímo úměrné působící síle a nepřímo úměrné hmotnosti
+tělesa.*
+
+Obecněji bývá zákon síly vyjadřován tak, že síla $\vec{F}$ je rovna
+časové změně hybnosti $\vec{p}$, což lze matematicky vyjádřit jako
+$\vec{F}=\frac{\mathrm{d} \vec{p}}{\mathrm{d}t}$. Protože
+$\vec{p}=m\vec{v}$, $m$ je v newtonovské fyzice konstantní a $\vec{v}=\frac{\mathrm{d}\vec r}{\mathrm {d}t}$, dostáváme
+$\vec{F}=m\frac{\mathrm{d^2} \vec{r}}{\mathrm{d}t^2}=m\ddot{\vec{r}}$. 
+
+# Týden 26.3. až 1.4. (2/3)
+
+![](kometa.jpg)
+
+* Dne 27.3.2134 bude výrazné přiblížení Halleyovy komety slibující úchvatnou podívanou (odhad chyby je v řádu hodin).
+* Do té doby bude ještě přiblížení v roce 2061, kdy ale bude špatně pozorovatelná.
+* V roce 2134 dojde vinou výrazného přiblížení k ovlivnění dráhy komety a další dráha je predikována již s velkou nejistotou.
+
+
+# Týden 26.3. až 1.4. (3/3)
+
+![](srw.jpg)
+
+![](hidden_figures.jpg)
+
+Dne 1. dubna 1952 byl podán patent US2736494 A na kalkulátor, který uměl
+plně automaticky počítat druhou odmocninu. Naprosto udivil svět, do té
+doby se odmocnina počítala velmi komplikovaně a zdlouhavě opakovaným
+odečítáním a využitím vztahu
+$$\sum_{i=1}^n (2i-1)=n^2,$$
+který říká, že součet prvních $n$ lichých čísel je roven $n^2$. 
+
+Kalkulátor Friden je krátce k vidění ve filmu Skrytá čísla (do kin v
+ČR zatím nešel).
+
+Friden SRW ve skutečnosti počítal odmocninu také zdlouhavě a postupným
+odečítáním, ale pracoval plně automaticky a počítal podle vztahu
+$$\sum_{i=1}^n (10i-5)=5n^2,$$ tj. používal pětinásobek výše uvedeného
+vzorce. Důvod je ten, že posloupnost $$1,\ 3,\ 5,\ 7,\ 9,\ 11,\ 13,\
+15,\ 17,\ 19$$ je komplikovanější, než její pětinásobky $$5,\ 15,\ 25,\
+35,\ 45,\ 55,\ 65,\ 75,\ 85,\ 95.$$
+
 
 
 <!--

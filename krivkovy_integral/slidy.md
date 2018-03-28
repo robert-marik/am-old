@@ -278,21 +278,22 @@ Tato vlastnost je stejná jako u křivkového integrálu prvního druhu.
   $$
   \int_C\vec F\;\mathrm{d}\vec r.
   $$
-  vyjadřuje **práci** kterou vykoná síla $\vec F$ při přemístění tělesa podél křivky $C$.
+  vyjadřuje **práci** kterou vykoná síla $\vec F$ při přemístění tělesa podél orientované křivky $C$.
 * Je-li křivka $C$ uzavřená, píšeme
   $$
   \oint_C\vec F\;\mathrm{d}\vec r.
   $$
   Fyzikálně se jedná o **práci** kterou vykoná síla $\vec F$ při přemístění
-  tělesa po uzavřené křivce. Tato práce se též nazývá *cirkulace
-  vektorového pole po křivce $C$*. Pokud je možno v poli zavést
+  tělesa po uzavřené orientované křivce. Tato práce se též nazývá *cirkulace
+  vektorového pole po orientované křivce $C$*. Pokud je možno v poli zavést
   potenciální energii a pokud tedy práce závisí jenom na počáteční a
   koncové poloze, musí tato práce být nulová. To je důsledkem věty
   kterou si uvedeme později.
 * Při odvození křivkového integrálu druhého druhu jako vykonané práce hraje roli vlastně jenom ta
   složka silového pole, která při posunu ve směru křivky koná práci, tj. složka, která je tečná ke křivce. Pokud použijeme naopak
   normálovou komponentu, dostaneme veličinu vyjadřující **tok
-  vektorového pole křivkou $C$**. Výsledný vzorec vyjadřující tento tok
+  vektorového pole orientovanou křivkou $C$**. Výsledný vzorec vyjadřující tok vektorového pole $\vec F(x,y)=P(x,y)\vec
+i+Q(x,y)\vec j,$
   je
   $$
   \int_{C}-Q(x,y)\mathrm{d}x+P(x,y)\mathrm{d}y.
