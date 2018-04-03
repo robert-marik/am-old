@@ -34,6 +34,9 @@ je totiž úměrná rozdílu jejich teplot (Newtonův zákon).
   $${\mathrm{d}y}=\varphi(x,y)\mathrm{d}x$$
   $${\mathrm{d}y}-\varphi(x,y)\mathrm{d}x=0$$
 
+
+**Příklad:**  Najděte všechny funkce splňující $y'=2xy$.
+
 </div>
 
 # Příklady diferenciálních rovnic
@@ -103,6 +106,8 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
 
 (anglicky initial condition, IC, initial value problem, IVP)
 
+**Příklad:** Najděte všechny funkce splňující $y'=2xy$ a $y(0)=3$.
+
 
 
 # Geometrická interpretace ODE
@@ -126,6 +131,8 @@ neprotínají*.
 Vrstevnice funkce $\varphi(x,y)$ mají tu vlastnost, že derivace
 integrálních křivek podél každé z\ vrstevnic je konstantní. Proto tyto
 křivky nazýváme **isokliny**.
+
+
 
 <div class=sloupce>
 
@@ -171,14 +178,17 @@ splňující diferenciální rovnici.
 Řešení počáteční úlohy lze numericky aproximovat poměrně snadno:
 začneme v bodě zadaném počáteční podmínkou a v okolí tohoto bodu
 nahradíme integrální křivku její tečnou. Tím se dostaneme do dalšího
-bodu, odkud opět integrální křivku aproximujeme tečnou.
+bodu, odkud opět integrální křivku aproximujeme tečnou.  Směrnici
+tečny zjistíme z diferenciální rovnice, buď přímo z derivace (Eulerova
+metoda).
 
-Směrnici tečny zjistíme z diferenciální rovnice, buď přímo z derivace
-(Eulerova metoda), nebo poněkud rafinovaněji, kdy bereme v úvahu
+Další možnost je použít k aproximaci sečnu tak, že opravíme
+směrnici tečny podle chování směrového pole. Bereme v úvahu
 i konvexnost či konkávnost a fakt, že se derivace mění s měnícím se
 $x$ i $y$ (metoda Runge–Kutta). Stačí tedy mít zvolen *krok* numerické
 metody (délku intervalu, na kterém aproximaci tečnou použijeme) a
 výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
+
 
 <div>
 
@@ -192,6 +202,31 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 ![Metoda Runge Kutta s velmi dlouhým krokem (modrou barvou, jde jasně
  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou
  barvou.](rk.png)
+
+</div>
+
+
+# Iterační schema Eulerovy metody
+
+<div class=sloupce>
+
+Počáteční úloha: $$y'=\varphi(x,y), \quad y(x_0)=y_0$$
+
+Tečna k řešení v bodě $[x_0,y_0]$: $$y=y_0+\varphi(x_0,y_0)(x-x_0).$$
+
+Funkční hodnota v bodě $x_0+h$, kde $h$ je krok Eulerovy metody: $$y(x_0+h)=y_0+\varphi(x_0,y_0)h.$$
+
+Iterační formule Eulerovy metody: $$\begin{aligned}x_{n+1}&=x_n+h, \\ y_{n+1}&=y_n+\varphi(x_n,y_n)h.\end{aligned}$$
+
+**Vylepšení**
+
+* zjemnit krok $h$ (buď všude, nebo jenom tam, kde "je to potřeba"),
+* použít místo $\varphi(x_n,y_n)$ lepší směrnici (Metoda Runge Kutta druhého nebo čtvrtého řádu, ...).
+
+
+![Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou
+ barvou).](euler.png)
+
 
 </div>
 
