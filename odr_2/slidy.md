@@ -448,18 +448,18 @@ Vztah
 $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$$
 poslouží (podobně jako u lineárních rovnic prvního řádu), abychom popsali strukturu množiny všech řešení rovnice a dokázali tuto množinu vytvořit jenom na základě znalosti několika prvků.
 
-Rovnice $$y''+y=x\tag{1}$$ má partikulární řešení $y=x$. 
+Rovnice $$y''+y=x\tag{A}$$ má partikulární řešení $y=x$. 
 
-Asociovaná homogenní rovnice je $$y''+y=0.\tag{2}$$ Tato rovnice má řešení
+Asociovaná homogenní rovnice je $$y''+y=0.\tag{B}$$ Tato rovnice má řešení
 například $y=\sin x$, $y=\cos x$. Z linearity plyne
 
-* Funkce $y=C_1 \sin x+C_2 \cos x$ je řešením rovnice (1) pro
+* Funkce $y=C_1 \sin x+C_2 \cos x$ je řešením rovnice (B) pro
   libovolná reálná $C_1$, $C_2$. Protože platí $y(0)=C_2$ a
   $y'(0)=C_1$, je možné splnit libovolnou podmínku $y(0)=\alpha$,
   $y'(0)=\beta$ volbou $C_2=\alpha$ a $C_1=\beta$. Jedná se tedy o
   obecné řešení.
 
-* Funkce $y=C_1 \sin x+C_2\cos x +x$ je obecným řešením rovnice (2). 
+* Funkce $y=C_1 \sin x+C_2\cos x +x$ je obecným řešením rovnice (A). 
 
 
 

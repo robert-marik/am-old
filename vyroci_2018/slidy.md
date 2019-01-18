@@ -332,6 +332,71 @@ vzorce. Důvod je ten, že posloupnost $$1,\ 3,\ 5,\ 7,\ 9,\ 11,\ 13,\
 35,\ 45,\ 55,\ 65,\ 75,\ 85,\ 95.$$
 
 
+# Týden 9.4. až 15.4.
+
+![](Euler.jpg)
+
+
+**Leonhard Paul Euler** 
+(15. dubna 1707 Basilej, Švýcarsko – 18. září 1783 Petrohrad, Rusko)
+byl švýcarský matematik a fyzik. Je považován za nejlepšího matematika
+18. století a za jednoho z nejlepších matematiků vůbec. Eulerův vliv
+na matematiku vyjadřuje výrok připisovaný Pierru Simonu de Laplaceovi:
+*„Čtěte Eulera, čtěte Eulera, je to učitel nás všech.“*
+
+Eulerovo dílo nemá v matematice obdoby. Napsal 865 prací, od
+jednotlivých pojednání po rozsáhlé učebnice. Jeho díla se vyznačují
+přesným vyjadřováním a přehlednou symbolikou - dnešní způsob značení
+matematických pojmů je téměř stejný jako Eulerův.
+
+Jako první použil pojem „imaginární číslo“ pro druhou odmocninu ze
+záporného čísla. Zavedl například označení $f(x)$ pro funkci.
+
+Jeho a Fermatovy práce s obrovskými prvočísly (v té době pro praktické
+aplikace nepoužitelné) jsou dnes základem alogritmů pro bezpečnou komunikaci
+na Internetu.
+
+Během kariéry se Eulerovi zhoršil zrak, ke konci života byl téměř
+slepý.  Jeho slepota neměla ale téměř žádný vliv na jeho produktivitu,
+kompenzoval ji svými počtářskými schopnostmi a fotografickou pamětí.
+
+# Týden 23.4. až 29.5.
+
+
+![](Godel.png)
+
+
+**Kurt Gödel** (28. dubna 1906, Brno – 14. ledna 1978, Princeton, USA)
+byl matematik rakouského původu, který se stal jedním z
+nejvýznamnějších logiků všech dob. Významné jsou i jeho příspěvky ve
+fyzice a ve filosofii matematiky.
+
+V roce 1931 publikoval dvě věty o neúplnosti axiomatických formálních
+systémů s aritmetikou. Prostřednictvím těchto vět ukázal, že není
+možné navrhnout soubor axiomů, které by byly dostačující pro
+zodpovězení každé otázky, kterou lze klást a formulovat uvnitř
+formálního systému s aritmetikou. Tyto věty ukončily více než
+padesátileté úsilí logiků a matematiků úplně formalizovat matematiku: vždy zůstanou nedokazatelná tvrzení a navíc není možno uvnitř axiomatického systému dokázat jeho  bezespornost.
+
+Gödelův výsledek znamenal zlom v matematice 20. století, neboť ukázal, že v principu nikdy nebude možné sestrojit počítač a program, který by zodpověděl všechny matematické otázky.
+
+Jako docent a později profesor na Institutu pokročilých studií v
+Princetonu se intenzivně věnoval filosofii a pod vlivem Alberta
+Einsteina, svého tamějšího blízkého přítele, i fyzice. 
+Originálním způsobem obohatil Einsteinovu obecnou teorii relativity
+formulováním a nalezením kosmologického modelu rotujícího vesmíru
+umožňujícího **cestování časem**. Otevřel tak dodnes neuzavřené diskuse o
+tom, zda takové cestování neodporuje fyzikálním či filozofickým
+principům, popř. zda by mohlo být technicky realizováno.
+
+Stal se legendou pro své objevy a vyhledávanou osobou, od níž se
+očekávaly další převratné výsledky. To nemělo dobrý vliv na plachého,
+uzavřeného a pečlivého až puntičkářského samotáře, kterým se postupně
+stal. Chatrné zdraví, traumatizující
+zážitky z období nacismu i tlak na výkon člověka s pověstí génia se
+podepsaly na jeho psychosomatických potížích, které se stářím a
+odchodem vrstevníků a blízkých přátel prohlubovaly.
+
 
 <!--
 

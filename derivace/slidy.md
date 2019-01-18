@@ -1,6 +1,6 @@
 % Parciální derivace 
 % Robert Mařík
-% jaro 2014, aktualizace pro jaro 2018
+% jaro 2014, aktualizace pro jaro 2018 a jaro 2019
 
 # Derivace
 
@@ -60,17 +60,32 @@ odborné literatuře.
 
 * Parciální derivace $\frac {\partial f}{\partial x}$ je rychlost
   změny funkce $f(x,y)$ při změnách veličiny $x$.
-* Pokud se veličina $x$ změní o $\Delta x$, funkční hodnota se změní o
-přibližně $\frac {\partial f}{\partial x}\Delta x$.
+    * Pokud se veličina $x$ změní o $\Delta x$, funkční hodnota se změní o přibližně $\frac {\partial f}{\partial x}\Delta x$.
+    * Pokud je veličina $x$ známa s chybou $\Delta x$, veličina $f$ je vypočítána s chybou $\frac {\partial f}{\partial x}\Delta x$.
+* Jednotkou derivace $\frac{\partial f}{\partial x}$ je jednotka veličiny $f$ dělená jednotkou veličiny $x$.
 * Analogická tvrzení platí pro veličinu $y$.
 * Pokud se mění obě veličiny, změny se sčítají. Lineární aproximací funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ je tedy
 $$      f(x,y)\approx f(x_0, y_0)+\frac{\partial f (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0).$$
 * Vyskytuje se ve většině důležitých rovnic popisujících fyzikální
-  svět okolo nás. Často zde nevystupují přímo, ale prostřednictvím
+  svět okolo nás. Často zde parciální derivace nevystupují přímo, ale prostřednictvím
   diferenciálních operátorů -- výrazů sestavených z parciálních
   derivací.
 * Ve fyzice často pracujeme s funkcemi, které mají spojité parciální derivace. Takové funkce se nazývají *hladké funkce*.
-* Jednotkou derivace $\frac{\partial f}{\partial x}$ je jednotka veličiny $f$ dělená jednotkou veličiny $x$.
+
+# Fyzikální význam - příklad
+
+*Příklad:* Brzdná dráha $L$ (v metrech) auta o hmotnosti $m$ (v kilogramech) brzdícího z rychlosti $v$ (v kilometrech za hodinu) je dána vzorcem
+$$L=k m v^2, $$ kde $k= 3.45 \times 10 ^{-6}\,(\mathrm{m}\,\mathrm{hod}^2)/(\mathrm{kg}\,\mathrm{km}^2)$. Pro $m=1100\,\mathrm{kg}$ a $v=100\,\mathrm{km}/\mathrm{hod}$ je brzdná dráha $37.95\,\mathrm{m}$.
+
+* Parciální derivace podle $m$ je $\frac{\partial L}{\partial m}=kv^2$ a pro zadané hodnoty vychází
+$$\frac{\partial L}{\partial m}=0.0345 \mathrm{m}/\mathrm{kg}.$$ Každý kilogram hmotnosti nad $1100\,\mathrm{kg}$ auta jedoucího rychlostí $100\,\mathrm{km}/\mathrm{hod}$ prodlouží brzdnou dráhu o cca $3.5\,\mathrm{cm}$.
+* Parciální derivace podle $v$ je $\frac{\partial L}{\partial v}=2kmv$ a pro zadané hodnoty vychází
+$$\frac{\partial L}{\partial v}=0.759\,\mathrm{m}/(\mathrm{km}/\mathrm{hod})=7.59\times 10^{-4}\,\mathrm{hod}.$$ Každý kilometr za hodinu nad $100\,\mathrm{km}/\mathrm{hod}$ u auta vážícího $1100\,\mathrm{kg}$ prodlouží brzdnou dráhu o cca $76\,\mathrm{cm}$.
+* Zjednodušený vzorec pro brzdnou dráhu auta s hmotností blízkou $1100\,\mathrm{kg}$ a rychlostí blízkou $100\,\mathrm{km}/\mathrm{hod}$ je
+$$L\approx 37.95+0.0345(m-1100)+0.759(v-100),$$
+kde hmotnost a rychlost se dosazují v kilogramech a metrech a brzdná dráha vychází v metrech.
+
+[Online výpočet](https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)
 
 # Zákon šíření chyb  (chyba nepřímo měřené veličiny)
 
@@ -92,6 +107,36 @@ $$
 označovaný **zákon šíření chyb**.
 
 
+# Zákon šíření chyb  - příklad
+
+Kanadský empirický vzorec pro pocitovou teplotu v zimě ([wind-chill
+factor](https://en.wikipedia.org/wiki/Wind_chill)) je $$W(T,v) =
+13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},$$ kde $T$ je teplota
+(ve stupních Celsia) a $v$ je rychlost větru (v km/hod). Teplota byla
+změřena $-11.0\,{}^\circ\!\text{C}$ s chybou $0.2\,{}^\circ\!\text{C}$ a rychlost $26
+\,\text{km/hod}$ s chybou $5\,\text{km/hod}$. S využítím zákona šíření
+chyb určíme, jaký vliv mají nepřesnosti v měření na nepřesnost
+vypočítané veličiny.
+
+Dosazením do vzorce dostáváme $W(-11,26)=-20.212\,{}^\circ\!\text{C}$. Derivováním dostáváme
+$$\begin{aligned}\frac{\partial W}{\partial T}(T,v)&=0.6215+0.3965 v^{0.16},\\
+\frac{\partial W}{\partial v}(T,v)&=-11.37\times 0.16 v^{-0.84}+0.3965 \times 0.16 Tv^{-0.84}
+\end{aligned}
+$$
+a po dosazení 
+$$\begin{aligned}\frac{\partial W}{\partial T}(-11,26)&=1.289,\\
+\frac{\partial W}{\partial v}(-11,26)&=-0.163 \,{}^\circ\!\text{C}\, \text{hod}/\mathrm{km}.
+\end{aligned}
+$$
+Za dané teploty a rychlosti větru způsobí nárůst teploty o jeden
+stupeň nárůst pocitové teploty přibližně o $1.3$ stupně. Podobně,
+zesílení větru o jeden kilometr za hodinu způsobí snížení pocitové
+teploty přibližně o $0.16$ stupně.
+Ze zákona šíření chyb dostáváme pro chybu pocitové teploty (dosazováno bez jednotek)
+$$\Delta W=\sqrt{\left(1.289\times 0.2\right)^2+\left(-0.163\times 5\right)^2}=0.85\,{}^\circ\!\text{C}.$$
+Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C}$.
+
+[Online výpočet](https://sagecell.sagemath.org/?z=eJxdi0EKgzAQRfeCdxA3TmIanISmdJFbDGRThEIQ3EhNZc5vJFiwu__e4_M7QUeKO1FXAfIQHq1G0w_aGbxLuiFq-5A8wqDRiezt02X_M3UVyQcd52kCEsDeOEU-347CZ-G_8knzsjWhyKZY1b6W9kyRrsgX_K5pA4gkRtNDZGnyKP8d3o01SQ==&lang=sage)
  
 
 # Gradient
@@ -136,6 +181,31 @@ $$      f(x,y)\approx f(x_0, y_0)+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
   $$z=z_0+\frac{\partial f (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0)$$
 nebo (pomocí gradientu)
 $$      z= z_0+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
+
+# Lineární aproximace funkce  - příklad
+
+Kanadský empirický vzorec pro pocitovou teplotu v zimě ([wind-chill
+factor](https://en.wikipedia.org/wiki/Wind_chill)) je $$W(T,v) =
+13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},$$ kde $T$ je teplota
+(ve stupních Celsia) a $v$ je rychlost větru (v km/hod). Teplota byla
+změřena $-11.0\,{}^\circ\!\text{C}$ s chybou $0.2\,{}^\circ\!\text{C}$ a rychlost $26
+\,\text{km/hod}$ s chybou $5\,\text{km/hod}$. S využítím zákona šíření
+chyb určíme, jaký vliv mají nepřesnosti v měření na nepřesnost
+vypočítané veličiny.
+
+Na předchozích slidech jsme vypočítali 
+$$\begin{aligned}W(-11,26)&=-20.212\,{}^\circ\!\text{C}\\\frac{\partial W}{\partial T}(-11,26)&=1.289,\\
+\frac{\partial W}{\partial v}(-11,26)&=-0.163 \,{}^\circ\!\text{C}\, \text{hod}/\mathrm{km}.
+\end{aligned}
+$$
+Za dané teploty a rychlosti větru způsobí nárůst teploty o jeden
+stupeň nárůst pocitové teploty přibližně o $1.3$ stupně. Podobně,
+zesílení větru o jeden kilometr za hodinu způsobí snížení pocitové
+teploty přibližně o $0.16$ stupně.
+
+Přibližný vzorec pro pocitovou teplotu platný pro teploty blízké $-11.0\,{}^\circ\!\text{C}$ a rychlosti větru blízké $26
+\,\text{km/hod}$ je
+$$W\approx -20.12 +1.289 (T+11) -0.163(v-26).$$
 
 # Implicitně definovaná funkce 
 
@@ -351,19 +421,97 @@ $$
 
 # Totální diferenciál
 * **Totálním diferenciálem** funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ nazýváme výraz
-$$      \mathrm{d}f=\frac{\partial f (x_0,y_0)}{\partial x}\mathrm{d}x+\frac{\partial f (x_0,y_0)}{\partial y}\mathrm{d}y=
-\nabla f (x_0,y_0) \cdot (\mathrm{d}x,\mathrm{d}y).
+$$      \mathrm{d}f=
+\nabla f (x_0,y_0) \cdot (\mathrm{d}x,\mathrm{d}y)=\frac{\partial f (x_0,y_0)}{\partial x}\mathrm{d}x+\frac{\partial f (x_0,y_0)}{\partial y}\mathrm{d}y.
 $$
-  Funkce $f$ se v tomto kontextu nazývá **kmenová funkce** diferenciálu.
-* Máme-li výraz 
+* Máme-li vektorové pole $$\vec F(x,y)=(M(x,y),N(x,y)),$$ resp máme-li výraz 
   $$      M(x,y)\mathrm{d}x+N(x,y)\mathrm{d}y,$$
-  může nastat otázka, zda k tomuto výrazu existuje totální diferenciál, tj. zda existuje funkce jejímž gradientem je vektor $(M,N)$. Toto je důležitá otázka ve fyzice, protože umožňuje rozhodnout, ke kterému silovém poli je možno zavést potenciální energii.
+  může nastat otázka, zda k tomuto výrazu existuje totální diferenciál, tj. zda existuje skalární funkce $f$, jejímž gradientem je vektorové pole  $\vec F$. Toto je důležitá otázka ve fyzice, protože umožňuje rozhodnout, ke kterému silovém poli je možno zavést potenciální energii.
+Funkce $f$ se v tomto kontextu nazývá **skalární potenciál** vektorového pole nebo **kmenová funkce** diferenciálu.
 
->  **Věta**  (platí za předpokladu dostatečně hladkých funkcí na otevřené množině):  Vektor   $$    \left(   M(x,y) , N(x,y)\right)$$ je gradientem nějaké funkce $f$ právě tehdy když platí   $$      \frac{\partial }{\partial y}M(x,y)=\frac{\partial}{\partial x}N(x,y).$$ 
+>  **Věta**  (platí za předpokladu dostatečně hladkých funkcí na otevřené množině):  Vektor   $$\vec F(x,y) = \left(   M(x,y) , N(x,y)\right)$$ je gradientem nějaké funkce $f(x,y)$ právě tehdy když platí   $$      \frac{\partial }{\partial y}M(x,y)=\frac{\partial}{\partial x}N(x,y).$$ 
 
 
+# Darcyho zákon
 
+Darcyho zákon experimentálně prokázal, že při proudění tekutiny je pro
+mnoho látek za běžných situací tok úměrný rozdílu tlaků. Proto se
+tento zákon používá například při studiu proudění podzemní vody
+propustnými vrstvami půdy.
 
+Je-li $p$ tlak, je změna tlaku na jednotku délky ve směru osy $x$
+rovna $\frac{\partial p}{\partial x}$ a tento rozdíl tlaků vyvolá
+proudění ve směru osy $x$ o velikosti $$q_{xx}=-K_{xx}\frac{\partial
+p}{\partial x},$$ kde $K_{xx}$ je konstanta úměrnosti z Darcyho zákona
+a znaménko vyjadřuje, že tekutina teče z místa s vyšším tlakem do
+místa s nižším tlakem.
+
+Změna tlaku ve směru osy $x$ může v izotropním prostředí vyvolat
+proudění i ve směru osy $y$ nebo $z$, opět existují konstanty $K_{xy}$
+a $K_{xz}$ takové, že
+$$q_{yx}=-K_{yx}\frac{\partial
+p}{\partial x},\qquad q_{zx}=-K_{zx}\frac{\partial
+p}{\partial x}.$$
+
+Analogické vztahy platí i pro další směry a celkový tok ve směru osy $x$ je dán součtem 
+$$q_x=-K_{xx}\frac{\partial
+p}{\partial x}-K_{xy}\frac{\partial
+p}{\partial y}-K_{xz}\frac{\partial
+p}{\partial z}.$$
+Proudění ve všech třech směrech je možné zapsat pomocí maticové rovnice
+$$\begin{pmatrix}
+q_x\\q_y\\q_z
+\end{pmatrix}
+=-\begin{pmatrix}
+K_{xx} & K_{xy} & K_{xz}\\
+K_{yx} & K_{yy} & K_{yz}\\
+K_{zx} & K_{zy} & K_{zz}
+\end{pmatrix}
+\begin{pmatrix}
+\frac{\partial p}{\partial x}\\
+\frac{\partial p}{\partial y}\\
+\frac{\partial p}{\partial z}
+\end{pmatrix}
+$$
+
+Pro vhodně zvolenou soustavu souřadnic je možné dosáhnout toho, že matice $K_{ij}$ je diagonální, tj. 
+$$\begin{pmatrix}
+q_x\\q_y\\q_z
+\end{pmatrix}
+=-\begin{pmatrix}
+K_{xx} & 0 & 0\\
+0 & K_{yy} & 0\\
+0 & 0 & K_{zz}
+\end{pmatrix}
+\begin{pmatrix}
+\frac{\partial p}{\partial x}\\
+\frac{\partial p}{\partial y}\\
+\frac{\partial p}{\partial z}
+\end{pmatrix}.
+$$
+Je-li prostředí izotropní (stejné vlastnosti ve všech směrech), platí $K_{xx}=K_{yy}=K_{zz}=K$ a rovnice má tvar
+$$\begin{pmatrix}
+q_x\\q_y\\q_z
+\end{pmatrix}
+=-K
+\begin{pmatrix}
+\frac{\partial p}{\partial x}\\
+\frac{\partial p}{\partial y}\\
+\frac{\partial p}{\partial z}
+\end{pmatrix}.
+$$
+Je-li prostředí homogenní a $K$ nezávisí na prostorových souřadnicích, má tvar ještě o něco jednodušší
+$$\begin{pmatrix}
+q_x\\q_y\\q_z
+\end{pmatrix}
+=-
+\begin{pmatrix}
+\frac{\partial Kp}{\partial x}\\
+\frac{\partial Kp}{\partial y}\\
+\frac{\partial Kp}{\partial z}
+\end{pmatrix}.
+$$
+Vidíme, že tok je záporně vzatým gradientem jisté fyzikální veličiny, která se v anglické literatuře nazývá *specific discharge potential*.
 
 # Laplaceův operátor
 
@@ -389,6 +537,7 @@ $$
   šíření vln.
     * Vlnová rovnice popisující vlnění resp. chvění je rovnice $$\frac{1}{c^2} \frac{\partial ^2 u}{\partial t^2} = \nabla^2 u.$$ Například u kmitání struny nebo membrány je v odovození této rovnice i lineární aproximace $\sin x\approx x$.
     * Vedení tepla  v prostředí bez zdrojů nebo spotřebičů tepla je popsáno rovnicí $$\frac{\partial u}{\partial t}=D\nabla^2 u.$$
+    * Při ustáleném vedení tepla je derivace podle času nulová a takové vedení tepla je popsáno rovnicí $$0=\nabla^2 u.$$ Stejná rovnice popisuje proudění obecně. Například proudění [podzemní vody](http://www.soilmanagementindia.com/soil/seepage-analysis/laplace-equation/laplace-equation-for-two-dimensional-flow-soil-engineering/137580) propustnými vrstvami půdy.
 
 
 

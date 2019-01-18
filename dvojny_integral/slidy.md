@@ -184,6 +184,33 @@ obdélníkovou oblast.
 	  y_T&=\frac 1S \iint_M y\mathrm{d}x \mathrm{d}y , &    I_y&= \iint_M x^2\mathrm{d}x \mathrm{d}y \\
   \end{alignedat}
   $$
+* Je-li plošná $u$ hustota kinetické energie molekul (což je veličina úměrná
+  termodynamické teplotě), je $\iint_M u\,\mathrm dx\mathrm dy$ celková kinetická
+  energie částic. Tato energie se může měnit tepelnou
+  výměnou. Rychlost, s jakou se mění část vnitřní energie související
+  s teplotou, je $$\frac\partial{\partial t}\left(\iint_M u\,\mathrm
+  dx\mathrm dy\right).$$
+
+# Aplikace dvojného integrálu - tlak na hráz
+
+Vzorec pro tlakovou sílu $F=pS$ není možné použít například pro výpočet celkové síly působící na svislou hráz, protože tlak $p$ se mění s hloubkou a není tedy konstantní na celém průřezu o obsahu $S$.
+
+Uvažujme svislou rovinnou hráz $M$. Počátek kartézské soustavy
+souřadnic volíme v bodě u hladiny, osa $y$ směřuje dolů, osa $x$
+vodorovně. Tlak v hloubce $y$ je roven $p=y\rho g$, kde $\rho$ je
+hustota vody a $g$ tíhové zrychlení. Na plochu o rozměrech $\Delta S$
+v hloubce $y$ působí tlaková síla $$\Delta F=y\rho g \Delta S.$$ Tato
+tlaková síla má ve všech bodech hráze stejný směr a celkovou sílu na
+hráz je možno zjistit sečtením sil v jednotlivých bodech. Podobná
+myšlenková úvaha jako v úvodu pro hmotnost desky, nebo přesný
+matematický popis, nás dovedou k tomu, že celková síla na hráz je dána
+integrálem
+$$F=\iint _M y\rho g \,\mathrm d x\mathrm dy.$$ Protože $g$ a $\rho$ jsou konstanty, je možno psát
+$$F=\rho g\iint _M y \,\mathrm d x\mathrm dy.$$ Využijeme-li vzorec pro $y$-ovou souřadnici těžiště, má výsledný vztah tvar
+$$F=\rho g y_T S,$$
+kde $S$ je plocha hráze. Formálně tento vztah odpovídá vzorci
+$$F=p S,$$
+kde $p=\rho g y_T$ je tlak v těžišti. Proto v praxi stačí znát těžiště hráze a pro výpočet síly na hráz použít celkovou plochu hráze a tlak v těžišti.
 
 
 # Polární souřadnice
