@@ -1,10 +1,10 @@
 % Parciální derivace 
 % Robert Mařík
-% jaro 2014, aktualizace pro jaro 2018 a jaro 2019
+% jaro 2019
 
 # Derivace
 
-Derivace je matematický prostředek který umožňuje sledovat, měřit a
+Derivace je matematický prostředek, který umožňuje sledovat, měřit a
 porovnávat rychlosti změn fyzikálních veličin. Přirozeně se tak
 objevuje při formulaci a popisu téměř všech dynamicky probíhajících
 fyzikálních jevů. (Fyzikální popis světa tak je prezentovaný
@@ -56,23 +56,22 @@ odborné literatuře.
 
 </div>
 
-# Fyzikální význam
+# Aplikace parciálních derivací - základní myšlenky
 
 * Parciální derivace $\frac {\partial f}{\partial x}$ je rychlost
   změny funkce $f(x,y)$ při změnách veličiny $x$.
     * Pokud se veličina $x$ změní o $\Delta x$, funkční hodnota se změní o přibližně $\frac {\partial f}{\partial x}\Delta x$.
     * Pokud je veličina $x$ známa s chybou $\Delta x$, veličina $f$ je vypočítána s chybou $\frac {\partial f}{\partial x}\Delta x$.
+    * Pokud je $u$ celková vnitřní energie v jednotkovém objemu tělesa (hustota tepelné energie), je $\frac{\partial u}{\partial t}$ rychlost, s jakou se tato energie mění v čase. Pokud ke změně dochází pomocí vedení tepla, je tato derivace rovna tepelnému toku přes hranice. Pokud dochází ke generování tepla v tělese (chemická reakce, elektrický proud), je tato derivace  rovna tepelnému výkonu zdroje. V obecném případě se oba faktory sčítají, což vede k odvození rovnice vedení tepla ze zákona zachování.
 * Jednotkou derivace $\frac{\partial f}{\partial x}$ je jednotka veličiny $f$ dělená jednotkou veličiny $x$.
-* Analogická tvrzení platí pro veličinu $y$.
-* Pokud se mění obě veličiny, změny se sčítají. Lineární aproximací funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ je tedy
-$$      f(x,y)\approx f(x_0, y_0)+\frac{\partial f (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0).$$
-* Vyskytuje se ve většině důležitých rovnic popisujících fyzikální
+* Analogická tvrzení jako pro veličinu $x$ platí pro veličinu $y$.
+* Parciální derivace se vyskytuje ve většině důležitých rovnic popisujících fyzikální
   svět okolo nás. Často zde parciální derivace nevystupují přímo, ale prostřednictvím
   diferenciálních operátorů -- výrazů sestavených z parciálních
   derivací.
 * Ve fyzice často pracujeme s funkcemi, které mají spojité parciální derivace. Takové funkce se nazývají *hladké funkce*.
 
-# Fyzikální význam - příklad
+# Aplikace parciálních derivací - příklad
 
 *Příklad:* Brzdná dráha $L$ (v metrech) auta o hmotnosti $m$ (v kilogramech) brzdícího z rychlosti $v$ (v kilometrech za hodinu) je dána vzorcem
 $$L=k m v^2, $$ kde $k= 3.45 \times 10 ^{-6}\,(\mathrm{m}\,\mathrm{hod}^2)/(\mathrm{kg}\,\mathrm{km}^2)$. Pro $m=1100\,\mathrm{kg}$ a $v=100\,\mathrm{km}/\mathrm{hod}$ je brzdná dráha $37.95\,\mathrm{m}$.
@@ -85,7 +84,9 @@ $$\frac{\partial L}{\partial v}=0.759\,\mathrm{m}/(\mathrm{km}/\mathrm{hod})=7.5
 $$L\approx 37.95+0.0345(m-1100)+0.759(v-100),$$
 kde hmotnost a rychlost se dosazují v kilogramech a metrech a brzdná dráha vychází v metrech.
 
+\iffalse
 [Online výpočet](https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)
+\fi
 
 # Zákon šíření chyb  (chyba nepřímo měřené veličiny)
 
@@ -136,8 +137,9 @@ Ze zákona šíření chyb dostáváme pro chybu pocitové teploty (dosazováno 
 $$\Delta W=\sqrt{\left(1.289\times 0.2\right)^2+\left(-0.163\times 5\right)^2}=0.85\,{}^\circ\!\text{C}.$$
 Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C}$.
 
+\iffalse
 [Online výpočet](https://sagecell.sagemath.org/?z=eJxdi0EKgzAQRfeCdxA3TmIanISmdJFbDGRThEIQ3EhNZc5vJFiwu__e4_M7QUeKO1FXAfIQHq1G0w_aGbxLuiFq-5A8wqDRiezt02X_M3UVyQcd52kCEsDeOEU-347CZ-G_8knzsjWhyKZY1b6W9kyRrsgX_K5pA4gkRtNDZGnyKP8d3o01SQ==&lang=sage)
- 
+\fi 
 
 # Gradient
 
@@ -159,15 +161,23 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
   $\frac{\partial }{\partial x}$ s funkcí $f$ přitom chápeme jako
   parciální derivaci $\frac{\partial f}{\partial x}$.
 * Gradient je v každém bodě kolmý k vrstevnici.
-* Využití:
-    * síla působící na těleso v silovém poli ve kterém je možno zavést potenciální energii je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient).
-    * majáková navigace při migraci živočichů
-    * posouzení jak rychle se mění veličina v prostoru (gradient je velký, jsou-li vrstevnice nahusto)
-* [nakreslit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=sage&in=f%28x%2Cy%29%3Dx%5E2%2Ay-x%2Ay%5E3%0D%0Amezex%3D%28x%2C1%2C4%29%0D%0Amezey%3D%28y%2C-1%2C2%29%0D%0Ahladiny%3D40%0D%0Ashow%28html%28%22%3Ch2%3EVrstevnice+a+gradient%3C%2Fh2%3E+Funkce%3A+%24+f%28x%2Cy%29%3D+%25s+%24%22%25+latex%28f%28x%2Cy%29%29%29%29%0D%0A%0D%0Ashow%28html%28r%27Gradient%3A+%24%5Cnabla+f%28x%2Cy%29%3D%28%25s%2C%25s%29%24%27%25%28latex%28f%28x%2Cy%29.diff%28x%29%29%2C+latex%28f%28x%2Cy%29.diff%28y%29%29%29%29%29%0D%0A%0D%0AP%3Dcontour_plot%28f%2Cmezex%2Cmezey%2C+contours%3Dhladiny%2C+cmap%3D%27jet%27%2C+fill%3DFalse%29%0D%0AP%3DP%2Bplot_vector_field%28f.gradient%28%29%2Fnorm%28f.gradient%28%29%29%2C+mezex%2C+mezey%29%0D%0A%0D%0Ashow%28P%2C+figsize%3D10%2C+aspect_ratio%3D1%29)
+* [Nakreslit online](https://sagecell.sagemath.org/?z=eJxlj71uwyAUhfdIfgcU2TKk5Mdupip0TFdPnapY1IaYFoMFJDV5-hLbUVKVAbjncr_D4bDHHpH-kC_8sl_4w3M0a9mF9SQ0MrxFY-kJ9HiZ4TzUjaS1UJ5sN9HMNvoHNq6VcL5r8td3Yx07K1ExQMHRhHdMud06dMD-pL4r9gJiwEdLkFgQzxMgqWM9HMWwotkj1aRvEyVMfij6KeltHiYWJxbFaQIfEata8HBDCIP_8uAwWBSk0srpkyk7qR3keAg97B6DqWfJlDUoLe1I-sVcigEXUpI9lZahK6h4uiLKM6ucNiUXTNaQr27pIVorbdo_SvjbaDcc_p65uMKPVlwYyTYYUNsFaGmoE5pk6BegT4aw&lang=sage)
 
+\iffalse
 ![Gradient je kolmý na vrstevnice](gradient.svg)
+\fi
 
 </div>
+
+
+# Gradient v přírodě a přírodních zákonech 
+
+* V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* izolačních materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.  
+* S gradientem souvisí *majáková navigace* při migraci živočichů. Ti sledují určitý chemický podnět a pohybují se ve směru největšího růstu tohoto podnětu (tj. ve směru gradientu). Například žralok ve vodě takto sleduje koncentraci krve. Pokud je mezi žralokem a zdrojem krve proud, kerý krev unáší, nepopluje žralok rovnou čarou ke zdroji krve, ale koncentrace krve ho povede po delší trase.
+* Pokud se zajímáme nejenom o směr, ale i velikost gradientu, pomůže to k posouzení jak rychle se mění veličina v prostoru (gradient je velký, jsou-li vrstevnice nahusto). 
+* *Síla* působící na těleso v silovém poli ve kterém je možno zavést potenciální energii je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient).
+$$\vec F=-\nabla E$$
+* Většina proudění v přírodě je způsobena gradientem veličiny, která je hybatelnou silou tohoto proudění. Například vítr vznikne rozdílem v prostorovém rozložení tlaku (nenulovým gradientem). Často je intenzita  proudění úměrná tomuto gradientu (*Fickův zákon*). Například hustota toku $\vec j$ při difúzi vody ve dřevě je dána vztahem $$\vec j=-D\nabla c,$$ kde $c$ je koncentrace vody a $D$ je difúzní konstanta. 
 
 
 # Lineární aproximace funkce
@@ -207,6 +217,26 @@ Přibližný vzorec pro pocitovou teplotu platný pro teploty blízké $-11.0\,{
 \,\text{km/hod}$ je
 $$W\approx -20.12 +1.289 (T+11) -0.163(v-26).$$
 
+# Tečna k vrstevnici
+
+<div class='sloupce'>
+
+Pro $z=0=z_0$ dostáváme z tečné roviny následující: Nechť
+  $f(x_0,y_0)=0$. Tečna k vrstevnici funkce $f(x,y)$ na úrovni nula,
+  tj. ke křivce $0=f(x,y)$, vedená bodem $[x_0,y_0]$ má rovnici
+  $$0=\nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
+  
+\iffalse
+
+[Nakreslit online](https://sagecell.sagemath.org/?z=eJxtkc1ygyAUhffO-A7MZBFIrtafdMk7ZNFdp3EIYqRRcBAN9umL5qeLujtw7v0u97BB1aCuXCCGrOCKoRGddSnQp0tgSr7CoMIOJkLdKdtNkdtNpzzKwmBxaQZpGGycF_HBC39TSVUWRmuLfZ-vIZBASsIgDO50iqr4YlgphbKYLCUJiUtti87ocuAWj4JbbTB20WxG3iaE0mRGbJA-G_Yjrmg0vRWjkhz-pECePxjtNVJDw2BZaPKLPQcOYXCkXCurB1N0zfxI8NulkBPAk39pRgA17Cyann6YQQB6FPfUMHURODrAwa8DvGUd3X4LuyUz8riXbddILu2d-khyZicvdv5sq_tx68dIJW6ytDXN1xn33BGlKPlPWmlnxugbfiQKrxSXI9mvpP6mtGnxikGW_zrGfe2BrO88qjDMSk1TcK1UNI3fYWqZmwX5BYh4r2w=&lang=sage)
+
+![Tečna k vrstevnici](tecna.png)	
+\fi
+
+</div>
+
+
+
 # Implicitně definovaná funkce 
 
 
@@ -214,7 +244,7 @@ $$W\approx -20.12 +1.289 (T+11) -0.163(v-26).$$
 
 Mějme funkci $f(x,y)$ dvou proměnných a její vstevnici na úrovni $C$
 $$f(x,y)=C. \tag{1}$$ Tato rovnice za jistých okolností může definovat $y$
-jako funkci proměnné $x$. Pokusíme se najít derivaci této funkce. K
+jako funkci proměnné $x$. \iffalse Pokusíme se najít derivaci této funkce. K
 tomu uvažujme bod $(x_0,y_0)$ ležící na této vrstevnici,
 tj. $f(x_0,y_0)=C$.
 
@@ -223,13 +253,13 @@ tj. $f(x_0,y_0)=C$.
 * Řez grafu rovinou $z=f(x_0,y_0)$ je vrstevnice na úrovni $C$, řez tečné roviny je tečna k vrstevnici v rovině $z=C$. Rovnice této tečny je 
   $$ C=f(x_0,y_0)+\nabla f(x_0,y_0)\cdot (x-x_0,y-y_0),$$
   tj.
-  $$ 0=\nabla f(x_0,y_0)\cdot (x-x_0,y-y_0),$$
+  $$ 0=\nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
+
 
 ![Tečna k vrstevnici](implicitni_1.png) 
 
+
 <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a>
-
-
 
 </div>
 
@@ -252,13 +282,13 @@ tj. $f(x_0,y_0)=C$.
 
 ![Tečna k vrstevnici](implicitni_2.png) 
 
-
-
 </div>
 
 # Implicitně definovaná funkce  (závěr)
 
-<div class='sloupce_'>
+\fi
+
+<div class='sloupce'>
 
 >  **Věta o implicitní funkci**: Uvažujme funkci $f(x,y)$ dvou proměnných, splňující v nějakém bodě
 >  $(x_0, y_0)$ podmínku $f(x_0, y_0)=0$ a mající v okolí bodu $(x_0,
@@ -275,25 +305,13 @@ tj. $f(x_0,y_0)=C$.
 >      g'(x_0)=-\frac{\frac{\partial f (x_0,y_0)}{\partial x}}{\frac{\partial f (x_0,y_0)}{\partial y}}.
 >   $$
 
+
+\iffalse
 ![Tečna k vrstevnici](implicitni_3.png) 
-
-
-</div>
-
-
-# Tečna k vrstevnici
-
-<div class='sloupce'>
-
-Pro $z=0=z_0$ dostáváme z tečné roviny následující: Nechť
-  $f(x_0,y_0)=0$. Tečna k vrstevnici funkce $f(x,y)$ na úrovni nula,
-  tj. ke křivce $0=f(x,y)$, vedená bodem $[x_0,y_0]$ má rovnici
-  $$0=\nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
-  [nakreslit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=sage&in=%23+funkce+a+tecna+v+bode+%5Bx0%2Cy0%5D%0D%0Af%28x%2Cy%29%3Dx%5E2%2Ay-x%2Ay%5E3-2%0D%0Ax0%2Cy0%3D2%2C1%0D%0A%23x0%3D2.4%0D%0A%23y0%3Dfind_root%28f%28x0%2Cy%29%2C0%2C1%29%0D%0A%0D%0Atecna+%3D+f.gradient%28%29%28x0%2Cy0%29.dot_product%28vector%28%28x-x0%2Cy-y0%29%29%29%3D%3D0%0D%0A%0D%0A%23+obrazek+vrstevnic%2C+vrstevnice+na+urovni+nula%2C+tecny+a+gradientu%0D%0AP%3Dcontour_plot%28f%2C%28x%2C1%2C3%29%2C%28y%2C0%2C2%29%2C+labels%3DTrue%2C+contours%3Drange%28-4%2C4%2C1%29%2Ccmap%3D%27jet%27%29%0D%0AP%3DP%2Bimplicit_plot%28+tecna+%2C%28x%2C0%2C3%29%2C%28y%2C0%2C3%29%2Ccmap%3D%27hsv%27%2C+linewidth%3D3%29%0D%0AP%3DP%2Bimplicit_plot%28+f%28x%2Cy%29+%3D%3D+0+%2C%28x%2C0%2C3%29%2C%28y%2C0%2C3%29%2C+linewidth%3D3%29%0D%0AP%3DP%2Barrow%28%28x0%2Cy0%29%2Cvector%28%28x0%2Cy0%29%29%2Bf.gradient%28%29%28x0%2Cy0%29%2Fnorm%28f.gradient%28%29%28x0%2Cy0%29%29%29%0D%0A%0D%0AP.show%28aspect_ratio%3D1%2Cxmin%3D1.5%2Cymax%3D1.5%29)
-
-![Tečna k vrstevnici](tecna.png)	
+\fi
 
 </div>
+
 
 
 # Lokální extrémy funkce více proměnných
@@ -322,6 +340,9 @@ následující věta.
 
 *V bodě lokálního extrému hladké funkce je tedy nulový gradient.*
 
+
+\iffalse 
+
 ![Pokud je některá z parciálních derivací nenulová, extrém nenastává](extrem_1.png) 
 
 </div>
@@ -338,6 +359,7 @@ následující věta.
 
 </div>
 
+\fi
 
 # Složené funkce
 
@@ -378,7 +400,7 @@ nebo
 $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
 
 
-
+\iffalse
 
 # Separace proměnných
 
@@ -419,6 +441,8 @@ $$
 
 </div>
 
+\fi
+
 # Totální diferenciál
 * **Totálním diferenciálem** funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ nazýváme výraz
 $$      \mathrm{d}f=
@@ -431,13 +455,20 @@ Funkce $f$ se v tomto kontextu nazývá **skalární potenciál** vektorového p
 
 >  **Věta**  (platí za předpokladu dostatečně hladkých funkcí na otevřené množině):  Vektor   $$\vec F(x,y) = \left(   M(x,y) , N(x,y)\right)$$ je gradientem nějaké funkce $f(x,y)$ právě tehdy když platí   $$      \frac{\partial }{\partial y}M(x,y)=\frac{\partial}{\partial x}N(x,y).$$ 
 
+\iffalse
 
-# Darcyho zákon
+# Darcyho zákon a skalární potenciál
 
-Darcyho zákon experimentálně prokázal, že při proudění tekutiny je pro
-mnoho látek za běžných situací tok úměrný rozdílu tlaků. Proto se
-tento zákon používá například při studiu proudění podzemní vody
-propustnými vrstvami půdy.
+Darcyho zákon experimentálně prokázal, že při proudění tekutiny
+pórovitým prostředím je pro mnoho látek za běžných situací tok úměrný
+rozdílu tlaků. Proto se tento zákon používá například při studiu
+proudění podzemní vody propustnými vrstvami půdy, vody dřevem, vzduchu
+půdou, vody rostlinou a jejími částmi, ropy půdou a podobně. Rozdíl tlaků může mít různý původ (jiná
+výška, jiný tlak vrstev z nadloží, osmóza, kapilarita, koncentrace
+rozpuštěných látek apod) a tyto faktory se sčítají. Pro pohodlí je
+někdy rozdíl tlaků přepočítáván v některých oborech na ekvivalentní výškový rozdíl, což
+však činí tuto veličinu poměrně těžko představitelnou, protože není
+spojena s jedním konkrétním fyzikálním jevem. My se budeme držet tlaku.
 
 Je-li $p$ tlak, je změna tlaku na jednotku délky ve směru osy $x$
 rovna $\frac{\partial p}{\partial x}$ a tento rozdíl tlaků vyvolá
@@ -446,14 +477,16 @@ p}{\partial x},$$ kde $K_{xx}$ je konstanta úměrnosti z Darcyho zákona
 a znaménko vyjadřuje, že tekutina teče z místa s vyšším tlakem do
 místa s nižším tlakem.
 
-Změna tlaku ve směru osy $x$ může v izotropním prostředí vyvolat
+Změna tlaku ve směru osy $x$ může v obecném *anizotropním* prostředí vyvolat
 proudění i ve směru osy $y$ nebo $z$, opět existují konstanty $K_{xy}$
 a $K_{xz}$ takové, že
 $$q_{yx}=-K_{yx}\frac{\partial
 p}{\partial x},\qquad q_{zx}=-K_{zx}\frac{\partial
 p}{\partial x}.$$
 
-Analogické vztahy platí i pro další směry a celkový tok ve směru osy $x$ je dán součtem 
+Analogické vztahy platí i pro další směry a celkový tok ve směru osy
+$x$ je dán součtem příspěvků, které vznikly tlakovým gradientem ve
+směru jednotlivých os, tj.
 $$q_x=-K_{xx}\frac{\partial
 p}{\partial x}-K_{xy}\frac{\partial
 p}{\partial y}-K_{xz}\frac{\partial
@@ -474,7 +507,8 @@ K_{zx} & K_{zy} & K_{zz}
 \end{pmatrix}
 $$
 
-Pro vhodně zvolenou soustavu souřadnic je možné dosáhnout toho, že matice $K_{ij}$ je diagonální, tj. 
+Matice $(K_{ij})$ má kladná vlastní čísla a je symetrická.
+Díky tomu je možné pro vhodně zvolenou soustavu souřadnic dosáhnout toho, že matice $(K_{ij})$ je diagonální, tj. 
 $$\begin{pmatrix}
 q_x\\q_y\\q_z
 \end{pmatrix}
@@ -489,7 +523,10 @@ K_{xx} & 0 & 0\\
 \frac{\partial p}{\partial z}
 \end{pmatrix}.
 $$
-Je-li prostředí izotropní (stejné vlastnosti ve všech směrech), platí $K_{xx}=K_{yy}=K_{zz}=K$ a rovnice má tvar
+V některých případech jsou vhodné souřadnice dány geometrií, například
+díky vláknům dřeva můžeme psát Darcyho zákon ve tvaru s diagonální
+maticí.  Je-li prostředí dokonce *izotropní* (stejné vlastnosti ve
+všech směrech), platí $K_{xx}=K_{yy}=K_{zz}=K$ a rovnice má tvar
 $$\begin{pmatrix}
 q_x\\q_y\\q_z
 \end{pmatrix}
@@ -500,7 +537,7 @@ q_x\\q_y\\q_z
 \frac{\partial p}{\partial z}
 \end{pmatrix}.
 $$
-Je-li prostředí homogenní a $K$ nezávisí na prostorových souřadnicích, má tvar ještě o něco jednodušší
+Je-li prostředí kromě izotropie i *homogenní* a $K$ nezávisí na prostorových souřadnicích, má Darcyho zákon tvar ještě o něco jednodušší
 $$\begin{pmatrix}
 q_x\\q_y\\q_z
 \end{pmatrix}
@@ -512,6 +549,10 @@ q_x\\q_y\\q_z
 \end{pmatrix}.
 $$
 Vidíme, že tok je záporně vzatým gradientem jisté fyzikální veličiny, která se v anglické literatuře nazývá *specific discharge potential*.
+Matematicky je veličina $-Kp$ kmenovou funkcí toku $\vec q$.
+
+
+\fi
 
 # Laplaceův operátor
 
@@ -540,6 +581,7 @@ Vidíme, že tok je záporně vzatým gradientem jisté fyzikální veličiny, k
     * Při ustáleném vedení tepla je derivace podle času nulová a takové vedení tepla je popsáno rovnicí $$0=\nabla^2 u.$$ Stejná rovnice popisuje proudění obecně. Například proudění [podzemní vody](http://www.soilmanagementindia.com/soil/seepage-analysis/laplace-equation/laplace-equation-for-two-dimensional-flow-soil-engineering/137580) propustnými vrstvami půdy.
 
 
+\iffalse
 
 # Shrnutí vzorců pro výpočty
 
@@ -579,6 +621,7 @@ Použité označení:
 * Výraz $\nabla f(x_0,y_0)$ je gradient v bodě $(x_0, y_0)$. Je nutno zderivovat funkci $f$, sestavit gradient v bodě $(x,y)$ a dosadit $x=x_0$ a $y=y_0$.
 * Operace $(a,b)\cdot (c,d)=ac+bd$ je skalární součin vektorů.
 
+\fi
 
 <!--
 
