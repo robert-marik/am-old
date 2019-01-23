@@ -1,5 +1,6 @@
 \documentclass[twocolumn]{$documentclass$}
 
+\nonstopmode
 \def\obrazkyFix{\def\beginfigure{}}
 \def\KONEC{}
 \expandafter\long\expandafter\def\csname sloupce\endcsname#1\KONEC{\begin{minipage}{\linewidth}\begin{multicols}{2}\obrazkyFix\raggedright #1\end{multicols}\end{minipage}}
@@ -24,6 +25,8 @@
   \fi
 \fi
 \usepackage{longtable}
+
+\usepackage[font=footnotesize]{caption}
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{plainnat}
@@ -52,7 +55,8 @@ $if(fancy-enums)$
 \makeatletter\AtBeginDocument{%
   \renewcommand{\@listi}
     {\setlength{\labelwidth}{4em}}
-}\makeatother
+}
+\makeatother
 \usepackage{enumerate}
 $endif$
 $if(tables)$
@@ -67,8 +71,21 @@ $endif$
 % We will generate all images so they have a width \maxwidth. This means
 % that they will get their normal width if they fit onto the page, but
 % are scaled down if they would overflow the margins.
+\def\maxfactor{0.6}
 \makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>0.6\linewidth 0.6\linewidth
+
+\def\@maketitle{%
+  \newpage
+  \null
+  \vskip 1em%
+  \begin{center}%
+  \let \footnote \thanks
+    {\LARGE \@title \par}%
+  \end{center}%
+  \par
+  \vskip 1em}
+
+\def\maxwidth{\ifdim\Gin@nat@width>\maxfactor\linewidth \maxfactor\linewidth
 \else\Gin@nat@width\fi}
 \makeatother
 \let\Oldincludegraphics\includegraphics
@@ -96,8 +113,10 @@ $endif$
 $if(subscript)$
 \newcommand{\textsubscr}[1]{\ensuremath{_{\scriptsize\textrm{#1}}}}
 $endif$
-\setlength{\parindent}{0pt}
-\setlength{\parskip}{6pt plus 2pt minus 1pt}
+%\setlength{\parindent}{0pt}
+%\usepackage[math]{iwona}
+%\usepackage[T1]{fontenc}
+\setlength{\parskip}{3pt plus 2pt minus 1pt}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 $if(numbersections)$
 $else$
@@ -122,7 +141,7 @@ $endif$
 $if(date)$
 \date{$date$}
 $endif$
-\let\rmdefault\sfdefault
+%\let\rmdefault\sfdefault
 \renewenvironment{quote}{\par\textit\bgroup}{\egroup\par\medskip}
 \begin{document}
 $if(title)$
@@ -138,7 +157,7 @@ $if(toc)$
 
 $endif$
 
-Tento text je ti\v st\v enou verz\' i prezentac\' i dostupn\' ych z \url{http://user.mendelu.cz/marik/am}.
+%Tento text je ti\v st\v enou verz\' i prezentac\' i dostupn\' ych z \url{http://user.mendelu.cz/marik/am}.
 
 \thispagestyle{empty}
 

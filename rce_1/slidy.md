@@ -53,30 +53,37 @@ jednotku času přispívá tok veličiny přes hranici $\partial M$ (dovnitř
 nebo ven) a případné zdroje nebo spotřebiče uvnitř množiny $M$. Je-li
 $\vec \varphi(x,y,t)$ vektorová funkce popisující tok prostředí popsaného
 veličinou $u$, $\sigma(x,y,t)$ je hustota zdrojů (je-li $\sigma$ kladné)
-a spotřebičů (je-li $\sigma$ záporné), docházíme k\ následující bilanci
-pro rychlost změny celkového množství veličiny v\ množině $M$:
-$$\underbrace{\frac{\partial}{\partial t} \overbrace{\iint_M u(x,y,t) \mathrm{d}x\mathrm{d}y }^{\text{množství veličiny v množině $M$}}}_{\text{velikost změny za jednotku času}} = 
-  \underbrace{\iint_M \sigma(x,y,t)\mathrm{d}x\mathrm{d}y }_{\text{celková vydatnost  zdrojů  uvnitř množiny $M$}}
-  -\underbrace{\oint_{\partial M} -\varphi_2(x,y,t)\mathrm{d}x+\varphi_1(x,y,t)\mathrm{d}y ,}_{{\text{tok přes hranici množiny $M$}}}$$
+a spotřebičů (je-li $\sigma$ záporné), docházíme k\ bilanci
+pro rychlost změny celkového množství veličiny v\ množině $M$ ve tvaru
+$$
+\begin{aligned}
+\underbrace{\frac{\mathrm d}{\mathrm d t} \overbrace{\iint_M u(x,y,t) \mathrm{d}x\mathrm{d}y }^{\text{množství veličiny v množině $M$}}}_{\text{velikost změny za jednotku času}} &= 
+  \underbrace{\iint_M \sigma(x,y,t)\mathrm{d}x\mathrm{d}y }_{\text{celková vydatnost  zdrojů  uvnitř množiny $M$}}\\
+  &\qquad
+  -\underbrace{\oint_{\partial M} -\varphi_2(x,y,t)\mathrm{d}x+\varphi_1(x,y,t)\mathrm{d}y ,}_{{\text{tok přes hranici množiny $M$}}}
+\end{aligned}
+\label{*}\tag{*}$$
 kde $\varphi_{1,2}(x,y,t)$ jsou jednotlivé komponenty vektoru
 $\vec\varphi(x,y,z)$. 
 
 
 # Rovnice kontinuity (integrální tvar)
 
-Použijeme-li na rovnici 
-$$\underbrace{\frac{\partial}{\partial t} \overbrace{\iint_M u(x,y,t) \mathrm{d}x\mathrm{d}y }^{\text{množství veličiny v množině $M$}}}_{\text{velikost změny za jednotku času}} = 
+Použijeme-li na rovnici $\eqref{*}$
+\iffalse
+$$\underbrace{\frac{\mathrm d}{\mathrm d t} \overbrace{\iint_M u(x,y,t) \mathrm{d}x\mathrm{d}y }^{\text{množství veličiny v množině $M$}}}_{\text{velikost změny za jednotku času}} = 
   \underbrace{\iint_M \sigma(x,y,t)\mathrm{d}x\mathrm{d}y }_{\text{celková vydatnost  zdrojů  uvnitř množiny $M$}}
   -\underbrace{\oint_{\partial M} -\varphi_2(x,y,t)\mathrm{d}x+\varphi_1(x,y,t)\mathrm{d}y ,}_{{\text{tok přes hranici množiny $M$}}}$$
+  \fi
 Greenovu větu, dostáváme
-$$\frac{\partial}{\partial t} \iint_M u(x,y,t) \mathrm{d}x\mathrm{d}y  = 
+$$\frac{\mathrm d}{\mathrm d t} \iint_M u(x,y,t) \mathrm{d}x\mathrm{d}y  = 
   \iint_M \sigma(x,y,t)\mathrm{d}x\mathrm{d}y 
   -\iint_{ M} \mathop{\mathrm{div}}\vec\varphi(x,y,t)\mathrm{d}x\mathrm{d}y ,$$
 Pokud se oblast $M$ nemění v\ čase, je možné na levé straně přesunout
 časovou derivaci dovnitř integrálu a dostáváme dále rovnici zvanou
 *rovnice kontinuity v\ integrálním tvaru* 
 $$\iint_M \frac{\partial}{\partial t} u(x,y,t) \mathrm{d}x\mathrm{d}y  = 
-  \iint_M \Bigl( -\mathop{\mathrm{div}} \vec\varphi(x,y,t) + \sigma(x,y,t)\Bigr)\mathrm{d}x\mathrm{d}y $$
+  \iint_M \Bigl( -\mathop{\mathrm{div}} \vec\varphi(x,y,t) + \sigma(x,y,t)\Bigr)\mathrm{d}x\mathrm{d}y. $$
 
 # Rovnice kontinuity (lokální tvar)
 
@@ -139,6 +146,21 @@ kde $\nabla^2$ je Laplaceův operátor.
 Tuto rovnici je možno najít v\ literatuře pod názvem rovnice vedení
 tepla, protože popisuje šíření tepla v\ prostředí s\ teplotním
 součinitelem vodivosti $D$ a hustotou tepelných zdrojů $\sigma$.
+
+Pokud difuzní koeficient není konstantní, má difuzní rovnice tvar 
+$$ \frac{\partial u}{\partial t}-  \mathop{\mathrm{div}} (D \nabla u)=\sigma.$$
+
+Při studiu pohybu vody ve dřevě neuvažujeme zdroje ($\sigma=0$) a naopak uvažujeme prostředí, které má v kažém směru jiné vlastnosti a jiný difuzní koeficient. Výsledná difuzní rovnice poté má tvar
+$$ \frac{\partial u}{\partial t}
+-  \frac{\partial }{\partial x} \left(D_x \frac{\partial u}{\partial x}\right)
+-  \frac{\partial }{\partial y} \left(D_y \frac{\partial u}{\partial y}\right)
+-  \frac{\partial }{\partial z} \left(D_z \frac{\partial u}{\partial z}\right)
+=0
+$$
+a nazývá se *druhý Fickův zákon*.
+
+
+
 
 # Difuzní rovnice (rozměrová analýza)
 
@@ -447,6 +469,8 @@ $$b_k=2\int_0^1\psi(x)\cos(k\pi x)\mathrm{d}x.$$
 
 </div>
 
+\iffalse
+
 # Transformace do křivočarých souřadnic, sféricky symetrické rovnice
 
 Polární souřadnice známe z kapitoly o dvojném integrálu, vztahují se 
@@ -522,3 +546,5 @@ a
 $$  \frac{\partial u}{\partial t}+k\frac 1r\frac{\partial }{\partial r}\Bigl(r\frac{\partial u}{\partial r} \Bigr)=\sigma.$$
 
 </div>
+
+\fi

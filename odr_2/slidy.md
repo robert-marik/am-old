@@ -727,9 +727,12 @@ upevněným a jedním volným koncem je přirozené formulovat **smíšenou
 okrajovou podmínku** $$y(a)=0,\quad y'(b)=0,$$ kde $a$ je upevněný konec a
 $b$ volný konec.
 
+\iffalse
 
 ![Array mbira - hudební nástroj se smíšenou okrajovou úlohou](array_mbira.jpg) 
 
+
+\fi
 
 </div>
 

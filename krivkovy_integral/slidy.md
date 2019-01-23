@@ -37,7 +37,7 @@ resp. dvojicí skalárních funkcí.
 * Graf křivky dostaneme tak, že pro každé $t$ z intervalu $[\alpha, \beta]$ kreslíme ve 2D bod $[\varphi(t), \psi(t)]$.
 * Funkce $\varphi(t)$, $\psi(t)$ nazýváme *parametrizace* křivky $C$
 * Pro danou křivku $C$ v rovině $xy$, nejsou její parametrické rovnice dány jednoznačně.
-* [Kreslení pomocí Sage](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=var%28%27x+y%27%29%0D%0A%0D%0A%23%23%23+rovnice+pro+krivky%0D%0An%3D1%0D%0Ax%28t%29%3Dcos%28t%5En%29%0D%0Ay%28t%29%3Dsin%28t%5En%29%0D%0A%0D%0A%23%23%23+meze+pro+parametr%0D%0Atmin%2Ctmax%3D0%2C%282%2Api%29%5E%281%2Fn%29%0D%0A%0D%0A%0D%0A%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%0D%0A%0D%0AP1%3Dplot%28x%28t%29%2C%28t%2Ctmin%2Ctmax%29%2C+legend_label%3D%27x%28t%29%27%29%0D%0AP1%3DP1%2Bplot%28y%28t%29%2C%28t%2Ctmin%2Ctmax%29%2C+color%3D%27red%27%2C+legend_label%3D%27y%28t%29%27%29%0D%0Ashow%28P1%2C+figsize%3D%286%2C4%29%2C+title%3D%22Grafy+x%28t%29+a+y%28y%29%22%29%0D%0A%0D%0AP2%3Dparametric_plot%28%28x%28t%29%2Cy%28t%29%29%2C%28t%2Ctmin%2Ctmax%29%29%0D%0Ashow%28P2%2Caspect_ratio%3D1%2C+title%3D%22Parametricka+krivka%22%29)
+* [Kreslení pomocí Sage](https://sagecell.sagemath.org/?z=eJxtkcFugzAMhu9IvEMEhyRbpC1o2i3nXfMERR5Nu4iQoGAx0qcfgY5DVd8s-_v_3_IMkdGFJMrLoizquiYxzN52howxkD7auU9l4ZUsi4UhV12YGJ78up1yO1l_b3d4MLedHCHCYDCWBQ7WCxxgUe-CNS-j5Scm33Zkg55UnmipRheQZVvBUBw6XBBnrsafWwffximaN3L-ldDydYPSE6gLLkRFoznTR4V0V5h-wi_TUpCLvU72ZhT7FB8rihadUdVXhEsi2Y4ASSzxartCN-r_XNu1m_-eOss-xDhMGgHTaDpsI6ANSh4m-pDqYX8AVPwPID58GQ==&lang=sage)
 * Parametrizace kružnice, úsečky a grafu funkce jedné proměnné: viz [seznam vzorců](http://user.mendelu.cz/marik/am/cheatsheet.pdf)
 
 ![Dvě různé parametrizace jednotkové kružnice](parametricke_krivky.png)
@@ -69,11 +69,14 @@ drátu z výše uvažované úlohy.  Pokud počáteční a koncový bod křivky
 $C$ splývají, píšeme též $$ \oint_C f\;\mathrm{d} s $$ a integrál
 nazýváme *integrálem po uzavřené křivce*.
 
+\iffalse
+
 ![Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí.](krivkovy_integral_prvniho_druhu_1.png)
 
 
 <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a>
 
+\fi
 
 </div>
 
@@ -94,7 +97,14 @@ $$
 \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t))\sqrt{\varphi'^2(t)+\psi'^2(t)}\;\mathrm{d} t.
 $$
 
+
+\iffalse
+\def\maxfactor{0.4}
+
 ![Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky](delkovy_element.png)
+
+\def\maxfactor{0.6}
+\fi
 
 </div>
 
@@ -113,24 +123,6 @@ a integrál má tvar
 $$
 \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{\varphi'^2(t)+\psi'^2(t)+\xi^2(t)}\;\mathrm{d} t.
 $$
-
-# Vlastnosti křivkového integrálu prvního druhu
-
-* Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci
-  křivky $C$. Pro různé parametrizace stejné křivky má integrál
-  stejnou hodnotu.
-* Křivkový integrál prvního druhu je lineární vzhledem k funkci a aditivní vzhledem k oboru integrace. Přesněji, pro funkce $f$ a $g$ a konstantu $k$ platí následující.
-$$
-\begin{aligned}
-\int_C f+g\;\mathrm{d}s & = \int_C f\;\mathrm{d}s + \int_C g\;\mathrm{d}s \\
-\int_C kf\;\mathrm{d}s & = k\int_C f\;\mathrm{d}s\\
-\end{aligned}
-$$
-Je-li křivka $C$ rozdělena na dvě disjunktní (až na koncové body) křivky $C_1$ a $C_2$, platí
-$$
-\int_{C} f\;\mathrm{d}s = \int_{C_1} f\;\mathrm{d}s + \int_{C_2} f\;\mathrm{d}s .
-$$
-
 
 
 # Aplikace křivkového integrálu prvního druhu
@@ -172,11 +164,29 @@ th {text-align: center;}
 |----------------|-----------------------------------------|
 |$1$ | délka křivky $C$|
 |lineární hustota $\tau(x,y)$ | hmotnost $m_C$ křivky $C$|
-|$\frac {1}{m_C}[x\tau(x,y),y\tau(xy)]$| souřadnice težiště křivky $C$ |
+|$\frac {1}{m_C}[x\tau(x,y),y\tau(xy)]$| souřadnice těžiště křivky $C$ |
 |$x^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $y$|
 |$y^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $x$|
 |$\rho^2(x,y)\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k obecné ose, kde $\rho(x,y)$ je vzdálenost bodu $[x,y]$ od osy otáčení.|
 
+
+
+# Vlastnosti křivkového integrálu prvního druhu
+
+* Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci
+  křivky $C$. Pro různé parametrizace stejné křivky má integrál
+  stejnou hodnotu.
+* Křivkový integrál prvního druhu je lineární vzhledem k funkci a aditivní vzhledem k oboru integrace. Přesněji, pro funkce $f$ a $g$ a konstantu $k$ platí následující.
+$$
+\begin{aligned}
+\int_C f+g\;\mathrm{d}s & = \int_C f\;\mathrm{d}s + \int_C g\;\mathrm{d}s \\
+\int_C kf\;\mathrm{d}s & = k\int_C f\;\mathrm{d}s\\
+\end{aligned}
+$$
+Je-li křivka $C$ rozdělena na dvě disjunktní (až na koncové body) křivky $C_1$ a $C_2$, platí
+$$
+\int_{C} f\;\mathrm{d}s = \int_{C_1} f\;\mathrm{d}s + \int_{C_2} f\;\mathrm{d}s .
+$$
 
 
 # Křivkový integrál druhého druhu
@@ -184,7 +194,7 @@ th {text-align: center;}
 <div class="sloupce">
 
 Pokud působíme na těleso silou $F$ a přemísťujeme toto těleso ve směru
-působící síly po dráze délky $s$ ,
+působící síly po dráze délky $s$,
 [konáme práci](http://cs.wikipedia.org/wiki/Mechanická\_práce)
 $W=Fs$. Pokud přemísťování neprobíhá ve směru působící síly a má-li
 síla směr $\vec F$ a posunutí $\vec s$, je práce rovna skalárnímu
@@ -202,7 +212,7 @@ V limitě dostáváme veličinu, která se nazývá *křivkový integrál
 druhého druhu* funkce $\vec F$ po křivce $C$ a zapisujeme $$
 \int_C\vec F\;\mathrm{d}\vec r .$$ Je-li $$ \vec F(x,y)=P(x,y)\vec
 i+Q(x,y)\vec j, $$ zapisujeme někdy křivkový integrál
-\eqref{eq:kr_int_2} ve složkách $$ \int_C P(x,y)\mathrm{d}
+ ve složkách $$ \int_C P(x,y)\mathrm{d}
 x+Q(x,y)\mathrm{d} y.  $$
 
 Protože při pohybu tělesa po křivce jedním směrem se práce koná a při
@@ -211,13 +221,15 @@ křivkovém integrálu druhého druhu byla orientovaná
 - tj. abychom prohlásili, který bod je *počáteční* a který
 *koncový*. Vždy budeme předpokládat, že křivka je *orientovaná v
 souladu se svým parametrickým vyjádřením*, tj. že počáteční bod křivky
-\eqref{eq:C} odpovídá hodnotě parametru $t=\alpha$ a koncový bod
+ odpovídá hodnotě parametru $t=\alpha$ a koncový bod
 odpovídá hodnotě parametru $t=\beta$.
 
+\iffalse
 ![Křivkový integrál druhého druhu. Výška plochy je v každém bodě
  křivky určena skalárním součinem tečného vektoru jednotkové délky a
  vektorem zadaného vektorového
  pole.](krivkovy_integral_druheho_druhu_1.png)
+\fi
 
 </div>
 
@@ -242,8 +254,13 @@ $$
 $$ 
 
 
+\def\maxfactor{0.4}
+\iffalse
 
 ![Aproximace posunutí pomocí funkcí z parametrického vyjádření křivky](element_posunuti.png)
+
+\fi
+\def\maxfactor{0.6}
 
 </div>
 
@@ -276,7 +293,7 @@ Tato vlastnost je stejná jako u křivkového integrálu prvního druhu.
 
 * Integrál
   $$
-  \int_C\vec F\;\mathrm{d}\vec r.
+  \int_C\vec F\;\mathrm{d}\vec r
   $$
   vyjadřuje **práci** kterou vykoná síla $\vec F$ při přemístění tělesa podél orientované křivky $C$.
 * Je-li křivka $C$ uzavřená, píšeme
@@ -301,11 +318,16 @@ i+Q(x,y)\vec j,$
 * Je-li množina $\Omega$ "dostatečně pěkná" (např. souvislá, bez děr, s počástech hladkou hranicí $\partial \Omega$ která se nikde neprotíná, detaily uvedeme později u Greenovy věty), potom každý z\ integrálů
   $$\oint_{\partial\Omega}x\mathrm{d}y\qquad\text{a}\qquad\oint_{\partial\Omega}y\mathrm{d}x$$
   udává (až na případné znaménko) obsah množiny $\Omega$. Na tomto principu fungují planimetry.
+
+\iffalse
+
   <div class="sloupce3">
   ![](planimetr_1.jpg)       
   ![](planimetr_2.jpg)
   ![](planimetr_3.jpg)
   </div>
+
+\fi
 
 </div>
 
@@ -313,15 +335,10 @@ i+Q(x,y)\vec j,$
 # Shrnutí: vlastnosti křivkových integrálů
 
 
-* Oba integrály jsou **aditivní vzhledem k oboru integrace**. Pokud je
-  nutné při parametrizaci křivku rozdělit na konečný počet navzájem
-  disjunktních částí, můžeme vypočítat integrál na každé části
-  samostatně a výsledky sečíst.  
-* Křivkový integrál prvního ani druhého druhu **nezávisí na konkrétní
-  parametrizaci křivky**.
+* Oba integrály jsou **aditivní vzhledem k oboru integrace**. Pokud je nutné při parametrizaci křivku rozdělit na konečný počet navzájem disjunktních částí, můžeme vypočítat integrál na každé části   samostatně a výsledky sečíst.  
+* Křivkový integrál prvního ani druhého druhu **nezávisí na konkrétní  parametrizaci křivky**.
 * Křivkový integrál prvního druhu **nezávisí na orientaci** křivky.
-* Křivkový integrál druhého druhu **při změně orientace křivky mění
-  znaménko**.
+* Křivkový integrál druhého druhu **při změně orientace křivky mění znaménko**.
 
 # Steinerova věta
 
@@ -363,13 +380,16 @@ rovnoběžné osy.
 * V souřadnicích zapsáno, parametrické rovnice úsečky jsou $$\begin{aligned}x&=x_A+t(x_B-x_A)\\y&=y_A+t(y_B-y_A), \quad t\in[0,1]\end{aligned}$$
 * Pro úsečku v prostoru platí totéž, pouze přibývá třetí souřadnice.
 
+\iffalse
+
 ## Online výpočet křivkového integrálu
 
 * [Mathematical assistant on web](http://um.mendelu.cz/maw-html/index.php?lang=cs&form=lineintegral) - i s postupem a grafem křivky
-* Křivkový integrál prvního druhu, [numericky pomocí Sage](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=var%28%27t%27%29%0A%23%23%23+zadani+funkce%0Af%28x%2Cy%2Cz%29%3Dx%5E2%0A%0A%23%23%23+rovnice+pro+krivky%0Ax%28t%29%3Dcos%28t%29%0Ay%28t%29%3Dsin%28t%29%0Az%28t%29%3D0%0A%0A%23%23%23+meze+pro+parametr%0Atmin%2Ctmax%3D0%2C2*pi%0A%0A%0A%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%0A%0Anumerical_integral%28+f%28x%3Dx%28t%29%2Cy%3Dy%28t%29%2Cz%3Dz%28t%29%29+*+sqrt%28diff%28x%28t%29%2Ct%29%5E2%2Bdiff%28y%28t%29%2Ct%29%5E2%2Bdiff%28z%28t%29%2Ct%29%5E2%29%2C++++tmin%2Ctmax%29%5B0%5D)
-* Křivkový integrál druhého druhu, [numericky pomocí Sage](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=var%28%27t%27%29%0A%23%23%23+zadani+funkce%0AFx%28x%2Cy%2Cz%29%3D-y%0AFy%28x%2Cy%2Cz%29%3Dx%0AFz%28x%2Cy%2Cz%29%3D0%0A%0A%0A%23%23%23+rovnice+pro+krivky%0Ax%28t%29%3D2*cos%28t%29%0Ay%28t%29%3Dsin%28t%29%0Az%28t%29%3D0%0A%0A%23%23%23+meze+pro+parametr%0Atmin%2Ctmax%3D0%2C1%2F4*pi%0A%0A%0A%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%23%0A%0A%23numerical_integral%28+f%28x%3Dx%28t%29%2Cy%3Dy%28t%29%2Cz%3Dz%28t%29%29+*+sqrt%28diff%28x%28t%29%2Ct%29%5E2%2Bdiff%28y%28t%29%2Ct%29%5E2%2Bdiff%28z%28t%29%2Ct%29%5E2%29%2C++++tmin%2Ctmax%29%5B0%5D%0A%0Adosazeni_krivky%3Dmap%28+lambda+p%3Ap%28x%3Dx%28t%29%2C+y%3Dy%28t%29%2C+z%3Dz%28t%29%29%2C+%28Fx%2CFy%2C+Fz%29%29%0Agradient%3Dmap%28+lambda+p%3Ap.diff%28t%29%2C+%28x%28t%29%2Cy%28t%29%2Cz%28t%29%29+%29%0A%0Anumerical_integral%28vector%28dosazeni_krivky%29.dot_product%28vector%28gradient%29%29%2C++++tmin%2C+tmax%29%5B0%5D)
+* Křivkový integrál prvního druhu, [numericky pomocí Sage](https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&lang=sage)
+* Křivkový integrál druhého druhu, [numericky pomocí Sage](https://sagecell.sagemath.org/?z=eJxtkMFuwyAQRO-W_A8r5RBIaepGOVXi6p-o2ogaUiEbcDGxgK8v2CFqoywXntjRzDAzi7Zui-tqs9lAZJxpCeeL7jtRV61HngQSMX0OiUIhnyAWaOoqnyy3ZtayEzBaA72Vc59UHjlMD7vOTOlSVyHjJPUCMUNT1ErEVToyy5Rwtq6ckpo4xTxtyOvLcTfKm9mDWV70RQkrOzacpHbi27IBwRl5mnOQQLM_iTQ7Y9jB9GMd4vKcNvKDw5-HpwXDf4wFMYE0t1z4vfnIttxMLAotT2ttqtiIYGDqizMY38biD9cAcE1AALWetIFAG3H6kBSXS6HdvX6_hMjCNefaYumAs_2D0rPonLHoLhjec-NO6ZP5pXNlp7jiP-WgtPsFHlShKA==&lang=sage)
 
 
+\fi
 
 <style>
 .sloupce4{-moz-column-count:4; /* Firefox */

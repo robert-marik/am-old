@@ -32,9 +32,53 @@ odborné literatuře.
 
 </div>
 
+\iffalse
+
 ![Derivace a tečna (lineární aproximace)](derivace.png)
 
+\fi
+
 </div>
+
+
+\iffalse
+
+# Motivace pro rozšíření pojmu derivace
+
+Derivace je vhodná ke studiu fyzikálních procesů na makroskopické úrovni
+těles. Takovým fyzikálním zákonům říkáme zákony v integrálním
+tvaru. Ty jsou často odvozeny ze zákonů zachování.
+
+* Tepelná enegrie tělesa (a teplota) se mění tak, že v tělese vzniká
+nebo zaniká (chemické reakce, el. proud apod.) anebo tepelnou výměnou
+(teplo odtéká nebo přitéká kontaktem s tělesem o jiné teplotě).
+* Kapaliny a plyny proudí tak, že změna v definovaném místě prostoru
+je dána rozdílem, kolik do prostoru přiteče a vyteče a pokud bereme v
+úvahu i zdroje nebo spotřebiče tak rozdílem kolik v daném místě
+vznikne a kolik zanikne (například při proudění podzemní vody mezi
+dvěma geologickými vrstvami dojde k částečnému průsaku mimo tyto
+vrstvy).
+
+Pro vyjadřování takovýchto procesů, jako rychlost změny teploty
+tělesa, jsou vhodné derivace.
+
+Někdy však požadujeme detailnější informace o celém procesu, abychom
+měli přesnější popis a dokázali odhalit vliv všech relevantních
+parametrů. U tepelné výměny bychom například sledovali, jak se teplo
+předává z jednoho místa tělesa do druhého místa a jak prostupuje
+tělesem. Takový pohled je nutný například při studiu procesu, který
+není stacionární v čase. Při tomto pohledu již musíme znát teplotu
+nejen jako funkci času, ale i jako funkci prostorových
+souřadnic. Výsledkem tohoto přístupu je formulace zákonů v
+diferenciálním tvaru. Tento tvar říká, co se děje v konkrétním místě a
+dává lepší náhled na fyzikální podstatu. Proto tomuto přístupu často
+dáváme přednost a používáme jej jako výchozí bod pro studium a popis
+konkrétních situací. Musíme tedy pracovat s funkcemi více proměnných a
+studovat, jak se mění vzhledem k jednotlivým proměnným. To je přesně
+úkol pro diferenciální počet funkcí více proměnných.
+
+\fi
+
 # Parciální derivace
 
 <div class='sloupce'>
@@ -85,7 +129,9 @@ $$L\approx 37.95+0.0345(m-1100)+0.759(v-100),$$
 kde hmotnost a rychlost se dosazují v kilogramech a metrech a brzdná dráha vychází v metrech.
 
 \iffalse
+
 [Online výpočet](https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)
+
 \fi
 
 # Zákon šíření chyb  (chyba nepřímo měřené veličiny)
@@ -138,7 +184,9 @@ $$\Delta W=\sqrt{\left(1.289\times 0.2\right)^2+\left(-0.163\times 5\right)^2}=0
 Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C}$.
 
 \iffalse
+
 [Online výpočet](https://sagecell.sagemath.org/?z=eJxdi0EKgzAQRfeCdxA3TmIanISmdJFbDGRThEIQ3EhNZc5vJFiwu__e4_M7QUeKO1FXAfIQHq1G0w_aGbxLuiFq-5A8wqDRiezt02X_M3UVyQcd52kCEsDeOEU-347CZ-G_8knzsjWhyKZY1b6W9kyRrsgX_K5pA4gkRtNDZGnyKP8d3o01SQ==&lang=sage)
+
 \fi 
 
 # Gradient
@@ -172,23 +220,24 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 
 # Gradient v přírodě a přírodních zákonech 
 
-* V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* izolačních materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.  
+* V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* izolačních materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.
 * S gradientem souvisí *majáková navigace* při migraci živočichů. Ti sledují určitý chemický podnět a pohybují se ve směru největšího růstu tohoto podnětu (tj. ve směru gradientu). Například žralok ve vodě takto sleduje koncentraci krve. Pokud je mezi žralokem a zdrojem krve proud, kerý krev unáší, nepopluje žralok rovnou čarou ke zdroji krve, ale koncentrace krve ho povede po delší trase.
 * Pokud se zajímáme nejenom o směr, ale i velikost gradientu, pomůže to k posouzení jak rychle se mění veličina v prostoru (gradient je velký, jsou-li vrstevnice nahusto). 
 * *Síla* působící na těleso v silovém poli ve kterém je možno zavést potenciální energii je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient).
 $$\vec F=-\nabla E$$
+* V homogenním tíhovém poli s osou z svisle nahoru je gravitační potenciál (potenciální energie tělesa o jednotkové hmotnosti) dán vztahem $\phi(x,y,z)=gz$ a gradient je konstantní vektor $\nabla \phi=(0,0,g)$. Proto je práce přímo úměrná potenciálu a má smysl práci (změnu potenciální energie) považovat jenom za jiné vyjádření výškového rozdílu (změnu souřadnice $z$) Dokonce je to možné interpretovat jako změnu jednotek. Při proudění vody v půdě nebo v rostlinách hraje roli celá řada různých příspěvků k potenciální energii, jako gravitace, vnější tlak, osmóza, kapilarita. Pro pohodlnou práci někdy všechny tyto faktory přepočítáváme na odpovídající rozdíl výšek vodního sloupce, čímž je dána *piezometrická hladina*. Je to vlastně celková potenciální energie přepočtená na výšku vodního sloupce.
 * Většina proudění v přírodě je způsobena gradientem veličiny, která je hybatelnou silou tohoto proudění. Například vítr vznikne rozdílem v prostorovém rozložení tlaku (nenulovým gradientem). Často je intenzita  proudění úměrná tomuto gradientu (*Fickův zákon*). Například hustota toku $\vec j$ při difúzi vody ve dřevě je dána vztahem $$\vec j=-D\nabla c,$$ kde $c$ je koncentrace vody a $D$ je difúzní konstanta. 
 
 
 # Lineární aproximace funkce
 
-* Lineární aproximací funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ je (viz výše)
+* Lineární aproximací funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ je
 $$      f(x,y)\approx f(x_0, y_0)+\frac{\partial f (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0)$$
 nebo (pomocí gradientu)
 $$      f(x,y)\approx f(x_0, y_0)+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
 * Tečná rovina ke grafu funkce $z=f(x,y)$ vedená bodem
   $[x_0,y_0,z_0]$, kde $z_0=f(x_0,y_0)$ má rovnici
-  $$z=z_0+\frac{\partial f (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0)$$
+  $$z=z_0+\frac{\partial f (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0),$$
 nebo (pomocí gradientu)
 $$      z= z_0+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
 
@@ -325,6 +374,8 @@ neexistuje bod s menší funkční hodnotou a podobně, funkce má v bodě
 **lokální maximum**, pokud v okolí tohoto bodu neexistuje bod
 s vyšší funkční hodnotou. 
 
+\iffalse
+
 Funkce jedné proměnné určitě nemá v bodě lokální extrém, pokud má v
 tomto bodě kladnou derivaci (protože potom funkce roste), nebo pokud
 má v tomto bodě zápornou derivaci (protože potom funkce
@@ -332,6 +383,8 @@ klesá). Derivace v bodě kde nastává lokální extrém tedy musí být buď
 nulová nebo nesmí existovat. Stejná myšlenková úvaha se dá provést pro
 křivky vzniklé na řezech funkce dvou proměnných a proto platí
 následující věta.
+
+\fi
 
 >  **Věta (Fermatova nutná podmínka pro lokální extrémy)**:
 >  Jestliže funkce více proměnných má v nějakém bodě svůj lokální
@@ -363,8 +416,8 @@ následující věta.
 
 # Složené funkce
 
-* Derivace složené funkce $f(x,y)$, kde $x=x(u,v)$, $y=y(u,v)$:
-  $$\frac {\partial f}{\partial u}=\frac{\partial f}{\partial x} \frac{\partial x}{\partial u}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial u}=  \nabla f \cdot \left( \frac{\partial x}{\partial u}, \frac{\partial y}{\partial u}\right)$$
+* Derivace složené funkce $f(x,y)$, kde $x=x(u,v)$, $y=y(u,v)$ je
+  $$\frac {\partial f}{\partial u}=\frac{\partial f}{\partial x} \frac{\partial x}{\partial u}+\frac{\partial f}{\partial y}\frac{\partial y}{\partial u}=  \nabla f \cdot \left( \frac{\partial x}{\partial u}, \frac{\partial y}{\partial u}\right).$$
 * Derivace složené funkce $f(x,y,z)$, kde $x=x(t)$, $y=y(t)$, $z=z(t)$ (derivace podél křivky):
 $$  \frac{\mathrm{d} f}{\mathrm{d} t}=\frac{\partial f}{\partial x}\frac{\mathrm{d} x}{\mathrm{d} t}+\frac{\partial f}{\partial y}\frac{\mathrm{d} y}{\mathrm{d} t}+\frac{\partial f}{\partial z}\frac{\mathrm{d} z}{\mathrm{d} t}
 =
@@ -394,7 +447,7 @@ Vzhledem k této větě existují jenom tři druhé parciální derivace. Je ted
   $$
 \frac{\partial^2}{\partial x^2}f,\quad 
 \frac{\partial^2}{\partial x \partial y}f,\quad 
-\frac{\partial^2}{\partial y^2}f
+\frac{\partial^2}{\partial y^2}f,
 $$
 nebo
 $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
@@ -448,7 +501,7 @@ $$
 $$      \mathrm{d}f=
 \nabla f (x_0,y_0) \cdot (\mathrm{d}x,\mathrm{d}y)=\frac{\partial f (x_0,y_0)}{\partial x}\mathrm{d}x+\frac{\partial f (x_0,y_0)}{\partial y}\mathrm{d}y.
 $$
-* Máme-li vektorové pole $$\vec F(x,y)=(M(x,y),N(x,y)),$$ resp máme-li výraz 
+* Máme-li vektorové pole $$\vec F(x,y)=(M(x,y),N(x,y)),$$ resp. máme-li výraz 
   $$      M(x,y)\mathrm{d}x+N(x,y)\mathrm{d}y,$$
   může nastat otázka, zda k tomuto výrazu existuje totální diferenciál, tj. zda existuje skalární funkce $f$, jejímž gradientem je vektorové pole  $\vec F$. Toto je důležitá otázka ve fyzice, protože umožňuje rozhodnout, ke kterému silovém poli je možno zavést potenciální energii.
 Funkce $f$ se v tomto kontextu nazývá **skalární potenciál** vektorového pole nebo **kmenová funkce** diferenciálu.
@@ -504,11 +557,14 @@ K_{zx} & K_{zy} & K_{zz}
 \frac{\partial p}{\partial x}\\
 \frac{\partial p}{\partial y}\\
 \frac{\partial p}{\partial z}
-\end{pmatrix}
+\end{pmatrix}.
 $$
-
-Matice $(K_{ij})$ má kladná vlastní čísla a je symetrická.
-Díky tomu je možné pro vhodně zvolenou soustavu souřadnic dosáhnout toho, že matice $(K_{ij})$ je diagonální, tj. 
+Matice $(K_{ij})$ má kladná vlastní čísla a je symetrická. To není
+zcela snadné vidět, ale symetrie plyne z termodynamiky a z předpokladu
+vratnosti procesů, pozitivní definitnost plyne z toho, že kapalina
+teče do míst s nižším tlakem.  Díky těmto vlastnostem je možné pro
+vhodně zvolenou soustavu souřadnic dosáhnout toho, že matice
+$(K_{ij})$ je diagonální, tj.
 $$\begin{pmatrix}
 q_x\\q_y\\q_z
 \end{pmatrix}
@@ -557,19 +613,11 @@ Matematicky je veličina $-Kp$ kmenovou funkcí toku $\vec q$.
 # Laplaceův operátor
 
 
-* <span class='red'>Laplaceův operátor</span> $\Delta$, je definován jako divergence gradientu skalární funkce
+* <span class='red'>Laplaceův operátor</span> $\Delta$, je definován v\ kartézských souřadnicích a trojrozměrném prostoru vztahem
   $$
-  \Delta f=\mathop{\mathrm{div}}(\nabla f)
+  \Delta f=\frac{\partial^2 }{(\partial x)^2}f+\frac{\partial^2 }{(\partial y)^2}f+\frac{\partial^2 }{(\partial z)^2}f.
   $$
-* V kartézských souřadnicích a trojrozměrném prostoru tedy platí
-  $$
-  \Delta f=\frac{\partial^2 }{(\partial x)^2}f+\frac{\partial^2 }{(\partial y)^2}f+\frac{\partial^2 }{(\partial z)^2}f
-  $$
-* Laplaceův operátor je možno formálně zapsat pomocí skalárního
-  součinu dvou operátorů $\nabla$
-  $$
-    \Delta f=\mathop{\mathrm{div}}(\nabla f)=\nabla \cdot (\nabla f)=(\nabla\cdot \nabla)f=\nabla^2f
-  $$
+  V prostorech jiné dimenze postupujeme analogicky, jenom vynecháme nebo přidáme derivace podle dalších proměnných.
 * Označení symbolem $\Delta$ je stejné jako změna funkce $f$ a je nutné tyto dva významy symbolu $\Delta$
   nezaměňovat. Chceme-li se vyhnout nedorozumění, je možno pro
   označení Laplaceova operátoru používat $\nabla^2$ namísto $\Delta$.

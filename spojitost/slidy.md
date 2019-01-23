@@ -108,6 +108,7 @@ libovolné konečné dimenze.
   odečítání, násobení, dělení a skládání těchto funkcí navzájem se
   nazývají *elementární funkce*.
 
+\iffalse
 
 Elementární funkce jsou tedy všechny funkce, které umíme v konečném
   tvaru vyjádřit explicitním vzorcem za použití funkcí známých ze
@@ -122,6 +123,7 @@ Následující věta ukazuje, že u elementárních funkcí je spojitost v
 libovolném bodě zaručena již tím, že je funkce v tomto bodě
 definována.
 
+\fi
 
 > **Věta:** Všechny [elementární funkce](http://cs.wikipedia.org/wiki/Elementární_funkce}) jsou spojité v každém vnitřním bodě svého definičního oboru.
 

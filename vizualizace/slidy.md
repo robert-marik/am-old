@@ -12,7 +12,7 @@
 <div class="sloupce">
 * $f: \mathbb{R}\to \mathbb{R}$
 * $y=f(x)$, v rovině $x,y$ kreslíme uspořádané dvojice bodů $[x,y]$
-* výstupem je zpravidla křivka v rovině ([zkusit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=f%28x%29%3Dx*exp%28-x%29%0Aplot%28+f%28x%29+%2C+%28x%2C-1%2C4%29+%29))
+* výstupem je zpravidla křivka v rovině ([zkusit online](https://sagecell.sagemath.org/?z=eJxL06jQtK3QSq0o0NCt0OTlKsjJL9FQSAOKKugoaFTo6BrqmGgqaAIA3aEKBw==&lang=sage))
 * rychlost změny (směrnice tečny) je derivace: $$y', \quad \frac{dy}{dx}, \quad \frac{d}{dx}y$$
 * rychlost změny změny je druhá derivace: $$y'',\quad  \frac{d^2y}{dx^2}, \quad\frac{d^2}{dx^2}y$$
 * příklady
@@ -42,8 +42,8 @@
 * $\vec F(t)=[f(t),g(t)]$, $t\in[a,b]$
 * pro každé $t$ z intervalu $[a,b]$ kreslíme ve 2D bod $[f(t),g(t)]$
 * výstupem je (zpravidla) křivka v rovině
-* [zkusit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=%23%20Parametricky%20zadana%20krivka%0A%0At%3Dvar%28%27t%27%29%0Aparametric_plot%28[cos%28t%29%2C%20sin%28t%29]%2C%20%280%2Cpi%29%29) (Sage)
-* [zkusit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=python&in=%23+Nacteni+knihoven+pro+praci+s+matematikcymi+funkcemi%0D%0Afrom+numpy+import+%2A%0D%0A%0D%0A%23+Definice+jednotlivych+komponent+vektorove+funkce+jedne+promenne%0D%0Adef+f%28t%29%3A+%0D%0A++++return+sin%28t%29%0D%0A%0D%0Adef+g%28t%29%3A+%0D%0A++++return+cos%28t%29%0D%0A%0D%0A%23+Vykresleni+obrazku%0D%0Aimport+matplotlib.pyplot+as+plt%0D%0A%0D%0Afig+%3D+plt.figure%28%29%0D%0Aax%3Dfig.add_subplot%28111%29%0D%0Aax.set_aspect%28%27equal%27%29+%23+stejne+meritko+na+obou+osach%0D%0A%0D%0At+%3D+linspace%280%2C+2%2Api%2C+100%29++%23+rozsah+parametru+t+pro+kresleni%0D%0Aplt.plot%28f%28t%29%2C+g%28t%29%29%0D%0A%0D%0Aplt.show%28%29) (matplotlib)
+* [zkusit online](https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkv0YhOzi_WKNHUUSjOzAPSsToKGgY6BZmamgDCkhs_&lang=sage) (Sage)
+* [zkusit online](https://sagecell.sagemath.org/?z=eJxlUcFuwyAMvUfKP1jKoUlVRc2Ok3rrecddK0qcxiUYBqZb-vWDqDsNyRI2z37vmQY-lBZkAsM0uwcy-OByKE0QwSrBHGT0agmmxEajpbqagrPAyfoVyHoXBPZ1VVcNnHEiJo1wx5GdLPRY9QzGZRAjCzzQiAuZ5zVsw2HhtMiMdTXiBFMr3TvUFeQTUFJgiMS5WDgK4PYfoF18ARr4XE3AuBRX7hrU06S6esnMZvxSdF17v5YbqAh-kdI40Q1OJenzLQVs8zj1c8pJr8bxEtO1NLTDMGwPfUS5qOhRS7vDr6SWXQcNRMF7dmQxkBgHrLIGl8BFpefCIpljIY5eaWyPB3jbezrAcDx2kLuDe0Y1g1dBWZSQQLb_-PNTV0XeJqMs6bBtYnNd6nF23233Cy-Ml6s=&lang=python)
 * příklady:
     * při pohybu bodu ve 2D světě je jeho poloha v čase $t$ dána
       polohovým vektorem $$\vec r(t)=(r_x(t), r_y(t)).$$ Rychlost je

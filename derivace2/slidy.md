@@ -34,9 +34,9 @@
 <div class='sloupce'>
 * Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ definujeme
   <span class="red">divergenci</span> vztahem
-	  $$\mathop{\mathrm{div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}$$
+	  $$\mathop{\mathrm{div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
 * Pro vektorovou funkci dvou proměnných definujeme divergenci analogicky, pouze chybí třetí člen
-* [online výpočet a obrázek](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=sage&in=x%2Cy%2Cz%3Dvar%28%27x+y+z%27%29%0D%0A%0D%0Af%28x%2Cy%2Cz%29%3D%28-y%2Cx%2By%2C0%29++++%23+nenulova+rotace+i+divergence%0D%0A%23f%28x%2Cy%2Cz%29%3D%28-y%2Cx%2C0%29++++++%23+nulova+divergence%0D%0A%23f%28x%2Cy%2Cz%29%3D%28x%2Cy%2C0%29+++++++%23+nulova+rotace++%0D%0A%0D%0Axmin%2C+xmax%2C+ymin%2C+ymax+%3D+-1%2C+1%2C+-1%2C+1%0D%0A%0D%0Adivf%3D%28diff%28f%5B0%5D%2Cx%29%2Bdiff%28f%5B1%5D%2Cy%29%2Bdiff%28f%5B2%5D%2Cz%29%29.simplify_full%28%29%0D%0Acurlf%28x%2Cy%2Cz%29%3D%28+-diff%28f%5B1%5D%2Cz%29%2Bdiff%28f%5B2%5D%2Cy%29%2C+-diff%28f%5B2%5D%2Cx%29%2Bdiff%28f%5B0%5D%2Cz%29%2C+-diff%28f%5B0%5D%2Cy%29%2Bdiff%28f%5B1%5D%2Cx%29+%29%0D%0A%0D%0Ashow%28html%28r%22%24%5Cbegin%7Baligned%7D+%5Cvec+F%26%3D+%25s+%5C%5C+%5C%0D%0A+++%5Cmathop%7B%5Cmathrm%7Bdiv%7D%7D%5Cvec+F%26%3D+%25s+%5C%5C+%5C%0D%0A+++%5Cmathop%7B%5Cmathrm%7Brot%7D%7D%5Cvec+F%26+%3D%25s+%5Cend%7Baligned%7D%24%22%25%0D%0A+++%28latex%28f%28x%3Dx%2Cy%3Dy%2Cz%3Dz%29%29%2C+latex%28divf%28x%3Dx%2Cy%3Dy%2Cz%3Dz%29%29%2C++latex%28curlf%28x%3Dx%2Cy%3Dy%2Cz%3Dz%29%29%29%29%29%0D%0A%0D%0Aplot_vector_field%28%28f%5B0%5D%28x%2Cy%2C0%29%2Cf%5B1%5D%28x%2Cy%2C0%29%29%2C+%28x%2Cxmin%2Cxmax%29%2C+%28y%2Cymin%2Cymax%29%2C+aspect_ratio%3D1%2C+color%3D%27blue%27%29)
+* [online výpočet a obrázek](https://sagecell.sagemath.org/?z=eJyNUstqwzAQvBv8D0uS1jJRipO7rv2JOhjFlhOBbBn5USkh_96V4iZpoVBh0K52RqOdtaWOntnEDUksODgnaRzFUU2sP08Z2Thq145mKeBaQivaUemJg9EDLwVIqOQkzFG0pYij5U_ezAq8G-sPsN-_sQ_wLAH-QbaRLQXbcEvBhdhhDAw2Wwr4hc0DUaFmpJJ1TeqPbE9tup6T7Z66e7Lbo3D61sumU7J2RT0qRbD1cjTq8S7YPLjnZ65L6b22exbJPPBRy541tx4Iwd_-pD_JaWgUMYtVfhBH2V64ksdWVFfIJ1HC-yuDlx7yHPI4Qlfyhg8n3V3CbpoL9nm9_guJNt6RwDxStNVdbbV4CSyi-CAswd4Zds_8T4EGUbgde1d_V-bS7NhzDZdvslN6KFB30KaopVAVCY7M06bekDnG2zAKM_Yj9qmjYczulvK-w3sKwwepGY661EoblhzUKJL0C_Io15w=&lang=sage)
 * Použití:
     * Vektorové pole, jehož divergence je rovna nule, se nazývá
       **nezřídlové pole**. Siločáry nezřídlového pole nikde nezačínají ani nekončí a jsou
@@ -84,9 +84,10 @@
 
 Buď $\varphi(x,y,z):\mathbb{R}^3\to\mathbb{R}^3$ skalární funkce a buď $\vec F(x,y,z)=\nabla \varphi(x,y,z)$. Vypočtěte $\mathop{\mathrm{rot}}\vec F$.
 
-*Řešení.* $$\vec F=\left( \frac{\partial\varphi}{\partial x},\frac{\partial\varphi}{\partial y},\frac{\partial\varphi}{\partial z}\right)$$
-
+*Řešení.* 
 $$\begin{aligned}
+\vec F
+&=\left( \frac{\partial\varphi}{\partial x},\frac{\partial\varphi}{\partial y},\frac{\partial\varphi}{\partial z}\right)\\
 \mathop{\mathrm{rot}}\vec F
 &=\begin{vmatrix}
     \vec i & \vec j &\vec k\\
@@ -167,6 +168,9 @@ Odsud dostáváme
 
 > Divergence rotace je nula. 
 
+
+\iffalse
+
 # Mocnina se kterou ubývá nezřídlové vektorové pole (1/2)
 
 Pro jaké $n$ má vektorové pole 
@@ -246,6 +250,7 @@ table {
   každou složku vektoru samostatně a takový zápis představuje tři
   nezávislé rovnice zapsané v jedné vektorové rovnici. Příkladem je Navierova-Stokesova rovnice níže.
 
+
 # Popis pole
 
 Následující popis je pro jednoduchost a konkrétnost proveden pro
@@ -262,11 +267,6 @@ nahradíme příslušné veličiny a charakteristiky objektů.
 * Vektorové pole  
     - Gravitační pole je úplně popsáno intenzitou gravitačního pole.
     - Potenciál gravitačního pole je možné ze zadané intenzity počítat hledáním totálního diferenciálu zpětným integrováním nebo pomocí křivkového integrálu druhého druhu (viz později v semestru).
-
-
-
-
-
 
 
 # Ukázky použití - rovnice matematické fyziky 1/2
@@ -348,6 +348,7 @@ $$
 $$
 
 
+\fi
 
 <!--
 
