@@ -283,6 +283,47 @@ $$
 \frac{\partial\rho}{\partial t}+\nabla \vec j=s
 $$
 
+
+#### *Rovnice difuze, rovnice vedení tepla* 
+
+Tato rovnice rovněž vystihuje chování difundující látky v trojrozměrné
+oblasti. Jedná se vlastně o rovnici kontinuity doplněnou o předpoklad,
+že intenzita toku je úměrná gradientu. Nejjednodušší tvar má tato
+rovnice v homogenním izotropním prostředí.
+
+$$
+  \frac{\partial u}{\partial t}-D\nabla^2 u=\sigma
+$$
+
+Rovnice difuze se může týkat i popisu jiné veličiny, než veličiny
+bezprostředně spojené s pohybem látkového prostředí. Například takto
+můžeme sledovat vedení tepla, nebo při zpracování fotografí změny v
+jasu sousedních bodů.
+
+Všimli jste si, že sice existují zvířata, jejichž srst má skvrny na
+těle a pruhy na ocase, ale žádné zvíře nemá kresbu srsti naopak? Pokud
+má srst zvíře pruhy na těle, je pruhovaný i ocas. I toto plyne z
+rovnice difuze.
+
+
+
+#### *Navierova-Stokesova rovnice*
+
+Rovnice popisující proudění viskozní Newtonovské tekutiny. Jeden z
+[Millennium Prize
+Problems](http://en.wikipedia.org/wiki/Millennium_Prize_Problems).
+
+$$ 
+\frac{\partial \vec v}{\partial t}+(\vec v\cdot \nabla) \vec v
+  =g-\frac{\nabla p}{\rho}+\mu\nabla^2\vec v 
+$$
+
+
+
+
+
+# Ukázky použití - rovnice matematické fyziky 2/2
+
 #### *Maxwellovy rovnice* 
 
 Úplně popisují elektromagnetické vlnění. Jejich důsledkem jsou
@@ -306,35 +347,6 @@ jde rovnice odvodit z Maxwellových rovnic.
 
 $$
 \frac 1{c^2}\frac{\partial^2 z}{\partial t^2}=\nabla^2 z
-$$
-
-
-
-
-
-
-# Ukázky použití - rovnice matematické fyziky 2/2
-
-#### *Rovnice vedení tepla* 
-
-Tato rovnice rovněž vystihuje chování difundující látky v trojrozměrné
-oblasti. Jedná se vlastně o rovnici kontinuity doplněnou o předpoklad,
-že intenzita toku je úměrná gradientu.
-
-$$
-  \frac{\partial u}{\partial t}-D\nabla^2 u=\sigma
-$$
-
-
-#### *Navierova-Stokesova rovnice*
-
-Rovnice popisující proudění viskozní Newtonovské tekutiny. Jeden z
-[Millennium Prize
-Problems](http://en.wikipedia.org/wiki/Millennium_Prize_Problems).
-
-$$ 
-\frac{\partial \vec v}{\partial t}+(\vec v\cdot \nabla) \vec v
-  =g-\frac{\nabla p}{\rho}+\mu\nabla^2\vec v 
 $$
 
 

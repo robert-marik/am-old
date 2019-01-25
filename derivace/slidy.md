@@ -109,10 +109,6 @@ studovat, jak se mění vzhledem k jednotlivým proměnným. To je přesně
     * Pokud je $u$ celková vnitřní energie v jednotkovém objemu tělesa (hustota tepelné energie), je $\frac{\partial u}{\partial t}$ rychlost, s jakou se tato energie mění v čase. Pokud ke změně dochází pomocí vedení tepla, je tato derivace rovna tepelnému toku přes hranice. Pokud dochází ke generování tepla v tělese (chemická reakce, elektrický proud), je tato derivace  rovna tepelnému výkonu zdroje. V obecném případě se oba faktory sčítají, což vede k odvození rovnice vedení tepla ze zákona zachování.
 * Jednotkou derivace $\frac{\partial f}{\partial x}$ je jednotka veličiny $f$ dělená jednotkou veličiny $x$.
 * Analogická tvrzení jako pro veličinu $x$ platí pro veličinu $y$.
-* Parciální derivace se vyskytuje ve většině důležitých rovnic popisujících fyzikální
-  svět okolo nás. Často zde parciální derivace nevystupují přímo, ale prostřednictvím
-  diferenciálních operátorů -- výrazů sestavených z parciálních
-  derivací.
 * Ve fyzice často pracujeme s funkcemi, které mají spojité parciální derivace. Takové funkce se nazývají *hladké funkce*.
 
 # Aplikace parciálních derivací - příklad
@@ -188,6 +184,51 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 [Online výpočet](https://sagecell.sagemath.org/?z=eJxdi0EKgzAQRfeCdxA3TmIanISmdJFbDGRThEIQ3EhNZc5vJFiwu__e4_M7QUeKO1FXAfIQHq1G0w_aGbxLuiFq-5A8wqDRiezt02X_M3UVyQcd52kCEsDeOEU-347CZ-G_8knzsjWhyKZY1b6W9kyRrsgX_K5pA4gkRtNDZGnyKP8d3o01SQ==&lang=sage)
 
 \fi 
+
+\iffalse
+
+# Motivace pro představení diferenciálních operátorů
+
+Parciální derivace se vyskytují ve většině důležitých rovnic
+popisujících fyzikální svět okolo nás. 
+
+Parciální derivace umožňují sledovat závislost stavových veličin v
+závislosti na souřadnicích nebo čase, a to pro každou souřadnici
+samostatně. Nicméně souřadný systém je něco, co do popisu vnášíme
+uměle a proto by fyzikální proce neměl být na tomto souřadném systému
+závislý. *Proto často spojujeme parciální derivace do složitějších
+výrazů -- diferenciálních operátorů. Zde teprve vynikne síla
+parciálních derivací.*
+
+Jedno z uplatnění je v mechanice kontinua při popisu proudění
+tekutin. Pomocí Newtonova zákona můžeme napsat pohybovou rovnici pro
+každou molekulu tekutiny a ze znalosti počáteční rychlosti a polohy
+všech molekul zjistit, jak bude vypadat pohyb molekul v libovolném
+čase. V praxi však nedokážeme ani přesně určit počet molekul, ne tak
+jejich počáteční polohu a rychlost. Jedním z přístupů odstraňujících
+tyto problémy je statistický přístup používaný ve statistické
+fyzice. Jiný přístup je, že nesledujeme pohyb jednotlivých molekul,
+ale v jednotlivých místech prostoru sledujeme důležité
+charakteristiky, jako například rychlost proudění nebo tlak v
+kapalině. To je přesně úloha pro diferenciální operátory sestavené z
+parciálních derivací.
+
+Výhodou použití univerzálního nástroje parciálních derivací je, že
+získáme podobné rovnice pro studium řady rozdílných problémů. Při
+popisu proudění vycházíme ze zákona zachování: přírůstek proudící
+veličiny v uvažovaném místě tělesa je dán součtem vydatnosti všech
+zdrojů v tomto místě sníženém o množství veličiny, které vyteče přes
+hranice. Přitom spotřebiče uvažujeme jako zdroje se zápornou
+vydatností a tok dovnitř jako záporný tok. Na fyzikálním charakteru
+proudící veličiny nezáleží. Podobnými rovnicemi proto popisujeme
+proudění vody v potrubí (proudění homogenním prostředím, které neklade
+odpor), proudění vody ve dřevě (tj. proudění ortotropním materiálem),
+proudění vody nebo ropy v půdě (proudění anizotropním materiálem),
+proudění tepla v tepelně vodivém prostředí (proudění veličiny, která
+není spojena přímo s látkou) nebo například difuzi.
+
+\fi
+
 
 # Gradient
 

@@ -134,10 +134,22 @@ oblastí s\ nižší koncentrací a velikost je úměrná gradientu veličiny $u
 Platí tedy
 $$\label{eq:fick}
   \vec\varphi=-D\nabla u,$$
-kde $D$ je tzv. difuzní koeficient. Je-li tento koeficient konstantní
-(nezávislý na prostorových souřadnicích a na čase), potom má difuzní
-rovnice vhledem k\ identitě
-$$\mathop{\mathrm{div}} \vec\varphi=-\nabla (D\nabla u)=-D\nabla(\nabla
+kde $D$ je tzv. difuzní koeficient.
+S využitím tohoto vztahu má rovnice tvar 
+$$ \frac{\partial u}{\partial t}-  \mathop{\mathrm{div}} (D \nabla u)=\sigma.$$
+
+Při studiu pohybu vody ve dřevě neuvažujeme zdroje ($\sigma=0$) a naopak uvažujeme prostředí, které má v kažém směru jiné vlastnosti a jiný difuzní koeficient. Výsledná difuzní rovnice má poté tvar
+$$ \frac{\partial u}{\partial t}
+-  \frac{\partial }{\partial x} \left(D_x \frac{\partial u}{\partial x}\right)
+-  \frac{\partial }{\partial y} \left(D_y \frac{\partial u}{\partial y}\right)
+-  \frac{\partial }{\partial z} \left(D_z \frac{\partial u}{\partial z}\right)
+=0
+$$
+a nazývá se *druhý Fickův zákon*.
+
+Je-li difuzní koeficient $D$ konstantní (nezávislý na prostorových
+souřadnicích), potom má difuzní rovnice vhledem k\ identitě
+$$\mathop{\mathrm{div}} \vec\varphi=- \mathop{\mathrm{div}} (D\nabla u)=-D \mathop{\mathrm{div}} (\nabla
   u)=-D\nabla^2 u$$
 konečný tvar
 $$\label{eq:difuzni}
@@ -146,18 +158,6 @@ kde $\nabla^2$ je Laplaceův operátor.
 Tuto rovnici je možno najít v\ literatuře pod názvem rovnice vedení
 tepla, protože popisuje šíření tepla v\ prostředí s\ teplotním
 součinitelem vodivosti $D$ a hustotou tepelných zdrojů $\sigma$.
-
-Pokud difuzní koeficient není konstantní, má difuzní rovnice tvar 
-$$ \frac{\partial u}{\partial t}-  \mathop{\mathrm{div}} (D \nabla u)=\sigma.$$
-
-Při studiu pohybu vody ve dřevě neuvažujeme zdroje ($\sigma=0$) a naopak uvažujeme prostředí, které má v kažém směru jiné vlastnosti a jiný difuzní koeficient. Výsledná difuzní rovnice poté má tvar
-$$ \frac{\partial u}{\partial t}
--  \frac{\partial }{\partial x} \left(D_x \frac{\partial u}{\partial x}\right)
--  \frac{\partial }{\partial y} \left(D_y \frac{\partial u}{\partial y}\right)
--  \frac{\partial }{\partial z} \left(D_z \frac{\partial u}{\partial z}\right)
-=0
-$$
-a nazývá se *druhý Fickův zákon*.
 
 
 
