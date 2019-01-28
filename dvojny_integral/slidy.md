@@ -197,6 +197,46 @@ obdélníkovou oblast.
   dx\mathrm dy\right)$$
   a odsud odvozujeme rovnici vedení tepla.
 
+# Aplikace dvojného integrálu - tuhost nosníků, stabilita stromů
+
+Tuhost (odolnost vůči deformaci) pro nosník obdélníkového průřezu o výšce $b$ a
+šířce $a$ je dána kvadratickým momentem obdélníkového průřezu vzhledem
+k vodorovné ose procházející těžištěm. 
+$$\begin{aligned}I_x&=
+\iint_{\left[-\frac a2,\frac a2\right]\times \left[-\frac b2,\frac b2\right]} y^2\,\mathrm dx\mathrm dy\\
+&=
+\int_{-\frac a2}^{\frac a2} \,\mathrm dx\int_{-\frac b2}^{\frac b2}
+y^2 \,\mathrm dy=
+a\left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2}
+=\frac 1{12}ab^3
+\end{aligned}
+$$
+Odsud máme okamžitě několik pozorování
+
+* Pokud šířka vzroste dvakrát, tuhost vzroste také dvakrát. Pokud ale
+  dvakrát vzroste výška, tuhost vzroste dokonce osmkrát. Pro nosník s
+  poměrem stran 1:2 je poměr tuhostí při poloze naplacato a nastojato roven 1:4.
+* Pro nosník čtvercového průřezu ($a=b$) roste tuhost se čtvrtou
+  mocninou rozměrů. Obsah (a tedy i hmotnost) roste s druhou
+  mocninou. Pokud tedy u nosníku se čtvercovým průřezem zdvojnásobíme
+  množství materiálu, tuhost vzroste čtyřnásobně. Pokud nosník
+  vyrobíme s dutinou tak, že uprostřed čtverce vznikne dutina opět ve
+  tvaru čtverce, vzroste tuhost třikrát oproti situaci, kdy bychom
+  stejné množství materiálu použili na výrobu nosníku čtvercového
+  průřezu.
+* Pro čtvercový průřez roste tuhost se čtvrtou mocninou délky
+  strany. Podobná závislost musí být u\ každého průřezu
+  jednoparametrického tvaru, například pro kruh. Jako na nosník s\ kruhovým průřezem můžeme pohlížet i\ na stromy. Například strom, ve
+  kterém je dutina o\ velikosti poloviny průměru kmene většinou vyvolá
+  obavy ze stability. I když taková dutina vypadá obrovská, tuhost se
+  sníží o\ původní tuhost vynásobenou koeficientem
+  $$(0.5)^4=0.0625\approx 6\%.$$ 
+  Vidíme, že i s hrozivě vypadající dutinou má kmen pořád tuhost 
+  $94\%$ původní tuhosti (za předpokladu dutiny uprostřed
+  kmene). Pevnost roste jenom s třetí
+  mocninou a proto odolnost vůči zlomení klesne o něco více než
+  tuhost.
+
 # Aplikace dvojného integrálu - těžiště složeného obrazce
 
 Uvažujme množinu $M$ s jednotkovou plošnou hustotou, rozdělenou na dvě
@@ -368,7 +408,6 @@ $y_0$ o hodnotu odpovídající kvadratickému momentu vzhledem k
 vodorovné ose těžištěm $I_{x0}$ vyděleném součinem obsahu hráze $S$ a
 $y$-ové polohy těžiště $y_0$.
 
-
 # Polární souřadnice
 
 <div class='sloupce'>
@@ -393,6 +432,8 @@ $x$.
 \def\maxfactor{0.6}
 
 </div>
+
+\newpage
 
 # Množiny s jednoduchým vyjádřením v polárních souřadnicích
 
@@ -436,15 +477,13 @@ th {text-align: center;}
 </style>
 
 
+
 |Obrázek        | Popis v polárních souřadnicích | Popis v kartézských souřadnicích |
 |----------------|-----------------------|-----------------------|
 | ![](polarni_2.png)   | $$\begin{gathered}0\leq r\leq 1 \\ 0\leq \varphi\leq 2\pi\end{gathered}$$  | $$\begin{gathered}-1\leq x\leq 1\\ -\sqrt{1-x^2}\leq y\leq \sqrt{1-x^2}\end{gathered}$$  |
 | ![](polarni_1.png)   | $$\begin{gathered}1\leq r\leq 2 \\ 0\leq \varphi\leq \frac \pi2\end{gathered}$$  | Nelze zapsat pomocí jedné dvojice nerovností |
 | ![](polarni_3.png)  | $$\begin{gathered}0\leq r\leq 1 \\ \frac\pi 4\leq \varphi\leq \frac\pi 2\end{gathered}$$  | $$\begin{gathered}0\leq x\leq \frac {\sqrt 2}2 \\ x\leq y\leq \sqrt{1-x^2}\end{gathered}$$ |
 
-
-\vfill
-\newpage
 
 # Dvojný integrál v\ polárních souřadnicích
 
@@ -480,6 +519,5 @@ integrálu na dvojnásobný pevné meze a výpočet druhého integrálu je
 zpravidla jednodušší. 
 
 ![Element plochy v polárních souřadnicích](jakobian.png)
-
 
 </div>
