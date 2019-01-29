@@ -187,7 +187,7 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 
 \iffalse
 
-# Motivace pro představení diferenciálních operátorů
+# Motivace pro zavedení diferenciálních operátorů
 
 Parciální derivace se vyskytují ve většině důležitých rovnic
 popisujících fyzikální svět okolo nás. 
@@ -252,6 +252,7 @@ není spojena přímo s látkou) nebo například difuzi.
 * Gradient je v každém bodě kolmý k vrstevnici.
 * [Nakreslit online](https://sagecell.sagemath.org/?z=eJxlj71uwyAUhfdIfgcU2TKk5Mdupip0TFdPnapY1IaYFoMFJDV5-hLbUVKVAbjncr_D4bDHHpH-kC_8sl_4w3M0a9mF9SQ0MrxFY-kJ9HiZ4TzUjaS1UJ5sN9HMNvoHNq6VcL5r8td3Yx07K1ExQMHRhHdMud06dMD-pL4r9gJiwEdLkFgQzxMgqWM9HMWwotkj1aRvEyVMfij6KeltHiYWJxbFaQIfEata8HBDCIP_8uAwWBSk0srpkyk7qR3keAg97B6DqWfJlDUoLe1I-sVcigEXUpI9lZahK6h4uiLKM6ucNiUXTNaQr27pIVorbdo_SvjbaDcc_p65uMKPVlwYyTYYUNsFaGmoE5pk6BegT4aw&lang=sage)
 
+
 \iffalse
 ![Gradient je kolmý na vrstevnice](gradient.svg)
 \fi
@@ -264,9 +265,11 @@ není spojena přímo s látkou) nebo například difuzi.
 * V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* izolačních materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.
 * S gradientem souvisí *majáková navigace* při migraci živočichů. Ti sledují určitý chemický podnět a pohybují se ve směru největšího růstu tohoto podnětu (tj. ve směru gradientu). Například žralok ve vodě takto sleduje koncentraci krve. Pokud je mezi žralokem a zdrojem krve proud, kerý krev unáší, nepopluje žralok rovnou čarou ke zdroji krve, ale koncentrace krve ho povede po delší trase.
 * Pokud se zajímáme nejenom o směr, ale i velikost gradientu, pomůže to k posouzení jak rychle se mění veličina v prostoru (gradient je velký, jsou-li vrstevnice nahusto). 
-* *Síla* působící na těleso v silovém poli ve kterém je možno zavést potenciální energii je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient).
-$$\vec F=-\nabla E$$
-* V homogenním tíhovém poli s osou z svisle nahoru je gravitační potenciál (potenciální energie tělesa o jednotkové hmotnosti) dán vztahem $\phi(x,y,z)=gz$ a gradient je konstantní vektor $\nabla \phi=(0,0,g)$. Proto je práce přímo úměrná potenciálu a má smysl práci (změnu potenciální energie) považovat jenom za jiné vyjádření výškového rozdílu (změnu souřadnice $z$) Dokonce je to možné interpretovat jako změnu jednotek. Při proudění vody v půdě nebo v rostlinách hraje roli celá řada různých příspěvků k potenciální energii, jako gravitace, vnější tlak, osmóza, kapilarita. Pro pohodlnou práci někdy všechny tyto faktory přepočítáváme na odpovídající rozdíl výšek vodního sloupce, čímž je dána *piezometrická hladina*. Je to vlastně celková potenciální energie přepočtená na výšku vodního sloupce.
+* *Síla* ($\vec F$) působící na těleso v silovém poli ve kterém je možno zavést potenciální energii ($V$) je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient).
+$$\vec F=-\nabla V$$
+Pro jednorozměrnou úlohu a těleso v potenciálové jámě (tj. v rovnovážném stavu, kdy je minimum potenciální energie) můžeme potenciál v okolí minima aproximovat pomocí Taylorova rozvoje $$V(x)\approx V_0+\frac 12 V''(0)x^2+\cdots $$ (souřadnice volíme tak, že toto minimum je pro $x=0$) a je-li $|xV'''(0)|\ll V''(0)$, potom
+$$\vec F=-\nabla V=-V''(0)x=-kx.$$ To znamená, že síla je úměrná výchylce, stejně jako u tělesa na pružině. Podobně ve vícerozměnrném případě.
+* V homogenním tíhovém poli s osou $z$ svisle nahoru je gravitační potenciál (potenciální energie tělesa o jednotkové hmotnosti) dán vztahem $\phi(x,y,z)=gz$ a gradient je konstantní vektor $\nabla \phi=(0,0,g)$. Proto je práce přímo úměrná potenciálu a má smysl práci (změnu potenciální energie) považovat jenom za jiné vyjádření výškového rozdílu (změnu souřadnice $z$) Dokonce je to možné interpretovat jako změnu jednotek. Při proudění vody v půdě nebo v rostlinách hraje roli celá řada různých příspěvků k potenciální energii, jako gravitace, vnější tlak, osmóza, kapilarita. Pro pohodlnou práci někdy všechny tyto faktory přepočítáváme na odpovídající rozdíl výšek vodního sloupce, čímž je dána *piezometrická hladina*. Je to vlastně celková potenciální energie přepočtená na výšku vodního sloupce.
 * Většina proudění v přírodě je způsobena gradientem veličiny, která je hybatelnou silou tohoto proudění. Například vítr vznikne rozdílem v prostorovém rozložení tlaku (nenulovým gradientem). Často je intenzita  proudění úměrná tomuto gradientu (*Fickův zákon*). Například hustota toku $\vec j$ při difúzi vody ve dřevě je dána vztahem $$\vec j=-D\nabla c,$$ kde $c$ je koncentrace vody a $D$ je difúzní konstanta. 
 
 

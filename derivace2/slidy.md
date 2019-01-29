@@ -38,6 +38,7 @@
 * Pro vektorovou funkci dvou proměnných definujeme divergenci analogicky, pouze chybí třetí člen
 * [online výpočet a obrázek](https://sagecell.sagemath.org/?z=eJyNUstqwzAQvBv8D0uS1jJRipO7rv2JOhjFlhOBbBn5USkh_96V4iZpoVBh0K52RqOdtaWOntnEDUksODgnaRzFUU2sP08Z2Thq145mKeBaQivaUemJg9EDLwVIqOQkzFG0pYij5U_ezAq8G-sPsN-_sQ_wLAH-QbaRLQXbcEvBhdhhDAw2Wwr4hc0DUaFmpJJ1TeqPbE9tup6T7Z66e7Lbo3D61sumU7J2RT0qRbD1cjTq8S7YPLjnZ65L6b22exbJPPBRy541tx4Iwd_-pD_JaWgUMYtVfhBH2V64ksdWVFfIJ1HC-yuDlx7yHPI4Qlfyhg8n3V3CbpoL9nm9_guJNt6RwDxStNVdbbV4CSyi-CAswd4Zds_8T4EGUbgde1d_V-bS7NhzDZdvslN6KFB30KaopVAVCY7M06bekDnG2zAKM_Yj9qmjYczulvK-w3sKwwepGY661EoblhzUKJL0C_Io15w=&lang=sage)
 * Použití:
+    * Divergence je tok vektorového pole přes hranici infinitezimálního objemu v daném místě, vztažený na jednotku objemu.
     * Vektorové pole, jehož divergence je rovna nule, se nazývá
       **nezřídlové pole**. Siločáry nezřídlového pole nikde nezačínají ani nekončí a jsou
       to uzavřené křivky. Stacionární magnetické pole je nezřídlové (rozříznutím tyčového magnetu vzniknou dva magnety, nevznikne samostatný jižní pól a severní pól magnetu.)

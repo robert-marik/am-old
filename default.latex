@@ -56,6 +56,15 @@ $if(fancy-enums)$
   \renewcommand{\@listi}
     {\setlength{\labelwidth}{4em}}
 }
+
+
+\renewcommand\section{\penalty -200\@startsection {section}{1}{\z@}%
+                                   {-2.5ex \@plus -1ex \@minus -1ex}%
+                                   {1ex \@plus.2ex}%
+                                   {\normalfont\Large\bfseries}}
+
+
+
 \makeatother
 \usepackage{enumerate}
 $endif$
@@ -76,14 +85,15 @@ $endif$
 
 \def\@maketitle{%
   \newpage
-  \null
-  \vskip 1em%
   \begin{center}%
   \let \footnote \thanks
-    {\LARGE \@title \par}%
+    {\LARGE \textsc{\@title} \par}%
   \end{center}%
   \par
   \vskip 1em}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
 
 \def\maxwidth{\ifdim\Gin@nat@width>\maxfactor\linewidth \maxfactor\linewidth
 \else\Gin@nat@width\fi}
@@ -116,7 +126,7 @@ $endif$
 %\setlength{\parindent}{0pt}
 %\usepackage[math]{iwona}
 %\usepackage[T1]{fontenc}
-\setlength{\parskip}{3pt plus 2pt minus 1pt}
+\setlength{\parskip}{3pt plus 2pt minus 2pt}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 $if(numbersections)$
 $else$
@@ -163,6 +173,7 @@ $endif$
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
 
 \linepenalty 100000
 \let\oldsection\section
