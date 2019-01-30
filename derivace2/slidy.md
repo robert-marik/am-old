@@ -14,9 +14,9 @@
 
 # Příklady vektorových polí v rovině
 
-* Homogenní pole $\vec F_1=(0,-1)$. Každý vektor je stejný (směr i velikost).
-* Radiální pole $\vec F_2=(x,y)$. Každý vektor směřuje od počátku souřadnic.
-* Rotující pole $\vec F_3=(-y,x)$. Kolmé na radiální pole. Každý vektor je tečný ke kružnici se středem v počátku souřadnic.
+* Homogenní pole $\vec F_1=(0,-1)=-\vec j$. Každý vektor je stejný (směr i velikost).
+* Radiální pole $\vec F_2=(x,y)=x\vec i+y\vec j$. Každý vektor směřuje od počátku souřadnic.
+* Rotující pole $\vec F_3=(-y,x)=-x\vec i+y\vec j$. Kolmé na radiální pole. Každý vektor je tečný ke kružnici se středem v počátku souřadnic. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJyr0KlUsFUoSyzSUK_QqVTX5OVKBPILcvJL4stSk0vyi-LTMlNzUjQ0gLKaOgpAStdYxxjEqoSxkvNz8ots1ZNySlNB-pOw69et1KnAb0BRagpIf3FGfrlGooK2QpKOQmJxAdCQ-KLEksx8W0NNAAglMj4=&lang=sage)
 * Radiální pole s konstantní velikostí vektorů $$\vec
   F_4=\frac{1}{|\vec F_2|}\vec
   F_2=\frac{1}{\sqrt{x^2+y^2}}(x,y)=\frac{x}{\sqrt{x^2+y^2}}\vec
@@ -87,7 +87,7 @@
       rotaci, i když ve všech bodech míří stejným směrem.  [Online výpočet.](https://sagecell.sagemath.org/?z=eJyNUkFuwyAQvEfKH1ZRUkNLWrvqqRLXfqKOLBJDggTGwk4KifL3ArbsKqdyMLvMeAdm1xFPrvTCLMoceLhmeLlYLgRy8RxTlBP3jIqtwy_F2wfJE-q0bAg4zRwBn2IfYqCQEyhI-kZaLS-ColoKgcR3viOhxpgUO-Kn5H0XhPBrJ3WrpPCVOCuFgs7hbNV0D81apJje1wzcp3skk3K5gMeFYFa74u2s5jGBOXMTlEfeBOWRuJ1LOAw4vb47mR906rVCdrUu9_womxtT8tjw-g7lhR_g64nCpoOyhOFepWb9ybS3tFt9C8bc7_9iWtNPTKCRyZt6UluvNumv4EzPHQpm0WAXjQ0NjhIYjmMbHpERGi3-i-Hhka0yfRV0e2MrIbmqUbIktSPHJDoyxqFaiNJIxImIqSdpKvyQsq4NdSrLemloGI-DUcbSbK_OPMO_ltbCEQ==&lang=sage)
 * Pozor: anglický výraz pro rotaci je "curl".
 
-![Pole s nenulovou rotací (proud vody klesá kvadraticky směrem ke břehům a díky tomu stáčí loďku do proudu)](tok.png)
+![Tok kapaliny mezi dvěma rovnoběžnými stěnami jako pole s nenulovou rotací. Rychlost proudu klesá kvadraticky směrem ke břehům a díky tomu se loďka stáčí po proudu.](tok.png)
 
 <!-- ![Nevírové pole](nevirove.svg)	 -->
 
