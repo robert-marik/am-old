@@ -153,6 +153,26 @@ $if(date)$
 $endif$
 %\let\rmdefault\sfdefault
 \renewenvironment{quote}{\par\textit\bgroup}{\egroup\par\medskip}
+
+
+\def\strA{Online
+    výpočet.}
+\def\strB{Online
+  výpočet a obrázek.}
+\def\strC{Nakreslit
+  online.}
+\let\oldhref\href
+\def\href#1#2{%
+  \def\temp{#2}%
+  \ifx\temp\strA\else
+  \ifx\temp\strB\else
+  \ifx\temp\strC\else
+  \oldhref{#1}{#2}%
+  \fi
+  \fi
+  \fi
+}
+
 \begin{document}
 $if(title)$
 \maketitle

@@ -12,7 +12,7 @@
 <div class="sloupce">
 * $f: \mathbb{R}\to \mathbb{R}$
 * $y=f(x)$, v rovině $x,y$ kreslíme uspořádané dvojice bodů $[x,y]$
-* výstupem je zpravidla křivka v rovině ([zkusit online](https://sagecell.sagemath.org/?z=eJxL06jQtK3QSq0o0NCt0OTlKsjJL9FQSAOKKugoaFTo6BrqmGgqaAIA3aEKBw==&lang=sage))
+* výstupem je zpravidla křivka v rovině ([Nakreslit online.](https://sagecell.sagemath.org/?z=eJxL06jQtK3QSq0o0NCt0OTlKsjJL9FQSAOKKugoaFTo6BrqmGgqaAIA3aEKBw==&lang=sage))
 * rychlost změny (směrnice tečny) je derivace: $$y', \quad \frac{dy}{dx}, \quad \frac{d}{dx}y$$
 * rychlost změny změny je druhá derivace: $$y'',\quad  \frac{d^2y}{dx^2}, \quad\frac{d^2}{dx^2}y$$
 * příklady
@@ -41,9 +41,7 @@
 * $\vec F: \mathbb{R}\to \mathbb{R}^2$
 * $\vec F(t)=[f(t),g(t)]$, $t\in[a,b]$
 * pro každé $t$ z intervalu $[a,b]$ kreslíme ve 2D bod $[f(t),g(t)]$
-* výstupem je (zpravidla) křivka v rovině
-* [zkusit online](https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkv0YhOzi_WKNHUUSjOzAPSsToKGgY6BZmamgDCkhs_&lang=sage) (Sage)
-* [zkusit online](https://sagecell.sagemath.org/?z=eJxlUcFuwyAMvUfKP1jKoUlVRc2Ok3rrecddK0qcxiUYBqZb-vWDqDsNyRI2z37vmQY-lBZkAsM0uwcy-OByKE0QwSrBHGT0agmmxEajpbqagrPAyfoVyHoXBPZ1VVcNnHEiJo1wx5GdLPRY9QzGZRAjCzzQiAuZ5zVsw2HhtMiMdTXiBFMr3TvUFeQTUFJgiMS5WDgK4PYfoF18ARr4XE3AuBRX7hrU06S6esnMZvxSdF17v5YbqAh-kdI40Q1OJenzLQVs8zj1c8pJr8bxEtO1NLTDMGwPfUS5qOhRS7vDr6SWXQcNRMF7dmQxkBgHrLIGl8BFpefCIpljIY5eaWyPB3jbezrAcDx2kLuDe0Y1g1dBWZSQQLb_-PNTV0XeJqMs6bBtYnNd6nF23233Cy-Ml6s=&lang=python)
+* výstupem je (zpravidla) křivka v rovině. [Nakreslit online](https://sagecell.sagemath.org/?z=eJxTVghILErMTS0pykzOrlSoSkxJzEtUyC7KLMtO5OXi5SqxLUss0lAvUdfk5SqAq4wvyMkv0YhOzi_WKNHUUSjOzAPSsToKGgY6BZmamgDCkhs_&lang=sage) (Sage),  [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxlUcFuwyAMvUfKP1jKoUlVRc2Ok3rrecddK0qcxiUYBqZb-vWDqDsNyRI2z37vmQY-lBZkAsM0uwcy-OByKE0QwSrBHGT0agmmxEajpbqagrPAyfoVyHoXBPZ1VVcNnHEiJo1wx5GdLPRY9QzGZRAjCzzQiAuZ5zVsw2HhtMiMdTXiBFMr3TvUFeQTUFJgiMS5WDgK4PYfoF18ARr4XE3AuBRX7hrU06S6esnMZvxSdF17v5YbqAh-kdI40Q1OJenzLQVs8zj1c8pJr8bxEtO1NLTDMGwPfUS5qOhRS7vDr6SWXQcNRMF7dmQxkBgHrLIGl8BFpefCIpljIY5eaWyPB3jbezrAcDx2kLuDe0Y1g1dBWZSQQLb_-PNTV0XeJqMs6bBtYnNd6nF23233Cy-Ml6s=&lang=python) (Python+matplotlib)
 * příklady:
     * při pohybu bodu ve 2D světě je jeho poloha v čase $t$ dána
       polohovým vektorem $$\vec r(t)=(r_x(t), r_y(t)).$$ Rychlost je
@@ -74,8 +72,7 @@
       $$d\vec r=(f'(t),g'(t), h'(t))dt=(f'(t)dt, g'(t)dt, h'(t)dt)$$
       a
       $$ds=\Vert d\vec r\Vert =\sqrt{	(f'(t))^2+(g'(t))^2+(h'(t))^2}dt.$$
-* [zkusit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=%23+Parametricky+zadana+krivka%0A%0At%3Dvar%28%27t%27%29%0Aparametric_plot3d%28%5Bt*cos%28t%29%2C+t*sin%28t%29%2Ct%5D%2C+%280%2C6*pi%29%29) (Sage)
-* [zkusit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=python&in=%23+Nacteni+knihoven+pro+praci+s+matematikcymi+funkcemi%0D%0Afrom+numpy+import+%2A%0D%0A%0D%0A%23+Definice+jednotlivych+komponent+vektorove+funkce+jedne+promenne%0D%0Adef+f%28t%29%3A+%0D%0A++++return+sin%28t%29%2B0.04%2Asin%2810%2At%29%0D%0A%0D%0Adef+g%28t%29%3A+%0D%0A++++return+cos%28t%29%2B0.04%2Asin%2810%2At%29%0D%0A%0D%0Adef+h%28t%29%3A+%0D%0A++++return+cos%28t%29%0D%0A%0D%0A%23+Vykresleni+obrazku%0D%0Aimport+matplotlib+as+mpl%0D%0Afrom+mpl_toolkits.mplot3d+import+Axes3D%0D%0Aimport+matplotlib.pyplot+as+plt%0D%0A%0D%0Afig+%3D+plt.figure%28%29%0D%0Aax+%3D+fig.gca%28projection%3D%273d%27%29%0D%0At+%3D+linspace%280%2C+pi%2C+100%29++%23+rozsah+parametru+t+pro+kresleni%0D%0Aax.plot%28f%28t%29%2C+g%28t%29%2C+h%28t%29%29%0D%0Aplt.show%28%29) (matplotlib)
+ [Nakreslit online.](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=%23+Parametricky+zadana+krivka%0A%0At%3Dvar%28%27t%27%29%0Aparametric_plot3d%28%5Bt*cos%28t%29%2C+t*sin%28t%29%2Ct%5D%2C+%280%2C6*pi%29%29) (Sage),  [Nakreslit online.](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=python&in=%23+Nacteni+knihoven+pro+praci+s+matematikcymi+funkcemi%0D%0Afrom+numpy+import+%2A%0D%0A%0D%0A%23+Definice+jednotlivych+komponent+vektorove+funkce+jedne+promenne%0D%0Adef+f%28t%29%3A+%0D%0A++++return+sin%28t%29%2B0.04%2Asin%2810%2At%29%0D%0A%0D%0Adef+g%28t%29%3A+%0D%0A++++return+cos%28t%29%2B0.04%2Asin%2810%2At%29%0D%0A%0D%0Adef+h%28t%29%3A+%0D%0A++++return+cos%28t%29%0D%0A%0D%0A%23+Vykresleni+obrazku%0D%0Aimport+matplotlib+as+mpl%0D%0Afrom+mpl_toolkits.mplot3d+import+Axes3D%0D%0Aimport+matplotlib.pyplot+as+plt%0D%0A%0D%0Afig+%3D+plt.figure%28%29%0D%0Aax+%3D+fig.gca%28projection%3D%273d%27%29%0D%0At+%3D+linspace%280%2C+pi%2C+100%29++%23+rozsah+parametru+t+pro+kresleni%0D%0Aax.plot%28f%28t%29%2C+g%28t%29%2C+h%28t%29%29%0D%0Aplt.show%28%29) (matplotlib)
 
 ![3d krivka](3d_krivka.png)
 </div>
@@ -86,10 +83,7 @@
 <div class="sloupce">
 * $f: \mathbb{R}^2\to \mathbb{R}$
 * $z=f(x,y)$, v 3D obrázku kreslíme uspořádané trojice bodů $[x,y,z]$
-* výstupem je zpravidla plocha v prostoru
-* [zkusit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=%23%20graf%20je%20mo%C5%BEno%20ot%C3%A1%C4%8Det%20a%20p%C5%99ibli%C5%BEovat%20my%C5%A1%C3%AD%0Ay%3Dvar%28%27y%27%29%0Aplot3d%28x%5E2-y%5E2%2C%20%28x%2C-1%2C1%29%2C%20%28y%2C-1%2C1%29%29) (Sage)
-* [zkusit online](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=python&in=var%28%27y%27%29%0Afrom+sympy.plotting+import+plot3d%0A%0Asurface3D+%3D+plot3d%285*x*y*exp%28-x**2-y**2%29%2C+%28x%2C-2%2C2%29%2C+%28y%2C-2%2C2%29%2C+xlabel%3D%27x%27%2C+ylabel%3D%27y%27%2C+show%3DFalse%29%0Asurface3D.show%28%29) (matplotlib)
-* [zkusit online](http://user.mendelu.cz/marik/yamwi/index.php?in=plot3d%28x%5E2-y%5E2%2C%20%5Bx%2C-1%2C1%5D%2C%20%5By%2C-1%2C1%5D%29%3B) (Maxima + GNUplot)
+* výstupem je zpravidla plocha v prostoru [Nakreslit online.](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=%23%20graf%20je%20mo%C5%BEno%20ot%C3%A1%C4%8Det%20a%20p%C5%99ibli%C5%BEovat%20my%C5%A1%C3%AD%0Ay%3Dvar%28%27y%27%29%0Aplot3d%28x%5E2-y%5E2%2C%20%28x%2C-1%2C1%29%2C%20%28y%2C-1%2C1%29%29) (Sage), [Nakreslit online.](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=python&in=var%28%27y%27%29%0Afrom+sympy.plotting+import+plot3d%0A%0Asurface3D+%3D+plot3d%285*x*y*exp%28-x**2-y**2%29%2C+%28x%2C-2%2C2%29%2C+%28y%2C-2%2C2%29%2C+xlabel%3D%27x%27%2C+ylabel%3D%27y%27%2C+show%3DFalse%29%0Asurface3D.show%28%29) (matplotlib), [Nakreslit online.](http://user.mendelu.cz/marik/yamwi/index.php?in=plot3d%28x%5E2-y%5E2%2C%20%5Bx%2C-1%2C1%5D%2C%20%5By%2C-1%2C1%5D%29%3B) (Maxima + GNUplot)
 * příklady: rozložení teploty nebo tahového napětí v desce
 * naučíme se derivovat v diferenciálním počtu funkcí více proměnných
 

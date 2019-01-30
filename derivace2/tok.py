@@ -32,13 +32,21 @@ X, Y = np.meshgrid(x, y)
 U = dfx(X,Y)
 V = dfy(X,Y)
 
-plt.quiver(X,Y,U,V, color='gray')
+plt.quiver(X,Y,U,V, color='b')
 
 
 e1 = patches.Ellipse((2, -0.03), 0.05, 0.3, angle=90, linewidth=2, fill=True, zorder=2, color='r')
 e2 = patches.Ellipse((1.1, -0.2), 0.05, 0.3, angle=-58, linewidth=2, fill=True, zorder=2, color='r')
 e3 = patches.Ellipse((-0.5, -0.9), 0.05, 0.3, angle=0, linewidth=2, fill=True, zorder=2, color='r')
 e4 = patches.Ellipse((0.2, -0.5), 0.05, 0.3, angle=-30, linewidth=2, fill=True, zorder=2, color='r')
+
+plt.text(-0.5-0.1, -1, '1.')
+plt.text(0.2-0.1, -0.5, '2.')
+plt.text(1.1-0.1, -0.2, '3.')
+plt.text(2, 0.05, '4.')
+plt.axis('off')
+plt.plot([xmin,xmax], [ymin,ymin], color='g')
+plt.plot([xmin,xmax], [ymax,ymax], color='g')
 
 ax.add_patch(e1)
 ax.add_patch(e2)

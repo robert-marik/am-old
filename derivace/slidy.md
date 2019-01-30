@@ -126,7 +126,7 @@ kde hmotnost a rychlost se dosazují v kilogramech a metrech a brzdná dráha vy
 
 \iffalse
 
-[Online výpočet](https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)
 
 \fi
 
@@ -181,7 +181,7 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 
 \iffalse
 
-[Online výpočet](https://sagecell.sagemath.org/?z=eJxdi0EKgzAQRfeCdxA3TmIanISmdJFbDGRThEIQ3EhNZc5vJFiwu__e4_M7QUeKO1FXAfIQHq1G0w_aGbxLuiFq-5A8wqDRiezt02X_M3UVyQcd52kCEsDeOEU-347CZ-G_8knzsjWhyKZY1b6W9kyRrsgX_K5pA4gkRtNDZGnyKP8d3o01SQ==&lang=sage)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJxdi0EKgzAQRfeCdxA3TmIanISmdJFbDGRThEIQ3EhNZc5vJFiwu__e4_M7QUeKO1FXAfIQHq1G0w_aGbxLuiFq-5A8wqDRiezt02X_M3UVyQcd52kCEsDeOEU-347CZ-G_8knzsjWhyKZY1b6W9kyRrsgX_K5pA4gkRtNDZGnyKP8d3o01SQ==&lang=sage)
 
 \fi 
 
@@ -249,8 +249,7 @@ není spojena přímo s látkou) nebo například difuzi.
   y}\right)$$ (v závislosti na počtu proměnných funkce $f$). "Násobení"
   $\frac{\partial }{\partial x}$ s funkcí $f$ přitom chápeme jako
   parciální derivaci $\frac{\partial f}{\partial x}$.
-* Gradient je v každém bodě kolmý k vrstevnici.
-* [Nakreslit online](https://sagecell.sagemath.org/?z=eJxlj71uwyAUhfdIfgcU2TKk5Mdupip0TFdPnapY1IaYFoMFJDV5-hLbUVKVAbjncr_D4bDHHpH-kC_8sl_4w3M0a9mF9SQ0MrxFY-kJ9HiZ4TzUjaS1UJ5sN9HMNvoHNq6VcL5r8td3Yx07K1ExQMHRhHdMud06dMD-pL4r9gJiwEdLkFgQzxMgqWM9HMWwotkj1aRvEyVMfij6KeltHiYWJxbFaQIfEata8HBDCIP_8uAwWBSk0srpkyk7qR3keAg97B6DqWfJlDUoLe1I-sVcigEXUpI9lZahK6h4uiLKM6ucNiUXTNaQr27pIVorbdo_SvjbaDcc_p65uMKPVlwYyTYYUNsFaGmoE5pk6BegT4aw&lang=sage)
+* Gradient je v každém bodě kolmý k vrstevnici. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxlj71uwyAUhfdIfgcU2TKk5Mdupip0TFdPnapY1IaYFoMFJDV5-hLbUVKVAbjncr_D4bDHHpH-kC_8sl_4w3M0a9mF9SQ0MrxFY-kJ9HiZ4TzUjaS1UJ5sN9HMNvoHNq6VcL5r8td3Yx07K1ExQMHRhHdMud06dMD-pL4r9gJiwEdLkFgQzxMgqWM9HMWwotkj1aRvEyVMfij6KeltHiYWJxbFaQIfEata8HBDCIP_8uAwWBSk0srpkyk7qR3keAg97B6DqWfJlDUoLe1I-sVcigEXUpI9lZahK6h4uiLKM6ucNiUXTNaQr27pIVorbdo_SvjbaDcc_p65uMKPVlwYyTYYUNsFaGmoE5pk6BegT4aw&lang=sage)
 
 
 \iffalse

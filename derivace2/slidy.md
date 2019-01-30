@@ -1,6 +1,6 @@
 % Vektorová analýza
 % Robert Mařík
-% jaro 2014, aktualizace jaro 2018
+% 2014-2019
 
 # Vektorová analýza
 
@@ -27,7 +27,9 @@
   F_4=-\frac{x}{(x^2+y^2)^{3/2}}\vec i-\frac{y}{(x^2+y^2)^{3/2}}\vec
   j.$$ S druhou mocninou ve jmenovateli ubývá například  3D gravitační pole nebo elektrostatické pole generované
   hmotným bodem nebo koulí.
-
+* Rychlost při proudění vazké tekutiny ubývá směrem ke
+  stěnám. Tekutinu proudící doprava je možné pro $y\in [0,1]$
+  modelovat vektorovým polem $$\vec F_6=(y(1-y),0)=y(1-y)\vec i.$$
 
 # Divergence
 
@@ -35,8 +37,7 @@
 * Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ definujeme
   <span class="red">divergenci</span> vztahem
 	  $$\mathop{\mathrm{div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
-* Pro vektorovou funkci dvou proměnných definujeme divergenci analogicky, pouze chybí třetí člen
-* [Online výpočet a obrázek](https://sagecell.sagemath.org/?z=eJyNUstqwzAQvBv8D0uS1jJRipO7rv2JOhjFlhOBbBn5USkh_96V4iZpoVBh0K52RqOdtaWOntnEDUksODgnaRzFUU2sP08Z2Thq145mKeBaQivaUemJg9EDLwVIqOQkzFG0pYij5U_ezAq8G-sPsN-_sQ_wLAH-QbaRLQXbcEvBhdhhDAw2Wwr4hc0DUaFmpJJ1TeqPbE9tup6T7Z66e7Lbo3D61sumU7J2RT0qRbD1cjTq8S7YPLjnZ65L6b22exbJPPBRy541tx4Iwd_-pD_JaWgUMYtVfhBH2V64ksdWVFfIJ1HC-yuDlx7yHPI4Qlfyhg8n3V3CbpoL9nm9_guJNt6RwDxStNVdbbV4CSyi-CAswd4Zds_8T4EGUbgde1d_V-bS7NhzDZdvslN6KFB30KaopVAVCY7M06bekDnG2zAKM_Yj9qmjYczulvK-w3sKwwepGY661EoblhzUKJL0C_Io15w=&lang=sage)
+* Pro vektorovou funkci dvou proměnných definujeme divergenci analogicky, pouze chybí třetí člen. [Online výpočet a obrázek.](https://sagecell.sagemath.org/?z=eJyNUstqwzAQvBv8D0uS1jJRipO7rv2JOhjFlhOBbBn5USkh_96V4iZpoVBh0K52RqOdtaWOntnEDUksODgnaRzFUU2sP08Z2Thq145mKeBaQivaUemJg9EDLwVIqOQkzFG0pYij5U_ezAq8G-sPsN-_sQ_wLAH-QbaRLQXbcEvBhdhhDAw2Wwr4hc0DUaFmpJJ1TeqPbE9tup6T7Z66e7Lbo3D61sumU7J2RT0qRbD1cjTq8S7YPLjnZ65L6b22exbJPPBRy541tx4Iwd_-pD_JaWgUMYtVfhBH2V64ksdWVFfIJ1HC-yuDlx7yHPI4Qlfyhg8n3V3CbpoL9nm9_guJNt6RwDxStNVdbbV4CSyi-CAswd4Zds_8T4EGUbgde1d_V-bS7NhzDZdvslN6KFB30KaopVAVCY7M06bekDnG2zAKM_Yj9qmjYczulvK-w3sKwwepGY661EoblhzUKJL0C_Io15w=&lang=sage)
 * Použití:
     * Divergence je tok vektorového pole přes hranici infinitezimálního objemu v daném místě, vztažený na jednotku objemu.
     * Vektorové pole, jehož divergence je rovna nule, se nazývá
@@ -77,11 +78,13 @@
       **nevírové pole** a ve fyzice má důležité postavení - je v něm
       možno zavést potenciál a potenciální energii.
     * Faradayův zákon elektromagnetické indukce.    $$  \mathop{\mathrm{rot}}\vec E=-\frac{\partial \vec B}{\partial t}$$
-    * Rotace charakterizuje ne to, zda se otáčí tok jako celek, ale
-      zda se roztočí objekt unášený tokem. Příkladem je přímý tok v
-      řece, kdy rychlost u břehu klesá. V důsledku toho se loďka,
-      která odrazí od břehu kolmo stočí po proudu. Pole má nenulovou
-      rotaci, i když ve všech bodech míří stejným směrem.  [nakreslit online](https://sagecell.sagemath.org/?z=eJyNUkFuwyAQvEfKH1ZRUkNLWrvqqRLXfqKOLBJDggTGwk4KifL3ArbsKqdyMLvMeAdm1xFPrvTCLMoceLhmeLlYLgRy8RxTlBP3jIqtwy_F2wfJE-q0bAg4zRwBn2IfYqCQEyhI-kZaLS-ColoKgcR3viOhxpgUO-Kn5H0XhPBrJ3WrpPCVOCuFgs7hbNV0D81apJje1wzcp3skk3K5gMeFYFa74u2s5jGBOXMTlEfeBOWRuJ1LOAw4vb47mR906rVCdrUu9_womxtT8tjw-g7lhR_g64nCpoOyhOFepWb9ybS3tFt9C8bc7_9iWtNPTKCRyZt6UluvNumv4EzPHQpm0WAXjQ0NjhIYjmMbHpERGi3-i-Hhka0yfRV0e2MrIbmqUbIktSPHJDoyxqFaiNJIxImIqSdpKvyQsq4NdSrLemloGI-DUcbSbK_OPMO_ltbCEQ==&lang=sage)
+    * Představme si vektorové pole proudění tekutiny. Rotace udává,
+      zda má pole tencenci uvést do rotace objekt unášený tímto
+      prouděním. Nejedná se tedy o to, zda se pole točí či nětočí jako
+      u víru při vypouštění umyvadla. Příkladem je přímý tok v řece,
+      kdy rychlost u břehu klesá. V důsledku toho se loďka, která
+      odrazí od břehu kolmo stočí po proudu. Mimo středovou osu má pole nenulovou
+      rotaci, i když ve všech bodech míří stejným směrem.  [Online výpočet.](https://sagecell.sagemath.org/?z=eJyNUkFuwyAQvEfKH1ZRUkNLWrvqqRLXfqKOLBJDggTGwk4KifL3ArbsKqdyMLvMeAdm1xFPrvTCLMoceLhmeLlYLgRy8RxTlBP3jIqtwy_F2wfJE-q0bAg4zRwBn2IfYqCQEyhI-kZaLS-ColoKgcR3viOhxpgUO-Kn5H0XhPBrJ3WrpPCVOCuFgs7hbNV0D81apJje1wzcp3skk3K5gMeFYFa74u2s5jGBOXMTlEfeBOWRuJ1LOAw4vb47mR906rVCdrUu9_womxtT8tjw-g7lhR_g64nCpoOyhOFepWb9ybS3tFt9C8bc7_9iWtNPTKCRyZt6UluvNumv4EzPHQpm0WAXjQ0NjhIYjmMbHpERGi3-i-Hhka0yfRV0e2MrIbmqUbIktSPHJDoyxqFaiNJIxImIqSdpKvyQsq4NdSrLemloGI-DUcbSbK_OPMO_ltbCEQ==&lang=sage)
 * Pozor: anglický výraz pro rotaci je "curl".
 
 ![Pole s nenulovou rotací (proud vody klesá kvadraticky směrem ke břehům a díky tomu stáčí loďku do proudu)](tok.png)

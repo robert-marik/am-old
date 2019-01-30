@@ -36,8 +36,7 @@ resp. dvojicí skalárních funkcí.
   \end{cases}$$
 * Graf křivky dostaneme tak, že pro každé $t$ z intervalu $[\alpha, \beta]$ kreslíme ve 2D bod $[\varphi(t), \psi(t)]$.
 * Funkce $\varphi(t)$, $\psi(t)$ nazýváme *parametrizace* křivky $C$
-* Pro danou křivku $C$ v rovině $xy$, nejsou její parametrické rovnice dány jednoznačně.
-* [Kreslení pomocí Sage](https://sagecell.sagemath.org/?z=eJxtkcFugzAMhu9IvEMEhyRbpC1o2i3nXfMERR5Nu4iQoGAx0qcfgY5DVd8s-_v_3_IMkdGFJMrLoizquiYxzN52howxkD7auU9l4ZUsi4UhV12YGJ78up1yO1l_b3d4MLedHCHCYDCWBQ7WCxxgUe-CNS-j5Scm33Zkg55UnmipRheQZVvBUBw6XBBnrsafWwffximaN3L-ldDydYPSE6gLLkRFoznTR4V0V5h-wi_TUpCLvU72ZhT7FB8rihadUdVXhEsi2Y4ASSzxartCN-r_XNu1m_-eOss-xDhMGgHTaDpsI6ANSh4m-pDqYX8AVPwPID58GQ==&lang=sage)
+* Pro danou křivku $C$ v rovině $xy$, nejsou její parametrické rovnice dány jednoznačně. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxtkcFugzAMhu9IvEMEhyRbpC1o2i3nXfMERR5Nu4iQoGAx0qcfgY5DVd8s-_v_3_IMkdGFJMrLoizquiYxzN52howxkD7auU9l4ZUsi4UhV12YGJ78up1yO1l_b3d4MLedHCHCYDCWBQ7WCxxgUe-CNS-j5Scm33Zkg55UnmipRheQZVvBUBw6XBBnrsafWwffximaN3L-ldDydYPSE6gLLkRFoznTR4V0V5h-wi_TUpCLvU72ZhT7FB8rihadUdVXhEsi2Y4ASSzxartCN-r_XNu1m_-eOss-xDhMGgHTaDpsI6ANSh4m-pDqYX8AVPwPID58GQ==&lang=sage)
 * Parametrizace kružnice, úsečky a grafu funkce jedné proměnné: viz [seznam vzorců](http://user.mendelu.cz/marik/am/cheatsheet.pdf)
 
 ![Dvě různé parametrizace jednotkové kružnice](parametricke_krivky.png)
@@ -385,7 +384,7 @@ rovnoběžné osy.
 ## Online výpočet křivkového integrálu
 
 * [Mathematical assistant on web](http://um.mendelu.cz/maw-html/index.php?lang=cs&form=lineintegral) - i s postupem a grafem křivky
-* Křivkový integrál prvního druhu, [numericky pomocí Sage](https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&lang=sage)
+* Křivkový integrál prvního druhu. [numericky pomocí Sage](https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&lang=sage)
 * Křivkový integrál druhého druhu, [numericky pomocí Sage](https://sagecell.sagemath.org/?z=eJxtkMFuwyAQRO-W_A8r5RBIaepGOVXi6p-o2ogaUiEbcDGxgK8v2CFqoywXntjRzDAzi7Zui-tqs9lAZJxpCeeL7jtRV61HngQSMX0OiUIhnyAWaOoqnyy3ZtayEzBaA72Vc59UHjlMD7vOTOlSVyHjJPUCMUNT1ErEVToyy5Rwtq6ckpo4xTxtyOvLcTfKm9mDWV70RQkrOzacpHbi27IBwRl5mnOQQLM_iTQ7Y9jB9GMd4vKcNvKDw5-HpwXDf4wFMYE0t1z4vfnIttxMLAotT2ttqtiIYGDqizMY38biD9cAcE1AALWetIFAG3H6kBSXS6HdvX6_hMjCNefaYumAs_2D0rPonLHoLhjec-NO6ZP5pXNlp7jiP-WgtPsFHlShKA==&lang=sage)
 
 
