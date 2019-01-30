@@ -136,7 +136,11 @@ křivky nazýváme **isokliny**.
 
 <div class=sloupce>
 
+\iffalse
+
 ![Směrové pole diferenciálni rovnice](smerove_pole.png)
+
+\fi
 
 ![Směrové pole diferenciálni rovnice, integrální křivky, isokliny](smerove_pole_2.png)
 
@@ -238,7 +242,7 @@ Iterační formule Eulerovy metody: $$\begin{aligned}x_{n+1}&=x_n+h, \\ y_{n+1}&
 
 
 ![Eulerova metoda s velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou
- barvou). Řešením je zmenšit krok nebo vylepšit metodu.](euler.png)
+ barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.](euler.png)
 
 
 </div>
@@ -303,6 +307,8 @@ Iterační formule Eulerovy metody: $$\begin{aligned}x_{n+1}&=x_n+h, \\ y_{n+1}&
 </div>
 
 
+\iffalse
+
 # Proč funguje postup z předchozího slidu?
 
 <div class=sloupce>
@@ -333,6 +339,8 @@ $$  y'=f(x)g(y). $$
 
 </div>
 
+\fi
+
 # Existence a jednoznačnost řešení
 
 > **Věta o existenci a jednoznačnosti řešení:** Je-li $g(y_0)\neq 0$, je řešení počáteční
@@ -343,6 +351,6 @@ $$  y'=f(x)g(y). $$
 **Vzorec pro řešení IVP pro rovnici se separovatelnými proměnnými:**
 Partikulární řešení počáteční úlohy $$y'=f(x)g(y), \qquad y(x_0)=y_0$$
 lze psát též přímo ve tvaru určitého integrálu $$\int_{y_0}^y\frac
-{\mathrm{d}t}{g(t)}=\int_{x_0}^x f(t)\mathrm{d}t$$
+{\mathrm{d}t}{g(t)}=\int_{x_0}^x f(t)\mathrm{d}t.$$
 
 

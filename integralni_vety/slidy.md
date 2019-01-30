@@ -161,7 +161,7 @@ Nahradíme-li formálně vektorové pole $P\vec i+Q\vec j$ vektorovým polem $-Q
 i+P\vec j$, dostáváme následující vztah mezi dvojným integrálem
 divergence vektorového pole přes oblast $\Omega$ a křivkovým
 integrálem vyjadřujícím tok vektorového pole $P\vec i+Q\vec j$
-protékající přes hranici $\partial \Omega$
+protékající přes hranici $\partial \Omega$.
 $$
   \underbrace{\oint_{\partial \Omega}-Q(x,y)\mathrm{d}x +P(x,y)\mathrm{d}y }_{\text{Tok přes hranici $\partial \Omega$}}=
   \iint_{\Omega}\underbrace{\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)}_{\mathop{\mathrm{div}} (P\vec i +Q\vec j)}\mathrm{d}x \mathrm{d}y 

@@ -12,7 +12,7 @@ xmin, xmax, ymin, ymax = -1, 3, -1, 1
 
 def f(x,y): return ((x**2)*y-x*(y**3))
 
-def dfx(x,y): return (3*(1-y)*(1+y))
+def dfx(x,y): return (3*(1-y)*(1+y)+0.02)
 def dfy(x,y): return (0)
 
 
@@ -40,9 +40,9 @@ e2 = patches.Ellipse((1.1, -0.2), 0.05, 0.3, angle=-58, linewidth=2, fill=True, 
 e3 = patches.Ellipse((-0.5, -0.9), 0.05, 0.3, angle=0, linewidth=2, fill=True, zorder=2, color='r')
 e4 = patches.Ellipse((0.2, -0.5), 0.05, 0.3, angle=-30, linewidth=2, fill=True, zorder=2, color='r')
 
-plt.text(-0.5-0.1, -1, '1.')
-plt.text(0.2-0.1, -0.5, '2.')
-plt.text(1.1-0.1, -0.2, '3.')
+plt.text(-0.5-0.2, -1+0.1, '1.')
+plt.text(0.2-0.2, -0.5, '2.')
+plt.text(1.1-0.2, -0.15, '3.')
 plt.text(2, 0.05, '4.')
 plt.axis('off')
 plt.plot([xmin,xmax], [ymin,ymin], color='g')

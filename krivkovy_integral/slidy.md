@@ -79,7 +79,7 @@ nazýváme *integrálem po uzavřené křivce*.
 
 </div>
 
-# Převod na Riemannův integrál po rovinné křivce
+# Převod na Riemannův integrál (rovinná křivka)
 
 <div class="sloupce">
 
@@ -108,7 +108,7 @@ $$
 </div>
 
 
-# Převod na Riemannův integrál po prostorové  křivce
+# Převod na Riemannův integrál (prostorová  křivka)
 
 Podobně jako v rovině převádíme na Riemannův integrál i křivkový integrál prvního druhu po prostorové křivce 
 $$

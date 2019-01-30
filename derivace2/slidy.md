@@ -14,18 +14,15 @@
 
 # Příklady vektorových polí v rovině
 
-* Homogenní pole $\vec F_1=(0,-1)=-\vec j$. Každý vektor je stejný (směr i velikost).
-* Radiální pole $\vec F_2=(x,y)=x\vec i+y\vec j$. Každý vektor směřuje od počátku souřadnic.
-* Rotující pole $\vec F_3=(-y,x)=-x\vec i+y\vec j$. Kolmé na radiální pole. Každý vektor je tečný ke kružnici se středem v počátku souřadnic. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJyr0KlUsFUoSyzSUK_QqVTX5OVKBPILcvJL4stSk0vyi-LTMlNzUjQ0gLKaOgpAStdYxxjEqoSxkvNz8ots1ZNySlNB-pOw69et1KnAb0BRagpIf3FGfrlGooK2QpKOQmJxAdCQ-KLEksx8W0NNAAglMj4=&lang=sage)
+* Homogenní pole $$\vec F_1=(0,-1)=-\vec j.$$ Každý vektor je stejný (směr i velikost).
+* Radiální pole $$\vec F_2=(x,y)=x\vec i+y\vec j.$$ Každý vektor směřuje od počátku souřadnic.
+* Rotující pole $$\vec F_3=(-y,x)=-y\vec i+x\vec j.$$ Je kolmé na radiální pole. Každý vektor je tečný ke kružnici se středem v počátku souřadnic. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJyr0KlUsFUoSyzSUK_QqVTX5OVKBPILcvJL4stSk0vyi-LTMlNzUjQ0gLKaOgpAStdYxxjEqoSxkvNz8ots1ZNySlNB-pOw69et1KnAb0BRagpIf3FGfrlGooK2QpKOQmJxAdCQ-KLEksx8W0NNAAglMj4=&lang=sage)
 * Radiální pole s konstantní velikostí vektorů $$\vec
-  F_4=\frac{1}{|\vec F_2|}\vec
-  F_2=\frac{1}{\sqrt{x^2+y^2}}(x,y)=\frac{x}{\sqrt{x^2+y^2}}\vec
-  i+\frac{y}{\sqrt{x^2+y^2}}\vec j.$$ Každý vektor směřuje od počátku
+  F_4=\frac{\vec F_2}{|\vec F_2|}=\frac{(x,y)}{\sqrt{x^2+y^2}}=\frac{x\vec i +y\vec j}{\sqrt{x^2+y^2}}.$$ Každý vektor směřuje od počátku
   souřadnic a má jednotkovou délku.
 * Radiální pole ubývající s kvadrátem vzdálenosti od počátku a mířící
-  do středu $$\vec F_5=-\frac{1}{x^2+y^2}\vec
-  F_4=-\frac{x}{(x^2+y^2)^{3/2}}\vec i-\frac{y}{(x^2+y^2)^{3/2}}\vec
-  j.$$ S druhou mocninou ve jmenovateli ubývá například  3D gravitační pole nebo elektrostatické pole generované
+  do středu $$\vec F_5=-\frac{\vec
+  F_4}{x^2+y^2}=-\frac{x \vec i+y\vec j}{(x^2+y^2)^{3/2}}.$$ S druhou mocninou ve jmenovateli ubývá například  3D gravitační pole nebo elektrostatické pole generované
   hmotným bodem nebo koulí.
 * Rychlost při proudění vazké tekutiny ubývá směrem ke
   stěnám. Tekutinu proudící doprava je možné pro $y\in [0,1]$
@@ -54,6 +51,9 @@
 
 </div>
 
+
+\newpage
+
 # Rotace
 
 
@@ -78,7 +78,7 @@
       **nevírové pole** a ve fyzice má důležité postavení - je v něm
       možno zavést potenciál a potenciální energii.
     * Faradayův zákon elektromagnetické indukce.    $$  \mathop{\mathrm{rot}}\vec E=-\frac{\partial \vec B}{\partial t}$$
-    * Představme si vektorové pole proudění tekutiny. Rotace udává,
+    * Představme si vektorové pole charakterizující rychlost proudící tekutiny. Rotace udává,
       zda má pole tencenci uvést do rotace objekt unášený tímto
       prouděním. Nejedná se tedy o to, zda se pole točí či nětočí jako
       u víru při vypouštění umyvadla. Příkladem je přímý tok v řece,
@@ -87,9 +87,18 @@
       rotaci, i když ve všech bodech míří stejným směrem.  [Online výpočet.](https://sagecell.sagemath.org/?z=eJyNUkFuwyAQvEfKH1ZRUkNLWrvqqRLXfqKOLBJDggTGwk4KifL3ArbsKqdyMLvMeAdm1xFPrvTCLMoceLhmeLlYLgRy8RxTlBP3jIqtwy_F2wfJE-q0bAg4zRwBn2IfYqCQEyhI-kZaLS-ColoKgcR3viOhxpgUO-Kn5H0XhPBrJ3WrpPCVOCuFgs7hbNV0D81apJje1wzcp3skk3K5gMeFYFa74u2s5jGBOXMTlEfeBOWRuJ1LOAw4vb47mR906rVCdrUu9_womxtT8tjw-g7lhR_g64nCpoOyhOFepWb9ybS3tFt9C8bc7_9iWtNPTKCRyZt6UluvNumv4EzPHQpm0WAXjQ0NjhIYjmMbHpERGi3-i-Hhka0yfRV0e2MrIbmqUbIktSPHJDoyxqFaiNJIxImIqSdpKvyQsq4NdSrLemloGI-DUcbSbK_OPMO_ltbCEQ==&lang=sage)
 * Pozor: anglický výraz pro rotaci je "curl".
 
+
 ![Tok kapaliny mezi dvěma rovnoběžnými stěnami jako pole s nenulovou rotací. Rychlost proudu klesá kvadraticky směrem ke břehům a díky tomu se loďka stáčí po proudu.](tok.png)
 
+
 <!-- ![Nevírové pole](nevirove.svg)	 -->
+--------
+
+# Rotace významných polí
+
+* Dostředivé pole ubývající s libovolnou mocninou vzdálenosti má nulovou rotaci. Pro $$\vec F(x,y)=-\frac{x\vec i +y \vec j}{(x^2+y^2)^n}$$ platí $$\mathop{\mathrm{rot}} \vec F(x,y)=0.$$ [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3Q16iIM9KujDPSjMvT0a1E4RoAVRZn5JdrQJTDeBoKKZlpaRpu0YaxYHGdCk1dqIgBVKRSU0FTrzgztyAnM60yPq00J0cDKAIAmQYn8A==&lang=sage)
+
+* Rotace pole kolmého na dostředivé pole závisí na mocnině, se kterou toto pole ubývá. Pro $$\vec F(x,y)=\frac{-y\vec i +x\vec j}{(x^2+y^2)^n}$$ platí $$\mathop{\mathrm{rot}} \vec F(x,y)=-\frac{2(n-1)}{(x^2+y^2)^n}\vec k.$$ Všechna tato pole rotují (ve smyslu celkového pohybu) proti směru hodinových ručiček, rotace (ve smyslu operátoru rotace) je však jednou kladná a jednou záporná, podle znaménka výrazu $n-1$. Pokud bychom takovým polem nechali unášet drobný míček, v jednom případě by jej pole otáčelo po směru a v jiném případě proti směru hodinových ručiček. Pro $n=1$ by se míček neroztočil okolo vlastní osy vůbec. [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3U16iIM9KujDPSjMvTqUDhGQAVFmfkl2tAVMN4GgopmWlpGm7RhrFgcZ0KTV2oiAFUpFJTQVOvODO3ICczrTI-rTQnRwMoAgB8XCfD&lang=sage) [Nakreslit online.](https://sagecell.sagemath.org/?z=eJztVNFOwjAUfV-yf7iJmLWzDIEXQjL_AoIhxJRRsLHrZtdp-_e2hQVZUJ-N3jXr3T1n3d3pSXlZV0qDbMvaAm1A1nHEj7WS6lpUWvBtVlufebwWOo78teeH3D1kbm4VQ2OCZmSGMcQRNZCDK2eHgiIcR55lXoqdz-PIlFwSMCU1BGzIbRneGE4JuBEmT3SI4CXXDhqPJgTus3EcNc_VO3rWpUDJQOa3zSC5FVQzgyTGYfkd28Nub5AhFs9BMd0qCWhoR8ik6eTOuhtOU4k7pu0xzXXii2KN4PqCfCY-hEZP3xeaupbvs0kcrcgjWZBlvt6QbgTpKgUGuHRiZ1RReWDosyphCTyPI3DhufaSe1atx_XBe72eER-ru3xtNpe1R1ezvdrC1ToVe9AyQLaDjtv72vI3ptDpfwkUlahUnmwT7O2QNUw_0aZmhUYJe22pSAgkO6qp0y05OSTsbJDw5npMj777bAsCYy_zj6b4DbbwGhRif5Tg3yHfOuQLj_Ts4c6MSTb9t8efsscHFNPTYw==&lang=sage)
 
 # Rotace gradientu je nulový vektor
 
@@ -175,7 +184,7 @@ $$
 Odsud dostáváme 
   $$
   \mathop{\mathrm{div}} (\mathop{\mathrm{rot}} \vec F ) 
- =0$$
+ =0.$$
 
 > Divergence rotace je nula. 
 
