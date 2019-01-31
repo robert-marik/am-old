@@ -11,17 +11,17 @@ then
 <link rel="stylesheet" type="text/css" href="styl.css" ></head><html>' > index.html
    echo '<h1>Prezentace z přednášek z Aplikované matematiky</h1><p>Tato stránka obsauje prezentace z předmětu <a href="http://user.mendelu.cz/marik/am/">Aplikovaná matematika</a>. Pořadí přednášek je tak jak byly zařazeny do výuky během letních semestrů 2014 a 2015, každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele.</p>' >> index.html
    echo '<div class="CSSTableGenerator"><table>'>>index.html
-   echo '<tr><td>Název</td><td>html</td><td>Prezentace slidy.js</td><td>Prezentace deck.js</td><td>PDF</td><td>markdown</td></tr>'>>index.html
+   echo '<tr><td>Název</td><td>html</td><td>Prezentace slidy.js</td><td>PDF</td><td>markdown</td></tr>'>>index.html
 
    for j in $kde
    do
        k=`head -n1 $j/slidy.md | cut -d% -f2`
-       echo "<tr><td>$k</td><td><a href='$j/index_h.html' target='_blank'>otevřít</a></td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j/index_d.html' target='_blank'>otevřít</a><td><a href='$j.pdf'  target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
+       echo "<tr><td>$k</td><td><a href='$j/index_h.html' target='_blank'>otevřít</a></td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j.pdf'  target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
 
    done
    echo '</table></div></html>' >> index.html
 
-   scp index.html kiwi:html/am/slidy/
+   scp index.html cornus.mendelu.cz:html/am/slidy/
 fi  
 
 for i in $kde
