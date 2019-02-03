@@ -116,14 +116,36 @@ studovat, jak se mění vzhledem k jednotlivým proměnným. To je přesně
 *Příklad:* Brzdná dráha $L$ (v metrech) auta o hmotnosti $m$ (v kilogramech) brzdícího z rychlosti $v$ (v kilometrech za hodinu) je dána vzorcem
 $$L=k m v^2, $$ kde $k= 3.45 \times 10 ^{-6}\,(\mathrm{m}\,\mathrm{hod}^2)/(\mathrm{kg}\,\mathrm{km}^2)$. Pro $m=1100\,\mathrm{kg}$ a $v=100\,\mathrm{km}/\mathrm{hod}$ je brzdná dráha $37.95\,\mathrm{m}$.
 
-* Parciální derivace podle $m$ je $\frac{\partial L}{\partial m}=kv^2$ a pro zadané hodnoty vychází
-$$\frac{\partial L}{\partial m}=0.0345 \mathrm{m}/\mathrm{kg}.$$ Každý kilogram hmotnosti nad $1100\,\mathrm{kg}$ auta jedoucího rychlostí $100\,\mathrm{km}/\mathrm{hod}$ prodlouží brzdnou dráhu o cca $3.5\,\mathrm{cm}$.
-* Parciální derivace podle $v$ je $\frac{\partial L}{\partial v}=2kmv$ a pro zadané hodnoty vychází
-$$\frac{\partial L}{\partial v}=0.759\,\mathrm{m}/(\mathrm{km}/\mathrm{hod})=7.59\times 10^{-4}\,\mathrm{hod}.$$ Každý kilometr za hodinu nad $100\,\mathrm{km}/\mathrm{hod}$ u auta vážícího $1100\,\mathrm{kg}$ prodlouží brzdnou dráhu o cca $76\,\mathrm{cm}$.
-* Zjednodušený vzorec pro brzdnou dráhu auta s hmotností blízkou $1100\,\mathrm{kg}$ a rychlostí blízkou $100\,\mathrm{km}/\mathrm{hod}$ je
+* Parciální derivace podle $m$ je $\frac{\partial L}{\partial m}=kv^2$
+  a pro zadané hodnoty vychází
+  $$\frac{\partial L}{\partial m}=0.0345 \mathrm{m}/\mathrm{kg}.$$
+  Každý kilogram hmotnosti nad $1100\,\mathrm{kg}$ auta jedoucího
+  rychlostí $100\,\mathrm{km}/\mathrm{hod}$ prodlouží brzdnou dráhu o
+  cca $3.5\,\mathrm{cm}$.
+* Parciální derivace podle $v$ je $\frac{\partial L}{\partial v}=2kmv$
+  a pro zadané hodnoty vychází
+  $$\frac{\partial L}{\partial v}=0.759\,\mathrm{m}/(\mathrm{km}/\mathrm{hod})=7.59\times 10^{-4}\,\mathrm{hod}.$$
+  Každý kilometr za hodinu nad $100\,\mathrm{km}/\mathrm{hod}$ u auta
+  vážícího $1100\,\mathrm{kg}$ prodlouží brzdnou dráhu o cca
+  $76\,\mathrm{cm}$.
+* Zjednodušený vzorec pro brzdnou dráhu auta s hmotností blízkou
+  $1100\,\mathrm{kg}$ a rychlostí blízkou
+  $100\,\mathrm{km}/\mathrm{hod}$ je
 $$L\approx 37.95+0.0345(m-1100)+0.759(v-100),$$
-kde hmotnost a rychlost se dosazují v kilogramech a metrech a brzdná dráha vychází v metrech.
-
+kde hmotnost a rychlost se dosazují v kilogramech a metrech a brzdná
+dráha vychází v metrech.
+* Z parciální derivace podle $v$ víme, že změna rychlosti o $\Delta v$
+  změní dráhu přibližně o $\Delta L\approx 2kmv\Delta v$. Nabízí se
+  otázka, proč s touto přibližnou informací pracovat, když změnu umíme
+  určit i přesně, $\Delta L=k m(v+\Delta v)^2 - k m v^2=2kmv\Delta v+ k m (\Delta v)^2$. *Překvapivě, přibližný
+  vzorec založený na derivacích je vždy jednodušší než přesný výpočet
+  změny.* Tento efekt je možné vidět u druhé mocniny, je výraznější u
+  vyšších mocnin a stane se fatálním u obecných neceločíslených mocnin
+  nebo obecnějších funkcí. Pokud náš výpočet vstupuje do
+  komplexnějších inženýrských modelů, staly by se neřešitelnými. Že
+  s derivací jde jenom o aproximaxci vůbec nevadí, protože zapojením důmyslných
+  matematických postupů zapracovaných přímo v definici (limita) srážíme chybu na nulu.
+ 
 \iffalse
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)

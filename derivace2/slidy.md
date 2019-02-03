@@ -126,6 +126,16 @@ Podle Schwarzovy věty (nezáleží na pořadí derivování) je každá závork
 
 > Rotace gradientu je nulový vektor.
 
+Později uvidíme, že platí do jisté míry i obrácená vlastnost: pokud je
+rotace vektorového pole nulová, je toto pole gradientem nějaké
+skalární veličiny. Pokud při proudění tekutiny má pole rychlosti
+nulovou rotaci, je možné pro toto pole zavést tzv. rychlostní
+potenciál ([velocity
+potential](https://en.wikipedia.org/wiki/Velocity_potential)). To je
+na rozdíl od rychlosti veličina, která není vektorová a proto se s ní
+lépe pracuje.
+
+
 # Divergence rotace je nula
 
 
@@ -188,6 +198,31 @@ Odsud dostáváme
 
 > Divergence rotace je nula. 
 
+Dá se ukázat, že platí do jisté míry i opačná vlastnost a pro pole s
+nulovou divergencí se dá často toto pole psát jako rotace nějaké
+vektorové funkce. Této funkci se říká [vektorový
+potenciál](https://en.wikipedia.org/wiki/Vector_potential) a je dobře
+známa například u magnetismu. U rovinného proudění tekutin má tento
+vektorový potenciál nenulovou jenom třetí složku, která se nazývá
+proudová funkce ([stream
+function](https://en.wikipedia.org/wiki/Stream_function#Definition_by_use_of_a_vector_potential))
+a její vrstevnice jsou proudnice.
+
+\iffalse
+
+<div class='sloupce'>
+
+![Radiální tok. Nestačí jenom směr. Rychlost musí ubývat přesnou mocninou, aby proudění mělo potenciál.](stream0.png)
+
+![Tok po kružnicích. Nestačí jenom směr. Rychlost musí ubývat přesnou mocninou, aby proudění mělo potenciál.](stream1.png)
+
+![Homogenní tok](stream2.png)
+
+![V případě, že toky můžeme charakterizovat vektorovým potenciálem (tj. bezvírové proudění nestlačitelné dokonale tekuté kapaliny), je snadné je sčítat.](stream3.png)
+
+</div>
+
+\fi
 
 \iffalse
 
@@ -224,8 +259,14 @@ F=\frac{1}{x^2+y^2+z^2} \cdot \frac{(x,y,z)}{\sqrt{x^2+y^2+z^2}}$$ a
 velikost vektorového pole je nepřímo úměrná druhé mocnině vzdálenosti
 od počátku.
 
-* Není náhoda, že v našem trojrozměrném světě ubývá gravitační a elektrická síla nepřímo úměrně druhé mocnině vzdálenosti.
-* Postavy ve 2D světě mohou takto objevit existenci třetího rozměru (viz román Flatland nebo Simpsonovi a [Homer 3D](https://www.youtube.com/watch?v=wjJI0VlaSLg)). Pozorovaný gravitační zákon by nesouhlasil s teoretickými výpočty.
+* Není náhoda, že v našem trojrozměrném světě ubývá gravitační a
+  elektrická síla nepřímo úměrně druhé mocnině vzdálenosti.
+* Postavy ve 2D světě mohou takto objevit existenci třetího rozměru
+  (viz román Flatland nebo Simpsonovi a [Homer
+  3D](https://www.youtube.com/watch?v=wjJI0VlaSLg)). Pozorovaný
+  gravitační zákon by nesouhlasil s teoretickými výpočty. Náš 3D
+  gravitační zákon je v pořádku, což víme například ze studia pohybu
+  planet.
 
 # Shrnutí diferenciálních operátorů
 
