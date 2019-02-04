@@ -135,10 +135,10 @@ $$L\approx 37.95+0.0345(m-1100)+0.759(v-100),$$
 kde hmotnost a rychlost se dosazují v kilogramech a metrech a brzdná
 dráha vychází v metrech.
 * Z parciální derivace podle $v$ víme, že změna rychlosti o $\Delta v$
-  změní dráhu přibližně o $\Delta L\approx 2kmv\Delta v$. Nabízí se
+  změní brzdnou dráhu přibližně o $\Delta L\approx 2kmv\Delta v$. Nabízí se
   otázka, proč s touto přibližnou informací pracovat, když změnu umíme
   určit i přesně, $\Delta L=k m(v+\Delta v)^2 - k m v^2=2kmv\Delta v+ k m (\Delta v)^2$. *Překvapivě, přibližný
-  vzorec založený na derivacích je vždy jednodušší než přesný výpočet
+  vzorec založený na derivacích je vždy jednodušší, než přesný výpočet
   změny.* Tento efekt je možné vidět u druhé mocniny, je výraznější u
   vyšších mocnin a stane se fatálním u obecných neceločíslených mocnin
   nebo obecnějších funkcí. Pokud náš výpočet vstupuje do

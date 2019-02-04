@@ -21,7 +21,7 @@ then
    done
    echo '</table></div></html>' >> index.html
 
-   scp index.html cornus.mendelu.cz:html/am/slidy/
+   #scp index.html cornus.mendelu.cz:html/am/slidy/
 fi  
 
 for i in $kde

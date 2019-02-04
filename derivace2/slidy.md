@@ -80,7 +80,7 @@
     * Faradayův zákon elektromagnetické indukce.    $$  \mathop{\mathrm{rot}}\vec E=-\frac{\partial \vec B}{\partial t}$$
     * Představme si vektorové pole charakterizující rychlost proudící tekutiny. Rotace udává,
       zda má pole tencenci uvést do rotace objekt unášený tímto
-      prouděním. Nejedná se tedy o to, zda se pole točí či nětočí jako
+      prouděním. Nejedná se tedy o to, zda se pole točí či netočí jako
       u víru při vypouštění umyvadla. Příkladem je přímý tok v řece,
       kdy rychlost u břehu klesá. V důsledku toho se loďka, která
       odrazí od břehu kolmo stočí po proudu. Mimo středovou osu má pole nenulovou
@@ -129,7 +129,7 @@ Podle Schwarzovy věty (nezáleží na pořadí derivování) je každá závork
 Později uvidíme, že platí do jisté míry i obrácená vlastnost: pokud je
 rotace vektorového pole nulová, je toto pole gradientem nějaké
 skalární veličiny. Pokud při proudění tekutiny má pole rychlosti
-nulovou rotaci, je možné pro toto pole zavést tzv. rychlostní
+nulovou rotaci (většinou platí pro relativně malé rychlosti), je možné pro toto pole zavést tzv. rychlostní
 potenciál ([velocity
 potential](https://en.wikipedia.org/wiki/Velocity_potential)). To je
 na rozdíl od rychlosti veličina, která není vektorová a proto se s ní
@@ -210,6 +210,8 @@ a její vrstevnice jsou proudnice.
 
 \iffalse
 
+Na následujících obrázcích jsou modrou barvou vrstevnice proudové funkce a šedou barvou vrstevnice rychlostního potenciálu.
+
 <div class='sloupce'>
 
 ![Radiální tok. Nestačí jenom směr. Rychlost musí ubývat přesnou mocninou, aby proudění mělo potenciál.](stream0.png)
@@ -218,7 +220,7 @@ a její vrstevnice jsou proudnice.
 
 ![Homogenní tok](stream2.png)
 
-![V případě, že toky můžeme charakterizovat vektorovým potenciálem (tj. bezvírové proudění nestlačitelné dokonale tekuté kapaliny), je snadné je sčítat.](stream3.png)
+![V případě, že toky můžeme charakterizovat rychlostním potenciálem (tj. bezvírové proudění nestlačitelné dokonale tekuté kapaliny), je snadné je sčítat. To se využívá například při studiu obtékání těles.](stream3.png)
 
 </div>
 

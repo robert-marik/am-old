@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 from matplotlib import rc
 rc('text', usetex=True)
 
-plt.figure(1,(8,8)) 
+plt.figure(1,(8,8))
+plt.axes().set_aspect('equal', 'datalim')
+#ax.set_aspect('equal', 'datalim')
 
 #plt.xkcd()
 
@@ -21,7 +23,7 @@ xmin, xmax, ymin, ymax = .5, 2, .5, 2
 # ax4 = plt.subplot(gs[3])
 
 
-n=3
+n=2
 if n==0:
     # https://sagecell.sagemath.org/?z=eJxty8sOgjAQheG9ie_gjjNaIHbPq2Ca4JQmFQwXnXl7G7vQBM7y_3LEaPNyEwo5aUHHA0OMUnOt7TmOHtLai7Y2gc_gFjdAa0ll7sc3kA8mM_1y5SfXhfuwgL5UzeHxjIH1xmuMIIMuMCP_9rz8d9l42ge6lTpG&lang=sage
     def f(x,y): return (1.0/2*np.log(x**2+y**2))
@@ -69,7 +71,6 @@ if n==3:
 # show((f.gradient([x,y]).simplify_full(),(diff(g,y).simplify_full(),-diff(g,x).simplify_full())))
     
 
-
 delta = 0.05
 x = np.arange(xmin, xmax, delta)
 y = np.arange(ymin, ymax, delta)
@@ -91,6 +92,6 @@ V = dfy(X,Y)#/np.sqrt(dfx(X,Y)**2+dfy(X,Y)**2)
 
 plt.quiver(X,Y,U,V, color='blue')
 
-plt.axes().set_aspect('equal', 'datalim')
+#plt.axes().set_aspect('equal', 'datalim')
 plt.savefig("stream"+str(n)+".svg")
 plt.savefig("stream"+str(n)+".png")
