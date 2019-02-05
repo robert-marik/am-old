@@ -469,6 +469,17 @@ $$b_k=2\int_0^1\psi(x)\cos(k\pi x)\mathrm{d}x.$$
 
 </div>
 
+
+# Metoda konečných prvků
+
+Při řešení složitých úloh nevyjadřujeme řešení jako lineární kombinaci
+goniometrckých funkcí, ale používáme mnohem jednodušší funkce,
+například trojúhelníkové funkce na obrázku. Výhodou je obrovský nárůst
+rychlosti, nevýhodou je, že lineární kombinace několika funkcí
+složených z lomených čar je lomená čára a řešení je tedy možné
+obdržet jen přibližně. Na druhou stranu je velice jednoduché najít
+koeficienty lineární kombinace aproximující nějakou funkci. Navíc, kone
+
 \iffalse
 
 # Transformace do křivočarých souřadnic, sféricky symetrické rovnice
