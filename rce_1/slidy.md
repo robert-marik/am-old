@@ -472,6 +472,8 @@ $$b_k=2\int_0^1\psi(x)\cos(k\pi x)\mathrm{d}x.$$
 
 # Numerické řešení parciálních diferenciálních rovnic
 
+<div class=sloupce>
+
 Při řešení praktických úloh založených na rovnicích matematické fyziky
 se málokdy podaří efektivně nalézt obecné řešení v explicitním
 tvaru. Proto zpravidla hledáme řešení zadané úlohy (rovnice s
@@ -501,9 +503,11 @@ změny funkčních hodnot, je možné volit hustší síť a aproximace potom
 bude jemnější.
 
 ![Trojúhelníkové funkce, ze kterých se skládá aproximace
- řešení. Červenou křivku je možno snadno aproximovat červenou lomenou
+ řešení. Červenou křivku je možno snadno aproximovat černou lomenou
  čarou, protože koeficienty do lineární kombinace jsou právě funkční
  hodnoty.](fem.png)
+
+</div>
 
 \iffalse
 
