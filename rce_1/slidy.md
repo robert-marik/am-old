@@ -470,15 +470,38 @@ $$b_k=2\int_0^1\psi(x)\cos(k\pi x)\mathrm{d}x.$$
 </div>
 
 
-# Metoda konečných prvků
+# Numerické řešení parciálních diferenciálních rovnic
 
-Při řešení složitých úloh nevyjadřujeme řešení jako lineární kombinaci
-goniometrckých funkcí, ale používáme mnohem jednodušší funkce,
-například trojúhelníkové funkce na obrázku. Výhodou je obrovský nárůst
-rychlosti, nevýhodou je, že lineární kombinace několika funkcí
-složených z lomených čar je lomená čára a řešení je tedy možné
-obdržet jen přibližně. Na druhou stranu je velice jednoduché najít
-koeficienty lineární kombinace aproximující nějakou funkci. Navíc, kone
+Při řešení praktických úloh založených na rovnicích matematické fyziky
+se málokdy podaří efektivně nalézt obecné řešení v explicitním
+tvaru. Proto zpravidla hledáme řešení zadané úlohy (rovnice s
+okrajovými a počátečními podmínkami) numericky.
+
+Hlavní myšlenkou je převod modelu na soustavu lineárních
+rovnic. Jednoduchá metoda, jak toto provést například pro nalezení
+stacionárního stavu čtvercové desky je zvolit uzolvé body uvnitř desky
+a teplotu v každém bodě určovat jako [průměr
+teplot](http://user.mendelu.cz/marik/wiki/kraj/vedenitepla.pdf) v
+sousedních uzlech. V praxi se však používají více rafinované postupy,
+které jsou sice založené na hlobokých myšlenkách, ale po dotažení do
+prakticky použitelného nástroje jsou jednoduché i pro laiky, kteří
+nemusí do hloubky rozumět celému pozadí výpočtu.
+
+Nejpoužívanější metodou pro numerické řešení parciálních
+diferenciálních rovnic je metoda konečných prvků. Tato metoda je
+založena na myšlence vyjádření řešení jako lineární kombinace velice
+jednoduchých funkcí. Místo goniometrických funkcí, které jsme použili
+ve Fourierově rozvoji, je možné použít například trojúhelníkové funkce
+jako na obrázku. Výhodou je obrovský nárůst rychlosti, nevýhodou je,
+že lineární kombinace několika funkcí složených z lomených čar je
+lomená čára a řešení je tedy možné obdržet jen přibližně. Na druhou
+stranu je velice jednoduché najít koeficienty lineární kombinace
+aproximující nějakou funkci.
+
+![Trojúhelníkové funkce, ze kterých se skládá aproximace
+ řešení. Červenou křivku je možno snadno aproximovat červenou lomenou
+ čarou, protože koeficienty do lineární kombinace jsou právě funkční
+ hodnoty.](fem.png)
 
 \iffalse
 

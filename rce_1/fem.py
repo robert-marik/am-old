@@ -59,6 +59,6 @@ Y=[2-10*(x-0.1)**2 for x in X]
 plot (Xs, power_smooth, color='r')
 plot (XD,YD, color='k', linewidth=2)
 
-fig.savefig("2D_graf.png",bbox_inches="tight", pad_inches=.15)
-fig.savefig("2D_graf.svg",bbox_inches="tight", pad_inches=.15)
+fig.savefig("fem.png",bbox_inches="tight", pad_inches=.15)
+fig.savefig("fem.svg",bbox_inches="tight", pad_inches=.15)
 
