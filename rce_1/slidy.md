@@ -496,7 +496,9 @@ jako na obrázku. Výhodou je obrovský nárůst rychlosti, nevýhodou je,
 že lineární kombinace několika funkcí složených z lomených čar je
 lomená čára a řešení je tedy možné obdržet jen přibližně. Na druhou
 stranu je velice jednoduché najít koeficienty lineární kombinace
-aproximující nějakou funkci.
+aproximující nějakou funkci. V místě, kde očekáváme dramatičtější
+změny funkčních hodnot, je možné volit hustší síť a aproximace potom
+bude jemnější.
 
 ![Trojúhelníkové funkce, ze kterých se skládá aproximace
  řešení. Červenou křivku je možno snadno aproximovat červenou lomenou
