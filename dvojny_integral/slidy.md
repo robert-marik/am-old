@@ -19,17 +19,23 @@
 
 <div class='sloupce'>
 
-* Hmotnost desky $\Omega$ je možno vypočítat jako součin plošné hustoty (hmotnost
-na jednotku obsahu) a obsahu desky. $$M=\sigma S$$
-* Toto funguje pro desky s
-konstantní plošnou hustotou, kdy má deska ve všech místech stejné
-fyzikální vlastnostmi.
-* Pokud je deska slepená z konečného počtu malých desek o konstantní plošné hustotě, určíme hmotnost každé jednotlivé desky samostatně a výsledek potom sečteme.
-$$m=\sigma_1 S_1+\sigma_2 S_2+\cdots + \sigma_n S_n$$
-* Pokud není možné nebo vhodné použít předchozí bod, musíme předpokládat, že hustota je obecnou funkcí. Potom namísto součtu konečného počtu sčítanců následuje nekonečný počet sčítanců a vybudujeme aparát, který nám umožní psát
-$$m=\iint_\Omega \sigma \,\mathrm dS.$$
+* Hmotnost desky $\Omega$ je možno vypočítat jako součin plošné
+  hustoty (hmotnost na jednotku obsahu) a obsahu desky. $$M=\sigma S$$
+* Toto funguje pro desky s konstantní plošnou hustotou, kdy má deska
+  ve všech místech stejné fyzikální vlastnostmi.
+* Pokud je deska slepená z konečného počtu malých homogenních desek o
+  různných plošných hustotách, určíme hmotnost každé jednotlivé desky
+  samostatně a výsledky potom sečteme.
+  $$m=\sigma_1 S_1+\sigma_2 S_2+\cdots + \sigma_n S_n$$
+* Pokud není možné nebo vhodné použít předchozí bod, musíme
+  předpokládat, že hustota je obecnou funkcí. Potom namísto součtu
+  konečného počtu sčítanců následuje nekonečný počet sčítanců a
+  vybudujeme aparát, který nám umožní psát
+  $$m=\iint_\Omega \sigma \,\mathrm dS.$$
 
-![Deska s nekonstantní plošnou hustotou, https://www.flickr.com/photos/svacher, licence CC BY-NC-ND 2.0](table.jpg)
+![Deska s nekonstantní plošnou hustotou,
+ https://www.flickr.com/photos/svacher, licence CC BY-NC-ND
+ 2.0](table.jpg)
 
 </div>
 
@@ -40,9 +46,9 @@ $$m=\iint_\Omega \sigma \,\mathrm dS.$$
 <div class='sloupce'>
 
 * Objem vody $V$ v nádrži nebo bazénu (se svislými stěnami, ale jinak
-  i nepravidelného půdorysu $\Omega$) vypočteme jako součin obsahu hladiny $S$
-  a hloubky vody $h$, tj. $$V=Sh$$ To ovšem platí jenom, pokud je v
-  každém místě stejná hloubka.
+  i nepravidelného půdorysu $\Omega$) vypočteme jako součin obsahu
+  hladiny $S$ a hloubky vody $h$, tj. $$V=Sh$$ To ovšem platí jenom,
+  pokud je v každém místě stejná hloubka.
 * Pokud má jedna část bazénu jinou hloubku než část druhá, vypočteme
   objem u každé hloubky samostatně a příspěvky sečteme,
   tj. $$V=S_1h_1+S_2h_2.$$
@@ -63,15 +69,18 @@ $$m=\iint_\Omega \sigma \,\mathrm dS.$$
 
 
 
-* Teče-li průřezem $\Omega$ tekutina kolmo na průřez rychlostí $v$, je celkový průtok $Q$ (objem, který proteče průřezem za jednotku času) dán součinem $$Q=vS,$$ kde $S$ je plošný obsah průřezu.
-* Teče-li různými místy průřezu voda různou rychlostí, sečteme jednotlivé příspěvky.
-$$Q=v_1S_1+v_2S_2+\dots +v_nS_n$$
-* Myšlenku z předchozího bodu není snadné udělat, pokus se rychlost
-mění spojitě. Například v potrubí je rychlost rozdělena parabolicky a
-ubývá se vzdáleností od středu. Situaci zachraňuje dvojný integrál
-$$Q=\iint_\Omega v\,\mathrm dS.$$
+* Teče-li průřezem $\Omega$ tekutina kolmo na průřez rychlostí $v$, je
+  celkový průtok $Q$ (objem, který proteče průřezem za jednotku času)
+  dán součinem $$Q=vS,$$ kde $S$ je plošný obsah průřezu.
+* Teče-li různými místy průřezu voda různou rychlostí, sečteme
+  jednotlivé příspěvky.  $$Q=v_1S_1+v_2S_2+\dots +v_nS_n$$
+* Myšlenku z předchozího bodu není snadné udělat, pokud se rychlost
+  mění spojitě. Například v potrubí je rychlost rozdělena parabolicky
+  a ubývá se vzdáleností od středu. Situaci zachraňuje dvojný integrál
+  $$Q=\iint_\Omega v\,\mathrm dS.$$
 
-![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji než ve středu, potrubí na Aljašce, https://www.pixabay.com](pipe.jpg)
+![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji
+ než ve středu, potrubí na Aljašce, https://www.pixabay.com](pipe.jpg)
 
 
 </div>
@@ -87,8 +96,8 @@ $$Q=\iint_\Omega v\,\mathrm dS.$$
 
 <div class='sloupce'>
 
-Pro dvojný integrál použijeme podobnou myšlenkovou konstrukci jako u\ 
-křivkového integrálu prvního druhu, pouze místo drátu s\ danou
+Pro dvojný integrál použijeme podobnou myšlenkovou konstrukci jako
+u\ křivkového integrálu prvního druhu, pouze místo drátu s\ danou
 lineární hustotou budeme uvažovat rovinnou ohraničenou desku s\ danou
 plošnou hustotou.
 
