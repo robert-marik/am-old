@@ -2,7 +2,84 @@
 % Robert Mařík
 % 2014 - 2019
 
+<style>
+
+.obtekat {max-width:40%; vertical-align:top; float: right;}
+
+</style>
+
+\iffalse
+
+# Motivace 1 (hmotnost nehomogenní desky)
+
+
+<div class='sloupce'>
+
+* Hmotnost desky $\Omega$ je možno vypočítat jako součin plošné hustoty (hmotnost
+na jednotku obsahu) a obsahu desky. $$M=\sigma S$$
+* Toto funguje pro desky s
+konstantní plošnou hustotou, kdy má deska ve všech místech stejné
+fyzikální vlastnostmi.
+* Pokud je deska slepená z konečného počtu malých desek o konstantní plošné hustotě, určíme hmotnost každé jednotlivé desky samostatně a výsledek potom sečteme.
+$$m=\sigma_1 S_1+\sigma_2 S_2+\cdots + \sigma_n S_n$$
+* Pokud není možné nebo vhodné použít předchozí bod, musíme předpokládat, že hustota je obecnou funkcí. Potom namísto součtu konečného počtu sčítanců následuje nekonečný počet sčítanců a vybudujeme aparát, který nám umožní psát
+$$m=\iint_\Omega \sigma \,\mathrm dS.$$
+
+![Deska s nekonstantní plošnou hustotou, https://www.flickr.com/photos/svacher, licence CC BY-NC-ND 2.0](table.jpg)
+
+</div>
+
+
+# Motivace 2 (objem vody v jezeře)
+
+
+<div class='sloupce'>
+
+* Objem vody $V$ v nádrži nebo bazénu (se svislými stěnami, ale jinak
+  i nepravidelného půdorysu $\Omega$) vypočteme jako součin obsahu hladiny $S$
+  a hloubky vody $h$, tj. $$V=Sh$$ To ovšem platí jenom, pokud je v
+  každém místě stejná hloubka.
+* Pokud má jedna část bazénu jinou hloubku než část druhá, vypočteme
+  objem u každé hloubky samostatně a příspěvky sečteme,
+  tj. $$V=S_1h_1+S_2h_2.$$
+* Předchozí postup je možné aplikovat pro konečně mnoho hloubek, ale
+  někdy to je nevhodné nebo, v případě spojitě se měnící hloubky,
+  dokonce nemožné. Potom místo součtu konečně mnoha příspěvků
+  použijeme dvojný integrál a dostáváme $$V=\iint_\Omega h\mathrm dS.$$
+
+![Nádrž s proměnnou hloubkou, https://www.pixabay.com](lake.jpg)
+
+</div>
+
+
+# Motivace 3 (průtok)
+
+
+<div class='sloupce'>
+
+
+
+* Teče-li průřezem $\Omega$ tekutina kolmo na průřez rychlostí $v$, je celkový průtok $Q$ (objem, který proteče průřezem za jednotku času) dán součinem $$Q=vS,$$ kde $S$ je plošný obsah průřezu.
+* Teče-li různými místy průřezu voda různou rychlostí, sečteme jednotlivé příspěvky.
+$$Q=v_1S_1+v_2S_2+\dots +v_nS_n$$
+* Myšlenku z předchozího bodu není snadné udělat, pokus se rychlost
+mění spojitě. Například v potrubí je rychlost rozdělena parabolicky a
+ubývá se vzdáleností od středu. Situaci zachraňuje dvojný integrál
+$$Q=\iint_\Omega v\,\mathrm dS.$$
+
+![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji než ve středu, potrubí na Aljašce, https://www.pixabay.com](pipe.jpg)
+
+
+</div>
+
+
+
+
+\fi
+
+
 # Dvojný integrál
+
 
 <div class='sloupce'>
 
@@ -155,6 +232,31 @@ obdélníkovou oblast.
   kde $\mu (\Omega)=\iint_\Omega\mathrm{d}x\mathrm{d}y$ je obsah
   množiny $\Omega$.
 
+  \iffalse
+
+# Objem kopce nebo jezera pomocí vrstevnic
+
+<div class='obtekat'>
+
+![Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic.](fuji.jpg)
+
+</div>
+
+* Obsah množiny ohraničené vrstevnicí na mapě vynásobený rozestupem
+mezi vrstevnicemi je přibližně roven objemu vrstvy mezi dvěma
+vrstevnicemi.
+* Pokud sečteme obsahy všech vrstevnic a vynásobíme rozestupem mezi
+těmito vrstevnicemi, dostaneme odhad pro objem kopce. Vlastně je to
+jako bychom kopec rozřezali na stejně tlusté plátky, naskládali je
+vedle sebe, sečetli obsahy postava takto vzniklých těles a vynásobili
+výškou.
+* Podobně je možné odhadnout objem jezera.
+* V tomto případě je dvojný integrál pouze koncept. Samozřejmě nemáme
+ambice vyjadřovat vrstevnice v analytickém tvaru a integrovat pomocí
+Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
+
+  \fi
+  
 # Fyzikální aplikace dvojného integrálu
 
 * **Hmotnost** množiny $M$ je $$m=\iint_M \sigma(x,y)\mathrm{d}x
@@ -198,6 +300,19 @@ obdélníkovou oblast.
   a odsud odvozujeme rovnici vedení tepla.
 
 # Aplikace dvojného integrálu - tuhost nosníků, stabilita stromů
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu.](beam.jpg)
+
+</div>
+
+\fi
+
+
 
 Tuhost (odolnost vůči deformaci) pro nosník obdélníkového průřezu o výšce $b$ a
 šířce $a$ je dána kvadratickým momentem obdélníkového průřezu vzhledem
@@ -313,6 +428,16 @@ v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k
 
 
 # Aplikace dvojného integrálu - tlak na svislou plochu
+
+\iffalse
+
+<div class='obtekat'>
+
+![Bobři v ZOO v Brně jsou za skleněnou stěnou obdélníkového tvaru.](bobri.jpeg)
+
+</div>
+
+\fi
 
 Vzorec pro tlakovou sílu $F=pS$ není možné použít například pro
 výpočet celkové síly působící na svislou hráz, protože tlak $p$ se
