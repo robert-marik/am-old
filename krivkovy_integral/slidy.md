@@ -405,7 +405,7 @@ zjednodušení a máme-li ambice dosáhnout přesnější popis, musíme
 pracovat s tím, že konstanta v Darcyho zákoně je tenzorového
 charakteru. (Voda může proudit jiným směrem, než kterým ji tlačí
 gradient vodního potenciálu. Rozhodují i fyzikální vlastnosti
-prostředí a anizotropie, tj. odlišené vlastnosti v jiných směrech.)
+prostředí a anizotropie, tj. odlišné vlastnosti v jiných směrech.)
 Potom již tok určujeme křivkovým integrálem nebo jeho vícerozměrným zobecněním, plošným integrálem.
 
 \fi
