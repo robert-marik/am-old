@@ -2,6 +2,9 @@
 % Robert Mařík
 % 2014 - 2019
 
+# Motivace 1 (hmotnost nehomogenní desky)
+
+
 <style>
 
 .obtekat {max-width:40%; vertical-align:top; float: right;}
@@ -9,8 +12,6 @@
 </style>
 
 \iffalse
-
-# Motivace 1 (hmotnost nehomogenní desky)
 
 
 <div class='sloupce'>
