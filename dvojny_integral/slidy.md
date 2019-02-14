@@ -2,8 +2,11 @@
 % Robert Mařík
 % 2014 - 2019
 
+\iffalse
+
 # Motivace 1 (hmotnost nehomogenní desky)
 
+\fi
 
 <style>
 
@@ -102,7 +105,9 @@ V\ limitním přechodu kdy rozměry všech kousků na něž je deska dělena
 jde k\ nule dostáváme **dvojný integrál** 
 $$ \iint_\Omega f(x,y)\mathrm{d}x \mathrm{d}y , $$ 
 kde $\Omega$ je oblast v\ rovině $(x,y)$ definovaná uvažovanou deskou. V aplikacích je častý též zápis
-$$ \iint_\Omega f(x,y)\mathrm{d}A.$$ 
+$$ \iint_\Omega f(x,y)\mathrm{d}A$$ 
+nebo 
+$$ \iint_\Omega f(x,y)\mathrm{d}S.$$ 
 
 \def\maxfactor{0.3}
 
@@ -249,7 +254,7 @@ vrstevnicemi.
 * Pokud sečteme obsahy všech vrstevnic a vynásobíme rozestupem mezi
 těmito vrstevnicemi, dostaneme odhad pro objem kopce. Vlastně je to
 jako bychom kopec rozřezali na stejně tlusté plátky, naskládali je
-vedle sebe, sečetli obsahy postava takto vzniklých těles a vynásobili
+vedle sebe, sečetli obsahy postav takto vzniklých těles a vynásobili
 výškou.
 * Podobně je možné odhadnout objem jezera.
 * V tomto případě je dvojný integrál pouze koncept. Samozřejmě nemáme
@@ -496,15 +501,16 @@ poklop výpusti, který je celý pod vodou.
 
 # Aplikace dvojného integrálu - působiště tlakové síly
 
-Budeme pokračovat v předchozím příkladě a hledat místo, kam je možné
-umístit výslednou tlakovou sílu.
+Budeme pokračovat v předchozím příkladě a hledat působiště výsledné
+tlakové síly.
 
-Tlaková síla působící na svislou hráz má celkový nulový moment. Je-li
-hráz definována množinou $M$ a je-li $y_c$ působiště výsledné tlakové síly, je v
-hloubce $y$ tlak na plošku o velikosti $\Delta S$ roven $y\rho g \Delta
-S$ a součin $(y_c-y)y\rho g\Delta S$ je příspěvek k\ otáčivému momentu
-vzhledem k\ ose, procházející vodorovně působištěm tlakové síly. Součet všech
-těchto příspěvků se nuluje, tedy musí platit
+Tlaková síla působící na svislou hráz má celkový nulový moment
+vzhledem k ose proházející působištěm. Je-li hráz definována množinou
+$M$ a je-li $y_c$ působiště výsledné tlakové síly, je v hloubce $y$
+tlak na plošku o velikosti $\Delta S$ roven $y\rho g \Delta S$ a
+součin $(y_c-y)y\rho g\Delta S$ je příspěvek k\ otáčivému momentu
+vzhledem k\ ose, procházející vodorovně působištěm tlakové
+síly. Součet všech těchto příspěvků se nuluje, tedy musí platit
 $$\iint_M (y_c-y)y\rho g\,\mathrm dx\mathrm dy=0.$$
 Odsud po vydělení konstantami $\rho g$ dostáváme
 $$\iint_M (y_c-y)y\,\mathrm dx\mathrm dy=0$$

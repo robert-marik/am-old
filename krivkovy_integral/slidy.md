@@ -4,6 +4,13 @@
 
 # Křivkový integrál
 
+<style>
+
+.obtekat {max-width:40%; vertical-align:top; float: right;}
+
+</style>
+
+
 Jedná se o rozšíření Riemannova integrálu, kdy množinou přes kterou
 integrujeme není úsečka, ale křivka. Pro jednoduchost budeme uvažovat
 dvourozměrnou křivku v rovině $x$, $y$.
@@ -329,6 +336,80 @@ i+Q(x,y)\vec j,$
 \fi
 
 </div>
+
+
+\iffalse
+
+# Vodní potenciál
+
+<div class='obtekat'>
+
+![Nejvýkonnější klimatizační jednotka. Funguje na principu odpařování
+ vody. Proudění vody je popsáno vodním potenciálem.](strom.jpg)
+
+</div>
+
+Ve fyzice se většinou s křivkovým integrálem druhého druhu setkáváme
+při výpočtu práce silového pole, nebo ekvivalentně (pokud uvažujeme
+práci vztaženou na jednotkové množství) při výpočtu potenciální
+energie.
+
+Ve fyziologii rostlin pracujeme při popisu hospodaření s vodou s
+veličinou podobnou potenciální energii, s [vodním
+potenciálem](https://en.wikipedia.org/wiki/Water_potential)
+$\psi$. Jedná se o veličinu charakterizující tendenci vody přemisťovat
+se z jednoho místa na druhé. Je definována jako práce, nutná pro
+přemístění (infinitezimálně) malého množství z referenční hladiny
+nulového potenciálu do daného místa a daných podmínek. Tato práce je
+ještě přepočtena na jednotkové množství vody. Protože na pohyb vody má
+vliv mnoho faktorů (gradient teploty, gradient tlaku, kapilarita,
+rozdíl nadmořských výšek, osmóza, koncentrace solí), je tato veličina
+poměrně těžce kvantifikovatelná. Nicméně jedná se o druh potenciální
+energie a formálně je vyjádřena křivkovým integrálem. Můžeme s ní
+pracovat tedy analogicky, jako pracujeme s potenciální energií v
+homogenním tíhovém poli. Například příspěvky různé povahy můžeme
+reprezentovat pomocí ekvivalentního výškového rozdílu. Tím je,
+například v pedologii, definována piezometrická hladina. Velmi
+užitečná veličina usnadňující pochopení proudění vody, protože
+použitím této veličiny se podněty různého původu vyajdřují jako
+ekvivalentní výškový rozdíl.
+
+
+# Filtrační koeficient půdy a čerpací zkouška
+
+<div class='obtekat'>
+
+![Voda v půdě. Nesmí jí být moc, ale když jí je málo, je to teprve problém.](puda.jpg)
+
+</div>
+
+Proudění vody v půdě je popsáno Darcyho zákonem, kdy rychlost proudění
+vody je úměrná tlakovému gradientu (nebo obecněji gradientu vodního
+potenciálu). Tato závislost se nazývá Darcyho zákon a koeficient
+úměrnosti se nazývá filtrační koeficient.
+
+Pro pochopení toho, jak voda proudí půdou v oblasti našeho zájmu, je
+znalost filtračního koeficientu zásadní. Přímo v terénu je možné tento
+koeficient určit pomocí čerpací zkoušky. V daném místě je
+vyvrtána studna až po nepropustnou horninu a z této studny se čerpá voda. Tím
+se stahuje voda z okolní půdy. Pokles hladiny v okolí hlavního vrtu
+se sleduje v menších vrtech.
+
+Pokud si v okolí studny myslíme kružnici, můžeme celou situaci
+promítnout na hladinu terénu a jedná se vlastně o dvourozměrnou úlohu
+a tok uzavřenou křivkou. Navíc se jedná o jednoduchý případ, kdy
+vektorové pole rychlosti je v každém bodě křivky kolmé ke křivce a má
+v každém bodě stejnou velikost. Proto se křivkový integrál zjednoduší
+na součin intenzity proudění a délky křivky. Toto je však velké
+zjednodušení a máme-li ambice dosáhnout přesnější popis, musíme
+pracovat s tím, že konstanta v Darcyho zákoně je tenzorového
+charakteru. (Voda může proudit jiným směrem, než kterým ji tlačí
+gradient vodního potenciálu. Rozhodují i fyzikální vlastnosti
+prostředí a anizotropie, tj. odlišené vlastnosti v jiných směrech.)
+Potom již tok určujeme křivkovým integrálem nebo jeho vícerozměrným zobecněním, plošným integrálem.
+
+\fi
+
 
 
 # Shrnutí: vlastnosti křivkových integrálů
