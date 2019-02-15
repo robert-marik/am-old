@@ -6,15 +6,12 @@
 
 # Motivace 1 (hmotnost nehomogenní desky)
 
-\fi
 
 <style>
 
 .obtekat {max-width:40%; vertical-align:top; float: right;}
 
 </style>
-
-\iffalse
 
 
 <div class='sloupce'>
