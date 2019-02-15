@@ -14,15 +14,81 @@ $f(x)$ je jednotka $f$ dělená jednotkou $x$.
 * Derivaci funkce $f(x)$ označujeme $f'$ nebo $\frac{\mathrm df}{\mathrm dx}$. 
 * Derivaci derivace (druhou derivaci) funkce $f(x)$ označujeme $f''$ nebo $\frac{\mathrm d^2 f}{\mathrm dx^2}$.
 
+# Kde ji potkám?
+
+
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+</style>
+
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: green;
+    color: white;
+    border-color: gray;
+}
+
+th {text-align: center;}
+</style>
+
+Vlastně všude, kde se něco mění a zajímá mne jak rychle.
+
+
+Závislá proměnná|Nezávislá proměnná|Derivace|
+|------------------------|-----------------------|------------------------|
+|veličina $x$|čas|rychlost růstu veličiny $x$|
+|dráha při pohybu při pohybu po přímce i vzdálenost od referečního bodu|čas doba od začátku pohybu nebo od referečního okamžiku|rychlost|
+|rychlost|čas|zrychlení|
+|všeobecná cenová hladina (cca náklady na živobytí)|čas|inflace|
+|náklady na výrobu zboží|množství zboží|mezní náklady|
+|nadmořská výška na trase treku|poloha|stoupání trasy|
+|graf funkce $f(x)$|$x$|růst grafu (směrnice tečny)|
+|hmotnost části tyče (např od zvoleného bodu doleva)|délka části tyče (např od zvoleného bodu po levý konec)|lineární hustota tyče|
+|výška stromu|čas|rychlost růstu do výšky|
+|objem kmene stromu (smrk)|čas|rychlost růstu ve smyslu přírůstu dřevní hmoty|
+|potenciální energie tělesa v radiálním silovém poli|vzdálenost od středu|působící síla vynásobená faktorem $-1$|
+
+
+
+
 --------------------
 
 ## Derivace ve fyzikálních zákonech 1
+
 
 Derivace nejčastěji ve fyzikálních zákonech vystupuje jako rychlost
 změny v čase, často vyjádřená slovy "časová změna"
 
 > Newtonův zákon síly (pohyb hmotného tělesa na které působí vnější
 síla): *Časová změna hybnosti je rovna výsledné působící síle.*
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Newtonův pohybový zákon, založený na derivaci, umožňuje kvantifikovat účinky všech sil na pohyb. Na Zemi i ve vesmíru. Zdroj: pixabay.com](druzice.jpg)
+
+</div>
+
+\fi
 
 Tj. derivace hybnosti podle času je rovna výsledné síle. Derivace
 hybnosti je pro tělesa s konstantní hmotností součinem hmotnosti a
@@ -42,6 +108,17 @@ smyčky v proměnném magnetickém poli): *Hodnota indukovaného
 elektromotorického napětí je rovna záporně vzaté časové změně
 celkového magnetického toku, který prochází elektrickým obvodem*.
 
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Větší rychlost znamená větší derivaci a větší svit žárovky. Zdroj: pixabay.com](dynamo.jpg)
+
+</div>
+
+\fi
+
 $$\mathcal E = -\frac{\mathrm d\Psi}{\mathrm dt}$$ Speciálním
 případem známým ze střední školy je přímý vodič pohybující se v
 homogenním magnetickém poli po rovnoběžných vodičích.
@@ -49,7 +126,19 @@ homogenním magnetickém poli po rovnoběžných vodičích.
 ---------------------
 
 ## Rychlost růstu 1
+
 > Derivace je okamžitá rychlost změny.
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Derivace velikosti populace ryb je rychlost růstu. Umožní modelovat vývoj populace v čase. Zdroj: pixabay.com](ryby.jpg)
+
+</div>
+
+\fi
+
 
 Populace ryb v East River je dána vztahem $$P(t)=\frac{3e^t}{1+e^t},$$
 kde $P(t)$ je v milionech ryb a $t$ čas v letech od roku 2000.
@@ -60,6 +149,16 @@ Jednotkou derivace $P'(t)$ je milion ryb za rok. Platí například $P'(0)=0.75$
 
 ## Rychlost růstu 2
 > Rychlost změny nemusí být změna vztažená na jednotku času, ale i míra změny prostorového uspořádání (gradient) nebo změna vztažená na jinou vhodnou jednotku.
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Zisk a jeho maximalizace je priorita pro ekonomy. Proto je ekonomie společně s fyzikou největším odebíratelem matematických výsledků, metod a postupů. Zdroj: pixabay.com](penize.jpg)
+
+</div>
+
+\fi
 
 *Příklad:*
 Náklady na produkci $x$ letadel za rok jsou dány funkcí
@@ -107,7 +206,7 @@ Země.
 $$\sqrt{1+x}\approx 1+\frac 12 x,
 \quad \frac 1{\sqrt{1-x}}\approx 1+\frac 12 x,\quad \text{pro malé }x$$
 
-$$E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}}\approx m_0c^2+\frac 12 mv^2 \quad \text{pro $v$ mnohem menší než $c$}$$
+$$E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}}\approx m_0c^2+\frac 12 m_0v^2 \quad \text{pro $v$ mnohem menší než $c$}$$
 
 $$V=-\kappa \frac{mM}{R+h}\approx -\kappa \frac{mM}{R} + \kappa \frac{mM}{R^2} h=-\kappa \frac{mM}{R}+m g h,\quad \text{kde $g=\kappa \frac{M}{R^2}$.}$$
 
@@ -135,6 +234,17 @@ kx^2$.)
 ## Velikost změny
 
 > Ze známé rychlosti změny veličiny je možné zrekonstruovat pouze numerickou změnu této veličiny. Časový průběh je možné zrekonstruovat pouze s dalšími dodatečnými informacemi, jako například počáteční hodnota.
+
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Pokud se rychlost děje mění, musíme pro nalezení veiolkost změny nahradit násobení integrálem. Zdroj: pixabay.com](oil.jpg)
+
+</div>
+
+\fi
 
 Olej vytéká z nádrže rychlostí $$f(x)=4000 e^{-0.3x}\, \mathrm{litr}/\mathrm{den}.$$ Kolik oleje vyteče za prvních pět dnů? Kolik oleje vyteče za dalších pět dnů?
 
