@@ -39,50 +39,6 @@ je totiž úměrná rozdílu jejich teplot (Newtonův zákon).
 
 </div>
 
-# Příklady diferenciálních rovnic
-
-Z\ fyzikálního hlediska diferenciální rovnice popisuje mechanismus
-vývoje systému.
-
-<div class="sloupce">
-
-<div>
-
-### Tepelná výměna
-
-Rychlost tepelné výměny mezi dvěma tělesy je úměrná rozdílu jejich
-teplot (Newtonův zákon).  Tento proces je tedy možno modelovat
-diferenciální rovnicí
-$$
-  y'=-k(y-T)
-$$
-teplota $y$ horkého tělesa se mění (rychlost změny je derivace $y'$)
-tak, že klesá (znaménko minus) rychlostí úměrnou (konstanta $k$)
-teplotnímu rozdílu mezi teplotou tělesa a teplotou okolí (člen $y-T$).
-
-</div>
-
-<div>
-
-### Vývoj populace
-
-Udává-li $y$ velikost určité populace, $K$ nosnou kapacitu prostředí,
-$h(y)$ intenzitu lovu a $r\left(1-\frac yK\right)$ specifickou míru
-růstu populace (rychlost s jakou se velikost populace zvětšuje
-vztažená na jednotkové množství populace, přičemž tato rychlost klesá
-s tím, jak se velikost populace přibližuje k nosné kapacitě
-prostředí), je možno populaci modelovat rovnicí
-$$y'=ry\left(1-\frac yK\right)-h(y).$$
-
-Podle velkosti koeficientů v této rovnici dělíme živočichy na
-[r-stratégy a
-K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie),
-toto dělení odráží, jak se snaží druh přežít.
-
-</div>
-</div>
-
-
 # Cauchyova úloha, počáteční podmínka 
 
 Diferenciální rovnice udává scénář vývoje systému. K\ jednoznačnému
@@ -108,6 +64,188 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
 
 **Příklad:** Najděte všechny funkce splňující $y'=2xy$ a $y(0)=3$.
 
+
+
+# Příklad - tepelná výměna
+
+\iffalse
+
+<div class='obtekat'>
+
+![Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot,
+ https://pixabay.com](hot.jpg)
+
+</div>
+
+\fi
+
+* Rychlost tepelné výměny mezi dvěma tělesy je úměrná rozdílu jejich
+  teplot (Newtonův zákon).  Tento proces je tedy možno modelovat
+  diferenciální rovnicí $$ \frac{\mathrm dT}{\mathrm dt}=-k(T-T_0).
+  $$
+* Rovnice udává, že teplota $T$ horkého tělesa se mění (rychlost změny
+  je derivace) tak, že klesá (znaménko minus) rychlostí úměrnou
+  (konstanta $k$) teplotnímu rozdílu mezi teplotou tělesa a teplotou
+  okolí $T_0$ (člen $T-T_0$).
+* K rovnici v ideálním případě dodáváme materiálovou charakteristiku
+  (konstantu úměrnosti $k$) a počáteční teplotu. Řešením rovnice je
+  funkce udávající závislost teploty na čase. Není tedy nutné provádět
+  pokus a čekat na uplynutí požadované doby.
+* Někdy může být vhodné nesledovat teplotu $T$, ale rozdíl oproti okolní teplotě, $\tau=T-T_0$. Rovnice se potom zjednoduší na
+  $$ \frac{\mathrm d\tau}{\mathrm dt}=-k\tau,	      $$
+  tedy na rovnici, kdy rychlost změny je úměrná funkční hodnotě.
+
+# Příklad - datování pomocí uhlíku
+
+\iffalse
+
+<div class='obtekat'>
+
+![Rovnice konstantního růstu nebo úbytku je základem datování pomocí uhlíku,
+ https://www.flickr.com/photos/capturetheuncapturable, licence CC BY 2.0](archeology.jpg)
+
+
+</div>
+\fi
+
+* Při datování archeologických nálezů pozůstatků živých organismů se
+  využívá toho, že radioaktivní prvky se rozpadají rychlostí, která je
+  úměrná množství dosud nerozpadnutého materiálu.
+* Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
+  vzorku) nerozpadnutého radioaktivního materiálu je popsána rovnicí
+  $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
+  kde $\lambda$ je konstanta úměrnosti. Tato rovnice je přirozeným
+  důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
+  stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
+  pravděpodobnost se s časem nemění.
+* Vhodný radioaktivní prvek vybereme podle toho, jak starý vzorek
+  chceme datovat. Nejčastěji měříme množství radioaktivního uhlíku
+  $^{14}C$ vztažené k množství stabilního $^{12}C$. Počáteční podmínka
+  je známa (předpokládáme stejný poměr zastoupení jako relativně
+  nedávno, před průmyslovou revolucí) a díky tomu můžeme najít funkci
+  udávající, jak s časem klesá zastoupení radioaktivního uhlíku. Obsah
+  radioaktivního i stabilního uhlíku je možné změřit a tím získáme
+  odhad, kolik procent radioaktivního
+  uhlíku se rozpadlo. Řešení počáteční úlohy poté použijeme pro odhad
+  doby, kdy organismus přestal spotřebovávat uhlík z atmosféry,
+  tj. odhad stáří vzorku.
+* Při pokusu o datování kostí dinosaurů klesne množství
+  radioaktivního uhlíku pod měřitelnou úroveň. Proto se
+  v tomto případě používají látky s delším poločasem rozpadu.
+
+
+# Příklad - akutní normovolemická hemodiluce
+
+\iffalse
+
+<div class='obtekat'>
+
+![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek,
+ https://pixabay.com](chirurg.jpg)
+
+</div>
+
+\fi
+
+
+* Při chirugické operaci dochází ke krvácení. Pacient ztrácí krev s ní
+  i krvinky. Při konstantní intenzitě krvácení to znamená, že pacient
+  ztrácí krvinky rychlostí úměrnou počtu krvinek. Formálně se jedná o
+  stejnou rovnici jako u radioaktivního rozpadu, jenom změníme
+  interpretaci veličin.
+* Pokud očekáváme takový průběh operace, že i po uvedeném poklesu bude
+  pořád množství krvinek nad minimální přípustnou hodnotou, je možné
+  před operací toto množství snížit tím, že se část krve odebere a
+  krev se poté doplní vhodnými roztoky.
+* Protože pacient má už od začátku operace menší počet krvinek, ztrácí
+  tyto krvinky pomaleji a celkový úbytek během operace je menší. Na
+  konci operace se pacientovi vrátí dříve odebraná krev. Výsledkem je,
+  že po operaci v jeho těle koluje více krvinek, než pokud by byl
+  operován s "původní krví".
+* Metoda akutní normovolemické hemodiluce nachází v současné praxi
+  široké využití v řadě operačních oborů. Poskytuje totiž možnost
+  vyhnout se podání alogenní krevní transfuze a tím eliminovat rizika
+  z ní vyplývající. Současně je tato metoda výrazně finančně levnější
+  a její přínos je tak i ekonomický. (podle https://zdravi.euro.cz/)
+
+# Příklad - rovnice samočištění jezer
+
+\iffalse
+
+<div class='obtekat'>
+
+![Voda v jezeře ve kterém se přirozeně obměňuje voda se dokáže sama zbavit znečištění.  Rychlost vyplavování nečistot je úměrná míře znečištění.
+ https://pixabay.com](voda.jpg)
+
+</div>
+
+\fi
+
+
+* Nechť veličina $y$ udává množství látky, která znečišťuje vodu v\ jezeře o\ objemu $V$.
+* Předpokládejme, že do jezera přitéká čistá voda a stejnou rychlostí
+  odtéká voda s\ nečistotami (hladina se nemění, je v\ ustáleném
+  stavu). Nechť veličina $r$ udává, jaký objem vody se v\ jezeře takto
+  vymění za jeden den.  Předpokládejme dále (poněkud nerealisticky),
+  že rozdělení znečišťujících částic v\ jezeře je rovnoměrné.
+* Úbytek hmotnosti nečistot za časovou jednotku je dán derivací
+  $\frac{\mathrm dy}{\mathrm dt}$.
+* Tento úbytek hmotnosti je možno vyjádřit též ve tvaru $\frac rVx$, kde
+  $\frac rV$ je pro dané jezero kladná konstanta udávající, jak velká
+  část z\ celkového množství vody se v\ jezeře vymění za časovou jednotku.
+  Označíme-li tuto konstantu symbolem $k$, je proces úbytku nečistot
+  v\ jezeře popsán diferenciální rovnicí
+  $$
+  \frac{\mathrm dy}{\mathrm dt}  =-ky.
+  $$
+* Výše uvedená rovnice na nazývá *rovnice samočištění jezer*, ale
+  tento název je čistě formální. Jedná se vlastně o stejnou rovnici,
+  která popisuje radioaktivní rozpad, ztrátu krvinek při operaci nebo
+  změnu rozdílu mezi teplotou horkého nápoje a místnosti při chladnutí
+  nápoje.
+* Stejnou rovnicí je možné popsat nejenom odbourávání nečistot z
+  životního prostředí, ale i odbourávání léků nebo drog z
+  těla. Považujme krevní oběh za jezero a lék nebo drogu za
+  znečišťující látku. V případě, že rychlost odbourávání je úměrná
+  koncentraci (platí pro farmakokinetiku prvního řádu, toto splňuje
+  většina léčiv za běžných koncentrací), řídí se proces odbourávání
+  stejnou diferenciální rovnicí.
+
+
+
+# Příklad - vývoj populace a její ekologický lov
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Při intenzivním lovu může dojít ke zničení populace
+ https://pixabay.com](kralik.jpg)
+
+</div>
+
+\fi
+
+
+* Zkoumejme velikost $y$  určité populace, v prostředí s nosnou kapacitou $K$.
+* Realistickým předpokladem v prostředí s omezenými úživnými
+  vlastnostmi je, že specifická míru růstu populace (rychlost s jakou
+  se velikost populace zvětšuje vztažená na jednotkové množství
+  populace) klesá s tím, jak se velikost populace přibližuje k nosné
+  kapacitě a je modelována funkcí $r\left(1-\frac yK\right)$.  Podle
+  velkosti koeficientů v této rovnici dělíme živočichy na [r-stratégy
+  a
+  K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie),
+  toto dělení odráží, jak se snaží druh přežít.
+* Za uvedených předpokladů je možno vývoj populace popsat rovnicí 
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right).$$	  
+
+* Pokud lovem snížíme přírůstky populace, můžeme tento proces modelovat rovnicí 
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$
+  kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
+  tohoto procesu umožní nalezení ekonomicky výhodné ale trvale
+  udržitelné strategie lovu.
 
 
 # Geometrická interpretace ODE

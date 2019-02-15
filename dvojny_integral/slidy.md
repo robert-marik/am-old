@@ -7,7 +7,14 @@
 # Motivace 1 (hmotnost nehomogenní desky)
 
 
-<div class='sloupce'>
+<div class='obtekat'>
+
+![Deska s nekonstantní plošnou hustotou,
+ https://www.flickr.com/photos/svacher, licence CC BY-NC-ND
+ 2.0](table.jpg)
+
+</div>
+
 
 * Hmotnost desky $\Omega$ je možno vypočítat jako součin plošné
   hustoty (hmotnost na jednotku obsahu) a obsahu desky. $$M=\sigma S$$
@@ -23,17 +30,16 @@
   vybudujeme aparát, který nám umožní psát
   $$m=\iint_\Omega \sigma \,\mathrm dS.$$
 
-![Deska s nekonstantní plošnou hustotou,
- https://www.flickr.com/photos/svacher, licence CC BY-NC-ND
- 2.0](table.jpg)
-
-</div>
 
 
 # Motivace 2 (objem vody v jezeře)
 
 
-<div class='sloupce'>
+<div class='obtekat'>
+
+![Nádrž s proměnnou hloubkou, https://www.pixabay.com](lake.jpg)
+
+</div>
 
 * Objem vody $V$ v nádrži nebo bazénu (se svislými stěnami, ale jinak
   i nepravidelného půdorysu $\Omega$) vypočteme jako součin obsahu
@@ -47,15 +53,17 @@
   dokonce nemožné. Potom místo součtu konečně mnoha příspěvků
   použijeme dvojný integrál a dostáváme $$V=\iint_\Omega h\mathrm dS.$$
 
-![Nádrž s proměnnou hloubkou, https://www.pixabay.com](lake.jpg)
-
-</div>
-
 
 # Motivace 3 (průtok)
 
 
-<div class='sloupce'>
+<div class='obtekat'>
+
+![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji
+ než ve středu, potrubí na Aljašce, https://www.pixabay.com](pipe.jpg)
+
+
+</div>
 
 
 
@@ -68,12 +76,6 @@
   mění spojitě. Například v potrubí je rychlost rozdělena parabolicky
   a ubývá se vzdáleností od středu. Situaci zachraňuje dvojný integrál
   $$Q=\iint_\Omega v\,\mathrm dS.$$
-
-![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji
- než ve středu, potrubí na Aljašce, https://www.pixabay.com](pipe.jpg)
-
-
-</div>
 
 
 
