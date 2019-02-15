@@ -57,11 +57,12 @@ Závislá proměnná|Nezávislá proměnná|Derivace|
 |veličina $x$|čas|rychlost růstu veličiny $x$|
 |dráha při pohybu při pohybu po přímce i vzdálenost od referečního bodu|čas doba od začátku pohybu nebo od referečního okamžiku|rychlost|
 |rychlost|čas|zrychlení|
+|teplota v místě tyče (např. stěna, což je v podstatě extrémně krátká a široká tyč)|poloha|gradient teploty, veličina udávající intenzitu toku tepla tyčí resp. stěnou|
 |všeobecná cenová hladina (cca náklady na živobytí)|čas|inflace|
 |náklady na výrobu zboží|množství zboží|mezní náklady|
 |nadmořská výška na trase treku|poloha|stoupání trasy|
 |graf funkce $f(x)$|$x$|růst grafu (směrnice tečny)|
-|hmotnost části tyče (např od zvoleného bodu doleva)|délka části tyče (např od zvoleného bodu po levý konec)|lineární hustota tyče|
+|hmotnost části tyče (např od zvoleného bodu doleva)|poloha na tyči (např. vzdálenost od levého konce)|lineární hustota tyče|
 |výška stromu|čas|rychlost růstu do výšky|
 |objem kmene stromu (smrk)|čas|rychlost růstu ve smyslu přírůstu dřevní hmoty|
 |potenciální energie tělesa v radiálním silovém poli|vzdálenost od středu|působící síla vynásobená faktorem $-1$|
@@ -140,6 +141,7 @@ homogenním magnetickém poli po rovnoběžných vodičích.
 \fi
 
 
+*Příklad:*
 Populace ryb v East River je dána vztahem $$P(t)=\frac{3e^t}{1+e^t},$$
 kde $P(t)$ je v milionech ryb a $t$ čas v letech od roku 2000.
 
@@ -174,7 +176,19 @@ Například $C'(15)=0.25$ a při produkci patnáct letadel za rok stojí další
 
 > Často se setkáme s tím, že dvě nebo více veličin jsou svázány vzájemně jednoznačným vztahem a změna jedná veličiny vyvolává změnu veličiny další. Pomocí derivace a pomocí pravidla pro derivaci složené funkce je možné najít vztah mezi rychlostmi změn těchto veličin.
 
-*Příklad:* Sněhová koule taje tak, že se poloměr zmenšuje rychlostí $3$cm/hod. Jak rychle se zmenšuje objem v okamžiku, kdy je poloměr $10$cm?
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Pokud koule taje tak, že se poloměr zmenšuje konstantní rychlostí, objem se zmenšuje stále pomaleji a pomaleji. Zdroj: pixabay.com](ball.jpg)
+
+</div>
+
+\fi
+
+
+*Příklad:* Ledová koule taje tak, že se poloměr zmenšuje rychlostí $3$cm/hod. Jak rychle se zmenšuje objem v okamžiku, kdy je poloměr $10$cm?
 
 *Řešení:*
 Zadání vlastně říká následující: $V=\frac 43 \pi r^3$, $r=10$cm, $\frac {\mathrm{d}r}{\mathrm{d}t}=-3$cm/hod, $\frac {\mathrm{d}V}{\mathrm{d}t}=?$
@@ -268,9 +282,8 @@ Speciálním případem známým ze střední školy je efektivní hodnota stř�
 kdy $U_{\text{ef}}^2$ je střední hodnota $U^2$. (Druhá mocnina,
 protože práce el. napětí je úměrná druhé mocnině napětí.)
  
-------
 
-Příklad: Teplota $T$ ve °C zaznamenaná během dne odpovídala funkci $$T = 0.001 t^4 − 0.280 t^2 + 25$$
+*Příklad:* Teplota $T$ ve °C zaznamenaná během dne odpovídala funkci $$T = 0.001 t^4 − 0.280 t^2 + 25$$
 
 kde $t$ je počet hodin po poledni ($-12 \leq t \leq  12$). Jaká je průměrná denní teplota?
 

@@ -14,7 +14,7 @@ column-rule:2px solid #999;
 
 .red{color:red;}
 
-.title, .author {text-align:center;}
+.date, .title, .author {text-align:center;}
 
 li {
     -webkit-column-break-inside:avoid;

@@ -45,22 +45,34 @@ odborné literatuře.
 
 # Motivace pro rozšíření pojmu derivace
 
+\iffalse 
+
+<div class='obtekat'>
+
+![Mnoho procesů se řídí zákony zachování. Pokud proudící látka může vznikat a zanikat nebo měnit hustotu, není situace tak jednoduchá, jak to známe z rovnice kontinuity ve středoškolské fyzice. Zdroj: pixabay.com](river.jpg)
+
+</div>
+
+\fi
+
+
+
 Derivace je vhodná ke studiu fyzikálních procesů na makroskopické úrovni
 těles. Takovým fyzikálním zákonům říkáme zákony v integrálním
 tvaru. Ty jsou často odvozeny ze zákonů zachování.
 
-* Tepelná enegrie tělesa (a teplota) se mění tak, že v tělese vzniká
+* Tepelná energie tělesa (a teplota) se mění tak, že v tělese vzniká
 nebo zaniká (chemické reakce, el. proud apod.) anebo tepelnou výměnou
 (teplo odtéká nebo přitéká kontaktem s tělesem o jiné teplotě).
 * Kapaliny a plyny proudí tak, že změna v definovaném místě prostoru
-je dána rozdílem, kolik do prostoru přiteče a vyteče a pokud bereme v
-úvahu i zdroje nebo spotřebiče tak rozdílem kolik v daném místě
+je dána rozdílem, kolik do prostoru přiteče a vyteče. Pokud bereme v
+úvahu i zdroje nebo spotřebiče tak i rozdílem kolik v daném místě
 vznikne a kolik zanikne (například při proudění podzemní vody mezi
 dvěma geologickými vrstvami dojde k částečnému průsaku mimo tyto
 vrstvy).
 
-Pro vyjadřování takovýchto procesů, jako rychlost změny teploty
-tělesa, jsou vhodné derivace.
+Pro vyjadřování procesů jako jsou rychlost změny teploty tělesa nebo
+množství tekutiny v daném objemu jsou vhodné (obyčejné) derivace.
 
 Někdy však požadujeme detailnější informace o celém procesu, abychom
 měli přesnější popis a dokázali odhalit vliv všech relevantních
@@ -75,7 +87,7 @@ dává lepší náhled na fyzikální podstatu. Proto tomuto přístupu často
 dáváme přednost a používáme jej jako výchozí bod pro studium a popis
 konkrétních situací. Musíme tedy pracovat s funkcemi více proměnných a
 studovat, jak se mění vzhledem k jednotlivým proměnným. To je přesně
-úkol pro diferenciální počet funkcí více proměnných.
+úkol pro diferenciální počet funkcí více proměnných a *parciální derivace*.
 
 \fi
 
@@ -113,6 +125,17 @@ studovat, jak se mění vzhledem k jednotlivým proměnným. To je přesně
 
 # Aplikace parciálních derivací - příklad
 
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Brzdy v autě musí absorbovat kinetickou energii, která je lineární funkcí hmotnosti a kvadratickou funkcí rychlosti. Zdroj: pixabay.com](car.jpg)
+
+</div>
+
+\fi
+
 *Příklad:* Brzdná dráha $L$ (v metrech) auta o hmotnosti $m$ (v kilogramech) brzdícího z rychlosti $v$ (v kilometrech za hodinu) je dána vzorcem
 $$L=k m v^2, $$ kde $k= 3.45 \times 10 ^{-6}\,(\mathrm{m}\,\mathrm{hod}^2)/(\mathrm{kg}\,\mathrm{km}^2)$. Pro $m=1100\,\mathrm{kg}$ a $v=100\,\mathrm{km}/\mathrm{hod}$ je brzdná dráha $37.95\,\mathrm{m}$.
 
@@ -143,7 +166,7 @@ dráha vychází v metrech.
   vyšších mocnin a stane se fatálním u obecných neceločíslených mocnin
   nebo obecnějších funkcí. Pokud náš výpočet vstupuje do
   komplexnějších inženýrských modelů, staly by se neřešitelnými. Že
-  s derivací jde jenom o aproximaxci vůbec nevadí, protože zapojením důmyslných
+  s derivací jde jenom o aproximaci vůbec nevadí, protože zapojením důmyslných
   matematických postupů zapracovaných přímo v definici (limita) srážíme chybu na nulu.
  
 \iffalse
@@ -173,6 +196,18 @@ označovaný **zákon šíření chyb**.
 
 
 # Zákon šíření chyb  - příklad
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Pocitová teplota závisí na skutečné teplotě a na síle větru. Zdroj: pixabay.com](zima.jpg)
+
+</div>
+
+\fi
+
+
 
 Kanadský empirický vzorec pro pocitovou teplotu v zimě ([wind-chill
 factor](https://en.wikipedia.org/wiki/Wind_chill)) je $$W(T,v) =
@@ -210,6 +245,18 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 \iffalse
 
 # Motivace pro zavedení diferenciálních operátorů
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Při proudění tekutin nesledujeme jednotlivé molekuly, ale vektor rychlosti. Díky tomu můžeme stejným aparátem sledovat tok tekutiny, tok tepla nebo tok jiné veličiny. Zdroj: pixabay.com](water.jpg)
+
+</div>
+
+\fi
+
+
 
 Parciální derivace se vyskytují ve většině důležitých rovnic
 popisujících fyzikální svět okolo nás. 
@@ -284,7 +331,7 @@ není spojena přímo s látkou) nebo například difuzi.
 # Gradient v přírodě a přírodních zákonech 
 
 * V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* izolačních materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.
-* S gradientem souvisí *majáková navigace* při migraci živočichů. Ti sledují určitý chemický podnět a pohybují se ve směru největšího růstu tohoto podnětu (tj. ve směru gradientu). Například žralok ve vodě takto sleduje koncentraci krve. Pokud je mezi žralokem a zdrojem krve proud, kerý krev unáší, nepopluje žralok rovnou čarou ke zdroji krve, ale koncentrace krve ho povede po delší trase.
+* S gradientem souvisí *majáková navigace* při migraci živočichů. Ti sledují určitý chemický podnět a pohybují se ve směru největšího růstu tohoto podnětu (tj. ve směru gradientu). Například žralok ve vodě takto sleduje koncentraci krve. Pokud je mezi žralokem a zdrojem krve proud, který krev unáší, nepopluje žralok rovnou čarou ke zdroji krve, ale koncentrace krve ho povede po delší trase.
 * Pokud se zajímáme nejenom o směr, ale i velikost gradientu, pomůže to k posouzení jak rychle se mění veličina v prostoru (gradient je velký, jsou-li vrstevnice nahusto). 
 * *Síla* ($\vec F$) působící na těleso v silovém poli ve kterém je možno zavést potenciální energii ($V$) je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient).
 $$\vec F=-\nabla V$$
@@ -356,7 +403,7 @@ Pro $z=0=z_0$ dostáváme z tečné roviny následující: Nechť
 
 <div class='sloupce'>
 
-Mějme funkci $f(x,y)$ dvou proměnných a její vstevnici na úrovni $C$
+Mějme funkci $f(x,y)$ dvou proměnných a její vrstevnici na úrovni $C$
 $$f(x,y)=C. \tag{1}$$ Tato rovnice za jistých okolností může definovat $y$
 jako funkci proměnné $x$. \iffalse Pokusíme se najít derivaci této funkce. K
 tomu uvažujme bod $(x_0,y_0)$ ležící na této vrstevnici,
@@ -581,12 +628,13 @@ Darcyho zákon experimentálně prokázal, že při proudění tekutiny
 pórovitým prostředím je pro mnoho látek za běžných situací tok úměrný
 rozdílu tlaků. Proto se tento zákon používá například při studiu
 proudění podzemní vody propustnými vrstvami půdy, vody dřevem, vzduchu
-půdou, vody rostlinou a jejími částmi, ropy půdou a podobně. Rozdíl tlaků může mít různý původ (jiná
-výška, jiný tlak vrstev z nadloží, osmóza, kapilarita, koncentrace
-rozpuštěných látek apod) a tyto faktory se sčítají. Pro pohodlí je
-někdy rozdíl tlaků přepočítáván v některých oborech na ekvivalentní výškový rozdíl, což
-však činí tuto veličinu poměrně těžko představitelnou, protože není
-spojena s jedním konkrétním fyzikálním jevem. My se budeme držet tlaku.
+půdou, vody rostlinou a jejími částmi, ropy půdou a podobně. Rozdíl
+tlaků může mít různý původ (jiná výška, jiný tlak vrstev z nadloží,
+osmóza, kapilarita, koncentrace rozpuštěných látek apod) a tyto
+faktory se sčítají. Pro pohodlí je někdy rozdíl tlaků přepočítáván v
+některých oborech na ekvivalentní výškový rozdíl, což však činí tuto
+veličinu poměrně těžko představitelnou, protože není spojena s jedním
+konkrétním fyzikálním jevem. My se budeme držet tlaku.
 
 Je-li $p$ tlak, je změna tlaku na jednotku délky ve směru osy $x$
 rovna $\frac{\partial p}{\partial x}$ a tento rozdíl tlaků vyvolá
@@ -689,9 +737,17 @@ Matematicky je veličina $-Kp$ kmenovou funkcí toku $\vec q$.
 * Laplaceův operátor vystupuje v problémech týkajících se
   elektrického nebo gravitačního potenciálu, difuze, nebo kmitů a
   šíření vln.
-    * Vlnová rovnice popisující vlnění resp. chvění je rovnice $$\frac{1}{c^2} \frac{\partial ^2 u}{\partial t^2} = \nabla^2 u.$$ Například u kmitání struny nebo membrány je v odovození této rovnice i lineární aproximace $\sin x\approx x$.
-    * Vedení tepla  v prostředí bez zdrojů nebo spotřebičů tepla je popsáno rovnicí $$\frac{\partial u}{\partial t}=D\nabla^2 u.$$
-    * Při ustáleném vedení tepla je derivace podle času nulová a takové vedení tepla je popsáno rovnicí $$0=\nabla^2 u.$$ Stejná rovnice popisuje proudění obecně. Například proudění [podzemní vody](http://www.soilmanagementindia.com/soil/seepage-analysis/laplace-equation/laplace-equation-for-two-dimensional-flow-soil-engineering/137580) propustnými vrstvami půdy.
+    * Vlnová rovnice popisující vlnění resp. chvění je rovnice
+      $$\frac{1}{c^2} \frac{\partial ^2 u}{\partial t^2} = \nabla^2
+      u.$$ Například u kmitání struny nebo membrány je v odvození této
+      rovnice i lineární aproximace $\sin x\approx x$.
+    * Vedení tepla v prostředí bez zdrojů nebo spotřebičů tepla je
+      popsáno rovnicí $$\frac{\partial u}{\partial t}=D\nabla^2 u.$$
+    * Při ustáleném vedení tepla je derivace podle času nulová a
+      takové vedení tepla je popsáno rovnicí $$0=\nabla^2 u.$$ Stejná
+      rovnice popisuje proudění obecně. Například proudění [podzemní
+      vody](http://www.soilmanagementindia.com/soil/seepage-analysis/laplace-equation/laplace-equation-for-two-dimensional-flow-soil-engineering/137580)
+      propustnými vrstvami půdy.
 
 
 \iffalse
