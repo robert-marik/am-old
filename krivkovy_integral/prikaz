@@ -1,4 +1,8 @@
-pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.slidy -s slidy.md -o index.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 
+cp slidy.md slidy_kopie.md
+sed -i 's/\\iffalse//' slidy_kopie.md
+sed -i 's/\\fi//' slidy_kopie.md
+
+pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.slidy -s slidy_kopie.md -o index.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 
 #pandoc -t html --css my.css -s slidy.md -o index_p.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML 
-pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.deck -s slidy.md -o index_d.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+pandoc -t slidy -V slidy-url=../ --css ../my.css --template ../my.deck -s slidy_kopie.md -o index_d.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 pandoc -t html  --css ../my.css -s slidy.md -o index_h.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML

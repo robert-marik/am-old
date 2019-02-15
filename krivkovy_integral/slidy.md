@@ -4,13 +4,6 @@
 
 # Křivkový integrál
 
-<style>
-
-.obtekat {max-width:40%; vertical-align:top; float: right;}
-
-</style>
-
-
 Jedná se o rozšíření Riemannova integrálu, kdy množinou přes kterou
 integrujeme není úsečka, ale křivka. Pro jednoduchost budeme uvažovat
 dvourozměrnou křivku v rovině $x$, $y$.

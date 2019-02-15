@@ -7,13 +7,6 @@
 # Motivace 1 (hmotnost nehomogenní desky)
 
 
-<style>
-
-.obtekat {max-width:40%; vertical-align:top; float: right;}
-
-</style>
-
-
 <div class='sloupce'>
 
 * Hmotnost desky $\Omega$ je možno vypočítat jako součin plošné
