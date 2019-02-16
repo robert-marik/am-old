@@ -174,8 +174,9 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
 
 <div class='obtekat'>
 
-![Voda v jezeře ve kterém se přirozeně obměňuje voda se dokáže sama zbavit znečištění.  Rychlost vyplavování nečistot je úměrná míře znečištění.
- https://pixabay.com](voda.jpg)
+![Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,
+ se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot
+ je úměrná míře znečištění.  https://pixabay.com](voda.jpg)
 
 </div>
 

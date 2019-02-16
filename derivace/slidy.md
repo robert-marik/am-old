@@ -177,6 +177,18 @@ dráha vychází v metrech.
 
 # Zákon šíření chyb  (chyba nepřímo měřené veličiny)
 
+\iffalse 
+
+<div class='obtekat'>
+
+![Každá chyba má své důsledky. Důsledky chyb ve vstupních datech kvantifikujeme pomocí zákona šíření chyb. Zdroj: pixabay.com](mistake.jpg)
+
+</div>
+
+\fi
+
+
+
 * V praxi často měříme nepřímo veličinu $f$ tak, že měříme veličiny
 $x_1$, $x_2$, $\dots$, $x_n$ a hodnotu veličiny $f$ určíme pomocí vzorce
 $f(x_1, x_2, \dots, x_n)$. 
@@ -201,7 +213,7 @@ označovaný **zákon šíření chyb**.
 
 <div class='obtekat'>
 
-![Pocitová teplota závisí na skutečné teplotě a na síle větru. Zdroj: pixabay.com](zima.jpg)
+![Pocitová teplota v zimě závisí na skutečné teplotě a na síle větru. Zdroj: pixabay.com](zima.jpg)
 
 </div>
 
@@ -255,8 +267,6 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 </div>
 
 \fi
-
-
 
 Parciální derivace se vyskytují ve většině důležitých rovnic
 popisujících fyzikální svět okolo nás. 
@@ -329,6 +339,16 @@ není spojena přímo s látkou) nebo například difuzi.
 
 
 # Gradient v přírodě a přírodních zákonech 
+
+\iffalse 
+
+<div class='obtekat'>
+
+![U teplokrevných živočichů vystavených chladu vzniká velký gradient teploty. Pro snížení tohoto gradientu a lepší ochranu před mrazem je výhodné mít silnou vrstvu chlupů. Ptáci se v zimě zase umí proměnit v načepýřené koule. Zdroj: pixabay.com](ovce.jpg)
+
+</div>
+
+\fi
 
 * V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* izolačních materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.
 * S gradientem souvisí *majáková navigace* při migraci živočichů. Ti sledují určitý chemický podnět a pohybují se ve směru největšího růstu tohoto podnětu (tj. ve směru gradientu). Například žralok ve vodě takto sleduje koncentraci krve. Pokud je mezi žralokem a zdrojem krve proud, který krev unáší, nepopluje žralok rovnou čarou ke zdroji krve, ale koncentrace krve ho povede po delší trase.
@@ -623,6 +643,12 @@ Funkce $f$ se v tomto kontextu nazývá **skalární potenciál** vektorového p
 \iffalse
 
 # Darcyho zákon a skalární potenciál
+
+<div class='obtekat'>
+
+![Tok vody v půdě je jedním ze základních předpokladů existence života. Zdroj: pixabay.com](darcy.jpg)
+
+</div>
 
 Darcyho zákon experimentálně prokázal, že při proudění tekutiny
 pórovitým prostředím je pro mnoho látek za běžných situací tok úměrný
