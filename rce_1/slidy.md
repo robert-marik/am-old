@@ -162,8 +162,9 @@ který z\ ní vyteče.
 
 <div class='obtekat'>
 
-![Difuze pracuje při na odvodu vlhkosti z oblečení vyrobného z
- Goretexové tkaniny. Zdroj: pixabay.com](diffusion.jpg)
+![Difuze pracuje na odvodu vlhkosti z oblečení vyrobného z
+ Goretexové tkaniny. Ta obsahuje póry proustné pro molekuly vody ale
+ nepropustné pro kapky. Zdroj: pixabay.com](diffusion.jpg)
 
 </div>
 
@@ -281,6 +282,16 @@ $$\frac{\partial ^2u}{\partial t^2}=\frac {\cal T}{\rho} \frac {\partial^2 u}{\p
 </div>
 
 # Vlnová rovnice
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Vlnová rovnice je základem popisu veškerého kmitání a chvění. Včetně korpusů hudebních nástrojů. Zdroj: pixabay.com](kytara.jpg)
+
+</div>
+
+\fi
 
 
 Rovnice $$\frac{\partial ^2u}{\partial t^2}=\frac {\cal T}{\rho} \frac {\partial^2 u}{\partial x^2}$$

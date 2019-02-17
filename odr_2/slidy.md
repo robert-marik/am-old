@@ -364,10 +364,10 @@ Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\ma
 \fi
 
 Kmity tělesa o\ hmotnosti $m$ pružně připevněného k\ nehybné podložce
-spojem tuhosti $k$ jsou popsány diferenciální rovnicí ${\ddot y+\frac
-km y=0}.$ Zde navíc používáme fyzikální úzus označovat derivace podle
-času pomocí tečky a ne čárky. Symbol $\ddot y$ tedy značí druhou
-derivaci funkce $y$, kde $y$ bereme jako funkci času.
+spojem tuhosti $k$ jsou popsány diferenciální rovnicí ${\ddot x+\frac
+km x=0}.$ Zde navíc používáme fyzikální úzus označovat derivace podle
+času pomocí tečky a ne čárky. Symbol $\ddot x$ tedy značí druhou
+derivaci funkce $x$, kde $x$ bereme jako funkci času.
 
 Jednoduchým mechanickým modelem je těleso na pružině. Zde je deformace
 úměrná působící síle. Analogické situace vedoucí na stejnou rovnici
