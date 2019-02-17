@@ -210,6 +210,17 @@ součinitelem vodivosti $D$ a hustotou tepelných zdrojů $\sigma$.
 
 # Difuzní rovnice (rozměrová analýza)
 
+\iffalse 
+
+<div class='obtekat'>
+
+![Za jak dlouho dodifunduje latka do nějaké vzdálenosti. Jak daleko se látka dostane za určitý čas? Základní odhady se dají udělat pouze z jednotky difuzního koeficientu. Zdroj: pixabay.com](difuze.jpg)
+
+</div>
+
+\fi
+
+
 Odhadnout některé aspekty chování rovnice
 $$  \frac{\partial u}{\partial t}-D\nabla^2 u=\sigma$$
 je možné i\ bez znalosti řešení této
