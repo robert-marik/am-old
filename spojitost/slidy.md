@@ -5,6 +5,17 @@
 
 # Euklidovský metrický prostor
 
+\iffalse 
+
+<div class='obtekat'>
+
+![Vzdálenost se dá měřit spoustou způsobů. My použijeme ten, který je známý z běžného života. Ne že by to vedlo k nejjednodušším formulacím, ale je to nejnázornější. Zdroj: pixabay.com](distance.jpg)
+
+</div>
+
+\fi
+
+
 **Metrický prostor, metrika**:
   Množina $\mathbb{E}^3$ prvků z $\mathbb{R}^3$ s metrikou $\rho$ definovanou pro
   $A=(a_x,a_y,a_z)\in\mathbb{R}^3$ a $B=(b_x, b_y, b_z)\in\mathbb{R}^3$
@@ -35,6 +46,17 @@ $$
   tj. $\varepsilon$-okolí bodu $A$, s vyloučením bodu $A$.
 
 # Významné vlastnosti množin v Euklidovském prostoru
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Jedna z nejnebezpečnějších situací v matematice nastává, pokud přesně definovanému pojmu dáme název, který lidé znají z prostého života. Například hranice, oblast, spojitost, uzávěr, elementární, okolí, ... Zdroj: pixabay.com](hranice.jpg)
+
+</div>
+
+\fi
+
 
 V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq
 \mathbb{E}^n$ podmnožina v Euklidovském prostoru $\mathbb{E}^n$ ($n=2$
@@ -84,6 +106,18 @@ libovolné konečné dimenze.
 
 
 # Spojitost funkce
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Spojitost mimo jiné zakazuje funkcím skoky. I ty sebenepatrnější. Ač se skoky řádově třeba v nanometrech zdají bezvýznamné, u spojitých funkcí je nepřipustíme. Zdroj: pixabay.com](jump.jpg)
+
+</div>
+
+\fi
+
+
 
 **Spojitost skalární funkce**:
   Nechť $f:\mathbb{R}^n\to \mathbb{R}$ je skalární funkce $n$ proměnných definovaná
