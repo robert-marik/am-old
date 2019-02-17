@@ -181,8 +181,8 @@ práce po libovolné uzavřené křivce nulová, je nulová i\ rotace.
 
 Podobně divergenci je možno chápat jako limitu podílu toku uzavřenou
 křivkou a obsahu množiny ohraničené touto křivkou, když rozměry
-uvažované oblasti jdou k\ nule. Zejména pokud pole neobsahuje žádné
-zdroje ani spotřebiče, pak tok dovnitř křivky je stejný jako tok ven
-(co do uzavřeného prostoru vteče, to i\ vyteče ven), je divergence
-rovna nule.
+uvažované oblasti jdou k\ nule. V ustáleném stavu a při absenci zdrojů
+ani spotřebičů je tok dovnitř křivky stejný jako tok ven (co do
+uzavřeného prostoru vteče, to i\ vyteče ven) a divergence je rovna
+nule.
 

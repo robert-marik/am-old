@@ -1,8 +1,9 @@
 % Lineární diferenciální rovnice prvního a druhého řádu
 % Robert Mařík
-% jaro 2014, jaro 2018
+% 2014-2019
 
 # Lineární operátor
+
 
 **Operátorem** rozmíme zobrazení, které má na vstupu i na výstupu
 funkci. Například pro funkce jedné proměnné mohou být operátory
@@ -12,6 +13,16 @@ F_2[y]=\frac{d^2y}{dx^2}, \quad
 F_3[y](x)=y(x)\ln(x), \quad 
 F_4[y](x)=\ln(y(x)).
 $$
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Rovnice s lineárním operátorem jsou silně předvídatelné. Překvapení se nekonají. Proto je v matematice máme tak rádi. Zdroj: pixabay.com](prekvapeni.jpg)
+
+</div>
+
+\fi
 
 **Lineárním operátorem** rozumíme zobrazení, které zachovává součet
 funkcí a násobek konstantou, tj. platí $$L[y_1+y_2]=L[y_1]+L[y_2]$$ a
@@ -122,7 +133,7 @@ $y_2(x)$ vztah
 
 $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2].$$
 
-Vskutku:
+Vskutku. Platí
 
 $$\begin{aligned}
     L[C_1y_1+C_2y_2](x)&{}=\Bigl(C_1y_1(x)+C_2y_2(x)\Bigr)'+a(x)\Bigl(C_1y_1(x)+C_2y_2(x)\Bigr)\\
@@ -199,7 +210,7 @@ $$y'+a(x)y=0. \tag{HLDE}$$
 
 * Přepsáním do 
 $$y'=-a(x)y$$
-vidíme, že jedno řešení je možno uhodnout:
+vidíme, že jedno řešení je možno uhodnout. Je to řešení
 $$y_{p0}=e^{-\int a(x)\mathrm{d}x}.$$
 * Další řešení dostaneme z linearity. Funkce 
 $$y(x)=Cy_{p0}(x)$$
@@ -340,10 +351,36 @@ Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\ma
 
 **Zkratky:** LDE - lineární diferenciální rovnice, IC - počáteční podmínka, IVP - počáteční úloha 
 
-**Příklad:** Kmity tělesa o\ hmotnosti $m$ pružně připevněného k\ nehybné podložce spojem tuhosti $k$ jsou popsány diferenciální rovnicí
-${\ddot y+\frac km y=0}.$ Zde navíc používáme fyzikální úzus označovat
-derivace podle času pomocí tečky a ne čárky. Symbol $\ddot y$ tedy
-značí druhou derivaci funkce $y$, kde $y$ bereme jako funkci času.
+# Příklad - těleso na pružině
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh. Zdroj: pixabay.com](pruzina.jpg)
+
+</div>
+
+\fi
+
+Kmity tělesa o\ hmotnosti $m$ pružně připevněného k\ nehybné podložce
+spojem tuhosti $k$ jsou popsány diferenciální rovnicí ${\ddot y+\frac
+km y=0}.$ Zde navíc používáme fyzikální úzus označovat derivace podle
+času pomocí tečky a ne čárky. Symbol $\ddot y$ tedy značí druhou
+derivaci funkce $y$, kde $y$ bereme jako funkci času.
+
+Jednoduchým mechanickým modelem je těleso na pružině, kde je deformace
+úměrná působící síle. Analogie s tělesem na pružině však platí
+obecněji. Pokud pro jednoduchost předpokládáme, že těleso s jedním
+stupněm volnosti se nachází ve stabilním stavu s minimem potenciální
+energie a energie závisí na poloze $x$, můžeme v okolí minima $x_0$
+potenciální energii aproximovat Taylorovým rozvojem druhého řádu
+$$E(x)\approx E(x_0)+E'(x_0)x+\frac 12E''(x_0)x^2.$$ Vzhledem k tomu,
+že v $x_0$ je minimum, platí $E'(x_0)=0$. Síla je poté dána vztahem
+$$F(x)=-\frac{\partial}{\partial x}E(x)=-E''(0)x.$$ Síla $F$ je tedy
+úměrná výchylce $x$ a vrací těleso do rovnovážné polohy. Situace tedy
+pefrektně koresponduje s kmitáním na pružině i když potenciální
+energie uvažovaná v tomto odstavci může být jiného charakteru.
 
 # Řešitelnost LDE druhého řádu
 
