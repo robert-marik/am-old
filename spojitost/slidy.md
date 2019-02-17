@@ -111,7 +111,7 @@ libovolné konečné dimenze.
 
 <div class='obtekat'>
 
-![Spojitost mimo jiné zakazuje funkcím skoky. I ty sebenepatrnější. Ač se skoky řádově třeba v nanometrech zdají bezvýznamné, u spojitých funkcí je nepřipustíme. Zdroj: pixabay.com](jump.jpg)
+![Spojitost mimo jiné zakazuje funkcím skoky. I ty sebenepatrnější. Ač se skoky řádově třeba v nanometrech zdají bezvýznamné, u pěkných (spojitých) funkcí nepřipustíme ani toto. Zdroj: pixabay.com](jump.jpg)
 
 </div>
 
