@@ -39,6 +39,18 @@ matematické studium povahy problému nijak podstatné.
 
 # Rovnice kontinuity (bilance množství stavové veličiny)
 
+\iffalse 
+
+<div class='obtekat'>
+
+![Odvození rovnice kontinuity je vlastně rozvaha zisků a ztrát pro danou
+ stavovou veličinu. Zdroj: pixabay.com](ucto.jpg)
+
+</div>
+
+\fi
+
+
 Odvodíme rovnici kontinuity pro dvě proměnné, pro tři proměnné nebo
 jednu proměnnou je postup analogický. Nechť $x$, $y$ jsou prostorové
 proměnné a $t$ čas. Uvažujme skalární stavovou funkci $u(x,y,t)$

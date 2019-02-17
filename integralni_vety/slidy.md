@@ -4,6 +4,18 @@
 
 # Úvod 
 
+\iffalse 
+
+<div class='obtekat'>
+
+![Integrační cesta je nedílnou součástí zadání křivkového integrálu. Přesto na ní někdy nemusí záležet. Potom je možné volit cestu co nejvýhodněji. Zdroj: pixabay.com](cesta.jpg)
+
+</div>
+
+\fi
+
+
+
 V\ následujících větách si ukážeme některé souvislosti mezi
 studovanými pojmy. Tyto souvislosti existují, pokud objekty se kterými
 pracujeme jsou dostatečně pěkné - funkce jsou dostatečně hladké,
