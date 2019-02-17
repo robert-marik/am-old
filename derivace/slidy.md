@@ -154,7 +154,7 @@ $$\frac{\partial E}{\partial m}(400,8)=
 $$
 Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne energetický výdej přibližně o $0.30\,\mathrm{kcal}$.
 
-[Online výpočet](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUXDVybU0MDHTKbC004WJ6KZlpaRplmrjlcpHlANRDHpQ=&lang=sage)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUXDVybU0MDHTKbC004WJ6KZlpaRplmrjlcpHlANRDHpQ=&lang=sage)
 
 (Zpracováno podle Stewart: Biocalculus)
 \fi
@@ -193,13 +193,13 @@ $$L=k m v^2, $$ kde $k= 3.45 \times 10 ^{-6}\,(\mathrm{m}\,\mathrm{hod}^2)/(\mat
   $1100\,\mathrm{kg}$ a rychlostí blízkou
   $100\,\mathrm{km}/\mathrm{hod}$ je
 $$L\approx 37.95+0.0345(m-1100)+0.759(v-100),$$
-kde hmotnost a rychlost se dosazují v kilogramech a metrech a brzdná
+kde hmotnost a rychlost se dosazují v kilogramech a kilometrech za hodinu a brzdná
 dráha vychází v metrech.
 * Z parciální derivace podle $v$ víme, že změna rychlosti o $\Delta v$
   změní brzdnou dráhu přibližně o $\Delta L\approx 2kmv\Delta v$. Nabízí se
   otázka, proč s touto přibližnou informací pracovat, když změnu umíme
   určit i přesně, $\Delta L=k m(v+\Delta v)^2 - k m v^2=2kmv\Delta v+ k m (\Delta v)^2$. *Překvapivě, přibližný
-  vzorec založený na derivacích je vždy jednodušší, než přesný výpočet
+  vzorec založený na derivacích je skoro vždy jednodušší, než přesný výpočet
   změny.* Tento efekt je možné vidět u druhé mocniny, je výraznější u
   vyšších mocnin a stane se fatálním u obecných neceločíslených mocnin
   nebo obecnějších funkcí. Pokud náš výpočet vstupuje do
