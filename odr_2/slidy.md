@@ -5,7 +5,7 @@
 # Lineární operátor
 
 
-**Operátorem** rozmíme zobrazení, které má na vstupu i na výstupu
+**Operátorem** rozumíme zobrazení, které má na vstupu i na výstupu
 funkci. Například pro funkce jedné proměnné mohou být operátory
 derivace, druhá derivace, vynásobení funkce funkcí $\ln x$ anebo vnoření zadané funkce do funkce $\ln x$. Tj. pro $y=y(x)$ můžeme uvažovat operátory
 $$F_1[y]=\frac{dy}{dx}, \quad
@@ -369,18 +369,19 @@ km y=0}.$ Zde navíc používáme fyzikální úzus označovat derivace podle
 času pomocí tečky a ne čárky. Symbol $\ddot y$ tedy značí druhou
 derivaci funkce $y$, kde $y$ bereme jako funkci času.
 
-Jednoduchým mechanickým modelem je těleso na pružině, kde je deformace
-úměrná působící síle. Analogie s tělesem na pružině však platí
-obecněji. Pokud pro jednoduchost předpokládáme, že těleso s jedním
-stupněm volnosti se nachází ve stabilním stavu s minimem potenciální
-energie a energie závisí na poloze $x$, můžeme v okolí minima $x_0$
-potenciální energii aproximovat Taylorovým rozvojem druhého řádu
-$$E(x)\approx E(x_0)+E'(x_0)x+\frac 12E''(x_0)x^2.$$ Vzhledem k tomu,
-že v $x_0$ je minimum, platí $E'(x_0)=0$. Síla je poté dána vztahem
-$$F(x)=-\frac{\partial}{\partial x}E(x)=-E''(0)x.$$ Síla $F$ je tedy
-úměrná výchylce $x$ a vrací těleso do rovnovážné polohy. Situace tedy
-pefrektně koresponduje s kmitáním na pružině i když potenciální
-energie uvažovaná v tomto odstavci může být jiného charakteru.
+Jednoduchým mechanickým modelem je těleso na pružině. Zde je deformace
+úměrná působící síle. Analogické situace vedoucí na stejnou rovnici
+však dostáváme i obecněji. Pokud pro jednoduchost předpokládáme, že
+těleso s jedním stupněm volnosti se nachází ve stabilním stavu s
+minimem potenciální energie a energie závisí na poloze $x$, můžeme v
+okolí minima $x_0$ potenciální energii aproximovat Taylorovým rozvojem
+druhého řádu $$E(x)\approx E(x_0)+E'(x_0)x+\frac 12E''(x_0)x^2.$$
+Vzhledem k tomu, že v $x_0$ je minimum, platí $E'(x_0)=0$. Síla je
+poté dána vztahem $$F(x)=-\frac{\partial}{\partial x}E(x)=-E''(0)x.$$
+Síla $F$ je tedy úměrná výchylce $x$ a vrací těleso do rovnovážné
+polohy. Situace tedy perfektně koresponduje s kmitáním na pružině i
+když potenciální energie uvažovaná v tomto odstavci může být jiného
+charakteru.
 
 # Řešitelnost LDE druhého řádu
 
