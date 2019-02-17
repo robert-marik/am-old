@@ -1,6 +1,6 @@
 % Rovnice matematické fyziky
 % Robert Mařík
-% jaro 2014
+% 2014-2019
 
 V\ této podkapitole se seznámíme se základními diferenciálními rovnicemi
 používanými v\ matematické fyzice. Jedná se o\ rovnice zachycující
@@ -99,10 +99,17 @@ $$\iint_M \frac{\partial}{\partial t} u(x,y,t) \mathrm{d}x\mathrm{d}y  =
 
 # Rovnice kontinuity (lokální tvar)
 
+
+
 Z rovnice kontinuity v\ integrálním tvaru
 $$\iint_M \frac{\partial}{\partial t} u(x,y,t) \mathrm{d}x\mathrm{d}y  = 
   \iint_M \Bigl( -\mathop{\mathrm{div}} \vec\varphi(x,y,t) + \sigma(x,y,t)\Bigr)\mathrm{d}x\mathrm{d}y $$
 plyne (protože rovnost musí platit pro každou množinu $M$) nutně
+\iffalse 
+<div class='obtekat' style="display:inline-block">
+![Rovnice je tak dokonale obecná, že můžeme mít problém s praktickým využitím. Možnosti interpretace jsou však široké. Při studiu proudění vody v nenasycené půdě například někdy půdu považujeme za spotřebič vody. Zdroj: pixabay.com](sucho.jpg)
+</div>
+\fi
 $$\frac{\partial u}{\partial t}  =- 
   \mathop{\mathrm{div}} \vec \varphi + \sigma,$$
 neboli
@@ -122,21 +129,47 @@ s\ přítomností zdrojů nebo spotřebičů.
 
 # Rovnice kontinuity (speciální případy)
 
+\iffalse 
+
+<div class='obtekat'>
+
+![V mnoha případech některý člen rovnice kontinuity chybí. Někdy nejsou přítomny zdroje a spotřebiče, někdy uvažujeme stacionární stav. Zdroj: pixabay.com](prazdny.jpg)
+
+</div>
+
+\fi
+
+
 Speciálními případy rovnice
 kontinuity jsou rovnice kontinuity bez zdrojů
 $$\frac{\partial u}{\partial t}  + 
   \mathop{\mathrm{div}} \vec \varphi=0,$$
-stacionární rovnice kontinuity pro popis stacionárních jevů
-$$\mathop{\mathrm{div}} \vec \varphi  = \sigma$$
-a stacionární bezzdrojová rovnice kontinuity
+nebo stacionární rovnice kontinuity pro popis stacionárních jevů
+$$\mathop{\mathrm{div}} \vec \varphi  = \sigma.$$
+Stacionární bezzdrojová rovnice kontinuity
 $$\mathop{\mathrm{div}} \vec \varphi=0,$$
-kterou známe ze střední školy v\ integrálním tvaru pro ustálené proudění
-nestlačitelné tekutiny trubicí s\ proměnným průřezem:
-$$Sv=\text{konst}$$
-a která říká, že objem nestlačitelné tekutiny, který do trubice na jedné
-straně vteče je stejný jako objem, který z\ ní vyteče.
+má v\ integrálním tvaru pro ustálené proudění
+nestlačitelné tekutiny trubicí s\ proměnným průřezem tvar
+$$Sv=\text{konst},$$
+který známe ze střední školy. Ten vyjadřuje, že objem nestlačitelné
+tekutiny, který do trubice na jedné straně vteče je stejný jako objem,
+který z\ ní vyteče.
 
 # Difuzní rovnice (vedení tepla)
+
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Difuze pracuje při na odvodu vlhkosti z oblečení vyrobného z
+ Goretexové tkaniny. Zdroj: pixabay.com](diffusion.jpg)
+
+</div>
+
+\fi
+
+
 
 Difuzní rovnice je kombinací rovnice kontinuity a Fickova
 zákona, který říká, že v\ označení z\ předchozí kapitoly je směřuje vektor
