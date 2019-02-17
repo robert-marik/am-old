@@ -123,7 +123,45 @@ studovat, jak se mění vzhledem k jednotlivým proměnným. To je přesně
 * Analogická tvrzení jako pro veličinu $x$ platí pro veličinu $y$.
 * Ve fyzice často pracujeme s funkcemi, které mají spojité parciální derivace. Takové funkce se nazývají *hladké funkce*.
 
-# Aplikace parciálních derivací - příklad
+
+\iffalse 
+
+
+# Interpretace parciálních derivací - pohyb ještěrky
+
+
+
+<div class='obtekat'>
+
+![Energie potřebná pro překonání pevné vzdálenosti závisí na hmotnosti jedince a na rychlosti, kterou vyvíjí. Zdroj: pixabay.com](lizard.jpg)
+
+</div>
+
+Energie $E$ (v kcal), kterou spotřebuje ještěrka o hmotnosti $m$ (v
+gramech) na překonání vzdálenosti jednoho kilometru rychlostí $v$ (v
+kilometrech za hodinu) se dá odhadnout vzorcem
+$$E(m,v)=2.65 m^{0.66} + \frac{3.5 m^{0.75}}{v}.$$
+Přímým výpočtem je možné určit
+$$\frac{\partial E}{\partial v}=-\frac{3.5 m^{0.75}}{v^2}.$$ Pro $m=400\,\mathrm{g}$ a $v=8\,\mathrm{km}\,\mathrm{h}^{-1}$ dostáváme
+$$\frac{\partial E}{\partial v}(400,8)=-4.9\,\mathrm{kcal}\,\mathrm{km}^{-1}\mathrm{h}.$$ Zvýšení rychlosti o kilometr za hodinu vede ke snížení energetického výdeje ještěrky o $4.9\,\mathrm{kcal}$. Podobně, platí
+$$\frac{\partial E}{\partial m}=
+{2.65}\times 0.66 {m^{-0.34}} + \frac{3.5\times 0.75 m^{-0.25}}{v}=
+\frac{1.749}{m^{0.34}} + \frac{2.625}{m^{0.25} v}
+$$
+a pro výše uvažované hodnoty dostáváme
+$$\frac{\partial E}{\partial m}(400,8)=
+0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.
+$$
+Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne energetický výdej přibližně o $0.30\,\mathrm{kcal}$.
+
+[Online výpočet](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUXDVybU0MDHTKbC004WJ6KZlpaRplmrjlcpHlANRDHpQ=&lang=sage)
+
+(Zpracováno podle Stewart: Biocalculus)
+\fi
+
+
+
+# Aplikace parciálních derivací - brzdná dráha
 
 
 \iffalse 
@@ -174,6 +212,7 @@ dráha vychází v metrech.
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)
 
 \fi
+
 
 # Zákon šíření chyb  (chyba nepřímo měřené veličiny)
 
