@@ -107,7 +107,7 @@ $$\iint_M \frac{\partial}{\partial t} u(x,y,t) \mathrm{d}x\mathrm{d}y  =
 plyne (protože rovnost musí platit pro každou množinu $M$) nutně
 \iffalse 
 <div class='obtekat' style="display:inline-block">
-![Rovnice je tak dokonale obecná, že můžeme mít problém s praktickým využitím. Možnosti interpretace jsou však široké. Při studiu proudění vody v nenasycené půdě například někdy půdu považujeme za spotřebič vody. Zdroj: pixabay.com](sucho.jpg)
+![Rovnice je tak dokonale obecná, že můžeme mít problém s praktickým využitím. Možnosti interpretace jsou však široké. Při pohybu podzemní vody můžeme dokonce rozlišit mezi nasycenou a nenasycenou půdou. Zdroj: pixabay.com](sucho.jpg)
 </div>
 \fi
 $$\frac{\partial u}{\partial t}  =- 

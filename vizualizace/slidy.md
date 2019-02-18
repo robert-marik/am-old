@@ -1,6 +1,6 @@
 % Vizualizace a základní typy funkcí
 % Robert Mařík
-% jaro 2014, aktualizace pro jaro 2018
+% 2014-2018
 
 > Při vizualizaci funkcí volíme vhodný způsob zejména v závislosti na
 > počtu vstupních a výstupních dat, tj. na počtu proměnných a na tom,

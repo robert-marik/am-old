@@ -1,6 +1,6 @@
 % Parciální derivace 
 % Robert Mařík
-% jaro 2019
+% 2014-2019
 
 # Derivace
 

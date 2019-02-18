@@ -1,6 +1,6 @@
 % LaTeXové snippety
 % Robert Mařík
-% podzim 2018
+% 2018-2019
 
 # Snippety
 

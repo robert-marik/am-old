@@ -1,6 +1,6 @@
 % Diferenciální rovnice prvního řádu
 % Robert Mařík
-% jaro 2014, jaro 2015
+% 2014-2019
 
 
 # Obyčejná diferenciální rovnice prvního řádu

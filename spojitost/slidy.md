@@ -1,6 +1,6 @@
 % Spojitost funkcí více proměnných
 % Robert Mařík
-% jaro 2018
+% 2018-2019
 
 
 # Euklidovský metrický prostor

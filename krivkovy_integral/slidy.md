@@ -1,6 +1,6 @@
 % Křivkový integrál
 % Robert Mařík
-% jaro 2014, 2018
+% 2014-2019
 
 # Křivkový integrál
 
