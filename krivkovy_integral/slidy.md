@@ -265,6 +265,13 @@ $$
 
 # Vlastnosti křivkového integrálu druhého druhu
 
+<div class='obtekat'>
+
+![Narozdíl od prvního druhu, u křivkového integrálu druhého druhu záleží na orientaci křivky.  Zdroj: pixabay.com](smer.jpg)
+
+</div>
+
+
 * Křivkový integrál druhého druhu nezávisí na konkrétní parametrizaci
   křivky $C$. Pro různé parametrizace stejné křivky má integrál
   stejnou hodnotu.
@@ -338,7 +345,7 @@ i+Q(x,y)\vec j,$
 <div class='obtekat'>
 
 ![Nejvýkonnější klimatizační jednotka. Funguje na principu odpařování
- vody. Proudění vody je popsáno vodním potenciálem.](strom.jpg)
+ vody. Proudění vody je popsáno vodním potenciálem.  Zdroj: pixabay.com](strom.jpg)
 
 </div>
 
@@ -372,7 +379,7 @@ ekvivalentní výškový rozdíl.
 
 <div class='obtekat'>
 
-![Voda v půdě. Nesmí jí být moc, ale když jí je málo, je to teprve problém.](puda.jpg)
+![Voda v půdě. Nesmí jí být moc, ale když jí je málo, je to teprve problém.  Zdroj: pixabay.com](puda.jpg)
 
 </div>
 
