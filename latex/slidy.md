@@ -42,6 +42,26 @@ background-color: #E4E5E7;
   rychlost, jedna z hlavních výhod zápisu v LaTeXu, ale pro
   začátečníka se to může hodit.
 
+# Zásady pro LaTeX
+
+* LaTeX je vlastně programovací jazyk pro texty. Ale běžný text v něm
+  vypadá běžně. Něco jiného než běžný text se dělá pomocí příkazů.
+* Příkazy v LaTeXu začínají lomítkem. Například `\frac` je příkaz pro zlomek.
+* Kromě příkazů máme aktivní znaky. Nejčastější jsou následující.
+    * Dolar. Mezi dolary píšeme matematický text. Bude jiným fontem, se speciálním mezerováním a spousta dalšího.
+    * Dvojdolar. Jako dolar, ale matematický text bude navíc na samostatném řádku, centrovaný na osu. Pořád ale bude pokračovat jeden ostavec.
+    * Složené závorky. Závorky ohraničují působení příkazu. Dají se vynechat, pokud je argumentem jeden znak. Například `$\sqrt 2$` a `$\sqrt {121}$` vede na $\sqrt 2$ a $\sqrt{121}$. Špatně by bylo `$\sqrt 121$`, které vede na $\sqrt 121$.
+    Podobně jednu polovinu můžu zapsat jako `$\frac 12$`, ale jednu destinu už jako `$\frac 1{10}$`
+* Mezera se v matematickém prostředí ignoruje, protože zde platí speciální pravidla. Pokud potřebujeme vložit mezeru, děláme to speciálním příkazem. Krátká mezera je `\,`, normální mezera je `\␣` (zpětné lomítko a mezera), dlouhá mezera je `\quad`.
+* LaTeX je typografický systém. My využijeme jenom jeho schopnost sázet matematiku. Nenechte se proto odradit tlustými návody. Nic takového nepotřebujete.
+
+# Zásady pro Markdown
+
+* LaTeX je nejjednodušší způsob, jak psát matematiku. Nejjednodušší způsob jak psát formátovaný text je jazyk Markdown. I v něm běžný text vypadá běžně a něco jiného než běžný text se dělá pomocí značek.
+* Nový odstavec v Markdownu začíná prázným řádkem.
+* LaTeX  a markdown se Mají rádi. Pro jednoduchou práci v rozsahu pár odstavců použijeme editor na [https://stackedit.io/](https://stackedit.io/). Pro vážnější práci v rozsahu pár stran použijeme náš oblíbený editor a pro konverzi program [pandoc](https://pandoc.org/). Pro knihu a práci v rozsahu mnoha stran je lepší Markdown nepoužít a naučit se plnohodnotný LaTeX (tlustý návod a hodiny pokusů a omylů). 
+
+
 # Základní výrazy
 
 
