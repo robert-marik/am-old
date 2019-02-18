@@ -173,7 +173,7 @@ který z\ ní vyteče.
 
 
 Difuzní rovnice je kombinací rovnice kontinuity a Fickova
-zákona, který říká, že v\ označení z\ předchozí kapitoly je směřuje vektor
+zákona, který říká, že v\ označení z\ předchozí kapitoly směřuje vektor
 $\vec \varphi$ (difuzní tok, tj. množství veličiny $u$ které projde
 elementární oblastí za jednotku času) z\ oblastí s\ vyšší koncentrací do
 oblastí s\ nižší koncentrací a velikost je úměrná gradientu veličiny $u$.
