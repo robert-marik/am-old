@@ -18,7 +18,7 @@ $$
 
 <div class='obtekat'>
 
-![Rovnice s lineárním operátorem jsou silně předvídatelné. Překvapení se nekonají. Proto je v matematice máme tak rádi. Zdroj: pixabay.com](prekvapeni.jpg)
+![Rovnice s lineárním operátorem jsou silně předvídatelné. Překvapení se nekonají. Proto je (lineární operátory) v matematice máme tak rádi. Zdroj: pixabay.com](prekvapeni.jpg)
 
 </div>
 
@@ -357,7 +357,7 @@ Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\ma
 
 <div class='obtekat'>
 
-![Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh. Zdroj: pixabay.com](pruzina.jpg)
+![Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh, které se týkají oscilací. Chemické oscilace, považované za základ tzv. buněčných hodin i jiných vnitřních cyklů biologických organismů, jsou ale založeny na jiném popisu. (Viz Brusselator.) Zdroj: pixabay.com](pruzina.jpg)
 
 </div>
 
@@ -502,6 +502,17 @@ například $y=\sin x$, $y=\cos x$. Z linearity plyne
 
 
 # Kdy pomocí linearity získáme obecné řešení?
+
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Dvě funkce mohou stačit na založení celého rodu všech řešení. Jako kdysi Adam a Eva? Zdroj: pixabay.com](adam_eva.jpg)
+
+</div>
+
+\fi
 
 Budeme studovat homogenní LDE druhého řádu, tj.
 rovnici 
