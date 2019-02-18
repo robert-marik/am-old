@@ -1,6 +1,6 @@
 % Lineární diferenciální rovnice prvního a druhého řádu
 % Robert Mařík
-% 2014-2019
+% 2014–2019
 
 # Lineární operátor
 

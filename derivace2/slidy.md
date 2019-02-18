@@ -1,6 +1,6 @@
 % Vektorová analýza
 % Robert Mařík
-% 2014-2019
+% 2014–2019
 
 # Vektorová analýza
 

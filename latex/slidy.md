@@ -1,6 +1,6 @@
 % LaTeXové snippety
 % Robert Mařík
-% 2018-2019
+% 2018–2019
 
 # Snippety
 

@@ -1,6 +1,6 @@
 % Rovnice matematické fyziky
 % Robert Mařík
-% 2014-2019
+% 2014–2019
 
 V\ této podkapitole se seznámíme se základními diferenciálními rovnicemi
 používanými v\ matematické fyzice. Jedná se o\ rovnice zachycující
