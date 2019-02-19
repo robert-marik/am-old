@@ -1,6 +1,6 @@
 % Parciální derivace 
 % Robert Mařík
-% jaro 2019
+% 2014–2019
 
 # Derivace
 
@@ -383,7 +383,7 @@ není spojena přímo s látkou) nebo například difuzi.
 
 <div class='obtekat'>
 
-![U teplokrevných živočichů vystavených chladu vzniká velký gradient teploty. Pro snížení tohoto gradientu a lepší ochranu před mrazem je výhodné mít silnou vrstvu chlupů. Ptáci se v zimě zase umí proměnit v načepýřené koule. Zdroj: pixabay.com](ovce.jpg)
+![U teplokrevných živočichů vystavených chladu vzniká velký gradient teploty. Pro snížení tohoto gradientu a lepší ochranu před mrazem je výhodné mít silnou vrstvu chlupů. S rozdílem teplot teplokrevný živočich nic dělat nemůže, proto alespoň zvýší vzdálenost, podél které teplota klesá. Tlustá tuková tkáň je výhoda. Například ptáci se v zimě umí proměnit v načepýřené koule. Zdroj: pixabay.com](ovce.jpg)
 
 </div>
 
@@ -419,19 +419,23 @@ factor](https://en.wikipedia.org/wiki/Wind_chill)) je $$W(T,v) =
 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},$$ kde $T$ je teplota
 (ve stupních Celsia) a $v$ je rychlost větru (v km/hod). Teplota byla
 změřena $-11.0\,{}^\circ\!\text{C}$ s chybou $0.2\,{}^\circ\!\text{C}$ a rychlost $26
-\,\text{km/hod}$ s chybou $5\,\text{km/hod}$. S využítím zákona šíření
-chyb určíme, jaký vliv mají nepřesnosti v měření na nepřesnost
-vypočítané veličiny.
+\,\text{km/hod}$ s chybou $5\,\text{km/hod}$. 
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Lineární aproximace je minimalistická metoda, umožňující podchytit funkční závislosti. Často funguje velice dobře, obecně je však pouze lokální. Zdroj: pixabay.com](minimalism.jpg)
+
+</div>
+
+\fi
 
 Na předchozích slidech jsme vypočítali 
 $$\begin{aligned}W(-11,26)&=-20.212\,{}^\circ\!\text{C}\\\frac{\partial W}{\partial T}(-11,26)&=1.289,\\
 \frac{\partial W}{\partial v}(-11,26)&=-0.163 \,{}^\circ\!\text{C}\, \text{hod}/\mathrm{km}.
 \end{aligned}
 $$
-Za dané teploty a rychlosti větru způsobí nárůst teploty o jeden
-stupeň nárůst pocitové teploty přibližně o $1.3$ stupně. Podobně,
-zesílení větru o jeden kilometr za hodinu způsobí snížení pocitové
-teploty přibližně o $0.16$ stupně.
 
 Přibližný vzorec pro pocitovou teplotu platný pro teploty blízké $-11.0\,{}^\circ\!\text{C}$ a rychlosti větru blízké $26
 \,\text{km/hod}$ je

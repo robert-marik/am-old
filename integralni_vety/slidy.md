@@ -1,6 +1,6 @@
 % Základní integrální věty z vektorové analýzy
 % Robert Mařík
-% jaro 2014
+% 2014–2019
 
 # Úvod 
 

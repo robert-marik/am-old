@@ -1,6 +1,6 @@
 % Diferenciální počet funkcí jedné proměnné z ptačí perspektivy
 % Robert Mařík
-% 2017-2019
+% 2017–2019
 
 
 # Derivace

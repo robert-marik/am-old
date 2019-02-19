@@ -1,6 +1,6 @@
 % Rovnice matematické fyziky
 % Robert Mařík
-% 2014-2019
+% 2014–2019
 
 V\ této podkapitole se seznámíme se základními diferenciálními rovnicemi
 používanými v\ matematické fyzice. Jedná se o\ rovnice zachycující
@@ -107,7 +107,7 @@ $$\iint_M \frac{\partial}{\partial t} u(x,y,t) \mathrm{d}x\mathrm{d}y  =
 plyne (protože rovnost musí platit pro každou množinu $M$) nutně
 \iffalse 
 <div class='obtekat' style="display:inline-block">
-![Rovnice je tak dokonale obecná, že můžeme mít problém s praktickým využitím. Možnosti interpretace jsou však široké. Při studiu proudění vody v nenasycené půdě například někdy půdu považujeme za spotřebič vody. Zdroj: pixabay.com](sucho.jpg)
+![Rovnice je tak dokonale obecná, že můžeme mít problém s\ praktickým využitím. Možnosti interpretace jsou však široké. Při pohybu podzemní vody můžeme dokonce rozlišit mezi nasycenou a nenasycenou půdou. Spotřebičem může být drenáž, částečně propustné podloží nebo kořeny rostlin (M.\ K.\ Shukla, Soil physics). Zdroj: pixabay.com](sucho.jpg)
 </div>
 \fi
 $$\frac{\partial u}{\partial t}  =- 
@@ -184,7 +184,7 @@ kde $D$ je tzv. difuzní koeficient.
 S využitím tohoto vztahu má rovnice tvar 
 $$ \frac{\partial u}{\partial t}-  \mathop{\mathrm{div}} (D \nabla u)=\sigma.$$
 
-Při studiu pohybu vody ve dřevě neuvažujeme zdroje ($\sigma=0$) a naopak uvažujeme prostředí, které má v kažém směru jiné vlastnosti a jiný difuzní koeficient. Výsledná difuzní rovnice má poté tvar
+Při studiu pohybu vody ve dřevě neuvažujeme zdroje ($\sigma=0$) a naopak uvažujeme prostředí, které má v\ každém směru jiné vlastnosti a jiný difuzní koeficient. Výsledná difuzní rovnice má poté tvar
 $$ \frac{\partial u}{\partial t}
 -  \frac{\partial }{\partial x} \left(D_x \frac{\partial u}{\partial x}\right)
 -  \frac{\partial }{\partial y} \left(D_y \frac{\partial u}{\partial y}\right)
