@@ -4,22 +4,19 @@
 
 Sčítání, násobení
 
-# Rozložení teploty na tepelně vodivé desce
+# Vektory a operace s nimi
 
+# Vektory ve 2D a 3D -- geometrie
 
-\iffalse 
+# Sčítání vektorů a integrace cesty u migrujících živočichů
 
-<div class='obtekat'>
+# Lineární závislost a nezávislost vektorů
 
-![Rozložení teploty na tepelně vodivé desce je možné přibližně zkoumat metodami lineární algebry. Zdroj: pixabay.com](teplomer.jpg)
+# Lineární závislost a nezávislost vektorů (stechiomerické matice)
 
-</div>
+# Matice a jejich lineární kombinace
 
-\fi
-
-
-
-
+# Maticový součin
 
 # Migrace mezi městem a venkovem
 
@@ -102,4 +99,17 @@ $$
 Další informace:
 
 * [Z. Pospíšil, Maticové populační modely](http://portal.matematickabiologie.cz/index.php?pg=analyza-a-modelovani-dynamickych-biologickych-dat--maticove-populacni-modely--prolog--leslieho-model-rustu-populace#pro14)
+
+# Rozložení teploty na tepelně vodivé desce
+
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Rozložení teploty na tepelně vodivé desce je možné přibližně zkoumat metodami lineární algebry. Zdroj: pixabay.com](teplomer.jpg)
+
+</div>
+
+\fi
 
