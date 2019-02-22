@@ -265,12 +265,16 @@ $$
 
 # Vlastnosti křivkového integrálu druhého druhu
 
+
+\iffalse
+
 <div class='obtekat'>
 
 ![Narozdíl od prvního druhu, u křivkového integrálu druhého druhu záleží na orientaci křivky.  Zdroj: pixabay.com](smer.jpg)
 
 </div>
 
+\fi
 
 * Křivkový integrál druhého druhu nezávisí na konkrétní parametrizaci
   křivky $C$. Pro různé parametrizace stejné křivky má integrál
