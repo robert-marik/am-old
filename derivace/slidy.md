@@ -295,6 +295,70 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 
 \iffalse
 
+# Rovnice vedení tepla  v 1D
+
+Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
+proměnných, polohy a času.
+
+**Poznámka.** Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
+model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice "dodat zvenku" a jsou následující.
+
+* Rozdíl teplot má za následek pohyb tepla. Velikost toku tepla je úměrná
+teplotnímu rozdílu.
+* Tok tepla je aditivní veličina, tj. celkový tok průřezem je součinem
+toku vztaženého na jednotku průřezu a obsahu průřezu.
+* Teplota se zvyšuje dodáním tepla. Pro zvýšení teploty tělesa o
+hmotnosti $m$ o hodnotu $\Delta T$ je nutné dodat $$Q=mc\Delta T,\tag{**}$$ kde
+$c$ je měrná tepelná kapacita.
+
+V dalším už nastupuje matematický popis a ve vhodných chvílích vždy
+použijeme výše uvedené fyzikální zákony. Mluvíme o teple, ale jako
+mechanický model si můžeme představit proudění tekutiny (pro
+jednoduchou představu) nebo proudění vlhkosti (pro odvození rovnice
+difuze namísto rovnice vedení tepla).
+
+* *Potřebujeme vědět, jak moc se mění teplota podél tyče.* Změny v prostorovém rozložení teploty zachycuje derivace
+$\frac{\partial T}{\partial x}$ v jednotkách (například) stupeň Celsia
+na centimetr.
+* *Potřebujeme změnu teploty podél tyče převést na veličinu popisující
+  proudění tepla.* Rychlost toku tepla průřezem o obsahu $S$ tyče je
+  $q=-kS\frac{\partial T}{\partial x}$.
+    * Znaménko mínus vyjadřuje, že teplo teče z míst s vyšší teplotou
+    do míst s menší teplotou a že tok uvažujeme kladný, pokud teče ve
+    směru osy $x$. Přesněji, pokud teplota roste směrem doprava, parciální
+    derivace je kladná, ale teplo teče doleva, tedy tok musí být záporný.
+    * Veličina $k$ je konstanta úměrnosti
+    umožňující překalibrování změny prostorového rozložení teploty na
+    rychlost toku tepla.
+    * Průřez $S$ ve vzorci figuruje z fyzikálního zákona. Vyjadřuje
+    zřejmý fakt, že pokud máme při jinak stejných podmínkách tyč násobně
+    většího průřezu, teče tyčí více tepla.
+* *Potřebujeme zjistit, kolik tepla, které přiteče do nějakého bodu, v
+tomto bodě "zůstane" a kolik tepla odteče dále.* Tedy potřebuji vědět, jak se mění tok tepla podél tyče. Rychlost s jakou
+roste rychlost toku podél tyče je $\frac{\partial q}{\partial x}$. My pro kladný ohřev
+potřebujeme pokles toku tepla, tedy násobíme záporným znaménkem a dostáváme
+$-\frac{\partial q}{\partial x}$.
+* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty. Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jak tepelná kapacita a hmotnost v daném místě. Tedy přesněji hustota hmotnosti.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
+bodě $x$. Toto teplo se "použije" na zvýšení teploty. Vztažením
+rovnice (**) na jednotku délky  a času dostáváme
+$$\frac{Q}{\Delta x\Delta t}=\frac {m}{\Delta x} c\frac{\Delta T}{\Delta t}$$ a v bodě $x$ ("nekonečně malá oblast" a "nekonečně krátký časový interval" ) proto platí
+$$-\frac {\partial q}{\partial x}=S\rho c\frac{\partial T}{\partial t}.$$ Zde jsme navíc využili hustotu (přesněji objemovou hustotu hmotnosti) $\rho = \frac mV =\frac{m}{S\Delta x}$.
+* Po dosazení za $q$ dostáváme
+$$-\frac{\partial}{\partial x}\left(-kS\frac{\partial T}{\partial x}\right)=S\rho c\frac{\partial T}{\partial t}.$$
+* Derivace konstantního násobku je konstantní násobek
+derivace. Veličina $k$ by v nehomogenním prostředí konstantní být
+nemusela a proto ji z opatrnosti necháme na svém místě, znaménko mínus a obsah průřezu $S$
+však konstantní jsou. Obsah $S$ je navíc na obou stranách rovnice a zkrátí se. Toto vede na finální tvar
+$$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t}.$$
+
+**Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
+bilance toku tepla. Rozdíl o kolik se v daném místě snižuje tok tepla
+udává, kolik tepla se v daném místě spotřebovalo. Tato spotřeba tepla
+se projeví zvýšením teploty v daném bodě.
+
+
+
+
 # Motivace pro zavedení diferenciálních operátorů
 
 \iffalse 
