@@ -105,6 +105,26 @@ $$ab > 1+\frac{3}{2} \pi.$$
 > se setkáme na konci semestru u Fourierova rozvoje funkcí.
 
 
+# Týden 25.2. až 3.3.
+
+![Narozeniny uhlík 14, hojně používaný v matematických modelech.](dort.jpg)
+
+Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o radioaktivní prvek s mnoha skvělými vlastnostmi. Jednou z nich je vhodná rychlost rozpadu, která jeji činí vhodným pro datování  archeologických nálezů pozůstatků živých organismů
+
+* Rychlost, s jakou se mění množství (a tedy i koncentrace $y$ v daném
+  vzorku) nerozpadnutého radioaktivního materiálu je popsána rovnicí
+  $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
+  kde $\lambda$ je konstanta úměrnosti. Tato rovnice je přirozeným
+  důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
+  stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
+  pravděpodobnost se s časem nemění.
+* Vhodný radioaktivní prvek vybereme podle toho, jak starý vzorek
+  chceme datovat. Nejčastěji měříme množství radioaktivního uhlíku
+  $^{14}C$ vztažené k množství stabilního $^{12}C$. 
+
+
+
+
 <!-- 
 # Týden 26.2. až 4.3.  (1/2)
 
