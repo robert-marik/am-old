@@ -125,6 +125,25 @@ Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o radioakti
 
 
 
+# Týden 4.3. až 11.3.  
+<div class='obtekat'>
+
+![Wiliam Oughtred, vynálezce logaritmického pravítka a značek násobení a pro funkce sinus a kosinus. Zdroj: Wikipedie.](Oughtred.jpg)
+
+</div>
+
+Anglický matematik Wiliam Oughtred (5. březen 1574 – 30. červen 1660),
+jehož narozeniny si dnes připomínáme, spojil ideu sčítání délek s
+vlastnostmi logaritmů a sestrojil díky tomu logaritmické pravítko. To
+je vlastně analogová kalkulačka pro násobení. Využívá logaritmů, ale
+uživatel pravítka s logaritmy vůbec pracovat nemusí. Díky
+sofistikovanému nástroji (logaritmus) si usnadníme život i při mnohem
+méně náročné operaci (násobení).
+
+Wiliam Oughtred také zavedl do matematiky symbol $\times$ pro násobení
+a značky $\sin$ a $\cos$ pro funkce sinus a cosinus.
+
+
 <!-- 
 # Týden 26.2. až 4.3.  (1/2)
 
