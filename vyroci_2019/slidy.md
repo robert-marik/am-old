@@ -125,12 +125,10 @@ Dne 27.2.1940 (zítra 79 let) byl objeven uhlík $^{14}C$. Jedná se o radioakti
 
 
 
-# Týden 4.3. až 11.3.  
-<div class='obtekat'>
+# Týden 4.3. až 10.3.  
 
 ![Wiliam Oughtred, vynálezce logaritmického pravítka a značek násobení a pro funkce sinus a kosinus. Zdroj: Wikipedie.](Oughtred.jpg)
 
-</div>
 
 Anglický matematik Wiliam Oughtred (5. březen 1574 – 30. červen 1660),
 jehož narozeniny si dnes připomínáme, spojil ideu sčítání délek s
@@ -142,6 +140,49 @@ méně náročné operaci (násobení).
 
 Wiliam Oughtred také zavedl do matematiky symbol $\times$ pro násobení
 a značky $\sin$ a $\cos$ pro funkce sinus a cosinus.
+
+# Týden 11.3. až 18.3. (1/2)
+
+![Zdroj: Wikipedie.](Berkeley.jpg)
+
+
+**George Berkeley** (12. březen 1685 u Thomastownu (Kilkenny) – 14. leden 1753, Oxford) byl irský filosof a teolog, od roku 1734 anglikánský biskup z Cloyne. P
+
+Wikipedia: In 1707, Berkeley published two treatises on
+mathematics. In 1734, he published The Analyst, subtitled A DISCOURSE
+Addressed to an Infidel Mathematician, a critique of calculus. ...
+The Analyst represented a direct attack on the foundations and
+principles of calculus and, in particular, the notion of fluxion or
+infinitesimal change, which Newton and Leibniz used to develop the
+calculus. In his critique, Berkeley coined the phrase "ghosts of
+departed quantities", familiar to students of calculus.
+
+</div>
+
+# Týden 11.3. až 18.3.  (2/2)
+
+![](Verrier.jpg)
+
+**Urbain Jean Joseph Le Verrier** (11. března, 1811 – 23. září, 1877)
+  byl francouzský matematik, který se zabýval nebeskou mechanikou.
+
+Celosvětové slávy se dočkal po propočítání přesných souřadnic místa,
+kde by se měla nacházet osmá planeta sluneční soustavy – Neptun.
+
+Byl to obrovský úspěch vědy. Podařilo se předpovědět planetu
+teoreticky a poté byla tato planeta opravdu nalezena.
+
+*Wikipedie:* Největším Le Verrierovým úspěchem byla matematická předpověď existence
+a výpočet pozice v té době neznámé planety Neptun, jež provedl na
+základě astronomických pozorování a výpočtů Alexise Bouvarda. Do této
+práce se pustil z podnětu tehdejšího ředitele pařížské hvězdárny
+Françoise Araga. Jako podklad mu posloužila pouze
+matematická a astronomická pozorování oběžné dráhy tehdy poslední
+známé planety naší sluneční soustavy Uranu. Na dlouhé měsíce se Le
+Verrier ponořil do složitých výpočtů, jež měly vysvětlit malé, avšak
+neustále se opakující nesrovnalosti mezi Newtonovým gravitačním
+zákonem a Bouvardovým pozorováním oběžné dráhy Uranu.
+
 
 
 <!-- 
@@ -183,30 +224,6 @@ Dedekindovi: Vidím to před sebou, ale nemohu tomu uvěřit.
 * sestrojil první kalkulátor který dokázal všechny čtyři základní aritmetické operace provádět plně automaticky, bez zásahu uživatele (Mercedes Euklid)
 * sestrojil kalkulátor velice kompaktního provedení, který později sloužil jako předobraz prvního (a jediného) kapesního mechanického kalkulátoru (Curta vynálezce Curta Herzstarka).
 
-
-# Týden 5.3. až 11.3.  (1/3)
-
-![](Verrier.jpg)
-
-**Urbain Jean Joseph Le Verrier** (11. března, 1811 – 23. září, 1877)
-  byl francouzský matematik, který se zabýval nebeskou mechanikou.
-
-Celosvětové slávy se dočkal po propočítání přesných souřadnic místa,
-kde by se měla nacházet osmá planeta sluneční soustavy – Neptun.
-
-Byl to obrovský úspěch vědy. Podařilo se předpovědět planetu
-teoreticky a poté byla tato planeta opravdu nalezena.
-
-*Wikipedie:* Největším Le Verrierovým úspěchem byla matematická předpověď existence
-a výpočet pozice v té době neznámé planety Neptun, jež provedl na
-základě astronomických pozorování a výpočtů Alexise Bouvarda. Do této
-práce se pustil z podnětu tehdejšího ředitele pařížské hvězdárny
-Françoise Araga. Jako podklad mu posloužila pouze
-matematická a astronomická pozorování oběžné dráhy tehdy poslední
-známé planety naší sluneční soustavy Uranu. Na dlouhé měsíce se Le
-Verrier ponořil do složitých výpočtů, jež měly vysvětlit malé, avšak
-neustále se opakující nesrovnalosti mezi Newtonovým gravitačním
-zákonem a Bouvardovým pozorováním oběžné dráhy Uranu.
 
 
 # Týden 5.3. až 11.3.  (2/3)
