@@ -323,7 +323,7 @@ na centimetr.
 * *Potřebujeme změnu teploty podél tyče převést na veličinu popisující
   proudění tepla.* Rychlost toku tepla průřezem o obsahu $S$ tyče je
   $q=-kS\frac{\partial T}{\partial x}$.
-    * Znaménko mínus vyjadřuje, že teplo teče z míst s vyšší teplotou
+    * Znaménko mínus vyjadřuje dává do souladu skutečnosti, že teplo teče z míst s vyšší teplotou
     do míst s menší teplotou a že tok uvažujeme kladný, pokud teče ve
     směru osy $x$. Přesněji, pokud teplota roste směrem doprava, parciální
     derivace je kladná, ale teplo teče doleva, tedy tok musí být záporný.

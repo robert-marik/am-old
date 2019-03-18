@@ -141,7 +141,7 @@ méně náročné operaci (násobení).
 Wiliam Oughtred také zavedl do matematiky symbol $\times$ pro násobení
 a značky $\sin$ a $\cos$ pro funkce sinus a cosinus.
 
-# Týden 11.3. až 18.3. (1/2)
+# Týden 11.3. až 17.3. (1/2)
 
 ![Zdroj: Wikipedie.](Berkeley.jpg)
 
@@ -159,7 +159,7 @@ departed quantities", familiar to students of calculus.
 
 </div>
 
-# Týden 11.3. až 18.3.  (2/2)
+# Týden 11.3. až 17.3.  (2/2)
 
 ![](Verrier.jpg)
 
@@ -182,6 +182,49 @@ známé planety naší sluneční soustavy Uranu. Na dlouhé měsíce se Le
 Verrier ponořil do složitých výpočtů, jež měly vysvětlit malé, avšak
 neustále se opakující nesrovnalosti mezi Newtonovým gravitačním
 zákonem a Bouvardovým pozorováním oběžné dráhy Uranu.
+
+
+
+# Týden 18.3. až 24.3.
+
+
+![](Laplace.jpg)
+![](bolid.jpg)
+
+
+**Pierre Simon de Laplace** (23. března 1749 - 5. března 1827) byl francouzský matematik, fyzik, astronom a politik. 
+Laplace je právem považován za jednoho z největších vědců
+vůbec. Zanechal monumentální dílo již svým rozsahem.  Zabýval se
+matematickou analýzou, teorií pravděpodobnosti, nebeskou mechanikou.
+
+**Laplaceův determinismum.** Laplace je také více než mnoho jiných
+velikánů vědy spojován se zakořeněnými pověrami a názory, které nikdy
+prokazatelně nehlásal. Je zejména často zcela neprávem považován za
+naivního propagátora představy absolutně deterministického vesmíru,
+analogického kolosálnímu hodinovému stroji, který by po zadání všech
+rovnic a počátečních podmínek všech částic ve vesmíru umožňoval
+absolutně přesně předvídat budoucnost. Jde však o pouhou tradovanou
+pověru. Laplace zastával názor právě opačný.
+
+**Nebeská mechanika**
+
+* Laplace Napoleonovi dedikoval svou knihu o nebeské mechanice. Též se
+  vypráví, že Laplace byl Napoleonem žertem tázán, proč se ve své
+  knize o nebeské mechanice nikde nemluví o Bohu. Laplace prý
+  odpověděl slavnou větou: „*Občane první konzule, tuto hypotézu jsem
+  nikde nepotřeboval*“.
+* *To poslední, co bychom od vás, generále, očekávali, je lekce
+   geometrie!* řekl obdivně Laplace Napoleonovi, který se zmínil a
+   řešení nějakého geometrického problému.
+* *Přiroda se směje našim problémům s integrací.* je jiný výrok připisovaný Laplaceovi.
+* Jeho práce přispěly významně k tomu, že dnes umíme počítat [zatmění
+  Slunce a Měsíce](http://astro.sci.muni.cz/zatmeni/)  nebo počítat [dráhy
+  meteoritů](http://www.astro.cz/clanek/6538).
+* Shodou okolností je nejstarší zaznamenané zatmění Slunce datováno na 5. března 1223 př.n.l., 3050 let před Laplaceovou smrtí.
+
+
+
+
 
 
 
