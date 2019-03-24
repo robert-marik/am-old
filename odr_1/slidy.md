@@ -191,7 +191,7 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
   že rozdělení znečišťujících částic v\ jezeře je rovnoměrné.
 * Úbytek hmotnosti nečistot za časovou jednotku je dán derivací
   $\frac{\mathrm dy}{\mathrm dt}$.
-* Tento úbytek hmotnosti je možno vyjádřit též ve tvaru $\frac rVx$, kde
+* Tento úbytek hmotnosti je možno vyjádřit též ve tvaru $\frac rVy$, kde
   $\frac rV$ je pro dané jezero kladná konstanta udávající, jak velká
   část z\ celkového množství vody se v\ jezeře vymění za časovou jednotku.
   Označíme-li tuto konstantu symbolem $k$, je proces úbytku nečistot
