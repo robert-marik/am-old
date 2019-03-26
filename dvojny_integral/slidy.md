@@ -313,7 +313,9 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 <div class='obtekat'>
 
-![Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu.](beam.jpg)
+![Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com](beam.jpg)
+
+![Dřevostavba realizovaná pomocí I-nosníků. Zdroj: https://www.taus.eu](I-nosniky.jpg)
 
 </div>
 

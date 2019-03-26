@@ -10,9 +10,7 @@ nazývá dimenze vektoru. Tyto komponenty jsou zpravidla čísla nebo
 skalární funkce.
 
 
-> ***Definice (vektory, vektorový prostor)***.
->
-> Množinu $V$ uspořádaných $n$-tic  $(a_1,
+> Definice (vektory, vektorový prostor). Množinu $V$ uspořádaných $n$-tic  $(a_1,
   a_2,\dots, a_n)$ s operacemi sčítání a násobení reálným číslem
   definovanými
   $$
@@ -106,7 +104,7 @@ https://en.wikipedia.org/wiki/Path_integration
 
 # Lineární kombinace, lineární závislost a nezávislost vektorů
 
-> Definice (lineární kombinace)
+> Definice (lineární kombinace).
 >
 > Nechť $\vec u_1$, $\vec u_2$, $\dots$ $\vec u_k$ je
 konečná posloupnost vektorů z~vektorového prostoru $V$. Vektor
@@ -122,7 +120,7 @@ kde $t_1$, $t_2$, $\dots$, $t_k$ jsou nějaká reálná čísla, se nazývá
 
 
 
-> Definice (lineární závislost a nezávislost)
+> Definice (lineární závislost a nezávislost).
 > 
 >  Řekneme, že vektory $\vec u_1$, $\vec u_2$, $\dots$, $\vec u_k$ jsou
   ***lineárně závislé***, jestliže existuje alespoň jedna
@@ -182,7 +180,7 @@ Pokud bychom potřebovali znát rozložení populace po $k$ letech, situace se k
    
 # Matice a jejich lineární kombinace
 
-> ***Definice***. *Maticí řádu $m\times n$*  rozumíme schema
+> Definice (matice). *Maticí řádu $m\times n$*  rozumíme schema
 $$
 A=
 \begin{pmatrix}
