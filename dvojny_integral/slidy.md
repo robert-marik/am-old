@@ -266,6 +266,8 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   
 # Fyzikální aplikace dvojného integrálu
 
+
+
 * **Hmotnost** množiny $M$ je $$m=\iint_M \sigma(x,y)\mathrm{d}x
   \mathrm{d}y,$$ kde $\sigma(x,y)$ je **plošná hustota** (hmotnost
   vztažená na jednotku povrchu).
@@ -279,6 +281,18 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   procházející kolmo počátkem je $\rho(x,y)=\sqrt{x^2+y^2}$.
 
 # Fyzikální aplikace dvojného integrálu (pokračování)
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR [realizována 2011](https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico). Zdroj: https://www.taus.eu](I-nosniky.jpg)
+
+</div>
+
+\fi
+
 
 * **Souřadnice těžiště** množiny jsou podílem lineárních momentů a
   celkové hmotnosti množiny.
@@ -314,8 +328,6 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 <div class='obtekat'>
 
 ![Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com](beam.jpg)
-
-![Dřevostavba realizovaná pomocí I-nosníků. Zdroj: https://www.taus.eu](I-nosniky.jpg)
 
 </div>
 

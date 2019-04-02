@@ -386,6 +386,59 @@ Iterační formule Eulerovy metody: $$\begin{aligned}x_{n+1}&=x_n+h, \\ y_{n+1}&
 
 </div>
 
+
+
+\iffalse 
+
+# Malá odbočka - zaokrouhlovací chyby v numerických výpočtech
+
+<div class='obtekat'>
+
+![Součást protiraketového systému Patriot. Raketu Scud vystřelenou 25.2.1991 systém nesestřelil vinou zaokrouhlovací chyby. Zdroj: U.S. Army.](patriot.jpg)
+
+</div>
+
+
+Uvedli jsme, že počáteční úlohu umíme vyřešit numericky. Ukázali jsme
+si základní algoritmus (Eulerův) a řekli, že existují algoritmy
+pokročilejší. Na tomto místě upozorníme na záludnosti skryté v
+numerických výpočtech. Je iluzorní se domnívat, že zjemněním kroku při
+numerickém řešení diferenciální rovnice vždy dostaneme přesnější
+řešení. Toto platí jenom dokud se nedostaneme ke kritické hodnotě
+kroku, kdy další snižování vede k tomu, že zpřesnění díky kratšímu
+kroku se přebije akumulovanou chybou z velkého množství výpočtů nutně
+zatížených zaokrouhlováním a dalším zjemňováním přesnost ztrácíme.
+
+Zajímavá léčka je v samé podstatě výpočtů na počítači a to v
+reprezentaci desetinných čísel ve dvojkové soustavě. Například číslo
+0.1 je ve dvojkové soustavě periodické! Proto desetinásobným sečtením
+tohoto čísla nedostaneme (překvapivě) jedničku! Je to podobné, jako
+bychom třikrát sečetli jednu třetinu v desetinném tvaru
+reprezentovaném konečným počtem desetinných míst, tj. například
+třikrát sečetli číslo $0.33333333$. Nedostaneme přesně jedničku. 
+
+Tento efekt měl i\ tragický důsledek. Software protiraketového
+systému Patriot počítal čas postupným přičítáním desetiny
+sekundy. Protože systém byl vytvořen a testován na mobilním zařízení,
+které se často restartovalo a běželo krátkou dobu, ničemu to
+nevadilo. Nasazení v systému Patriot však byla chyba. Při ostrém
+nasazení systém běžel dlouho, zaokrouhlovací chyba se kumulovala
+například 100 hodin. I\ když za tu dobu chyba dosáhla pouze zlomku
+sekundy, raketa letící vysokou rychlostí již byla jinde, než systém
+Patriot propočítal.  Dne 25.2.1991 systém Patriot během operace
+Pouštní bouře na osvobození Kuvajtu od irácké okupace nesestřelil
+útočící raketu Scud a ta zabila 28 vojáků osvobozující armády a okolo
+100 osob zranila.
+
+S chybami plynoucími ze zaokrouhlování se setkáme i\ při výpočtech mimo modelování diferenciálních rovnic. Viz například [Floating-point arithmetic may give
+inaccurate results in
+Excel](https://support.microsoft.com/en-us/help/78113/floating-point-arithmetic-may-give-inaccurate-results-in-excel).
+
+
+\fi
+
+
+
 # ODE se separovanými proměnnými
 
 <div class=sloupce>
@@ -493,3 +546,47 @@ lze psát též přímo ve tvaru určitého integrálu $$\int_{y_0}^y\frac
 {\mathrm{d}t}{g(t)}=\int_{x_0}^x f(t)\mathrm{d}t.$$
 
 
+# Diferenciální rovnice růstu vodní kapky
+
+<div class='obtekat'>
+
+![Londýnská mlha. Dnes už to není jako za časů Sherloka Holmese. Poslední velká mlha (Pea soup fog) byla v roce 1952. Zdroj: Wikipedia.](london.jpg)
+
+</div>
+
+
+
+Modelujme růst kulové kapky. Ta roste tak, že na povrchu kondenzují
+vodní páry. Kapka proto roste tak, že její objem se zvětšuje rychlostí
+úměrnou povrchu. Povrch je zase úměrný druhé mocnině poloměru a
+poloměr je úměrný třetí odmocnině objemu. Platí tedy (po sloučení všech konstant úměrnosti do jedné)
+$$\frac{\mathrm dV}{\mathrm dt}=kV^{2/3}.$$  
+Tato rovnice má konstantní řešení $V=0$. Nekonstantní řešení dostaneme
+po úpravě
+$$V^{-2/3}\mathrm dV=k\mathrm dt$$
+a po integraci
+$$\int V^{-2/3}\mathrm dV=k\int \mathrm dt,$$
+což dává
+$$3V^{1/3}=kt+C$$
+a
+$$V=\left(\frac 13 kt+ \frac 13 C\right)^3,$$
+tj.
+$$V=\left(k_0t+ c\right)^3,$$
+kde $k_0=\frac 13 k$ a $c=\frac 13 C$ jsou konstanta spojená rychlostí
+kondenzace a integrační konstanta.
+
+Všimněte si, že počáteční úloha s\ počáteční podmínkou $V(0)=0$ má
+konstantní nulové řešení $$V(t)=0$$ a nenulové řešení
+$$V(t)=(k_0t)^3.$$ Máme zde tedy nejednoznačnost v řešení počáteční
+úlohy. Tato nejednoznačnost není v rozporu s\ větou o existenci a
+jednoznačnosti řešení, protože pravá strana nemá ohraničnou derivaci
+podle $V$. A\ nejednoznačnost má v tomto případě dokonce fyzikální
+význam. Plynné skupenství může existovat i\ pod bodem
+kondenzace. Takovému jevu se říká přechlazená pára. Aby došlo ke
+kondenzaci, musí být k dispozici kondenzační jádra, například
+nečistoty ve vzduchu. Proto ve znečištěném ovzduší dochází častěji ke
+kondenzaci a tvorbě mlhy. Své by o tom mohli vyprávět obyvatelé
+Londýna, kteří se proslulých mlh zbavili poté, co se omezilo topení
+uhlím. My dnes spíše známe přechlazenou tekutinu ve formě hřejících
+polštářků, kde se po lupnutí plíškem spustí přeměna skupenství na
+pevné spojená s\ intenzivním uvolněním tepla.
