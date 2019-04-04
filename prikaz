@@ -3,7 +3,7 @@ kde=$1
 
 if [ -z $kde ]
 then
-   kde="calculus_1d vizualizace spojitost derivace derivace2 integraly krivkovy_integral dvojny_integral integralni_vety retezovka odr_1 odr_2 rce_1 latex vyroci_2019"
+   kde="calculus_1d vizualizace spojitost derivace derivace2 integraly krivkovy_integral dvojny_integral integralni_vety retezovka odr_1 odr_2 rce_1 konecne_diference latex vyroci_2019"
    echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <html> <head> 
 
