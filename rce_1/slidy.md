@@ -202,8 +202,7 @@ $$\label{eq:difuzni}
   \frac{\partial u}{\partial t}-D\nabla^2 u=\sigma,$$
 kde $\nabla^2$ je Laplaceův operátor.
 Tuto rovnici je možno najít v\ literatuře pod názvem rovnice vedení
-tepla, protože popisuje šíření tepla v\ prostředí s\ teplotním
-součinitelem vodivosti $D$ a hustotou tepelných zdrojů $\sigma$.
+tepla, protože popisuje šíření tepla v\ prostředí s\ součinitelem teplotní vodivosti $D$ a hustotou tepelných zdrojů $\sigma$.
 
 
 
