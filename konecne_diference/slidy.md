@@ -47,7 +47,7 @@ $$
   x_2&=\frac 14(60+x_1+x_3)\\
   x_3&=\frac 14(70+x_2+x_4)\\
   x_4&=\frac 14(40+x_1+x_3)
-\end{aligned}
+\end{aligned}\tag{1}
 $$
 anebo po úpravě
 $$
@@ -94,6 +94,12 @@ modelování proudění tepla nebo vody, k modelování mechanického
 namáhání od jednoduchých nosníků po komplikované konstrukce nebo stromy.
 Soustava vytvořená pomocí takových modelů je velmi řídká, má hodně
 nul. Je proto možné ji rychle vyřešit i v případě tisíců rovnic.
+
+**Poznámka.** Velké řídké soustavy typu (1) se řeší iterační
+metodou. Vyjdeme z libovolného odhadu řešení, dosadíme do pravé strany
+a získáme vylepšený odhad řešení. Tento postup opakujeme.
+
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJxljcEKgzAMhu-C75Cb6Ra2WMsGAw_6FAXx0IPbPGhHlS2PvzoYIoaEhD__l1Tl4ObQCzYNU06xWmp-nThOe61VaVKvUMF0YboymWV1moMbp5efOoy2twuYSQ6iQQoQk0XNrqjkJJqkIDE7dHr6DyBWB3us1dlsQc30zx149wF66EeI4qMD1KxuaQIxbDluDi4v0KovMJNFkw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 # Konečné diference
 
