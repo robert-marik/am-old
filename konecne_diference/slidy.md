@@ -47,7 +47,7 @@ $$
   x_2&=\frac 14(60+x_1+x_3)\\
   x_3&=\frac 14(70+x_2+x_4)\\
   x_4&=\frac 14(40+x_1+x_3)
-\end{aligned}\tag{1}
+\end{aligned}\tag{*}
 $$
 anebo po úpravě
 $$
@@ -95,7 +95,7 @@ namáhání od jednoduchých nosníků po komplikované konstrukce nebo stromy.
 Soustava vytvořená pomocí takových modelů je velmi řídká, má hodně
 nul. Je proto možné ji rychle vyřešit i v případě tisíců rovnic.
 
-**Poznámka.** Velké řídké soustavy typu (1) se řeší iterační
+**Poznámka.** Velké řídké soustavy typu (*) se řeší iterační
 metodou. Vyjdeme z libovolného odhadu řešení, dosadíme do pravé strany
 a získáme vylepšený odhad řešení. Tento postup opakujeme.
 
