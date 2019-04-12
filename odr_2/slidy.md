@@ -710,9 +710,6 @@ hodnoty parametru $\lambda$.
 
 # Výpočet vlastních hodnot
 
-<div class=sloupce>
-
-<div>
 
 Je-li $\lambda>0$, je řešením rovnice $$y''+\lambda y=0 \tag{*}$$
 funkce
@@ -729,30 +726,65 @@ Okrajová úloha $$y''+\lambda y=0, \quad y(0)=0=y(1)$$ má vlastní hodnoty
 $\lambda=(k\pi)^2$, $k\in\mathbb{Z}$
 
 
+# Kmity struny
+
+<div class='obtekat'>
+
+![Kmitání jednorozměrných objektů je popsáno lineární diferenciální rovnicí druhého řádu. Zdroj: pixabay.com](housle.jpg)
+
 </div>
 
-<div>
-
-**Kmity struny**
 
 Při kmitání struny délky $l$ upevněné na koncích se ukazuje, že proces
-je možno modelovat okrajovou úlohou $$y''+\lambda^2 y=0,
-y(0)=0=y(l).$$ Rovnice má obecné řešení $$y(x)=C_1\sin( \lambda
-x)+C_2\cos( \lambda x)$$ Z\ podmínky $y(0)=0$ dostáváme $C_2=0$ a z
+je možno modelovat okrajovou úlohou $$y''+\lambda^2 y=0,\quad
+y(0)=0=y(l),$$
+kde $y$ je amplituda kmitů v místě $x$ a $\lambda$ souvisí s frekvencí. (Jaká tato souvislost je a jak se v rovnici objeví uvidíme později při
+řešení vlnové rovnice.) Rovnice má obecné řešení $$y(x)=C_1\sin(
+\lambda x)+C_2\cos( \lambda x)$$ Z\ podmínky $y(0)=0$ dostáváme $C_2=0$ a z
 podmínky $y(l)=0$ dostáváme $$y(x)=C_1\sin(\lambda x)$$ pokud
 $$\lambda l=k\pi \tag{***}$$ a $y=0$ jinak. Při podrobnějším popisu
 (jedna ze závěrečných přednášek semestru) se ukazuje, že $\lambda$
 souvisí s hmotností struny, napětím ve struně a frekvencí, kterou
 slyšíme. Podmínka (\*\*\*) určuje spektrum slyšitelných frekvencí, na
-kterých může struna kmitat, výsledný pohyb (a zvuk) je složením
-jednotlivých variant.
+kterých může struna kmitat, výsledný pohyb (a zvuk) je díky linearitě složením
+jednotlivých variant. Toho se dá s výhodou vyžívat a stejnou strunu je možné [rozeznívat více způsoby](https://www.youtube.com/watch?v=kn92TLYA4rE) a dosahovat různý výsledný zvuk. 
+
+# Vzpěry
+
+<div class='obtekat'>
+
+![Nosníky, ať už samostatné vzpěry, nebo součásti příhradových konstrukcí, je nutné posuzovat i z hlediska axiálního namáhání. Ignorování tohoto způsobu namáhání vedlo v 19. století k pádu několika příhradových železničních mostů a následnému stržení řady [chybně dimenzovaných mostů](https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures). Zdroj: pixabay.com](vzpera.jpg)
 
 </div>
 
-</div>
+Předpokládejme, že máme nosník namáhaný na vzpěr. (U příhradových
+konstrukcí může být dokonce kombinované namáhání, částečně na vzpěr,
+tj. v osem a částečně kolmo na osu.) Osu $x$ zvolíme podélně v ose
+vzpěry, osu $y$ kolmo. Při namáhání takového nosníku, který je pevně uchycen na dolním a horním konci, je výchylka dána okrajovou úlohou
+([Podžgaj a kol., Štruktúra a vlastnosti dreva](https://katalog.mendelu.cz/documents/21654), str. 359)
+$$\frac{\mathrm d^2 y}{\mathrm dx^2}+\alpha^2 y=0,\quad y(0)=y(l)=0,$$
+kde $\alpha^2=\frac{F}{EI}$ je parametr závislý na působící síle,
+materálu a momentu setrvačnosti průřezu nosníku. (Pro jiné způsoby uchycení se rovnice a okrajové podmínky mohou mírně lišit, rovnice může být například i nehomogenní, zásadní vlastnosti jsou však stejné.) Toto je stejná úloha jako u kmitání struny. Při síle, která se postupně zvětšuje, se nenulové řešení objeví v bodě, kde platí $$\alpha l=\pi,$$ (odpovídá základní frekvenci struny) tj.
+$$\sqrt{\frac {F}{EI}}l=\pi$$
+a
+$$F=\frac{\pi^2 EI}{l^2}.$$
+Toto je pro daný nosník kritická síla a ta je pro daný materiál nepřímo úměrná druhé mocnině délky a přímo úměrná tuhosti kvadratickému momentu $I$.
+
 
 
 # Neumannova a smíšená okrajová úloha
+
+
+\iffalse
+
+<div class='obtekat'>
+
+
+![Array mbira - [hudební nástroj](https://www.youtube.com/watch?v=5fAAGheYTFA) se smíšenou okrajovou úlohou](array_mbira.jpg) 
+
+</div>
+
+\fi
 
 
 
@@ -769,19 +801,10 @@ nazývají Neumannovy podmínky a úloha najít řešení rovnice, které tyto
 podmínky splňuje se nazývá **Neummannova okrajová úloha**, též
 **Neumannova úloha**.
 
-<div class='sloupce'>
 
 Existují i smíšené úlohy, například při kmitání tělesa s\ jedním
 upevněným a jedním volným koncem je přirozené formulovat **smíšenou
 okrajovou podmínku** $$y(a)=0,\quad y'(b)=0,$$ kde $a$ je upevněný konec a
 $b$ volný konec.
 
-\iffalse
-
-![Array mbira - hudební nástroj se smíšenou okrajovou úlohou](array_mbira.jpg) 
-
-
-\fi
-
-</div>
 
