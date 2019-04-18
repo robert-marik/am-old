@@ -43,10 +43,10 @@ bude přibližně rovna aritmetickému průměru teplot v sousedních
 bodech. Kvantitativně zformulováno, platí 
 $$
 \begin{aligned}
-  x_1&=\frac 14(30+x_2+x_4)\\
-  x_2&=\frac 14(60+x_1+x_3)\\
-  x_3&=\frac 14(70+x_2+x_4)\\
-  x_4&=\frac 14(40+x_1+x_3)
+  x_1&=\frac 14(10+20+x_2+x_4)\\
+  x_2&=\frac 14(20+40+x_1+x_3)\\
+  x_3&=\frac 14(30+40+x_2+x_4)\\
+  x_4&=\frac 14(30+10+x_1+x_3)
 \end{aligned}\tag{*}
 $$
 anebo po úpravě
@@ -59,13 +59,13 @@ $$
 \end{aligned}
 $$
 Dostali jsme soustavu lineárních rovnic o čtyřech neznámých.
-Tuto úlohu je možno zformulovat pomocí  maticového násobení (s vynechanými nulami uvnitř matice)
+Tuto úlohu je možno zformulovat pomocí  maticového násobení 
 $$
 \begin{pmatrix}
- \phantom{-}4&-1&&-1\\
- -1& \phantom{-}4&-1&\\
- &-1& \phantom{-}4&-1\\
- -1&&-1& \phantom{-}4
+ \phantom{-}4&-1&\phantom{-}0&-1\\
+ -1& \phantom{-}4&-1&\phantom{-}0\\
+\phantom{-}0 &-1& \phantom{-}4&-1\\
+ -1&\phantom{-}0&-1& \phantom{-}4
 \end{pmatrix}
 \begin{pmatrix}
   x_1\\x_2\\x_3\\x_4

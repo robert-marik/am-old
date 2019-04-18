@@ -172,7 +172,7 @@ který z\ ní vyteče.
 
 
 
-Difuzní rovnice je kombinací rovnice kontinuity a Fickova
+Difuzní rovnice je kombinací rovnice kontinuity a 
 zákona, který říká, že v\ označení z\ předchozí kapitoly směřuje vektor
 $\vec \varphi$ (difuzní tok, tj. množství veličiny $u$ které projde
 elementární oblastí za jednotku času) z\ oblastí s\ vyšší koncentrací do
@@ -180,21 +180,30 @@ oblastí s\ nižší koncentrací a velikost je úměrná gradientu veličiny $u
 Platí tedy
 $$\label{eq:fick}
   \vec\varphi=-D\nabla u,$$
-kde $D$ je tzv. difuzní koeficient.
+kde $D$ je tzv. difuzní koeficient. Tento zákon a veličina $D$ se vyskytují v [mnoha různých oblastech](http://user.mendelu.cz/marik/mt/mat-slidy/vektorove_pole/) zkoumání přírody a mají různé názvy podle konkrétní povahy proudící veličiny (např. Fickův zákon, Darcyho zákon, Fourierův zákon). 
 S využitím tohoto vztahu má rovnice tvar 
 $$ \frac{\partial u}{\partial t}-  \mathop{\mathrm{div}} (D \nabla u)=\sigma.$$
 
-Při studiu pohybu vody ve dřevě neuvažujeme zdroje ($\sigma=0$) a naopak uvažujeme prostředí, které má v\ každém směru jiné vlastnosti a jiný difuzní koeficient. Výsledná difuzní rovnice má poté tvar
+Pouze v izotropním prostředí je směr $\vec \varphi$ a $\nabla u$
+stejný. Proto pouze v izotropním prostředí je možné považovat
+koeficient $D$ za skalární veličinu. Obecně by to mohlo být jakékoliv
+zobrazení mezi vektorovými prostory a vzhledem k úměrnosti je možné
+toto zobrazení reprezantovat maticí. Tato matice má navíc speciální
+vlastnosti (z fyzikálních důvodů bývá symetrická a z matematických
+důvodů pro ni platí jistá pravidla při změně souřadnic) a nazývá se
+tenzor. Difuzní koeficient $D$ je tedy tenzorová veličina.
+
+Při studiu pohybu vody nebo tepla ve dřevě neuvažujeme zdroje ($\sigma=0$) a naopak uvažujeme prostředí, které má v\ každém směru jiné vlastnosti. Difuzní koefient je tenzor, ale pokud zvolíme soustavy souřadnic v\ souladu s\ anatomickými směry dřeva, ukazuje se, že  matice $D$ je diagonální a výsledná difuzní rovnice má poté tvar
 $$ \frac{\partial u}{\partial t}
 -  \frac{\partial }{\partial x} \left(D_x \frac{\partial u}{\partial x}\right)
 -  \frac{\partial }{\partial y} \left(D_y \frac{\partial u}{\partial y}\right)
 -  \frac{\partial }{\partial z} \left(D_z \frac{\partial u}{\partial z}\right)
-=0
+=0.
 $$
-a nazývá se *druhý Fickův zákon*.
 
-Je-li difuzní koeficient $D$ konstantní (nezávislý na prostorových
-souřadnicích), potom má difuzní rovnice vhledem k\ identitě
+
+Je-li difuzní koeficient $D$ skalární a konstantní (nezávislý na prostorových
+souřadnicích a na směru, tj. v\ případě dřeva například $D_x=D_y=D_z=D\in\mathbb R$), potom má difuzní rovnice vhledem k\ identitě
 $$\mathop{\mathrm{div}} \vec\varphi=- \mathop{\mathrm{div}} (D\nabla u)=-D \mathop{\mathrm{div}} (\nabla
   u)=-D\nabla^2 u$$
 konečný tvar
