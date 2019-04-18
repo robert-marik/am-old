@@ -759,7 +759,7 @@ jednotlivých variant. Toho se dá s výhodou vyžívat a stejnou strunu je mož
 
 Předpokládejme, že máme nosník namáhaný na vzpěr. (U příhradových
 konstrukcí může být dokonce kombinované namáhání, částečně na vzpěr,
-tj. v osem a částečně kolmo na osu.) Osu $x$ zvolíme podélně v ose
+tj. v ose a částečně kolmo na osu.) Osu $x$ zvolíme podélně v ose
 vzpěry, osu $y$ kolmo. Při namáhání takového nosníku, který je pevně uchycen na dolním a horním konci, je výchylka dána okrajovou úlohou
 ([Podžgaj a kol., Štruktúra a vlastnosti dreva](https://katalog.mendelu.cz/documents/21654), str. 359)
 $$\frac{\mathrm d^2 y}{\mathrm dx^2}+\alpha^2 y=0,\quad y(0)=y(l)=0,$$
