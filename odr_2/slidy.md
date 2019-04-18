@@ -761,7 +761,7 @@ Předpokládejme, že máme nosník namáhaný na vzpěr. (U příhradových
 konstrukcí může být dokonce kombinované namáhání, částečně na vzpěr,
 tj. v ose a částečně kolmo na osu.) Osu $x$ zvolíme podélně v ose
 vzpěry, osu $y$ kolmo. Při namáhání takového nosníku, který je pevně uchycen na dolním a horním konci, je výchylka dána okrajovou úlohou
-([Podžgaj a kol., Štruktúra a vlastnosti dreva](https://katalog.mendelu.cz/documents/21654), str. 359)
+([A. Požgaj a kol., Štruktúra a vlastnosti dreva](https://katalog.mendelu.cz/documents/21654), str. 359)
 $$\frac{\mathrm d^2 y}{\mathrm dx^2}+\alpha^2 y=0,\quad y(0)=y(l)=0,$$
 kde $\alpha^2=\frac{F}{EI}$ je parametr závislý na působící síle,
 materálu a momentu setrvačnosti průřezu nosníku. (Pro jiné způsoby uchycení se rovnice a okrajové podmínky mohou mírně lišit, rovnice může být například i nehomogenní, zásadní vlastnosti jsou však stejné.) Toto je stejná úloha jako u kmitání struny. Při síle, která se postupně zvětšuje, se nenulové řešení objeví v bodě, kde platí $$\alpha l=\pi,$$ (odpovídá základní frekvenci struny) tj.
