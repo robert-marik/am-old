@@ -118,6 +118,19 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 
 </div>
 
+# Linearita a aditivita
+
+
+Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
+veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
+funkcí, nebo integračních oborů) a s násobení integrované funkce
+konstantnou. Přesněji, platí následující věty.
+
+> Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí $$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
+
+> Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
+
+
 
 # Výpočet (oblast mezi funkcemi proměnné $x$)
 
