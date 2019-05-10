@@ -188,12 +188,12 @@ Pouze v izotropním prostředí je směr $\vec \varphi$ a $\nabla u$
 stejný. Proto pouze v izotropním prostředí je možné považovat
 koeficient $D$ za skalární veličinu. Obecně by to mohlo být jakékoliv
 zobrazení mezi vektorovými prostory a vzhledem k úměrnosti je možné
-toto zobrazení reprezantovat maticí. Tato matice má navíc speciální
+toto zobrazení reprezentovat maticí. Tato matice má navíc speciální
 vlastnosti (z fyzikálních důvodů bývá symetrická a z matematických
 důvodů pro ni platí jistá pravidla při změně souřadnic) a nazývá se
 tenzor. Difuzní koeficient $D$ je tedy tenzorová veličina.
 
-Při studiu pohybu vody nebo tepla ve dřevě neuvažujeme zdroje ($\sigma=0$) a naopak uvažujeme prostředí, které má v\ každém směru jiné vlastnosti. Difuzní koefient je tenzor, ale pokud zvolíme soustavy souřadnic v\ souladu s\ anatomickými směry dřeva, ukazuje se, že  matice $D$ je diagonální a výsledná difuzní rovnice má poté tvar
+Při studiu pohybu vody nebo tepla ve dřevě neuvažujeme zdroje ($\sigma=0$) a naopak uvažujeme prostředí, které má v\ každém směru jiné vlastnosti. Difuzní koeficient je tenzor, ale pokud zvolíme soustavy souřadnic v\ souladu s\ anatomickými směry dřeva, ukazuje se, že  matice $D$ je diagonální a výsledná difuzní rovnice má poté tvar
 $$ \frac{\partial u}{\partial t}
 -  \frac{\partial }{\partial x} \left(D_x \frac{\partial u}{\partial x}\right)
 -  \frac{\partial }{\partial y} \left(D_y \frac{\partial u}{\partial y}\right)
