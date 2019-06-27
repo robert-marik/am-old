@@ -3,6 +3,68 @@
 % 2017–2019
 
 
+## Od funkčního předpisu k rychlosti změny
+
+> Derivace je okamžitá rychlost změny.
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Derivace teploty je rychlost změny teploty. Zdroj: pixabay.com](coffee.jpg)
+
+</div>
+
+\fi
+
+Hrnek kávy v místnosti o teplotě $20^\circ\mathrm{C}$ se ochladí z
+teploty $95^\circ\mathrm{C}$ na $25^\circ\mathrm{C}$ například za $40$
+minut. To znamená, že nápoj chládne rychlostí
+$$\frac{95-25}{40} \,{}^\circ\mathrm{C}\, \mathrm{min}^{-1}=1.75^\circ\mathrm{C}\, \mathrm{min}^{-1},$$
+tj. každou minutu se nápoj ochladí průměrně o necelé dva stupně
+Celsia. Toto však není příliš realistický model. Horký nápoj chládne
+rychleji, protože je tepelná výměna internzivnější díky většímu
+rozdílu teploty nápoje a místnosti. Realističtejším modelem popisujícím závislost teploty na čase je funkce $$T(t)=20+75 e^{-0.0677t}.$$ Derivace této funkce
+$$\frac {\mathrm dT}{\mathrm dt}=-75\cdot 0.0677 e^{-0.0677t}$$
+udává rychlost změny teploty v libovolném čase. Pro $t=0$ a $t=40$ [dostáváme](https://sagecell.sagemath.org/?z=eJxL06jQtDU31UqtKNDQNdAzMDM316rQ1DYy4OUqKMrMK1FI0zDQ1EnTMDHQhIlogHm6IAlNfROEQr2UzLQ0DU2wehgbqBAA0VoY-g==&lang=sage&interacts=eJyLjgUAARUAuQ==)
+$$\frac {\mathrm dT}{\mathrm dt}(0)=-5.08 ^\circ\mathrm{C}\, \mathrm{min}^{-1},\qquad
+\frac {\mathrm dT}{\mathrm dt}(40)=-0.34 ^\circ\mathrm{C}\, \mathrm{min}^{-1},
+$$ tedy na počátku chládne rychostí pět stupňů Celsia za minutu, na konci už jenom rychlostí necelého půl stupně za minutu.
+
+
+---------------------
+
+## Od rychlosti změny k funkčnímu předpisu
+
+> Ze známé rychlosti změny veličiny je možné zrekonstruovat změnu této veličiny.
+
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Pokud dírou ve dně vytéká voda ze sudu, rychlost je na počátku větší (u dna je při větší hloubce větší tlak) a snižuje se. Klasický přístup hledání celkové změny pomocí násobení rychlosti s délkou časového intervalu selhává vinou nekonstantní rychlosti. Zdroj: pixabay.com](barrel.jpg)
+
+</div>
+
+\fi
+
+V nádrži je metr vody a voda vytéká tak, že hladina klesá rychlostí $20\mathrm{cm}\,\mathrm{h}^{-1}$. Touto rychlostí by voda vytekla za pět hodin. Protože však s objemem vody klesá tlak u dna, výtoková rychlost se snižuje. V případě nádrže se svislými stěnami by byl realistický model popisující závislost rychlosti snižování hladiny na čase
+$$\frac{\mathrm dh}{\mathrm dt}=(-0.2 + 0.02 t)\,\mathrm{m}\,\mathrm{hod}^{-1}.$$
+Za prvních pět hodin [vyteče](https://sagecell.sagemath.org/?z=eJxL06jQtNU10DPSNtAzMNKq4OVK08vMK0lNL0osSdWo0DHQMTTQBAC0jwnX&lang=sage&interacts=eJyLjgUAARUAuQ==)
+$$h(5)-h(0)=\int_0^5 \frac{\mathrm dh}{\mathrm dt} \,\mathrm dt=
+\int_0^5 (-0.2 + 0.02 t) \,\mathrm dt=\left[-0.2 t + 0.01 t^2\right]_0^5
+=
+-0.75\,\mathrm m
+$$
+a voda tedy klesne o třičtvrtě metru. Po pěti hodinách nádrž ještě není prázná, ale je v ní pořád čtvrtina vody. Ta bude vytékat ještě dalších pět hodin, protože 
+$$h(10)-h(5)=
+\int_5^{10} (-0.2 + 0.02 t) \,\mathrm dt=
+-0.25\,\mathrm m
+$$
+
+--------------
+
 # Derivace
 
 $$f'(x)=\frac{\mathrm{d}f}{\mathrm{d}x}=\lim_{\Delta x\to 0}\frac{f(x+\Delta x)-f(x)}{\Delta x}$$
@@ -80,6 +142,7 @@ změny v čase, často vyjádřená slovy "časová změna"
 
 > Newtonův zákon síly (pohyb hmotného tělesa na které působí vnější
 síla): *Časová změna hybnosti je rovna výsledné působící síle.*
+$$\frac{\mathrm d p}{\mathrm dt}=F$$
 
 \iffalse 
 
@@ -91,9 +154,14 @@ síla): *Časová změna hybnosti je rovna výsledné působící síle.*
 
 \fi
 
-Tj. derivace hybnosti podle času je rovna výsledné síle. Derivace
-hybnosti je pro tělesa s konstantní hmotností součinem hmotnosti a
-zrychlení. Zrychlení je druhá derivace polohy. Nejčastěji proto tento
+Tj. derivace hybnosti podle času je rovna výsledné síle. Hybnost je součinem hmotnosti a rychlosti 
+$$p=mv$$
+a její derivace 
+je pro tělesa s konstantní hmotností součinem hmotnosti a derivace rychlosti, tj. zrychlení.
+$$\frac{\mathrm d p}{\mathrm dt}=m \frac{\mathrm d v}{\mathrm dt}
+= m a
+$$
+Zrychlení je druhá derivace polohy. Nejčastěji proto tento
 zákon píšeme ve tvaru $$m\frac{\mathrm{d}^2 x}{\mathrm{d}t^2}=F.$$
 
 Speciální případy dobře známé ze střední školy jsou zákon setrvačnosti
@@ -124,51 +192,34 @@ $$\mathcal E = -\frac{\mathrm d\Psi}{\mathrm dt}$$ Speciálním
 případem známým ze střední školy je přímý vodič pohybující se v
 homogenním magnetickém poli po rovnoběžných vodičích.
 
----------------------
-
-## Rychlost růstu 1
-
-> Derivace je okamžitá rychlost změny.
-
-\iffalse 
-
-<div class='obtekat'>
-
-![Derivace velikosti populace ryb je rychlost růstu. Umožní modelovat vývoj populace v čase. Zdroj: pixabay.com](ryby.jpg)
-
-</div>
-
-\fi
-
-
-*Příklad:*
-Populace ryb v East River je dána vztahem $$P(t)=\frac{3e^t}{1+e^t},$$
-kde $P(t)$ je v milionech ryb a $t$ čas v letech od roku 2000.
-
-Jednotkou derivace $P'(t)$ je milion ryb za rok. Platí například $P'(0)=0.75$ a v roce 2000 tedy populace přibývá rychlostí $0.75$ milionu ryb za rok.
 
 ---------------------
 
-## Rychlost růstu 2
+## Rozšířené pojetí rychlosti růstu
+
 > Rychlost změny nemusí být změna vztažená na jednotku času, ale i míra změny prostorového uspořádání (gradient) nebo změna vztažená na jinou vhodnou jednotku.
 
 \iffalse 
 
 <div class='obtekat'>
 
-![Zisk a jeho maximalizace je priorita pro ekonomy. Proto je ekonomie společně s fyzikou největším odebíratelem matematických výsledků, metod a postupů. Zdroj: pixabay.com](penize.jpg)
+![Dlouhé kosti mají stavební materiál po obvodu. Příroda a evoluce optimalizovaly jejich strukturu. Zdroj: pixabay.com](skeletons.jpg)
 
 </div>
 
 \fi
 
-*Příklad:*
-Náklady na produkci $x$ letadel za rok jsou dány funkcí
-$$C(x) = 6 + \sqrt{4x + 4},\qquad  0 \leq x \leq 30.$$
+
+Hmotnost a tuhost tyče (odolnost tyče vůči namáhání) kruhového průřezu o poloměru $r$ jsou úměrné druhé a čtvrté mocnině poloměru, $$m=k_1r^2,\qquad I=k_2r^4.$$
 Platí
-$$C'(x)=\frac{\mathrm{d}C}{\mathrm{d}x}=\frac{2}{\sqrt{4x+4}}$$
-a jednotkou derivace $C'(x)$ je (milion Euro)/(kusů letadel).
-Například $C'(15)=0.25$ a při produkci patnáct letadel za rok stojí další letadlo přibližně $0.25$ mil. Euro. Tato veličina, derivace nákladové funkce, se v ekonomii nazývá *mezní náklady*.
+$$\frac {\mathrm dm}{\mathrm dr}=2k_1r,\qquad \frac {\mathrm dI}{\mathrm dr}=4k_2r^3.$$
+Vidíme, že při zvýšení poloměru hmotnost i tuhost podle očekávání rostou (derivace je kladná), při větších
+poloměrech však tuhost roste mnohem rychleji než hmotnost (třetí versus první mocnina). Při hledání
+vhodného poměru mezi tuhostí a hmotností se proto jeví jako vhodná
+myšlenka využít tento rozdíl a naopak šetřit materiálem (a snižovat
+hmotnost) tam, kde úbytek materiál ovlivní tuhost relativně
+málo. Proto se při konstrukcích s požadovanou
+odolností vůči namáhání běžně používají trubky namísto tyčí.
 
 ---------------------
 
@@ -213,16 +264,57 @@ $$f(x)\approx f(a)+f'(a)(x-a)$$
 
 Toto je základní vztah pro lokální lineární aproximaci, pro nahrazení komplikovaných vztahů jejich lineárními přiblíženími.
 
-Příkladem jsou vztahy pro odmocňování čísel blízkých jedniččce, pro
-energii pohybujícího se tělesa a pro potenciální energii v blízkosti
-Země.
+Příkladem jsou vztahy pro umocňování a odmocňování čísel blízkých jedniččce
+$$(1\pm x)^n\approx 1\pm nx
+,\quad \text{pro malé }x.$$
 
-$$\sqrt{1+x}\approx 1+\frac 12 x,
-\quad \frac 1{\sqrt{1-x}}\approx 1+\frac 12 x,\quad \text{pro malé }x$$
+Dvě základní aplikace tohoto vztahu vedou na vzorce známé ze středoškolské
+fyziky: středoškolské vztahy pro energii pohybujícího se tělesa a pro potenciální
+energii pro malé výšky nad povrchem Země jsou aproximací přesných vztahů plyoucích z Einsteinovy teorie relativity a z Newtonovy gravitační teorie.
 
-$$E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}}\approx m_0c^2+\frac 12 m_0v^2 \quad \text{pro $v$ mnohem menší než $c$}$$
 
-$$V=-\kappa \frac{mM}{R+h}\approx -\kappa \frac{mM}{R} + \kappa \frac{mM}{R^2} h=-\kappa \frac{mM}{R}+m g h,\quad \text{kde $g=\kappa \frac{M}{R^2}$.}$$
+$$E=\frac{m_0c^2}{\sqrt{1-\frac {v^2}{c^2}}}
+=m_0 c^2 \left(1-\frac {v^2}{c^2}\right)^{-1/2}
+\approx m_0c^2+\frac 12 m_0v^2 \quad \text{pro $v$ mnohem menší než $c$}$$
+
+$$V=-\kappa \frac{mM}{R}\left (1+\frac hR\right)^{-1}
+= -\kappa \frac{mM}{R+h}\approx -\kappa \frac{mM}{R} + \kappa \frac{mM}{R^2} h=E_0+m g h,\quad \text{kde $g=\kappa \frac{M}{R^2}$}$$
+
+---------------------
+
+## Lineární aproximace při řešení rovnic
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Některé úlohy je nutné řešit numericky. I v takovém případě je linearizace vhodným nástrojem pro zjednodušení problému. Zdroj: pixabay.com](binary.jpg)
+
+</div>
+
+\fi
+
+
+
+Z lineární aproximace 
+$$f(x)\approx f(a)+f'(a)(x-a)$$
+pro $a=x_n$, $x=x_{n+1}$, $f(x_{n+1})=0$ dostáváme
+$$x_{n+1}=x_n-\frac{f(x_n)}{f'(x_n)}.$$
+Tímto způsobem můžeme numericky řešit i velmi obtížné rovnice. Například pro rovnici $$x=\cos x$$ a počáteční odhad $x_0=1$ dostáváme $f(x)=x-\cos x$, $f'(x)=1+\sin x$, $$x_{n+1}=x_n-\frac{x_n-\cos x_n}{1+\sin x_n}$$ a jednotlivé iterace s aproximací na 80 desetinných míst [dávají postupně](https://sagecell.sagemath.org/?z=eJyrsDXk5UrLL1LIVMjMUyhKzEtP1TDXtOLlUgCCCluNCl0gSs4v1qjQ1NTXMNQuzswDMTX18jRSMtMzS4ptLQw0IaoLijLzShQqAJbBFls=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
+~~~
+0.75036386784024389303494230668217685324699306585535903096658315202443061372724844
+0.73911289091136167036058529090489023400289283673565690732340797067262734474030949
+0.73908513338528396976012512085680433288953312317018897963123060924114905347788420
+0.73908513321516064166170262568502637232522326252964269151340253531790167136371866
+0.73908513321516064165531208767387340401342077636703525840515904303894688001184009
+0.73908513321516064165531208767387340401341175890075746496568063577328465488354759
+0.73908513321516064165531208767387340401341175890075746496568063577328465488354759
+~~~
+
+Vidíme, že proces neuvěřitelně rychle konverguje k řešení rovnice. Každým krokem se přibližně zdvojnásobí počet desetinných míst, která jsou správně.
+
+
 
 # Integrál
 
@@ -242,34 +334,6 @@ konstantní (dráha rovnoměrného pohybu, $s=s_0+vt$) nebo lineární (dráha r
 školy známe speciální případ pro práci konstantní síly ($W=Fs$) a síly
 úměrné posunutí (pro pružinu platí Hookův zákon a proto $W=\frac 12
 kx^2$.)
-
----------------------
-
-## Velikost změny
-
-> Ze známé rychlosti změny veličiny je možné zrekonstruovat pouze numerickou změnu této veličiny. Časový průběh je možné zrekonstruovat pouze s dalšími dodatečnými informacemi, jako například počáteční hodnota.
-
-
-\iffalse 
-
-<div class='obtekat'>
-
-![Pokud se rychlost děje mění, musíme pro nalezení veiolkost změny nahradit násobení integrálem. Zdroj: pixabay.com](oil.jpg)
-
-</div>
-
-\fi
-
-Olej vytéká z nádrže rychlostí $$f(x)=4000 e^{-0.3x}\, \mathrm{litr}/\mathrm{den}.$$ Kolik oleje vyteče za prvních pět dnů? Kolik oleje vyteče za dalších pět dnů?
-
-*Řešení:*
-$$\int _0^5 4000 e^{-0.3x} \,\mathrm dx\approx 10\,358,     \qquad  \int _5^{10} 4000 e^{-0.3x} \,\mathrm dx\approx 2\,311 $$
-
-Funkce popisující časový průběh objemu vyteklého oleje má tvar
-$$f(T)=\int _0^T 4000 e^{-0.3x} \,\mathrm dx\approx
-\frac{40000}{3}
--\frac{40000}{3} \, e^{-0.3 \, T} .
-$$
 
 
 ---------------------

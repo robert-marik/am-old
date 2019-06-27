@@ -208,10 +208,17 @@ $$\mathop{\mathrm{div}} \vec\varphi=- \mathop{\mathrm{div}} (D\nabla u)=-D \math
   u)=-D\nabla^2 u$$
 konečný tvar
 $$\label{eq:difuzni}
-  \frac{\partial u}{\partial t}-D\nabla^2 u=\sigma,$$
+  \frac{\partial u}{\partial t}-D\nabla^2 u=\sigma,\tag{**}$$
 kde $\nabla^2$ je Laplaceův operátor.
 Tuto rovnici je možno najít v\ literatuře pod názvem rovnice vedení
 tepla, protože popisuje šíření tepla v\ prostředí s\ součinitelem teplotní vodivosti $D$ a hustotou tepelných zdrojů $\sigma$.
+
+V praxi je dřevo často s jistou přesností homogenní, ale difuzní
+koeficient dřeva závisí na teplotě a vlhkosti. Proto vztah mezi
+gradientem $u$ a difuzním tokem $\vec \varphi$ není lineární. Přesto i
+v tomto případě používáme úměrnost, ovšem složky difuzního koeficientu
+nepovažujeme za konstanty, ale za veličiny měnící se s $u$. Ani takovém případě si úpravu na rovnici
+(**) nemůžeme dovolit.
 
 
 
