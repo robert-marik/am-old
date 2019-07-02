@@ -289,7 +289,7 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 
 \iffalse
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJxdi0EKgzAQRfeCdxA3TmIanISmdJFbDGRThEIQ3EhNZc5vJFiwu__e4_M7QUeKO1FXAfIQHq1G0w_aGbxLuiFq-5A8wqDRiezt02X_M3UVyQcd52kCEsDeOEU-347CZ-G_8knzsjWhyKZY1b6W9kyRrsgX_K5pA4gkRtNDZGnyKP8d3o01SQ==&lang=sage)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJxdjMEKwyAQRO-B_EPIJaux4iqx9OBfLHgpgYIEcgmtDfv9tUgK6W3mPWb4kWEgxYNomwgliIBOox2N9hYnSRdE7a6SZzAavSjc3XzhP9I2iULUaV0WIAEcrFcUyuxr-DD8Z5553fYuVthVqvr71h8q0bnyqb5feQdIJI22YrYjJJZTCfXjA7FANgY=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 \fi 
 
