@@ -2,8 +2,7 @@
 kde=$1
 
 if [ -z $kde ]
-then
-   kde="calculus_1d vizualizace spojitost derivace derivace2 integraly krivkovy_integral dvojny_integral integralni_vety retezovka odr_1 odr_2 rce_1 konecne_diference latex vyroci_2019"
+then   kde="01 02 03 04 05 06 07 08 09 10 11"
    echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <html> <head> 
 
@@ -34,12 +33,12 @@ do
   cd ..
   #scp -r $i kiwi.mendelu.cz:html/am/slidy
   #rsync -av $i kiwi.mendelu.cz:html/am/slidy
-  rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/am/slidy
+  #rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/am/slidy
 done
 
-rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/am/slidy
-rsync -e "ssh -o StrictHostKeyChecking=no"  -av mydeck.css cornus.mendelu.cz:html/am/slidy
-rsync -e "ssh -o StrictHostKeyChecking=no"  -av facebox cornus.mendelu.cz:html/am/slidy
-rsync -e "ssh -o StrictHostKeyChecking=no"  -av styles cornus.mendelu.cz:html/am/slidy
-rsync -e "ssh -o StrictHostKeyChecking=no"  -av scripts cornus.mendelu.cz:html/am/slidy
-rsync -e "ssh -o StrictHostKeyChecking=no"  -av deck cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av mydeck.css cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av facebox cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av styles cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av scripts cornus.mendelu.cz:html/am/slidy
+#rsync -e "ssh -o StrictHostKeyChecking=no"  -av deck cornus.mendelu.cz:html/am/slidy

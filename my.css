@@ -84,3 +84,26 @@ column-count:6;}
 
 
 .obtekat {max-width:40%; vertical-align:top; float: right;}
+
+.definicename {background-color:#006131; color:#cccccc; font-weight:bold; padding:3px; margin:0px;}
+
+blockquote {padding: 0px;}
+blockquote p {padding: 2px;}
+
+.veta {background-color:#ffffb3; border-color:#ffcc00;}
+
+.vetaname {background-color:#ffcc00; color:#006131; font-weight:bold; padding:3px; margin:0px;}
+
+
+.poznamkaname {color:#cccccc; background-color:#006131; font-weight:bold; padding:3px; margin:0px; font-weight: bold.}
+
+.poznamka {background-color:#eeeeee; border-color:#006131;}
+
+li ul li { font-size: 85%; font-style: normal; }
+
+.poznamka {font-style: normal; }
+
+.priklad {font-style: normal; background-color:#eeeeee; border-style:none;}
+
+.prikladname {font-weight:bold;}
+

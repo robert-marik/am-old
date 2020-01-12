@@ -1,0 +1,151 @@
+\nonstopmode
+\documentclass[twocolumn]{report}
+\setcounter{tocdepth}{1}
+
+\usepackage{xcolor}
+\usepackage{lmodern}
+
+\usepackage[margin=1cm, bottom=1in, top=1in, a4paper]{geometry}\everymath{\displaystyle}
+\usepackage[innerleftmargin=3pt, innerrightmargin=3pt, leftline=false, rightline=false, skipabove=0pt, skipbelow=0pt, linewidth = 1pt, nobreak=true]{mdframed}
+
+\usepackage{amssymb,amsmath,breqn}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage[]{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\PassOptionsToPackage{hyphens}{url} % url is loaded by hyperref
+\usepackage[unicode=true, colorlinks]{hyperref}
+\hypersetup{
+            pdftitle={Funkce},
+            pdfauthor={Robert Mařík},
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+
+\usepackage[czech]{babel}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxwidthdefault{\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\usepackage[font=footnotesize]{caption}
+\usepackage{supertabular,booktabs}
+
+
+% set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+
+
+\let\oldcaption\caption
+\def\caption#1{{\oldcaption{\footnotesize \itshape  #1}}}
+\renewenvironment{quote}{\par\medskip\zahlavi}{\konec}
+\def\pismenoV{V}
+\def\pismenoD{D}
+\def\pismenoE{e}
+\def\uloztoken#1#2#3;;;;{\def\ulozene{#1}\def\ulozeneB{#2}}
+\def\zahlavi #1.{\uloztoken #1;;;;\noindent%
+\def\konec{\par\bigskip}%
+\ifx\ulozene\pismenoD\ifx\ulozeneB\pismenoE\begin{mdframed}[linecolor=blue, innerrightmargin=0pt, innerleftmargin=0pt]\def\konec{\end{mdframed}}\else\let\ulozene\pismenoV\fi\fi
+\ifx\ulozene\pismenoV\itshape\begin{mdframed}[linecolor=gray,backgroundcolor=yellow]\def\konec{\end{mdframed}}\fi
+\textbf{\upshape \ignorespaces #1.}
+}
+
+\rightskip 0 pt plus 1 em
+
+\def\dm\[#1\]{\begin{dmath*} #1\end{dmath*}}
+
+
+\pagestyle{headings}
+\let\endhead\relax
+\title{Aplikovaná matematika}
+\author{Robert Mařík}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+\tableofcontents
+
+\chapter{Parciální derivace}
+\input 01
+
+\chapter{Gradient}
+\input 02
+
+\chapter{Divergence}
+\input 03
+
+\chapter{Rotace}
+\input 04
+
+\chapter{Křivkový integrál}
+\input 05
+
+\chapter{Dvojný integrál}
+\input 06
+
+\chapter{Greenova věta}
+\input 07
+
+\chapter{Diferenciální rovnice}
+\input 08
+
+\chapter{Lienární operátory a lineární diferenciální rovnice}
+ \input 09
+
+ \chapter{Autonomní systémy}
+ \input 10
+
+ \chapter{Lineární diferenciální rovnice druhého řádu}
+ \input 11
+
+% \chapter{Vybrané postupy numerické matematiky}
+% \input 12
+
+\end{document}
+
