@@ -66,7 +66,7 @@ zavést potenciál (záporně vzatá kmenová funkce).
 >    integrační cestě.
 >  b. Křivkový integrál $\oint_C \vec F\mathrm{d}\vec r$ po libovolné
 >    uzavřené křivce $C$ v $\Omega$ je roven nule.
->  c. Rotace $\mathop{\mathrm{rot}} \vec F$ vektorového pole $\vec F$ je v\ $\Omega$
+>  c. Rotace $\nabla\times \vec F$ vektorového pole $\vec F$ je v\ $\Omega$
 >    rovna nulovému vektoru.
 >  d. Existuje funkce $\varphi$ s\ vlastností $\nabla\varphi=\vec F$
 >    na $\Omega$.
@@ -85,7 +85,7 @@ zavést potenciál (záporně vzatá kmenová funkce).
 Větu je možno formálně vyslovit i\ pro jiný než trojrozměrný
 prostor. Pokud je pole v\ předchozí větě pouze v\ rovině, tj. $\vec
 F=(F_x, F_y)$, doplníme třetí komponentu pro výpočet rotace
-nulou. Protože $\mathop{\mathrm{rot}} \vec F=\left(\frac {\partial F_x}{\partial y}-\frac {\partial F_y}{\partial x}\right)\vec k$, přechází podmínka na nulovost rotace v\ nám již známou nutnou a postačující podmínku 
+nulou. Protože $\nabla \times\vec F=\left(\frac {\partial F_x}{\partial y}-\frac {\partial F_y}{\partial x}\right)\vec k$, přechází podmínka na nulovost rotace v\ nám již známou nutnou a postačující podmínku 
 $$
 \frac {\partial F_x}{\partial y}=\frac {\partial F_y}{\partial x}
 $$
@@ -145,7 +145,7 @@ $z=0$ je roven $2\pi$.
 > oblast $\Omega$ vlevo. Nechť vektorová funkce $\vec
 > F(x,y)=P(x,y)\vec i+Q(x,y)\vec j$ je hladká uvnitř nějaké oblasti,
 > obsahující množinu $\Omega$ a její hranici $\partial \Omega$. Platí
-> $$   \underbrace{\oint_{\partial \Omega}P(x,y)\mathrm{d}x +Q(x,y)\mathrm{d}y }_{\text{Cirkulace po hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}\right)}_{[\mathop{\mathrm{rot}} (P\vec i+Q\vec j)]_z}\mathrm{d}x \mathrm{d}y. $$
+> $$   \underbrace{\oint_{\partial \Omega}P(x,y)\mathrm{d}x +Q(x,y)\mathrm{d}y }_{\text{Cirkulace po hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}\right)}_{[\nabla \times (P\vec i+Q\vec j)]_z}\mathrm{d}x \mathrm{d}y. $$
 
 \iffalse
 
@@ -155,7 +155,7 @@ $z=0$ je roven $2\pi$.
 Použijeme-li pro funkci $\vec F$ vystupující v\ Greenově větě
 třídimenzionální rozšíření (třetí komponenta nulová),
 vidíme, že vpravo v\ dvojném integrálu figuruje třetí komponenta rotace
-$\mathop{\mathrm{rot}} \vec F$. Je to současně jediná nenulová komponenta vektoru
+$\nabla \times \vec F$. Je to současně jediná nenulová komponenta vektoru
 rotace, zbylé dvě komponenty vektoru rotace jsou rovny nule.
 
 Pokud zvolíme funkce $P$ a $Q$ tak, že platí $\frac{\partial
