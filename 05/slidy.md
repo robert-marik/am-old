@@ -127,9 +127,7 @@ $$
 \mathrm{d}s=\sqrt{\varphi^{\prime 2}(t)+\psi^{\prime 2}(t)+\xi^{\prime 2}(t)}\mathrm{dt}
 $$
 a integrál má tvar
-$$
-\int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{\varphi^{\prime 2}(t)+\psi^{\prime 2}(t)+\xi^{\prime 2}(t)}\;\mathrm{d} t.
-$$
+\dm$$ \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{\varphi^{\prime 2}(t)+\psi^{\prime 2}(t)+\xi^{\prime 2}(t)}\;\mathrm{d} t. $$
 
 
 # Aplikace křivkového integrálu prvního druhu

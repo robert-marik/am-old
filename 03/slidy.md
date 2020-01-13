@@ -48,11 +48,15 @@ podle času. Měřit změny v toku přenášejícím sledovanou veličinu jsme s
 
 # Změna toku vektorového pole
 
+\iffalse 
+
 <div class='obtekat'>
 
 ![Divergence a tok pole $\vec q=(0,Q, R)$ tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence_kostka.png)
 
 </div>
+
+\fi 
 
 Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v daném místě mění.
 

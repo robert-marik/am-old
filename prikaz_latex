@@ -26,9 +26,9 @@ do
   sed -i 's/\\end{longtable}/\\end{supertabular}\\par}/g' $jj.tex
 
   vlna pdfslide.tex
-  pdflatex slidy.tex
-  pdflatex slidy.tex
-  cp slidy.pdf ../$i.pdf
+  ###pdflatex slidy.tex
+  ###pdflatex slidy.tex
+  ###cp slidy.pdf ../$i.pdf
   #cp slidy.pdf ../$jj.pdf
   cd ..
 #  rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mt/mat-slidy/

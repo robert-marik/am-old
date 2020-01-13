@@ -27,7 +27,7 @@ $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 
 > Poznámka (pohybová rovnice). Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je       $\frac{\mathrm dx}{\mathrm dt}$ a zrychlení je $\frac{\mathrm d^2x}{\mathrm dt^2}$. Podle       Newtonova pohybového zákona platí $$\frac{\mathrm d^2x}{\mathrm dt^2} =F,$$ kde       $F$ je výsledná síla působící na objekt.
 
-> Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočíchů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice       $$\frac{dx}{dt}=r x (K-x)$$       kdy předpokládáme, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Konstanta $K$ je celková kapacita prostředí. 
+> Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočíchů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice       $$\frac{\mathrm dx}{\mathrm dt}=r x (K-x)$$       kdy předpokládáme, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Konstanta $K$ je celková kapacita prostředí. 
 
 > Poznámka (lineární aproximace, materiálové vztahy). Malá změna $\mathrm dx$ v proměnné $x$ vyvolá změnu $\mathrm dy=f'(x) \mathrm dx$. Proto je možné používat lineární aproximaci funkce $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).  $$       Například naprostá většina materiálových vztahů je takovou aproximací pro $x_0=0$ (relativně malé podněty) a $f(x_0)=0$ (bez podnětu není odezva). Proto jsou zákony jako Fourierův, Fickův nebo Darcyho formulovány ve tvaru přímé úměrnosti. S těmito zákony jste se pravděpodobně seznámili v nauách o materiálu, blíže se jim budeme věnovat později.
 
@@ -460,10 +460,7 @@ $$E(m,v)=2.65 m^{0.66} + \frac{3.5 m^{0.75}}{v}.$$
 Přímým výpočtem je možné určit
 $$\frac{\partial E}{\partial v}=-\frac{3.5 m^{0.75}}{v^2}.$$ Pro $m=400\,\mathrm{g}$ a $v=8\,\mathrm{km}\,\mathrm{h}^{-1}$ dostáváme
 $$\frac{\partial E}{\partial v}(400,8)=-4.9\,\mathrm{kcal}\,\mathrm{km}^{-1}\mathrm{h}.$$ Zvýšení rychlosti o kilometr za hodinu vede ke snížení energetického výdeje ještěrky o $4.9\,\mathrm{kcal}$. Podobně, platí
-$$\frac{\partial E}{\partial m}=
-{2.65}\times 0.66 {m^{-0.34}} + \frac{3.5\times 0.75 m^{-0.25}}{v}=
-\frac{1.749}{m^{0.34}} + \frac{2.625}{m^{0.25} v}
-$$
+\dm $$\frac{\partial E}{\partial m}={2.65}\times 0.66 {m^{-0.34}} + \frac{3.5\times 0.75 m^{-0.25}}{v}= \frac{1.749}{m^{0.34}} + \frac{2.625}{m^{0.25} v} $$
 a pro výše uvažované hodnoty dostáváme
 $$\frac{\partial E}{\partial m}(400,8)=
 0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.

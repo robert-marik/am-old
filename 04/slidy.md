@@ -75,11 +75,7 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
   $$
 
 
-* Výsledkem rotace je tedy vektorové pole, jehož komponenty jsou $$\nabla \times \vec
-  F=\left(\frac{\partial R}{\partial y}-\frac{\partial
-    Q}{\partial z}\right)\vec \imath +\left( \frac{\partial P}{\partial z}-\frac{\partial
-    R}{\partial x}\right)\vec \jmath + \left( \frac{\partial Q}{\partial x}-\frac{\partial
-    P}{\partial y}\right)\vec k.$$  
+* Výsledkem rotace je tedy vektorové pole, jehož komponenty jsou \dm$$\nabla \times \vec F=\left(\frac{\partial R}{\partial y}-\frac{\partial    Q}{\partial z}\right)\vec \imath +\left( \frac{\partial P}{\partial z}-\frac{\partial    R}{\partial x}\right)\vec \jmath + \left( \frac{\partial Q}{\partial x}-\frac{\partial    P}{\partial y}\right)\vec k.$$
 
 
 <div class="obtekat">

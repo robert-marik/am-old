@@ -8,11 +8,7 @@
 **Operátorem** rozumíme zobrazení, které má na vstupu i na výstupu
 funkci. Například pro funkce jedné proměnné mohou být operátory
 derivace, druhá derivace, vynásobení funkce funkcí $\ln x$ anebo vnoření zadané funkce do funkce $\ln x$. Tj. pro $y=y(x)$ můžeme uvažovat operátory
-$$F_1[y]=\frac{dy}{dx}, \quad
-F_2[y]=\frac{d^2y}{dx^2}, \quad 
-F_3[y](x)=y(x)\ln(x), \quad 
-F_4[y](x)=\ln(y(x)).
-$$
+\dm $$F_1[y]=\frac{\mathrm dy}{\mathrm dx}, \quad F_2[y]=\frac{d^2y}{dx^2}, \quad  F_3[y](x)=y(x)\ln(x), \quad  F_4[y](x)=\ln(y(x)). $$
 
 \iffalse 
 
@@ -31,16 +27,16 @@ funkce $y_1$ a $y_2$ z definičního oboru operátoru $L$.
 
 # Příklady lineárních operátorů
 
-* Operátor derivace, tj. operátor definovaný vztahem $L[y]=\frac{dy}{dx}$ je lineární.
+* Operátor derivace, tj. operátor definovaný vztahem $L[y]=\frac{\mathrm dy}{\mathrm dx}$ je lineární.
 * Buď dána funkce $a(x)$. Operátor násobení funkcí $a(x)$, tj. $L[y](x)=a(x)y(x)$ je lineární.
 * Složení (postupná aplikace) lineárních operátorů je lineární operátor. Například tedy
-$$\frac{d^2 y}{dx^2}$$ je lineární operátor.
+$$\frac{\mathrm d^2 y}{\mathrm dx^2}$$ je lineární operátor.
 * Součet lineárních operátorů je lineární operátor. 
 * Buď pevně dána funkce $a(x)$. Lineární operátor
-$$L[y]=\frac{dy}{dx}+a(x)y$$
+$$L[y]=\frac{\mathrm dy}{\mathrm dx}+a(x)y$$
 se nazývá *lineární diferenciální operátor prvního řádu*.
 * Buďte pevně dány funkce $p(x)$ a $q(x)$. Lineární operátor
-$$L[y]=\frac{d^2y}{dx^2}+p(x)\frac{dy}{dx}+q(x)y$$
+$$L[y]=\frac{\mathrm d^2y}{\mathrm dx^2}+p(x)\frac{\mathrm dy}{\mathrm dx}+q(x)y$$
 se nazývá *lineární diferenciální operátor druhého řádu*.
 
 # Princip superpozice
@@ -225,7 +221,7 @@ kde $Cy_{p0}(x)$ je obecným řešením asociované homogenní LDE.
 
 
 * Vskutku, jestliže $L[y_p]=b(x)$ a $L[y_{p0}(x)]=0$, potom 
-  $$L[y]=L[Cy_{p0}+y_p]=CL[y_{p0}]+L[y_p]=C\cdot 0+b(x)=b(x).$$
+  \dm$$L[y]=L[Cy_{p0}+y_p]=CL[y_{p0}]+L[y_p]=C\cdot 0+b(x)=b(x).$$
   Funkce $y(x)$ tedy je řešením.
 * Pokud potřebujeme splnit libovolnou počáteční podmínku $y(x_0)=y_0$,
   kde $x_0,y_0\in\mathbb{R}$, stačí vzít řešení
@@ -248,7 +244,7 @@ Slovně:
 Stačí tedy najít dvě (do jisté míry speciální) řešení a z\ nich snadno
 sestavíme obecné řešení zadané rovnice. 
 
-> Příklad: Rovnice $$y'+y=3 \tag{*}$$ má partikulární řešení $y=3$ (vidíme
+> Příklad. Rovnice $$y'+y=3 \tag{*}$$ má partikulární řešení $y=3$ (vidíme
   hned po dosazení). Asociovaná homogenní rovnice $$y'+y=0$$ má obecné
   řešení $y=Ce^{-x}$. Obecné řešení rovnice (*) tedy je 
 	  $$y=3+Ce^{-x}.$$

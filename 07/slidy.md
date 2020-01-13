@@ -145,7 +145,7 @@ $z=0$ je roven $2\pi$.
 > oblast $\Omega$ vlevo. Nechť vektorová funkce $\vec
 > F(x,y)=P(x,y)\vec i+Q(x,y)\vec j$ je hladká uvnitř nějaké oblasti,
 > obsahující množinu $\Omega$ a její hranici $\partial \Omega$. Platí
-> $$   \underbrace{\oint_{\partial \Omega}P(x,y)\mathrm{d}x +Q(x,y)\mathrm{d}y }_{\text{Cirkulace po hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}\right)}_{[\nabla \times (P\vec i+Q\vec j)]_z}\mathrm{d}x \mathrm{d}y. $$
+> \dm$$   \underbrace{\oint_{\partial \Omega}P(x,y)\mathrm{d}x +Q(x,y)\mathrm{d}y }_{\text{Cirkulace po hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}\right)}_{[\nabla \times (P\vec i+Q\vec j)]_z}\mathrm{d}x \mathrm{d}y. $$
 
 \iffalse
 
@@ -173,10 +173,7 @@ i+P\vec j$, dostáváme následující vztah mezi dvojným integrálem
 divergence vektorového pole přes oblast $\Omega$ a křivkovým
 integrálem vyjadřujícím tok vektorového pole $P\vec i+Q\vec j$
 protékající přes hranici $\partial \Omega$.
-$$
-  \underbrace{\oint_{\partial \Omega}-Q(x,y)\mathrm{d}x +P(x,y)\mathrm{d}y }_{\text{Tok přes hranici $\partial \Omega$}}=
-  \iint_{\Omega}\underbrace{\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)}_{\mathop{\mathrm{div}} (P\vec i +Q\vec j)}\mathrm{d}x \mathrm{d}y 
-$$
+\dm $$  \underbrace{\oint_{\partial \Omega}-Q(x,y)\mathrm{d}x +P(x,y)\mathrm{d}y }_{\text{Tok přes hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)}_{\mathop{\mathrm{div}} (P\vec i +Q\vec j)}\mathrm{d}x \mathrm{d}y $$
 Výše popsaně dvě varianty Greenovy věty nám dávají možnost najít
 fyzikální interpretaci operátorů divergence a rotace. Podíl dvojného
 integrálu funkce $f$ přes oblast $\Omega$ a obsahu této oblasti je
