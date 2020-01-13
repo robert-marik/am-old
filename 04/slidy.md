@@ -7,26 +7,26 @@
 * Studujeme funkce $\mathbb{R}^2\to\mathbb{R}^2$ nebo $\mathbb{R}^3\to\mathbb{R}^3$.
 * Bodům v rovině jsou přiřazeny vektory. Můžeme interpretovat jako rychlostní pole nebo silové pole. 
 * 2D: $\vec F:\mathbb {R}^2 \to \mathbb {R}^2$, ve složkách píšeme
-  $$ \vec F = (P, Q) = P\vec i + Q\vec j,$$ kde $P$ a $Q$ jsou (skalární) funkce dvou proměnných.
+  $$ \vec F = (P, Q) = P\vec \imath + Q\vec \jmath,$$ kde $P$ a $Q$ jsou (skalární) funkce dvou proměnných.
 * 3D: $\vec F:\mathbb {R}^3 \to \mathbb {R}^3$, ve složkách píšeme
-  $$ \vec F = (P, Q, R) = P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou (skalární) funkce tří  proměnných.
+  $$ \vec F = (P, Q, R) = P\vec \imath + Q\vec \jmath + R\vec k,$$ kde $P$, $Q$ a $R$ jsou (skalární) funkce tří  proměnných.
 
 
 # Příklady vektorových polí v rovině
 
-* Homogenní pole $$\vec F_1=(0,-1)=-\vec j.$$ Každý vektor je stejný (směr i velikost).
-* Radiální pole $$\vec F_2=(x,y)=x\vec i+y\vec j.$$ Každý vektor směřuje od počátku souřadnic.
-* Rotující pole $$\vec F_3=(-y,x)=-y\vec i+x\vec j.$$ Je kolmé na radiální pole. Každý vektor je tečný ke kružnici se středem v počátku souřadnic. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJyr0KlUsFUoSyzSUK_QqVTX5OVKBPILcvJL4stSk0vyi-LTMlNzUjQ0gLKaOgpAStdYxxjEqoSxkvNz8ots1ZNySlNB-pOw69et1KnAb0BRagpIf3FGfrlGooK2QpKOQmJxAdCQ-KLEksx8W0NNAAglMj4=&lang=sage)
+* Homogenní pole $$\vec F_1=(0,-1)=-\vec \jmath.$$ Každý vektor je stejný (směr i velikost).
+* Radiální pole $$\vec F_2=(x,y)=x\vec \imath+y\vec \jmath.$$ Každý vektor směřuje od počátku souřadnic.
+* Rotující pole $$\vec F_3=(-y,x)=-y\vec \imath+x\vec \jmath.$$ Je kolmé na radiální pole. Každý vektor je tečný ke kružnici se středem v počátku souřadnic. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJyr0KlUsFUoSyzSUK_QqVTX5OVKBPILcvJL4stSk0vyi-LTMlNzUjQ0gLKaOgpAStdYxxjEqoSxkvNz8ots1ZNySlNB-pOw69et1KnAb0BRagpIf3FGfrlGooK2QpKOQmJxAdCQ-KLEksx8W0NNAAglMj4=&lang=sage)
 * Radiální pole s konstantní velikostí vektorů $$\vec
-  F_4=\frac{\vec F_2}{|\vec F_2|}=\frac{(x,y)}{\sqrt{x^2+y^2}}=\frac{x\vec i +y\vec j}{\sqrt{x^2+y^2}}.$$ Každý vektor směřuje od počátku
+  F_4=\frac{\vec F_2}{|\vec F_2|}=\frac{(x,y)}{\sqrt{x^2+y^2}}=\frac{x\vec \imath +y\vec \jmath}{\sqrt{x^2+y^2}}.$$ Každý vektor směřuje od počátku
   souřadnic a má jednotkovou délku.
 * Radiální pole ubývající s kvadrátem vzdálenosti od počátku a mířící
   do středu $$\vec F_5=-\frac{\vec
-  F_4}{x^2+y^2}=-\frac{x \vec i+y\vec j}{(x^2+y^2)^{3/2}}.$$ S druhou mocninou ve jmenovateli ubývá například  3D gravitační pole nebo elektrostatické pole generované
+  F_4}{x^2+y^2}=-\frac{x \vec \imath+y\vec \jmath}{(x^2+y^2)^{3/2}}.$$ S druhou mocninou ve jmenovateli ubývá například  3D gravitační pole nebo elektrostatické pole generované
   hmotným bodem nebo koulí.
 * Rychlost při proudění vazké tekutiny ubývá směrem ke
   stěnám. Tekutinu proudící doprava je možné pro $y\in [0,1]$
-  modelovat vektorovým polem $$\vec F_6=(y(1-y),0)=y(1-y)\vec i.$$
+  modelovat vektorovým polem $$\vec F_6=(y(1-y),0)=y(1-y)\vec \imath.$$
 
 # Totální diferenciál
 
@@ -64,13 +64,12 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 
 
 > Definice (rotace vektorového pole). Pro vektorovou funkci tří proměnných  $$\vec
-  F=P\vec
-  i+Q\vec j+R\vec k$$ definujeme operátor <span class='red'>rotace</span> symbolicky
+  F=P\vec \imath+Q\vec \jmath+R\vec k$$ definujeme operátor <span class='red'>rotace</span> symbolicky
   vztahem
   $$
   \mathop{\mathrm{rot}} \vec F=\nabla \times \vec F=
   \begin{vmatrix}
-    \vec i & \vec j &\vec k\\
+    \vec \imath & \vec \jmath &\vec k\\
     \frac{\partial }{\partial x}   & \frac{\partial }{\partial y} &   \frac{\partial }{\partial z}\\ P &Q &R
   \end{vmatrix}.
   $$
@@ -78,8 +77,8 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 
 * Výsledkem rotace je tedy vektorové pole, jehož komponenty jsou $$\nabla \times \vec
   F=\left(\frac{\partial R}{\partial y}-\frac{\partial
-    Q}{\partial z}\right)\vec i +\left( \frac{\partial P}{\partial z}-\frac{\partial
-    R}{\partial x}\right)\vec j + \left( \frac{\partial Q}{\partial x}-\frac{\partial
+    Q}{\partial z}\right)\vec \imath +\left( \frac{\partial P}{\partial z}-\frac{\partial
+    R}{\partial x}\right)\vec \jmath + \left( \frac{\partial Q}{\partial x}-\frac{\partial
     P}{\partial y}\right)\vec k.$$  
 
 
@@ -111,9 +110,9 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 
 # Rotace významných polí
 
-* Dostředivé pole ubývající s libovolnou mocninou vzdálenosti má nulovou rotaci. Pro $$\vec F(x,y)=-\frac{x\vec i +y \vec j}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=0.$$ [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3Q16iIM9KujDPSjMvT0a1E4RoAVRZn5JdrQJTDeBoKKZlpaRpu0YaxYHGdCk1dqIgBVKRSU0FTrzgztyAnM60yPq00J0cDKAIAmQYn8A==&lang=sage)
+* Dostředivé pole ubývající s libovolnou mocninou vzdálenosti má nulovou rotaci. Pro $$\vec F(x,y)=-\frac{x\vec \imath +y \vec \jmath}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=0.$$ [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3Q16iIM9KujDPSjMvT0a1E4RoAVRZn5JdrQJTDeBoKKZlpaRpu0YaxYHGdCk1dqIgBVKRSU0FTrzgztyAnM60yPq00J0cDKAIAmQYn8A==&lang=sage)
 
-* Rotace pole kolmého na dostředivé pole závisí na mocnině, se kterou toto pole ubývá. Pro $$\vec F(x,y)=\frac{-y\vec i +x\vec j}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=-\frac{2(n-1)}{(x^2+y^2)^n}\vec k.$$ Všechna tato pole rotují (ve smyslu celkového pohybu) proti směru hodinových ručiček, rotace (ve smyslu operátoru rotace) je však jednou kladná a jednou záporná, podle znaménka výrazu $n-1$. Pokud bychom takovým polem nechali unášet drobný míček, v jednom případě by jej pole otáčelo po směru a v jiném případě proti směru hodinových ručiček. Pro $n=1$ by se míček neroztočil okolo vlastní osy vůbec. [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3U16iIM9KujDPSjMvTqUDhGQAVFmfkl2tAVMN4GgopmWlpGm7RhrFgcZ0KTV2oiAFUpFJTQVOvODO3ICczrTI-rTQnRwMoAgB8XCfD&lang=sage) [Nakreslit online.](https://sagecell.sagemath.org/?z=eJztVNFOwjAUfV-yf7iJmLWzDIEXQjL_AoIhxJRRsLHrZtdp-_e2hQVZUJ-N3jXr3T1n3d3pSXlZV0qDbMvaAm1A1nHEj7WS6lpUWvBtVlufebwWOo78teeH3D1kbm4VQ2OCZmSGMcQRNZCDK2eHgiIcR55lXoqdz-PIlFwSMCU1BGzIbRneGE4JuBEmT3SI4CXXDhqPJgTus3EcNc_VO3rWpUDJQOa3zSC5FVQzgyTGYfkd28Nub5AhFs9BMd0qCWhoR8ik6eTOuhtOU4k7pu0xzXXii2KN4PqCfCY-hEZP3xeaupbvs0kcrcgjWZBlvt6QbgTpKgUGuHRiZ1RReWDosyphCTyPI3DhufaSe1atx_XBe72eER-ru3xtNpe1R1ezvdrC1ToVe9AyQLaDjtv72vI3ptDpfwkUlahUnmwT7O2QNUw_0aZmhUYJe22pSAgkO6qp0y05OSTsbJDw5npMj777bAsCYy_zj6b4DbbwGhRif5Tg3yHfOuQLj_Ts4c6MSTb9t8efsscHFNPTYw==&lang=sage)
+* Rotace pole kolmého na dostředivé pole závisí na mocnině, se kterou toto pole ubývá. Pro $$\vec F(x,y)=\frac{-y\vec \imath +x\vec \jmath}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=-\frac{2(n-1)}{(x^2+y^2)^n}\vec k.$$ Všechna tato pole rotují (ve smyslu celkového pohybu) proti směru hodinových ručiček, rotace (ve smyslu operátoru rotace) je však jednou kladná a jednou záporná, podle znaménka výrazu $n-1$. Pokud bychom takovým polem nechali unášet drobný míček, v jednom případě by jej pole otáčelo po směru a v jiném případě proti směru hodinových ručiček. Pro $n=1$ by se míček neroztočil okolo vlastní osy vůbec. [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3U16iIM9KujDPSjMvTqUDhGQAVFmfkl2tAVMN4GgopmWlpGm7RhrFgcZ0KTV2oiAFUpFJTQVOvODO3ICczrTI-rTQnRwMoAgB8XCfD&lang=sage) [Nakreslit online.](https://sagecell.sagemath.org/?z=eJztVNFOwjAUfV-yf7iJmLWzDIEXQjL_AoIhxJRRsLHrZtdp-_e2hQVZUJ-N3jXr3T1n3d3pSXlZV0qDbMvaAm1A1nHEj7WS6lpUWvBtVlufebwWOo78teeH3D1kbm4VQ2OCZmSGMcQRNZCDK2eHgiIcR55lXoqdz-PIlFwSMCU1BGzIbRneGE4JuBEmT3SI4CXXDhqPJgTus3EcNc_VO3rWpUDJQOa3zSC5FVQzgyTGYfkd28Nub5AhFs9BMd0qCWhoR8ik6eTOuhtOU4k7pu0xzXXii2KN4PqCfCY-hEZP3xeaupbvs0kcrcgjWZBlvt6QbgTpKgUGuHRiZ1RReWDosyphCTyPI3DhufaSe1atx_XBe72eER-ru3xtNpe1R1ezvdrC1ToVe9AyQLaDjtv72vI3ptDpfwkUlahUnmwT7O2QNUw_0aZmhUYJe22pSAgkO6qp0y05OSTsbJDw5npMj777bAsCYy_zj6b4DbbwGhRif5Tg3yHfOuQLj_Ts4c6MSTb9t8efsscHFNPTYw==&lang=sage)
 
 <!--
 # Rotace gradientu je nulový vektor
@@ -126,14 +125,14 @@ $$\begin{aligned}
 &=\left( \frac{\partial\varphi}{\partial x},\frac{\partial\varphi}{\partial y},\frac{\partial\varphi}{\partial z}\right)\\
 \nabla\times\vec F
 &=\begin{vmatrix}
-    \vec i & \vec j &\vec k\\
+    \vec \imath & \vec \jmath &\vec k\\
     \frac{\partial }{\partial x}   & \frac{\partial }{\partial y} &   \frac{\partial }{\partial z}\\
 \frac{\partial\varphi}{\partial x} &\frac{\partial\varphi}{\partial y} &\frac{\partial\varphi}{\partial z}
 \end{vmatrix}
 \\&=
-\vec i \left( \frac{\partial}{\partial y}\frac{\partial\varphi}{\partial z} - \frac{\partial}{\partial z}\frac{\partial\varphi}{\partial y} \right)
+\vec \imath \left( \frac{\partial}{\partial y}\frac{\partial\varphi}{\partial z} - \frac{\partial}{\partial z}\frac{\partial\varphi}{\partial y} \right)
 +
-\vec j \left( \frac{\partial}{\partial z}\frac{\partial\varphi}{\partial x} - \frac{\partial}{\partial x}\frac{\partial\varphi}{\partial z} \right)
+\vec \jmath \left( \frac{\partial}{\partial z}\frac{\partial\varphi}{\partial x} - \frac{\partial}{\partial x}\frac{\partial\varphi}{\partial z} \right)
 \\&\quad +
 \vec k \left( \frac{\partial}{\partial x}\frac{\partial\varphi}{\partial y} - \frac{\partial}{\partial y}\frac{\partial\varphi}{\partial x} \right)
 \end{aligned}
@@ -157,9 +156,9 @@ lépe pracuje.
 
 Buď $\vec F:\mathbb{R}^3\to\mathbb{R}^3$ hladké vektorové pole. Vypočtěte $\nabla \cdot (\nabla \times \vec F)$
 
-*Řešení.* $$\vec F=P\vec i+Q\vec j + R\vec k$$
+*Řešení.* $$\vec F=P\vec \imath+Q\vec \jmath + R\vec k$$
 
- \dm  $$  \nabla\times\vec F=\nabla \times \vec F=  \begin{vmatrix}    \vec i & \vec j &\vec k\\    \frac{\partial }{\partial x}   & \frac{\partial }{\partial y} &   \frac{\partial }{\partial z}\\ P &Q &R  \end{vmatrix}  =\left(\frac{\partial R}{\partial y}-\frac{\partial    Q}{\partial z}\right)\vec i +\left( \frac{\partial P}{\partial z}-\frac{\partial    R}{\partial x}\right)\vec j + \left( \frac{\partial Q}{\partial x}-\frac{\partial    P}{\partial y}\right)\vec k.$$
+ \dm  $$  \nabla\times\vec F=\nabla \times \vec F=  \begin{vmatrix}    \vec \imath & \vec \jmath &\vec k\\    \frac{\partial }{\partial x}   & \frac{\partial }{\partial y} &   \frac{\partial }{\partial z}\\ P &Q &R  \end{vmatrix}  =\left(\frac{\partial R}{\partial y}-\frac{\partial    Q}{\partial z}\right)\vec \imath +\left( \frac{\partial P}{\partial z}-\frac{\partial    R}{\partial x}\right)\vec \jmath + \left( \frac{\partial Q}{\partial x}-\frac{\partial    P}{\partial y}\right)\vec k.$$
 
 Použijeme definici divergence, větu o derivaci součtu a přeskupíme sčítance.
   $$
@@ -385,12 +384,12 @@ table {
 |Laplaceův operátor | $\nabla^2 f=\nabla \cdot(\nabla f)=\frac{\partial^2 f}{(\partial x)^2} + \frac{\partial^2 f}{(\partial y)^2}+ \frac{\partial^2 f}{(\partial z)^2}$ |
 | Lin. aproximace | $f(x,y,z)\approx f(x_0,y_0,z_0)+\nabla f(x_0,y_0,z_0)\cdot(x-x_0, y-y_0, z-z_0)$ |
 
-* **Vektorová funkce $\vec F(x,y,z)=P(x,y,z)\vec i+Q(x,y,z)\vec j + R(x,y,z)\vec k$**
+* **Vektorová funkce $\vec F(x,y,z)=P(x,y,z)\vec \imath+Q(x,y,z)\vec \jmath + R(x,y,z)\vec k$**
 
 |Operátor        |Výpočet                                                                         |
 |----------------|------------------------------------------------------------------------------------|
 | Divergence | $\mathop{\mathrm{div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}$ |
-| Rotace | ${  \mathop{\mathrm{rot}} \vec F=\nabla \times \vec F=   \begin{vmatrix}     \vec i & \vec j &\vec k\\     \frac{\partial }{\partial x}   & \frac{\partial }{\partial y} &   \frac{\partial }{\partial z}\\ P &Q &R   \end{vmatrix}}$ |
+| Rotace | ${  \mathop{\mathrm{rot}} \vec F=\nabla \times \vec F=   \begin{vmatrix}     \vec \imath & \vec \jmath &\vec k\\     \frac{\partial }{\partial x}   & \frac{\partial }{\partial y} &   \frac{\partial }{\partial z}\\ P &Q &R   \end{vmatrix}}$ |
 
 * Případy pro jiný počet proměnných a jiné dimenze vektorů dostaneme
   analogicky, s výjimkou rotace.
@@ -428,12 +427,12 @@ nahradíme příslušné veličiny a charakteristiky objektů.
 #### *Rovnice kontinuity* 
 
 Zákon zachování veličiny která může vznikat, zanikat a téct, veličina
-$\rho$ vyjadřuje prostorovou hustotu a $\vec j$ tok a $s$ intenzita
+$\rho$ vyjadřuje prostorovou hustotu a $\vec \jmath$ tok a $s$ intenzita
 zdrojů a spotřebičů. Jejími některými makroskopickými důsledky jsou
 první Kirchhofův zákon nebo rovnice spojitosti v hydrodynamice.
 
 $$    
-\frac{\partial\rho}{\partial t}+\nabla \vec j=s
+\frac{\partial\rho}{\partial t}+\nabla \vec \jmath=s
 $$
 
 
@@ -488,7 +487,7 @@ $$
       \mathop{\mathrm{div}}\vec E&=\frac{\rho}{\epsilon_0}&&&
       \mathop{\mathrm{div}} \vec B&=0\\
       \mathop{\mathrm{rot}}\vec E&=-\frac{\partial \vec B}{\partial t}&&&
-      \mathop{\mathrm{rot}}\vec B&=\mu_0\vec j+\mu_0\epsilon_0\frac{\partial\vec E}{\partial t}
+      \mathop{\mathrm{rot}}\vec B&=\mu_0\vec \jmath+\mu_0\epsilon_0\frac{\partial\vec E}{\partial t}
 \end{aligned}
 $$
 
