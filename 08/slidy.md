@@ -618,7 +618,7 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 
 
 > Definice (ODE se separovanými proměnnými). Diferenciální rovnice tvaru
-> $$    y'=f(x)g(y) \tag{S}$$
+> $$    \frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y) \tag{S}$$
 > kde $f$ a $g$ jsou funkce spojité na (nějakých) otevřených intervalech
 > se nazývá *obyčejná diferenciální rovnice se separovanými proměnnými.*
 
@@ -661,7 +661,7 @@ $$
 
 Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou parciální derivace podle $y$, jak je zmíněno v úvodu přednášky. Nicméně pro diferenciální rovnici se separovanými proměnnými je možné vyslovit následující mnohem jednodušší postačující podmínku pro jednoznačnost řešení.
 
-> Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$y'=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
+> Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 
 
 # Diferenciální rovnice růstu vodní kapky
