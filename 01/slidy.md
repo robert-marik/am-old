@@ -184,7 +184,7 @@ průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
 V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je Taylorův polynom jako nejlepší lineární aproximace funkce
 
 > Věta (Taylorova věta pro kvadratický polynom).
-> Platí $$f(x+h)=f(x_0)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
+> Platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
 
 # Numerická aproximace: konečné diference II
 
