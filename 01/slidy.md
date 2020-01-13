@@ -181,17 +181,10 @@ průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
 
 # Opakování: Taylorův polynom a polynomiální aproximace v 1D
 
-V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je Taylorův polynom.
+V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je Taylorův polynom jako nejlepší lineární aproximace funkce
 
-> Definice (Taylorův polynom).
-> *Taylorův polynom* stupně $n$ pro funkci $f$ v bodě $x_0$ je polynom 
-\dm$$T(x)=f(x_0)+f'(x_0)(x-x_0)+\frac{1}{2!}f''(x_0)(x-x_0)^2+\cdots +\frac{1}{n!}f^{(n)}(x_0)(x-x_0)^n,$$ 
-tj.
-\dm$$T(x)=f(x_0)+\frac {\mathrm df(x_0)}{\mathrm dx}(x-x_0)+\frac{1}{2!} \frac {\mathrm d^2f(x_0)}{\mathrm dx^2} (x-x_0)^2+\cdots +\frac{1}{n!}\frac {\mathrm d^nf(x_0)}{\mathrm dx^n}(x-x_0)^n.$$
-
-> Věta (Taylorova věta s Lagrangeovým tvarem zbytku).
-> Platí $$f(x)-T(x)=\frac{1}{(n+1)!}\frac {\mathrm d^{n+1}f(\xi)}{\mathrm dx^{n+1}}(x-x_0)^{n+1},$$
-kde $\xi\in(x_0,x)$ je vhodné číslo. Pravá strana této rovnice je blízká k nule, pokud je $n$ dostatečně velké, $x$ dostatečně blízko k $x_0$ a $(n+1)$-ní derivace funkce $f$ je relativně malá. V těchto případech je $$f(x)\approx T(x).$$
+> Věta (Taylorova věta pro kvadratický polynom).
+> Platí $$f(x+h)=f(x_0)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
 
 # Numerická aproximace: konečné diference II
 
@@ -404,7 +397,7 @@ $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
 
 
 
-# Aplikace parciálních derivací - brzdná dráha
+# Interpretace parciálních derivací - brzdná dráha
 
 
 \iffalse 

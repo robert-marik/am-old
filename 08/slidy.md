@@ -356,6 +356,8 @@ integrální křivky vodorovně. Proto se křivky, kde je $\varphi(x,y)$
 konstantní, nazývají **izokliny**.
 
 
+\iffalse
+
 # Numerické řešení IVP
 
 
@@ -411,6 +413,7 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 * [dfield](http://math.rice.edu/~dfield/dfpp.html)
 * [Sage](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=f%28x%2Cy%29%3Dy*%28x-y%29%0A%0Aymin%2C+ymax+%3D+0%2C+2%0A%0Aics1%3D%5B0%2C0.1%5D%0Aics2%3D%5B0%2C1%5D%0A%0AP2%3Ddesolve_rk4%28f%28x%2Cy%29%2Cy%2Cics%3Dics1%2Civar%3Dx%2Cend_points%3D%5B0%2C3%5D%2Coutput%3D%27slope_field%27%29%0AP1%3Ddesolve_rk4%28f%28x%2Cy%29%2Cy%2Cics%3Dics2%2Civar%3Dx%2Cend_points%3D%5B0%2C3%5D%2Coutput%3D%27plot%27%2C+color%3D%27red%27%29%0A%0A%28P1%2BP2%29.show%28ymax%3Dymax%2Cymin%3Dymin%29)
 
+\fi
 
 # Transformace diferenciální rovnice
 

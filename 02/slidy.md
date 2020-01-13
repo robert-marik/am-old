@@ -307,11 +307,15 @@ Ve speciálním případě, pokud tečna k vrstevnici není rovnoběžná s osou
 
 # Lokální extrémy funkce více proměnných
 
+\iffalse
+
 <div class='obtekat'>
 
 ![V bodě kde nastává extrém je každá parciální derivace která existuje nulová, tj. křivka na řezu má vodorovnou tečnu](extrem_2.png) 
 
 </div>
+
+\fi
 
 Podobně jako pro funkce jedné proměnné definujeme i pro funkce více
 proměnných **lokální extrémy** následovně: funkce má v daném

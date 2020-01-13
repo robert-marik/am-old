@@ -344,6 +344,8 @@ i+Q(x,y)\vec j,$
 * Křivkový integrál prvního druhu **nezávisí na orientaci** křivky.
 * Křivkový integrál druhého druhu **při změně orientace křivky mění znaménko**.
 
+\iffalse
+
 # Steinerova věta
 
 <div class="sloupce">
@@ -373,6 +375,8 @@ d^2$ je vždy nezáporný) a umožňuje přepočet momentu setrvačnosti pro
 rovnoběžné osy.
 
 </div>
+
+\fi
 
 # Závěrečné informace
 

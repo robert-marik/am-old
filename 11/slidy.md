@@ -251,6 +251,9 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 
 # Homogenní LDE 2. řádu s\ konstantními koeficienty
 
+\iffalse 
+
+<!--
 
 Budeme studovat rovnici tvaru
 $$y''+py'+qy=0,$$
@@ -264,13 +267,30 @@ $$z^2+pz+q=0.$$
 Pouze v\ tomto případě bude uvažovaná funkce řešením rovnice (1).
 
 
+# Homogenní LDE 2. řádu s\ konstantními koeficienty
+
+-->
+
+
+\fi
+
+Rovnici $$y''+py'+qy=0$$ je možno přepsat na
+$$(y')=-qy-py'$$
+a tato rovnice je po substituci
+$x_1=y$, $x_2=y'$ ekvivalentní autonomnímu systému
+$$\begin{pmatrix}x_1\\x_2\end{pmatrix}'=
+\begin{pmatrix}0 &1\\ -q &-p\end{pmatrix}
+\begin{pmatrix}x_1\\x_2\end{pmatrix}
+$$
+
+U řešitelosti této rovnice hraje velkou roli chrakteristicá rovnice matice soustavy, která je obsažena v následující definici.
 
 > Definice (charakteristická rovnice). Kvadratická rovnice
 > $$z^2+pz+q=0$$ s\ neznámou $z$ se nazývá *charakteristická rovnice*
 > pro rovnici $$y''+py'+qy=0.$$
 
 
-# Homogenní LDE 2. řádu s\ konstantními koeficienty
+
 
 > Věta (o obecném řešení LDE s\ konstantními koeficienty).
 >  Uvažujme LDE $$y''+py'+qy=0,\tag{1}$$ a její charakteristickou rovnici

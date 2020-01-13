@@ -141,7 +141,7 @@ veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
 funkcí, nebo integračních oborů) a s násobení integrované funkce
 konstantnou. Přesněji, platí následující věty.
 
-> Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí $$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
+> Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí \dm$$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
 
 > Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
 
@@ -523,6 +523,9 @@ v\ těžišti.* Protože jsme pracovali s obecnou množinou $M$, není tento
 poznatek nijak vázán na konkrétní tvar hráze. Musí být však splněna
 podmínka, že všechny body hráze leží v\ jedné rovině.
 
+
+\iffalse
+
 Ve výpočtu výše jsme uvažovali svislou rovinu, ale zobecnění na šikmou
 rovinu je snadné. Stačí opravit vztah pro hloubku, protože když svislou množinu
 i s kartézskými souřadnicemi pootočíme okolo osy procházející
@@ -533,6 +536,8 @@ s hustotou $\sin\alpha$-krát nižší. Protože však vztah $\eqref{H1}$
 nezávisí na hustotě, nic se na něm nezmění. Také zobecnění na několik rovin
 je snadné. Zobecnění na zakřivenou plochu je náročnější a vyžaduje
 jiný typ integrálu.
+
+\fi
 
 V předchozím textu jsme proměnnou veličinu popisující tlak na hráz
 jako funkci hloubky nahradili konstantní veličinou, udávající tlak v
@@ -578,6 +583,8 @@ hustotou $y$. Na tomto pozorování a na skutečnosti, že u pravidelných
 množin umíme těžiště najít geometricky, je založena metoda nalezení
 působiště tlakové síly pomocí [zatěžovacího obrazce](https://en.wikipedia.org/wiki/Pressure_prism).
 
+\iffalse
+
 Kvadratický moment v čitateli zlomku $\eqref{H2}$ vyjadřujícího $y_c$ je často
 výhodnější rozepsat pomocí Steinerovy věty. Ve jmenovateli je součin
 obsahu $S$ a $y$-ové souřadnice těžiště $y_0$. Tím dostaneme
@@ -587,6 +594,8 @@ Působiště tlakové síly $y_c$ je tedy posunuto směrem dolů od těžiště
 $y_0$ o hodnotu odpovídající kvadratickému momentu vzhledem k
 vodorovné ose těžištěm $I_{x0}$ vyděleném součinem obsahu hráze $S$ a
 $y$-ové polohy těžiště $y_0$.
+
+\fi
 
 # Polární souřadnice
 
