@@ -8,7 +8,7 @@
 **Operátorem** rozumíme zobrazení, které má na vstupu i na výstupu
 funkci. Například pro funkce jedné proměnné mohou být operátory
 derivace, druhá derivace, vynásobení funkce funkcí $\ln x$ anebo vnoření zadané funkce do funkce $\ln x$. Tj. pro $y=y(x)$ můžeme uvažovat operátory
-\dm $$F_1[y]=\frac{\mathrm dy}{\mathrm dx}, \quad F_2[y]=\frac{d^2y}{dx^2}, \quad  F_3[y](x)=y(x)\ln(x), \quad  F_4[y](x)=\ln(y(x)). $$
+$F_1[y]=\frac{\mathrm dy}{\mathrm dx}$, $F_2[y]=\frac{d^2y}{dx^2}$, $F_3[y](x)=y(x)\ln(x)$, $F_4[y](x)=\ln(y(x)).$
 
 \iffalse 
 
