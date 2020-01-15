@@ -24,7 +24,7 @@ odvozené pro hodně speciální situace.
 Parciální derivace umožňují sledovat závislost stavových veličin v
 závislosti na souřadnicích nebo čase, a to pro každou souřadnici
 samostatně. Nicméně souřadný systém je něco, co do popisu vnášíme
-uměle a proto by fyzikální proce neměl být na tomto souřadném systému
+uměle a proto by fyzikální proces neměl být na tomto souřadném systému
 závislý. *Proto často spojujeme parciální derivace do složitějších
 výrazů -- diferenciálních operátorů. Zde teprve vynikne síla
 parciálních derivací.*
@@ -58,6 +58,8 @@ $$\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial
 y}\right)$$ (v závislosti na počtu proměnných funkce $f$). "Násobení"
 $\frac{\partial }{\partial x}$ s\ funkcí $f$ přitom chápeme jako
 parciální derivaci $\frac{\partial f}{\partial x}$.
+
+Někdy je vhodné formulovat fyzikální zákony pomocí prostředků lineární algebry, zejména pomocí maticového součinu. V takovém případě gradientem uvažujeme sloupcový vektor. 
   
 Gradient je v každém bodě kolmý k vrstevnici. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxlj71uwyAUhfdIfgcU2TKk5Mdupip0TFdPnapY1IaYFoMFJDV5-hLbUVKVAbjncr_D4bDHHpH-kC_8sl_4w3M0a9mF9SQ0MrxFY-kJ9HiZ4TzUjaS1UJ5sN9HMNvoHNq6VcL5r8td3Yx07K1ExQMHRhHdMud06dMD-pL4r9gJiwEdLkFgQzxMgqWM9HMWwotkj1aRvEyVMfij6KeltHiYWJxbFaQIfEata8HBDCIP_8uAwWBSk0srpkyk7qR3keAg97B6DqWfJlDUoLe1I-sVcigEXUpI9lZahK6h4uiLKM6ucNiUXTNaQr27pIVorbdo_SvjbaDcc_p65uMKPVlwYyTYYUNsFaGmoE5pk6BegT4aw&lang=sage)
 
@@ -78,7 +80,7 @@ Gradient je v každém bodě kolmý k vrstevnici. [Nakreslit online.](https://sa
 \fi
 
 * V matematice se gradientem rozumí vektor z parciálních derivací podle všech proměnných. V aplikacích tomu bývá poněkud jinak. Často je funkce popisující studovaný systém funkcí času i prostorových proměnných. V takovém případě gradientem rozumíme vektor složený jenom z parciálních derivací podle prostorových proměnných. Čas při výpočtu gradientu za proměnnou nepovažujeme.
-* V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* izolačních materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.
+* V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.
 * S gradientem souvisí *majáková navigace* při migraci živočichů. Ti sledují určitý chemický podnět a pohybují se ve směru největšího růstu tohoto podnětu (tj. ve směru gradientu). Například žralok ve vodě takto sleduje koncentraci krve. Pokud je mezi žralokem a zdrojem krve proud, který krev unáší, nepopluje žralok rovnou čarou ke zdroji krve, ale koncentrace krve ho povede po delší trase.
 * Pokud se zajímáme nejenom o směr, ale i velikost gradientu, pomůže to k posouzení jak rychle se mění veličina v\ prostoru (gradient je velký, jsou-li vrstevnice nahusto). 
 <!-- * *Síla* ($\vec F$) působící na těleso v silovém poli ve kterém je možno zavést potenciální energii ($V$) je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient). -->
@@ -111,7 +113,9 @@ i směr. Tato matice se navíc při změně báze transformuje speciálním
 způsobem, tak jako vektory. Takové objekty nazýváme **tenzory**. Níže
 budeme pojmem tenzor rozumět matici $3\times 3$ nebo $2\times 2$,
 podle kontextu. (Obecněji je možno považovat skalární veličiny a
-vektory za tenzory nižších řádů, toto my však dělat nebudeme.) Aby měly konstitutivní vztahy níže smysl, uvažujeme v nich gradient jako sloupcový vektor. 
+vektory za tenzory nižších řádů, toto my však dělat nebudeme.)
+
+**Aby měly konstitutivní vztahy níže smysl, uvažujeme v nich gradient jako sloupcový vektor.** 
 
 ## Fickův zákon (difuze)
 
@@ -166,6 +170,8 @@ $k$ skalární veličinou, případně skalární veličina násobená
 jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter.
 
 
+\iffalse
+
 ## Soretův efekt (termodifuze)
 
 Tok tepla je vyvolaný nerovnoměrným rozložením teploty. Difuze chemické
@@ -177,6 +183,8 @@ nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s
 kde $s$ je koeficient termodifuze. Na rozdíl od předchozích zákonů, u Soretova efektu dochází k transportu nejenom ve
 směru maximálního poklesu (záporného gradientu) teploty, ale někdy i ve směru 
 gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
+
+\fi
 
 # Speciální případy vztahu mezi gradientem a tokem
 

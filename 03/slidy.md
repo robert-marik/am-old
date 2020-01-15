@@ -4,19 +4,19 @@
 
 # Transportní jevy
 
-  Pochopení a modelování transportních jevů a dějů souvisejících je
-  důležité pro většinu technických oborů. Podstata těchto jevů je často
+  Pochopení a modelování transportních dějů je
+  důležité pro většinu technických oborů. Podstata těchto dějů je často
   odlišná, přesto mají navenek podobné chování a tím je umožněn
   jednotný přístup při matematickém modelování.
 
-Příklady transportních jevů
+Příklady transportních dějů
 
 * povrchová voda
 * podzemní voda
 * teplo
 * voda ve dřevě
 
-Obecná bilance veličiny, které má zdroje a spotřebiče a může být přenášena tokem většinou může vypadat následovně.
+Obecná bilance veličiny, která má zdroje a spotřebiče a je přenášena tokem vypadá následovně.
 
 * Existuje veličina, spojitě rozložená v prostoru, charakterizující stav systému. Tuto veličinu budeme nazývat
     *stavovou veličinou* a její hustotu označíme $u$.
@@ -65,7 +65,7 @@ Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v d
 * Derivace $\frac{\partial P}{\partial x}$ udává, o kolik studovaný tok v daném místě vzroste ve směru osy $x$ a tento nárůst je vztažený na jednotku délky.
 * Ve směru osy $y$ máme tok vyjádřený veličinou $Q$ a proto nás podobně zajímá $\frac{\partial Q}{\partial y}$.
 * Analogicky $\frac{\partial R}{\partial z}$.
-* Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Jestli se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli jí v daném místě může ubývat již nezjistíme, záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
+* Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Jestli se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli v daném místě může ubývat již z čisté matematiky nezjistíme. Záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
 * Při preciznější argumentaci dávající do souvislosti parciální derivace jednotlivých komponent toku s tím, co se reálně s vektorovým polem děje, je nutné si pomoci stejně jako u derivací, tj. uvažovat ne dané místo, ale jistý konečně velký objem (viz obrázek), vztáhnout dané veličiny na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.
 
 <!--
@@ -146,9 +146,9 @@ $$
    zdroje neexistují, jedná se o *bezzdrojovou rovnici*.
 >* Člen $\nabla\cdot \vec j$ udává v daném bodě změnu ve velikosti
    proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do
-   tohoto místa vteče. Jinak řečeno, dává, o kolik zeslábne v daném místě tok $\vec \jmath$. Tento člen je v rovnici kontinuity přítomen vždy, bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
+   tohoto místa vteče. Jinak řečeno, udává, o kolik zeslábne v daném místě tok $\vec \jmath$. Tento člen je v rovnici kontinuity přítomen vždy, bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
 
-V matematice často rovnice uvažujeme ve výše uvedeném tvaru.  Při
+V matematice často rovnici kontinuity uvažujeme ve výše uvedeném tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
 jednotlivých veličin a proto se v rovnici mohou objevit další
 konstanty úměrnosti, které umožní sladit jednotky a fyzikální
@@ -273,9 +273,13 @@ Podle pravidla derivace konstantního násobku se rovnice (***) redukuje na
 $$\rho c\frac{\partial T}{\partial t}=D\nabla \cdot (\nabla T)$$
 a ve složkách
 $$\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).$$
+
+\iffalse
+
 Pro $\tau=\frac{Dt}{\rho c}$ (změna jednotky času) dostáváme
 $$\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}.$$
 
+\fi
 
 ## Ortotropní materiál, nehomogenní nebo nelineární
 
@@ -373,7 +377,7 @@ $$      {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(T\nabla h
 
 # Laplaceův operátor
 
-> Definice (Laplaceův operátor). Laplaveovým operátorem $\nabla ^2$ rozumíme divergenci gradientu, tj. $$\nabla^2 f=\nabla\cdot(\nabla f).$$
+> Definice (Laplaceův operátor). Laplaceovým operátorem $\nabla ^2$ rozumíme divergenci gradientu, tj. $$\nabla^2 f=\nabla\cdot(\nabla f).$$
 
 * V\ kartézských souřadnicích a trojrozměrném prostoru je Laplaceův operátor $\nabla^2$ dán  vztahem
   $$

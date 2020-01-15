@@ -81,13 +81,13 @@ Podobně můžeme definovat parciální derivaci pro funkce libovolného
 konečného počtu proměnných. V těchto parciálních derivacích vlastně
 sledujeme, jak reaguje veličina $f$ na změny jenom v jedné
 proměnné. Proměnná, přes kterou se nederivuje, má vlastně roli
-parametru, nijak se nemění.
+parametru a nijak se nemění.
 
 > Poznámka (rozšifrování definice derivace).
 >
 * Výraz z čitatele, tj. $f(x+h,y)-f(x,y)$, je změna veličiny $f$ na intervalu $[x,x+h]$ při konstantní veličině $y$. Často označujeme též $\Delta f$.
 * Podíl, tj. $\frac{f(x+h,y)-f(x,y)}h$ je změna veličiny $f$ na intervalu $[x,x+h]$  při konstantní veličině $y$, přičemž tato změna je přepočítaná na jednotku veličiny $x$, tj. v jistém smyslu průměrná rychlost změny vzhledem k $x$ na intervalu $[x,x+h]$. Často označujeme též $\frac{\Delta f}{\Delta x}$.
-* Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost. Parciální derivace je tedy 
+* Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost. Parciální derivace je tedy okamžítá rychlost s jakou se mění funkce $f$ přizměnách jedné proměnné.
 
 Jednotka derivace $\frac{\partial f}{\partial x}$ je stejná, jako jednotka podílu $\frac {f(x,y)}x$. Jednotka derivace $\frac{\partial f}{\partial y}$ je stejná, jako jednotka podílu $\frac {f(x)}y$.
 
@@ -105,7 +105,7 @@ Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
 proměnných, polohy a času. $T=T(x,t)$
 
 > Poznámka (fyzikální okénko). Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika
-model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stavé se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
+model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat "z venku", z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
 >
 * Rozdílem teplot vzniká tok tepla. Tok tepla je úměrný poklesu 
 teploty.
@@ -125,9 +125,9 @@ tomto bodě "zůstane". Množství, které zůstane, je rozdílem mezi množstv�
 roste rychlost toku podél tyče je $\frac{\partial q}{\partial x}$. My pro kladný ohřev
 potřebujeme pokles toku tepla, tedy násobíme záporným znaménkem a dostáváme
 $-\frac{\partial q}{\partial x}$.
-* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty (třetí odrážka). Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi jako je měrná tepelná kapacita a hmotnost jednotkového množství látky objemu v daném místě.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
+* *Víme, kolik tepla se v daném místě spotřebuje na zvýšení teploty a tuto hodnotu musíme převést na změnu teploty (třetí odrážka). Opět se jedná o jakési překalibrování, které ještě souvisí s dalšími fyzikálními vlastnostmi: měrnou tepelnou kapacitou a hmotností jednotkového objemu látky v daném místě.* Teplo $-\frac{\partial q}{\partial x}$ je teplo, které každou časovou jednotku "zůstává" v
 bodě $x$. Toto teplo se "použije" na zvýšení teploty. Z
-rovnice (*) pro jednotku času a jednotku objemu 
+rovnice (*) pro jednotku času a jednotku objemu dostáváme
 $$\rho c\frac{\partial T}{\partial t}=-\frac {\partial q}{\partial x}.\tag{**}$$
 * K určení toku $q$ potřebujeme vědět, jak rychle klesá teplota podél tyče. Změny v prostorovém rozložení teploty zachycuje derivace
 $\frac{\partial T}{\partial x}$ v jednotkách (například) stupeň Celsia
@@ -137,7 +137,7 @@ na centimetr. Přesněji, jedná se o růst teploty. Tok tepla je dán poklesem 
   $$q=-k\frac{\partial T}{\partial x}.\tag{***}$$
   Veličina $k$ je konstanta úměrnosti
   umožňující překalibrování změny prostorového rozložení teploty na
-  tok tepla jendotkovým průřezem (první odrážka).
+  tok tepla jednotkovým průřezem (první odrážka).
 * Po dosazení za $q$ do (**) dostáváme
 $$\rho c\frac{\partial T}{\partial t}=-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right).$$
 * Derivace konstantního násobku je konstantní násobek
@@ -172,7 +172,8 @@ $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
 tedy dostáváme
  $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena
 průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
-*dopředná poměrná diference* nebo zkáceně *dopředná diference*. Pokud použijeme toto pro parciální derivace, dostáváme
+*dopředná poměrná diference* nebo zkráceně *dopředná diference*. Pokud
+ použijeme tento postup pro parciální derivace, dostáváme
  $$\frac{\partial f}{\partial x}\approx\frac{f(x+\Delta x,y)-f(x,y)}{\Delta x}$$
  a
   $$\frac{\partial f}{\partial y}\approx\frac{f(x,y+\Delta y)-f(x,y)}{\Delta y}$$
@@ -181,21 +182,21 @@ průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
 
 # Opakování: Taylorův polynom a polynomiální aproximace v 1D
 
-V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je Taylorův polynom jako nejlepší lineární aproximace funkce
+V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je Taylorův polynom jako nejlepší polynomiální aproximace funkce
 
-> Věta (Taylorova věta pro kvadratický polynom).
+> Věta (Taylorova věta pro kvadratickou aproximaci).
 > Platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
 
 # Numerická aproximace: konečné diference II
 
-Přesnější aproximace derivace, než dopředná diference, vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů
+Přesnější aproximace derivace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů
 $$\begin{aligned}
-f(x+h)&\approx f(x)+f'(x)h+\frac 12 f''(x)h^2\\
-f(x-h)&\approx f(x)-f'(x)h+\frac 12 f''(x)h^2
+f(x+h)&\approx f(x)+f'(x)h+\frac 12 f''(x)h^2,\\
+f(x-h)&\approx f(x)-f'(x)h+\frac 12 f''(x)h^2.
 \end{aligned}$$
 Pokud tyto vztahy sečteme a odečteme, dostaneme 
 $$\begin{aligned}
-f(x+h)+f(x-h)&\approx2f(x)+ f''(x)h^2\\
+f(x+h)+f(x-h)&\approx2f(x)+ f''(x)h^2,\\
 f(x+h)-f(x-h)&\approx2f'(x)h.
 \end{aligned}$$
 Odsud dostáváme aproximace první a druhé derivace
@@ -206,7 +207,7 @@ Analogicky pro parciální derivaci podle $x$
 $$ \frac{\partial f}{\partial x}\approx  \frac{f(x+\Delta x,y)-f(x-\Delta x,y)}{2\Delta x}  $$
 a
 $$ \frac{\partial^2f}{\partial x^2}\approx  \frac{f(x-\Delta x,y)-2f(x,y)+f(x+\Delta x,y)}{\Delta x^2}.  $$
-Tato aproximace první derivace se nazývá *centrální diference* a je přesnější, než dopředná diference, protože je založena na přesnější aproximaci. Používá totiž polynom druhého stupně, kdežto dopředná diference je vlastně založena pouze na lineární aproximaci.
+Tato aproximace první derivace se nazývá *centrální diference* a je přesnější, než dopředná diference, protože je založena na přesnější aproximaci funkce $f$. Používá totiž polynom druhého stupně, kdežto dopředná diference je založena pouze na lineární aproximaci.
 
 # Nutná dávka terminologie
 
@@ -233,7 +234,7 @@ V dalším nastane jedna z nejnebezpečnějších situací v matematice, kdy př
 # Euklidovský metrický prostor
 
 
-> Definice (metrický prostor, metrika)
+> Definice (metrický prostor, metrika).
   Množina $\mathbb{E}^3$ prvků z $\mathbb{R}^3$ s metrikou $\rho$ definovanou pro
   $A=(a_x,a_y,a_z)\in\mathbb{R}^3$ a $B=(b_x, b_y, b_z)\in\mathbb{R}^3$
   vztahem

@@ -10,7 +10,9 @@ V praxi pracujeme s řadou veličin, které se počítají tak, že se parametr 
 
 Je však otázka, jak tento přístup použít v případě, že daný parametr není po celé ploše na které je rozložen konstantní. Deska může být nehomogenní, nádrž nemusí mít vodorovné dno a ponořená deska nemusí mít všechny své části ve stejné hloubce. 
 
-Řešení této nesnáze je použití dvojného integrálu, který si nyní představíme.
+U křivkového integrálu jsme se setkali s momentem setrvačnosti a jak řešit situace, kdy stanovujeme moment setrvačnosti množiny, která má hmotnost rozloženu na křivce. Při výpočtu namáhání nosníků, trámů, polic nebo stromů potřebujeme moment setrvačnosti průřezu nosníku, tj. hmotnost je rozložena ve dvourozměnrné množině a pro jednotlivé body se liší vzdálenost od osy otáčení. 
+
+Řešení obou nesnází je stejné: použití dvojného integrálu. Ten si nyní představíme.
 
 \def\maxwidth{5cm}
 

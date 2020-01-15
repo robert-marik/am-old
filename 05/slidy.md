@@ -164,6 +164,12 @@ th {
 th {text-align: center;}
 </style>
 
+\maxwidthdefault
+\def\velkatabulka{Aplikace křivkového integrálu prvního druhu jsou shrnuty v tabulce.\begin{table*}\setlength{\columnwidth}{18cm}}
+\def\velkatabulkakonec{\caption{Aplikace křivkového integrálu prvního druhu}\end{table*}}
+
+\velkatabulka
+
 
 |Funkce $f(x,y)$        |Integrál $\int_C f\;\mathrm{d}s$                                                                         |
 |----------------|-----------------------------------------|
@@ -173,6 +179,9 @@ th {text-align: center;}
 |$x^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $y$|
 |$y^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $x$|
 |$\rho^2(x,y)\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k obecné ose, kde $\rho(x,y)$ je vzdálenost bodu $[x,y]$ od osy otáčení.|
+
+
+\velkatabulkakonec
 
 
 
@@ -190,7 +199,7 @@ $$
 \end{aligned}
 $$
 
-> Věta (aditivita vzhledem k inzegračnímu oboru). Je-li křivka $C$ rozdělena na dvě disjunktní (až na koncové body) křivky $C_1$ a $C_2$, platí
+> Věta (aditivita vzhledem k integračnímu oboru). Je-li křivka $C$ rozdělena na dvě disjunktní (až na koncové body) křivky $C_1$ a $C_2$, platí
 $$
 \int_{C} f\;\mathrm{d}s = \int_{C_1} f\;\mathrm{d}s + \int_{C_2} f\;\mathrm{d}s .
 $$
