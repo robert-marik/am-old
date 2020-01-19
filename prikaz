@@ -31,9 +31,9 @@ do
   cd $i
   bash prikaz
   cd ..
-  scp -r $i kiwi.mendelu.cz:html/am/slidy
+  #scp -r $i kiwi.mendelu.cz:html/am/slidy
   #rsync -av $i kiwi.mendelu.cz:html/am/slidy
-  #rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/am/slidy
+  rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/am/slidy
 done
 
 #rsync -e "ssh -o StrictHostKeyChecking=no" -av my.css cornus.mendelu.cz:html/am/slidy
