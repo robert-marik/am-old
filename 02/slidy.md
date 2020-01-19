@@ -395,7 +395,11 @@ nebo
 $$\vec F(x,y)\approx \vec F(x_0,y_0) + J(x_0,y_0)  \begin{pmatrix}x-x_0\\ y-y_0\end{pmatrix},$$
 kde 
 $$J(x,y)=\begin{pmatrix} \frac{\partial f_1}{\partial x}(x ,y ) & \frac{\partial f_1}{\partial y}(x ,y )\\\frac{\partial f_2}{\partial x}(x ,y ) & \frac{\partial f_2}{\partial y}(x ,y )\end{pmatrix}$$
-je Jacobiho matice funkce $\vec F$.
+je Jacobiho matice funkce $\vec F$. Konstitutivní vztahy uvedené v
+předchozí části přednášky (Darcyho, Fickův a Fourierův zákon) je
+možno chápat jako lienární aproximace obecných materiálových vztahů
+pro malé vnější podněty (tj. $x_0=y_0=0$) a případ, kdy bez podnětu
+není v materiálu odezva (tj. $\vec F(0,0)=0\vec \imath + 0\vec\jmath$).
 
 # Tenzor malých deformací
 
