@@ -159,6 +159,17 @@ skalární.
 
 ## Fourierův zákon (vedení tepla)
 
+\iffalse
+
+<div class='obtekat'>
+
+![Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou gradientem.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rozhrani.png)
+
+</div>
+
+\fi
+
+
 Fourierův zákon se týká vedení tepla a vyjadřuje, 
 že vektor hustoty tepelného toku $\vec q$ je úměrný gradientu teploty $\nabla T$
 a má opačný směr, tj. 
@@ -187,6 +198,17 @@ gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
 \fi
 
 # Speciální případy vztahu mezi gradientem a tokem
+
+\iffalse
+
+<div class='obtekat'>
+
+![Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rezistory.png)
+
+</div>
+
+\fi
+
 
 Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla \varphi,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření
 $$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y},\frac{\partial \varphi}{\partial z}\right)^T$$

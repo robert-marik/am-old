@@ -99,8 +99,7 @@ Výše uvedenými úvahami je motivována následující definice a věta. (Defi
 
 Pokud při ustáleném proudění je v některém místě kladná divergence,
 znamená to, že v tomto místě musí být zdroj této veličiny. Proto se
-vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové
-pole**. 
+vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové pole**. 
 
 Ze střední školy z fyziky umíme modelovat vektorové pole
 pomocí siločar. Siločáry nezřídlového pole nikde nezačínají ani
@@ -237,6 +236,17 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 >* Výraz $D\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-D\nabla T$.
 >* Člen $\nabla\cdot(D\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
 >* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, tj. divergence $\nabla\cdot (D\nabla T)$ je kladná, dojde v tomto místě k odpovídajícímu snižení teploty.
+
+\iffalse
+
+<div class='obtekat'>
+
+![Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](vrstvy.png)
+
+</div>
+
+\fi
+
 
 Tato rovnice je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
 odvodili primitivními prostředky (jenom pomocí parciálních derivací, bez gradientu a divergence) ve tvaru

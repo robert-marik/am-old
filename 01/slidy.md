@@ -101,6 +101,8 @@ rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 
 # Rovnice vedení tepla v 1D
 
+
+
 Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
 proměnných, polohy a času. $T=T(x,t)$
 
@@ -113,6 +115,17 @@ teploty.
 hmotnosti $m$ o hodnotu $\Delta T$ je nutné dodat $$Q=mc\Delta T,\tag{*}$$ kde
 $c$ je měrná tepelná kapacita.
 * Budeme vztahy formulovat pro změny za časovou jednotku a pro jednotkový objem (tedy místo hmotnosti $m$, změny teploty $\Delta T$ a tepla $Q$ máme hustotu $\rho$, rychlost změny teploty $\frac{\partial T}{\partial t}$ a rychlost s jakou dodáváme teplo do daného místa vztažená na jednotkový objemu).
+
+\iffalse
+
+<div class='obtekat'>
+
+![Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například okno nebo stěna domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](domek.png)
+
+</div>
+
+\fi
+
 
 V dalším už nastupuje matematický popis a ve vhodných chvílích vždy
 použijeme výše uvedené fyzikální zákony. Mluvíme o teple, ale jako
