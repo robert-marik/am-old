@@ -117,6 +117,11 @@ vektory za tenzory nižších řádů, toto my však dělat nebudeme.)
 
 **Aby měly konstitutivní vztahy níže smysl, uvažujeme v nich gradient jako sloupcový vektor.** 
 
+Tyto zákony je možno chápat jako lineární aproximace vektorových
+funkcí, které uvedeme spolu s Jacobiho maticí v další části této
+přednášky. Konstitutivní vztahy však uvedeme už teď, protože se jedná
+o nejdůležitější aplikace gradientu.
+
 ## Fickův zákon (difuze)
 
 V roce 1855 německý lékař A. Fick objevil, že difuzní tok $\vec J$
@@ -318,6 +323,18 @@ Pro $z=0=z_0$ dostáváme z tečné roviny následující: Nechť
 
 # Implicitně definovaná funkce 
 
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Tečna k vrstevnici](implicitni_3.png) 
+
+</div>
+
+\fi
+
 Ve speciálním případě, pokud tečna k vrstevnici není rovnoběžná s osou $y$, je možno vrstevnici chápat jako graf funkce jedné proměnné. Taková funkce je do jisté míry určena jednoznačně, jak ukazuje následující věta.
 
 >  Věta (o implicitní funkci). Uvažujme funkci $f(x,y)$ dvou proměnných, splňující v nějakém bodě
@@ -326,12 +343,6 @@ Ve speciálním případě, pokud tečna k vrstevnici není rovnoběžná s osou
 >    $$f(x,y)=0$$ v okolí bodu $(x_0, y_0)$ implicitně určena
 >    **právě jedna spojitá funkce** $y=g(x)$.
 
-
-\iffalse
-
-![Tečna k vrstevnici](implicitni_3.png) 
-
-\fi
 
 
 
