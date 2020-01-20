@@ -354,7 +354,7 @@ i na $x$.
 
 <div class='obtekat'>
 
-![Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemickcýh provozů. Zdroj: pixabay.com.](voda.jpg)
+![Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.](voda.jpg)
 
 </div>
 
