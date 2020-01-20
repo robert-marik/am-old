@@ -80,7 +80,7 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 
 <div class="obtekat">
 
-![Tok kapaliny mezi dvěma rovnoběžnými stěnami jako pole s nenulovou rotací. Rychlost proudu klesá kvadraticky směrem ke břehům a díky tomu se loďka stáčí po proudu.](tok.png)
+![Tok kapaliny mezi dvěma rovnoběžnými stěnami jako pole s nenulovou rotací. Rychlost proudu klesá kvadraticky směrem ke břehům a díky tomu se loďka, která odrazí od břehu kolmo, stáčí po proudu.](tok.png)
 
 </div>
   
