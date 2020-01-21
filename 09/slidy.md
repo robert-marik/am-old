@@ -27,8 +27,8 @@ funkce $y_1$ a $y_2$ z definičního oboru operátoru $L$.
 
 # Příklady lineárních operátorů
 
-* Operátor derivace, tj. operátor definovaný vztahem $L[y]=\frac{\mathrm dy}{\mathrm dx}$ je lineární.
-* Buď dána funkce $a(x)$. Operátor násobení funkcí $a(x)$, tj. $L[y](x)=a(x)y(x)$ je lineární.
+* Operátor derivace, tj. operátor definovaný vztahem $L[y]=\frac{\mathrm dy}{\mathrm dx}$ je lineární. Toto plyne ze vzorců pro derivaci součtu a konstantního násobku.
+* Buď dána funkce $a(x)$. Operátor násobení funkcí $a(x)$, tj. $L[y](x)=a(x)y(x)$ je lineární. To plyne z komutativity násobení a z distributivního zákona (roznásobování závorek).
 * Složení (postupná aplikace) lineárních operátorů je lineární operátor. Například tedy
 $$\frac{\mathrm d^2 y}{\mathrm dx^2}$$ je lineární operátor.
 * Součet lineárních operátorů je lineární operátor. 
@@ -38,6 +38,8 @@ se nazývá *lineární diferenciální operátor prvního řádu*.
 * Buďte pevně dány funkce $p(x)$ a $q(x)$. Lineární operátor
 $$L[y]=\frac{\mathrm d^2y}{\mathrm dx^2}+p(x)\frac{\mathrm dy}{\mathrm dx}+q(x)y$$
 se nazývá *lineární diferenciální operátor druhého řádu*.
+* Buď dána $n\times n$ matice reálných čísel $A$ a $n$-vektorová funkce $\vec F(x)$. Zobrazení, které funkci $\vec F(x)$ přiřadí součin $A\vec F(x)$ je lineární. To plyne z distributivnosti násobení vzhledem ke sčítání matic a z toho, že součin matice a reálného čísla komutuje. 
+
 
 # Princip superpozice
 
@@ -54,7 +56,7 @@ C_1 L[y_1]+C_2 L[y_2]
 \end{aligned}
 $$
 
-# Operátorové rovnice 
+# Operátorové rovnice s lieárním operátorem
 
 Operátorovou rovnicí budeme rozumět rovnici $$L[y]=b(x),$$ kde $b(x)$
 je funkce a $L$ operátor. Například pro $b(x)=0$ a $L[y]=y'-y$ má
@@ -63,7 +65,8 @@ $$y'-y=0,$$
 tj.
 $$y'=y.$$
 
-
+Operátorovými rovnicemi (na množině konstantních vektorových funkcí) jsou i soustavy lineárních rovnic $$AX=B.$$ Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice 
+$$\frac{\mathrm d}{\mathrm dt}X=AX$$ operátorová rovnice. 
 
 > Věta (princip superpozice při řešení rovnic). Jsou-li funkce $y_1(x)$ a $y_2(x)$ po řadě řešeními rovnic $$L[y]=b_1(x),\quad L[y]=b_2(x),$$
 > Je funkce $$y(x)=C_1 y_1(x)+C_2 y_2(x)$$ řešením rovnice $$L[y]=C_1 b_1(x)+C_2 b_2(x).$$
