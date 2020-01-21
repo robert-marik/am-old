@@ -168,7 +168,7 @@ skalární.
 
 <div class='obtekat'>
 
-![Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou gradientem.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rozhrani.png)
+![Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem.  Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](rozhrani.png)
 
 </div>
 

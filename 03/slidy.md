@@ -226,7 +226,7 @@ zdroje, tj. $\sigma =0$. Protože teplo neměříme přímo, je vhodnější
 model formulovat pro teplotu $T$. Jsou-li $\varrho$ a $c$ po řadě hustota a měrná tepelná kapacita materiálu, má člen vyjadřující změnu hustoty
 energie v daném místě tvar
 $\varrho c\frac{\partial T}{\partial t}.$ Úměrnost mezi gradientem
-teploty a tokem tepla byla prokázána experimentálně a je známa jako
+teploty a tokem tepla  zprostředkovává
 *Fourierův zákon*. Difuzní rovnice má v tomto případě tvar
 $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 
@@ -328,7 +328,7 @@ V porézním materiálu voda prostupuje materiálem a zachovává se její
 množství, což bude stavová veličina. Hustotu tohoto množství, tj. obsah vody v jednotce
 objemu, označíme $c$ a pro tuto veličinu formulujeme matematický
 model. Zdroje neuvažujeme. Úměrnost mezi gradientem koncentrace vody a
-jejím tokem byla experimentálně prokázána a je známa jako *Fickův
+jejím tokem zprostředkovává *Fickův
 zákon*. Modelem je potom  difuzní rovnice bez zdrojů.
 $$
       {\frac{\partial c}{\partial t}= \nabla\cdot \bigl(D\nabla c\bigr)}
@@ -338,6 +338,14 @@ $$
     ve vlhkém prostředí*. Stejná rovnice napsaná pro vzduch se používá
   k modelování proudění v atmosféře při *předpovídání počasí*.
 
+V literatuře věnované problematice dřeva se rovnice difuze použitá na modelování vlhkosti ve dřevě označuje jako Druhý Fickův zákon (A. Požgaj a kol., Štruktúra a vlastnosti dreva, str. 202, P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60).
+
+V praxi je dřevo často s jistou přesností homogenní, ale difuzní
+koeficient dřeva závisí na vlhkosti, tedy vztah mezi gradientem
+vlhkosti a difuzním tokem není lineární. Přesto i v tomto případě
+používáme Fickův zákon, ovšem složky difuzního koeficientu
+nepovažujeme za konstanty, jsou závislé na $c$ a jejím prostřednictvím
+i na $x$.
 
 
 # Rovnice podzemní vody
@@ -346,7 +354,7 @@ $$
 
 <div class='obtekat'>
 
-![Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemickcýh provozů. Zdroj: pixabay.com.](voda.jpg)
+![Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.](voda.jpg)
 
 </div>
 
