@@ -66,7 +66,7 @@ tj.
 $$y'=y.$$
 
 Operátorovými rovnicemi (na množině konstantních vektorových funkcí) jsou i soustavy lineárních rovnic $$AX=B.$$ Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice 
-$$\frac{\mathrm d}{\mathrm dt}X=AX$$ operátorová rovnice. 
+$$\frac{\mathrm d}{\mathrm dt}X=AX$$ operátorová rovnice s lineárním operátorem. 
 
 > Věta (princip superpozice při řešení rovnic). Jsou-li funkce $y_1(x)$ a $y_2(x)$ po řadě řešeními rovnic $$L[y]=b_1(x),\quad L[y]=b_2(x),$$
 > Je funkce $$y(x)=C_1 y_1(x)+C_2 y_2(x)$$ řešením rovnice $$L[y]=C_1 b_1(x)+C_2 b_2(x).$$
