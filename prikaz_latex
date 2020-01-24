@@ -43,5 +43,5 @@ export TEXINPUTS=.:..//:
 pdflatex all
 pdflatex all
 
-mv all.pdf ../mat_slidy_all.pdf
+mv all.pdf ../am_slidy_all.pdf
 #rm ??.pdf
