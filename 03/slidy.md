@@ -235,7 +235,7 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 >* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
 >* Výraz $D\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-D\nabla T$.
 >* Člen $\nabla\cdot(D\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
->* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, tj. divergence $\nabla\cdot (D\nabla T)$ je kladná, dojde v tomto místě k odpovídajícímu snižení teploty.
+>* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, tj. divergence $\nabla\cdot (-D\nabla T)$ je kladná a výraz $\nabla\cdot (D\nabla T)$ je záporný, dojde v tomto místě k odpovídajícímu snížení teploty.
 
 \iffalse
 
