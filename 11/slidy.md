@@ -78,9 +78,7 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 
 
 > Definice (triviální řešení). Funkce $y(x)\equiv 0$ je řešením
-> homogenní LDE druhého řádu vždy, bez ohledu na tvar koeficientů $p$,
-> $q$. Toto řešení nazýváme *triviální řešení
-> rovnice LDE*.
+> homogenní LDE druhého řádu $$y''+p(x)y'+q(x)y=0$$ vždy, bez ohledu na tvar koeficientů $p$, $q$. Toto řešení nazýváme *triviální řešení*.
 
 
 > Definice (asociovaná homogenní rovnice). Nahradíme-li v\ nehomogenní LDE
@@ -161,7 +159,7 @@ například $y=\sin x$, $y=\cos x$. Z linearity plyne
 
 * Funkce $y=C_1 \sin x+C_2\cos x +x$ je obecným řešením rovnice (A). 
 
-
+<!--
 
 # Kdy pomocí linearity získáme obecné řešení?
 
@@ -232,10 +230,11 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 > (LDE0) na intervalu $I$. Tato řešení jsou lineárně nezávislá právě
 > tehdy když je jejich Wronskián různý od nuly na intervalu $I$.
 
+-->
 
 # Homogenní LDE 2. řádu (obecné řešení)
 
-$$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
+$$y''+p(x)y'+q(x)y=0 \tag{LDE0}$$
 
 > Věta (obecné řešení homogenní LDE). Jsou-li $y_1$ a $y_2$ dvě
 > netriviální lineárně nezávislá řešení rovnice (LDE0) na intervalu
@@ -244,6 +243,7 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 > kde $C_{1,2}\in\mathbb{R}$, je obecným řešením rovnice (LDE0) na intervalu
 > $I$.
 
+Dvojicí lineárně nezávislých řešení rozumíme dvě řešení taková, že jedno není násobkem druhého.
 
 > Definice (fundamentální systém řešení). Dvojici funkcí $y_1$ a $y_2$ z\ předchozí
 > věty nazýváme *fundamentální systém řešení rovnice (LDE0)*.
