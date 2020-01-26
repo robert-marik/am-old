@@ -127,7 +127,7 @@ plošnou hustotou.
 * Získaná veličina je aproximací celkové hmotnosti.
 
 V\ limitním přechodu kdy rozměry všech kousků na něž je deska dělena
-jde k\ nule dostáváme **dvojný integrál** 
+jdou k\ nule dostáváme **dvojný integrál** 
 $$ \iint_\Omega f(x,y)\mathrm{d}x \mathrm{d}y , $$ 
 kde $\Omega$ je oblast v\ rovině $(x,y)$ definovaná uvažovanou deskou. V aplikacích je častý též zápis
 $$ \iint_\Omega f(x,y)\mathrm{d}A$$ 

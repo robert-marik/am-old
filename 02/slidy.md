@@ -103,25 +103,48 @@ nebo (pomocí gradientu)
 $$      z= z_0+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
 
 
+
+# Lineární aproximace vektorové funkce
+
+Lineární aproximací vektorové funkce je lineární aproximace jejích skalárních složek. Tj. pro funkci $\vec F(x,y)=f_1(x,y)\vec \imath + f_2(x,y)\vec\jmath$ v bodě $(x_0, y_0)$ je
+\dm $$      f_1(x,y)\approx f_1(x_0, y_0)+\frac{\partial f_1 (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f_1 (x_0,y_0)}{\partial y}(y-y_0)$$
+a
+\dm $$      f_2(x,y)\approx f_2(x_0, y_0)+\frac{\partial f_2 (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f_2 (x_0,y_0)}{\partial y}(y-y_0).$$
+Vektorově zapsáno, platí
+\dm$$\begin{pmatrix}f_1(x,y)\\f_2(x,y)\end{pmatrix} \approx  \begin{pmatrix}f_1(x_0,y_0)\\f_2(x_0,y_0)\end{pmatrix} + \begin{pmatrix} \frac{\partial f_1}{\partial x}(x_0,y_0) \\\frac{\partial f_2}{\partial x}(x_0,y_0) \end{pmatrix} (x-x_0)+ \begin{pmatrix}  \frac{\partial f_1}{\partial y}(x_0,y_0)\\ \frac{\partial f_2}{\partial y}(x_0,y_0)\end{pmatrix} (y-y_0).
+$$
+Maticově zapsáno
+\dm$$\begin{pmatrix}f_1(x,y)\\f_2(x,y)\end{pmatrix} \approx  \begin{pmatrix}f_1(x_0,y_0)\\f_2(x_0,y_0)\end{pmatrix} + \begin{pmatrix} \frac{\partial f_1}{\partial x}(x_0,y_0) & \frac{\partial f_1}{\partial y}(x_0,y_0)\\\frac{\partial f_2}{\partial x}(x_0,y_0) & \frac{\partial f_2}{\partial y}(x_0,y_0)\end{pmatrix} \begin{pmatrix}x-x_0\\ y-y_0\end{pmatrix}
+$$
+nebo 
+$$\vec F(x,y)\approx \vec F(x_0,y_0) + J(x_0,y_0)  \begin{pmatrix}x-x_0\\ y-y_0\end{pmatrix},$$
+kde 
+$$J(x,y)=\begin{pmatrix} \frac{\partial f_1}{\partial x}(x ,y ) & \frac{\partial f_1}{\partial y}(x ,y )\\\frac{\partial f_2}{\partial x}(x ,y ) & \frac{\partial f_2}{\partial y}(x ,y )\end{pmatrix}$$
+je Jacobiho matice funkce $\vec F$. 
+
+Lineární aproximace v okolí nuly pro funkci, která je v nule nulová,
+tj. $x_0=y_0=\vec F(0,0)=0$ je $$\vec F(x,y)\approx \vec J(0,0)
+\begin{pmatrix}x\\ y\end{pmatrix}.$$ 
+
+
 # Vícerozměrné konstitutivní zákony
 
 Zákony uvedené níže byly často odvozeny v jednorozměrném
 případě. V moderní formulaci používáme obecný vektorový zápis, který
-zohledňuje i směr. Konstanta úměrnosti potom zprostředkovává vztah
-mezi dvěma vektory. Jedná se tedy z matematického pohledu o matici,
-která umožní nejenom změnit délku vektoru a jeho jednotku, ale
-i směr. Tato matice se navíc při změně báze transformuje speciálním
-způsobem, tak jako vektory. Takové objekty nazýváme **tenzory**. Níže
-budeme pojmem tenzor rozumět matici $3\times 3$ nebo $2\times 2$,
-podle kontextu. (Obecněji je možno považovat skalární veličiny a
-vektory za tenzory nižších řádů, toto my však dělat nebudeme.)
+zohledňuje i směr. Zpravidla je možné použít pro tento konstitutivní
+vztah lineární aproximaci a proto se vlastně jedná o násobení vektoru
+maticí. Tato matice umožní nejenom změnit délku vektoru a jeho
+jednotku, ale i směr. Matice se navíc při změně báze transformuje
+speciálním způsobem, tak jako vektory. Takové objekty nazýváme
+**tenzory**. Níže budeme pojmem tenzor rozumět matici $3\times 3$ nebo
+$2\times 2$, podle kontextu. (Obecněji je možno považovat skalární
+veličiny a vektory za tenzory nižších řádů, toto my však dělat
+nebudeme.)
 
 **Aby měly konstitutivní vztahy níže smysl, uvažujeme v nich gradient jako sloupcový vektor.** 
 
-Tyto zákony je možno chápat jako lineární aproximace vektorových
-funkcí, které uvedeme spolu s Jacobiho maticí v další části této
-přednášky. Konstitutivní vztahy však uvedeme už teď, protože se jedná
-o nejdůležitější aplikace gradientu.
+Konstitutivní vztahy tvoří z hlediska materiálového inženýrství jednu
+z nejdůležitějších aplikací gradientu.
 
 ## Fickův zákon (difuze)
 
@@ -382,32 +405,9 @@ následující věta.
 *V bodě lokálního extrému hladké funkce je tedy nulový gradient.*
 
 
-
-# Lineární aproximace vektorové funkce
-
-Lineární aproximací vektorové funkce je lineární aproximace jejích skalárních složek. Tj. pro funkci $\vec F(x,y)=f_1(x,y)\vec \imath + f_2(x,y)\vec\jmath$ v bodě $(x_0, y_0)$ je
-\dm $$      f_1(x,y)\approx f_1(x_0, y_0)+\frac{\partial f_1 (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f_1 (x_0,y_0)}{\partial y}(y-y_0)$$
-a
-\dm $$      f_2(x,y)\approx f_2(x_0, y_0)+\frac{\partial f_2 (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f_2 (x_0,y_0)}{\partial y}(y-y_0).$$
-Maticově zapsáno
-\dm$$\begin{pmatrix}f_1(x,y)\\f_2(x,y)\end{pmatrix} \approx  \begin{pmatrix}f_1(x_0,y_0)\\f_2(x_0,y_0)\end{pmatrix} + \begin{pmatrix} \frac{\partial f_1}{\partial x}(x_0,y_0) & \frac{\partial f_1}{\partial y}(x_0,y_0)\\\frac{\partial f_2}{\partial x}(x_0,y_0) & \frac{\partial f_2}{\partial y}(x_0,y_0)\end{pmatrix} \begin{pmatrix}x-x_0\\ y-y_0\end{pmatrix}
-$$
-nebo 
-$$\vec F(x,y)\approx \vec F(x_0,y_0) + J(x_0,y_0)  \begin{pmatrix}x-x_0\\ y-y_0\end{pmatrix},$$
-kde 
-$$J(x,y)=\begin{pmatrix} \frac{\partial f_1}{\partial x}(x ,y ) & \frac{\partial f_1}{\partial y}(x ,y )\\\frac{\partial f_2}{\partial x}(x ,y ) & \frac{\partial f_2}{\partial y}(x ,y )\end{pmatrix}$$
-je Jacobiho matice funkce $\vec F$. 
-
-Lineární aproximace v okolí nuly pro funkci, která je v nule nulová,
-tj. $x_0=y_0=\vec F(0,0)=0$ je $$\vec F(x,y)\approx \vec J(0,0)
-\begin{pmatrix}x\\ y\end{pmatrix}.$$ Konstitutivní vztahy uvedené v
-předchozí části přednášky (Darcyho, Fickův a Fourierův zákon) je možno
-chápat jako speciální případy této aproximace, tj. lineární aproximace
-obecných materiálových vztahů pro malé vnější podněty ($x_0=y_0=0$) a
-případ, kdy bez podnětu není v materiálu odezva ($\vec F(0,0)=0\vec
-\imath + 0\vec\jmath$).
-
 # Tenzor malých deformací
+
+Na závěr jedna aplikace z oblasti parciálních derivací. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
 
 Vektorovou funkci je možné chápat jako zobrazení roviny do sebe, které může odpovídat deformaci tělesa působením síly. Popišme tuto deformaci  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$.  Lineární aproximací dostáváme
 $$\vec U(x_1+\Delta x_1,x_2+\Delta x_2)\approx 
