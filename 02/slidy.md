@@ -61,7 +61,8 @@ parciální derivaci $\frac{\partial f}{\partial x}$.
 
 Někdy je vhodné formulovat fyzikální zákony pomocí prostředků lineární algebry, zejména pomocí maticového součinu. V takovém případě gradientem uvažujeme sloupcový vektor. 
   
-Gradient je v každém bodě kolmý k vrstevnici. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxlj71uwyAUhfdIfgcU2TKk5Mdupip0TFdPnapY1IaYFoMFJDV5-hLbUVKVAbjncr_D4bDHHpH-kC_8sl_4w3M0a9mF9SQ0MrxFY-kJ9HiZ4TzUjaS1UJ5sN9HMNvoHNq6VcL5r8td3Yx07K1ExQMHRhHdMud06dMD-pL4r9gJiwEdLkFgQzxMgqWM9HMWwotkj1aRvEyVMfij6KeltHiYWJxbFaQIfEata8HBDCIP_8uAwWBSk0srpkyk7qR3keAg97B6DqWfJlDUoLe1I-sVcigEXUpI9lZahK6h4uiLKM6ucNiUXTNaQr27pIVorbdo_SvjbaDcc_p65uMKPVlwYyTYYUNsFaGmoE5pk6BegT4aw&lang=sage)
+Užitečnost gradientu je ve spojení s křivkami, které spojují místa se stejnou funkční hodnotou funkce dvou proměnných. Tyto křivky nazýváme obecně vrstevnice, případně podle kontextu izotermy, izobary, hydroizopsy, hydroizopiezy atd. Pro funkce tří proměnných máme plochy spojující místa se stejnou funkční hodnotou ekvipotenciální plochy.
+Gradient je v každém bodě kolmý k vrstevnici (ve 2D) resp. k ekvipotenciální ploše (ve 3D). [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxlj71uwyAUhfdIfgcU2TKk5Mdupip0TFdPnapY1IaYFoMFJDV5-hLbUVKVAbjncr_D4bDHHpH-kC_8sl_4w3M0a9mF9SQ0MrxFY-kJ9HiZ4TzUjaS1UJ5sN9HMNvoHNq6VcL5r8td3Yx07K1ExQMHRhHdMud06dMD-pL4r9gJiwEdLkFgQzxMgqWM9HMWwotkj1aRvEyVMfij6KeltHiYWJxbFaQIfEata8HBDCIP_8uAwWBSk0srpkyk7qR3keAg97B6DqWfJlDUoLe1I-sVcigEXUpI9lZahK6h4uiLKM6ucNiUXTNaQr27pIVorbdo_SvjbaDcc_p65uMKPVlwYyTYYUNsFaGmoE5pk6BegT4aw&lang=sage)
 
 
 
@@ -156,7 +157,7 @@ rozdíl tlaků vyjadřovat pomocí veličiny nazývané *piezometrická výška*
 $h$. Do této veličiny se sčítá vliv nadmořské výšky, tlaku
 geologických vrstev a případné další efekty. Tok (množství vody, která
 proteče jednotkovou plochou za jednotku času) je dán vztahem $$\vec
-q=-K\nabla h,$$ kde $h$ je poiezometrická výška a $K$ je koeficient
+q=-K\nabla h,$$ kde $h$ je piezometrická výška a $K$ je koeficient
 filtrace. $K$ je v obecném případě symetrický tenzor, v izotropním
 případě, kdy $\vec q$ a $\nabla h$ mají stejný směr, veličina
 skalární.

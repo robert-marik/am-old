@@ -15,7 +15,7 @@
 
 # Autonomní systém v jedné dimenzi
 
-Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{♣}$$ je autonomní
+Rovnice $$\frac{\mathrm dy}{\mathrm dx}=f(y)\tag{1}$$ je autonomní
 systém v jedné dimenzi. Je speciálním případem rovnice se separovanými
 proměnnými, která je uvedena na dalším slidu a umíme ji řešit
 analytickou cestou. Proto se nyní nebudeme zaměřovat na hledání
@@ -23,7 +23,7 @@ obecného řešení, ale pokusíme se popsat chování řešení, aniž bychom
 tato řešení znali. Pokusíme se s\ co nejmenší námahou říct, jak se
 budou řešení chovat.
 
-Všechna konstantní řešení rovnice (♣) jsou nulové body pravé strany. Kromě toho musíme poosudit stabilitu.
+Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Kromě toho musíme poosudit stabilitu.
 
 > Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
@@ -62,8 +62,9 @@ a rovnováha je tedy poněkud křehká.
 \fi
 
 
-Cílem tohoto modelu je studovat typy chování živočichů a zjistit, zda
-některý typ chování přináší jeho nositelům evoluční výhodu. 
+Cílem tohoto modelu je studovat typy chování živočichů a rostlin a
+zjistit, zda některý typ chování přináší jeho nositelům evoluční
+výhodu.
 
 Nechť se v populaci vyskytují dva vzorce chování -- jedince
 používající první z nich budeme nazývat *jestřábi* a druhý

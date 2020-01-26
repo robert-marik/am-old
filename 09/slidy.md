@@ -27,6 +27,21 @@ funkce $y_1$ a $y_2$ z definičního oboru operátoru $L$.
 
 # Příklady lineárních operátorů
 
+Linearitu se naučíme využívat k tomu, abychom úlohu najít řešení
+rovnice rozkouskovali na řešení jednodušších úloh. Například je možné
+zkombinovat úlohu na stacionární proudění podzemní vody a úlohu na radiální proudění ke studni. Každou z těchto úloh umíme redukovat na separovatelnou diferenciální rovnici a vyřešit. Zkombinováním těchto úloh je možné modelovat chování studny v roviném toku. Používá se například k zachycení kontaminace spodní vody.
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni.](snizeni_toku_se_studnou_03_001.png)
+
+</div>
+
+\fi
+
+
 * Operátor derivace, tj. operátor definovaný vztahem $L[y]=\frac{\mathrm dy}{\mathrm dx}$ je lineární. Toto plyne ze vzorců pro derivaci součtu a konstantního násobku.
 * Buď dána funkce $a(x)$. Operátor násobení funkcí $a(x)$, tj. $L[y](x)=a(x)y(x)$ je lineární. To plyne z komutativity násobení a z distributivního zákona (roznásobování závorek).
 * Složení (postupná aplikace) lineárních operátorů je lineární operátor. Například tedy
@@ -82,7 +97,7 @@ tj.
 $$y'=y.$$
 
 Operátorovými rovnicemi (na množině konstantních vektorových funkcí) jsou i soustavy lineárních rovnic $$AX=B.$$ Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice 
-$$\frac{\mathrm d}{\mathrm dt}X=AX$$ operátorová rovnice s lineárním operátorem. 
+$$\frac{\mathrm dX}{\mathrm dt}-AX=0$$ operátorová rovnice s lineárním operátorem. 
 
 > Věta (princip superpozice při řešení rovnic). Jsou-li funkce $y_1(x)$ a $y_2(x)$ po řadě řešeními rovnic $$L[y]=b_1(x),\quad L[y]=b_2(x),$$
 > Je funkce $$y(x)=C_1 y_1(x)+C_2 y_2(x)$$ řešením rovnice $$L[y]=C_1 b_1(x)+C_2 b_2(x).$$

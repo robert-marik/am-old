@@ -60,7 +60,7 @@ $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 
 </div>
 
-Příkladem skalární funkce dvou proměnných je teplota na dvourozměrném povrchu. Aparát funkcí dvou proměnných se tedy jistě uplatní při studiu tepelných ostrovů souvisejících s urbanizací a kvalitou života ve městech.
+Příkladem skalární funkce dvou prostorových proměnných je teplota v určitém okamžiku na dvourozměrném povrchu. Aparát funkcí dvou proměnných se tedy jistě uplatní při studiu tepelných ostrovů souvisejících s urbanizací a kvalitou života ve městech.
 
 Příkladem skalární funkce dvou proměnných, kdy každá z proměnných má
 jiný charakter, je teplota ve stěně budovy. Tato teplota se mění s
@@ -176,6 +176,11 @@ $$\frac{\partial }{\partial x}\frac{\partial f}{\partial y},
 \frac{\partial}{\partial y}\frac{\partial f}{\partial x}$$
 Poději si ukážeme, že tyto dvě možnosti jsou v praxi zpravidla vždy totožné.
 
+Je-li tepelná vodivost $k$ v rovnici vedení tepla 
+$$\rho c\frac{\partial T}{\partial t} = \frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$
+konstantní, redukuje se rovnice na rovnici
+$$\rho c\frac{\partial T}{\partial t} = k \frac{\partial^2 T}{\partial x^2},$$
+ve které figuruje druhá derivace podle polohy.
 
 # Numerická aproximace: konečné diference I
 
@@ -213,9 +218,9 @@ f(x+h)+f(x-h)&\approx2f(x)+ f''(x)h^2,\\
 f(x+h)-f(x-h)&\approx2f'(x)h.
 \end{aligned}$$
 Odsud dostáváme aproximace první a druhé derivace
-$$ \frac{\mathrm d f}{\mathrm dx}\approx  \frac{f(x+h)-f(x-h)}{2h}  $$
+$$ f'(x)=\frac{\mathrm d f}{\mathrm dx}\approx  \frac{f(x+h)-f(x-h)}{2h}  $$
 a
-$$ \frac{\mathrm d^2f}{\mathrm dx^2}\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
+$$ f''(x)=\frac{\mathrm d^2f}{\mathrm dx^2}\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 Analogicky pro parciální derivaci podle $x$
 $$ \frac{\partial f}{\partial x}\approx  \frac{f(x+\Delta x,y)-f(x-\Delta x,y)}{2\Delta x}  $$
 a
