@@ -120,5 +120,32 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou no
 
 # Autonomní systém ve dvou dimenzích
 
+
+# Brusselátor
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Fázový portrét brusselátoru. Zdroj: Wikipedia](Bruesselator.png)
+
+</div>
+
+\fi
+
+
+Systém chemických reakcí
+$$\begin{aligned}A &\rightarrow X\\2X + Y &\rightarrow 3X\\B + X &\rightarrow Y + D\\X &\rightarrow E\end{aligned}$$
+má pozoruhodnou minulost. Jeho objevitelé (Belousov, Zabotinski) zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Později matematikové (Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny.
+
+Pokud je dostatek složek $A$ a $B$, modeluje po zjednodušení (viz Wikipedie) chemické reakce soustava
+$$
+\begin{aligned}
+\frac {\mathrm d X}{\mathrm dt}&= A  +  X ^2 Y  - B X - X,\\
+\frac {\mathrm d Y}{\mathrm dt}&= BX-X^2Y,
+\end{aligned}
+$$
+kde $X$ pro jednoduchost znamená koncentraci veličiny $X$ a totéž platí i pro další veličiny.
+
 # Vícerozměrné autonomní systémy, kompartmentové modely
 
