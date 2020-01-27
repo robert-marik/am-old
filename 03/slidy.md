@@ -97,6 +97,10 @@ Výše uvedenými úvahami je motivována následující definice a věta. (Defi
 > Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\nabla\cdot\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
 > Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen. 
 
+> Poznámka (linearita divergence). Divergence zachovává součet a násobení konstantou, tj. pro libovolné vektorové funkce $\vec F$ a $\vec G$ a konstantu $c$ platí
+> $$\nabla \cdot (\vec F+\vec G)=\nabla \cdot \vec F +\nabla \cdot \vec G, \qquad \nabla \cdot (c\vec F)=c\nabla \cdot \vec F.$$
+
+
 Pokud při ustáleném proudění je v některém místě kladná divergence,
 znamená to, že v tomto místě musí být zdroj této veličiny. Proto se
 vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové pole**. 
@@ -205,7 +209,10 @@ vede vlhkost nejlépe. V takovém případě je $D$ matice.
 Spojením rovnice kontinuity a vztahu  pro tok stavové veličiny dostáváme  *difuzní rovnici*
 $$
       {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)}$$
-    
+V jednorozměrném případě (proudění jedním směrem) gradient splývá s parciální derivací a má jenom jednu komponentu. Ztrácí tedy vektorový charakter a proto nemá smysl $D$ uvažovat maticově, prostředí je automaticky izotropní. Divergence se v takovém případě také redukuje na parciální derivaci a rovnice difuze c jedné dimenzi má tvar
+$$
+      {\frac{\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x} \bigl(D\frac{\partial u}{\partial x}\bigr)}$$
+
 
 # Vedení tepla
 

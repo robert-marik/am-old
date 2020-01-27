@@ -96,7 +96,10 @@ $f$ při změnách veličiny $x$ a předpokladu konstantní veličiny
 $y$. Interpretace derivace v nematematických disciplínách je okamžitá
 rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 
+Následující poznámka je nanápadná a přirozená, protože je analogií stejného tvrzení pro obyčejné derivace. Má však mimořádnou důležitost, protože udává vlastnost, které se můžeme držet při studiu rovnic obsahujících derivace. Stejné věty zformulujeme i u dalších opearcí s funcemi a později se je naučíme využívat.
 
+> Poznámka (linearita parciální derivace). Parciální derivace zachovává součet a násobení konstantou, tj. pro libovolné funkce $f$ a $g$ a konstantu $c$ platí
+> $$\frac{\partial (f+g)}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial x}, \qquad \frac{\partial (cf)}{\partial x}=c\frac{\partial f}{\partial x}$$ a analogicky pro libovolnou jinou proměnnou.
 
 
 # Rovnice vedení tepla v 1D
