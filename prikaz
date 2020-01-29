@@ -15,7 +15,7 @@ then   kde="01 02 03 04 05 06 07 08 09 10 11"
    for j in $kde
    do
        k=`head -n1 $j/slidy.md | cut -d% -f2`
-       echo "<tr><td>$k</td><td><a href='$j/index_h.html' target='_blank'>otevřít</a></td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j.pdf'  target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
+       echo "<tr><td>$k</td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j/index_h.html' target='_blank'>otevřít</a></td><td><a href='$j.pdf'  target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
 
    done
    echo '</table></div></html>' >> index.html

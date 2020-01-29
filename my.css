@@ -107,3 +107,5 @@ li ul li { font-size: 85%; font-style: normal; }
 
 .prikladname {font-weight:bold;}
 
+.tlacitko {background-color:#006131; width:90%;display:inline-block;padding:5px; font-weight:bold; color:white;}
+.tlacitko img {width:30px; float:left; vertical-align: middle;}

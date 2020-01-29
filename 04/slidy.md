@@ -103,9 +103,7 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 > $$\nabla \times (\vec F+\vec G)=\nabla \times \vec F +\nabla \times \vec G, \qquad \nabla \times (c\vec F)=c\nabla \cdot \vec F.$$
 
 
-
 <!-- ![Nevírové pole](nevirove.svg)	 -->
---------
 
 # Rotace významných polí
 
