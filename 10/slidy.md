@@ -36,6 +36,14 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 
 # Logistická diferenciální rovnice s konstantním lovem
 
+
+<div class='obtekat'>
+
+![Pravá strana k modelu lovu s konstantní intenzitou.](logisticka-lov.png)
+
+</div>
+
+
 Logistická diferenciální rovnice s konstantním lovem $h$, tj. rovnice
 $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h,$$ má pro
 malé $h$ dva stacionární body. Funkce $ry\left(1-\frac yK\right)$ je
@@ -48,6 +56,8 @@ sobě a k\ vrcholu. Jejich stabilita zůstává neporušena. To znamená, že
 sice pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu
 se tento stacionární stav dostává stále blíže ke stavu nestacionárnímu
 a rovnováha je tedy poněkud křehká.
+
+[Nakreslit online](https://sagecell.sagemath.org/?z=eJx90D8OgjAYh-HdxDswkLRIIW3p2tm1NzAFChhqawpo8U6ewosJOPgvId_8Pr_kE4Sfte2h30GS-AhBjzAiEdKqVqY8aJkrzUHYcJxiHIJouxH0q0hwStYqMlWosNo6DpwqFyH7FeiaQD-E2illFoP9GWwVYW8k17JoZ2S-rrFXKEgsaCyyWDA0no6GTx4mqD_2WnGwd7IKuou8tUNQDaYtHvcgHLl_LTfTV577N1xo&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 # Model soupeření jestřábí a holubičí povahy
 
@@ -89,7 +99,7 @@ u téhož zdroje (potrava, hnízdistě, apod).
   silní a po boji je pravděpodobnost zkonzumování zdroje poloviční pro
   každého jestřába.  
 
-Matematický rozbor ukazuje, že četnost $x$ výskytu jestřábů v populaci
+Matematický rozbor (J. Kalas, Z. Pospíšil, Spojité modely v biologii) ukazuje, že četnost $x$ výskytu jestřábů v populaci
 řídí diferenciální rovnicí
 $$x'=x(1-x)\left(\frac V2-\frac D2 x\right).$$
 Jediné realistické hodnoty $x$ jsou z intervalu $[0,1]$. Pro nalezení stacionárních bodů a posouzení jejich stability budeme studovat funkci
@@ -121,7 +131,7 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou no
 # Autonomní systém ve dvou dimenzích
 
 
-# Brusselátor
+# Bruselátor
 
 \iffalse 
 
@@ -136,16 +146,16 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou no
 
 Systém chemických reakcí
 $$\begin{aligned}A &\rightarrow X\\2X + Y &\rightarrow 3X\\B + X &\rightarrow Y + D\\X &\rightarrow E\end{aligned}$$
-má pozoruhodnou minulost. Jeho objevitelé (Belousov, Zabotinski) zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Později matematikové (Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny.
+má pozoruhodnou minulost. Jeho objevitelé (reakci objevil Belousov, jeho výsledky přezkoumal a potrvrdil Zabotinski) zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Všeobecně panoval názor, že chemická reakce rychle spěje ke stavu termodynamické rovnováhy a oscilující reakce byla něco jako chemické perpetum mobile. Později matematikové (Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny. Název bruselátor je spojení slova Brusel (pracoviště Prigogina) a oscilátor.
 
-Pokud je dostatek složek $A$ a $B$, modeluje po zjednodušení (viz Wikipedie) chemické reakce soustava
+Pokud je dostatek složek $A$ a $B$, modeluje po zjednodušení (viz Wikipedie, konstanty úměrnosti klademe rovny jedné) chemické reakce soustava
 $$
 \begin{aligned}
 \frac {\mathrm d X}{\mathrm dt}&= A  +  X ^2 Y  - B X - X,\\
 \frac {\mathrm d Y}{\mathrm dt}&= BX-X^2Y,
 \end{aligned}
 $$
-kde $X$ pro jednoduchost znamená koncentraci veličiny $X$ a totéž platí i pro další veličiny.
+kde $X$ pro jednoduchost znamená koncentraci látky $X$ a totéž platí i pro další veličiny vystupující v rovnici.
 
 # Vícerozměrné autonomní systémy, kompartmentové modely
 
