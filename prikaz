@@ -20,7 +20,9 @@ then   kde="01 02 03 04 05 06 07 08 09 10 11"
    done
    echo '</table></div></html>' >> index.html
 
-   scp index.html cornus.mendelu.cz:html/am/slidy/
+   #scp index.html cornus.mendelu.cz:html/am/slidy/
+   rsync -e "ssh -o StrictHostKeyChecking=no" -av index.html cornus.mendelu.cz:html/am/slidy/
+
 fi  
 
 for i in $kde

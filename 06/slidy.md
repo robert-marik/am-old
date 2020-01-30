@@ -361,6 +361,9 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 ![Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com](beam.jpg)
 
+![Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník](vanocni_strom.jpg)
+
+
 </div>
 
 \fi
@@ -402,8 +405,7 @@ Odsud máme okamžitě několik pozorování
   Vidíme, že i s hrozivě vypadající dutinou má kmen pořád tuhost 
   $94\%$ původní tuhosti (za předpokladu dutiny uprostřed
   kmene). Pevnost roste jenom s třetí
-  mocninou a proto odolnost vůči zlomení klesne o něco více než
-  tuhost.
+  mocninou a proto odolnost vůči zlomení neklesne tak dramaticky jako tuhost.
 
 \iffalse 
 
