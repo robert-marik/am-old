@@ -243,10 +243,10 @@ gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
 \fi
 
 
-Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla \varphi,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření
-$$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y},\frac{\partial \varphi}{\partial z}\right)^T$$
+Uvažujme vztah mezi gradientem a tokem ve tvaru $$\vec j=-K\nabla u ,$$ kde $K$ je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření
+$$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y},\frac{\partial u }{\partial z}\right)^T$$
 a ve 2D
-$$\nabla \varphi =\left(\frac{\partial \varphi}{\partial x},\frac{\partial \varphi}{\partial y}\right)^T.$$ 
+$$\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y}\right)^T.$$ 
 
 ## Obecný případ (anizotropní)
 
@@ -263,9 +263,9 @@ veličiny kladné a prvky v hlavní diagonále jsou dominantní.
 Komponenty vektoru $\vec j=(j_x, j_y, j_z)^T$ jsou
 $$
 \begin{aligned}
-  j_x&=-k_{11}\frac{\partial \varphi}{\partial x}-k_{12}\frac{\partial \varphi}{\partial y}-k_{13}\frac{\partial \varphi}{\partial z},\\
-  j_y&=-k_{21}\frac{\partial \varphi}{\partial x}-k_{22}\frac{\partial \varphi}{\partial y}-k_{23}\frac{\partial \varphi}{\partial z},\\
-  j_z&=-k_{31}\frac{\partial \varphi}{\partial x}-k_{32}\frac{\partial \varphi}{\partial y}-k_{33}\frac{\partial \varphi}{\partial z},
+  j_x&=-k_{11}\frac{\partial u }{\partial x}-k_{12}\frac{\partial u }{\partial y}-k_{13}\frac{\partial u }{\partial z},\\
+  j_y&=-k_{21}\frac{\partial u }{\partial x}-k_{22}\frac{\partial u }{\partial y}-k_{23}\frac{\partial u }{\partial z},\\
+  j_z&=-k_{31}\frac{\partial u }{\partial x}-k_{32}\frac{\partial u }{\partial y}-k_{33}\frac{\partial u }{\partial z},
 \end{aligned}
 $$
 což zjistíme prostým maticovým násobením. Prostor pro další úpravu není.
@@ -295,9 +295,9 @@ $$
 Komponenty vektoru $\vec j$ jsou
 $$
 \begin{aligned}
-  j_x&=-k_{11}\frac{\partial \varphi}{\partial x},\\
-  j_y&=-k_{22}\frac{\partial \varphi}{\partial y},\\
-  j_z&=-k_{33}\frac{\partial \varphi}{\partial z}.
+  j_x&=-k_{11}\frac{\partial u }{\partial x},\\
+  j_y&=-k_{22}\frac{\partial u }{\partial y},\\
+  j_z&=-k_{33}\frac{\partial u }{\partial z}.
 \end{aligned}
 $$
 
@@ -322,7 +322,7 @@ Stejné jako ve 3D, pouze chybí třetí rovnice.
 ## Izotropní případ
 
 Stejné jako ortotropní případ, ale navíc platí $k_{11}=k_{22}=k_{33}=k.$ Potom
-$\vec j=-k\nabla \varphi$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr.
+$\vec j=-k\nabla u $, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr.
 
 
 # Tečna k vrstevnici
