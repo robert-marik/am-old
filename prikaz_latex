@@ -47,5 +47,5 @@ mv all.pdf ../am_slidy_all.pdf
 #rm ??.pdf
 
 
-# rsync -e "ssh -o StrictHostKeyChecking=no" -av ??.pdf cornus.mendelu.cz:html/am/slidy/
-# rsync -e "ssh -o StrictHostKeyChecking=no" -av am_slidy_all.pdf cornus.mendelu.cz:html/am/slidy/
+rsync -e "ssh -o StrictHostKeyChecking=no" -av ??.pdf cornus.mendelu.cz:html/am/slidy/
+rsync -e "ssh -o StrictHostKeyChecking=no" -av am_slidy_all.pdf cornus.mendelu.cz:html/am/slidy/
