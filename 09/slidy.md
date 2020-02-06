@@ -1,6 +1,6 @@
 % Lineární operátory a lineární diferenciální rovnice
 % Robert Mařík
-% 2014–2019
+% 2014–2020
 
 # Lineární operátor
 
@@ -29,13 +29,13 @@ funkce $y_1$ a $y_2$ z definičního oboru operátoru $L$.
 
 Linearitu se naučíme využívat k tomu, abychom úlohu najít řešení
 rovnice rozkouskovali na řešení jednodušších úloh. Například je možné
-zkombinovat úlohu na stacionární proudění podzemní vody a úlohu na radiální proudění ke studni. Každou z těchto úloh umíme redukovat na separovatelnou diferenciální rovnici a vyřešit. Zkombinováním těchto úloh je možné modelovat chování studny v roviném toku. Používá se například k zachycení kontaminace spodní vody.
+zkombinovat úlohu na stacionární proudění podzemní vody a úlohu na radiální proudění ke studni. Každou z těchto úloh umíme redukovat na separovatelnou diferenciální rovnici a vyřešit. Zkombinováním těchto úloh je možné modelovat chování studny v rovinném toku. Používá se například k zachycení kontaminace spodní vody.
 
 \iffalse 
 
 <div class='obtekat'>
 
-![Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni.](snizeni_toku_se_studnou_03_001.png)
+![Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity.](snizeni_toku_se_studnou_03_001.png)
 
 </div>
 
@@ -97,15 +97,47 @@ tj.
 $$y'=y.$$
 
 Operátorovými rovnicemi (na množině konstantních vektorových funkcí) jsou i soustavy lineárních rovnic $$AX=B.$$ Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice 
-$$\frac{\mathrm dX}{\mathrm dt}-AX=0$$ operátorová rovnice s lineárním operátorem. 
+$$\frac{\mathrm dX}{\mathrm dt}-AX= B$$ operátorová rovnice s lineárním operátorem. Tyto rovnicím se v případě, kdy matice $A$ a $B$ nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat v příští přednášce.
+
+Následující věta vlastně vyjadřuje totéž co princip superpozice z minulého slidu, pouze v jiných pojmech: v pojmech řešení rovnice s lineárním operátorem. 
 
 > Věta (princip superpozice při řešení rovnic). Jsou-li funkce $y_1(x)$ a $y_2(x)$ po řadě řešeními rovnic $$L[y]=b_1(x),\quad L[y]=b_2(x),$$
 > Je funkce $$y(x)=C_1 y_1(x)+C_2 y_2(x)$$ řešením rovnice $$L[y]=C_1 b_1(x)+C_2 b_2(x).$$
 
-Například pro $L[y]=y''-y$ a $b_1(x)=b_2(x)=0$ všechny tři výše uvedené rovnice splynou v $$y''-y=0.$$ Protože $y_1(x)=e^x$ je řešením této rovnice a $y_2(x)=e^{-x}$ je také řešením této rovnice, je řešením této rovnice i každá funkce tvaru
-$$y(x)=C_1 e^x+C_2 e^{-x},$$
-kde $C_{1,2}\in\mathbb{R}.$
 
+Pro $b_1(x)=b_2(x)=0$ všechny tři výše uvedené rovnice splynou a lineární kombinace dvou řešení homogenní lineární rovnice je také řešením. Toto je možné pochopitelně rozšířit na libovolný konečný počet funkcí. 
+
+Pro $b_1(x)=0$ a $C_2=1$ jsou obě nehomogenní rovnice stejné a pokud k řešení rovnie přičteme řešení asociované homogenní rovnice (se stejným operátorem na levé straně, ale nulou na pravé straně), dostaneme řešení stejné rovnice.
+
+Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.
+
+* Pokud máme k dispozici několik řešení homogenní rovnice, libovolná jejich lineární kombinace je také řešením. 
+* Za určitých okolností lineární kombinace z předchozího bodu umožní splnit libovolnou počáteční podmínku a vzhledem k jednoznačnosti řešení, která lineární rovnice zpravidla provází, je jistota, že žádné další řešení neexistuje. Nalezení těchto funkcí je tedy zásadní krok při řešení rovnice. 
+* U nehomogenní rovnice stačí najít jedno řešení. Obecné řešení (zahrnující všechna řešení) potom dostaneme tak, že k tomuto řešení přičteme obecné řešení homogenní rovnice, která má stejný lineární operátor, ale pravá strana je nahrazena nulou. Že dostaneme řešení stejné nehomogenní rovnice zajišťuje linearita, že žádné další řešení neexistuje zajišťuje jednoznačnost řešení.
+
+
+# Příklady využití linearity 
+
+Pro konkrétnost specifikujeme myšlenky z předchozího slidu na příkladech.
+
+* V další části této přednášky se seznámíme se skalárními lineárními diferenciálními rovnicemi
+  prvního řádu. Pro jednu funkci lineární kombinace degenerují na
+  násobky. Proto je obecné řešení rovnice součtem jednoho řešení
+  rovnice a obecného řešení asociované homogenní rovnice. Toto řešení
+  asociované homogenní rovnice je násobkem jednoho nenulového řešení. Například  funkce $y=e^x$ splňuje rovnici $$y'-y=0$$ a funkce $y=-\pi$ splňuje rovnici $$y'-y=\pi.$$ Všechna řešení této rovnice jsou tvaru $y=Ce^x-\pi$
+* Pro skalární lineární diferenciální rovnice druhého řádu je situace
+  obdobná, pouze pro řešení asociované homogenní diferenciální rovnice
+  potřebujeme dvě lineárně nezávislé řešení (jedno není násobkem
+  druhého).   
+Například  $y_1(x)=e^x$ a $y_2(x)=e^{-x}$ nejsou jedna násobkem druhé a obě splňují rovnici $$y''-y=0.$$ Proto všechna řešení jsou tvaru 
+$$y(x)=C_1 e^x+C_2 e^{-x},$$
+kde $C_{1,2}\in\mathbb{R}.$ Funkce $y=-x$ splňuje rovnici $$y''-y=x$$ a všechna řešení této rovnice jsou $$y(x)=C_1 e^x+C_2 e^{-x}-x.$$
+* Pro vektorové diferenciální rovnice prvního řádu $$\frac{\mathrm dX}{\mathrm dt}-AX= B$$  je souvislost mezi
+  homogenní a nehomogenní rovnicí obdobná jako v minulých
+  případech. Pouze pro řešení homogenní rovnice ($B=0$) potřebujeme tolik
+  nezávislých řešení, kolik je dimenze vektoru. (Lineární závislost a
+  nezávislost je definována stejně jako u algebraických vektorů.) Z
+  nich lineárními kombinacemi dostaneme řešení libovolné počáteční podmínky a proto jsou v obecné lineární kombinaci zahrnuta všechna řešení. Pro nalezení obecného řešení nehomogenní úlohy stačí najít jedno řešení a všechna další řešení dostaneme sečtením s obecným řešením homogenní rovnice se stejnou levou stranou. Úloha už je složitější na provedení, ale můžeme pracovat kvalitativně. Pokud například máme tolik nezávislých řešení, kolik je dimenze úlohy, a všechna řešení konvergují k nule, potom i všechny jejich lineární kombinace konvergují k nule. Všechna řešení rovnice v takovém případě konvergují k nule. Řešení nehomogenní rovnice by byla součtem jednoho pevného řešení a řešení jdoucích k nule. Všechny by tady konvergovaly ke stejnému řešení nehomogenní úlohy. To odpovídá systému, který po čase přejde do rovnovážného stavu.
 
 # Lineární diferenciální rovnice prvního řádu
 
@@ -121,7 +153,7 @@ kde $C_{1,2}\in\mathbb{R}.$
 > úloha právě jedno řešení definované na celém
 > intervalu $I$.
 
-> Definice (asoociovaná homogenní rovnice). Buď dána lineární diferenciální rovnice. Homogenní rovnice, která
+> Definice (asociovaná homogenní rovnice). Buď dána lineární diferenciální rovnice. Homogenní rovnice, která
 > vznikne z\ rovnice nahrazením pravé strany nulovou funkcí, tj.
 > rovnice
 > $$    y'+a(x)y=0$$

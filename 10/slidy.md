@@ -13,7 +13,11 @@
 
 V celé přednášce budeme jako nezávislou proměnnou uvažovat čas
 $t$. Autonomní znamená v tomto kontextu nezávislý na čase. Budeme
-studovat rovnice mající tuto vlastnost.
+studovat rovnice mající tuto vlastnost. Budeme dále studovat systémy,
+které mají dostatečně pěkná data na to, aby byla zaručena
+jednoznačnost řešení. To je například, pokud funkce na pravé straně
+rovnice má ohraničené parciální derivace, což bude v níže uvedených
+příkladech vždy splněno.
 
 # Autonomní systém v jedné dimenzi
 
@@ -216,8 +220,8 @@ tj. symbolicky $X'=AX$, kde $X=(T_1,T_2)^T$ je vektorová funkce (sloupcový vek
 
 Je-li determinant matice nenulový, má soustava $AX=0$ pouze nulové řešení a systém $$X'=AX$$ má jediné konstantní řešení, kterým je počátek. Konstantní řešení bude nazývat stacionární bod.
 
-Autonomní systém $$X'=AX$$ je lineární, protože díky distributivnímu zákonu pro matice pro operátor $L[X]=X'-AX$ platí
-\dm$$L[X_1+X_2]=(X_1+X_2)'-A(X_1+X_2)=X_1^\prime+X_2^\prime-AX_1 -AX_2=(X_1^\prime -AX_1)+(X_2^\prime-AX_2)=L[X_1]+L[X_2]$$
+Tento autonomní systém můžeme přepsat na $$X'-AX=0$$ a tento systém je lineární, protože díky distributivnímu zákonu pro matice pro operátor $L[X]=X'-AX$ platí
+\dm$$\begin{aligned}L[X_1+X_2]&=(X_1+X_2)'-A(X_1+X_2)\\&=X_1^\prime+X_2^\prime-AX_1 -AX_2\\&=(X_1^\prime -AX_1)+(X_2^\prime-AX_2)\\&=L[X_1]+L[X_2]\end{aligned}$$
 a díky komutativitě při násobení s konstantou $C\in\mathbb R$ také
 \dm$$L[CX]=(CX)'-A(CX)=CX'-CAX=C(X'-AX)=CL[X].$$
 
@@ -237,24 +241,22 @@ Autonomní systém $$X'=AX+B\tag{1}$$ je možno na předchozí případ převés
 Pokud jsou například všecha vlastní čísla v daném bodě záporná, poté takto čísla generují řešení konvergující do stacionárního bodu. Díky linearitě, jednoznačnosti řešení a tomu, že máme tolik řešení, kolik je nutno pro splnění libovolné podmínky, je možné pomocí těchto dílčích řešení zapsat i libovolné jiné řešení. Tím pádem ale všechna řešení konvergují do stacinárního bodu. Podobně, pokud všechny vlastní hodnoty jsou kladné, všechna řešení se od stacionárního bodu vzdalují. 
 
 
-**Příklad.** Model ohřívání vajíčka má stacionární bod $(0,0)$. Zkusíme li bovolně zvolit parametry a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
+**Příklad.** Model ohřívání vajíčka má stacionární bod $(0,0)$. Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
 $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
 \begin{pmatrix}-3 & 2 \\ 2 & -2\end{pmatrix}
 \begin{pmatrix}T_1\\T_2\end{pmatrix}.
 $$
 Charakteristická rovnice je 
 $$\lambda^2+5\lambda+2=0$$
-se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$. Budou tedy existovat dvě nezávislá řešení konvergující do počátku a všechna další řešení dostaneme jako jejich lineární kombinaci. Proto všechna řešení knvergují k počátku tj. $T_1=T_2=0$. Obě teploty v naší posunuté stpunici se tedy ustálí na teplotě vodní lázně. Nic jiného jsme ani nečekali, ať mají žloutek a bílek ba začátku jakoukoliv teplotu, po čase se teplota ustálí na teplotě vodní lázně.
+se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$. Budou tedy existovat dvě nezávislá řešení konvergující do počátku a všechna další řešení dostaneme jako jejich lineární kombinaci. Proto všechna řešení konvergují k počátku tj. $T_1=T_2=0$. Obě teploty v naší posunuté stpunici se tedy ustálí na teplotě vodní lázně. Nic jiného jsme ani nečekali, ať mají žloutek a bílek ba začátku jakoukoliv teplotu, po čase se teplota ustálí na teplotě vodní lázně.
 
 
 
 # Autonomní systém $X'=f(X)$
 
-Obecný autonomní systém nemusí být lineární.
+Obecný autonomní systém nemusí být lineární. Například při modelování chemických reakcí je rychlost úměrná mocnině koncentrace reagujících látek odpovídající počtu molekul, které do reakce vstupují. Na dalším slidu uvidíme příklad takového modelu.
 
-**Doplnit příklad**
-
-Ukážeme si, jak studovat nelineární systém pomocí lineárního a pomocí vlastních čísel. Půjde o lineární paroximaci. V tomto případě o lineární aproximaci vektrorové funkce definující pravé strany rovnic.
+Ukážeme si, jak studovat nelineární systém pomocí lineárního a pomocí vlastních čísel. Půjde o lineární aproximaci. V tomto případě o lineární aproximaci vektrorové funkce definující pravé strany rovnic.
 
 Je-li $f(X_0)=0$, je možno systém $$X'=f(X)$$ v okolí bodu $X_0$ aproximovat lineárním systémem $$X'=J(X_0)(X-X_0),$$
 kde $J(X_0)$ je Jacobiho matice funkce $f(X)$ v bodě $X_0$, tj. pro $f(X)=(f_1(X),\dots,f_n(X))^T$ je
@@ -273,7 +275,7 @@ Jacobiho matice. Je však nutno připomenout, že aproximace pomocí Jacobiho ma
 
 <div class='obtekat'>
 
-![Belousova-Zabotinskeho reakce vytváří periodicky se měnící obrazce. Autor: Stephen Morris, flickr.com](bz-reakce.jpg)
+![Bělousova-Žabotinského reakce vytváří periodicky se měnící obrazce. Autor: Stephen Morris, flickr.com](bz-reakce.jpg)
 
 ![Fázový portrét brusselátoru. Zdroj: Wikipedia](Bruesselator.png)
 
@@ -283,7 +285,7 @@ Jacobiho matice. Je však nutno připomenout, že aproximace pomocí Jacobiho ma
 
 Systém chemických reakcí
 $$\begin{aligned}A &\rightarrow X\\2X + Y &\rightarrow 3X\\B + X &\rightarrow Y + D\\X &\rightarrow E\end{aligned}$$
-má pozoruhodnou minulost. Jeho objevitelé (reakci objevil Belousov, jeho výsledky přezkoumal a potvrdil Zabotinski) zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Všeobecně panoval názor, že chemická reakce rychle spěje ke stavu termodynamické rovnováhy a oscilující reakce byla něco jako chemické perpetum mobile. Později matematikové (Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny. Název bruselátor je spojení slova Brusel (pracoviště Prigogina) a oscilátor.
+má pozoruhodnou minulost. První chemickou reakci probíhající podle tohoto schematu objevil ruský chemik B. Bělousov, jeho výsledky přezkoumal a potvrdil A. Žabotinský. Oba zaznamenali překvapivé chování, kdy se periodicky mění koncentrace. Protože to bylo v roce 1951 mimo chápání chemiků, měli potíže s publikováním tohoto převratného jevu. Všeobecně totiž panoval názor, že chemická reakce rychle spěje ke stavu termodynamické rovnováhy a oscilující reakce byla něco jako chemické perpetum mobile. Později matematikové (I. Prigogine) sestavili teoretický model periodicky probíhající reakce a po čase několik takových reakcí i našli. Dnes toto chápeme jako jakési chemické hodiny. Název bruselátor je spojení slova Brusel (pracoviště I. Prigogina) a oscilátor.
 
 Pokud je dostatek složek $A$ a $B$, modeluje po zjednodušení (viz Wikipedie, konstanty úměrnosti klademe rovny jedné) chemické reakce soustava
 $$
