@@ -4,13 +4,37 @@
 
 # Opakování
 
-Maticový součin.
+<div class="obtekat">
 
-* Definice součinu matic
-* Matice jako zobrazení mezi vektorovými prostory
-* Změna souřadné soustavy
-* Vlastní vektory matice
-* Matice s vlastními vektory se směru souřadných os je diagonální
+\iffalse
+
+![Rovnovážná vlhkost dřeva v závislosti na teplotě a relativní vlhkosti. Pro přehlednost jsou vrstevnice označeny funkční hodnotou a prostor mezi vrstevnicemi barevne rozlišen. Zdroj: Wood handbook, Wood as an Engineering Material.](vrstevnice_drevo.png)
+
+\fi
+
+</div>
+
+
+## Vrstevnice
+
+* Pro funkci dvou proměnných jsou vrstevnice křivky, spojující místa se stejnou funkční hodnotou. 
+
+##  Geometrie
+
+* Skalární součin vektorů
+  $$(u_1,u_2)\cdot (v_1,v_2)=u_1v_1+u_2v_2$$
+  Pro kolmé vektory je nulový. Má-li jeden z vektor jednotkovou délku, je skalárí součin průmětem druhého vektoru do směru daného uvažovaným jednotkovým vektorem. 
+
+## Lineární algebra
+
+* Součin matice a vektoru (lineární kombinace sloupců matice, koeficienty jsou složky vektoru)
+  $$\begin{pmatrix}2 & 1\\-1 &3 \end{pmatrix} \begin{pmatrix}2\\3\end{pmatrix} = 2\begin{pmatrix}2\\-1\end{pmatrix} + 3\begin{pmatrix}1\\3\end{pmatrix} = \begin{pmatrix}7\\-7\end{pmatrix}$$
+* Matice jako zobrazení mezi vektorovými prostory: vektor můžeme pomocí matice zobrazit na jiný vektor, zachovává se přitom rovnoběžnost, poloha středu úsečky a některé další vlastnosti.
+* Změna souřadné soustavy: speciální případ zobrazení vektorového prostoru na sebe, tj. je možné reprezentovat pomocí maticového součinu. 
+* Vlastní hodnoty a vektory matice: $A\vec v=\lambda \vec v$, tj. vektor se zobrazí na svůj násobek. Číslo $\lambda$ se nazývá vlastní číslo (vlastní hodnota) a vektor $\vec v$ vlastní vektor matice.
+* Matice s vlastními vektory se směru souřadných os je diagonální. Skutečně, například 
+  $$\begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}a\\c\end{pmatrix}\quad\text{a}\quad \begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix}=\lambda \begin{pmatrix}1\\0\end{pmatrix}$$
+  si vynutí $c=0$. Podobně bychom dostali pro vektor ve směru druhé osy $b=0$.
 
 
 # Diferenciální operátory

@@ -30,14 +30,16 @@ obecného řešení, ale pokusíme se popsat chování řešení, aniž bychom
 tato řešení znali. Pokusíme se s\ co nejmenší námahou říct, jak se
 budou řešení chovat.
 
-Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Kromě toho musíme posoudit stabilitu, což umožní následující věta.
+Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Nazývají *se stacionární body*. Je užitečné umět posoudit chování řešení v okolí stacionárních bodů, což umožní následující věta.
 
 > Věta (stabilita konstantních řešení). Jestliže platí $f(y_0)=0$, je
   konstantní funkce $y(x)=y_0$ konstantním řešením rovnice
   $$\frac{\mathrm dy}{\mathrm dt}=f(y).$$ Toto řešení je stabilní
   pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
+  
+> Poznámka (stabilita řešení a strukturální stabilita). *Stabilita* stacionárního bodu znamená, že malá výchylka od stacionárního bodu vede na řešení, které konverguje zpět k tomuto stacionárnímu bodu. Přesněji se tento typ stability jmenuje *asymptotická stabilita*. Kromě toho existuje ještě takzvaná *strukturální stabilita*, která zaručuje, že při malé změně koeficientů v systému se nezmění typ singulárních bodů. Používá se zejmnéna ve spojení se systémy větších dimenzí. 
 
-Pro grafickou intepretaci je vhodné připomenout, že funkce s kladnou
+Pro grafickou interpretaci věty je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
 má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie pravé strany.
 
@@ -105,7 +107,7 @@ tomu přizpůsobuje. Více stromů znamená vyšší nosnou kapacitu prostředí
 pro obaleče a predátoři svou činností populaci obaleče udržují na
 rozumné míře. Pokud však nosná kapacita prostředí dosáhne takové
 hodnoty, že predátoři jsou nasycení a nestačí populaci redukovat,
-odpovídá to posunu nestabilního stacinárního bodu pod hodnotu
+odpovídá to posunu nestabilního stacionárního bodu pod hodnotu
 velikosti populace a dojde k přemnožení. Toto přemnožení má
 devastující účinky pro les.
 
@@ -135,7 +137,7 @@ výhodu.
 Nechť se v populaci vyskytují dva vzorce chování -- jedince
 používající první z nich budeme nazývat *jestřábi* a druhý
 *holubice*. Chování se projeví, pokud se dva jedinci setkají
-u téhož zdroje (potrava, hnízdistě, apod). 
+u téhož zdroje (potrava, hnízdiště, apod). 
 
 * Jestřáb o zdroj bojuje a ustoupí pouze po prohraném boji.
 * Holubice
@@ -153,7 +155,7 @@ u téhož zdroje (potrava, hnízdistě, apod).
 * Setkají-li se u zdroje dva jestřábi, ani jeden z nich neustoupí
   a bojují o zdroj. Předpokládejme, že všichni jestřábi jsou stejně
   silní a po boji je pravděpodobnost zkonzumování zdroje poloviční pro
-  každého jestřába.  
+  každého jestřába.
 
 Matematický rozbor (J. Kalas, Z. Pospíšil, Spojité modely v biologii) ukazuje, že četnost $x$ výskytu jestřábů v populaci
 řídí diferenciální rovnicí
@@ -229,26 +231,26 @@ Je možné ukázat, že každá počáteční úloha je jednoznačně řešiteln
 
 > Věta (souvislost vlastních čísel matice a řešení autonomního systému). Má-li matice $A$ vlastní číslo $\lambda$ a příslušný vlastní vektor je $v$, tj. platí $A v =\lambda v$, je funkce $X(t)=v e^{\lambda t}$ řešením systému $AX'=X.$ Jsou-li $\lambda$ a $v$ komplexní, je řešením i samostatně reálná část a imaginární část.
 
-Autonomní systém $$X'=AX+B\tag{1}$$ je možno na předchozí případ převést po přepsání do tvaru $(X-X_0)'=A(X-X_0)$, kde $X_0$ je řešením soustavy $AX+B=0$, což odpovídá posunu stacionárního bodu do počátku.
+Autonomní systém $$X'=AX+B\tag{2}$$ je možno na předchozí případ převést po přepsání do tvaru $(X-X_0)'=A(X-X_0)$, kde $X_0$ je řešením soustavy $AX+B=0$, což odpovídá posunu stacionárního bodu do počátku.
 
-> Poznámka (vlastní hodnoty a řešení). Následující poznatky jsou shrnutím a specifikací výše uvedeného a klasifikují stabilitu někerých řešení systému (1), tj. $$X'=AX+B.$$ 
+> Poznámka (vlastní hodnoty a řešení). Následující poznatky jsou shrnutím a specifikací výše uvedeného a klasifikují stabilitu některých řešení systému (2), tj. $$X'=AX+B.$$ 
 >
 > * Jakmile má systém reálnou kladnou vlastní hodnotu, existuje řešení, které se vzdaluje od stacionárního bodu směrem daným příslušným vlastním vektorem.
 > * Jakmile má systém reálnou zápornou vlastní hodnotu, existuje řešení, které se přibližuje ke stacionárnímu bodu ze směru daného příslušným vlastním vektorem.
 > * Jakmile má systém komplexní hodnotu s kladnou reálnou částí, existuje řešení, které se v oscilacích vzdaluje od stacionárního bodu.
 > * Jakmile má systém komplexní hodnotu se zápornou reálnou částí, existuje řešení, které se v oscilacích přibližuje ke stacionárnímu bodu.
 
-Pokud jsou například všecha vlastní čísla v daném bodě záporná, poté takto čísla generují řešení konvergující do stacionárního bodu. Díky linearitě, jednoznačnosti řešení a tomu, že máme tolik řešení, kolik je nutno pro splnění libovolné podmínky, je možné pomocí těchto dílčích řešení zapsat i libovolné jiné řešení. Tím pádem ale všechna řešení konvergují do stacinárního bodu. Podobně, pokud všechny vlastní hodnoty jsou kladné, všechna řešení se od stacionárního bodu vzdalují. 
+Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté takto čísla generují řešení konvergující do stacionárního bodu. Díky linearitě, jednoznačnosti řešení a tomu, že máme tolik řešení, kolik je nutno pro splnění libovolné podmínky, je možné pomocí těchto dílčích řešení zapsat i libovolné jiné řešení. Tím pádem ale všechna řešení konvergují do stacionárního bodu. Podobně, pokud všechny vlastní hodnoty jsou kladné, všechna řešení se od stacionárního bodu vzdalují. 
 
 
-**Příklad.** Model ohřívání vajíčka má stacionární bod $(0,0)$. Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
+**Příklad.** Model ohřívání vajíčka z předchozí části této přednášky má stacionární bod $(0,0)$. Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
 $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
 \begin{pmatrix}-3 & 2 \\ 2 & -2\end{pmatrix}
 \begin{pmatrix}T_1\\T_2\end{pmatrix}.
 $$
 Charakteristická rovnice je 
 $$\lambda^2+5\lambda+2=0$$
-se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$. Budou tedy existovat dvě nezávislá řešení konvergující do počátku a všechna další řešení dostaneme jako jejich lineární kombinaci. Proto všechna řešení konvergují k počátku tj. $T_1=T_2=0$. Obě teploty v naší posunuté stpunici se tedy ustálí na teplotě vodní lázně. Nic jiného jsme ani nečekali, ať mají žloutek a bílek ba začátku jakoukoliv teplotu, po čase se teplota ustálí na teplotě vodní lázně.
+se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$. Budou tedy existovat dvě nezávislá řešení konvergující do počátku a všechna další řešení dostaneme jako jejich lineární kombinaci. Proto všechna řešení konvergují k počátku tj. $T_1=T_2=0$. Obě teploty v naší posunuté stpunici se tedy ustálí na teplotě vodní lázně. Nic jiného jsme ani nečekali, ať mají žloutek a bílek ba začátku jakoukoliv teplotu, po čase se teplota ustálí na teplotě vodní lázně. V tomto případě není zajímavé vědět, do jakého stavu systém konverguje, ale například za jak dlouho bude dosaženo potřebné teploty ve žloutku nebo v bílku.
 
 
 
@@ -309,11 +311,60 @@ a $$J(1,4)=\begin{pmatrix}3& 1\\-4 & -1\end{pmatrix}.$$
 Vlastní čísla jsou řešením rovnice
 $$0=\begin{vmatrix}3-\lambda & 1\\-4 & -1-\lambda\end{vmatrix}
 =\lambda^2- 2\lambda+4=(\lambda-1)^2+3.$$
-Taková rovnice nemá řešení v množině reálných čísel a vlastní čísla jsou komplexně sdružená $$\lambda_{1,2}=1\pm \sqrt {3}i.$$ Protože reálná část $\Re(\lambda_i)=1>0$, řešení se v oscilacích vzdalují od rovnovážného bodu. Protože systém je druhého řádu a tímto postupem je možno získat dvě nezávislá řešení, lineárními kombinacemi vygenerujeme všechna řešení. Proto se v oscilacích budou od stacionárního bodu vzdalovat všecha řešení. Další stacionární bod neexistuje a koncentrace určitě zůstanou ohraničené z fyzikálních důvodů. Proto neexistuje stabilní stav, a systém je nestabilní. Je možné ukázat, že systém není chaotický, ale oscilacemi se přibližuje k periodickému řešení. Taková analýza je však již nad rámec základního seznámení se s aparátem autonomních systémů. 
+Taková rovnice nemá řešení v množině reálných čísel a vlastní čísla jsou komplexně sdružená $$\lambda_{1,2}=1\pm \sqrt {3}i.$$ Protože reálná část $\Re(\lambda_i)=1>0$, řešení se v oscilacích vzdalují od rovnovážného bodu. Protože systém je druhého řádu a tímto postupem je možno získat dvě nezávislá řešení, lineárními kombinacemi vygenerujeme všechna řešení. Proto se v oscilacích budou od stacionárního bodu vzdalovat všechna řešení. Další stacionární bod neexistuje a koncentrace určitě zůstanou ohraničené z fyzikálních důvodů. Proto neexistuje stabilní stav, a systém je nestabilní. Je možné ukázat, že systém není chaotický, ale oscilacemi se přibližuje k periodickému řešení. Taková analýza je však již nad rámec základního seznámení se s aparátem autonomních systémů. 
 
 # Autonomní systém ve dvou dimenzích
 
-Autonomní systémy prozkoumáme ve cvičení. 
+
+<div class='obtekat'>
+
+![Stacionární body spojené s reálnými vlastními čísly.](sp_real.png)
+
+![Stacionární body spojené s nereálnými vlastními čísly.](sp_complex.png)
+
+</div>
+
+
+
+Ve dvou dimenzích je autonomní systém možno psát ve tvaru 
+$$ \begin{aligned}
+   x'=f(x,y),\\
+   y'=g(x,y).
+ \end{aligned}$$
+Řešení $x(t)$, $y(t)$ definuje parametrickou křivku v rovině, která se
+nazývá *trajektorie*. Dvě různé trajektorie se nemohou protnout díky
+jednoznačné řešitelnosti. Díky tomu existuje jenom několik málo druhů
+trajektorií.
+
+* Stacionární body. Tyto body odpovídají konstantním řešením.
+*  Uzavřené trajektorie, cykly.
+    Tyto trajektorie odpovídají periodickým řešením. Uvnitř
+    každého cyklu leží alespoň jeden stacionární bod. 
+* Trajektorie, které samy sebe nikde neprotínají a pro
+    $t\to\pm\infty$ tyto trajektorie mají jednu z následujících
+    vlastností.
+    * Trajektorie mají alespoň jednu složku neohraničenou.
+    * Trajektorie konvergují k některému ze stacionárních  bodů.
+    * Trajektorie konvergují k některému z cyklů.
+    * Trajektorie konvergují k množině tvořené konečným počtem
+    singulárních bodů a jinými trajektoriemi, které vedou
+    z jednoho stacionárního bodu do druhého. S tímto typem
+    trajektorií se však v jednoduchých modelech nesetkáme.
+
+Podle chování trajektorií v okolí stacionárních bodů rozdělujeme tyto
+stacionární body do několika navzájem disjunktních skupin. Dokážeme je
+identifikovat pomocí vlastních hodnot Jacobiho matice vypočtené v
+tomto stacionárním bodě.
+
+* Stabilní uzel je stacionární bod takový, že pro $t\to\infty$ všechny trajektorie z nějakého okolí konvergují do tohoto bodu bez oscilací. Nestabilní uzel má stejnou vlastnost, ale pro $t\to-\infty$. Stabilní uzel poznáme podle dvou záporných a nestabilní uzel podle dvou kladných reálných vlastních hodnot. 
+* Stabilní a nestabilní ohnisko je stacionární bod se stejnou vlastností jako uzel, ale konvergence je spojena s oscilacemi okolo stacionárního bodu. Stabilní ohnisko poznáme podle dvou komplexně sdružených vlastních hodnot se zápornou reálnou částí, nestabilní ohnisko s kladnou reálnou částí. 
+* Sedlo je stacionární bod, který má v každém  okolí 
+    pouze konečný počet trajektorií, které pro
+    $t\to\pm\infty$ konvergují k tomuto bodu. Poznáme jej podle jedné kladné a jedné záporné vlastní hodnoty.
+* Bod rotace je takový bod, v jehož každém okolí jsou cykly. Pokud navíc
+    v nějakém okolí existují pouze cykly, nazývá se tento
+    bod navíc střed.  Bod rotace souvisí s komplexně sdruženými vlastními čísly s nulovou reálnou částí, ale v těchto případech může stacionární bod být i ohniskem.
+
 
 
 # Vícerozměrné autonomní systémy, kompartmentové modely
