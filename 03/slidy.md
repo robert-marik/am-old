@@ -209,9 +209,9 @@ vede vlhkost nejlépe. V takovém případě je $D$ matice.
 Spojením rovnice kontinuity a vztahu  pro tok stavové veličiny dostáváme  *difuzní rovnici*
 $$
       {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)}$$
-V jednorozměrném případě (proudění jedním směrem) gradient splývá s parciální derivací a má jenom jednu komponentu. Ztrácí tedy vektorový charakter a proto nemá smysl $D$ uvažovat maticově, prostředí je automaticky izotropní. Divergence se v takovém případě také redukuje na parciální derivaci a rovnice difuze c jedné dimenzi má tvar
+V jednorozměrném případě (proudění jedním směrem) gradient splývá s parciální derivací a má jenom jednu komponentu. Ztrácí tedy vektorový charakter a proto nemá smysl $D$ uvažovat maticově, prostředí je automaticky izotropní. Divergence se v takovém případě také redukuje na parciální derivaci a rovnice difuze v jedné dimenzi má tvar
 $$
-      {\frac{\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x} \bigl(D\frac{\partial u}{\partial x}\bigr)}$$
+      {\frac{\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x} \left(D\frac{\partial u}{\partial x}\right)}$$
 
 
 # Vedení tepla
