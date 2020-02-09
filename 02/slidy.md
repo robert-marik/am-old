@@ -346,7 +346,7 @@ Stejné jako ve 3D, pouze chybí třetí rovnice.
 ## Izotropní případ
 
 Stejné jako ortotropní případ, ale navíc platí $k_{11}=k_{22}=k_{33}=k.$ Potom
-$\vec j=-k\nabla u $, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr.
+$\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr.
 
 
 # Tečna k vrstevnici
