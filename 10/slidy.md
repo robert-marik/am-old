@@ -37,7 +37,7 @@ Všechna konstantní řešení rovnice (1) jsou nulové body pravé strany. Naz�
   $$\frac{\mathrm dy}{\mathrm dt}=f(y).$$ Toto řešení je stabilní
   pokud $f'(y_0)<0$ a nestabilní pokud $f'(y_0)>0$.
   
-> Poznámka (stabilita řešení a strukturální stabilita). *Stabilita* stacionárního bodu znamená, že malá výchylka od stacionárního bodu vede na řešení, které konverguje zpět k tomuto stacionárnímu bodu. Přesněji se tento typ stability jmenuje *asymptotická stabilita*. Kromě toho existuje ještě takzvaná *strukturální stabilita*, která zaručuje, že při malé změně koeficientů v systému se nezmění typ singulárních bodů. Používá se zejmnéna ve spojení se systémy větších dimenzí. 
+> Poznámka (stabilita řešení). Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu *stabilitou* stacionárního bodu budeme rozumět, že malá výchylka od stacionárního bodu vede na řešení, které konverguje zpět k tomuto stacionárnímu bodu. Přesněji se tento typ stability jmenuje *asymptotická stabilita*. 
 
 Pro grafickou interpretaci věty je vhodné připomenout, že funkce s kladnou
 derivací jsou rostoucí a funkce se zápornou derivací klesající. Pokud
@@ -263,13 +263,33 @@ Ukážeme si, jak studovat nelineární systém pomocí lineárního a pomocí v
 Je-li $f(X_0)=0$, je možno systém $$X'=f(X)$$ v okolí bodu $X_0$ aproximovat lineárním systémem $$X'=J(X_0)(X-X_0),$$
 kde $J(X_0)$ je Jacobiho matice funkce $f(X)$ v bodě $X_0$, tj. pro $f(X)=(f_1(X),\dots,f_n(X))^T$ je
 $$J(X)=\left(\frac{\partial f_i(X_0)}{\partial x_j}\right).$$
-O stabilitě tedy rozhodnou vlastní čísla Jacobiho matice. Toto platí
-za předpokladu, že Jacobiho matice je regulární, tj. její determinant
-je nenulový nula není jejím vlastním číslem. Nelineární systém v
-jistém smyslu "zdědí" chování řešení od své lineární aproximace pomocí
-Jacobiho matice. Je však nutno připomenout, že aproximace pomocí Jacobiho matice je jenom lokální a můžeme takto posoudit jenom řešení z nějakého okolí stacionárního bodu. Zejména tedy, pokud má Jacobiho matice všechny vlastní hodnoty záporné, tak všechna řešení z nějakého okolí stacionárního bodu konvergují do tohoto  bodu. Pokud má všechny vlastní hodnoty kladné, všechna řešení z nějakého okolí se naopak od stacionárního bodu vzdalují. To platí i pro vlastní komplexní vlastní hodnoty, pouze se mezi konvergencí a vzdalování přepíná podle znaménka reálné části vlastních hodnot a řešení oscilují směrem ke stacionárnímu bodu nebo od něj.
+O chování trajektorrií v okolí stacionárního bodu tedy rozhodnou
+vlastní čísla Jacobiho matice. Za předpokladu, že jsme relativně
+daleko od případů, kdy se mění typ stacionárního bodu, tj. vlastní
+čísla jsou navzájem různá, jsou nenulová a v případě komplexních
+vlastních čísel mají nenulové reálné části, má původní nelineární
+systém stejný typ stacionárního bodu jako lineární systém s Jacobiho
+maticí. Nelineární systém tedy v jistém smyslu "zdědí" chování řešení
+od své lineární aproximace pomocí Jacobiho matice. Je však nutno
+připomenout, že aproximace pomocí Jacobiho matice je jenom lokální a
+můžeme takto posoudit jenom řešení z nějakého okolí stacionárního
+bodu.
 
+Zejména tedy, pokud má Jacobiho matice všechny vlastní hodnoty
+záporné, tak všechna řešení z nějakého okolí stacionárního bodu
+konvergují do tohoto bodu. Pokud má všechny vlastní hodnoty kladné,
+všechna řešení z nějakého okolí se naopak od stacionárního bodu
+vzdalují. To platí i pro vlastní komplexní vlastní hodnoty, pouze se
+mezi konvergencí a vzdalování přepíná podle znaménka reálné části
+vlastních hodnot a řešení oscilují směrem ke stacionárnímu bodu nebo
+od něj.
 
+> Poznámka (stabilita a strukturální stabilita řešení). *Stabilitou*
+  stacionárního bodu budeme rozumět, stejně jako výše, že malá
+  výchylka od stacionárního bodu vede na řešení, které konverguje zpět
+  k tomuto stacionárnímu bodu. Stabilita vyjadřující, že při malé
+  změně koeficientů v systému se nezmění typ singulárních bodů se
+  nazývá *strukturální stabilita*.
 
 # Bruselátor
 
