@@ -252,6 +252,34 @@ kde $s$ je koeficient termodifuze. Na rozdíl od předchozích zákonů, u Sore
 směru maximálního poklesu (záporného gradientu) teploty, ale někdy i ve směru 
 gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
 
+## Ohmův zákon
+
+<div class='obtekat'>
+
+![Všechny zde uvedené konstitutivní zákony mají stejný charakter. Proto můžeme vedení tepla znázorňovat stejně jako vedení elektrického proudu.  Zdroj: pixabay.com, T_Tide.](elektricky_obvod.jpg)
+
+</div>
+
+
+Ohmův zákon je velice známý vztah mezi napětím a proudem. Přeformulováno z
+integrálního tvaru $I=\frac 1R U$ (pro elektrické obvody) do diferenciálního tvaru
+(pro popis děje v látce) tento zákon říká, že hustota elektrického
+proudu $\vec j$ je přímo úměrná intenzitě elektrického pole $\vec
+E$. A tato intenzita je gradientem potenciálu $\varphi$ elektrického
+pole, tj. $\vec E=\nabla \varphi$. Spojeno, platí $$\vec j=\gamma
+\nabla \varphi.$$ Formálně máme tedy stejný tvar zákona jako u vedení
+tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot
+je nahrazen rozdílem potenciálů. Znalost zapojování elektrických
+obvodů, jako je například paralelní nebo sériové zapojení rezistorů,
+bývá běžná a toho se často využívá při modelování tepelného odporu
+pomocí eletrického odporu. Formálně jsou vztahy identické.
+
+Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v
+případě Ohmova zákona konstanta úměrnosti uvažována jako reálné číslo,
+nikoliv matice. Tím se věci znatelně zjednodušují, ale vyplývají odsud
+i limity použitelnosti při modelování vedení tepla jako vedení
+elektrického proudu.
+
 \fi
 
 # Speciální případy vztahu mezi gradientem a tokem

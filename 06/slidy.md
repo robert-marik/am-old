@@ -328,6 +328,9 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 ![Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR [realizována 2011](https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico). Zdroj: https://www.taus.eu](I-nosniky.jpg)
 
+
+![Větrné turbíny jsou konstruovány podobně jako I nosníky, pevný materiál na vnějších stranách a materiál s menší pevností uvnitř. Například balzové dřevo. A podobně jsou "konstruovány" například listy rostlin. Zdroj: pixabay.com, tpsdave](vetrna_turbina.jpg)
+
 </div>
 
 \fi
