@@ -463,6 +463,19 @@ následující věta.
 
 # Tenzor malých deformací
 
+
+<div class="obtekat">
+
+\iffalse
+
+![Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou, jako je posunutí a otočení. V souvislosti s deformací nás zajímá jednom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos.](beer-mugs-deformace.jpg)
+
+\fi
+
+</div>
+
+
+
 Na závěr jedna aplikace z oblasti parciálních derivací. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
 
 Vektorovou funkci je možné chápat jako zobrazení roviny do sebe, které může odpovídat deformaci tělesa působením síly. Popišme tuto deformaci  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$.  Lineární aproximací dostáváme
