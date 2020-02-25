@@ -28,7 +28,7 @@
 ## Lineární algebra
 
 * Součin matice a vektoru (lineární kombinace sloupců matice, koeficienty jsou složky vektoru)
-  $$\begin{pmatrix}2 & 1\\-1 &3 \end{pmatrix} \begin{pmatrix}2\\3\end{pmatrix} = 2\begin{pmatrix}2\\-1\end{pmatrix} + 3\begin{pmatrix}1\\3\end{pmatrix} = \begin{pmatrix}7\\-7\end{pmatrix}$$
+  $$\begin{pmatrix}2 & 1\\-1 &3 \end{pmatrix} \begin{pmatrix}2\\3\end{pmatrix} = 2\begin{pmatrix}2\\-1\end{pmatrix} + 3\begin{pmatrix}1\\3\end{pmatrix} = \begin{pmatrix}7\\7\end{pmatrix}$$
 * Matice jako zobrazení mezi vektorovými prostory: vektor můžeme pomocí matice zobrazit na jiný vektor, zachovává se přitom rovnoběžnost, poloha středu úsečky a některé další vlastnosti.
 * Změna souřadné soustavy: speciální případ zobrazení vektorového prostoru na sebe, tj. je možné reprezentovat pomocí maticového součinu. 
 * Vlastní hodnoty a vektory matice: $A\vec v=\lambda \vec v$, tj. vektor se zobrazí na svůj násobek. Číslo $\lambda$ se nazývá vlastní číslo (vlastní hodnota) a vektor $\vec v$ vlastní vektor matice.
