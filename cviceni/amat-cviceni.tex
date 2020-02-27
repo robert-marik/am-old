@@ -1,0 +1,58 @@
+\newif\ifpaperversion
+\paperversiontrue
+%\paperversionfalse
+\documentclass{article}
+
+\makeatletter
+\renewcommand\subsection{\@startsection{subsection}{2}{\z@}%
+                                     {-0.25ex\@plus -.1ex \@minus -.2ex}%
+                                     {1pt \@plus 2pt}%
+                                     {\normalfont \bfseries
+                                     }}
+\makeatother
+
+
+\usepackage{amsmath,amsfonts,mathtools,multicol, url, booktabs}
+\usepackage{wrapfig, enumerate, physics,breqn}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\ifpaperversion \usepackage[margin=1in]{geometry}
+\else \usepackage[a6paper, margin=20pt, landscape]{geometry}
+\fi
+
+\usepackage{graphicx, xcolor, xparse}
+\parskip 10pt
+\everymath{\displaystyle}
+\parindent 0 pt
+
+\let\oldtextbf\textbf
+\def\textbf#1{%\newpage
+  \oldtextbf{\color{red} #1}}
+
+\setcounter{tocdepth}{1}
+
+\NewDocumentCommand{\obrazek}{ O{pixabay.com}mO{-10pt}}{}
+
+
+\let\stranka\relax
+\ifpaperversion \else \let\stranka\newpage\fi
+
+\long\def\reseni#1\konec{}
+
+\begin{document}
+
+\title{Aplikovaná matematika, cvičení}
+\author{Robert Mařík}
+\date{\today}
+
+
+\maketitle
+\tableofcontents
+
+\clearpage
+
+\input text.tex
+
+\end{document}

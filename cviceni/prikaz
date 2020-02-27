@@ -1,0 +1,22 @@
+pdflatex amat-cviceni
+pdflatex amat-cviceni
+pdflatex amat-cviceni-screen
+pdflatex amat-cviceni-screen
+pdflatex amat-cviceni-screen-reseni
+pdflatex amat-cviceni-screen-reseni
+pdflatex amat-cviceni-reseni
+pdflatex amat-cviceni-reseni
+
+#scp mat-cviceni.pdf kiwi:html/mt/
+#scp mat-cviceni-screen.pdf kiwi:html/mt/
+
+#pdftk mat-cviceni-reseni.pdf output mat-cviceni-r.pdf user_pw martina
+#pdftk mat-cviceni-screen-reseni.pdf output mat-cviceni-screen-r.pdf user_pw martina
+
+#cp mat-cviceni-reseni.pdf mat-cviceni-r.pdf
+#cp mat-cviceni-screen-reseni.pdf mat-cviceni-screen-r.pdf 
+
+#scp amat-cviceni.pdf kiwi:html/am/
+#scp amat-cviceni-screen.pdf kiwi:html/am/
+#scp amat-cviceni-reseni.pdf kiwi:html/am/
+#scp amat-cviceni-screen-reseni.pdf kiwi:html/am/

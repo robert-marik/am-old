@@ -1,0 +1,113 @@
+\newif\ifpaperversion
+\paperversiontrue
+\paperversionfalse
+\documentclass{article}
+
+\makeatletter
+\renewcommand\subsection{\newpage\@startsection{subsection}{2}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1pt \@plus 2pt}%
+                                     {\normalfont\bfseries}}
+\makeatother
+
+\usepackage{amsmath,amsfonts,mathtools,multicol, url, booktabs, xparse}
+\usepackage{wrapfig, enumerate, physics,breqn}
+\usepackage[czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\ifpaperversion \usepackage[margin=0.5in]{geometry}
+\else \usepackage[a6paper, margin=20pt, landscape]{geometry}
+\fi
+
+\usepackage{graphicx, xcolor}
+\usepackage{hyperref}
+\parskip 10pt
+\everymath{\displaystyle}
+\parindent 0 pt
+
+\let\oldtextbf\textbf
+\def\textbf#1{%\newpage
+  \oldtextbf{\color{red} #1}}
+
+\let\oldtextit\textit
+\def\textit#1{%\newpage
+  \oldtextit{\color{green!50!black} #1}}
+
+\setcounter{tocdepth}{1}
+% \newcommand\obrazek[2][pixabay.com]{
+%   \clearpage
+% \begin{wrapfigure}{R}{0.45\linewidth}
+%   \begin{minipage}{1.0\linewidth}\parskip 0 pt
+%       \vspace*{-20pt}
+%   \includegraphics[width=\linewidth]{#2}
+
+%   \vspace*{-10pt}
+%   \null\hfill{\color{gray}\footnotesize Zdroj: #1}
+
+%   \vspace*{-10pt}
+%   \end{minipage}
+% \end{wrapfigure}
+% }
+
+\NewDocumentCommand{\obrazek}{ O{pixabay.com}mO{-10pt}}{
+  \clearpage
+\begin{wrapfigure}{R}{0.45\linewidth}
+  \begin{minipage}{1.0\linewidth}\parskip 0 pt
+      \vspace*{-20pt}
+  \includegraphics[width=\linewidth]{#2}
+
+  \vspace*{-10pt}
+  \null\hfill{\color{gray}\footnotesize Zdroj: #1}
+
+  \vspace*{#3}
+  \end{minipage}
+\end{wrapfigure}
+}
+
+
+\let\stranka\relax
+\ifpaperversion \renewcommand\obrazek[2][pixabay.com]{} \else \let\stranka\clearpage\fi
+
+\long\def\reseni#1\konec{}
+
+\long\def\reseni#1\konec{\par\textbf{Řešení:}
+\long\def\test{#1}\ifx\test\nic Viz Letní semestr 2018/2019 \else {\color{blue} #1 }\fi\par}
+
+\begin{document}
+
+\begin{titlepage}
+
+\definecolor{ldfgreen}{RGB}{10,80,40}
+\definecolor{unigreen}{RGB}{161,209,91}
+
+  {\centering 
+
+    \vbox to 0 pt{\kern -1cm\hbox to \hsize{\hss\null\includegraphics[height=\paperheight]{drevo_textura.jpg}\hss}\vss}
+
+  }
+
+  \begin{minipage}{\linewidth} \sffamily
+\parskip 10 pt
+    \bfseries\centering
+    \vspace*{0.5cm}
+    \color{unigreen}
+{\Huge Aplikovaná matematika\\ cvičení}
+
+\bigskip
+  {\Large Robert Mařík}
+
+  \bigskip
+  {\today}
+  
+\end{minipage}
+  
+  
+\end{titlepage}
+\tableofcontents
+
+\clearpage
+\input text.tex
+
+\end{document}
+
