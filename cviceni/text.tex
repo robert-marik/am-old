@@ -367,24 +367,39 @@ $$
 
 \subsection{Divegrence vektorového pole}
 
-Vypočtěte divergence vektorového pole $$\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath$$
-
+\begin{enumerate}[a)]
+\item Vypočtěte divergenci vektorového pole
+  $$\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath.$$
+\item Zakreslete do obrázku směr toku vektorového pole v bodě $(2,1)$. 
+\item Vypočtěte divergenci vektorového pole v bodě $(2,1)$ a podle toho, zda je kladná nebo záporná rozhodněte, zda se tok v daném bodě zhušťuje nebo řídne.
+\item Předpokládejme, že dané vektorové pole reprezentuje stacionární tok. Je v bodě $(2,1)$ zdroj nebo spotřebič?
+\end{enumerate}
 \reseni
 
-$$\nabla \cdot \vec F=\pdv{x}(x^2y)+\pdv{y}(x+y^2)
-=2xy+(0+2y)=2y(x+1)$$
-
+\begin{enumerate}[a)]
+\item $\nabla \cdot \vec F=\pdv{x}(x^2y)+\pdv{y}(x+y^2)
+=2xy+(0+2y)=2y(x+1)$
+\item $\vec F(2,1)=2^2\cdot 1\vec \cdot \imath + (2+1^2)\vec \jmath=4\vec\imath+3\vec\jmath=(4,3)$, tj. vektorové pole teče směrem doprava nahoru směrem daným směrnicí $0.75$, tj. pod úhlem menším než $45^\circ$.
+\item $\nabla\cdot\vec F(2,1)=2\cdot 1 \cdot(2+1)=6>0$. Divergence je kladná a proto se tok zahušťuje.
+\item Zdroj (kladná divergence).
+\end{enumerate}
 \konec
 
 \subsection{Divegrence vektorového pole s parametrem}
 
-Vypočtěte divergence vektorového pole $$\vec F=ax^3y^2\vec \imath + 3x^2y\vec \jmath,$$ kde $a\in\mathbb R$ je reálný parametr.
-
+\begin{enumerate}[a)]
+\item Vypočtěte divergenci vektorového pole
+  $$\vec F=ax^3y^2\vec \imath + 3x^2y\vec \jmath,$$ kde
+  $a\in\mathbb R$ je reálný parametr.
+\item Určete hodnotu parametru $a$ tak, aby pole bylo v bodě $(-1,2)$ nezřídlové, tj. aby mělo nulovou divergenci v bodě $(-1,2)$.
+\end{enumerate}
 \reseni
 
-$$\nabla \cdot \vec F=\pdv{x}(ax^3y^2)+\pdv{y}(3x^2y)
-=3ax^2y^2+3x^2=3x^2(ay^2+1)$$
-
+\begin{enumerate}[a)]
+\item $\nabla \cdot \vec F=\pdv{x}(ax^3y^2)+\pdv{y}(3x^2y)
+=3ax^2y^2+3x^2=3x^2(ay^2+1)$
+\item $\nabla \cdot \vec F (-1,2)=3(-1)^2(a\cdot 2^2+1)=3(4a+1) $ a $\nabla \cdot \vec F (-1,2)=0$ pokud $3(4a+1)=0$, tj. $a=-\frac 14$.
+\end{enumerate}
 \konec
 
 \obrazek{drevo_textura.jpg}
@@ -393,9 +408,9 @@ $$\nabla \cdot \vec F=\pdv{x}(ax^3y^2)+\pdv{y}(3x^2y)
 
 Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ zachycené v určitém okamžiku termokamerou je popsána rovnicí
   $$T(x,y)=(x+2y)^2+x^3.$$
-  Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která rozměr opraví tak, aby výsledek opravdu vycházel ve stupních Celsia. Pro jednoduchost tuto komplikaci vynecháme.)
+  Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která jeho rozměr opraví. Pro jednoduchost tuto komplikaci vynecháme.)
 
-\begin{enumerate}
+\begin{enumerate}[a)]
 \item Vypočtěte gradient $\nabla T$  a tok tepla $-\lambda \cdot \nabla T.$
 Součinitel tepelné vodivosti je $\lambda=
   \begin{pmatrix}
@@ -407,6 +422,17 @@ $
 \item V desce nejsou zdroje tepla. Ochlazuje se deska uprostřed, nebo otepluje?
 \end{enumerate}
 
+
+\subsection{Vedení tepla v různých materiálech}
+
+\begin{enumerate}[a)]
+\item Zapište rovnici vedení tepla v trojrozměrném homogenním a v
+  trojrozměrném ortortopním materiálu. Ve druhém případě volte osy ve
+  směru vlastních vektorů.
+\item Napište, jak je možné zjednodušit rovnice z předchozího bodu,
+  pokud jsou materiálové konstanty nezávislé na poloze (homogenní
+  materiál) a na teplotě (lineíární materiál).
+\end{enumerate}
 
 \section{Rotace, kmenová funkce gradientu}
 

@@ -7,6 +7,8 @@ pdflatex amat-cviceni-screen-reseni
 pdflatex amat-cviceni-reseni
 pdflatex amat-cviceni-reseni
 
+echo scp amat-cvic*.pdf cornus.mendelu.cz:html/am/
+
 #scp mat-cviceni.pdf kiwi:html/mt/
 #scp mat-cviceni-screen.pdf kiwi:html/mt/
 
