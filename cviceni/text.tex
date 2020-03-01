@@ -229,7 +229,10 @@ Určete gradient funkcí $z=ax^2y-2xy^2$ a $h=\frac {ax}{y^2}+5x^3y^2$, kde $a\i
 \begin{align*}
   \pdv{z}{x} &= 2axy-2y^2\\
   \pdv{z}{y} &= ax^2-4xy\\
-  \nabla z &= (2axy-2y^2, ax^2-4xy) = (2axy-2y^2)\vec \imath + (ax^2-4xy)\vec \jmath
+  \nabla z &= (2axy-2y^2, ax^2-4xy) = (2axy-2y^2)\vec \imath + (ax^2-4xy)\vec \jmath\\
+  \pdv{h}{x} &= \frac a{y^2}+15x^2y^2\\
+  \pdv{h}{y} &= ax(-2)y^{-3}+10x^3y=-\frac{2ax}{y^3}+10x^3y\\
+  \nabla h &= \left(\frac a{y^2}+15x^2y^2, -\frac{2ax}{y^3}+10x^3y\right) = \left(\frac a{y^2}+15x^2y^2\right)\vec \imath + \left(-\frac{2ax}{y^3}+10x^3y\right)\vec \jmath
 \end{align*}
 \konec
 
@@ -259,7 +262,7 @@ Určete gradient funkce $z=\mathop{\mathrm{arctg}} \frac yx$ a zkontrolujte, že
   \pdv{z}{y} &= \frac1{1+\frac {y^2}{x^2}}\frac 1x=\frac{x}{x^2+y^2}\\
   \nabla z &=  \left(-\frac{y}{x^2+y^2},\frac{x}{x^2+y^2}\right)= \frac{1}{x^2+y^2} (-y,x)
 \end{align*}
-Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$ mířímu směrem od počátku, tj. k poloměru. Proto je tečný ke kružnici.
+Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$ a míří směrem od počátku, tj. k~poloměru. Proto je tečný ke kružnici.
 \konec
 
 
@@ -411,28 +414,85 @@ Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ zachycen
   Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která jeho rozměr opraví. Pro jednoduchost tuto komplikaci vynecháme.)
 
 \begin{enumerate}[a)]
-\item Vypočtěte gradient $\nabla T$  a tok tepla $-\lambda \cdot \nabla T.$
-Součinitel tepelné vodivosti je $\lambda=
+\item Vypočtěte gradient $\nabla T$  a tok tepla $-k \cdot \nabla T.$
+Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $k=
   \begin{pmatrix}
     5 & 1\\1&4
   \end{pmatrix}.
 $ 
 \item Určete, zda na levém okraji desky teče teplo dovnitř desky nebo z desky ven.
-\item Vypočtěte divergenci toku tepla, tj. $\nabla\cdot(-\lambda \cdot \nabla T).$
+\item Vypočtěte divergenci toku tepla, tj. $\nabla\cdot(-k \cdot \nabla T).$
 \item V desce nejsou zdroje tepla. Ochlazuje se deska uprostřed, nebo otepluje?
 \end{enumerate}
 
+\reseni
+\begin{enumerate}[a)]
+\item $\nabla T=\qty(2(x+2y)+3x^2,4(x+2y))^T$,\\
+  $-k\cdot \nabla T=-
+  \begin{pmatrix}
+    5&1\\1&4
+  \end{pmatrix}=-
+  \begin{pmatrix}
+    14(x+2y)+15x^2\\18(x+2y)+3x^2
+  \end{pmatrix}
+$
+\item
+  $-k\cdot \nabla T (x=0)=
+  \begin{pmatrix}
+    -28y\\-36y
+  \end{pmatrix}
+  $
+  
+  Na levém okraji desky je $y>0$ a proto $(-28y)<0$. Tok míří doleva a teplo teče na tomto okraji ven z desky.
+\item $\nabla \cdot (-k\cdot \nabla T )=\pdv{x}(-14(x+2y)-15x^2)+\pdv{y}(-18(x+2y)-3x^2)=-30x-50$
+  \item $\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-200$, tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje.
+\end{enumerate}
+\konec
+
+% var('x,y')
+% k=matrix([[5,1],[1,4]])
+% T(x,y)=(x+2*y)^2+x^3
+% show(T.gradient())
+% show(-k*T.gradient())
+% show(-k*T.gradient()(x=0))
+% show((-k*T.gradient())[0].diff(x)+(-k*T.gradient())[1].diff(y))
 
 \subsection{Vedení tepla v různých materiálech}
 
 \begin{enumerate}[a)]
-\item Zapište rovnici vedení tepla v trojrozměrném homogenním a v
-  trojrozměrném ortortopním materiálu. Ve druhém případě volte osy ve
+\item Zapište rovnici vedení tepla v trojrozměrném izotropním a v
+  trojrozměrném ortotropním materiálu. Ve druhém případě volte osy ve
   směru vlastních vektorů.
 \item Napište, jak je možné zjednodušit rovnice z předchozího bodu,
   pokud jsou materiálové konstanty nezávislé na poloze (homogenní
-  materiál) a na teplotě (lineíární materiál).
+  materiál) a na teplotě (lineární materiál).
 \end{enumerate}
+
+\reseni
+\begin{enumerate}[a)]
+\item Izotropní: $\varrho c \pdv{T}{t} = 
+\pdv{x}(k\pdv{T}{x})
++\pdv{y}(k\pdv{T}{y})
++\pdv{z}(k\pdv{T}{z})$
+
+  Ortotropní:
+ $\varrho c \pdv{T}{t} = 
+\pdv{x}(k_x\pdv{T}{x})
++\pdv{y}(k_y\pdv{T}{y})
++\pdv{z}(k_z\pdv{T}{z})
+$
+\item Izotropní: $\varrho c \pdv{T}{t} = 
+k\left(\pdv[2]{T}{x} + \pdv[2]{T}{y} + \pdv[2]{T}{z}\right)
+$
+
+  Ortotropní:
+ $\varrho c \pdv{T}{t} = 
+k_x\pdv[2]{T}{x}
++k_y\pdv[2]{T}{y}
++k_z\pdv[2]{T}{z}
+$
+\end{enumerate}
+\konec
 
 \section{Rotace, kmenová funkce gradientu}
 

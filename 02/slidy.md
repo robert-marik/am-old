@@ -230,13 +230,13 @@ skalární.
 Fourierův zákon se týká vedení tepla a vyjadřuje, 
 že vektor hustoty tepelného toku $\vec q$ je úměrný gradientu teploty $\nabla T$
 a má opačný směr, tj. 
-$$\vec q=-D\nabla T.$$ 
+$$\vec q=-k\nabla T.$$ 
 Je-li materiál anizotropní, což je nejobecnější
-případ, je veličina $D$ symetrickým
+případ, je veličina $k$ symetrickým
 tenzorem. Je-li materiál izotropní, je
 $k$ skalární veličinou, případně skalární veličina násobená
 jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter.
-
+Veličina $k$ se nazývá součinitel tepelné vodivosti, koeficient tepelné vodivosti nebo Fourierův koeficient.
 
 \iffalse
 

@@ -35,7 +35,7 @@ Zákon zachování (se zohledněním toku a zdrojů) je vlastně celková
 bilance stavové veličiny. Přirozeným jazykem je možno tuto bilanci
 formulovat následovně.  
 
-> Přírůstek množství veličiny je součtem přírůstku ze zdrojů a přírůstku způsobeného tokem.
+> Přírůstek množství veličiny je součtem přírůstku způsobeného tokem a přírůstku ze zdrojů. Akumulace je přítok plus zisk z interních zdrojů.
 
 Toto je jednoduchý, ale přitom neuvěřitelně silný nástroj, který
 umožní popsat řadu zcela odlišných dějů. Pro použití v matematickém
@@ -234,14 +234,14 @@ energie v daném místě tvar
 $\varrho c\frac{\partial T}{\partial t}.$ Úměrnost mezi gradientem
 teploty a tokem tepla  zprostředkovává
 *Fourierův zákon*. Difuzní rovnice má v tomto případě tvar
-$${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
+$${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(k\nabla T\bigr)}$$
 
 > Poznámka (interpretace rovnice vedení tepla).
 >
 >* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
->* Výraz $D\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-D\nabla T$.
->* Člen $\nabla\cdot(D\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
->* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divegrence toku $\nabla\cdot (-D\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (D\nabla T)$ je proto záporný.
+>* Výraz $k\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-k\nabla T$.
+>* Člen $\nabla\cdot(k\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
+>* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divegrence toku $\nabla\cdot (-k\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (k\nabla T)$ je proto záporný.
 
 \iffalse
 
@@ -256,7 +256,7 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(D\nabla T\bigr)}$$
 
 Tato rovnice je zobecnění rovnice vedení tepla v jedné dimenzi, kterou jsme
 odvodili primitivními prostředky (jenom pomocí parciálních derivací, bez gradientu a divergence) ve tvaru
-$$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(D\frac{\partial T}{\partial x}\right)$$
+$$\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$$
 v úvodní přednášce.
 
 Rovnice vedení tepla se používá například při *tepelné ochraně budov*, při modelování *tepelných ostrovů* v krajině, při *tepelné modifikaci dřeva*, nebo při studiu *permafrostu*. 
@@ -272,27 +272,27 @@ elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká
 # Rovnice vedení tepla ve 2D v různých podmínkách
 
 Uvažujme rovnici vedení tepla ve dvou rozměrech a v prostředí bez zdrojů.
-$$\rho c\frac{\partial T}{\partial t}=\nabla \cdot (D\nabla T)\tag{***}$$
+$$\rho c\frac{\partial T}{\partial t}=\nabla \cdot (k\nabla T)\tag{***}$$
 
 ## Stacionární stav
 
 Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice (***) se redukuje na 
-$$\nabla \cdot (D\nabla T)=0.$$
+$$\nabla \cdot (k\nabla T)=0.$$
 
 
 ## Homogenní izotropní materiál a lineární materiálové vztahy
 
 Materiál má ve všech místech (homogenní) a ve všech směrech (izotropní) stejné vlastnosti.
-Veličina $D$ je reálná skalární veličina (konstanta).
+Veličina $k$ je reálná skalární veličina (konstanta).
 
 Podle pravidla derivace konstantního násobku se rovnice (***) redukuje na  
-$$\rho c\frac{\partial T}{\partial t}=D\nabla \cdot (\nabla T)$$
+$$\rho c\frac{\partial T}{\partial t}=k\nabla \cdot (\nabla T)$$
 a ve složkách
-$$\rho c\frac{\partial T}{\partial t}=D\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).$$
+$$\rho c\frac{\partial T}{\partial t}=k\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).$$
 
 \iffalse
 
-Pro $\tau=\frac{Dt}{\rho c}$ (změna jednotky času) dostáváme
+Pro $\tau=\frac{kt}{\rho c}$ (změna jednotky času) dostáváme
 $$\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}.$$
 
 \fi
@@ -303,17 +303,17 @@ Materiál má dva charakteristické směry související s rovinami
 symetrie. Zvolíme soustavu souřadnic tak, aby osy byly orientovány ve
 směru vlastních vektorů.
 
-Veličina $D$ je diagonální matice. Pro $$D=\begin{pmatrix}D_x & 0\\ 0& D_y\end{pmatrix}$$ je tvar rovnice (***) ve složkách
-$$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(D_x\frac{\partial T}{\partial x}\right)
-+\frac{\partial }{\partial y}\left(D_y\frac{\partial T}{\partial y}\right).$$
+Veličina $k$ je diagonální matice. Pro $$k=\begin{pmatrix}k_x & 0\\ 0& k_y\end{pmatrix}$$ je tvar rovnice (***) ve složkách
+$$\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(k_x\frac{\partial T}{\partial x}\right)
++\frac{\partial }{\partial y}\left(k_y\frac{\partial T}{\partial y}\right).$$
 
 
 
 ## Homogenní ortotropní materiál a lineární materiálové vztahy
 
 Materiál má dva charakteristické směry související s rovinami symetrie a materiálové charakteristiky jsou ve všech místech stejné a nezávislá na $T$.
-Stejné jako předchozí případ, ale $D_x$ a $D_y$ jsou konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
-$$\rho c\frac{\partial T}{\partial t}=D_x\frac{\partial^2 T}{\partial x^2}+D_y\frac{\partial^2 T}{\partial y^2}.$$
+Stejné jako předchozí případ, ale $k_x$ a $k_y$ jsou konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na 
+$$\rho c\frac{\partial T}{\partial t}=k_x\frac{\partial^2 T}{\partial x^2}+k_y\frac{\partial^2 T}{\partial y^2}.$$
 
 
 # Voda v porézním materiálu 
@@ -337,7 +337,7 @@ model. Zdroje neuvažujeme. Úměrnost mezi gradientem koncentrace vody a
 jejím tokem zprostředkovává *Fickův
 zákon*. Modelem je potom  difuzní rovnice bez zdrojů.
 $$
-      {\frac{\partial c}{\partial t}= \nabla\cdot \bigl(D\nabla c\bigr)}
+      {\frac{\partial c}{\partial t}= \nabla\cdot \bigl(k\nabla c\bigr)}
 	  $$
   Tato rovnice se používá například při modelování procesu
   *sušení dřeva* v sušárnách nebo při modelování *dřeva
