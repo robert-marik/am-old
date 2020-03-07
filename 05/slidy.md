@@ -208,13 +208,17 @@ $$
 
 <div class='obtekat'>
 
+![Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.](hoop_stress.png)
+
 \iffalse 
+
+![Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových  nádob. Zdroj: J. Dömény.](impregnacni_komora.jpg)
 
 ![Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.](popraskane_trubky.jpg)
 
+
 \fi
 
-![Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.](hoop_stress.png)
 
 </div>
 
