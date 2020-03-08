@@ -273,7 +273,7 @@ splňující diferenciální rovnici.
 ![RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$
  Zdroj: Wikipedia](RC_circuit.png)
 
-![Senzor pro sledování vlhkosti dřeva vyvinutý na UNOD LDF MENELU a zabudovaný do dřevostavby. 
+![Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby. 
  Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term
 Wood Moisture Monitoring Based on
 Electrical Methods (2019)](RC_circuit_drevostavba.jpg)
