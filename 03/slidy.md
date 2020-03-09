@@ -284,6 +284,22 @@ elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká
 
 # Rovnice vedení tepla ve 2D v různých podmínkách
 
+\iffalse
+
+<div class='obtekat'>
+
+![Teplotní modifikace dřeva ve VCJR v Útěchově. Díky jednoduché geometrii vzorků je možno provést i přesný analytický výpočet teplotního pole. Výřez ukazuje detail čtyř vzorků. Jeden z nich je nařezán šikmo. V takovém případě je výpočet mnohem obtížnější než u vzorků, jejichž tvar respektuje anatomické směry ve dřevě. Zdroj: J. Dömény.](VCJR_modifikace_pravidelne.jpg)
+
+![Teplotní modifikace šindele ve VCJR v Útěchově. Řídí se stejnou rovnicí jako hranoly na obrázku výše. Vinou komplikovaného tvaru je však matematické modelování teplotního pole možné jenom numerickou cestou. Skutečně, v podobných úlohách hraje geometrie úlohy důležitou roli a netriviální geometrie zpravidla znemožní efektivní řešení analytickou cestou. Zdroj: J. Dömény.](VCJR_sindel.jpg)
+
+![Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.](rtb.png)
+
+
+
+</div>
+
+\fi
+
 Uvažujme rovnici vedení tepla ve dvou rozměrech a v prostředí bez zdrojů.
 $$\rho c\frac{\partial T}{\partial t}=\nabla \cdot (k\nabla T)\tag{***}$$
 
