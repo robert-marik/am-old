@@ -112,9 +112,22 @@ Ze střední školy z fyziky umíme modelovat vektorové pole pomocí siločar.
 
 # Výpočet divergence
 
-Viz přednáška. 
+Viz přednáška.
+
+
 
 # Rovnice kontinuity
+
+\iffalse 
+
+<div class='obtekat'>
+
+![V celkové bilanci se nemusí nutně uplatnit všechny tři členy. Například při studiu tepelné vodivosti dřevěných panelů se měří tok tepla po dosažení rovnovážného ustáleného stavu, tj. derivace podle času je nulová. Na obrázku měřící zařízení ve VCJR v Útěchově.](stacionarni_vedeni_tepla_Utechov.jpg)
+
+</div>
+
+\fi 
+
 
 * Přírůstek stavové veličiny za jednotku času v jednotkovém objemu
   (nebo ploše, nebo délce, podle dimenzionality úlohy) je derivace
