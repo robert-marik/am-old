@@ -427,8 +427,8 @@ $
 
 \reseni
 \begin{enumerate}[a)]
-\item $\nabla T=\qty(2(x+2y)+3x^2,4(x+2y))^T$,\\
-  $-k\cdot \nabla T=-
+\item Gradient je vektor složený z parciálních derivací. $$\nabla T=\qty(2(x+2y)+3x^2,4(x+2y))^T$$ Tok je tenzor vodivosti maticově vynásobený s gradientem teploty a faktorem $(-1)$.
+  $$-k\cdot \nabla T=-
   \begin{pmatrix}
     5&1\\1&4
   \end{pmatrix}
@@ -439,17 +439,17 @@ $
   \begin{pmatrix}
     14(x+2y)+15x^2\\18(x+2y)+3x^2
   \end{pmatrix}
-$
-\item
-  $-k\cdot \nabla T (x=0)=
+$$
+\item Do vztahu pro tok dosadíme rovnici levého okraje desky, tj. $x=0$.
+  $$-k\cdot \nabla T (x=0)=
   \begin{pmatrix}
     -28y\\-36y
   \end{pmatrix}
-  $
+  $$
   
   Na levém okraji desky je $y>0$ a proto $(-28y)<0$. Tok míří doleva a teplo teče na tomto okraji ven z desky.
-\item $\nabla \cdot (-k\cdot \nabla T )=\pdv{x}(-14(x+2y)-15x^2)+\pdv{y}(-18(x+2y)-3x^2)=-30x-50$
-  \item $\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-200$, tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje.
+\item  Vypočteme divergenci toku určeného v prvním bodě. $$\nabla \cdot (-k\cdot \nabla T )=\pdv{x}(-14(x+2y)-15x^2)+\pdv{y}(-18(x+2y)-3x^2)=-30x-50$$
+  \item Do vztahu pro diveregenci dosadíme bod, který nás zajímá. $$\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-200$$ Tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje.
 \end{enumerate}
 \konec
 
