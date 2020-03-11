@@ -1,0 +1,478 @@
+~~NOTOC~~
+
+<html>
+
+<style>
+ul ul {
+    list-style-type: circle;
+}
+
+li img {float:right; margin-left:4px;}
+
+ol > li {clear:both;}
+</style>
+
+
+<div style="float:right; max-width:200px; clear:both; padding:10px;">
+<img src="../am/am_logo.jpg" >
+
+<span style="color:gray; font-size:small">Pro popis vlastností v materiálu je zásadní schopnost modelovat transport tekutin a energie materiálem. Na obrázku výzkumá aparatura VCJR v Útěchově.</span>
+</div>
+
+
+
+</html>
+
+<markdown>
+
+Aplikovaná matematika
+=====================
+
+letní semestr - jaro 2020
+
+
+ Tato stránka obsahuje materiály k přednáškám, cvičením, zkouškám. 
+ Materiály z minulých let jsou [archivovány zde](http://user.mendelu.cz/marik/wiki/doku.php?id=aplikovana_matematika_old). 
+
+Úvodem
+------
+
+Kurz je postaven jako navazující kurz, odpovídá obvyklému druhému kurzu matematiky na technických školách příbuzných LDF. Zohledňuje však specifika školy a požadavky na absolventy, kteří budou ze znalostí získaných v kurzu těžit v 21. století, ve století kdy výpočetní výkon letí nahoru a v mobilu má každý jedinec vyšší výpočetní výkon, než počítače použité k letu na Měsíc. Tato skutečnost ovlivňuje i konkrétní náplň předmětu.
+
+Do kurzu jsou zařazeny partie týkající se diferenciálního a integrálního počtu funkcí více proměnných a vektorových funkcí a dále kapitoly z diferenciálních rovnic. Důraz je více než na počítání konkrétních derivací nebo integrálů kladen na představení souvislostí a nastínění spektra aplikací tohoto aparátu. Tím se kurz liší od obecně pojatých kurzů, které jsou nejčastější a je k nim nejvíce literatury. Jinak řešeno, nebude pro nás stěžejní to, jak se vypočítá parciální derivace, ale jak tuto derivaci můžeme použít k popisu dějů a jevů ve dřevě, v materiálech obecně, nebo v přírodě okolo nás.
+
+Kurz navazuje na znalosti matematiky získané v bakalářském stupni studia. Tyto znalosti je možné načerpat nebo si zopakovat [zde](http://user.mendelu.cz/marik/mtk/).
+
+
+Základní materiály
+------
+
+
+</markdown>
+
+
+
+
+
+
+
+
+<html>
+<style>
+h2 span {color:gray; font-size:70%;}
+
+.abutton {
+color: gray;
+font-size:60%;
+}
+
+.informace {padding-left: 1em;}
+
+.dvasloupce { 
+	    -webkit-columns: auto 2; /* Chrome, Safari, Opera */
+	    -moz-columns: auto 2; /* Firefox */
+	    columns: auto 2;
+
+    -webkit-column-rule: 4px solid #aaa; /* Chrome, Safari, Opera */
+    -moz-column-rule: 4px solid #aaa; /* Firefox */
+    column-rule: 4px solid #aaa;
+}
+
+.rozbalit_ul:hover {cursor:pointer;}
+
+ol li em {color: gray; font-weight: bold;}
+
+#__prednasky ol li ul li {font-weight: bolder;}
+
+#__prednasky ol li ul li + li {font-weight: normal;}
+
+/*  http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/ */
+ol {
+    counter-reset:li; /* Initiate a counter */
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+}
+ol > li {
+    position:relative; /* Create a positioning context */
+    margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding:4px 8px; /* Add some spacing around the content */
+    list-style:none; /* Disable the normal item numbering */
+    border-top:2px solid #666;
+    background:#f6f6f6;
+}
+ol > li:before {
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:-2px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    border-top:2px solid #666;
+    color:#fff;
+    background:#666;
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+}
+li ol,
+li ul {margin-top:6px;}
+ol ol li:last-child {margin-bottom:0;}
+
+</style>
+
+</html>
+
+<markdown>
+
+* Přednášky: [slidy](am/slidy) a [verze pro tisk](am/slidy/am_slidy_all.pdf)
+* Cvičení: Text s cvičeními bude postupně aktualizován a rozšiřován, jak poběží semestr. 
+  [text](http://user.mendelu.cz/marik/am/amat-cviceni.pdf)
+  [prezentace](http://user.mendelu.cz/marik/am/amat-cviceni-screen.pdf)
+  [text s řešeními](http://user.mendelu.cz/marik/am/amat-cviceni-reseni.pdf)
+  [prezentace s řešeními](http://user.mendelu.cz/marik/am/amat-cviceni-screen-reseni.pdf)
+* [Tabulka vzorců](http://user.mendelu.cz/marik/am/cheatsheet.pdf)
+* [Zápisky k přednáškám](http://user.mendelu.cz/marik/am/notes)
+
+
+Přednášky LS 2019-2020 (jaro 2020), kombinovaná forma
+------------------------------------------
+
+</markdown>
+
+
+
+<html>
+
+<div id="prednasky2020k"><div>
+
+</html>
+
+<markdown>
+Učební materiály odpovídají učebním materiálům pro presenční formu. Je jinak zorganizovaný semestr. Snaha byla udělat logicky relativně ucelené celky. To se povedlo číástečně, jsou čtyři přibližně ucelená témata plus zbytky na posledním setkání v květnu.
+
+1. 10.2.2020, 13:00-17:00, B44. Budeme hledat matematické vyjádření transportních jevů (vedení tepla, sušení dřeva, ...). Jako nástroj pro zachycení intenzity změn v čase nebo prostoru poznáme *parciální derivaci*. Jako nástroj pro detekci směru maximálního poklesu skalární veličiny (například teploty nebo koncentrace vody) poznáme *gradient*. Výše uvedený gradient může spustit transport příslušné látky v materiálu, ale roli může hrát i struktura materiálu a výsledný tok nemusí být ve směru gradientu. Proto poznáme *lineární aproximaci* vektorových funkcí a *konstituční vztahy v tenzorovém tvaru* (Fourierův nebo Fickův zákon). Když už díky gradientu hnacího faktoru a konstitučnímu zákonu pozorujeme tok, může tento tok v některých místech nabírat na intenzitě nebo vyhasínat. Tyto změny detekuje další nástroj, který poznáme, a tím je *divergence vektorového pole*. Nakonec pomocí všech uvedených pojmů sestavíme balanční rovnici (jakýsi zákon zachování) fungující pro široké spektrum fyzikálních veličin. Jedná se o *rovnici kontinuity a difuzní rovnici*. Mimo jiné odvodíme rovnici modelující teplotní pole ve dřevě a vlhkostní pole ve dřevě. Odpovídá prvním třem přednáškám pro presenční studium, ale některé pojmy přeskočíme a vrátíme se k nim později.
+1. 13.2.2020, 16:00-20:00, B44. Ta vektorová pole, která jsou gradientem nějakého skalárního pole, jsou při matematickém modelování příjemná díky možnosti přejít ke skalárnímu popisu pole. Fyzikálně to odpovídá například potenciální energii v mechanice nebo vodnímu potenciálu ve fyziologii rostlin. Nástroj který odhalí možnost či nemožnost zavedení skalárního popisu vektorového pole je další diferenciální operátor, operátor *rotace*. Zavedení skalárního popisu vektorového pole fyzikálně odpovídá vykonané práci a to je úzce spjaté s pojmem *křivkového integrálu druhého druhu*. Seznámíme s metodou výpočtu a budeme diskutovat závislost či nezávislost na *integrační cestě*. Odpovídá čtvrté, páté a části sedmé přednášce pro presenční studium, ale některé pojmy přeskočíme a vrátíme se k nim později.
+1. 3.4.2020, 8:00-12:00, B44. Poznáme další rozšíření integrálu, tentokrát na dvourozměrnou množinu. Tím můžeme například podchytit problematiku nosníků, kde v různých místech průřezu nosníku je různá vzdálenost od neutrální osy. Nástrojem bude *dvojný integrál* v kartézských. Souvislost dvojného a křivkového integrálu nám představí Greenova věta. Ta umožní formulovat fyzikální zákony v lokálním i globálním tvaru a uvidíme rigorózní odvození difuzní rovnice - bez použití představy toku infinitenzimálně malým objemem, což je asi největší slabina zjednodušeného odvození z úvodní přednášky. Odpovídá šesté a části sedmé přednášce pro presenční studium
+1. 17.4.2020, 8:00-12:00, B23. Fyzikální děje jsou hnány změnami veličin. Pokud rychlost změny veličiny souvisí s hodnotou této veličiny, je matematickým vyjádřením takového děje diferenciální rovnice. Poznáme rovnice vhodné pro popis technických úloh, ale aparát diferenciálních rovnic je dokonale obecný a vhodný i pro popis problémů z ekologie, epidemiologie, hydrologie apod. Budeme se věnovat diferenciálním rovnicím se separovatelnými proměnnými, které vystupují v jednoduchých modelech. Poté se seznámíme s linearitou a několik třídami diferenciálních rovnic: lineární prvního řádu a lineární druhého řádu. Poznáme autonomní systémy diferenciálních rovnic vhodné pro modelování přepínání stavů. To zahrnuje modely dravce a kořisti, modely epidemie, modely odtoku srážem z povodí a další.
+1. 15.5.2020, 13:00-17:00, B44. V poslední přednášce shrneme některé nástroje představené během semestru a přitom dokončíme látku, kterou jsme v první fázi přeskočili. Seznámíme se s dalším využitím parciálních derivací (zákon šíření chyb, numerické derivování, lokální extrémy). Poznáme křivkový integrál prvního druhu. Poznáme polární souřadnice pro diferenicální operátory a dvojný integrál. U diferencíálních rovnic druhého druhu rozebereme problematiku okrajových úloh. Naučíme se také transformací diferenciálních rovnic snižovat počet parametrů  v rovnici. 
+</markdown><html>
+
+</div>
+</div>
+
+
+</html>
+
+<markdown>
+
+
+Přednášky LS 2019-2020 (jaro 2020), presenční forma
+-------------------------------
+
+</markdown><html>
+
+<div id="prednasky2020"><div>
+</html>
+
+<markdown>
+
+1.  18.2.2020 [![01.jpg](../am/01.jpg)](../am/slidy/01) *Při studiu přírody nás přirozeně zajímají změny veličin, protože jsou hybnou silou nebo kvantitativním popisem veškerého dění. Seznámíme se s parciálními derivacemi, které dokáží zachytit rychlost změn, ať už v čase, nebo v prostoru nebo v abstraktním prostoru. Toto je možno využít ke kvantitativnímu popisu přírodních dějů. Jako aplikaci paricálních derivací odvodíme rovnici vedení tepla v jedné dimenzi. Tu je možno použít například při modelování prostupu tepla stěnou nebo oknem.*
+   * Přednáška: Parciální derivace a jejich využití. Numerické derivování. Spojitost funkcí více proměnných.
+   * Cvičení: Parciální derivace, jejich výpočet, numerický odhad a slovní interpretace.
+1.  25.2.2019 [![02.jpg](../am/02.jpg)](../am/slidy/02) *Gradient je diferenciální operátor sestavený z parciálních derivací tak, aby odkryl další přírodní zákony. Zejména tok. Gradient umožní popsat skutečnost, že mnoho přírodních dějů vede k tomu, že se příroda snaží nastolit rovnováhu. Proudění se tedy děje z míst, kde je něčeho více. Přesně tento směr dokáže podchytit pojem gradient. K tomuto se ještě přidává fakt, že příroda někdy usměrňuje proudění v materiálech do svých preferovaných směrů. Jsou to jakési dálnice, které strhávají například proudění hmoty nebo tepla. Ve dřevu jsou tyto dálnice poměrně výrazné a jsou v podélném směru.*
+   * Přednáška: Gradient funkce, lineární aproximace, konstitutivní zákony, implicitně definované funkce. 
+   * Cvičení: Parciální derivace, gradient, tok. 
+1. 3.3.2019 ![koronavirus](../images/koronavirus.jpg) *Domácí výuka. Instrukce šly mailem, ale pro jistotu zde shrnuji na jednom místě s ostatními materiály.*
+   * Prostudujte si [model SIR](http://user.mendelu.cz/marik/wiki/doku.php?id=SIR_epidemie) a vyzkušejte experimenty s jiným nastavením parametru.
+   * Shlédněte [videa](https://www.youtube.com/watch?v=ynzRyIL2atU&list=PLTcG-zIT2ivV9z3XN_xZP9gt_eF6P_KWl) o vektorové analýze.
+   * Instrukce byly zaslány mailem 2.3.2020 a 4.3.2020. ([Mail1](http://user.mendelu.cz/marik/am/mail1.txt) a [mail2](http://user.mendelu.cz/marik/am/mail2.txt))
+   *  Nic se nemusí odevzdávat, není možné získat za práci  bonusové body ke zkoušce, ale látka bude považována za probranou.
+   * V případě nejasností dotazy mailem nebo přes diskusní fórum k předmětu v UISe.
+1. 10.3.2019 ![koronavirus](../images/koronavirus.jpg) *Domácí výuka. Instrukce šly mailem, ale pro jistotu zde shrnuji na jednom místě s ostatními materiály.*
+   * Prostudujte si [matematické modely](http://user.mendelu.cz/marik/wiki/doku.php?id=skudce) lovu a lesního škůdce. Text obsahuje úkoly za jejichž splnění v termínu jsou 4 body do celkového hodnocení. Na konci zadání je doporučená struktura, jakou formou odevzdat. Odevzdání emailem na marik@mendelu.cz. Termín 17.3.2020, 9:00 CET.
+   *  Nic se nemusí odevzdávat povinně. Je možné získat za práci  bonusové body ke zkoušce. Látka bude považována za probranou.
+   *  Tato náplň a úkoly byly zaslány [mailem](http://user.mendelu.cz/marik/am/mail3.txt) 6.3.2020 dopoledne.
+   * V případě nejasností dotazy mailem nebo přes diskusní fórum k předmětu v UISe.
+1.  17.3.2019 [![03.jpg](../am/03.jpg)](../am/slidy/03) *Podrobněji se podíváme na proudění a sestavíme matematický model tak obecného proudění, že jím pokryjeme přenos látky i přenos energie. Jako aplikaci ukážeme matematický popis libovolného transportního jevu. Toto zahrnuje jako speciální případy vedení tepla, proudění mělké nebo podzemní vody, difuzi nebo sušení dřeva. Častým praktickým úkolem je modelování fyzikálních polí (teploty a vlhkosti) v okolí okna.*
+   * Přednáška: Divergence vektorového pole, neboli zřídlovost. Vlastnost udávající, zda při toku vektorového pole veličina přibývá nebo ubývá. 
+   * Cvičení: Bude upřesněno.
+1.  24.3.2020  [![04.jpg](../am/04.jpg)](../am/slidy/04) *Seznámíme se s dalším vektorovým operáterem, který nám umožní rozhodnout, zda je proudění nebo silové pole popsatelné skalární veličinou. Ve druhém případě to souvisí s možností či nemožností zavést ve studovaném poli potenciální energii a je to tedy otázka možnosti či nemožnosti razantně zjednodušit modelování procesů v takovém poli. Jako vedlejší produkt poznáme kritérium které rozhodne, zda pole roztáčí objekty, které jsou tímto polem unášeny. Takové je třeba rychlostní pole v řece. Praktické využití znají například vodáci, kteří najíždí do proudu napříč a proud je sám stočí obloučkem do svého směru.*
+   * Přednáška: Rotace vektorového pole. Souvisí s popisem vírovosti vektorového pole a s tím, zda je vektorové pole gradientem.
+   * Cvičení: Bude upřesněno.
+1.  31.3.2020  [![05.jpg](../am/05.jpg)](../am/slidy/05) *Rozšíříme si výpočet integrálu o možnost integrovat podle libovolné křivky. Tím je možno počítat napětí v cylindrických nádobách pod tlakem a zjistit, proč trubky praskají podélně. Jnou aplikací je možnost definovat potenciál i v abstraktních případech nesouvisejících s mechanickou prací. Známý je například vodní potenciál při studiu evapotranspirace stromů nebo rostlin. Práce souvisí s potenciální energií a proto se dá čekat, že bude i souvislost s operátorem rotace, představeným na předchozí přednášce. Na takovou souvislost si ovšem budeme muset ještě nějaký ten týden počkat.*
+   * Přednáška: Křivkový integrál prvního a druhého druhu. 
+   * Cvičení: Bude upřesněno.
+1. 7.4.2020 [![06.jpg](../am/06.jpg)](../am/slidy/06) *Pokračujeme v rozšiřování integračních možností a naučíme se integrovat přes dvourozměrné množiny. Aplikací je například výpočet charakteristik důležitých pro posouzení odolnosti nosníku vúči deformaci. Jinou aplikací výpočet tlaku na plochu ponořenou napříč různými hloubkami.*
+   * Přednáška: Dvojný integrál v kartézských a polárních souřadnicích. 
+   * Cvičení: Bude upřesněno.
+1.  14.4.2020 [![07.jpg](../am/07.jpg)](../am/slidy/07) *Poznáme obecné věty, které dávají fyzikální význam operátorům rotace a divergence. Umožňují převod mezi lokálním a globálním tvarem fyzikálních zákonů a dávají konečně odpověď na otázku, ke kterým vektorovým polím je možno zavést skalární potenciál a jak. Vedlejším produktem je vysvětlení funkce planimetru nebo výpočet křivkového integrálu druhého druhu pomocí kmenové funkce.*
+   * Přednáška: Obecné integrační věty. Zejména závislost a nezávislost křivkového integrálu druhého druhu na integrační cestě, Greenova věta pro cirkulaci a tok. 
+   * Cvičení: Bude upřesněno.
+1. 21.4.2020 [![08.jpg](../am/08.jpg)](../am/slidy/08) *Seznámíme se s přirozeným nástrojem pro formulaci fyzikálních zákonů a přírodních dějů obecně: s diferenciálními rovnicemi. Fyzika střední školy obsahuje zpravidla jenom děje probíhající za speciálních podmínek. V reálu nás v přírodě zajímají změny a souvislosti změn s osttními veličinami. Tyto změny se vyjadřují pomocí derivací a souvislosti poté pomocí diferenciálních rovnic. Diferenciální rovnice jsou takto ideálním prostředkem pro popis přírodních zákonů. Další aplikace jsou v modelování populací živočišných a rostlinných druhů v různých podmínkách.*
+   * Přednáška: Úvod do diferenciálních rovnic, které jsou přirozeným jazykem pro popis a modelování veličin proměnných v čase. 
+   * Cvičení: Bude upřesněno.
+1. 28.4.2020 [![09.jpg](../am/09.jpg)](../am/slidy/09) *Linearita. Důležitá vlastnost, která usnadňuje řešení matematických modelů. Modely, které jsou lineární se chovají v jistém smyslu pěkně a mnoho vlastností mají podobných. Naprostá většina technicky zajímavých jevů a dějů snese lineární aproximaci a tím pádem umožní i jednotný popis řešení tak, jak se s ním seznámíme na přednášce.*
+   * Přednáška: Lineární operátory a lineární diferenciální rovnice prvního řádu. 
+   * Cvičení: Bude upřesněno.
+1. 5.5.2020  [![10.jpg](../am/10.jpg)](../am/slidy/10) *Poznáme speciální soustavy diferenciálních rovnic, které jsou nezávislé na čase a umožňují modelování interagujících populací (různé druhy konkurence, modely dravce a kořisti apod). Ukážme si model vývoje vzorců chování a vysvětlení principu přemnožení lesního škůdce. Dalšími aplikacemi jsou kompartmentové modely, které popisují jakési přelévání veličin, které modelujeme, mezi různými stavy. Využití je od chemických reakcí přes model složeného žaludku nebo šíření epidemie až k modelu odtoku srážek z regionu.*
+   * Přednáška: Autonomní systémy. 
+   * Cvičení: Bude upřesněno.
+1. 12.5.2020 [![11.jpg](../am/11.jpg)](../am/slidy/11) *V této přednášce se seznámíme s lineárními diferenciálními rovnicemi druhého řádu. Těmito rovnicemi je prostoupena v podstatě celá klasická mechanika. Mají uplatnění při studiu kmitavých pohybů strun, desek nebo těles. Dále při studiu nosníků namáhaných na vzpěr a v úlohách založených na třech Newtonových pohybových zákonech.*
+   * Přednáška: Lineární diferenciální rovnice druhého řádu. 
+   * Cvičení: Bude upřesněno.
+1. 19.5.2020 Modely založené na aparátu představeném v předchozích týdnech.
+
+
+</markdown><html>
+
+</div>
+</div>
+
+
+<h2>Základní informace a ukončení</h2>
+
+
+<div id="zakladni_informace" class="informace ">
+</html>
+
+
+<markdown>
+
+Účast na výuce silně doporučená. Je však nepovinná, prezence se bude evidovat pouze pro statistické účely.
+
+* Předmět je ukončen písemnou zkouškou.
+  * Cca 50% zkoušky pokrývá teorie, zbytek početní příklady. Budou zařazovány i kombinované otázky, kdy je třeba vědět neco z teorie a k tomu něco vypočítat.
+  * Pro úspěšné absolvování je nutno získat 18 bodů z 50.
+* Povolená literatura při zkoušce:
+  * presenční forma: Vlastní výpisky z literatury, vlastní poznámky z přednášek, tabulka vzorců, jedna kniha.
+  * kombinovaná forma: Literatura, která zahrnuje vlastní výpisky, dvě knihy a nejvýše 100 stran vytištěných A4 dle vlastního výběru.
+*   Klasifikace
+    *    A: 40 a více
+    *    B: 33-39
+    *    C: 27-33
+    *    D: 22-26
+    *    E: 18-22
+* Staré písemky [zde](http://user.mendelu.cz/marik/am/pisemky/)    
+
+**Update 3.3.2020 po opatření rektorky kvůli koronaviru**
+*Mailem budou zadávány samostatné práce. Náplň těchto prací může být zohledněna ve zkoušce. Součástí zadání některých prací může být nabídka dalších bonusových bodů. Podmínkou hodnocení alespoň E je zisk 18 bodů v součtu bodů z písemky a bonusových bodů a současně alespoň 10 bodů z písemky. V zadání úkolů bude stanoven deadline.*
+
+
+</markdown>
+
+<html>
+</div>
+
+<h2>Literatura</h2>
+
+<div id="literatura"  class=informace>
+</html><markdown>
+
+
+#### Základní literatura
+
+-   [Elektronické slidy](am/slidy/).
+-   Elektronické slidy ve formě pro [tisk](am/slidy/am_slidy_all.pdf).
+-   Učebnice [Došlá, Z.  Liška, P. Matematika pro nematematické obory s aplikacemi v přírodních a technických vědách.](http://www.modreknihkupectvi.cz/product.php?id_product=2349) 1. vyd. Praha: Grada Publishing, a.s., 2014. 304 s. ISBN 978-80-247-5322-5.
+-   Stručné [elektronické zápisky z přednášek](am/am.pdf) z roku 2012. K
+    dispozici i ve [formě pro obrazovku](am/prezentace.pdf) a [html verze](http://user.mendelu.cz/marik/am-web/am-web.html).
+-   [Ruční zápisky z přednášek](am/prednasky/00_prednasky_2017.pdf) z roku 2017.
+-   [Ručně zapsané příklady z běhu v roce 2018](http://user.mendelu.cz/marik/am/priklady/)
+-   [Slovní úlohy a komentáře k aplikacím](http://user.mendelu.cz/marik/wiki/am/slovni_ulohy/). Tyto úlohy jsou z pohledu našeho předmětu velmi zajímavé, budou vyřešeny nebo okomentovány na přednášce a je vhodné jim co nejlépe rozumět.
+-   [Sbírka příkladů do cvičení](http://user.mendelu.cz/hasil/Data/CZ/Teach/Priklady-AM-DI.pdf) ([doc. Hasil](http://user.mendelu.cz/hasil))
+
+#### Doplňková literatura a dodatečné zdroje
+
+-   [Slovní úlohy na diferenciální rovnice](?id=vyssi_matematika_zapocet#diferencialni_rovnice)
+-   Aplikace diferenciálních rovnic (spíše populárnější formou)
+    [PDF](http://user.mendelu.cz/marik/aplikace/aplikace_diferencialnich_rovnic.pdf)
+-   Cca 50% látky je společné s předmětem Inženýrská matematika [zde](?id=inzenyrska_matematika) a  [zde](?id=inzenyrska_matematika_stare), který v
+    tomto semestru nevyučuji.
+-   Komentované řešené **příklady**
+    -   Parciální derivace [PDF](prez/parc-der-cz.pdf).
+    -   Diferenciální rovnice prvního ([PDF](prez/d-rce1.pdf)) a druhého
+        řádu ([PDF](prez/d-rce2.pdf)). U druhého řádu jenom homogenní a
+        ty, kde je partikulární řešení polynomem.
+    -   Dvojný integrál [PDF](prez/dvoj-int.pdf).
+-   Interaktivní [testy](kvizy/dvojint-CZ.pdf) na přepis dvojného
+    integrálu na dvojnásobný.
+-   Obdobný kurz v češtině: [Ostravská univerzita (René Kalus, Daniel
+    Hrivňák)](http://artemis.osu.cz/mmmat/) a [Breviář vyšší
+    matematiky](http://artemis.osu.cz:8080/artemis/view.php?ids=1&idr=1&idc=34).
+-   Obdobné kurzy v angličtině
+    -   Obdobný kurz na MIT
+        [2007](http://ocw.mit.edu/courses/mathematics/18-02-multivariable-calculus-fall-2007),
+        [2010](http://ocw.mit.edu/courses/mathematics/18-02sc-multivariable-calculus-fall-2010/).
+    -   Další obdobné kurzy na MIT: [Diferenciální počet funkcí více
+        proměnných](http://ocw.mit.edu/courses/mathematics/18-022-calculus-of-several-variables-fall-2010/index.htm)
+        a [Aplikace diferenciálního
+        počtu](http://ocw.mit.edu/courses/mathematics/18-013a-calculus-with-applications-spring-2005/index.htm).
+
+#### Nástroje
+
+- [Parciální derivace pomocí Sage](https://sagecell.sagemath.org/?z=eJw1jsFuwjAMhu9IvIPVC0lqUdHeJvUKDxGlyBvJVpGFkraQ8PTL0uKL7V_-_88P8mxH6DBgxNeObzdmdtcv3bLQ1SKWtQgidg3CoRrvfvpXy9jVHCGPxKu0IdBEjsUqZD2pyavDwAIXEaERJJa0nFUuGU1iTfQ52yu1UiXuzYOB3sHywMd2A6neF2svpTRo9t-eLr12E5PpbcX3Y_872N7Es5mtZVypxZwBVrPVjPCj6aL92d-erSyOmVNgcVrTCsX_ABwsU8s=&lang=sage)
+- [Lineární aproximace pomocí Sage](https://sagecell.sagemath.org/?z=eJxtjkFSwzAMRfeZyR082VQiopCyYyYbFqy4gcd01NgumZYYjFOc43AATtGLoZSwQwvJ-vqW3okjrDJNxCssC8uJW1CQrz7eY4JcT0hwRw2iolmdnjc3ojaiNrQRVcmnxLvxeOBWm7LwISrwpHbBouoHNS-8Lwsl8Wdbaq21J7GRh9xK1beGpsujMViDX-8j294NCbTgGcR_bGsb0vYtBjt2CU6uSyECiBvxeulmDjTml-CCenSwEJB6cWxd3Mbw2erqcRwOnauoeghW8lM_uPNXHM7fiuVE7l9ZpgZ_AIKZX0A=&lang=sage)
+- [Tečna k funkci dané implicitně pomocí Sage](https://sagecell.sagemath.org/?z=eJxtUEFuwjAQvCPxh20u7BKDgLaXSlal9lSpP4gsZGKnWAQ7NSZ1-hse0FfwsToQbvhgezTjmfG20uMkso7JCY1HSgbJEfBxGvOO89pipPzw7QN2lD8zXLInIgYAeOFX0zjVsUnkbNmTC6JkEuTmWO8kL8R4VDkP6F1rTakZbJwiMBb6mJfxKPlAxQd2Xm8PSLMb8j26SkwFFUaeHhcLwbrLZSkIHjgsBpd-Nd7YANn7tttIaOFXqvPJnv9es6vk1mo486K41Up-7F5AjtX8y0tltA1YpBkJojuyuXJh3XinjmXAVpfBecSkJpoNqP82CXHtcZlPrXHowWCrpdJ-7d0PL7KPfVOb0oRUHKqj3ZU6Y9mbU2n_NFafT75nZIqLZi8TK-gfQrCNfw==&lang=sage)
+- [Divergence a rotace pomocí Sage](http://sagecell.sagemath.org/?z=eJx9UstugzAQvEfKP6zSSNiwpCTHSLlV_YBeEYkcsFsHApEL1Obrax4BmkjlYDSzszPrlWumiKPBQAMMJFwghdyhy8VyIao8jfmBwHIB9iMaDQYUB_hC9CvRx51njjt6zBHMHxhQwJnCa55UIwXNI2d776EGfT1LJX9TwNcPqaOQuZZHsIevXYMwK1muZXTb1Q068V6DlrY117gNtQ3dJhIuIJE1EXTfSxUvK5UDSaQQRIRBhJp6A9hGaEawi7ChdPMtr7dMCnMSVZaR0TOuVPZkWvO4LBSBK7uRjF3PCQO9B_3ogcSfApt5oLE39Sc4TRa0wqkWzAfdtkJKgW6SojzdVJFUcUmGWUKJF0wj2g1esnOVpewQRvaJFAoEyBz6tzJc5K4Y_l4YChycxP_-2G8Zh8VEUW_YhWacDIYIX5wlXJ1U8XMIV-9dNpDcL2XM6QpHxlnLS7p2_LwoWV95kzVXnzyPuQUfHb2K6C-79NzK&lang=sage), [příklady ze cvičení](http://sagecell.sagemath.org/?z=eJx9UUFugzAQvEfKH1ZRJGxYooTcIuVW9QG9IhM5YLcOBCIXKPD6GuOEqFXLgfXOjGfHdss18TroYQAOCi6QQ-nR5WK5kE2Zp-JIYLkA85G93yWR32Nv_gNC5_f-kEQU7zx3fDTVJMKxDrPAwm7rHx4WT_YIxsRyZrn3nf5ZGPnEoEFvMT4qAmOPW5Pchs-EhEy1RNLDtEOLutElkExJSWS8ZdjRwDU7hv2jiRgOlG4-1fVWKNmfZFMU5OGZNrr4ZdqKtK40gSu_kYJfzxmH7gDdTw8k4TxweB7Ym0OEczsn247Cmds-B92NQkqBbrKqPt10lTVpTVyWWOEFc0Zt8JqfmyLnx5iZV600SFAlTM_rDnJXuBrEsUTnJP_3x-mW0V0MY5OhHVoI4gwRPgTPhD7p6usYr17tbCBlWKtU0BU-EG-tLvnaC8uq5hPzolqh30WZCtO8WXjF6Dc9XcrN&lang=sage)
+- [Výpočet kmenové funkce pomocí integrace po přímce z pevného bodu do obecného bodu](http://sagecell.sagemath.org/?z=eJydkMFqwzAQRO8G_8NCD5FsBZwUevM1P1FSWMebxtjSCllxrXx9pdgpaY-9iNUgvZmdCZ3YzBBAA0IDfiPz7CBmFWQt3or5Y1-Eci6D0nF-LWcJ8AIT9Z4dTwSWB4IRLDrU5MmRzrPxwl_iEDGOPZ5oYbXd-SwW7nt1jOf2Wdkd1UoOlk_k4bbtWVs2ZHyAhbOCabZoWrFoUq7qyMNEq6i0vLMst7ozPYJ1_EjoQCvA5sGEJgwY58kgmOsQPfJM1_t_NNDyiDcyQf84pSryzF46gaqRdWc8fTr0JACLg8DCq6bwqYyyeb7vjqBAeFWpnQT5VEmvySTD89X0MfnC4wlNFz3jgq7TUb5Bw-0VRKUqGUOtt5Tgd38pV1oxVRVNLtya2Mhfkyn9J7i_zLNvyJ2v_Q==&lang=sage)
+
+
+</markdown>
+
+<html>
+</div>
+
+
+<h2>Česko - anglický slovník</h2>
+
+<div id="slovnik"  class="dvasloupce informace">
+</html><markdown>
+
+diferenciální počet
+: calculus
+
+diferenciální počet funkcí více proměnných
+: multivariable calculus
+
+parciální derivace
+: partial derivative
+
+gradient
+: gradient
+
+divergence
+: divergence
+
+rotace (vektorového pole)
+: curl
+
+křivkový integrál
+: line integral
+
+křivkový integrál prvního druhu
+: line integral of scalar field
+
+křivkový integrál druhého druhu
+: line integral of vector field
+
+dvojný integrál
+: double integral
+
+nezřídlové pole
+: incompresible field
+
+</markdown><html>
+</div>
+
+<h2><span style="color:gray">Webové aplikace
+<span>
+</h2>
+
+<div id="webove_aplikace" >
+</html><markdown>
+
+
+
+
+-   [**Matematické výpočty online (MAW)**](http://user.mendelu.cz/marik/maw)
+    (parciální derivace, dvojné a jednoduché integrály, diferenciální
+    rovnice)
+-   [**Využití systémů počítačové algebry (CAS) v matematice**](http://user.mendelu.cz/marik/akademie/) - rozhraní a ukázky ke čtyřem snadno dostupným systémům počítačové algebry
+
+</markdown><html>
+</div>
+
+
+
+<h2>Kino</h2>
+
+<div id="kino" >
+</html><markdown>
+
+* [Videopřednášky](https://archive.org/details/MIT18.02F07), které mají celkem významný přesah s naším sylabem.
+Některé věci jsou zde však navíc a některé věci chybí.
+* [Cyklus na youtube věnovaný křivkovému integrálu.](https://www.youtube.com/watch?v=XqksiAdn-Lk&list=PLxqPHeBj75l_57iQUoOvfp_VbGbTxVOAK) V češtině.
+* prof. Kulhánek, fyzika na FEL CVUT: [Gradient, divergence, rotace](https://www.youtube.com/watch?v=GAzcIMG2kZU)  včetně odvození proč vzorce pro tyto veličiny vypadají tak jak vypadají
+* Khanova škola (český dabing nebo české titulky)
+    * [Parciální derivace](https://khanovaskola.cz/video/1759-parcialni-derivace)
+    * [Křivkový integrál druhého druhu](https://khanovaskola.cz/video/369/1734-krivkovy-integral-a-vektorove-pole)
+    * [Objem pomocí dvojného integrálu](https://khanovaskola.cz/video/369/179-dvojite-integraly-3)
+* Khan academy (anglicky)
+    * [Schwarzova věta](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/partial-derivatives/v/symmetry-of-second-partial-derivatives)
+    * [Gradient](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/gradient-and-directional-derivatives/v/gradient)
+    * [Divergence](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/divergence-grant-videos/v/divergence-example)
+    * [Rotace](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/curl-grant-videos/v/3d-curl-formula-part-2)
+    * [Výpočet rotace](https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/curl-grant-videos/v/3d-curl-formula-part-2)
+    * [Křivkový integrál prvního druhu](https://www.khanacademy.org/math/multivariable-calculus/integrating-multivariable-functions/line-integrals/v/introduction-to-the-line-integral)
+
+</markdown>
+<html>
+
+</div>
+</div>
+<script type="text/javascript"
+	src="http://user.mendelu.cz/marik/js/jquery.shorten.1.0.js"></script>
+
+<script type="text/javascript">
+	$(document).ready(function() {
+	
+		$("#prednasky2020k div ol li").shorten({
+	"showChars" : 150,
+	"moreText"	: "pokračovat",
+	"lessText"	: "méně",
+});
+	
+	});
+</script>
+
+<script>
+$( "li > ul > li:contains('Dopl')" ).css( "color", "gray" );
+$( "li > ul > li:contains('Dopl') > ul> li" ).css( "color", "gray" );
+$( "li > ul > li > ul> li > a" ).css( "color", "#9999EE" );
+$( "li > ul > li > a" ).attr('target','_blank');
+
+$( "li > ul > li:contains('Dopl') > ul" ).before( "<span class='rozbalit_ul'><span style='color:#9999EE'>(rozbalit/sbalit)</span></span>" );
+
+$( "li > ul > li:contains('Dopl') > ul" ).slideToggle();
+
+$(".rozbalit_ul").click(function() {
+$(this).next().slideToggle();
+});
+
+// http://stackoverflow.com/questions/4539775/jquery-week-of-year-script-acting-up
+
+Date.prototype.getWeek = function() {
+      var onejan = new Date(this.getFullYear(),0,1);
+      var today = new Date(this.getFullYear(),this.getMonth(),this.getDate());
+  var dayOfYear = ((today - onejan + 1)/86400000);
+  return Math.ceil((dayOfYear+3)/7);
+};
+
+var tyden = new Date().getWeek() ;
+
+tyden=tyden-8;
+
+if (tyden < 0) {tyden=0;}
+
+$(document).ready( function()
+{
+$("#prednasky2020 ol > li").css( "background", "#f2f2f2");
+$("#prednasky2020 > div > ol > li").eq(tyden).css( "background", "#ccffcc" );
+$("#prednasky2020 > div > ol > li").eq(tyden).children().children().css( "background", "#ccffcc" );
+$( "li > ul > li:contains('Dopl') > ul" ).fadeOut();
+
+}
+);
+
+</script>
+
+
+</html>
