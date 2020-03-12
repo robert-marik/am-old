@@ -410,14 +410,14 @@ $$
 \subsection{Rovnice vedení tepla v dvourozměrném materiálu}
 
 Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ zachycené v určitém okamžiku termokamerou je popsána rovnicí
-  $$T(x,y)=(x+2y)^2+x^3.$$
+  $$T(x,y)=(2x-y)^2+x^4.$$
   Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která jeho rozměr opraví. Pro jednoduchost tuto komplikaci vynecháme.)
 
 \begin{enumerate}[a)]
 \item Vypočtěte gradient $\nabla T$  a tok tepla $-k \cdot \nabla T.$
 Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $k=
   \begin{pmatrix}
-    5 & 1\\1&4
+    4 & 1\\1&6
   \end{pmatrix}.
 $ 
 \item Určete, zda na levém okraji desky teče teplo dovnitř desky nebo z desky ven.
@@ -427,29 +427,38 @@ $
 
 \reseni
 \begin{enumerate}[a)]
-\item Gradient je vektor složený z parciálních derivací. $$\nabla T=\qty(2(x+2y)+3x^2,4(x+2y))^T$$ Tok je tenzor vodivosti maticově vynásobený s gradientem teploty a faktorem $(-1)$.
+\item Gradient je vektor složený z parciálních derivací. $$\nabla T=\qty(
+  4(2x-y)+4x^3,-2(2x-y))^T$$ Tok je tenzor vodivosti maticově vynásobený s gradientem teploty a faktorem $(-1)$.
   $$-k\cdot \nabla T=-
   \begin{pmatrix}
-    5&1\\1&4
+    4&1\\1&6
   \end{pmatrix}
   \begin{pmatrix}
-    2(x+2y)+3x^2\\4(x+2y)
+    4(2x-y)+4x^3\\-2(2x-y)
   \end{pmatrix}
   =-
   \begin{pmatrix}
-    14(x+2y)+15x^2\\18(x+2y)+3x^2
+    14(2x- y)+16x^3\\-8(2x- y)+4x^3
   \end{pmatrix}
 $$
 \item Do vztahu pro tok dosadíme rovnici levého okraje desky, tj. $x=0$.
   $$-k\cdot \nabla T (x=0)=
   \begin{pmatrix}
-    -28y\\-36y
+    -28y\\-8y
   \end{pmatrix}
   $$
   
   Na levém okraji desky je $y>0$ a proto $(-28y)<0$. Tok míří doleva a teplo teče na tomto okraji ven z desky.
-\item  Vypočteme divergenci toku určeného v prvním bodě. $$\nabla \cdot (-k\cdot \nabla T )=\pdv{x}(-14(x+2y)-15x^2)+\pdv{y}(-18(x+2y)-3x^2)=-30x-50$$
-  \item Do vztahu pro diveregenci dosadíme bod, který nás zajímá. $$\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-200$$ Tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje.
+\item  Vypočteme divergenci toku určeného v prvním bodě. $$
+  \begin{aligned}
+\nabla \cdot (-k\cdot \nabla T )&=\pdv{x}(-14(2x- y)-16x^3)+\pdv{y}(8(2x- y)-4x^3)\\&=-48x^2-28-8\\&=-48x^2-36
+\end{aligned}
+$$
+\item Do vztahu pro diveregenci dosadíme bod, který nás zajímá. $$\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-1236$$ Tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje. Z rovnice vedení tepla
+  $$\rho c\pdv{T}{t}=\nabla\cdot(k \cdot \nabla T)$$
+  plyne v daném bodě
+  $$\rho c\pdv{T}{t}=1236$$
+  a můžeme dokonce odhadnout, jak rychle teplota roste.
 \end{enumerate}
 \konec
 
