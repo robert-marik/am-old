@@ -444,11 +444,11 @@ $$
 \item Do vztahu pro tok dosadíme rovnici levého okraje desky, tj. $x=0$.
   $$-k\cdot \nabla T (x=0)=
   \begin{pmatrix}
-    -28y\\-8y
+    14y\\-8y
   \end{pmatrix}
   $$
   
-  Na levém okraji desky je $y>0$ a proto $(-28y)<0$. Tok míří doleva a teplo teče na tomto okraji ven z desky.
+  Na levém okraji desky je $y>0$ a proto $14y>0$. Tok míří doprava a teplo teče na tomto okraji do desky.
 \item  Vypočteme divergenci toku určeného v prvním bodě. $$
   \begin{aligned}
 \nabla \cdot (-k\cdot \nabla T )&=\pdv{x}(-14(2x- y)-16x^3)+\pdv{y}(8(2x- y)-4x^3)\\&=-48x^2-28-8\\&=-48x^2-36
@@ -509,6 +509,57 @@ $
 
 \section{Rotace, kmenová funkce gradientu}
 
+
+\subsection{Rotace vektorového pole v rovině}
+
+Vypočtěte rotaci funkce $\vec F=xy^2\vec \imath + 2xy\vec\jmath$.
+
+\reseni
+
+ $$
+ \begin{aligned}
+\curl \vec F=
+ \begin{vmatrix}
+   \vec\imath & \vec \jmath & \vec k\\
+   \pdv{x} & \pdv{y} & \pdv{z} \\
+   xy^2 & 2xy & 0
+ \end{vmatrix}
+ &=\vec k\qty({\pd[x]{2xy}-\pd[y]{xy^2}})\\&
+ =\vec k(2y-2xy)\\&=2y(1-x)\vec k
+\end{aligned}
+ $$
+
+
+
+\konec
+
+\subsection{Rotace vektorového pole v prostoru}
+
+Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
+
+\reseni
+
+ $$
+ \begin{aligned}
+\curl \vec F&=
+ \begin{vmatrix}
+   \vec\imath & \vec \jmath & \vec k\\[4pt]
+   \pdv{x} & \pdv{y} & \pdv{z} \\[10pt]
+   xyz& 5x^2y & -3x^2z
+ \end{vmatrix}\\
+ &=
+\vec \imath \ \qty[\pd[x]{-3x^2z}-\pd[z]{5x^2y}]
+\\&\quad +\vec \jmath \ \qty[\pd[z]{xyz}-\pd[x]{-3x^2z}] 
+\\&\quad +\vec k\ \qty({\pd[x]{5x^2y}-\pd[y]{xyz}})\\&
+ &=(xy+6xz)\vec\jmath + (10xy-xz)\vec k
+\\&=x(y+6z)\vec\jmath + x(10y-z)\vec k
+\end{aligned}
+ $$
+
+
+
+\konec
+
 \subsection{Divergence a rotace 2D funkce s parametrem}
 Vypočtěte divergenci a rotaci funkce $\vec F=ax^2y^3\vec \imath + (x^2+y)\vec\jmath$.
 
@@ -532,9 +583,40 @@ $$\nabla\cdot \vec F=\pdv{x}(ax^2y^3)+\pdv{y}(x^2+y)=2axy^3+1$$
 
 Pro vektorové pole $$\frac 45 x y^3\vec \imath + \frac 65x^2y^2\vec\jmath$$ najděte funkci $\varphi$ tak, že zadané vektorové pole je rovno gradientu $\nabla \varphi.$
 
+\reseni
+
+Platí $\pdv {\varphi}{x}=\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2$.
+
+Odsud
+$$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int \frac 45 xy^3 \,\mathrm dx
+=\frac 45 \frac {x^2}{2}y^3=\frac 25 x^2y^3+C_1(y)$$
+a
+$$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2\frac{y^3}{3} \,\mathrm dy
+=\frac 25 \frac {x^2}y^3=\frac 25 x^2y^3+C_2(x).$$
+Porovnáním musí být $C_1(y)=C_2(x)=C\in\mathbb R$ a
+$$\varphi(x,y)=\frac 25 x^2y^3+C,\quad C\in\mathbb R.$$
+
+
+\konec
+
 \subsection{Nalezení kmenové funkce 2/3}
 
 Pro vektorové pole $$\left(x^2+\frac 45 x y^3\right)\vec \imath + \left(\frac 65x^2y^2+y\right)\vec\jmath$$ najděte funkci $\varphi$ tak, že zadané vektorové pole je rovno gradientu $\nabla \varphi.$
+
+\reseni
+
+Platí $\pdv {\varphi}{x}=x^2+\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2+y$.
+
+Odsud
+$$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int x^2+\frac 45 xy^3 \,\mathrm dx
+=\frac {x^3}3+\frac 45 \frac {x^2}{2}y^3=\frac {x^3}3+\frac 25 x^2y^3+C_1(y)$$
+a
+$$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2\frac{y^3}{3} +y \,\mathrm dy
+=\frac 25 \frac {x^2}y^3+\frac 12 y^2=\frac 25 x^2y^3+\frac 12 y^2 + C_2(x).$$
+Porovnáním musí být $C_1(y)=\frac 12 y^2+C$ a $C_2(x)=\frac {x^3}3+C$, $C\in\mathbb R$ a
+$$\varphi(x,y)=\frac {1}{3}x^3+\frac 25 x^2y^3+\frac 12 y^2+C,\quad C\in\mathbb R.$$
+
+\konec
 
 \subsection{Nalezení kmenové funkce 3/3}
 
@@ -542,12 +624,259 @@ Pro vektorové pole $$\left(y+\frac 45 x y^3\right)\vec \imath + \left(\frac 65x
 
 
 
+\reseni
+
+Platí $\pdv {\varphi}{x}=y+\frac 45 xy^3$ a $\pdv{\varphi}{y}=\frac 65 x^2y^2+x^2$.
+
+Odsud
+$$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int y+\frac 45 xy^3 \,\mathrm dx
+=xy+\frac 45 \frac {x^2}{2}y^3=xy+\frac 25 x^2y^3+C_1(y)$$
+a
+$$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2\frac{y^3}{3} +x^2 \,\mathrm dy
+=\frac 25 \frac {x^2}y^3+x^2y=\frac 25 x^2y^3+x^2y+ C_2(x).$$
+Porovnáním musí být
+$$xy+C_1(y)=x^2y+C_2(x),$$
+což není možné splnit.
+
+Ověříme, že parciální derivace
+$\pdv {y} \qty(y+\frac 45 xy^3)$ a $\pdv{x}\qty(\frac 65 x^2y^2+x^2)$ jsou různé.
+Platí
+$$\pdv {y} \qty(y+\frac 45 xy^3)=1+\frac{12}5xy^2$$
+a
+$$\pdv{x}\qty(\frac 65 x^2y^2+x^2)=\frac {12}5 xy^2+2x$$
+a protože obě parciální derivace jsou různé, kmenová funkce neexistuje.
+
+\konec
+
+
 
 \section{Křivkové integrály}
 
+\nonstopmode
+
+\subsection{Křivkový integrál druhého druhu po třech různých křivkách}
 
 
+Vypočtěte $$\int_{C_i} \vec F \mathrm d\vec r$$ pro vektorové pole $$\vec F=-y\vec \imath + x\vec\jmath$$ po třech různých křivkách $C_1$, $C_2$ a $C_3$.
+\begin{align*}
+  C_1&\colon \vec r=\cos(t)\vec \imath + \sin (t)\vec\jmath, \quad t=\in\qty[0,\frac\pi 2]\\
+  C_2&\colon \vec r=(1-t)\vec \imath + t\vec\jmath, \quad t=\in\qty[0,1]\\
+  C_3&\colon \vec r=(1-t^2)\vec \imath + t\vec\jmath, \quad t=\in\qty[0,1]
+\end{align*}
+Tj. počítáme
+$$\int_{C_i} -y\,\mathrm dx + x\,\mathrm dy$$
+po třech zadaných křivkách $C_1$, $C_2$ a $C_3$.
 
+\reseni
+
+Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
+
+\stranka
+
+\textbf{Křivka $C_1$.}
+Derivací křivky $\vec r=(\cos(t),\sin(t))$ podle $t$ dostáváme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(-\sin (t),\cos (t)).$$
+Rovnice vektorového pole podél křivky má tvar
+$$\vec F(\vec r(t))=(-\sin t,\cos t).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(-\sin t,\cos t)\cdot (-\sin (t),\cos (t)) = \sin^2 t+\cos^2 t =1.
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=1\mathrm dt$$
+a integrál má tvar
+$$\int_C\vec F\mathrm d\vec r=\int_0^{\frac \pi 2}1\,\mathrm dt=\frac \pi 2,$$
+kde poslední Riemannův integrál není nutné počítat, protože integrál z jedničky je délka intervalu, přes který se integruje.
+
+\stranka
+
+\textbf{Křivka $C_2$.}
+Derivací křivky $\vec r=(1-t,t)$ podle $t$ dostáváme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(-1,1).$$
+Rovnice vektorového pole podél křivky má tvar
+$$\vec F(\vec r(t))=(-t,1-t).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(-t,1- t)\cdot (-1,1) = (-t)(-1)+(1-t)\cdot 1 =1.
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=1\mathrm dt$$
+a integrál má tvar
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}1\,\mathrm dt=1,$$
+kde ani v tomto případě poslední Riemannův integrál není nutné počítat, protože integrál z jedničky je délka intervalu, přes který se integruje.
+
+\stranka
+
+\textbf{Křivka $C_3$.}
+Derivací křivky $\vec r=(1-t^2,t)$ podle $t$ dostáváme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(-2t,1).$$
+Rovnice vektorového pole podél křivky má tvar
+$$\vec F(\vec r(t))=(-t,1-t^2).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(-t,1- t^2)\cdot (-2t,1) = (-t)(-2t)+(1-t^2)\cdot 1 =t^2+1.
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=(t^2+1)\mathrm dt$$
+a integrál má tvar
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=
+\qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
+$$
+
+\stranka
+
+
+\obrazek[vlastní]{priklad_5_1.png}
+
+%https://sagecell.sagemath.org/?z=eJx1kMFuwjAQRO-R8g8rgRRHMW3snH3iB3LgRmgUEkMNxo5sQ5u_r01SlbbhtCPN7hvN3hqDkiFJ40hcem0cqOulH-LIEXZXL1Io2zctRzkGhXrxSlNM8twfODqzQiZzTdh222qLRIqtUH7s4KANCBAKHNn5Deo3yEpg8ejQ4BSj80b_eyVhUlhX91I7tCYYgjhpoXjHNubKMUh-5KqrZbPnkplkua5J1WqpFSA_LThc2UBLl0laxVH2gKMzuHBqWGJ4l8yx6chGZOXwHLJ4jjwaztUstPiB-h_csXHku1MWWPWNt06b-iC47BD6xEOKwY8ckyCGSUwpe9m053Bv3_UHKklW-paN7T2jNo0TmpE7PI4WZTHHHzKK8zFhRb4jJvWriccsxpCsLP5mYHDCSe77bfQZei05LCsfBCc2JfiSX8c_x8Q=&lang=sage&interacts=eJyLjgUAARUAuQ==
+
+\textbf{Interpretace, srovnání.}
+
+Všechny křivky jsou z bodu $[1,0]$ do bodu $[0,1]$. Nejblíže k počátku je úsečka $C_2$, nejdále je čvrtkružnice $C_1$, část paraboly $C_2$ je mezi nimi.
+
+Integrál fyzikálně znamená tok vektorového pole $(x,y)$ křivkou. Toto vektorové pole míří směrem z počátku a zesiluje směrem od počátku, protože délka vektoru je rovna vzdálenosti od počátku.
+
+Proto je hodnota po křivce nejblíže počátku nejmenší atd. Na křivce $C_1$ (kružnice) je tok v~každém bodě kolmý ke křivce a stejně velký a proto je celkový tok snadné určit jako součin velikosti vektorového pole na křivce ($|\vec F|=1$) a délky křivky $\frac \pi 2$.
+
+
+\konec
+
+
+\subsection{Křivkový integrál druhého druhu po parabole}
+
+
+Vypočtěte $$\int_{C} \vec F \mathrm d\vec r$$ pro vektorové pole $$\vec F=x^2\vec \imath + (x+y)\vec\jmath$$ po části paraboly
+\begin{align*}
+  C&\colon \vec r=t\vec \imath + t^2\vec\jmath, \quad t=\in\qty[0,1]
+\end{align*}
+tj. počítáme
+$$\int_C x^2\,\mathrm dx + (x+y)\,\mathrm dy$$
+po zadané křivce $C$.
+
+\reseni
+
+Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
+
+\stranka
+
+Derivací křivky $\vec r=(t,t^2)$ podle $t$ dostáváme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(1,2t).$$
+Rovnice vektorového pole podél křivky má tvar
+$$\vec F(\vec r(t))=(t^2,t+t^2).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(1,2t)\cdot (t^2,t+t^2) = 1\cdot t^2+2t\cdot(t+t^2)=3t^2+2t^3.
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=(3t^2+2t^3)\mathrm dt$$
+a integrál má tvar
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}(3t^2+2t^3)\,\mathrm dt
+=\qty[t^3+\frac 12 t^4]_0^1=1+\frac 12 - 0 = \frac 32.$$
+
+\konec
+
+\stranka
+
+
+\subsection{Křivkový integrál druhého druhu po kubické parabole}
+
+
+Vypočtěte $$\int_{C} \vec F \mathrm d\vec r$$ pro vektorové pole $$\vec F=2y\vec \imath + x^2y\vec\jmath$$ po části kubické paraboly
+\begin{align*}
+  C&\colon \vec r=t\vec \imath + t^3\vec\jmath, \quad t=\in\qty[0,1],
+\end{align*}
+tj. počítáme
+$$\int_C 2y\,\mathrm dx + x^2y\,\mathrm dy$$
+po zadané křivce $C$.
+
+\reseni
+
+Vektory budeme pro stručnost zapisovat jako uspořádané dvojice.
+
+\stranka
+
+Derivací křivky $\vec r=(t,t^3)$ podle $t$ dostáváme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(1,3t^2).$$
+Rovnice vektorového pole podél křivky má tvar
+$$\vec F(\vec r(t))=(2t^3,t^2t^3)=(2t^3,t^5).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(1,3t^2)\cdot (2t^3,t^5) = 1\cdot 2t^3+3t^2\cdot t^5=2t^3+3t^7.
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=(2t^3+3t^7)\mathrm dt$$
+a integrál má tvar
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}(2t^3+3t^7)\,\mathrm dt
+=\qty[\frac 14 t^4 + \frac 38 t^8]_0^1=\frac 12 +\frac 38 - 0 = \frac 78.$$
+
+\konec
+
+
+\stranka
+
+
+\obrazek[vlastní]{priklad_5_4.png}
+
+\subsection{Tok vektorového pole uzavřenou křivkou}
+
+Vypočtěte tok vektorového pole $$\vec \Phi_1=(x+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
+
+
+\textit{Návod:} $$\int_0^{2\pi}\sin^2 t\,\mathrm dt=\int_0^{2\pi}\cos^2 t\,\mathrm dt= \pi$$
+a tento integrál je možno najít například grafickou cestou.
+
+\reseni
+Vektorové pole teče směrem doprava a směrem doprava i zesiluje. Dá se čekat, že tok ven pravou polovinou kružnice bude větší než tok dovnitř levou polovinou kružnice a celkový tok bude nenulový.
+
+Vektorové pole je $$\vec \Phi_1=(x+2,0)$$ a pro výpočet toku musíme integrovat křivkovým integrálem druhého druhu vektorové pole $$\vec F=(0,x+2).$$
+Vskutku, tok vektorového pole zadaného v komponentách $\Phi_1=(P,Q)$ je vyjádřen integrálem druhého druhu vektorového pole $\vec F=(-Q,P)$ a v našem případě je $P=x+2$ a $Q=0$. Derivací rovnice křivky obdržíme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(-\sin (t),\cos (t)).$$
+Rovnice vektorového pole $\vec F$ podél křivky $C$ má tvar
+$$\vec F(\vec r(t))=(0,2+\cos t).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(-\sin t,\cos t)\cdot (0,2+\cos (t)) = 2\cos t+\cos^2 t .
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=(2\cos t+\cos^2 t)\mathrm dt$$
+a integrál má tvar
+$$\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos^2 t)\,\mathrm dt= \pi ,$$
+kde poslední Riemannův integrál není nutné počítat, protože integrál z první části je nulový díky geometrické interpretaci integrálu a periodicitě funkce $\cos t$ a integrál z druhého sčítance byl součástí zadání.
+
+
+\konec
+
+\stranka
+
+
+\obrazek[vlastní]{priklad_5_5.png}
+
+\subsection{Tok vektorového pole uzavřenou křivkou}
+
+Vypočtěte tok vektorového pole $$\vec \Phi_2=(y+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
+
+
+\textit{Návod:} $$\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0$$
+
+\reseni
+Vektorové pole teče směrem doprava. Kromě toho zesiluje směrem nahoru. Dá se čekat, že tok ven pravou polovinou kružnice bude v každý výšce stejný jako tok dovnitř levou polovinou kružnice a celkový tok bude nulový.
+
+Vektorové pole je $$\vec \Phi_2=(y+2,0)$$ a pro výpočet toku musíme integrovat křivkovým integrálem druhého druhu vektorové pole $$\vec F=(0,y+2).$$
+Vskutku, tok vektorového pole zadaného v komponentách $\Phi_2=(P,Q)$ je vyjádřen integrálem druhého druhu vektorového pole $\vec F=(-Q,P)$ a v našem případě je $P=y+2$ a $Q=0$. Derivací rovnice křivky obdržíme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(-\sin (t),\cos (t)).$$
+Rovnice vektorového pole $\vec F$ podél křivky $C$ má tvar
+$$\vec F(\vec r(t))=(0,2+\sin t).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(-\sin t,\cos t)\cdot (0,2+\sin (t)) = 2\cos t+\cos t \sin t.
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=(2\cos t+\cos t\sin t)\mathrm dt$$
+a integrál má tvar
+$$\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos t\sin t)\,\mathrm dt.$$
+
+Integrál z prvního sčítance můžeme vypočítat pomocí primitivní funkce
+$$\int_0^{2\pi} \cos x\,\mathrm dx=\qty[\sin x]_0^{2\pi}=\sin(2\pi)-\sin 0 =0$$ a integrál z druhého sčítance je nulový, proto je nulový i celý integrál.
+$$\int_C\vec F\mathrm d\vec r=0$$
+
+
+\konec
+
+
+\stranka
 \section{Dvojné integrály}
 
 
@@ -567,7 +896,8 @@ mezi polárními a kartézskými souřadnicemi.
 
 \subsection{Křivkový integrál pomocí kmenové funkce}
 
-Určete, pro jako hodnotu parametru $a\in \mathbb R$ křivkový integrál $$\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy$$ nezávisí na integrační cestě v $\mathbb R^2$. Najděte kmenovou funkci příáslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu $[0,0]$ do bodu $[1,2]$.
+
+Určete, pro jako hodnotu parametru $a\in \mathbb R$ křivkový integrál vektorového pole $$\vec F=ax^2y\vec\imath + (x^3+1)\vec\jmath$$ po křivce $C$, tj. $$\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy$$ nezávisí na integrační cestě v $\mathbb R^2$. Najděte kmenovou funkci příslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu $[0,0]$ do bodu $[1,2]$.
 
 \reseni
 
@@ -594,7 +924,9 @@ $$
 Porovnáním dostáváme kenovou funkci $$\varphi (x,y)=x^3y+y+C,$$ kde $C$ je integrační konstanta. Integrál po křivce (tvar není důležitý, vzhledem k nezávislosti na integrační cestě stačí počáteční a koncový bod) je
 $$\int _C \vec F\mathrm d\vec r=\varphi(1,1)-\varphi(0,0)=1+1-0=2.$$
 
+
 \konec
+
 
 
 \section{Diferenciální rovnice I}

@@ -262,7 +262,7 @@ $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
 $$
 Charakteristická rovnice je 
 $$\lambda^2+5\lambda+2=0$$
-se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$. Budou tedy existovat dvě nezávislá řešení konvergující do počátku a všechna další řešení dostaneme jako jejich lineární kombinaci. Proto všechna řešení konvergují k počátku tj. $T_1=T_2=0$. Obě teploty v naší posunuté stpunici se tedy ustálí na teplotě vodní lázně. Nic jiného jsme ani nečekali, ať mají žloutek a bílek na začátku jakoukoliv teplotu, po čase se teplota ustálí na teplotě vodní lázně. V tomto případě není zajímavé vědět, do jakého stavu systém konverguje, ale například za jak dlouho bude dosaženo potřebné teploty ve žloutku nebo v bílku. V praxi se podobným způsobem neřeší vaření vajec, ale předávání chemických látek jako jsou léky nebo enzymy mezi tkáněmi, prostřednictvím krve. Podobně jako u Newtononova zákona tepelné výměny, i zde je rychlost procesu úměrná množství, v tomto případě úměrná rozdílu koncentrací.
+se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$. Budou tedy existovat dvě nezávislá řešení konvergující do počátku a všechna další řešení dostaneme jako jejich lineární kombinaci. Proto všechna řešení konvergují k počátku tj. $T_1=T_2=0$. Obě teploty v naší posunuté stupnici se tedy ustálí na teplotě vodní lázně. Nic jiného jsme ani nečekali, ať mají žloutek a bílek na začátku jakoukoliv teplotu, po čase se teplota ustálí na teplotě vodní lázně. V tomto případě není zajímavé vědět, do jakého stavu systém konverguje, ale například za jak dlouho bude dosaženo potřebné teploty ve žloutku nebo v bílku. V praxi se podobným způsobem neřeší vaření vajec, ale předávání chemických látek jako jsou léky nebo enzymy mezi tkáněmi, prostřednictvím krve. Podobně jako u Newtononova zákona tepelné výměny, i zde je rychlost procesu úměrná množství, v tomto případě úměrná rozdílu koncentrací.
 
 
 
@@ -270,7 +270,7 @@ se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$.
 
 Obecný autonomní systém nemusí být lineární. Například při modelování chemických reakcí je rychlost úměrná mocnině koncentrace reagujících látek odpovídající počtu molekul, které do reakce vstupují. Na dalším slidu uvidíme příklad takového modelu.
 
-Ukážeme si, jak studovat nelineární systém pomocí lineárního a pomocí vlastních čísel. Půjde o lineární aproximaci. V tomto případě o lineární aproximaci vektrorové funkce definující pravé strany rovnic.
+Ukážeme si, jak studovat nelineární systém pomocí lineárního a pomocí vlastních čísel. Půjde o lineární aproximaci. V tomto případě o lineární aproximaci vektorové funkce definující pravé strany rovnic.
 
 Je-li $f(X_0)=0$, je možno systém $$X'=f(X)$$ v okolí bodu $X_0$ aproximovat lineárním systémem $$X'=J(X_0)(X-X_0),$$
 kde $J(X_0)$ je Jacobiho matice funkce $f(X)$ v bodě $X_0$, tj. pro $f(X)=(f_1(X),\dots,f_n(X))^T$ je
@@ -401,3 +401,4 @@ tomto stacionárním bodě.
 
 # Vícerozměrné autonomní systémy, kompartmentové modely
 
+Kompartmentové modely jsou modely, kde se je studovaná veličina rozdělena do několika stavů a mezi těmito stavy se v jakémsi smyslu přelévá definovanou rychlostí. Klasickým připadem v roce 2020 je model epidemie, například [SIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=sir_epidemie) nebo [SEIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=karantena).
