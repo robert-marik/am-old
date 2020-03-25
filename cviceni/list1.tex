@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{physics}
+\usepackage{enumerate}
+\everymath{\displaystyle}
+\begin{document}
+
+{\centering {\bfseries
+  Aplikovaná matematika, kombinovaná forma, pracovní list 1.}
+
+  Odevzdat nejpozději 20.3., za správné řešení 3 body ke zkoušce.
+  
+  }
+
+
+  
+  \bigskip
+Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ je popsána rovnicí
+  $$T(x,y)=(x+2y)^2+x^3.$$
+  Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která rozměr opraví tak, aby výsledek opravdu vycházel ve stupních Celsia. Pro jednoduchost tuto komplikaci vynecháme.)
+
+  \bigskip
+  \hrule
+  
+\begin{enumerate}[1)]
+\item Vypočtěte parciální derivace $\pdv{T}{x}$ a $\pdv{T}{y}$.
+\item Vypočtěte parciální derivaci $\pdv{T}{x} (2,1)$ v bodě $(2,1)$ (včetně jednotky) a podejte její slovní interpretaci.
+\item Vypočtěte gradient $\nabla T$ v obecném bodě $(x,y)$.
+\item Je dán součinitel tepelné vodivosti $\lambda=
+  \begin{pmatrix}
+    5 & 1\\1&4
+  \end{pmatrix}.
+$ Vypočtěte tok tepla $$-\lambda \cdot \nabla T.$$
+\item Určete, zda na levém okraji desky teče teplo dovnitř desky nebo z desky ven. Poznáte to podle znaménka $x$-ové souřadnice toku tepla pro $x=0$.
+\item Vypočtěte divergenci toku tepla, tj. $$\nabla\cdot(-\lambda \cdot \nabla T).$$
+\item V desce nejsou zdroje tepla. Proto je situace modelována rovnicí
+$$\rho c\pdv{T}{t}=\nabla\cdot(\lambda \cdot \nabla T).$$
+  Ochlazuje se deska uprostřed, nebo otepluje?
+\end{enumerate}
+
+\hrule
+\bigskip
+
+\textbf{Poznámka:} V předposledním kroku je výsledek $$\nabla\cdot(-\lambda \cdot \nabla T)=-30x-50.$$ Pro odpověď na poslední otázku použijte rovnici vedení tepla. Znaménko z pravé strany určíte díky výsledku předchozího příkladu. Pozor na to, že v rovnici vedení tepla není minus na pravé straně.
+
+
+\end{document}

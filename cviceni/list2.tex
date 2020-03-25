@@ -1,0 +1,52 @@
+\documentclass{article}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{physics}
+\usepackage{enumerate}
+\usepackage[margin=1in]{geometry}
+\everymath{\displaystyle}
+\begin{document}
+
+{\centering {\bfseries
+  Aplikovaná matematika, kombinovaná i prezenční forma.}
+
+  }
+
+
+  Odevzdat nejpozději 19.4., 23:59 přes odevzdávárnu v UISe. Za správné řešení 4 body ke zkoušce.
+
+  \textbf{Update 25.3. Zadání bylo původně určeno kombinovaným studentům, ale v prvním příkladě nově prozrazuji výsledek, aby bylo zadání použitelné  pro všechny.}
+
+    \bigskip
+  \textbf{Kombinovaní studenti:} Přeformuloval jsem tak, aby se první a poslední úkol daly počítat nakonec a úkoly 2 až 5 ještě před vyřešením úkolu 1. Důvodem je jiná organizace studia u prezenčních studentů. V~zadání se nic neměnilo, jenom vlastně v prvním bodě navíc oproti dřívějšku prozrazuji výsledek. Posunul se termín odevzdání a navýšila dotace bodů.
+
+  \bigskip
+  \textbf{Presenční studenti:} Pro výpočet příkladů 2 až 5 použijte hodnotu konstanty z bodu 1. Toto je obsahem sedmého týdne. Jak na vhodnou hodnotu parametru $a$ přijdeme a jak souvisí kmenová funkce s křivkovým integrálem se dozvíte v devátém týdnu. Potom budete mít znalosti k řeššení úlohy 1 a 6. Na konci devátého týdne je termín odevzdání.
+  
+  \bigskip
+  \hrule
+  
+  \bigskip Uvažujte vektorové pole
+  $$\vec F=(x+3y)\vec \imath + ax\vec\jmath.$$ Cílem je stanovit, kdy
+  integrál tohoto vektorového pole nezávisí na integrační cestě,
+  vypočítat integrál po třech různých křivkách, které mají stejný
+  počáteční a koncový bod, najít kmenovou funkci a vypočítat křivkový
+  integrál pomocí této kmenové funkce.  \bigskip \hrule
+  
+\begin{enumerate}[1)]
+\item Ukažte, že jediná hodnota reálného parametru $a$ pro kterou integrál zadaného vektorového pole nezávisí na integrační cestě je $a=3$. Dále pracujte s touto hodnotou parametru $a$.
+\item Vypočtěte hodnotu křivkového integrálu $$\int_{C_1} \vec F\mathrm d\vec r$$ po úsečce $\vec r(t)=t\vec \imath+t\vec \jmath$, $t\in[0,1]$.
+\item Vypočtěte hodnotu křivkového integrálu $$\int_{C_2} \vec F\mathrm d\vec r$$ po části paraboly $\vec r(t)=t\vec \imath+t^2\vec \jmath$, $t\in[0,1]$. Ověřte, že výsledek je stejný, jako v předchozím případě.
+\item Vypočtěte hodnotu křivkového integrálu $$\int_{C_3} \vec F\mathrm d\vec r$$ po křivce $\vec r(t)=t^2\vec \imath+t^3\vec \jmath$, $t\in[0,1]$. Ověřte, že výsledek je stejný, jako v předchozích případech.
+\item Najděte funkci $\varphi(x,y)$ takovou, že $\nabla \varphi=\vec F.$
+\item Použijte předchozí výsledek k výpočtu křivkového integrálu druhého druhu vektorového pole $\vec F$ po libovolné křivce z bodu $[0,0]$ do bodu $[1,1]$.
+\end{enumerate}
+
+\hrule
+\bigskip
+
+\end{document}
