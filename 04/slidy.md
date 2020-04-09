@@ -58,7 +58,7 @@ y},\frac{\partial }{\partial z}\right)$ a vektorového pole.
 
 Vektorovým součinem $\vec a \times \vec b$ vektorů $\vec
 a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor 
-\dm $$\vec a\times\vec b=\begin{vmatrix} \vec \imath & \vec \jmath &\vec k \\ a_1&a_2&a_3 \\ b_1& b_2& b_3\end{vmatrix}=(a_2b_3-a_3b_2)\vec\imath+(a_1b_3-a_3b_1)\vec\jmath+(a_1b_2-a_2b_1)\vec k$$.
+\dm $$\vec a\times\vec b=\begin{vmatrix} \vec \imath & \vec \jmath &\vec k \\ a_1&a_2&a_3 \\ b_1& b_2& b_3\end{vmatrix}=(a_2b_3-a_3b_2)\vec\imath+(a_3b_1-a_1b_3)\vec\jmath+(a_1b_2-a_2b_1)\vec k$$.
 
 # Rotace
 

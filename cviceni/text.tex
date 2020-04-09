@@ -927,7 +927,7 @@ $$
 \end{aligned}
 $$
 Porovnáním dostáváme kenovou funkci $$\varphi (x,y)=x^3y+y+C,$$ kde $C$ je integrační konstanta. Integrál po křivce (tvar není důležitý, vzhledem k nezávislosti na integrační cestě stačí počáteční a koncový bod) je
-$$\int _C \vec F\mathrm d\vec r=\varphi(1,1)-\varphi(0,0)=1+1-0=2.$$
+$$\int _C \vec F\mathrm d\vec r=\varphi(1,2)-\varphi(0,0)=2+2-0=4.$$
 
 
 \konec
@@ -957,9 +957,9 @@ $$\varphi(x,y)=2x^3y+\frac 12 x^2+xy+C,
 \in
 \mathbb R.$$
 
-Integrál po křivce  z bodu $(2,1)$ do bodu
+Integrál po křivce  z bodu $(2,1)$ do bodu $(1,3)$
 má hodnotu
-$$\varphi(1,3)-\varphi(21)=6+\frac 12 +3-\qty(16+2+2)=-\frac{21}2.$$
+$$\varphi(1,3)-\varphi(2,1)=6+\frac 12 +3-\qty(16+2+2)=-\frac{21}2.$$
 
 \konec
 
@@ -967,7 +967,7 @@ $$\varphi(1,3)-\varphi(21)=6+\frac 12 +3-\qty(16+2+2)=-\frac{21}2.$$
 \subsection{Kmenová funkce pomocí křivkového integrálu}
 
 Ukažte, že vektorové pole
-$\vec F=(6x^2y+x+y,2x^3+x)$ má kmenovou funkci. Vypočtěte z definice křivkový integrál v tomto vektorovém poli po křivce $\vec r(t)=(at,bt)$, tj po úsečce z počátku do bodu $(a,b)$ a ukažte, že tímto zpúsobem obdržíme kmenovou funkci.  
+$\vec F=(6x^2y+x+y,2x^3+x)$ má kmenovou funkci. Vypočtěte z definice křivkový integrál v tomto vektorovém poli po křivce $\vec r(t)=(at,bt)$, $t\in[0,1]$, tj. po úsečce z počátku do bodu $(a,b)$ a ukažte, že tímto způsobem obdržíme kmenovou funkci.  
 
 \reseni
 Platí $$\pdv{y}\qty(6x^2y+x+y)=6x^2+1=\pdv{x}\qty(2x^3+x)$$
@@ -979,19 +979,19 @@ a dosazením křivky do vektorového pole
 $$\vec F(\vec r(t))=(6a^2t^2bt+at+bt,2a^3t^3+at)=(6a^2bt^3+at+bt,2a^3t^3+at).$$
 Skalární součin je daný vztahem
 $$\vec F\frac{\mathrm d\vec r}{\mathrm dt}=a(6a^2bt^3+at+bt)+b(2a^3t^3+at)
-=8a^3b t^3+a^2t+2bt.
+=8a^3b t^3+a^2t+2abt.
 $$
 Křivkový integrál je tedy roven
 $$\int_C \vec F\,\mathrm d\vec r=
-\int_0^1 8a^3b t^3+a^2t+2bt\,\mathrm dt=
-\qty[2a^3bt^4+\frac 12 a^2 t^2+bt^2]_0^1=2a^3b+\frac 12 a^2+b.
+\int_0^1 8a^3b t^3+a^2t+2abt\,\mathrm dt=
+\qty[2a^3bt^4+\frac 12 a^2 t^2+abt^2]_0^1=2a^3b+\frac 12 a^2+ab.
 $$
 Podle věty o nezávislosti křivkového integrálu na integrační cestě máme
-$$\varphi(a,b)-\varphi(0,0)=2a^3b+\frac 12 a^2+b$$
+$$\varphi(a,b)-\varphi(0,0)=2a^3b+\frac 12 a^2+ab$$
 a odsud
-$$\varphi(a,b)=2a^3b+\frac 12 a^2+b+\varphi(0,0),$$
+$$\varphi(a,b)=2a^3b+\frac 12 a^2+ab+\varphi(0,0),$$
 neboli (po přejmenování proměnných a zavedení konstanty $C$ místo $\varphi(0,0)$)
-$$\varphi(x,y)=2x^3y+\frac 12 x^2+y+C.$$
+$$\varphi(x,y)=2x^3y+\frac 12 x^2+xy+C.$$
 
 \konec
 
