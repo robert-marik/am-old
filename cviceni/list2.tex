@@ -17,15 +17,6 @@
   }
 
 
-  Odevzdat nejpozději 19.4., 23:59 přes odevzdávárnu v UISe. Za správné řešení 10 bodů ke zkoušce.
-
-  \textbf{Update 25.3. Zadání bylo původně určeno kombinovaným studentům, ale v prvním příkladě nově prozrazuji výsledek, aby bylo zadání použitelné  pro všechny.}
-
-    \bigskip
-  \textbf{Kombinovaní studenti:} Přeformuloval jsem tak, aby se první a poslední úkol daly počítat nakonec a úkoly 2 až 5 ještě před vyřešením úkolu 1. Důvodem je jiná organizace studia u prezenčních studentů. V~zadání se nic neměnilo, jenom vlastně v prvním bodě navíc oproti dřívějšku prozrazuji výsledek. Posunul se termín odevzdání a navýšila dotace bodů.
-
-  \bigskip
-  \textbf{Presenční studenti:} Pro výpočet příkladů 2 až 5 použijte hodnotu konstanty z bodu 1. Toto je obsahem sedmého týdne. Jak na vhodnou hodnotu parametru $a$ přijdeme a jak souvisí kmenová funkce s křivkovým integrálem se dozvíte v devátém týdnu. Potom budete mít znalosti k řeššení úlohy 1 a 6. Na konci devátého týdne je termín odevzdání.
   
   \bigskip
   \hrule
@@ -49,4 +40,57 @@
 \hrule
 \bigskip
 
+\begin{enumerate}[1)]
+\item
+  Pro nezávislost na integrační cestě musí platit $$\frac{\partial}{\partial x}(ax)=\frac{\partial}{\partial y}(x+3y)$$
+  tj. $$a=3.$$ Vidíme, že nezávislost na integrační cestě bude zaručena pro jedinou hodnotu, $a=3$.
+\item Derivací křivky $\vec r=(t,t)$ podle $t$ dostáváme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(1,1).$$
+Rovnice vektorového pole $\vec F(x,y)=(x+3y,3x)$ podél křivky má tvar
+$$\vec F(\vec r(t))=(t+3t,3t)=(4t,3t).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(4t,3t)\cdot (1,1) = 4t+3t =7t.
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=7t\mathrm dt$$
+a integrál má tvar
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}7t\,\mathrm dt=\left [\frac 72 t^2\right]_0^1=\frac 7 2.$$
+
+\item Derivací křivky $\vec r=(t,t^2)$ podle $t$ dostáváme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(1,2t).$$
+Rovnice vektorového pole $\vec F(x,y)=(x+3y,3x)$ podél křivky má tvar
+$$\vec F(\vec r(t))=(t+3t^2,3t).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(t+3t^2,3t)\cdot (1,2t) = t+3t^2+6t^2 =t+9t^2.
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=(t+9t^2)\mathrm dt$$
+a integrál má tvar
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}t+9t^2 \,\mathrm dt=\left [\frac 12 t^2+3t^3\right]_0^1=\frac 12 +3=\frac 7 2.$$
+
+
+\item Derivací křivky $\vec r=(t^2,t^3)$ podle $t$ dostáváme
+$$\frac{\mathrm d\vec r}{\mathrm dt}=(2t,3t^2).$$
+Rovnice vektorového pole $\vec F(x,y)=(x+3y,3x)$ podél křivky má tvar
+$$\vec F(\vec r(t))=(t^2+3t^3,3t^2).$$
+Skalárním součinem dostáváme
+$$\vec F \frac{\mathrm d\vec r}{\mathrm dt}=
+(t^2+3t^3,3t^2)\cdot (2t,3t^2) = 2t^3+6t^4+9t^4 =2t^3+15t^4.
+$$
+Odsud formálně $$\vec F\mathrm d\vec r=(2t^3+15t^4)\mathrm dt$$
+a integrál má tvar
+$$\int_C\vec F\mathrm d\vec r=\int_0^{1}2t^3+15t^4 \,\mathrm dt=\left [\frac 12 t^4+3t^5\right]_0^1=\frac 12 +3=\frac 7 2.$$
+
+\item Platí
+  $$\varphi (x,y)=\int x+3y\,\mathrm dx=\frac 12 x^2+3xy+C_1(y)$$
+  a
+  $$\varphi (x,y)=\int 3x\,\mathrm dy=3xy+C_2(x).$$
+  Porovnáním
+  $$\varphi (x,y)=\frac 12 x^2+3xy+C,$$
+  kde $C$ je libovolná reálná konstanta.
+\item Přímým výpočtem dostáváme
+  $$\varphi(1,1)-\varphi(0,0)=\frac 12 + 3 - 0 =\frac 72$$
+  a tato hodnota se shoduje se všemi vypočtenými integrály.
+
+\end{enumerate}
 \end{document}
