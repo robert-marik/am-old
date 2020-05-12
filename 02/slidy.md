@@ -160,6 +160,9 @@ tj. $x_0=y_0=\vec F(0,0)=0$ je $$\vec F(x,y)\approx \vec J(0,0)
 
 # Vícerozměrné konstitutivní zákony
 
+Konstitutivní vztahy tvoří z hlediska materiálového inženýrství jednu
+z nejdůležitějších aplikací gradientu. Jedná se o vztahy dávající do vzájemné relace gradient stavové veličiny, pomocí níž charakterizujeme stav studovaného objektu, a tok, který se snaží zahladit nerovnoměrnost v rozložení stavové veličiny. Například při nerovnoměrném rozložení koncentrace látky se tato koncentrace vyrovnává difuzním tokem. Při nerovnoměrném rozložení vnitřní energie v systému se tato nerovnoměrnost navenek projevuje rozdílnými teplotami v různých částech tělesa a vyrovnává tokem tepla. Při různých piezometrických hladinách podzemní vody (hladina podzemní vody se započtením případného tlaku a dalších parametrů majících vliv na proudění vody) se tato nerovnoměrnost vyrovnává prouděním podzemní vody. 
+
 Zákony uvedené níže byly často odvozeny v jednorozměrném
 případě. V moderní formulaci používáme obecný vektorový zápis, který
 zohledňuje i směr. Zpravidla je možné použít pro tento konstitutivní
@@ -174,8 +177,6 @@ nebudeme.)
 
 **Aby měly konstitutivní vztahy níže smysl, uvažujeme v nich gradient jako sloupcový vektor.** 
 
-Konstitutivní vztahy tvoří z hlediska materiálového inženýrství jednu
-z nejdůležitějších aplikací gradientu.
 
 ## Fickův zákon (difuze)
 
@@ -377,7 +378,7 @@ Stejné jako ve 3D, pouze chybí třetí rovnice.
 ## Izotropní případ
 
 Stejné jako ortotropní případ, ale navíc platí $k_{11}=k_{22}=k_{33}=k.$ Potom
-$\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr.
+$\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr. V tomto případě, narozdíl od ortotropního případu, nezávisí na volbě souřadné soustavy, tenzor materiálových vlastností se redukuje na jednorozměrnou konstantu v libovolné souřadné soustavě.
 
 
 # Tečna k vrstevnici
