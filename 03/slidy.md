@@ -149,19 +149,13 @@ $$
 
 >Poznámka (fyzikální interpretace členů rovnice kontinuity).
 >
->* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se mění
-   hustota stavové veličiny $u$. Pokud studujeme systém v ustáleném stavu,
-   kdy se stavová veličina nemění v čase, je tento člen nulový. Tomuto
-   se říká *stacionární stav* a *stacionární rovnice
-   kontinuity*. Stacionární rovnice kontinuity typicky popisuje systémy po dosažení rovnovážného
-   stavu.
->* Člen $\sigma$ udává vydatnost zdrojů stavové veličiny, přičemž
-   spotřebiče jsou uvažovány jako zdroje záporné vydatnosti. Tento
-   člen tedy udává, kolik stavové veličiny v tomto místě vzniká. Pokud
-   zdroje neexistují, jedná se o *bezzdrojovou rovnici*.
->* Člen $\nabla\cdot \vec j$ udává v daném bodě změnu ve velikosti
-   proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do
-   tohoto místa vteče. Jinak řečeno, udává, o kolik zeslábne v daném místě tok $\vec \jmath$. Tento člen je v rovnici kontinuity přítomen vždy, bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
+>* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se roste hustota stavové veličiny $u$ v daném místě a čase.
+>* Člen $\sigma$ udává vydatnost zdrojů stavové veličiny, přičemž spotřebiče jsou uvažovány jako zdroje záporné vydatnosti. Tento člen tedy udává, kolik stavové veličiny v tomto místě vzniká v jednotkovém objemu za jednotku času.
+>* Člen $\nabla\cdot \vec j$ udává v daném bodě změnu ve velikosti proudění přenášejícím stavovou veličinu. Přesněji, udává, o kolik více veličiny z daného místa vyteče ve srovnání s množstvím veličiny, které do tohoto místa vteče. Jinak řečeno, udává, o kolik zesílí v daném místě tok $\vec \jmath$. My potřebujeme mít zachyceno zeslabení (množství které chybí v toku se "použije" na akumulaci veličiny v daném místě) a proto uvažujeme záporně vzatou divergenci, tj. $-\nabla\cdot \vec j$.
+>* Pokud zdroje stavové veličiny neexistují, jedná se o *bezzdrojovou rovnici* a klademe $\sigma=0$.
+>* Pokud studujeme systém v ustáleném stavu, kdy se stavová veličina nemění v čase, je člen $\frac{\partial u}{\partial t}$ na levé straně nulový. V tomto případě mluvíme o *stacionárním stavu* a *stacionární rovnici kontinuity*. Stacionární rovnice kontinuity typicky popisuje systémy, které byly dostatečně dlouhou dobu ve stabilních podmínkách a dosáhly rovnovážného stavu.
+>* Viděli jsme, že za určitých podmínek mohou některé členy v rovnici kontinuty chybět. Naopak člen $\nabla\cdot \vec j$ charakterizující změny v toku je v rovnici kontinuity přítomen vždy. Bez něj by rovnice kontinuity ztratila smysl (resp. redukovala by se na triviální případ, kdy veličina v daném místě vzniká danou rychlostí a zůstává zde, tj. problém řešitelný čistě integrováním).
+
 
 V matematice často rovnici kontinuity uvažujeme ve výše uvedeném tvaru.  Při
 praktickém použití většinou preferujeme názornou interpretaci
@@ -218,12 +212,27 @@ je $D$ reálné číslo, jinak je $D$ matice. Například při
 studiu pohybu vody ve dřevě se voda řídí nejen směrem maximálního
 poklesu vlhkosti, ale stáčí se současně do podélného směru, ve kterém dřevo
 vede vlhkost nejlépe. V takovém případě je $D$ matice. 
-Spojením rovnice kontinuity a vztahu  pro tok stavové veličiny dostáváme  *difuzní rovnici*
+Spojením rovnice kontinuity
 $$
-      {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)}$$
+      {\frac{\partial u}{\partial t}=\sigma -\nabla\cdot \vec \jmath}   $$
+a vztahu  pro tok stavové veličiny dostáváme  *difuzní rovnici*
+$$
+      {\frac{\partial u}{\partial t}=\sigma - \nabla\cdot \bigl(-D\nabla u\bigr)},$$
+      kterou je možno upravit na 
+$$
+      {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)}.$$
 V jednorozměrném případě (proudění jedním směrem) gradient splývá s parciální derivací a má jenom jednu komponentu. Ztrácí tedy vektorový charakter a proto nemá smysl $D$ uvažovat maticově, prostředí je automaticky izotropní. Divergence se v takovém případě také redukuje na parciální derivaci a rovnice difuze v jedné dimenzi má tvar
 $$
       {\frac{\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x} \left(D\frac{\partial u}{\partial x}\right)}$$
+
+>Poznámka (fyzikální interpretace difuzní rovnice).
+>
+>* Člen $\frac{\partial u}{\partial t}$ udává, jak rychle se mění
+   hustota stavové veličiny $u$. Je stejný jako v rovnici kontinuity.
+>* Člen $\sigma$ udává vydatnost zdrojů stavové veličiny. Je stejný jako v rovnici kontinuity.
+>* Člen $\nabla u$ udává nerovnoměrnost v prostorovém rozložení stavové veličiny. Pomocí difuzní matice $D$ a konstitutivního zákona tuto nerovnoměrnost přepočítáme na tok, který se snaží uvažovanou nerovnoměrnost vyrovnat. Tento tok je reprezentován výrazem $-D\nabla u$.
+>* Záporně vzatá divergence toku udává, jak tok v daném místě ztrácí na intenzitě. Vzhledem k zápornému znaménku v konstitutivním zákoně má záporně vzatá divergence tvar $$\nabla\cdot \bigl(D\nabla u\bigr).$$ Představuje přírůstek hustoty stavové veličiny v daném místě za jednotku času, způsobený zeslábnutím toku.
+>* Rovnice jako celek vyjadřuje, že navýšení hustoty stavové veličiny (tj. množství stavové veličiny v jednotkovém objemu) je součtem navýšení díky zdrojům a navýšení díky zeslabení toku v daném místě.
 
 
 # Vedení tepla
