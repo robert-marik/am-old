@@ -33,7 +33,7 @@
 * Změna souřadné soustavy: speciální případ zobrazení vektorového prostoru na sebe, tj. je možné reprezentovat pomocí maticového součinu. 
 * Vlastní hodnoty a vektory matice: $A\vec v=\lambda \vec v$, tj. vektor se zobrazí na svůj násobek. Číslo $\lambda$ se nazývá vlastní číslo (vlastní hodnota) a vektor $\vec v$ vlastní vektor matice.
 * Matice s vlastními vektory se směru souřadných os je diagonální. Skutečně, například 
-  $$\begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}a\\c\end{pmatrix}\quad\text{a}\quad \begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix}=\lambda \begin{pmatrix}1\\0\end{pmatrix}$$
+  $$\begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}a\\c\end{pmatrix}\quad\text{a}\quad \begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}0\\1\end{pmatrix}=\lambda \begin{pmatrix}1\\0\end{pmatrix}$$
   si vynutí $c=0$. Podobně bychom dostali pro vektor ve směru druhé osy $b=0$.
 
 
