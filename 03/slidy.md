@@ -101,9 +101,15 @@ Výše uvedenými úvahami je motivována následující definice a věta. (Defi
 > $$\nabla \cdot (\vec F+\vec G)=\nabla \cdot \vec F +\nabla \cdot \vec G, \qquad \nabla \cdot (c\vec F)=c\nabla \cdot \vec F.$$
 
 
-> Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence tohoto vektorového pole udává, jestli se v daném místě a čase tok zhušťuje a nabývá na intenzitě (kladná divergence) nebo řídne a ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
+> Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Jedná se o tok z jednotkového objemu látky v daném místě. Divergence vektorového pole udává, jestli se v daném místě a čase tok zhušťuje a nabývá na intenzitě (kladná divergence) nebo řídne a ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
 
-Pokud se daném místě množství veličiny nemění s časem, tj. žádná veličina se tam neakumuluje ani neubývá, mluvíme o stacionárním proudění a stacionárním poli. Situace se zjednoduší, protože potom divergence souvisí jenom s přítomností zdrojůl a spotřebičů.
+Divergence je lokální veličina. Udává informaci o daném bodě a toto není měřitelná veličina. Pro měření je nutné mít konečný objem a pro stanovení toku konečně velkou hranici. 
+
+> Poznámka (fyzikální interpretace divergence v měřitelných pojmech). Protože tok přes hranici umíme měřit u těles, představíme si okolo bodu který nás zajímá, těleso. Například kouli nebo krychli. Poté určíme tok přes hranici. Tok hranicí ven počítáme kladně a dovnitř záporně. Celkový tok hranicí určíme jako součet přes všechny části hranice. Podíl celkového toku přes hranici tělesa a objemu tohoto tělesa je odhad pro divergenci v daném bodě.
+
+Přesnou divergenci získáme postupem uvedeným v předchozí poznámce, pokud limitním přechodem stáhneme rozměry tělesa k nule. 
+
+Pokud se daném místě množství veličiny nemění s časem, tj. žádná veličina se tam neakumuluje ani neubývá, mluvíme o stacionárním proudění a stacionárním poli. Situace se zjednoduší, protože potom divergence souvisí jenom s přítomností zdrojů a spotřebičů.
 
 > Poznámka (praktická interpretace divergence stacionárního pole). Pokud při ustáleném proudění je v některém místě divergence kladná, znamená to, že v tomto místě musí být zdroj této veličiny. Pokud je záporná, je v daném místě spotřebič. Pro pohodlí při popisu toku bereme spotřebiče jako záporné zdroje. Vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové pole**. To proto, že pokud toto pole popisuje ustálený tok, tak se jedná o tok v prostředí bez zdrojů a spotřebičů.
 
