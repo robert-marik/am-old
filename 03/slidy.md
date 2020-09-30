@@ -101,7 +101,7 @@ Výše uvedenými úvahami je motivována následující definice a věta. (Defi
 > $$\nabla \cdot (\vec F+\vec G)=\nabla \cdot \vec F +\nabla \cdot \vec G, \qquad \nabla \cdot (c\vec F)=c\nabla \cdot \vec F.$$
 
 
-> Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Jedná se o tok z jednotkového objemu látky v daném místě. Divergence vektorového pole udává, jestli se v daném místě a čase tok zhušťuje a nabývá na intenzitě (kladná divergence) nebo řídne a ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
+> Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok zhušťuje a nabývá na intenzitě (kladná divergence) nebo řídne a ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
 
 Divergence je lokální veličina. Udává informaci o daném bodě a toto není měřitelná veličina. Pro měření je nutné mít konečný objem a pro stanovení toku konečně velkou hranici. 
 
@@ -118,8 +118,7 @@ Ze střední školy z fyziky umíme modelovat vektorové pole pomocí siločar.
 
 # Výpočet divergence
 
-Viz přednáška.
-
+Viz cvičení. Jedná se o prosté derivování se následným sečtením derivací.
 
 
 # Rovnice kontinuity
