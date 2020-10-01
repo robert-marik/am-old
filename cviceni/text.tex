@@ -221,6 +221,23 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 
 \section{Gradient}
 
+\obrazek{blizzard.jpg}
+
+\subsection{Linearizace pocitové teploty}
+
+Pocitová teplota $W$ z minulého cvičení má v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rcyhlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ má hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
+$$\pdv{W}{T}=1.289.$$ Najděte pomocí lineární aproximace vzorec pro pocitovou teplotu v okolí tohoto bodu.
+
+\reseni
+
+Přímým použitím vzorce pro lineární aproximaci dostáváme
+\begin{dmath*}
+W=-20.2+1.289(T-(-11))-0.163(v-26)=-20.2+1.289(T+11)-0.163(v-26),
+\end{dmath*}
+přičemž všechny veličiny dostazujeme v jednotkách SI (stupně Celsia a kilometry za hodinu).
+
+\konec
+
 \subsection{Parciální derivace, gradient}
 
 Určete gradient funkcí $z=ax^2y-2xy^2$ a $h=\frac {ax}{y^2}+5x^3y^2$, kde $a\in\mathbb R$ je reálný parametr.
@@ -267,20 +284,77 @@ Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$ a míří směrem od
 
 
 
-\obrazek{blizzard.jpg}
+\subsection{Tečná rovina atd.}
 
-\subsection{Linearizace pocitové teploty}
+Pro funkci $f(x,y)=x^2+\frac x{y^2}-6$ najděte
+\begin{enumerate}[a)]
+\item gradient, 
+\item gradient v bodě $(2,1)$,
+\item lineární aproximaci v bodě $(2,1)$,
+\item tečnou rovinu v bodě $(2,1)$,
+\item rovnici vrstevnice bodem $(2,1)$ a rovnici tečny k vrstevnici tímto bodem,
+\item explicitní vyjádření funkce dané v okolí bodu $(2,1)$ implicitně rovnicí $f(x,y)=0$,
+\item lineární aproximace v okolí bodu $x=2$ pro funkci získanou v předchozím bodu.
+\end{enumerate}
 
-Pocitová teplota $W$ z minulého cvičení má v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rcyhlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ má hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
-$$\pdv{W}{T}=1.289.$$ Najděte pomocí lineární aproximace vzorec pro pocitovou teplotu v okolí tohoto bodu.
+\reseni
+\begin{enumerate}[a)]
+\item $\nabla f=\left(2x+\frac 1{y^2},-2\frac x{y^3}\right)$
+\item $\nabla f(2,1)=(5,-4)$
+\item $f(x,y)\approx 5(x-2)-4(y-1)$
+\item $z= 5(x-2)-4(y-1)$
+\item Rovnice vrstevnice je $$x^2+\frac x{y^2}-6=0$$
+  a tečna $$5(x-2)-4(y-1)=0,$$ tj. $$5x-4y-6=0.$$
+\item Postupnými úpravami a výběrem správného znaménka po vyřešení kvadratické rovnice vzhledem k $y$ dostáváme
+  $$
+  \begin{aligned}
+    x^2+\frac x{y^2}-6&=0\\
+        \frac x{y^2}&=6-x^2\\
+        y^2&=\frac{x}{6-x^2}\\
+        y&=\sqrt{\frac{x}{6-x^2}}\\
+  \end{aligned}
+$$
+\item Z rovnice tečny k vrstevnici $$5(x-2)-4(y-1)=0$$
+  dostáváme $$y=1+\frac 54 (x-2)$$
+  a proto
+  $$\sqrt{\frac{x}{6-x^2}}\approx 1+\frac 54 (x-2)$$ v okolí $x=2$.
+\end{enumerate}
+
+\konec
+
+
+\subsection{Linearizace vektorové funkce, Jacobiho matice}
+
+Jacobiho matice se používá k linearizaci vektorových funkcí, které
+mají na vstupu i na výstupu vektor. Jsou to matice, kde gradienty
+jednotlivých komponent vektorové funkce jsou zapsány do řádků matice.
+
+Najděte Jacobiho matici pro funkci $$\vec F(x,y)=(x^2+xy+6y)\vec i + e^{3x}\vec j$$ a poté hodnotu této matice v bodě $(0,0)$.
 
 \reseni
 
-Přímým použitím vzorce pro lineární aproximaci dostáváme
-\begin{dmath*}
-W=-20.2+1.289(T-(-11))-0.163(v-26)=-20.2+1.289(T+11)-0.163(v-26),
-\end{dmath*}
-přičemž všechny veličiny dostazujeme v jednotkách SI (stupně Celsia a kilometry za hodinu).
+Platí
+\begin{align*}
+  \frac{\partial }{\partial x}\left(x^2 +xy+6y\right) &=2x+y\\
+  \frac{\partial }{\partial y}\left(x^2 +xy+6y\right) &=x+6\\
+  \frac{\partial }{\partial x}\left(e^{3x}\right) &=3e^{3x}\\
+  \frac{\partial }{\partial y}\left(e^{3x}\right) &=0\\
+\end{align*}
+a proto má Jacobiho matice tvar
+\begin{equation*}
+  J(x,y)=
+  \begin{pmatrix}
+    2x+y & x+6\\ 3e^{3x} & 0
+  \end{pmatrix}.
+\end{equation*}
+V bodě $(0,0)$ potom 
+\begin{equation*}
+  J(0,0)=
+  \begin{pmatrix}
+    0 & 6\\ 3 & 0
+  \end{pmatrix}.
+\end{equation*}
+
 
 \konec
 
@@ -321,45 +395,6 @@ $$\vec q=-\lambda \nabla T=\frac 1{\sqrt{x^2+y^2}}\begin{pmatrix}
 \end{pmatrix}
 $$
 Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\frac 1{\sqrt{2}}(2,3)^T$. Porovnáním s gradientem $\nabla T(A)=-(0,1)^T$, $\nabla T(B)=-(1,0)^T$ a $\nabla T(C)=-\frac 1{\sqrt 2}(1,1)^T$ vidíme, že v bodech $A$  a $B$ je tok proti směru gradientu, v bodě $C$ se tok stáčí do směru osy $y$. Protože ve ose $y$ má dřevo větší vodivost, jedná se o podélný směr. To je ale vlastně vidět už ze zadané matice.
-
-\konec
-
-
-\subsection{Tečná rovina atd.}
-
-Pro funkci $f(x,y)=x^2+\frac x{y^2}-6$ najděte
-\begin{enumerate}[a)]
-\item gradient, 
-\item gradient v bodě $(2,1)$,
-\item lineární aproximaci v bodě $(2,1)$,
-\item tečnou rovinu v bodě $(2,1)$,
-\item rovnici vrstevnice bodem $(2,1)$ a rovnici tečny k vrstevnici tímto bodem,
-\item explicitní vyjádření funkce dané v okolí bodu $(2,1)$ implicitně rovnicí $f(x,y)=0$,
-\item lineární aproximace v okolí bodu $x=2$ pro funkci získanou v předchozím bodu.
-\end{enumerate}
-
-\reseni
-\begin{enumerate}[a)]
-\item $\nabla f=\left(2x+\frac 1{y^2},-2\frac x{y^3}\right)$
-\item $\nabla f(2,1)=(5,-4)$
-\item $f(x,y)\approx 5(x-2)-4(y-1)$
-\item $z= 5(x-2)-4(y-1)$
-\item Rovnice vrstevnice je $$x^2+\frac x{y^2}-6=0$$
-  a tečna $$5(x-2)-4(y-1)=0,$$ tj. $$5x-4y-6=0.$$
-\item Postupnými úpravami a výběrem správného znaménka po vyřešení kvadratické rovnice vzhledem k $y$ dostáváme
-  $$
-  \begin{aligned}
-    x^2+\frac x{y^2}-6&=0\\
-        \frac x{y^2}&=6-x^2\\
-        y^2&=\frac{x}{6-x^2}\\
-        y&=\sqrt{\frac{x}{6-x^2}}\\
-  \end{aligned}
-$$
-\item Z rovnice tečny k vrstevnici $$5(x-2)-4(y-1)=0$$
-  dostáváme $$y=1+\frac 54 (x-2)$$
-  a proto
-  $$\sqrt{\frac{x}{6-x^2}}\approx 1+\frac 54 (x-2)$$ v okolí $x=2$.
-\end{enumerate}
 
 \konec
 
