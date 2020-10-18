@@ -3,6 +3,9 @@
 \paperversionfalse
 \documentclass{article}
 
+
+\let\oldsection\section
+\def\section{\newpage\oldsection}
 \makeatletter
 \renewcommand\subsection{\newpage\@startsection{subsection}{2}{\z@}%
                                      {-3.25ex\@plus -1ex \@minus -.2ex}%
