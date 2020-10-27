@@ -18,6 +18,7 @@
 \usepackage[czech]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\usepackage{tikz}
 
 \ifpaperversion \usepackage[margin=0.5in]{geometry}
 \else \usepackage[a6paper, margin=20pt, landscape]{geometry}
@@ -63,6 +64,17 @@
   \vspace*{-10pt}
   \null\hfill{\color{gray}\footnotesize Zdroj: #1}
 
+  \vspace*{#3}
+  \end{minipage}
+\end{wrapfigure}
+}
+
+\NewDocumentCommand{\Tobrazek}{ O{pixabay.com}mO{-10pt}}{
+\begin{wrapfigure}{R}{0.45\linewidth}
+  \begin{minipage}{1.0\linewidth}\parskip 0 pt
+      \vspace*{-20pt}
+#2
+  \vspace*{-10pt}
   \vspace*{#3}
   \end{minipage}
 \end{wrapfigure}

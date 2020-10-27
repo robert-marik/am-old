@@ -151,7 +151,11 @@ konstantnou. Přesněji, platí následující věty.
 
 # Výpočet (oblast mezi funkcemi proměnné $x$)
 
-<div class='sloupce_'>
+<div class='obtekat'>
+
+![Oblast mezi funkcemi proměnné $x$.](fub_1.png)
+
+</div>
 
 V\ závislosti na tom, jakými nerovnostmi množinu $\Omega$ definujeme,
 můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
@@ -170,13 +174,14 @@ integrál. Mají název **Fubiniovy věty**.
 >   f(x,y){\mathrm{d}y }\Bigr]{\mathrm{d}x }.
 > $$
 
-![Oblast mezi funkcemi proměnné $x$.](fub_1.png)
-
-</div> 
 
 # Výpočet (oblast mezi funkcemi proměnné $y$)
 
-<div class='sloupce_'>
+<div class='obtekat'>
+![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
+
+</div>
+
 
 > Věta (Fubiniova věta pro jiné pořadí integrace). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
 > $$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
@@ -191,9 +196,6 @@ integrál. Mají název **Fubiniovy věty**.
 > $$
 > 
 
-![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
-
-</div>
 
 # Záměna pořadí integrace
 
@@ -233,7 +235,11 @@ snazší.
 
 # Výpočet (obdélníková oblast)
 
-<div class='sloupce_'>
+<div class='obtekat'>
+![Integrál přes obdélník.](fub_3.png)
+
+</div>
+
 
 Výše uvedené problémy se stanovením a případným přepočítáváním mezí
 při záměně pořadí integrace se nevyskytují při integrování přes
@@ -254,9 +260,6 @@ obdélníkovou oblast.
 >   $$
 > 
 
-![Integrál přes obdélník.](fub_3.png)
-
-</div>
 
 # Matematické aplikace dvojného integrálu
 
