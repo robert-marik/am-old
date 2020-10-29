@@ -693,6 +693,80 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 > Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 
 
+# Redukce parciální diferenciální rovnice na obyčejnou, jednorozměrný případ
+
+Ukážeme si , že parciální diferenciální rovnice popisující tok tepla nebo tok podzemní vody se ve speciálních případech redukují na diferenciální rovnice, jaké jsme se právě naučili řešit.
+
+Uvažujme tok tepla stěnou o tloušťce $d$ která odděluje dvě prostředí o teplotách $T_1$ a $T_2$.
+
+Stacionární tok tepla v jedné dimenzi je dán rovnicí
+$$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=0.$$
+V ustáleném stavu je $T$ funkcí jedné proměnné $x$ a parciální derivace se redukují na obyčejné derivace. Rovnice má tvar
+$$\frac{\mathrm d}{\mathrm d x}\left(k\frac{\mathrm d T}{\mathrm d x}\right)=0.$$
+Po integraci dostáváme $$k\frac{\mathrm d T}{\mathrm d x}=C_1.$$ Tuto rovnici budeme řešit ve dvou různých situacích, a to pro lineární a nelineární materiálové vztahy.
+
+## Lineární materiálové vztahy, tj. konstantní materiálová charakteristika
+
+* Je-li $k$ konstantní, dostáváme
+$$\frac{\mathrm dT}{\mathrm dx}=\frac {C_1}k$$
+a integrací  dostáváme
+$$T=\frac {C_1}k x + C_2.$$
+Konstanty $C_1$ a $C_2$ určíme z podmínek na teplotu na jednotlivých stranách stěny. Vidíme, že teplota ve stěně klesá lineárně.
+* Stejná rovnice a stejné řešení vychází i pro piezometrickou hladinu při rovinném ustáleném proudění podzemní vody v případě, že materiálová charakteristika je konstantní, tj. při proudění s napjatou hladinou (podzemní kolektor s nepropustným stropem a pod tlakem).
+
+## Nelineární materiálové vztahy, tj. nekonstantní materiálová charakteristika
+
+* Zopakujme předchozí výpočet pro materiál s nelineární materiálovou odezvou, kdy Fourierův (Darcyho v případě podzemní vody) zákon není lineární, tj. $k$ závisí na teplotě. Nejjednodušší zobecnění je případ, kdy $k(T)$ je lineární, tj. platí $$k(T)=a+bT.$$
+Poté má rovnice tvar 
+$$({aT+b})\frac{\mathrm dT}{\mathrm dx}={C_1}$$
+a po separaci proměnných dostáváme
+$$({aT+b}){\mathrm dT}={C_1}{\mathrm dx}$$
+a
+$$\frac 12 aT^2+bT=C_1x+C_2.$$ Teplotní profil není lineární, ale parabolický s parabolou otočenou naležato. Kterou polovinu paraboly vybrat poznáme z toho, že teplota uvnitř stěny je mezi teplotami na okrajích.
+* Stejný výpočet pro $b=0$ odpovídá proudění podzemní vody s volnou hladinou. Toto je jiným způsobem (přímé odvození rovnice z Darcyho zákona) odvozeno v textu Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Hladina podzemní vody tedy klesá jako ležatá parabola.
+
+# Redukce parciální diferenciální rovnice na obyčejnou, radiálně symetrický případ
+
+Jiný případ, kdy je možno redukovat složitost problému na jednu dimenzi je stacionární děj v rovině, kdy je situace radiálně symetrická. K tomu je nutno transformovat divergenci a gradient do polárních souřadnic. Platí [viz Wikipedie](https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates#Del_formula).
+
+<div class='obtekat'>
+
+![Radiální proudění směrem k čerpanému vrtu. Zdroj: http://ecoursesonline.iasri.res.in.](well.png)
+
+</div>
+
+
+
+* Uvažujme například horkou trubku ochlazovanou zvenčí a proudění tepla radiálně směrem od středu. Teplota $T$ je funkcí vzdálenosti $r$ od středu a po transformaci gradientu a divergence do polárních souřadnic se stacionární bezzdrojová rovnice vedení tepla $$0=\nabla\cdot(k\nabla T)$$ redukuje na
+$$\frac 1r \frac{\partial}{\partial r}\left(kr\frac{\partial T}{\partial r}\right)=0.$$
+Parciální derivace se opět redukují pro funkci jedné proměnné na obyčejné derivace a stejně jako v předchozím případě můžeme integrovat na
+$$kr\frac{\mathrm d T}{\mathrm d r}=C_1.$$
+Odsud
+$$k\mathrm d T=\frac{C_1}r {\mathrm d r}$$
+a
+$$kT={C_1}\ln(r)+C_2.$$
+Konstany $C_1$ a $C_2$ se určí z teplot na vnitřním a vnějším povrchu trubky.
+* Stejný vzorec platí pro analogické radiální proudění podzemní vody při proudění s napjatou hladinou. Toho se využívá při čerpacích zkouškách nebo při umělém snižování hladiny spodní vody. Po dosazení relevantních veličin a výpočtu konstant se odvozený vzorec uvádí ve tvaru $$h-h_0=\frac{Q}{2\pi T}\ln \frac r{r_0}$$ a nazývá [Thiemova rovnice.](https://en.wikipedia.org/wiki/Aquifer_test#Steady-state_Thiem_solution)
+* Předchozí postup můžeme modifikovat i pro radiální proudění s volnou hladinou, tj. proudění modelované rovnicí $$\nabla (K\nabla h)=0,$$ kde $K=kh$ je materiálová konstanta pro proudění s volnou hladinou. Jako v předchozím případě přejdeme do proměnné $r$ a dostáváme
+$$khr\frac{\mathrm d h}{\mathrm d r}=C_1.$$
+Odsud 
+$$h{\mathrm d h}=\frac{C_1}{kr}\mathrm dr$$
+a
+$$\frac 12 h^2=\frac{C_1}{k}\ln(r)+C_2.$$
+Zpravidla se tato rovnice používá pro stanovení vydatnosti čerpané studny a konstanty $C_1$ a $C_2$ určíme z výšky hladiny ve studni a z výšky hladiny v kontrolním vrtu nedaleko studny. 
+Tento vztah umožňuje například navrhnout průměr studny, odhadnout
+vydatnost studny, nebo pomocí odčerpávaného vrtu a menších pomocných
+vrtů sledujících pokles hladiny v okolí odčerpávaného vrtu stanovit
+filtrační součinitel $k$. Využití vzorce je však mnohem rozmanitější,
+umožňuje vypočítat poměry ve stavebních jámách a v jejich okolí. To je
+užitečné například při odhadu, kolik vody se hromadí ve výkopu. Další
+využití je, že dokážeme odhadnout vliv stavební jámy na hydrologické
+poměry v okolí a tyto poměry dokážeme měnit a přizpůsobovat našim
+potřebám. Častou aplikací je také hydraulická clona (soustava prvků
+rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace
+z chemické výroby do vodárensky využívaných vod). V tomto případě je však situace komplikovanější, protože je nutné zkombinovat dostředivé proudění k čerpanému vrtu s rovinným prouděním podzemní vody. Toto se naučíme v příští přednášce a využijeme linearitu. 
+
+
 # Diferenciální rovnice růstu vodní kapky
 
 
