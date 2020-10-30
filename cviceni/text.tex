@@ -1397,6 +1397,12 @@ $$c\rho\pdv{T}{t}=\pdv{x}\qty(\lambda_x\pdv{T}{x} )+\pdv{y}\qty(\lambda_y\pdv{T}
 Za jakých okolností je možno veličiny $\lambda_x$ a $\lambda_y$ napsat před vnější derivaci tak, aby v rovnici vznikly druhé derivace? 
 
 
+\reseni
+
+V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být homogenní. Závislost na poloze nesmí být ani zprostředkovaná přes teplotu. Tyto veličiny tedy nesmí být ani funkcemi teploty. Jinými slovy, konstanta úměrnosti ve Fourierově zákoně se nesmí měnit s teplotou, vztah z Fourierova zákona musí být opřesěn lineární a takové materiály se nazvají materiály s lineární materiálovou odezvou (zkráceně lineární materiály). Veličiny  $\lambda_x$ a $\lambda_y$  se dají napsat před vnější derivace pouze pokud je materiál homogenní a lineární.
+
+\konec
+
 \obrazek{chladic.jpg}
 \subsection{Stacionární vedení tepla v žebru chladiče}
 
@@ -1405,8 +1411,16 @@ Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako
 jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou
 vodivostí. Kolem chladiče proudí vzduch a teplotě $T_0$ a chladič
 ztrácí teplo rychlostí úměrnou rozdílu teploty žebra v daném místě a
-teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficient přestupu tepla a šířkou žebra).
+teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficient přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
 
+\reseni
+
+$$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)$$
+
+
+Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, Heat transfer, kapitola 3–6 Heat transfer from finned surfaces.
+
+\konec
 
 \section{Diferenciální rovnice I}
 
@@ -1423,6 +1437,7 @@ dorůst). Sestavte matematický model popisující takovýto růst.
   která nás zajímá, je jasné, že kvantitativní model bude obsahovat
   derivaci. Zatím se učíme model zapsat, později ho budeme umět i vyřešit.}
 
+\def\derivace#1#2{\frac{\mathrm d#1}{\mathrm d#2}}
 
 \reseni
 Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky chybí  $L_{\max}-L$ a model má tvar
@@ -1782,245 +1797,245 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 
 
 \stranka
-\obrazek[http://ecoursesonline.iasri.res.in]{aq.png}[-10pt]
+% \obrazek[http://ecoursesonline.iasri.res.in]{aq.png}[-10pt]
 
 
-\subsection{Pokles hladiny podzemní vody při ustáleném rovinném proudění}
+% \subsection{Pokles hladiny podzemní vody při ustáleném rovinném proudění}
 
-\label{pokles}
-Stavovou veličinou pro popis podzemní vody je \textit{piezometrická
-  hladina} $h$ měřená v metrech (hrubá představa může být hladina
-spodní vody nebo, v případě že je shora ohraničení nepropustnou
-vrstvou, tak hladina, kam by vystoupila voda ve vrtu). Prostor, kde
-voda teče, se nazývá \textit{zvodeň} (aquifer).
-Proudění řídí \textit{Darcyho zákon}, který
-  vyjadřuje, že \textit{filtrační rychlost} $v_f$ podzemní vody je úměrná
-  sklonu piezometrické hladiny, tj. rychlosti, s jakou klesá
-  piezometrická hladina jako funkce $x$.
+% \label{pokles}
+% Stavovou veličinou pro popis podzemní vody je \textit{piezometrická
+%   hladina} $h$ měřená v metrech (hrubá představa může být hladina
+% spodní vody nebo, v případě že je shora ohraničení nepropustnou
+% vrstvou, tak hladina, kam by vystoupila voda ve vrtu). Prostor, kde
+% voda teče, se nazývá \textit{zvodeň} (aquifer).
+% Proudění řídí \textit{Darcyho zákon}, který
+%   vyjadřuje, že \textit{filtrační rychlost} $v_f$ podzemní vody je úměrná
+%   sklonu piezometrické hladiny, tj. rychlosti, s jakou klesá
+%   piezometrická hladina jako funkce $x$.
 
-  \vspace*{-15pt}
-\begin{enumerate}[A)]\itemsep 0 pt
-\item Zapište Darcyho zákon kvantitativně pomocí derivace piezometrické hladiny. 
-\item Tok je dán součinem filtrační rychlosti a obsahu plochy kolmo na
-  rychlost. Uvažujte obdélníkovou plochu $h\times 1$, která je na výšku přes celou
-  zvodnělou vrstvu $h$ a na šířku má jednotkovou délku. Vynásobte její obsah 
-  filtrační rychlostí a dostanete \textit{průtok na jednotku šířky}, označovaný
-  $q$. Pro ustálené proudění je $q$ konstantní.
-\item Výsledný vztah z předchozího bodu chápejte jako diferenciální rovnici s neznámou funkcí $h$ jako funkcí $x$ a řešením rovnice najdete křivku snížení hladiny podzemní vody v podélném profilu. 
-\end{enumerate}
+%   \vspace*{-15pt}
+% \begin{enumerate}[A)]\itemsep 0 pt
+% \item Zapište Darcyho zákon kvantitativně pomocí derivace piezometrické hladiny. 
+% \item Tok je dán součinem filtrační rychlosti a obsahu plochy kolmo na
+%   rychlost. Uvažujte obdélníkovou plochu $h\times 1$, která je na výšku přes celou
+%   zvodnělou vrstvu $h$ a na šířku má jednotkovou délku. Vynásobte její obsah 
+%   filtrační rychlostí a dostanete \textit{průtok na jednotku šířky}, označovaný
+%   $q$. Pro ustálené proudění je $q$ konstantní.
+% \item Výsledný vztah z předchozího bodu chápejte jako diferenciální rovnici s neznámou funkcí $h$ jako funkcí $x$ a řešením rovnice najdete křivku snížení hladiny podzemní vody v podélném profilu. 
+% \end{enumerate}
 
-(\textit{Podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9.})
+% (\textit{Podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9.})
 
-\reseni
+% \reseni
 
-\begin{enumerate}[A)]
-  \item  $$v_f=-k\derivace {h}x$$
-  \item $$q=-kh\derivace hx$$
-  \item $$
-    \begin{aligned}
-      q\,\mathrm{d}x&=-kh\,\mathrm dh\\
-      \int q\,\mathrm{d}x&=-k \int h\,\mathrm dh\\
-      qx&=-\frac k2 h^2+C
-    \end{aligned}
-    $$
-    V souřadnicích, kdy osa $x$ směřuje doprava a $h$ nahoru, se jedná
-    se o parabolu ``otočenou vrcholem směrem doprava''.
-\end{enumerate}
-\konec
-
-
-
-\obrazek[http://ecoursesonline.iasri.res.in]{well.png}[-25pt]
+% \begin{enumerate}[A)]
+%   \item  $$v_f=-k\derivace {h}x$$
+%   \item $$q=-kh\derivace hx$$
+%   \item $$
+%     \begin{aligned}
+%       q\,\mathrm{d}x&=-kh\,\mathrm dh\\
+%       \int q\,\mathrm{d}x&=-k \int h\,\mathrm dh\\
+%       qx&=-\frac k2 h^2+C
+%     \end{aligned}
+%     $$
+%     V souřadnicích, kdy osa $x$ směřuje doprava a $h$ nahoru, se jedná
+%     se o parabolu ``otočenou vrcholem směrem doprava''.
+% \end{enumerate}
+% \konec
 
 
-\subsection{Studna s volnou hladinou}
 
-Uvažujme diferenciální rovnici
-\begin{equation}
-q=-kh\derivace hx \tag{*}\label{*}
-\end{equation}
-odvozenou v \ref{pokles} B. Tentokrát budeme studovat studnu s volnou hladinou\footnote{Zjednodušeně, voda ve studni je na úrovni hladiny podzemní vody. Studna nevznikla navrtáním nepropustné vrstvy, kdy by byla voda natlakovaná a vystoupila do výšky odpovídající tomuto tlaku.} Je-li studna čerpána konstantní rychlostí $Q$, je tok na jednotku délky na kružnici o poloměru $x$ roven $q=-\frac {Q}{2\pi x}$ (voda teče dovnitř, tj. ve směru ve kterém klesá $x$). Dosaďte tento vztah do rovnice \eqref{*} a rovnici vyřešte s počáteční podmínkou $h(R)=H$, kde $H$ odpovídá hladině vody ve studni a $R$ je poloměr studny (na obrázku $h_w$ a $r_w$). Dostanete rovnici \textit{snížení hladiny v okolí studny} čerpané rychlostí $Q$ (depresní křivka).
-(\textit{Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Analogickým způsobem se počítají tepelné ztráty při prostupu tepla válcovou stěnou (viz \url{https://youtu.be/rvyogmaUmUQ}).})
+% \obrazek[http://ecoursesonline.iasri.res.in]{well.png}[-25pt]
 
 
-\reseni
-$$
-\begin{aligned}
-  -\frac{Q}{2\pi x}&=-kh\derivace hx\\
-%  \frac{Q }{2\pi x}\,\mathrm {d}x&=kh\,\mathrm d h\\
-  \frac{Q }{2\pi} \int \frac{\mathrm {d}x}{x}&=k\int h\,\mathrm d h\\
-  \frac{Q }{2\pi}\ln x&=k \frac {h^2}2 +c\\
-\text{obecné řešení: }  \frac{Q }{\pi}\ln x&=k {h^2} +C\\
-\text{z počáteční podmínky: }  \frac{Q }{\pi}\ln R&=k {H^2} +C\\
-  C&=\frac{Q }{\pi}\ln R-k {H^2}\\
-\text{po dosazení do obecného řešení: }   \frac{Q }{\pi}\ln x&=k {h^2} +\frac{Q }{\pi}\ln R-k {H^2}\\
-\text{po úpravě: }  \frac{Q }{k\pi}\ln \frac {x}{R}&={h^2} - {H^2}\\
-\end{aligned}
-$$
-Tento vztah umožňuje například navrhnout průměr studny, odhadnout
-vydatnost studny, nebo pomocí odčerpávaného vrtu a menších pomocných
-vrtů sledujících pokles hladiny v okolí odčerpávaného vrtu stanovit
-filtrační součinitel $k$. Využití vzorce
-\begin{equation*}
-  \frac{Q }{k\pi}\ln \frac {x}{R}={h^2} - {H^2}
-\end{equation*}
-je však mnohem rozmanitější,
-umožňuje vypočítat poměry ve stavebních jámách a v jejich okolí. To je
-užitečné například při odhadu, kolik vody se hromadí ve výkopu. Další
-využití je, že dokážeme odhadnout vliv stavební jámy na hydrologické
-poměry v okolí a tyto poměry dokážeme měnit a přizpůsobovat našim
-potřebám. Častou aplikací je například hydraulická clona (soustava
-prvků rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace z chemické výroby do vodárensky využívaných vod).
+% \subsection{Studna s volnou hladinou}
 
-\konec
+% Uvažujme diferenciální rovnici
+% \begin{equation}
+% q=-kh\derivace hx \tag{*}\label{*}
+% \end{equation}
+% odvozenou v \ref{pokles} B. Tentokrát budeme studovat studnu s volnou hladinou\footnote{Zjednodušeně, voda ve studni je na úrovni hladiny podzemní vody. Studna nevznikla navrtáním nepropustné vrstvy, kdy by byla voda natlakovaná a vystoupila do výšky odpovídající tomuto tlaku.} Je-li studna čerpána konstantní rychlostí $Q$, je tok na jednotku délky na kružnici o poloměru $x$ roven $q=-\frac {Q}{2\pi x}$ (voda teče dovnitř, tj. ve směru ve kterém klesá $x$). Dosaďte tento vztah do rovnice \eqref{*} a rovnici vyřešte s počáteční podmínkou $h(R)=H$, kde $H$ odpovídá hladině vody ve studni a $R$ je poloměr studny (na obrázku $h_w$ a $r_w$). Dostanete rovnici \textit{snížení hladiny v okolí studny} čerpané rychlostí $Q$ (depresní křivka).
+% (\textit{Volně podle Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Analogickým způsobem se počítají tepelné ztráty při prostupu tepla válcovou stěnou (viz \url{https://youtu.be/rvyogmaUmUQ}).})
 
-\subsection{Rovnice podzemní vody}
-\def\raggedright{\rightskip 0 pt plus 1 em}
-\begin{minipage}[t]{0.44\linewidth}\raggedright
+
+% \reseni
+% $$
+% \begin{aligned}
+%   -\frac{Q}{2\pi x}&=-kh\derivace hx\\
+% %  \frac{Q }{2\pi x}\,\mathrm {d}x&=kh\,\mathrm d h\\
+%   \frac{Q }{2\pi} \int \frac{\mathrm {d}x}{x}&=k\int h\,\mathrm d h\\
+%   \frac{Q }{2\pi}\ln x&=k \frac {h^2}2 +c\\
+% \text{obecné řešení: }  \frac{Q }{\pi}\ln x&=k {h^2} +C\\
+% \text{z počáteční podmínky: }  \frac{Q }{\pi}\ln R&=k {H^2} +C\\
+%   C&=\frac{Q }{\pi}\ln R-k {H^2}\\
+% \text{po dosazení do obecného řešení: }   \frac{Q }{\pi}\ln x&=k {h^2} +\frac{Q }{\pi}\ln R-k {H^2}\\
+% \text{po úpravě: }  \frac{Q }{k\pi}\ln \frac {x}{R}&={h^2} - {H^2}\\
+% \end{aligned}
+% $$
+% Tento vztah umožňuje například navrhnout průměr studny, odhadnout
+% vydatnost studny, nebo pomocí odčerpávaného vrtu a menších pomocných
+% vrtů sledujících pokles hladiny v okolí odčerpávaného vrtu stanovit
+% filtrační součinitel $k$. Využití vzorce
+% \begin{equation*}
+%   \frac{Q }{k\pi}\ln \frac {x}{R}={h^2} - {H^2}
+% \end{equation*}
+% je však mnohem rozmanitější,
+% umožňuje vypočítat poměry ve stavebních jámách a v jejich okolí. To je
+% užitečné například při odhadu, kolik vody se hromadí ve výkopu. Další
+% využití je, že dokážeme odhadnout vliv stavební jámy na hydrologické
+% poměry v okolí a tyto poměry dokážeme měnit a přizpůsobovat našim
+% potřebám. Častou aplikací je například hydraulická clona (soustava
+% prvků rozmístěných a provozovaných tak, aby nedocházelo k šíření kontaminace z chemické výroby do vodárensky využívaných vod).
+
+% \konec
+
+% \subsection{Rovnice podzemní vody}
+% \def\raggedright{\rightskip 0 pt plus 1 em}
+% \begin{minipage}[t]{0.44\linewidth}\raggedright
    
-  Stavovou veličinou pro popis podzemní vody je \textit{piezometrická
-    hladina} $h$ měřená v metrech (hrubá představa může být hladina
-  spodní vody nebo, v případě že je shora ohraničení nepropustnou
-  vrstvou, tak hladina, kam by vystoupila voda ve vrtu). Prostor, kde
-  voda teče, se nazývá \textit{zvodeň} (aquifer). Tok podzemní vody ve
-  dvoudimenzionální horizontální zvodni, kdy zanedbáváme vertikální
-  tok, popisuje \textit{průtok na jednotku šířky} $\vec q$, který má směr toku
-  a velikost vyjadřuje v metrech krychlových na metr za den, kolik
-  vody proteče za jednotku času jednotkovou délkou kolmo na směr toku.
+%   Stavovou veličinou pro popis podzemní vody je \textit{piezometrická
+%     hladina} $h$ měřená v metrech (hrubá představa může být hladina
+%   spodní vody nebo, v případě že je shora ohraničení nepropustnou
+%   vrstvou, tak hladina, kam by vystoupila voda ve vrtu). Prostor, kde
+%   voda teče, se nazývá \textit{zvodeň} (aquifer). Tok podzemní vody ve
+%   dvoudimenzionální horizontální zvodni, kdy zanedbáváme vertikální
+%   tok, popisuje \textit{průtok na jednotku šířky} $\vec q$, který má směr toku
+%   a velikost vyjadřuje v metrech krychlových na metr za den, kolik
+%   vody proteče za jednotku času jednotkovou délkou kolmo na směr toku.
 
-\bigskip
-Zdroj obrázků: Jacob Bear, https://www.interpore.org/
+% \bigskip
+% Zdroj obrázků: Jacob Bear, https://www.interpore.org/
 
-\end{minipage}\hfill
-\begin{minipage}[t]{0.5\linewidth}
-  \kern -40 pt
-  \raggedright
-  Řez zvodní s napjatou hladinou (výška zavodněné části je dána vzdáleností mezi nepropustnými vrstvami).
-\includegraphics[width=0.99\linewidth]{conaq.jpg}
+% \end{minipage}\hfill
+% \begin{minipage}[t]{0.5\linewidth}
+%   \kern -40 pt
+%   \raggedright
+%   Řez zvodní s napjatou hladinou (výška zavodněné části je dána vzdáleností mezi nepropustnými vrstvami).
+% \includegraphics[width=0.99\linewidth]{conaq.jpg}
 
-  Řez zvodní s volnou hladinou (výška zavodněné části je rovna rozdílu mezi piezometrickou výškou a dolní nepropustnou vrstvou).
+%   Řez zvodní s volnou hladinou (výška zavodněné části je rovna rozdílu mezi piezometrickou výškou a dolní nepropustnou vrstvou).
 
-\includegraphics[width=0.99\linewidth]{phraq.jpg}
+% \includegraphics[width=0.99\linewidth]{phraq.jpg}
   
-\end{minipage}
+% \end{minipage}
 
 
-Zapište pomocí vhodných veličin, operátorů a rovnic následující vztahy, zákony nebo pozorování,
-odpovězte na otázky a splňte úkoly.
-\begin{enumerate}[A)]
-\item \textit{Darcyho zákon vyjádřený pro celou zvodeň (od povrchu k nepropustnému podloží)}:
-  Průtok na jednotku šířky, $\vec q$, má v izotropním prostředí směr
-  maximálního poklesu piezometrické hladiny a co do velikosti je
-  úměrný tomuto poklesu. Koeficient úměrnosti se nazývá koeficient
-  průtočnosti nebo transmisivita a označuje se $T$.
-\item Jak zpravidla modifikujeme předchozí odpověď, pokud zvodeň není
-  izotropní a má v různých směrech různé vlastnosti?
-\item Často pracujeme s veličinou \textit{filtrační rychlost} $\vec v_f$, která
-  udává, jaký objem proteče jednotkovou plochou kolmo na směr proudění
-  za jednotku času. Jaký bude vztah mezi $\vec v_f$ a $\vec q$? Uvažujte pouze
-  speciální případ, kdy je $\vec v_f$ konstantní v celé tloušťce zvodnělé
-  vrstvy $b$. (Tloušťka zvodnělé vrstvy $b$ je u proudění s volnou hladinou rovna vzdálenosti piezometrické hladiny od dolní nepropustné vrstvy a u proudění mezi nepropustnými vrstvami rovna vzdálenosti těchto vrstev.) 
-  \stranka
-\item \textit{Zákon zachování pro vodu}: Množství vody v daném místě (v metrech krychlových vody na metr čtvereční povrchu zvodně) označte $v$. Rychlost s jakou se kumuluje voda v daném místě v kubických
-  metrech (vody) na čtvereční metr (povrchu zvodně) za den, tj. derivace $v$ podle času, je
-  součtem
-  \begin{itemize}\itemsep 0 pt
-  \item vydatnosti zdrojů v tomto místě ($\sigma$, v kubických
-    metrech vody na metr čtvereční povrchu zvodně za den, může se jednat například o zasakování srážek) a
-  \item rychlosti, s jakou v daném místě klesá tok $\vec q$.
-\end{itemize}
-  Vyjádřete tento zákon kvantitativně pomocí vhodné rovnice.
-\item Objem vody v podzemí souvisí s hladinou podzemní
-  vody. \textit{Zásobnost} $S_s$ udává, jaký objem vody se uvolní na
-  metru čtverečním povrchu zvodně, pokud se piezometrická hladina
-  v tomto místě sníží o jednotku. U zvodně s volnou hladinou je tato
-  veličina dána zejména pórovitostí půdy nebo horniny, u zvodně s
-  napjatou hladinou souvisí se stlačitelností a proto je v tomto
-  případě zásobnost velmi malá. Jaká je jednotka takto definované
-  zásobnosti a jak souvisí rychlost s jakou roste objem vody v daném
-  místě zvodně s rychlostí, s jakou roste piezometrická hladina
-  v tomto místě?
-\item Předchozí odpovědi spojte do rovnice 
-  podzemní vody v anizotropním prostředí.
-\end{enumerate}
+% Zapište pomocí vhodných veličin, operátorů a rovnic následující vztahy, zákony nebo pozorování,
+% odpovězte na otázky a splňte úkoly.
+% \begin{enumerate}[A)]
+% \item \textit{Darcyho zákon vyjádřený pro celou zvodeň (od povrchu k nepropustnému podloží)}:
+%   Průtok na jednotku šířky, $\vec q$, má v izotropním prostředí směr
+%   maximálního poklesu piezometrické hladiny a co do velikosti je
+%   úměrný tomuto poklesu. Koeficient úměrnosti se nazývá koeficient
+%   průtočnosti nebo transmisivita a označuje se $T$.
+% \item Jak zpravidla modifikujeme předchozí odpověď, pokud zvodeň není
+%   izotropní a má v různých směrech různé vlastnosti?
+% \item Často pracujeme s veličinou \textit{filtrační rychlost} $\vec v_f$, která
+%   udává, jaký objem proteče jednotkovou plochou kolmo na směr proudění
+%   za jednotku času. Jaký bude vztah mezi $\vec v_f$ a $\vec q$? Uvažujte pouze
+%   speciální případ, kdy je $\vec v_f$ konstantní v celé tloušťce zvodnělé
+%   vrstvy $b$. (Tloušťka zvodnělé vrstvy $b$ je u proudění s volnou hladinou rovna vzdálenosti piezometrické hladiny od dolní nepropustné vrstvy a u proudění mezi nepropustnými vrstvami rovna vzdálenosti těchto vrstev.) 
+%   \stranka
+% \item \textit{Zákon zachování pro vodu}: Množství vody v daném místě (v metrech krychlových vody na metr čtvereční povrchu zvodně) označte $v$. Rychlost s jakou se kumuluje voda v daném místě v kubických
+%   metrech (vody) na čtvereční metr (povrchu zvodně) za den, tj. derivace $v$ podle času, je
+%   součtem
+%   \begin{itemize}\itemsep 0 pt
+%   \item vydatnosti zdrojů v tomto místě ($\sigma$, v kubických
+%     metrech vody na metr čtvereční povrchu zvodně za den, může se jednat například o zasakování srážek) a
+%   \item rychlosti, s jakou v daném místě klesá tok $\vec q$.
+% \end{itemize}
+%   Vyjádřete tento zákon kvantitativně pomocí vhodné rovnice.
+% \item Objem vody v podzemí souvisí s hladinou podzemní
+%   vody. \textit{Zásobnost} $S_s$ udává, jaký objem vody se uvolní na
+%   metru čtverečním povrchu zvodně, pokud se piezometrická hladina
+%   v tomto místě sníží o jednotku. U zvodně s volnou hladinou je tato
+%   veličina dána zejména pórovitostí půdy nebo horniny, u zvodně s
+%   napjatou hladinou souvisí se stlačitelností a proto je v tomto
+%   případě zásobnost velmi malá. Jaká je jednotka takto definované
+%   zásobnosti a jak souvisí rychlost s jakou roste objem vody v daném
+%   místě zvodně s rychlostí, s jakou roste piezometrická hladina
+%   v tomto místě?
+% \item Předchozí odpovědi spojte do rovnice 
+%   podzemní vody v anizotropním prostředí.
+% \end{enumerate}
 
-\textit{Podle Jacob Bear, Modeling Groundwater Flow and Pollution a Charles Fitts, Groundwater Science.}
+% \textit{Podle Jacob Bear, Modeling Groundwater Flow and Pollution a Charles Fitts, Groundwater Science.}
 
-\reseni
+% \reseni
 
-\begin{enumerate}[A)]
-\item $\vec q=-T \nabla h$ kde $T$ je koeficient průtočnosti a $-\nabla h$
-  je vektor mířící ve směru nejrychlejšího poklesu piezometrické
-  hladiny $h$ a vyjadřující rychlost tohoto poklesu.
-\item $T$ je  $2\times 2$ matice
-\item $\vec q=b\vec v_f$
-\item $\frac{\partial v}{\partial t}=\sigma-\mathop{\mathrm{div}}\vec q$
-\item Zásobnost je vlastně změna objemu (vody) na jednotkovou plochu
-  (zvodně) vyvolaná  jednotkovou změnou délky (změna piezometrické hladiny),
-  tj. derivace $v$ podle $h$ a jednotkově vychází bez rozměru. Platí tedy
-  \begin{equation*}
-    \derivace vh=S_s \end{equation*}
-  kde $v$ je objem vody na
-  metr čtvereční povrchu zvodně v daném místě. Po vynásobení rychlostí s jakou se
-  mění piezometrická výška dostáváme
-  \begin{equation*}
-    \derivace vh \derivace ht=S_s\derivace ht
-  \end{equation*}
-   a po využití derivace složené funkce
-  \begin{equation*}
-    \derivace vt=S_s\derivace ht.
-  \end{equation*}
-  Toto se děje v libovolném místě zvodně. Protože $v$ a $h$ jsou i funkcemi proměnných $x$ a $y$ a protože souřadnice $x$ a $y$ jsou nezávislé na čase, stačí pro korektní zápis použít parciální derivace namísto obyčejné derivace, tj.
-  \begin{equation*}
-       \frac{\partial v}{\partial t} = S_s \frac {\partial h}{\partial t}.
-     \end{equation*}
-\item
-  \begin{equation*}
-    S_s\frac{\partial h}{\partial t}=\sigma - \mathop{\mathrm{div}} \left(-T\nabla h\right)
-  \end{equation*}
-  tj. 
-  \begin{equation*}
-    S_s\frac{\partial h}{\partial t}=\sigma + \mathop{\mathrm{div}} \left(T\nabla h\right)
-  \end{equation*}
+% \begin{enumerate}[A)]
+% \item $\vec q=-T \nabla h$ kde $T$ je koeficient průtočnosti a $-\nabla h$
+%   je vektor mířící ve směru nejrychlejšího poklesu piezometrické
+%   hladiny $h$ a vyjadřující rychlost tohoto poklesu.
+% \item $T$ je  $2\times 2$ matice
+% \item $\vec q=b\vec v_f$
+% \item $\frac{\partial v}{\partial t}=\sigma-\mathop{\mathrm{div}}\vec q$
+% \item Zásobnost je vlastně změna objemu (vody) na jednotkovou plochu
+%   (zvodně) vyvolaná  jednotkovou změnou délky (změna piezometrické hladiny),
+%   tj. derivace $v$ podle $h$ a jednotkově vychází bez rozměru. Platí tedy
+%   \begin{equation*}
+%     \derivace vh=S_s \end{equation*}
+%   kde $v$ je objem vody na
+%   metr čtvereční povrchu zvodně v daném místě. Po vynásobení rychlostí s jakou se
+%   mění piezometrická výška dostáváme
+%   \begin{equation*}
+%     \derivace vh \derivace ht=S_s\derivace ht
+%   \end{equation*}
+%    a po využití derivace složené funkce
+%   \begin{equation*}
+%     \derivace vt=S_s\derivace ht.
+%   \end{equation*}
+%   Toto se děje v libovolném místě zvodně. Protože $v$ a $h$ jsou i funkcemi proměnných $x$ a $y$ a protože souřadnice $x$ a $y$ jsou nezávislé na čase, stačí pro korektní zápis použít parciální derivace namísto obyčejné derivace, tj.
+%   \begin{equation*}
+%        \frac{\partial v}{\partial t} = S_s \frac {\partial h}{\partial t}.
+%      \end{equation*}
+% \item
+%   \begin{equation*}
+%     S_s\frac{\partial h}{\partial t}=\sigma - \mathop{\mathrm{div}} \left(-T\nabla h\right)
+%   \end{equation*}
+%   tj. 
+%   \begin{equation*}
+%     S_s\frac{\partial h}{\partial t}=\sigma + \mathop{\mathrm{div}} \left(T\nabla h\right)
+%   \end{equation*}
 
-\end{enumerate}
-\konec
-\stranka
+% \end{enumerate}
+% \konec
+% \stranka
 
-\subsection{Rovinné proudění podzemní vody podruhé}
+% \subsection{Rovinné proudění podzemní vody podruhé}
 
-Prozkoumáme podruhé rovinné proudění, kterému jsme se věnovali v
-příkladě \ref{pokles}.
+% Prozkoumáme podruhé rovinné proudění, kterému jsme se věnovali v
+% příkladě \ref{pokles}.
 
-\begin{enumerate}[A)]
-\item Rovnici podzemní vody ve 2D rozepište do složek. Uvažujte pro jednoduchost izotropní prostředí (transmisivita je skalární veličina, tj. ne matice a voda teče ve směru spádu piezometrické hladiny).
-\item Napište rovnici z předchozího bodu pro \textit{stacionární} případ \textit{bez zdrojů} a pro případ, že funkce $h$ nezávisí na $y$. Uvažujte homogenní prostředí a zvodeň s volnou hladinou a vodorovnou dolní nepropustnou vrstvou, kde volíme nulovou hladinu $h$ (tj. transmisivita je tvaru $$T=kh,$$ kde $k$ je reálné číslo, ne funkce proměnných $x$ a $y$)
-\item Ukážeme, že rovnice se dá vyřešit i bez znalosti řešení diferenciálních rovnic. Upravte vztah z předchozího bodu použitím zřejmé identity
-  $(h^2)'=2 h h'$
-  pro $h$ jako funkci proměnné  $x$, kde čárka značí derivaci podle $x$. Výsledkem bude podmínka, kterou musí splňovat funkce $h^2$ a odsud již najdete hledanou křivku snížení piezometrické hladiny. (Pokud je $h$ závislé jenom na $x$, plocha ohraničující zvodnělou vrstvu se z bočního pohledu promítne do křivky.)
-\end{enumerate}
+% \begin{enumerate}[A)]
+% \item Rovnici podzemní vody ve 2D rozepište do složek. Uvažujte pro jednoduchost izotropní prostředí (transmisivita je skalární veličina, tj. ne matice a voda teče ve směru spádu piezometrické hladiny).
+% \item Napište rovnici z předchozího bodu pro \textit{stacionární} případ \textit{bez zdrojů} a pro případ, že funkce $h$ nezávisí na $y$. Uvažujte homogenní prostředí a zvodeň s volnou hladinou a vodorovnou dolní nepropustnou vrstvou, kde volíme nulovou hladinu $h$ (tj. transmisivita je tvaru $$T=kh,$$ kde $k$ je reálné číslo, ne funkce proměnných $x$ a $y$)
+% \item Ukážeme, že rovnice se dá vyřešit i bez znalosti řešení diferenciálních rovnic. Upravte vztah z předchozího bodu použitím zřejmé identity
+%   $(h^2)'=2 h h'$
+%   pro $h$ jako funkci proměnné  $x$, kde čárka značí derivaci podle $x$. Výsledkem bude podmínka, kterou musí splňovat funkce $h^2$ a odsud již najdete hledanou křivku snížení piezometrické hladiny. (Pokud je $h$ závislé jenom na $x$, plocha ohraničující zvodnělou vrstvu se z bočního pohledu promítne do křivky.)
+% \end{enumerate}
 
 
-\reseni
-\begin{enumerate}[A)]
-\item $$S_s\frac{\partial h}{\partial t}=\sigma + \frac{\partial }{\partial x}\left (T \frac{\partial h}{\partial x} \right)
-  +
-  \frac{\partial }{\partial y}\left (T \frac{\partial h}{\partial y} \right)
-  $$
-\item Protože máme uvažovat stacionární případ, funkce $h$ nezávisí na $t$. Podle předpokladu $h$ nemá záviset ani na $y$. Proto platí $h=h(x)$, tj. derivace $h$ podle $t$ a podle $y$ jsou nulové.
-  Protože nemáme uvažovat zdroje, je $\sigma$ také nulové. Protože máme uvažovat homogenní případ a $T=kh$, můžeme konstantu $k$ a dát před derivaci.  Rovnice má tvar
-  $$0=k\frac{\partial }{\partial x}\left ( h\frac{\partial h}{\partial x} \right)
-  $$
-  anebo (využitím stručnějšího zápisu pro derivace funkce jedné proměnné)
-  $$0=k(h h')'.$$
-\item Dostáváme $h h' = \frac12 (h^2)'$ a po dosazení
-$$0=k\left(\frac 12 (h^2)'\right )'.$$ Po vydělení rovnice konstantou $k$ a vynásobení faktorem $2$ dostaneme 
-  $$0=(h^2)''.$$
-  Druhá derivace funkce $h^2$ tedy musí být nula. Proto je $h^2$ nutně lineární funkcí proměnné $x$, tj. existují konstanty $C_1$ a $C_2$ tak, že platí $$h^2=C_1x+C_2.$$
-  Křivka odpovídá výsledku příkladu  \ref{pokles}, kde je
-  $$h^2=\frac{-2q}k x + \text{const.}$$
-\end{enumerate}
-\konec
+% \reseni
+% \begin{enumerate}[A)]
+% \item $$S_s\frac{\partial h}{\partial t}=\sigma + \frac{\partial }{\partial x}\left (T \frac{\partial h}{\partial x} \right)
+%   +
+%   \frac{\partial }{\partial y}\left (T \frac{\partial h}{\partial y} \right)
+%   $$
+% \item Protože máme uvažovat stacionární případ, funkce $h$ nezávisí na $t$. Podle předpokladu $h$ nemá záviset ani na $y$. Proto platí $h=h(x)$, tj. derivace $h$ podle $t$ a podle $y$ jsou nulové.
+%   Protože nemáme uvažovat zdroje, je $\sigma$ také nulové. Protože máme uvažovat homogenní případ a $T=kh$, můžeme konstantu $k$ a dát před derivaci.  Rovnice má tvar
+%   $$0=k\frac{\partial }{\partial x}\left ( h\frac{\partial h}{\partial x} \right)
+%   $$
+%   anebo (využitím stručnějšího zápisu pro derivace funkce jedné proměnné)
+%   $$0=k(h h')'.$$
+% \item Dostáváme $h h' = \frac12 (h^2)'$ a po dosazení
+% $$0=k\left(\frac 12 (h^2)'\right )'.$$ Po vydělení rovnice konstantou $k$ a vynásobení faktorem $2$ dostaneme 
+%   $$0=(h^2)''.$$
+%   Druhá derivace funkce $h^2$ tedy musí být nula. Proto je $h^2$ nutně lineární funkcí proměnné $x$, tj. existují konstanty $C_1$ a $C_2$ tak, že platí $$h^2=C_1x+C_2.$$
+%   Křivka odpovídá výsledku příkladu  \ref{pokles}, kde je
+%   $$h^2=\frac{-2q}k x + \text{const.}$$
+% \end{enumerate}
+% \konec
 
 
 \section{Diferenciální rovnice II}

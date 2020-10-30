@@ -817,19 +817,3 @@ přechlazenou tekutinu ve formě hřejících polštářků, kde se po lupnutí
 plíškem spustí přeměna skupenství na pevné spojená s\ intenzivním
 uvolněním tepla.
 
-
-
-# Proudění tepla válcovou plochou
-
-Vypočteme ztráty tepla izolované horké trubky délky $L$. Izolace má
-průřez mezikruží, kde vnitřní poloměr a teplota jsou je $r$ a $T_1$,
-vnější $R$ a $T_2$ a součinitel tepelné vodivosti je $k$. Podle
-Fourierova zákona je tok na jednotku plochy úměrný záporně vzatému gradientu teploty a proto ve stacionárním stavu platí (využíváme toho, že úloha je invariantní vůči pootočení) pro libovolné $r\in[r_0,R]$
-$$\frac{Q}{2\pi rL}=-k \frac{\mathrm dT}{\mathrm dr}.$$
-Pokud rovnici integrujeme na intervalu $[r_0,R]$, dostáváme
-$$\int_{r_0}^R \frac{Q}{2\pi rL} \,\mathrm dr=-k \int_{r_0}^R\frac{\mathrm dT}{\mathrm dr}  \,\mathrm dr$$
-a po výpočtu integrálů
-$$ \frac{Q}{2\pi L}\ln \frac Rr=-k(T(R)-T(r_0)),$$
-tj.
-$$ \frac{Q}{2\pi kL}\ln \frac Rr=T_1-T_2.$$
-
