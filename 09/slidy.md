@@ -97,7 +97,7 @@ tj.
 $$y'=y.$$
 
 Operátorovými rovnicemi (na množině konstantních vektorových funkcí) jsou i soustavy lineárních rovnic $$AX=B.$$ Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice 
-$$\frac{\mathrm dX}{\mathrm dt}-AX= B$$ operátorová rovnice s lineárním operátorem. Tyto rovnicím se v případě, kdy matice $A$ a $B$ nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat v příští přednášce.
+$$\frac{\mathrm dX}{\mathrm dt}-AX= B$$ operátorová rovnice s lineárním operátorem. Tyto rovnice se v případě, kdy matice $A$ a $B$ nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat v příští přednášce.
 
 Následující věta vlastně vyjadřuje totéž co princip superpozice z minulého slidu, pouze v jiných pojmech: v pojmech řešení rovnice s lineárním operátorem. 
 
@@ -297,7 +297,6 @@ kde $Cy_{p0}(x)$ je obecným řešením asociované homogenní LDE.
 
 # Obecné řešení nehomogenní LDE ještě jednou a prakticky
 
-<div class=sloupce>
 Slovně:
 
 -   Všechna řešení homogenní lineární rovnice jsou násobky jednoho
@@ -310,12 +309,10 @@ Slovně:
 Stačí tedy najít dvě (do jisté míry speciální) řešení a z\ nich snadno
 sestavíme obecné řešení zadané rovnice. 
 
-> Příklad. Rovnice $$y'+y=3 \tag{*}$$ má partikulární řešení $y=3$ (vidíme
+**Příklad.** Rovnice $$y'+y=3 \tag{*}$$ má partikulární řešení $y=3$ (vidíme
   hned po dosazení). Asociovaná homogenní rovnice $$y'+y=0$$ má obecné
   řešení $y=Ce^{-x}$. Obecné řešení rovnice (*) tedy je 
 	  $$y=3+Ce^{-x}.$$
-
-</div>	
 
 <!--
 
