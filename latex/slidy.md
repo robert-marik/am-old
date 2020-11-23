@@ -1,6 +1,6 @@
 % LaTeXové snippety
 % Robert Mařík
-% 2018–2019
+% 2018–2020
 
 # Snippety
 
@@ -17,11 +17,9 @@ background-color: #E4E5E7;
   do svého dokumentu a upravit dle potřeby. Fungují pro
   [LaTeX](https://www.latex-project.org/) a
   [MathJax](https://www.mathjax.org/) a
-  [KaTeX](https://katex.org/). Tedy fungují i v Markdown, například v
-  [online Markdown editoru](https://stackedit.io/app#).
+  [KaTeX](https://katex.org/). Tedy fungují i v systémech WeBWorK a Markdown.
 
-
-* Jednořádkové fungují i pro [MS Word](https://support.office.com/cs-cz/article/rovnice-v-line%C3%A1rn%C3%ADm-form%C3%A1tu-pomoc%C3%AD-unicodemath-a-latex%C5%AF-ve-wordu-2e00618d-b1fd-49d8-8cb4-8d17f25754f8), ale je někdy nutné kód doladit podle požadavků software, například `\sin{x}` místo úspornějšího `\sin x`. Značka napravo od výrazu na samostaném řádku se do Wordu nevkládá jako `rovnice \tag{znacka}` ale `rovnice # (znacka)`
+* Jednořádkové fungují i pro [MS Word](https://support.office.com/cs-cz/article/rovnice-v-line%C3%A1rn%C3%ADm-form%C3%A1tu-pomoc%C3%AD-unicodemath-a-latex%C5%AF-ve-wordu-2e00618d-b1fd-49d8-8cb4-8d17f25754f8), ale je někdy nutné kód doladit podle požadavků software, například `\sin{x}` místo úspornějšího `\sin x`. Značka napravo od výrazu na samostatném řádku se do Wordu nevkládá jako `rovnice \tag{znacka}` ale `rovnice # (znacka)`
 
 * Obecně v matematickém prostředí nezáleží na mezerách, ale některé
   interpretace toto pravidlo mohou porušovat. Například pro matematiku
@@ -48,18 +46,22 @@ background-color: #E4E5E7;
   vypadá běžně. Něco jiného než běžný text se dělá pomocí příkazů.
 * Příkazy v LaTeXu začínají lomítkem. Například `\frac` je příkaz pro zlomek.
 * Kromě příkazů máme aktivní znaky. Nejčastější jsou následující.
-    * Dolar. Mezi dolary píšeme matematický text. Bude jiným fontem, se speciálním mezerováním a spousta dalšího.
-    * Dvojdolar. Jako dolar, ale matematický text bude navíc na samostatném řádku, centrovaný na osu. Pořád ale bude pokračovat jeden ostavec.
+    * Dolar. Mezi dolary píšeme matematický text. Bude jiným fontem, se speciálním mezerováním a spousta dalšího. Ve WeBWorK používejte zpětné lomítko a kulaté závorky.
+    * Dvojdolar. Jako dolar, ale matematický text bude navíc na samostatném řádku, centrovaný na osu. Pořád ale bude pokračovat jeden odstavec. Ve WeBWorK používejte zpětné lomítko a hranaté závorky.
     * Složené závorky. Závorky ohraničují působení příkazu. Dají se vynechat, pokud je argumentem jeden znak. Například `$\sqrt 2$` a `$\sqrt {121}$` vede na $\sqrt 2$ a $\sqrt{121}$. Špatně by bylo `$\sqrt 121$`, které vede na $\sqrt 121$.
-    Podobně jednu polovinu můžu zapsat jako `$\frac 12$`, ale jednu destinu už jako `$\frac 1{10}$`
+    Podobně jednu polovinu můžu zapsat jako `$\frac 12$`, ale jednu desetinu už jako `$\frac 1{10}$`
 * Mezera se v matematickém prostředí ignoruje, protože zde platí speciální pravidla. Pokud potřebujeme vložit mezeru, děláme to speciálním příkazem. Krátká mezera je `\,`, normální mezera je `\␣` (zpětné lomítko a mezera), dlouhá mezera je `\quad`.
 * LaTeX je typografický systém. My využijeme jenom jeho schopnost sázet matematiku. Nenechte se proto odradit tlustými návody. Nic takového nepotřebujete.
 
+# Zásady pro WeBWorK
+
+* WeBWorK je napsaný v jazyce PERL, kde má symbol dolaru speciální postavení. Proto používejte pro matematické prostředí dvojici `\(` a `\)`. Pro matematické prostředí naformátované na samostatný řádek potom `\[` a `\]`.
+* V prostředí WeBWorK se musí ručně zobrazovat náhled textu. Proto je lepší používat [demo programu MathJax](https://www.mathjax.org/#demo), kde je živý náhled. Kompatibilita není stoprocentní, nezapomeňte vyznačovat matematiku pomocí zpětného lomítka a závorek. Na dolary a dvojdolary raději zapomeňte.
+
 # Zásady pro Markdown
 
-* LaTeX je nejjednodušší způsob, jak psát matematiku. Nejjednodušší způsob jak psát formátovaný text je jazyk Markdown. I v něm běžný text vypadá běžně a něco jiného než běžný text se dělá pomocí značek.
-* Nový odstavec v Markdownu začíná prázným řádkem.
-* LaTeX  a markdown se Mají rádi. Pro jednoduchou práci v rozsahu pár odstavců použijeme editor na [https://stackedit.io/](https://stackedit.io/). Pro vážnější práci v rozsahu pár stran použijeme náš oblíbený editor a pro konverzi program [pandoc](https://pandoc.org/). Pro knihu a práci v rozsahu mnoha stran je lepší Markdown nepoužít a naučit se plnohodnotný LaTeX (tlustý návod a hodiny pokusů a omylů). 
+* LaTeX je nejjednodušší způsob, jak psát matematiku. Nejjednodušší způsob jak psát formátovaný text je jazyk Markdown. I v něm běžný text vypadá běžně a něco jiného než běžný text se dělá pomocí značek. Proto se oba systémy vhodně doplňují.
+* Nový odstavec v Markdownu začíná prázdným řádkem.
 
 
 # Základní výrazy
@@ -105,12 +107,16 @@ Vykopírujte text z prostředního sloupce mezi značky `$ $` pro matematiku v t
 |název| TeX | výstup |
 |-----|----------------------------------------------------|--------------------|
 |derivace| `y',\ y'',\ y''',\ y^{(n)}` | $y',\ y'',\ y''',\ y^{(n)}$|
-|derivace| `\frac {\mathrm dy} {\mathrm dx}` | $\frac {\mathrm dy} {\mathrm dx}$|
-|parciální derivace| `\frac {\partial f} {\partial x}` | $\frac {\partial f}{\partial x}$|
-|druhá derivace| `\frac {\mathrm d^2y} {\mathrm dx^2}` | $\frac {\mathrm d^2y} {\mathrm dx^2}$|
-|derivace| `\frac {\mathrm d^2} {\mathrm dx^2}y` | $\frac {\mathrm d^2} {\mathrm dx^2}y$|
-|parciální derivace| `\frac {\partial^2 f} {\partial x\partial y}` | $\frac {\partial^2 f}{\partial x\partial y}$|
-|parciální derivace| `\frac {\partial} {\partial x}\left( D\frac {\partial} {\partial y} T \right)` | $\frac {\partial} {\partial x}\left( D\frac {\partial} {\partial y} T \right)$|
+|derivace| `\frac {\mathrm dy} {\mathrm dx}` | $\displaystyle\frac {\mathrm dy} {\mathrm dx}$|
+|parciální derivace| `\frac {\partial f} {\partial x}` | $\displaystyle\frac {\partial f}{\partial x}$|
+|druhá derivace| `\frac {\mathrm d^2y} {\mathrm dx^2}` | $\displaystyle\frac {\mathrm d^2y} {\mathrm dx^2}$|
+|druhá derivace| `\frac {\mathrm d^2} {\mathrm dx^2}y` | $\displaystyle\frac {\mathrm d^2} {\mathrm dx^2}y$|
+|smíšená parciální derivace druhého řádu| `\frac {\partial^2 f} {\partial x\partial y}` | $\displaystyle\frac {\partial^2 f}{\partial x\partial y}$|
+|parciální derivace druhého řádu| `\frac {\partial^2 f} {\partial x^2}` | $\displaystyle\frac {\partial^2 f}{\partial x^2}$|
+|parciální derivace z difuzní rovnice| `\frac {\partial} {\partial x}\left( D_x \frac {\partial} {\partial y} T \right)` | $\displaystyle\frac {\partial} {\partial x}\left( D_x \frac {\partial} {\partial y} T \right)$|
+|gradient| `\nabla u` | $\nabla u$|
+|divergence| `\nabla \cdot \vec j` | $\nabla \cdot \vec j$|
+|rotace| `\nabla \times \vec j` | $\nabla \times \vec j$|
 
 # Integrály
 
@@ -130,6 +136,7 @@ křivkový integrál| `\int_C \vec F \,\mathrm d\vec r` | $\int_C \vec F \,\math
 |název| TeX | výstup |
 |-----|------------------------------------------------------------|---------|
 |matice| `\begin{pmatrix} A & B \\ C & D \end{pmatrix}` | $\begin{pmatrix} A & B \\ C & D \end{pmatrix}$ |
+|matice s hranatými závorkami| `\begin{bmatrix} A & B \\ C & D \end{bmatrix}` | $\begin{bmatrix} A & B \\ C & D \end{bmatrix}$ |
 |sloupcový vektor| `\begin{pmatrix} A  \\ B \end{pmatrix}` | $\begin{pmatrix} A \\ B \end{pmatrix}$ |
 |determinant| `\begin{vmatrix} A & B \\ C & D \end{vmatrix}` | $\begin{vmatrix} A & B \\ C & D \end{vmatrix}$ |
 |maticový součin| `\begin{pmatrix} A & B \\ C & D \end{pmatrix}\begin{pmatrix} x \\ y \end{pmatrix}` | $\begin{pmatrix} A & B \\ C & D \end{pmatrix}\begin{pmatrix} x \\ y \end{pmatrix}$ |

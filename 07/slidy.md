@@ -5,7 +5,7 @@
 # Úvod 
 
 
-V této přednášce se seznámíme s nástroji pro pohodlný výpočet křikvového integrálu v případě, kdy tento integrál nezávisí na integrační cestě a s metodou převodu křivkového interálu na dvojný integrál. Tyto myšlenky dnes stojí v samotném základu mnoha dalších teorií a jsou důležité pro přechod mezi lokálním a globálním (mikroskopickým a makroskopickým) popisem transportních jevů. Proto je až neuvěřitelné, že uvedený postup odvodil pekař a samouk [George Green](https://cs.wikipedia.org/wiki/George_Green), který absolvoval jenom jediný rok školní docházky ve věku od osmi do devíti let! Své dílo opublikoval vlastním nákladem a povětšinou rozdal přátelům, kteří však textu pravděpodobně nemohli vůbec rozumět. Proto nevešlo okamžitě ve známost. Nezávisle na Greenovi podobný přístup objevili i někteří další fyzikové.
+V této přednášce se seznámíme s nástroji pro pohodlný výpočet křivkového integrálu v případě, kdy tento integrál nezávisí na integrační cestě a s metodou převodu křivkového integrálu na dvojný integrál. Tyto myšlenky dnes stojí v samotném základu mnoha dalších teorií a jsou důležité pro přechod mezi lokálním a globálním (mikroskopickým a makroskopickým) popisem transportních jevů. Proto je až neuvěřitelné, že uvedený postup odvodil pekař a samouk [George Green](https://cs.wikipedia.org/wiki/George_Green), který absolvoval jenom jediný rok školní docházky ve věku od osmi do devíti let! Své dílo opublikoval vlastním nákladem a povětšinou rozdal přátelům, kteří však textu pravděpodobně nemohli vůbec rozumět. Proto nevešlo okamžitě ve známost. Nezávisle na Greenovi podobný přístup objevili i někteří další fyzikové.
 
 
 \iffalse 
@@ -200,15 +200,15 @@ nule.
 
 # Greenova věta a přechod mezi lokálním a globálním tvarem rovnice kontinuity
 
-Greenova  věta umožňuje přechod mezi lokálním tvarem fyzikálních zákonů (co se děje v daném bodě prostoru) a globálním tvarem (co se děje v konečném objemu). Z fyzikálního hlediska je zajímavější lokální tvar, protože dává náhled, jak fungují studované procesy. Z hlediska pozorovatele je zajímavější globální tvar, protože pracuje s reálně měřitelnými pojmy. Vzhledem k možnosti přechodu mezi těmito přistupy je užitečnost Greenovy věty a jejího trojrozměrného zobecnění nezastupitelná.
+Greenova  věta umožňuje přechod mezi lokálním tvarem fyzikálních zákonů (co se děje v daném bodě prostoru) a globálním tvarem (co se děje v konečném objemu). Z fyzikálního hlediska je zajímavější lokální tvar, protože dává náhled, jak fungují studované procesy. Z hlediska pozorovatele je zajímavější globální tvar, protože pracuje s reálně měřitelnými pojmy. Vzhledem k možnosti přechodu mezi těmito přístupy je užitečnost Greenovy věty a jejího trojrozměrného zobecnění nezastupitelná.
 
-Navážeme na koncept představený v přednášce o divergenci vektorového pole a pododnou bilanci stavové veličiny, jakou jsme použili v odvození rovnice kontinuity a difuzní rovnice použijeme pro konečně velký objem.
+Navážeme na koncept představený v přednášce o divergenci vektorového pole a podobnou bilanci stavové veličiny, jakou jsme použili v odvození rovnice kontinuity a difuzní rovnice použijeme pro konečně velký objem.
 
 Je-li $u(x,y)$ hustota stavové veličiny v množině $M$, $\sigma(x,y)$ vydatnost zdrojů a $\vec J=(P,Q)$ pole popisující tok stavové veličiny, je rychlost s jakou roste množství stavové veličiny v množině $M$ (tj. derivace množství podle času) dána vydatností zdrojů stavové veličiny snížené o odtok stavové veličiny přes hranici množiny $M$. Matematicky vyjádřeno platí
 \dm$$\frac{\mathrm d}{\mathrm dt}\left(\iint_M u\,\mathrm dx\mathrm dy\right)=\iint_M \sigma\,\mathrm dx\mathrm dy-\oint_{\partial M}-Q\,\mathrm dx+P\,\mathrm dy.$$
 Díky nezávislosti $x$ a $y$ na čase $t$ můžeme zaměnit pořadí derivace podle času a dvojného integrálu vlevo. Křivkový integrál vpravo můžeme přepsat pomocí Greenovy věty na dvojný integrál. Tím dostáváme
 \dm$$\iint_M\frac{\partial u}{\partial t}\,\mathrm dx\mathrm dy=\iint_M \sigma\,\mathrm dx\mathrm dy-\iint_{M}\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)\,\mathrm dx\mathrm dy$$
-a po zkrácení označení v posledním dvojném integrálu a využití lienarity integrálu vztah přejde do tvaru
+a po zkrácení označení v posledním dvojném integrálu a využití linearity integrálu vztah přejde do tvaru
 \dm$$\iint_M\frac{\partial u}{\partial t}\,\mathrm dx\mathrm dy=\iint_M \sigma-\nabla\cdot \vec J\,\mathrm dx\mathrm dy.$$
 Protože tato rovnost má platit pro libovolnou množinu $M$, musí se rovnat nejenom integrály, ale i integrované funkce, tj. musí platit
 \dm$$\frac{\partial u}{\partial t}= \sigma-\nabla\cdot \vec J.$$
