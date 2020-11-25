@@ -1,3 +1,5 @@
+body {margin:20px;}
+
 img {max-width:80%; width:80%;  margin-right:auto; margin-left:auto; text-align:center; display:block;}
 
 .sloupce{-moz-column-count:2; /* Firefox */
@@ -43,6 +45,8 @@ padding:5px;
 
 .titlepage h1 {border-bottom:none; color: #222; color: #006131;}
 
+h1{ clear:both;}
+
 div.toolbar {background-color: #006131;}
 .toolbar  a:link {color: white;}
 .toolbar  a {color: white;}
@@ -85,6 +89,7 @@ column-count:6;}
 
 .obtekat {max-width:40%; vertical-align:top; float: right;}
 
+
 .definicename {background-color:#006131; color:#cccccc; font-weight:bold; padding:3px; margin:0px;}
 
 blockquote {padding: 0px;}
@@ -107,10 +112,24 @@ li ul li { font-size: 85%; font-style: normal; }
 
 .prikladname {font-weight:bold;}
 
+
+a[href*="sagecell"] {
+    background: transparent url(sage18.png) center right no-repeat;
+    padding-right: 20px;
+}
+
+
 .tlacitko {background-color:#006131; width:90%;display:inline-block;padding:5px; font-weight:bold; color:white;}
 .tlacitko img {width:30px; float:left; vertical-align: middle;}
+.tlacitko {display:none;}
 
 
 body {background: #eeeeee;}
 .obtekat {max-width:60%}
 figcaption {font-size: 60%;}
+
+#TOC ul li {font-size: 85%; display:inline;}
+#TOC ul li:after { content: " \00b7 "; }
+#TOC ul li ul {display:none;}
+#TOC a {text-decoration:none;}
+
