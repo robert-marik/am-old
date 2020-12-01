@@ -124,7 +124,7 @@ a[href*="sagecell"] {
 .tlacitko {display:none;}
 
 
-body {background: #eeeeee;}
+body {background: #eeeeee; max-width:1000px; margin:auto;}
 .obtekat {max-width:60%}
 figcaption {font-size: 60%;}
 
