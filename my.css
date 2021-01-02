@@ -65,7 +65,7 @@ div.slidy_toc, div.slidy_toc a{color: white; }
 
 .sloupce_ blockquote ul  {width:95%;}
 
-blockquote {display:inline-block; padding:2px; margin:5px; width:96%;}
+blockquote {display:inline-block; padding:2px; margin:5px; width:100%; box-sizing:border-box;}
 
 blockquote p {margin:5px;}
 
@@ -95,14 +95,14 @@ column-count:6;}
 blockquote {padding: 0px;}
 blockquote p {padding: 2px;}
 
-.veta {background-color:#ffffb3; border-color:#ffcc00;}
+.veta {background-color:#ffffb3; border-color:#ffcc00; box-sizing:border-box;}
 
-.vetaname {background-color:#ffcc00; color:#006131; font-weight:bold; padding:3px; margin:0px;}
+.vetaname {background-color:#ffcc00; color:#006131; font-weight:bold; padding:3px; margin:0px;box-sizing:border-box;}
 
 
-.poznamkaname {color:#cccccc; background-color:#006131; font-weight:bold; padding:3px; margin:0px; font-weight: bold.}
+.poznamkaname {color:#cccccc; background-color:#006131; font-weight:bold; padding:3px; margin:0px; font-weight: bold; box-sizing:border-box;}
 
-.poznamka {background-color:#eeeeee; border-color:#006131;}
+.poznamka {background-color:#eeeeee; border-color:#006131;box-sizing:border-box;}
 
 li ul li { font-size: 85%; font-style: normal; }
 
@@ -124,7 +124,7 @@ a[href*="sagecell"] {
 .tlacitko {display:none;}
 
 
-body {background: #eeeeee; max-width:1000px; margin:auto;}
+body {background: #eeeeee; max-width:1000px; margin:auto; padding:30px;}
 .obtekat {max-width:60%}
 figcaption {font-size: 60%;}
 
@@ -133,3 +133,35 @@ figcaption {font-size: 60%;}
 #TOC ul li ul {display:none;}
 #TOC a {text-decoration:none;}
 
+
+.WWotazka {
+    margin-left:auto;
+    margin-right: 0px;
+    font-weight:bold;
+    color:white;
+    background-color:#006131;
+    padding:3px;
+    padding-left:8px;
+    padding-right:8px;
+    text-decoration:none;
+    margin-top:2px;
+    margin-bottom:2px;
+    display:inline-block;
+}
+
+
+.WWotazka:visited {
+    text-decoration:none;
+}
+
+
+.menu-obalka{width:100%;
+    font-weight:bold;
+    color:white;
+			 display:block;    }
+
+.menu {display:inline-block; width:8.33%;text-align:center; color:white; text-decoration:none; border-style:solid; border-color:#eeeeee;box-sizing:border-box;     background-color:#006131; border-width:1px;}
+
+.ACTIVE {color:white; background-color:#E41F1F;}
+
+blockquote {margin-left:0px; margin-right:0px;box-sizing:border-box; }

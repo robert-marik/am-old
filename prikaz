@@ -1,21 +1,30 @@
 
 kde=$1
 
+all="01 02 03 04 05 06 07 08 09 10 11"
+
 if [ -z $kde ]
-then   kde="01 02 03 04 05 06 07 08 09 10 11"
+then
+   kde=$all
    echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <html> <head> 
-
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<link rel="stylesheet" type="text/css" href="styl.css" ></head><html>' > index.html
-   echo '<h1>Prezentace z přednášek z Inženýrské matematiky</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="http://user.mendelu.cz/marik/am/">Inženýrská matematika</a>. Pořadí přednášek je tak jak budou zařazeny do výuky během zimního semestru 2020, každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele.</p>' >> index.html
+<link rel="stylesheet" type="text/css" href="styl.css" >
+ <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+<link rel="stylesheet" href="my.css" type="text/css" />
+<style>
+h1,h2 {text-align:center;}
+</style>
+</head><html>' > index.html
+echo ' <div class='menu-obalka'><a class="menu ACTIVE" href="http://user.mendelu.cz/marik/am/slidy/">0</a><a class="menu  " href="01">1</a><a class="menu " href="02">2</a><a class="menu  " href="02">3</a><a class="menu  " href="04">4</a><a class="menu  " href="05">5</a><a class="menu  " href="06">6</a><a class="menu  " href="07">7</a><a class="menu  " href="08">8</a><a class="menu  " href="09">9</a><a class="menu  " href="10">10</a><a class="menu  " href="11">11</a></div> ' >> index.html
+   echo '<h1>Prezentace z přednášek z Inženýrské a Aplikvané matematiky</h1><h2>Zimní semestr 2020/2021</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="http://user.mendelu.cz/marik/am/">Inženýrská matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF (neobsahuje obrázky a motivační slidy), pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown. Můžete použít i variantu, kdy jsou <a href="http://user.mendelu.cz/marik/wiki/am/slidy/am_slidy_all.pdf">všechny přednášky v jednom PDF</a></p>' >> index.html
    echo '<div class="CSSTableGenerator"><table>'>>index.html
-   echo '<tr><td>Název</td><td>html</td><td>Prezentace slidy.js</td><td>PDF</td><td>markdown</td></tr>'>>index.html
+   echo '<tr><td>Název</td><td>Html</td><td>PDF</td><td>markdown</td></tr>'>>index.html
 
    for j in $kde
    do
        k=`head -n1 $j/slidy.md | cut -d% -f2`
-       echo "<tr><td>$k</td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j/index_h.html' target='_blank'>otevřít</a></td><td><a href='$j.pdf'  target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
+       echo "<tr><td>$k</td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j.pdf'  target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
 
    done
    echo '</table></div></html>' >> index.html
@@ -25,6 +34,7 @@ then   kde="01 02 03 04 05 06 07 08 09 10 11"
 
 fi  
 
+cislo=1
 for i in $kde
 do
   echo $i
@@ -32,6 +42,36 @@ do
   cp prikaz_pandoc $i/prikaz
   cd $i
   bash prikaz
+  menu="<div class='menu-obalka'><a class='menu' href='http:\/\/user.mendelu.cz\/marik\/mtk\/mat-slidy\/'>0<\/a>"
+  j=1
+  for ii in $all;
+  do
+     if [ "$i" == "$ii" ];
+     then
+        active="ACTIVE";
+     else
+        active="";
+     fi
+     menu="$menu<a class='menu $active ' href='..\/$ii'>$j<\/a>"
+     j=$(($j+1))
+  done
+  menu="$menu <\/div>"
+
+  sed -i "s/<!-- menu -->/ $menu /" index.html
+
+  echo $cislo
+  if (( $cislo < -13 ));
+  then 
+    ytbid=`cat ../prednasky.txt | head -n$cislo | tail -n1`
+    echo $ytbid
+
+    substituce="<div style='background-color: #E41F1F; display:inline-div;max-width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https:\/\/youtu.be\/$ytbid' style='text-decoration:none; color:lightgray;'><img src='https:\/\/img.youtube.com\/vi\/$ytbid\/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube přednáška<\/a><\/div>"
+
+    sed -i "s/<!-- YTB -->/$substituce/" index.html
+  fi
+  
+  cislo=$(($cislo+1))
+ 
   cd ..
   #scp -r $i kiwi.mendelu.cz:html/am/slidy
   #rsync -av $i kiwi.mendelu.cz:html/am/slidy
