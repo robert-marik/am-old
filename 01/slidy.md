@@ -2,7 +2,9 @@
 % Robert Mařík
 % 2020
 
-
+> * Naučíme se sledovat rychlost, s jakou se mění veličina, kterou sledujeme.
+> * U veličin, které mají více vstupních údajů, budeme sledovat samostatně reakci na změnu vždy u jediného vstupního údaje. Například u teploty budeme sledovat buď jak se v daném místě mění teplota v čase, nebo jak se v daný okamžik mění teplota s polohou.
+> * Aparát využijeme k tomu, že z fyzikálních zákonů sestavíme rovnici vedení tepla. To bude matematický model umožňující jednak modelování přenosu tepla a jednak kontrolu toho, že fyzikální zákony vedoucí k formulaci této rovnice jsou správné.
 
 
 # Funkce jedné proměnné
@@ -25,11 +27,13 @@ $$f'(x):=\lim_{h\to 0}\frac{f(x+h)-f(x)}h$$
 $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 * rychlost změny změny je druhá derivace: $$y'',\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y$$
 
+> Poznámka (Newtonův zákon tepelné výměny). Je-li $T(t)$ teplota tělesa v čase $t$, je $\frac{\mathrm dT}{\mathrm dt}$ změna této teploty za jednotku času, tj. rychlost s jakou roste teplota. Častým modelem reálné situace je předpoklad, že tato teplota je úměrná rozdílu teploty tělesa a teploty okolí. Pokud je teplota okolí konstantní a rovna $T_0$, dostáváme takto modely $$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T)$$ pro ohřev (teplota okolí je vyšší a teplota tělesa roste) a   $$\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)$$ pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času). 
+
+> Poznámka (lineární aproximace, materiálové vztahy). Změna $\Delta x$ v proměnné $x$ vyvolá změnu $\Delta y\approx f'(x) \Delta x$. Proto je možné používat lineární aproximaci funkce $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).  $$       Například naprostá většina materiálových vztahů je takovou aproximací pro $x_0=0$ (relativně malé podněty) a $f(x_0)=0$ (bez podnětu není odezva). Lineární aproximace má poté tvar $$f(x)\approx f'(0)x=kx.$$ Proto jsou zákony jako Fourierův, Fickův nebo Darcyho formulovány ve tvaru přímé úměrnosti. S těmito zákony jste se pravděpodobně seznámili v naukách o materiálu, blíže se jim budeme věnovat později. Podobně je možno chápat Newtonův zákon tepelné výměny jako lineární aproximaci případného složitějšího vztahu.
+
+> Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice       $$\frac{\mathrm dx}{\mathrm dt}=r x (K-x)$$       kdy předpokládáme, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Konstanta $K$ je celková kapacita prostředí. 
+
 > Poznámka (pohybová rovnice). Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je       $\frac{\mathrm dx}{\mathrm dt}$ a zrychlení je $\frac{\mathrm d^2x}{\mathrm dt^2}$. Podle       Newtonova pohybového zákona platí $$m\frac{\mathrm d^2x}{\mathrm dt^2} =F,$$ kde       $F$ je výsledná síla působící na objekt.
-
-> Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočíchů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice       $$\frac{\mathrm dx}{\mathrm dt}=r x (K-x)$$       kdy předpokládáme, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Konstanta $K$ je celková kapacita prostředí. 
-
-> Poznámka (lineární aproximace, materiálové vztahy). Malá změna $\mathrm dx$ v proměnné $x$ vyvolá změnu $\mathrm dy=f'(x) \mathrm dx$. Proto je možné používat lineární aproximaci funkce $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).  $$       Například naprostá většina materiálových vztahů je takovou aproximací pro $x_0=0$ (relativně malé podněty) a $f(x_0)=0$ (bez podnětu není odezva). Proto jsou zákony jako Fourierův, Fickův nebo Darcyho formulovány ve tvaru přímé úměrnosti. S těmito zákony jste se pravděpodobně seznámili v naukách o materiálu, blíže se jim budeme věnovat později.
 
 
 
@@ -73,6 +77,8 @@ mění).
 
 # Parciální derivace
 
+Pokud sledujeme například ve stěně měnící se teplotní profil, zajímá nás, jak se teplota v jednotlivých místech stěny mění v čase a jak se teplota mění v řezu stěnou. Zdá se býti rozumné oddělit obě změny. Buď v daném bodě fixovat polohu a sledovat časový vývoj v tomto bodě, nebo v daném čase udělat něco jako teplotní snímek a srovnávat teplotu ve vybraném bodě s okolními teplotami ve stejném čase. To vede k následujícímu přístupu, kdy u funkce více proměnných sledujeme reakci na změnu jedné jediné veličiny. 
+
 > Definice (parciální derivace). Buď $f\colon \mathbb R^2\to\mathbb R$ funkce dvou proměnných,  $x$ a $y$, tj. $f(x,y)$. Výraz
 $$\frac{\partial f}{\partial x}:=\lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}h$$ se nazývá *parciální derivace funkce $f$ podle $x$*. Podobně,
 $$\frac{\partial f}{\partial y}:=\lim_{h\to 0}\frac{f(x,y+h)-f(x,y)}h$$ je *parciální derivace funkce $f$ podle $y$*.
@@ -87,7 +93,7 @@ parametru a nijak se nemění.
 >
 * Výraz z čitatele, tj. $f(x+h,y)-f(x,y)$, je změna veličiny $f$ na intervalu $[x,x+h]$ při konstantní veličině $y$. Často označujeme též $\Delta f$.
 * Podíl, tj. $\frac{f(x+h,y)-f(x,y)}h$ je změna veličiny $f$ na intervalu $[x,x+h]$  při konstantní veličině $y$, přičemž tato změna je přepočítaná na jednotku veličiny $x$, tj. v jistém smyslu průměrná rychlost změny vzhledem k $x$ na intervalu $[x,x+h]$. Často označujeme též $\frac{\Delta f}{\Delta x}$.
-* Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost. Parciální derivace je tedy okamžítá rychlost s jakou se mění funkce $f$ přizměnách jedné proměnné.
+* Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost. Parciální derivace je tedy okamžitá rychlost s jakou se mění funkce $f$ při změnách jedné proměnné.
 
 Jednotka derivace $\frac{\partial f}{\partial x}$ je stejná, jako jednotka podílu $\frac {f}x$. Jednotka derivace $\frac{\partial f}{\partial y}$ je stejná, jako jednotka podílu $\frac {f}y$.
 
@@ -96,7 +102,87 @@ $f$ při změnách veličiny $x$ a předpokladu konstantní veličiny
 $y$. Interpretace derivace v nematematických disciplínách je okamžitá
 rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 
-Následující poznámka je nenápadná a přirozená, protože je analogií stejného tvrzení pro obyčejné derivace. Má však mimořádnou důležitost, protože udává vlastnost, které se můžeme držet při studiu rovnic obsahujících derivace. Stejné věty zformulujeme i u dalších opearcí s funcemi a později se je naučíme využívat.
+Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas $t$ a dvě proměnné $x$ a $y$ jsou souřadnice v rovině.  Tedy $T=T(t,x,y).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává je prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
+
+
+# Interpretace parciálních derivací - brzdná dráha
+
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Brzdy v autě musí absorbovat kinetickou energii, která je lineární funkcí hmotnosti a kvadratickou funkcí rychlosti. Zdroj: pixabay.com](car.jpg)
+
+</div>
+
+\fi
+
+*Příklad:* Brzdná dráha $L$ (v metrech) auta o hmotnosti $m$ (v kilogramech) brzdícího z rychlosti $v$ (v kilometrech za hodinu) je dána vzorcem
+$$L=k m v^2, $$ kde $k= 3.45 \times 10 ^{-6}\,(\mathrm{m}\,\mathrm{hod}^2)/(\mathrm{kg}\,\mathrm{km}^2)$. Pro $m=1100\,\mathrm{kg}$ a $v=100\,\mathrm{km}/\mathrm{hod}$ je brzdná dráha $37.95\,\mathrm{m}$.
+
+* Parciální derivace podle $m$ je $\frac{\partial L}{\partial m}=kv^2$
+  a pro zadané hodnoty vychází
+  $$\frac{\partial L}{\partial m}=0.0345 \mathrm{m}/\mathrm{kg}.$$
+  Každý kilogram hmotnosti nad $1100\,\mathrm{kg}$ auta jedoucího
+  rychlostí $100\,\mathrm{km}/\mathrm{hod}$ prodlouží brzdnou dráhu o
+  cca $3.5\,\mathrm{cm}$.
+* Parciální derivace podle $v$ je $\frac{\partial L}{\partial v}=2kmv$
+  a pro zadané hodnoty vychází
+  $$\frac{\partial L}{\partial v}=0.759\,\mathrm{m}/(\mathrm{km}/\mathrm{hod})=7.59\times 10^{-4}\,\mathrm{hod}.$$
+  Každý kilometr za hodinu nad $100\,\mathrm{km}/\mathrm{hod}$ u auta
+  vážícího $1100\,\mathrm{kg}$ prodlouží brzdnou dráhu o cca
+  $76\,\mathrm{cm}$.
+* Zjednodušený vzorec pro brzdnou dráhu auta s hmotností blízkou
+  $1100\,\mathrm{kg}$ a rychlostí blízkou
+  $100\,\mathrm{km}/\mathrm{hod}$ je
+$$L\approx 37.95+0.0345(m-1100)+0.759(v-100),$$
+kde hmotnost a rychlost se dosazují v kilogramech a kilometrech za hodinu a brzdná
+dráha vychází v metrech.
+ 
+\iffalse
+
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&lang=sage&interacts=eJyLjgUAARUAuQ==https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)
+
+\fi
+
+
+
+# Interpretace parciálních derivací - pohyb ještěrky
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Energie potřebná pro překonání pevné vzdálenosti závisí na hmotnosti jedince a na rychlosti, kterou vyvíjí. Zdroj: pixabay.com](lizard.jpg)
+
+</div>
+
+\fi
+
+Energie $E$ (v kcal), kterou spotřebuje ještěrka o hmotnosti $m$ (v
+gramech) na překonání vzdálenosti jednoho kilometru rychlostí $v$ (v
+kilometrech za hodinu) se dá odhadnout vzorcem
+$$E(m,v)=2.65 m^{0.66} + \frac{3.5 m^{0.75}}{v}.$$
+Přímým výpočtem je možné určit
+$$\frac{\partial E}{\partial v}=-\frac{3.5 m^{0.75}}{v^2}.$$ Pro $m=400\,\mathrm{g}$ a $v=8\,\mathrm{km}\,\mathrm{h}^{-1}$ dostáváme
+$$\frac{\partial E}{\partial v}(400,8)=-4.9\,\mathrm{kcal}\,\mathrm{km}^{-1}\mathrm{h}.$$ Zvýšení rychlosti o kilometr za hodinu vede ke snížení energetického výdeje ještěrky o $4.9\,\mathrm{kcal}$. Podobně, platí
+\dm $$\frac{\partial E}{\partial m}={2.65}\times 0.66 {m^{-0.34}} + \frac{3.5\times 0.75 m^{-0.25}}{v}= \frac{1.749}{m^{0.34}} + \frac{2.625}{m^{0.25} v} $$
+a pro výše uvažované hodnoty dostáváme
+$$\frac{\partial E}{\partial m}(400,8)=
+0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.
+$$
+Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne energetický výdej přibližně o $0.30\,\mathrm{kcal}$.
+
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
+(Zpracováno podle Stewart: Biocalculus)
+
+
+# Linearita parciální derivace
+
+Následující poznámka je nenápadná a přirozená, protože je analogií stejného tvrzení pro obyčejné derivace. Má však mimořádnou důležitost, protože udává vlastnost, které se můžeme držet při studiu rovnic obsahujících derivace. Stejné věty zformulujeme i u dalších operací s funkcemi a později se je naučíme využívat.
 
 > Poznámka (linearita parciální derivace). Parciální derivace zachovává součet a násobení konstantou, tj. pro libovolné funkce $f$ a $g$ a konstantu $c$ platí
 > $$\frac{\partial (f+g)}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial x}, \qquad \frac{\partial (cf)}{\partial x}=c\frac{\partial f}{\partial x}$$ a analogicky pro libovolnou jinou proměnnou.
@@ -378,7 +464,7 @@ Elementární funkce jsou tedy všechny funkce, které umíme v konečném
   střední školy a cyklometrických funkcí.
 
 Elementární neznamená jednoduchý. 
-Funkce $$f(x,y)=\frac{x^2+\sin(x^2-y^2)}{\ln(x^2+y^2-1)},\quad g(x,y)=\frac{1}{1+\frac x{1+\frac {y}{x^2}}} $$ jsou elemenárními funkcemi ve smyslu výše uvedené definice. Funkce $$h(x,y)=\begin{cases} 1 & x=0 \text{ nebo }y=0\\0 &\text{jinak}\end{cases}$$ není elementární funkce.
+Funkce $$f(x,y)=\frac{x^2+\sin(x^2-y^2)}{\ln(x^2+y^2-1)},\quad g(x,y)=\frac{1}{1+\frac x{1+\frac {y}{x^2}}} $$ jsou elementárními funkcemi ve smyslu výše uvedené definice. Funkce $$h(x,y)=\begin{cases} 1 & x=0 \text{ nebo }y=0\\0 &\text{jinak}\end{cases}$$ není elementární funkce.
 
 Následující věta ukazuje, že u elementárních funkcí je spojitost v
 libovolném bodě zaručena již tím, že je funkce v tomto bodě
@@ -415,83 +501,6 @@ Vzhledem k této větě existují jenom tři druhé parciální derivace. Je ted
 $$
 nebo
 $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
-
-
-
-
-# Interpretace parciálních derivací - brzdná dráha
-
-
-\iffalse 
-
-<div class='obtekat'>
-
-![Brzdy v autě musí absorbovat kinetickou energii, která je lineární funkcí hmotnosti a kvadratickou funkcí rychlosti. Zdroj: pixabay.com](car.jpg)
-
-</div>
-
-\fi
-
-*Příklad:* Brzdná dráha $L$ (v metrech) auta o hmotnosti $m$ (v kilogramech) brzdícího z rychlosti $v$ (v kilometrech za hodinu) je dána vzorcem
-$$L=k m v^2, $$ kde $k= 3.45 \times 10 ^{-6}\,(\mathrm{m}\,\mathrm{hod}^2)/(\mathrm{kg}\,\mathrm{km}^2)$. Pro $m=1100\,\mathrm{kg}$ a $v=100\,\mathrm{km}/\mathrm{hod}$ je brzdná dráha $37.95\,\mathrm{m}$.
-
-* Parciální derivace podle $m$ je $\frac{\partial L}{\partial m}=kv^2$
-  a pro zadané hodnoty vychází
-  $$\frac{\partial L}{\partial m}=0.0345 \mathrm{m}/\mathrm{kg}.$$
-  Každý kilogram hmotnosti nad $1100\,\mathrm{kg}$ auta jedoucího
-  rychlostí $100\,\mathrm{km}/\mathrm{hod}$ prodlouží brzdnou dráhu o
-  cca $3.5\,\mathrm{cm}$.
-* Parciální derivace podle $v$ je $\frac{\partial L}{\partial v}=2kmv$
-  a pro zadané hodnoty vychází
-  $$\frac{\partial L}{\partial v}=0.759\,\mathrm{m}/(\mathrm{km}/\mathrm{hod})=7.59\times 10^{-4}\,\mathrm{hod}.$$
-  Každý kilometr za hodinu nad $100\,\mathrm{km}/\mathrm{hod}$ u auta
-  vážícího $1100\,\mathrm{kg}$ prodlouží brzdnou dráhu o cca
-  $76\,\mathrm{cm}$.
-* Zjednodušený vzorec pro brzdnou dráhu auta s hmotností blízkou
-  $1100\,\mathrm{kg}$ a rychlostí blízkou
-  $100\,\mathrm{km}/\mathrm{hod}$ je
-$$L\approx 37.95+0.0345(m-1100)+0.759(v-100),$$
-kde hmotnost a rychlost se dosazují v kilogramech a kilometrech za hodinu a brzdná
-dráha vychází v metrech.
- 
-\iffalse
-
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&lang=sage&interacts=eJyLjgUAARUAuQ==https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)
-
-\fi
-
-
-
-# Interpretace parciálních derivací - pohyb ještěrky
-
-
-\iffalse
-
-<div class='obtekat'>
-
-![Energie potřebná pro překonání pevné vzdálenosti závisí na hmotnosti jedince a na rychlosti, kterou vyvíjí. Zdroj: pixabay.com](lizard.jpg)
-
-</div>
-
-\fi
-
-Energie $E$ (v kcal), kterou spotřebuje ještěrka o hmotnosti $m$ (v
-gramech) na překonání vzdálenosti jednoho kilometru rychlostí $v$ (v
-kilometrech za hodinu) se dá odhadnout vzorcem
-$$E(m,v)=2.65 m^{0.66} + \frac{3.5 m^{0.75}}{v}.$$
-Přímým výpočtem je možné určit
-$$\frac{\partial E}{\partial v}=-\frac{3.5 m^{0.75}}{v^2}.$$ Pro $m=400\,\mathrm{g}$ a $v=8\,\mathrm{km}\,\mathrm{h}^{-1}$ dostáváme
-$$\frac{\partial E}{\partial v}(400,8)=-4.9\,\mathrm{kcal}\,\mathrm{km}^{-1}\mathrm{h}.$$ Zvýšení rychlosti o kilometr za hodinu vede ke snížení energetického výdeje ještěrky o $4.9\,\mathrm{kcal}$. Podobně, platí
-\dm $$\frac{\partial E}{\partial m}={2.65}\times 0.66 {m^{-0.34}} + \frac{3.5\times 0.75 m^{-0.25}}{v}= \frac{1.749}{m^{0.34}} + \frac{2.625}{m^{0.25} v} $$
-a pro výše uvažované hodnoty dostáváme
-$$\frac{\partial E}{\partial m}(400,8)=
-0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.
-$$
-Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne energetický výdej přibližně o $0.30\,\mathrm{kcal}$.
-
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
-
-(Zpracováno podle Stewart: Biocalculus)
 
 
 
