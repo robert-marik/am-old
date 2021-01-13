@@ -2,9 +2,16 @@
 % Robert Mařík
 % 2020
 
-> * Naučíme se sledovat rychlost, s jakou se mění veličina, kterou sledujeme.
-> * U veličin, které mají více vstupních údajů, budeme sledovat samostatně reakci na změnu vždy u jediného vstupního údaje. Například u teploty budeme sledovat buď jak se v daném místě mění teplota v čase, nebo jak se v daný okamžik mění teplota s polohou.
+> Anotace.
+>
+> * Naučíme se sledovat rychlost, s jakou se mění veličina, která je objektem našho zájmu.
+> * Budeme schopni sledovat rekci sledované veličiny na současné změny více parametrů. Například u teploty můžeme sledovat jak se v daném místě mění teplota v čase, nebo jak se v daný okamžik mění teplota s polohou.
 > * Aparát využijeme k tomu, že z fyzikálních zákonů sestavíme rovnici vedení tepla. To bude matematický model umožňující jednak modelování přenosu tepla a jednak kontrolu toho, že fyzikální zákony vedoucí k formulaci této rovnice jsou správné.
+
+> Prerekvizity.
+>
+> * Navážeme na znalosti z diferenciálního počtu funkcí jedné proměnných. Zejména definice, využití a výpočet derivace.
+> * Zopakujte si fyzikální (praktický) význam derivace a pro osahání si konkrétních příkladů také základní metody výpočtu.
 
 
 # Funkce jedné proměnné
@@ -18,6 +25,8 @@
 \fi
 
 </div>
+
+Základní informace o funkci jedné proměnné a její derivaci si můžete osvěžit v materiálech k předmětu [Matematika](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/).
 
 * Zobrazení $f: \mathbb{R}\to \mathbb{R}$ se nazývá funkce jedné proměnné. 
 * V kartézské rovině píšeme též $y=f(x)$, kreslíme uspořádané dvojice bodů $[x,y]$ a výstupem je zpravidla křivka v rovině ([Nakreslit online.](https://sagecell.sagemath.org/?z=eJxL06jQtK3QSq0o0NCt0OTlKsjJL9FQSAOKKugoaFTo6BrqmGgqaAIA3aEKBw==&lang=sage))
@@ -272,10 +281,7 @@ průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
 
 # Opakování: Taylorův polynom a polynomiální aproximace v 1D
 
-V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je Taylorův polynom jako nejlepší polynomiální aproximace funkce
-
-> Věta (Taylorova věta pro kvadratickou aproximaci).
-> Platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
+V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d) jako nejlepší polynomiální aproximace funkce. S jeho využitím platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
 
 # Numerická aproximace: konečné diference II
 
@@ -294,10 +300,19 @@ $$ f'(x)=\frac{\mathrm d f}{\mathrm dx}\approx  \frac{f(x+h)-f(x-h)}{2h}  $$
 a
 $$ f''(x)=\frac{\mathrm d^2f}{\mathrm dx^2}\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 Analogicky pro parciální derivaci podle $x$
-$$ \frac{\partial f}{\partial x}\approx  \frac{f(x+\Delta x,y)-f(x-\Delta x,y)}{2\Delta x}  $$
+$$ \frac{\partial f}{\partial x}\approx  \frac{f(x+h,y)-f(x-h,y)}{2h}  $$
 a
-$$ \frac{\partial^2f}{\partial x^2}\approx  \frac{f(x-\Delta x,y)-2f(x,y)+f(x+\Delta x,y)}{\Delta x^2}.  $$
+$$ \frac{\partial^2f}{\partial x^2}\approx  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}.  $$
 Tato aproximace první derivace se nazývá *centrální diference* a je přesnější, než dopředná diference, protože je založena na přesnější aproximaci funkce $f$. Používá totiž polynom druhého stupně, kdežto dopředná diference je založena pouze na lineární aproximaci.
+
+Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciální derivaci podle $x$ i $y$. Aproximace uvedeme ve tvaru, ze kterého je možno současně vidět i chybu při použití dané aproximace. Dva vzorce pro každou parciální derivaci prvního řádu a jeden vzorec pro parciální derivaci druhého řádu.
+
+> Věta (aproximace parciálních derivací pomocí konečných diferencí).
+> Platí následující aproximace derivace podle $x$.
+> $$\begin{aligned} \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x,y)}{h}+O(h) \\ \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x-h,y)}{2h}+O(h^2)\\\frac{\partial^2 f}{\partial x^2}&=  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}+O(h^2)\end{aligned}$$
+> Platí následující aproximace derivace podle $y$.
+> $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \\ \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\\\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
+>
 
 # Nutná dávka terminologie
 

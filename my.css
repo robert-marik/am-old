@@ -104,6 +104,17 @@ blockquote p {padding: 2px;}
 
 .poznamka {background-color:#eeeeee; border-color:#006131;box-sizing:border-box;}
 
+.anotace {background-color:#ffcc66; border-color:#ffcc00; box-sizing:border-box;}
+
+.anotacename {background-color:#ffcc66; color:#000; font-weight:bold; padding:3px; margin:0px;box-sizing:border-box;}
+
+.prerekvizity {background-color:#00ace6; border-color:#00ace6; box-sizing:border-box;}
+
+.prerekvizityname {background-color:#00ace6; color:#000; font-weight:bold; padding:3px; margin:0px;box-sizing:border-box;}
+
+
+
+
 li ul li { font-size: 85%; font-style: normal; }
 
 .poznamka {font-style: normal; }
