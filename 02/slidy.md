@@ -2,6 +2,21 @@
 % Robert Mařík
 % 2020
 
+
+> Anotace.
+>
+> * Umíme pomocí derivace najít rychlost, s jakou se mění veličina, která je objektem našeho zájmu. Budeme sledovat rychlost s jakou se mění veličina jako funkce prostorových proměnných.
+> * Aparát představený v této přednášce má smysl ve dvourozměrném a trojrozměrném světě. Budeme schopni sledovat, v jakém směru veličina roste a klesá maximální rychlostí. Tato veličina v mnoha případech determinuje rychlost s jakou probíhají fyzikální procesy typu difuze nebo vedení tepla. Obecněji tento aparát slouží k lineární aproximaci funkce.
+> * Naučíme se lineární aproximaci použít i pro vektorové funkce. To umožňuje formulování fyzikálních zákonů dávajících do souvislosti tok a gradient veličiny (spád veličiny) v případě, kdy tyto vektory nemají stejný směr. To umožňuje popis vlastností anizotropních materiálů. Při této příležitosti zjistíme, že některé fyzikální veličiny mají podobu matic. Zpravidla na ně odkazujeme jako na tenzorové veličiny.
+> * Jako vedlejší produkt slouží gradient k nalezení lokální extrémů funkce.
+
+> Prerekvizity.
+>
+> * Navážeme na znalosti z parciálních derivací z minulé přednášky.
+> * Pro efektivní formulaci využijeme maticový součin. Ten většina studentů pozná v úvodních přednáškách z matematiky. Například [zde](http://user.mendelu.cz/marik/mtk/mat-slidy/matice/).
+> * Před snahou o lineární aproximaci funkce více proměnných je vhodné si zopakovat [lineární aproximaci funkce jedné proměnné.](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/)
+
+
 # Opakování
 
 <div class="obtekat">
@@ -487,7 +502,7 @@ následující věta.
 
 Na závěr jedna aplikace z oblasti parciálních derivací. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
 
-Vektorovou funkci je možné chápat jako zobrazení roviny do sebe, které může odpovídat deformaci tělesa působením síly. Popišme tuto deformaci  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$.  Lineární aproximací dostáváme
+Vektorovou funkci je možné chápat jako zobrazení roviny do sebe, které může odpovídat transformaci tělesa, například působením síly. Popišme tuto deformaci vektorem  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$. Udává o kolik a kterým směrem se posune bod o souřadnicích $(x_1,x_2)$. Pokud je tato vektorová funkce nulová, s tělesem se nic neděje, zůstává na místě. Pokud je konstantní, každý bod se posune stejně a jedná se o posun, bez změny tvaru. V obecném případě však tato funkce konstantní není. Lineární aproximací v bodě $(x_1,x_2)$ dostáváme
 $$\vec U(x_1+\Delta x_1,x_2+\Delta x_2)\approx 
 \vec U(x_1,x_2) + J(x_1,x_2) \begin{pmatrix}\Delta x_1 \\ \Delta x_2 \end{pmatrix}.$$
       Člen $\vec U(x_1,x_2)$ je posunutí, proto nás zajímá až druhý člen, obsahující deformaci. Pokud 
