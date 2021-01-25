@@ -2,6 +2,8 @@
 
 # Výpočet pomocí vzorců
 
+[video](https://youtu.be/KykczBw2Kcg)
+
 Vypočtěte následující parciální derivace
 
 1. $\frac{\partial }{\partial x}(x^2y+2xy^3+x+1)$
@@ -34,6 +36,7 @@ Vypočtěte následující parciální derivace
 
 # Parciální derivace, pocitová teplota analyticky
 
+[video](https://youtu.be/VdtIj5TGBZE)
 
 Kanadský empirický vzorec pro pocitovou teplotu v zimě (wind chill factor) je nesmírně důležitý vzorec, který v drsných severských podmínkách rozhoduje o přežití. Je založen na tom, že pocitově je teplota vnímána i podle intenzity větru. Tento efekt, známý odjakživa, byl v roce 2001 proměřen a původní vzorec (z roku 1961) byl nahrazen vzorcem 
 $$
@@ -72,6 +75,9 @@ pocitové teploty přibližně o $0.16$ stupně.
 
 ![](air-temperature.jpg)
 
+
+[video](https://youtu.be/J0pTAxDwZj8)
+
 Běžný kanaďan nenosí kalkulačku a nepočítá pocitovou teplotu z minulého příkladu pomocí výše uvedeného vzorce, ale má tabulku jako je na obrázku. Nám tato tabulka poslouží jako model funkce dvou proměnných zadané funkčními hodnotami v konečném počtu bodů. 
 
 1. Vypočtěte pomocí centrální diference parciální derivaci
@@ -92,6 +98,8 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 ![Zdroj: Wood handbook](wood_heat_capacity.png)
 
 # Parciální derivace, tepelná kapacita dřeva
+
+[video](https://youtu.be/PjPYisnQa0A)
 
 Vypočtěte a slovně interpretujte parciální derivaci měrné tepelné kapacity dřeva $c$ podle teploty $T$ a podle obsahu vody MC $w$ v bodě o hodnotě MC 12\% a teplotě $27^\circ\mathrm C$.
 

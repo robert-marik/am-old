@@ -14,7 +14,7 @@
 
 1. $\nabla \cdot \vec F=\pdv{x}(x^2y)+\pdv{y}(x+y^2)
 =2xy+(0+2y)=2y(x+1)$
-1. $\vec F(2,1)=2^2\cdot 1\vec \cdot \imath + (2+1^2)\vec \jmath=4\vec\imath+3\vec\jmath=(4,3)$, tj. vektorové pole teče směrem doprava nahoru směrem daným směrnicí $0.75$, tj. pod úhlem menším než $45^\circ$.
+1. $\vec F(2,1)=2^2\cdot 1\cdot \vec \imath + (2+1^2)\vec \jmath=4\vec\imath+3\vec\jmath=(4,3)$, tj. vektorové pole teče směrem doprava nahoru směrem daným směrnicí $0.75$, tj. pod úhlem menším než $45^\circ$.
 1. $\nabla\cdot\vec F(2,1)=2\cdot 1 \cdot(2+1)=6>0$. Divergence je kladná a proto se tok zahušťuje.
 1. Zdroj (kladná divergence).
 
@@ -86,6 +86,8 @@ $$
   plyne v daném bodě
   $$\rho c\pdv{T}{t}=1236$$
   a můžeme dokonce odhadnout, jak rychle teplota roste.
+
+[Sage](https://sagecell.sagemath.org/?z=eJxNT8GOwiAUvJPwDy_uBRQ3anQPm_QfNllvTU3Y8qrYCoZCF_z6hUN1SUiGycwwM0nHFhHSggO8gcJOG90i3J29oTGpvVByZFEkDhWw3TKuEz_tYAXxtC8Gj_fBeklJX92kdzqyut6LbSPqrfhomhyaRaMNbY71OBQ9DgZhskpPdvSaEkrOTiqNxlfH9xmy4izemaDE275a98uZgNfJNWxPSU5Ed0bTYqV017FM1ptGRL56PnOxvCTvfEqLNQjQRmFMMMG3PCNI-Er-Yk2AEaHV4xCuGqwCE4ZUCnfWgc4eYHMbkWPKZbHacPGK_wfZQRw4_8y_P-yPkw80GqY0Dqj6kMHdtj5QUvaMF_vLNP8D8_-DMQ==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 </div>
 

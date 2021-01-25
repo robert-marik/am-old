@@ -16,6 +16,10 @@
 
 # Funkce jedné proměnné
 
+
+<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/zhaebxHbqhs"></iframe> </div>
+
+
 <div class='obtekat'>
 
 \iffalse 
@@ -36,11 +40,20 @@ $$f'(x):=\lim_{h\to 0}\frac{f(x+h)-f(x)}h$$
 $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 * rychlost změny změny je druhá derivace: $$y'',\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y$$
 
-> Poznámka (Newtonův zákon tepelné výměny). Je-li $T(t)$ teplota tělesa v čase $t$, je $\frac{\mathrm dT}{\mathrm dt}$ změna této teploty za jednotku času, tj. rychlost s jakou roste teplota. Častým modelem reálné situace je předpoklad, že tato teplota je úměrná rozdílu teploty tělesa a teploty okolí. Pokud je teplota okolí konstantní a rovna $T_0$, dostáváme takto modely $$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T)$$ pro ohřev (teplota okolí je vyšší a teplota tělesa roste) a   $$\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)$$ pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času). Modelování vývoje [může probíhat na počítači](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==).
+> Poznámka (Newtonův zákon tepelné výměny). Je-li $T(t)$ teplota tělesa v čase $t$, je $\frac{\mathrm dT}{\mathrm dt}$ změna této teploty za jednotku času, tj. rychlost s jakou roste teplota. Například hodnota derivace $$\frac{\mathrm dT}{\mathrm dt}(6)=2 ^\circ \mathrm {C}/\mathrm{min},$$ kdy teplotu ve stupních Celsia sledujeme jako funkci času v minutách, nás informuje o tom, že v čase $6$ minut roste teplota okamžitou rychlostí $2$ stupně Celsila za minutu. Pokud tento růst vydrží celou minutu, bude v čase $7$ miunt teplota o dva stupně Celsia vyšší. Pokud tato rychlost růstu vydrží deset minut, jsme schopni podobně určit změnu teploty i za delší časový úsek.
+>
+>V reálných dějích však konstantní rychlosti vídáme zřídka. Například u tepelné výměny se dynamika procesu zastavuje tím, jak se teploty postupně vyrovnávají. Častým modelem reálné situace je předpoklad, že rychlost s jakou roste teplota chladného tělesa při tepelné výměně s teplejším tělesem konstantní teploty je úměrná rozdílu teplot. Roli teplejšího tělesa hraje většinou okolí. Pokud je tedy teplota okolí konstantní a rovna $T_0$, je kvantitativním modelem procesu tepelné výměny rovnice $$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T).$$ To platí pro oro ohřev (teplota okolí je vyšší a teplota tělesa roste). Analogicky můžeme naformulovat model $$\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)$$ pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času).
+>
+> Tento model se naučíme časem vyřešit. Pro složitější děje bude ve většině případů modelování vývoje [probíhat na počítači](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==).
 
-> Poznámka (lineární aproximace, materiálové vztahy). Změna $\Delta x$ v proměnné $x$ vyvolá změnu $\Delta y\approx f'(x) \Delta x$. Proto je možné používat lineární aproximaci funkce $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).  $$       Například naprostá většina materiálových vztahů je takovou aproximací pro $x_0=0$ (relativně malé podněty) a $f(x_0)=0$ (bez podnětu není odezva). Lineární aproximace má poté tvar $$f(x)\approx f'(0)x=kx.$$ Proto jsou zákony jako Fourierův, Fickův nebo Darcyho formulovány ve tvaru přímé úměrnosti. S těmito zákony jste se pravděpodobně seznámili v naukách o materiálu, blíže se jim budeme věnovat později. Podobně je možno chápat Newtonův zákon tepelné výměny jako lineární aproximaci případného složitějšího vztahu.
+> Poznámka (lineární aproximace, materiálové vztahy). Změna $\Delta x$ v proměnné $x$ vyvolá změnu $\Delta y\approx f'(x) \Delta x$. Proto je možné používat lineární aproximaci funkce $$f(x)\approx f(x_0)+f'(x_0)(x-x_0).  $$       Například naprostá většina materiálových vztahů je takovou aproximací pro $x_0=0$ (relativně malé podněty) a $f(x_0)=0$ (bez podnětu není odezva). Lineární aproximace má poté tvar $$f(x)\approx f'(0)x=kx.$$ Proto jsou zákony jako Fourierův, Fickův nebo Darcyho formulovány ve tvaru přímé úměrnosti. S těmito zákony jste se pravděpodobně seznámili v naukách o materiálu, blíže se jim budeme věnovat později. Podobně je možno chápat Newtonův zákon tepelné výměny z předchozí poznámky jako lineární aproximaci případného obecného vztahu
+$$\frac{\mathrm dT}{\mathrm dt}= \Phi(T_0-T), \quad \Phi(0)=0$$
+s obecnou a složitě identifikovatelnou funkcí $\Phi$ na tvar
+$$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T), \quad k=\Phi'(0),$$
+s celkem jednoduše naměřitelnou číselnou konstantou $k$.
 
-> Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice       $$\frac{\mathrm dx}{\mathrm dt}=r x (K-x)$$       kdy předpokládáme, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Konstanta $K$ je celková kapacita prostředí. 
+
+> Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice       $$\frac{\mathrm dx}{\mathrm dt}=r x \left(1-\frac xK\right)$$       kdy předpokládáme, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Konstanta $K$ je celková kapacita prostředí. 
 
 > Poznámka (pohybová rovnice). Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je       $\frac{\mathrm dx}{\mathrm dt}$ a zrychlení je $\frac{\mathrm d^2x}{\mathrm dt^2}$. Podle       Newtonova pohybového zákona platí $$m\frac{\mathrm d^2x}{\mathrm dt^2} =F,$$ kde       $F$ je výsledná síla působící na objekt.
 
@@ -85,6 +98,9 @@ mění).
 
 # Parciální derivace
 
+<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Vw7OF5Fj8G4"></iframe> </div>
+
+
 Pokud sledujeme například ve stěně měnící se teplotní profil, zajímá nás, jak se teplota v jednotlivých místech stěny mění v čase a jak se teplota mění v řezu stěnou. Zdá se býti rozumné oddělit obě změny. Buď v daném bodě fixovat polohu a sledovat časový vývoj v tomto bodě, nebo v daném čase udělat něco jako teplotní snímek a srovnávat teplotu ve vybraném bodě s okolními teplotami ve stejném čase. To vede k následujícímu přístupu, kdy u funkce více proměnných sledujeme reakci na změnu jedné jediné veličiny. 
 
 > Definice (parciální derivace). Buď $f\colon \mathbb R^2\to\mathbb R$ funkce dvou proměnných,  $x$ a $y$, tj. $f(x,y)$. Výraz
@@ -115,6 +131,7 @@ Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé 
 
 # Interpretace parciálních derivací - brzdná dráha
 
+<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/UE_nkyDe7bw"></iframe> </div>
 
 \iffalse 
 
@@ -159,6 +176,10 @@ dráha vychází v metrech.
 # Interpretace parciálních derivací - pohyb ještěrky
 
 
+<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/lk-LRBKth3Q"></iframe> </div>
+
+
+
 \iffalse
 
 <div class='obtekat'>
@@ -198,6 +219,9 @@ Následující poznámka je nenápadná a přirozená, protože je analogií ste
 
 # Rovnice vedení tepla  v 1D
 
+<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tZDKXyomaJE"></iframe> </div>
+
+
 Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
 proměnných, polohy a času. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase, například  v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
 
@@ -214,6 +238,10 @@ teplotnímu rozdílu a teplo teče z místa v větší teplotou do místa s men�
 <div class='obtekat'>
 
 ![Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například okno nebo stěna domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](domek.png)
+
+
+![Ukázka v výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle čas, barva označuje teplotu. Dole je počáteční stav, nulová teplota podél celé tyče. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh toho, jak se od pravého konce postupně ohřívají jednotlivé části tyče, získáme řešením rovnice vedení tepla. Teplotní profily pro jednotlivé časy získáme na vodorovných řezech v obrázku. Vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.](octave.png)
+
 
 </div>
 
@@ -237,12 +265,15 @@ kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě js
 * Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu.
 
 
+
+
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
 bilance toku tepla. Rozdíl o kolik se v daném místě snižuje tok tepla
 udává, kolik tepla se v daném místě spotřebovalo. Tato spotřeba tepla
 se projeví zvýšením teploty v daném bodě.
 
-
+**Numerické modelování.**
+Rovnici je možno použít k simulaci časového vývoje teploty například [takto.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) (Pokud si rozkliknete odkaz, neuvidíte rovnici s počátečními podmínkami a příkaz k jejímu vyřešení, ale poměrně dlouhý kód převadějící řešení rovnice vedení tepla na řešení vhodné soustavy lineárních rovnic. V tomto případě se čtyřicetkrát řeší soustava 100 rovnic o 100 neznámých. V inženýrsky zajímavých aplikacích bývají takových rovnic tisíce.)
 
 # Druhá derivace
 
@@ -312,6 +343,136 @@ Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciá
 > Platí následující aproximace derivace podle $y$.
 > $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \\ \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\\\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
 >
+
+Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a i v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximace derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme v následující poznámce, která je čistě informativní a není toho typu, že byste měli umět výpočty v ní uvedené reprodukovat. Je však důlažitá pro pochopení, co nám z rovnic vlastně může vyplývat a jeké jsou zhruba požadavky na výpočetní prostředky..
+
+> Poznámka (explicitní metoda řešení rovnice vedení tepla).
+> Po převedení derivací z rovnice vedení tepla $$\rho c\frac{\partial T}{\partial t}=k \frac{\partial ^2 T}{\partial x^2}$$ bychom dostali
+> $$\rho c\frac{T(x,t+\Delta t)-T(x,t)}{\Delta t}= k\frac{T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)}{\Delta x^2},$$
+kde $\Delta x$ a $\Delta t$ jsou intervaly oddělující body a časy, ve kterých aproximujeme teplotu. Odsud
+> $$T(x,t+\Delta t)=T(x,t)+\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr]$$ a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě $x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních bodech $x+\Delta x$ a $x-\Delta x$. Toto je vzorec pro takzvanou explicitní metodu řešení rovnice vedení tepla a tuto metodu je snadné implementovat [programovým kódem](https://sagecell.sagemath.org/?z=eJyVVUGO4zYQvBvwH_pijOzR7NoD5DKGf7DIIRgsAgTJghY5a1oUKUikIOlPeUU-lmqKsjUzhyA-WKJEVldXV7c29JvrrC4UdUoqq8mr2giqG0dXJa1r3FipxrpAfiiopTfdu07YoZp2Oi9wZwWVzha6uFC8a72wHli1K4RXhZ33uvBlvdrQ63SQWgRlWE2IYtzI1846jqcoM9oq0TBK49602S6O3h7ioiRJ14oR3KvpfMeLiyOw6ELMpAkjEAvRDjTqthSVojHu_Zh3jPGrHhWSJ4Gjva4E9jSqVTGfyoEtMkRSA7KV-k01CpmT6mujC83UKuWdhGBPk4IyFBfBEumqNqpS1otC5ySMIqvA8ayNxbp2ZZB4AgAQdd1AZeNKpOajhIoqYYb1CgQjR8HZYXNcr1ff6ESHI02_DUllSsHSqvXKx1frle1x88v-mLagNsrTGfRSEXIoQaVXDSd2DhJUeZNG_FS-ABAfQSaUGYSJMgp4I57kON--2v44bWmQAmyUEqKsGyVyt3hKsoNMrQstdDqze5jOFhAc5ct-v-eUNks9ctIWFDth4MWrKIdqptqRFFZVDKGoNUrCB55gXjsk-lCPlr93wFSFVtN58PRB8pyu2gq8B66Z6jMXjYUPYDoq5JhZ_3jIbf942B5nfA2DaWH0yB6CECBjVY4IUWc1Uw-lEfKmcizy648OZeCWONF-B7-12R18Azel8t9bDOpdHOzmF4czZeWWy58KNrH6r8MoT8txbzDHhWTLlGL-4HV4icw-H9lQQFtzpPR47ko-mZz8fZhMhIYrhtKENp9MSKFy421ysL3QdmWjPPd5LLKIF1BPDuIsuiGM2sem7xLwTdUNMJA7rBGuSKKayg_LOEyEUZdxODGvN9fQ9YSs_D3v2MreaO4R2GW42T2aKomWHban_b0LeSaiurIZw5XrbJfDEWTTAC0u7zC4ZqdUsf-F8cHeS6NHS9t__p7FmMTxAIyHOGF9ekYZP529gcomXMQPqRrdsZtPlN1tplH9p-fd4sH2cbF4Omy39JVk_9fzlNRisjIs_hPsLdoshn7nKl4-fmSyI-mPn3hvZmWiFyZLp3ZP5Y6xIHYSP4U4pcj3KkapMAWh_AzJfUv40GB6zW06f-AiWsiumAUv4P4JbW4IZlW7Uapry90BY8OY00iZON3aY36FXezdMiSX_vH7IX89_Al9KtVefjZaZvsX2aOIO9nnuPUw8E76LWZ_4YxrKlGjy9HidVxm8XzO83a9ai9Cavtzmq51OnAWDT4f2huVPXwfOncF63BWl3C3UfxyPACiN-KsTPbQ82JIC_-w_ReYO7Kb&lang=octave&interacts=eJyLjgUAARUAuQ==). Dokonce, pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://sagecell.sagemath.org/?z=eJyFVMFu2zgQvRvwP8zFsJworR1gLwn2kHvRw8IIFii6AC2OY1oUKUgUYekf9gMWe9oP2E_YvbT5r76hZCcpCtRBbFEk37x582YW9JuPzhRMkTU7Q4Frq6huPB1ZO9_4oeLG-Y5CX1BLe3PyUbm-Gk_6oPDkFJXeFaY4UHpqg3IBWLUvVODCnc_67t18tqDteJFaBBVYQ4hi_SC_0XmJx5RZ41g1gtL4vbGrV1cvL_HDmrRv1QDu1Xg_yuLgCSxilzJpugGIhWp7GkxbqoppSGe_zzvF-GgGRvKkcPVkKoUzDbec8qk82CJDJNUjW2323DAyJz7V1hRGqFUcvIZgN6OCuisOSiQyVW25YhdUYXJSlskxOO6MdVjXvuw03gAARH3sqWx8KbmFpCFTpWw_n8nfguSfPipJETewktcf6Ffa3NP4WZBmWyrRl2XTnbD7y_p-2kRpONAO7KYa5BCCysCN5LXrNJjKIYPoU_U6gIQEMqKcQYSnoIA2ImmJ8-G9O92PRxokABed88nioJG6w1vSESq1vmsh007MI3RWgJAo79brtSSzeC1HTsaBYlQWVjyqcqjOVCNp5bgSCKbWsoYNAsG7rh_pz2f0-vMGlqquNbTrw_dy53Q0TmEfqHYszrliomkHngMjw8yF603uTteb1f0Z38BdRlkziIEgA6g4zhEhqcxn4l1plb5onAq8Bez6CiZrsxfQBSw0lfulr6DZwcNjISfXWY8KTjAUW8BLcgjhxH6pQYGdsdMrMcpUxZ8jT30uNy6dnrIHu81d4ge87eSJCP9IKwuinHrAXvCAMGHIPt3c5pt8lExSu9msPo_JxT5E3wiFSgUzKkYGQimx7wNO360uar-V-qWksU8qqDQf0N0YAo3SMOeE-SBIyP9nWG-RvNjph2CpF1MrPlpI6L78S_HLf7X_-ifaQhEQnv9neYui16r6-nc4t-reN3QEh9s7tNQlapoXwZqYKlf2l6bCrphiS9ekw_tMn_64XdEVZQ_42i5XyyThqBYYxwFKFiDeDSYqtJkqG3FYo1xbozYFbAh5gx9EZlV0RzFim9JDS1SYBCV6lqtxSqV8xVuwid9Jifade8KlVKPW-q5O2-OtPrHtsuP1j9wBSQYexzf4DZqPaLzYlxiwNg0yVAcAF2Efz1sQ8fkvfv5HniYNP_2-ybebz0CvuD08NUZn6zt9QswrfcrxGCDulQ6r-_ms8NY3laph6jCf1WmZpfu5TJz5rD0obdzTOF_q6cJONfNZMMFytnzsoz-Cd7fjQ_fSZml2LgFxsmrHNlueZNFPi7BcfQPOnGh8&lang=octave&interacts=eJyLjgUAARUAuQ==), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
+>
+>
+> Ještě existuje implicitní metoda založená na zpětné diferenci v čase namísto dopředné, tj. 
+> $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$ a odsud $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$ Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Bohužel však v každém tomto vztahu figurují tři teploty v čase $t$, které ještě neznáme. Úloha vede na řešení soustavy lineárních rovnic, kterých je stejně jako je uvažovaný počet bodů v tyči, tj. v prakticky využitelných úlohách počty začínají řádově stovkami či tisíci a omezeny jsou jenom pamětí počítačů. Každá rovnice v soustavě má sice jenom tři neznámé, ale jako celek je postup komplikovanější na naprogramování i na výpočet. Přesto se ukazuje jako výhodnější, protože je stabilnější a dovoluje řešení počítat po větších časových skocích, než metoda předchozí. Programová relizace je založena na řešení rovnice a v programech Octave nebo Matlab může vypadat [následovně.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) Tento přístup se nazývá [implicitní metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation). 
+
+
+<!--
+
+% Rovnice vedeni tepla pro jednorozmernou tyc s fixovanymi teplotami na koncich a konstantni pocatecni teplotou.
+% Teplota se v tyci rozlozi rovnomerne (linearni profil).
+% Teplotni profil pred dosazenim rovnovazenho stavu pro ruzne casy ziskame z rovnice vedeni tepla.
+% Nize je aproximace reseni pomoci konecnych diferenci explicitni metodou - jednoducha na implementaci, ale nestabilni, pokud neni casovy krok dostatecne maly
+
+
+% 
+%  Nastaveni
+%
+
+L = 1;       % delka tyce
+
+nx = 50;     % pocet bodu v tyci, ve kterych budeme pocitat teplotu
+nt = 500;    % pocet kroku v case
+dx = L/nx;   % prostorovy krok (vzdalenost dvou sousednbich bodu)
+dt = .0001;  % casovy krok, interval s jakzm budeme v danem bode sledovat zmeny teplo
+             % casovy krok musi byt dostatecne maly, jinak model neni stabilni
+
+u = zeros(nt+1,nx+1);      % inicializace promenne, do ktere budeme ukladat teploty
+
+T = 0*ones(1,nx+1);  % nastaveni pocatecnich hodnot, nulove teploty vsude krome na nakonci
+T(end) = 100;      % nastaveni pocatecnich hodnot, teplota 100 na konci
+
+u(1,1:nx+1) = T;    % vychozi stav
+
+A = toeplitz([-2,1,zeros(1,nx-1)]);  % vytvoreni matice pro iterace
+A(1,:) = zeros(1,nx+1);              % vynulovani prvniho radku matice A
+A(end,:) = zeros(1,nx+1);            % vynulovani posledniho radku matice A
+
+
+%
+%  Vlastní výpočet a uložení do paměti
+%
+
+for j = 2:nt        % jednotlive kroky v case
+   T = T + dt/(dx^2) * (A * T')';  % iteracni vzorec pouziva dvakrat transpozice, protoze pracujeme s radkovym vektorem, ale maticove nasobeni funguje pro sloupcove vektory
+   u(j+1,1:nx+1) = T;    % ulozeni pro pozdejsi vykresleni
+end
+ 
+
+%
+% Vykreslení řešení
+%
+
+[X1,T1] = meshgrid(0:dx:nx*dx,0:dt:nt*dt);
+colormap hot
+pcolor(X1,T1,u)
+
+shading interp
+colorbar
+title('Vyvoj prubehu teploty v tyci')
+xlabel('x')
+ylabel('t')
+
+-->
+
+
+<!--
+
+% Rovnice vedeni tepla pro jednorozmernou tyc s fixovanymi teplotami na koncich a konstantni pocatecni teplotou.
+% Teplota se v tyci rozlozi rovnomerne (linearni profil).
+% Teplotni profil pred dosazenim rovnovazenho stavu pro ruzne casy ziskame z rovnice vedeni tepla.
+% Nize je aproximace reseni pomoci konecnych diferenci explicitni metodou - jednoducha na implementaci, ale nestabilni, pokud neni casovy krok dostatecne maly
+
+
+% 
+%  Nastaveni
+%
+
+L = 1;       % delka tyce
+
+nx = 50;     % pocet bodu v tyci, ve kterych budeme pocitat teplotu
+nt = 500;    % pocet kroku v case
+dx = L/nx;   % prostorovy krok (vzdalenost dvou sousednbich bodu)
+dt = .0001;  % casovy krok, interval s jakzm budeme v danem bode sledovat zmeny teplo
+             % casovy krok musi byt dostatecne maly, jinak model neni stabilni
+
+u = zeros(nt+1,nx+1);      % inicializace promenne, do ktere budeme ukladat teploty
+
+T = 0*ones(1,nx+1);  % nastaveni pocatecnich hodnot, nulove teploty vsude krome na nakonci
+T(end) = 100;      % nastaveni pocatecnich hodnot, teplota 100 na konci
+
+u(1,1:nx+1) = T;    % vychozi stav
+
+A = toeplitz([-2,1,zeros(1,nx-1)]);  % vytvoreni matice pro iterace
+A(1,:) = zeros(1,nx+1);              % vynulovani prvniho radku matice A
+A(end,:) = zeros(1,nx+1);            % vynulovani posledniho radku matice A
+
+
+%
+%  Vlastní výpočet a uložení do paměti
+%
+
+for j = 2:nt        % jednotlive kroky v case
+   T = T + dt/(dx^2) * (A * T')';  % iteracni vzorec pouziva dvakrat transpozice, protoze pracujeme s radkovym vektorem, ale maticove nasobeni funguje pro sloupcove vektory
+   u(j+1,1:nx+1) = T;    % ulozeni pro pozdejsi vykresleni
+end
+ 
+
+%
+% Vykreslení řešení
+%
+
+[X1,T1] = meshgrid(0:dx:nx*dx,0:dt:nt*dt);
+colormap hot
+pcolor(X1,T1,u)
+
+shading interp
+colorbar
+title('Vyvoj prubehu teploty v tyci')
+xlabel('x')
+ylabel('t')
+
+-->
 
 # Nutná dávka terminologie
 
@@ -498,6 +659,34 @@ Vzhledem k této větě existují jenom tři druhé parciální derivace. Je ted
 $$
 nebo
 $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
+
+
+
+<style>
+
+.container {
+  position: relative;
+  overflow: hidden;
+  width: 90%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  border-color:white;
+  border-width:20px;
+  border-style:solid;
+  margin:auto;
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+</style>
 
 
 
