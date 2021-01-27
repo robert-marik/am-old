@@ -404,7 +404,7 @@ V praktických úlohách, kdy požadujeme existenci nenulového řešení, zprav
 $$y''+\lambda^2 y=0,$$ abychom zdůraznili kladnou hodnotu parametru a abychom dostávali řešení formálně bez druhé odmocniny. 
 Tedy okrajová úloha 
 $$y''+\lambda^2 y=0,\quad y(0)=0=y(1)$$
-má vlastní čísla $\lambda=ḱ\pi$, kde $k$ je kladné celé číslo.
+má vlastní čísla $\lambda=k\pi$, kde $k$ je kladné celé číslo.
 
 
 # Kmity struny

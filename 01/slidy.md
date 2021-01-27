@@ -16,8 +16,7 @@
 
 # Funkce jedné proměnné
 
-
-<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/zhaebxHbqhs"></iframe> </div>
+https://youtu.be/zhaebxHbqhs
 
 
 <div class='obtekat'>
@@ -98,7 +97,8 @@ mění).
 
 # Parciální derivace
 
-<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Vw7OF5Fj8G4"></iframe> </div>
+
+https://youtu.be/Vw7OF5Fj8G4
 
 
 Pokud sledujeme například ve stěně měnící se teplotní profil, zajímá nás, jak se teplota v jednotlivých místech stěny mění v čase a jak se teplota mění v řezu stěnou. Zdá se býti rozumné oddělit obě změny. Buď v daném bodě fixovat polohu a sledovat časový vývoj v tomto bodě, nebo v daném čase udělat něco jako teplotní snímek a srovnávat teplotu ve vybraném bodě s okolními teplotami ve stejném čase. To vede k následujícímu přístupu, kdy u funkce více proměnných sledujeme reakci na změnu jedné jediné veličiny. 
@@ -131,7 +131,7 @@ Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé 
 
 # Interpretace parciálních derivací - brzdná dráha
 
-<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/UE_nkyDe7bw"></iframe> </div>
+https://youtu.be/UE_nkyDe7bw
 
 \iffalse 
 
@@ -176,8 +176,7 @@ dráha vychází v metrech.
 # Interpretace parciálních derivací - pohyb ještěrky
 
 
-<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/lk-LRBKth3Q"></iframe> </div>
-
+https://youtu.be/lk-LRBKth3Q
 
 
 \iffalse
@@ -219,7 +218,7 @@ Následující poznámka je nenápadná a přirozená, protože je analogií ste
 
 # Rovnice vedení tepla  v 1D
 
-<div class="container">  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tZDKXyomaJE"></iframe> </div>
+https://youtu.be/tZDKXyomaJE
 
 
 Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
@@ -277,6 +276,8 @@ Rovnici je možno použít k simulaci časového vývoje teploty například [ta
 
 # Druhá derivace
 
+https://youtu.be/vJVRrik3EAw
+
 Druhá derivace je derivace první derivace. U funkce dvou proměnných připadají v úvahu čtyři kombinace. Buď derivujeme pokaždé podle stejné proměnné, tj. 
   $$
 \frac{\partial^2 f}{\partial x^2}:=\frac{\partial}{\partial x}\frac{\partial f}{\partial x},\quad 
@@ -293,10 +294,17 @@ konstantní, redukuje se rovnice na rovnici
 $$\rho c\frac{\partial T}{\partial t} = k \frac{\partial^2 T}{\partial x^2},$$
 ve které figuruje druhá derivace podle polohy.
 
-# Numerická aproximace: konečné diference I
+# Numerická aproximace derivací: konečné diference 
 
-Základním
-přístupem při numerickém odhadu derivace je vynechání limitního přechodu v definici derivace. Pro funkci jedné proměnné a její derivaci
+Instrukce: Z podkapitoly věnované numerickým aproximacím si odneste hlavně vzorce pro aproximaci parciálních derivací. Seznamte se s jejich použitím a s metodou, jak je možno přepsat rovnici obsahující paricální derivace neznámé funkce na soustavu lineárních rovnic. Dle svého zájmu zběžně či důkladněji. Zdůvodnění proč tyto aproximační vzorce fungují a jak jsou odvozeny také přispěje k lepšímu pochopení, ale není zcela nezbytné a seznamte se s ním pdle hloubky svého zájmu.
+
+
+https://youtu.be/iGohx4i95FI
+
+
+## Dopředná diference
+
+Základním přístupem při numerickém odhadu derivace je vynechání limitního přechodu v definici derivace. Pro funkci jedné proměnné a její derivaci
 $$\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}$$
 tedy dostáváme
  $$\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.$$ Okamžitá rychlost je nahrazena
@@ -308,12 +316,9 @@ průměrnou rychlostí na intervalu $(x,x+h).$ Tento podíl se nazývá
   $$\frac{\partial f}{\partial y}\approx\frac{f(x,y+\Delta y)-f(x,y)}{\Delta y}$$
 
 
+## Centrální diference
 
-# Opakování: Taylorův polynom a polynomiální aproximace v 1D
-
-V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d) jako nejlepší polynomiální aproximace funkce. S jeho využitím platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
-
-# Numerická aproximace: konečné diference II
+> Poznámka (Taylorův polynom). V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d) jako nejlepší polynomiální aproximace funkce. S jeho využitím platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
 
 Přesnější aproximace derivace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů
 $$\begin{aligned}
@@ -344,7 +349,9 @@ Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciá
 > $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \\ \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\\\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
 >
 
-Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a i v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximace derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme v následující poznámce, která je čistě informativní a není toho typu, že byste měli umět výpočty v ní uvedené reprodukovat. Je však důlažitá pro pochopení, co nám z rovnic vlastně může vyplývat a jeké jsou zhruba požadavky na výpočetní prostředky..
+## Diskerizace diferenciálních rovnic pomocí konečných diferencí
+
+Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a i v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximace derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme v následující poznámce, která je čistě informativní a není toho typu, že byste měli umět výpočty v ní uvedené reprodukovat. Je však důležitá pro pochopení, co nám z rovnic vlastně může vyplývat a jeké jsou zhruba požadavky na výpočetní prostředky..
 
 > Poznámka (explicitní metoda řešení rovnice vedení tepla).
 > Po převedení derivací z rovnice vedení tepla $$\rho c\frac{\partial T}{\partial t}=k \frac{\partial ^2 T}{\partial x^2}$$ bychom dostali
@@ -474,7 +481,11 @@ ylabel('t')
 
 -->
 
-# Nutná dávka terminologie
+# Vzdálenost a pojmy s ní související
+
+Instrukce: V podkapitole věnované popisu bodů, množin a jejich vlastností v euklidovském prostoru se ujistíme, že dokážeme dát přesný obsah tak běžným pojmům jako vzdálenost nebo hranice množiny. Protože tyto pojmy nejdou nijak proti intuici, není nutné se učit jednotlivé definice. Jenom si rámcově odneste přehled, jak jsou tyto pojmy definovány a jaké pojmy vlastně používáme. V případě nutnosti se k těmto definicím můýžete kdykoliv vrátit. 
+
+https://youtu.be/owfHzLBonRA
 
 \iffalse 
 
@@ -496,7 +507,7 @@ je nezbytná.
 V dalším nastane jedna z nejnebezpečnějších situací v matematice, kdy přesně definovanému pojmu dáme název, který lidé znají z prostého života. Například hranice, oblast, spojitost, uzávěr, okolí, ... Podrobný rozbor ukazuje, že tyto definice jsou v jednoduchých případech v souladu s intuicí. 
 
 
-# Euklidovský metrický prostor
+## Euklidovský metrický prostor
 
 
 > Definice (metrický prostor, metrika).
@@ -528,7 +539,7 @@ $$
   $$
   tj. $\varepsilon$-okolí bodu $A$, s vyloučením bodu $A$.
 
-# Významné vlastnosti množin v Euklidovském prostoru
+## Významné vlastnosti množin v Euklidovském prostoru
 
 
 V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq
@@ -659,34 +670,4 @@ Vzhledem k této větě existují jenom tři druhé parciální derivace. Je ted
 $$
 nebo
 $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
-
-
-
-<style>
-
-.container {
-  position: relative;
-  overflow: hidden;
-  width: 90%;
-  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-  border-color:white;
-  border-width:20px;
-  border-style:solid;
-  margin:auto;
-}
-
-/* Then style the iframe to fit in the container div with full height and width */
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-}
-
-</style>
-
-
 

@@ -14,3 +14,11 @@ sed -i 's/<blockquote><p>Poznámka\./<blockquote class="poznamka"><p class="pozn
 sed -i 's/<blockquote><p>Poznámka (\([^\.]*\))./<blockquote class="poznamka"><p class="poznamkaname">Poznámka (\1).<\/p><p>/' index.html
 sed -i 's/<blockquote><p>Anotace./<blockquote class="anotace"><p class="anotacename">Anotace.<\/p><p>/' index.html
 sed -i 's/<blockquote><p>Prerekvizity./<blockquote class="prerekvizity"><p class="prerekvizityname">Prerekvizity.<\/p><p>/' index.html
+
+
+sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="container"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' index.html
+
+
+
+
+

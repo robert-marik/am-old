@@ -2,7 +2,7 @@
 
 # Výpočet pomocí vzorců
 
-[video](https://youtu.be/KykczBw2Kcg)
+https://youtu.be/KykczBw2Kcg
 
 Vypočtěte následující parciální derivace
 
@@ -32,11 +32,12 @@ Vypočtěte následující parciální derivace
 </div>
 
 
-![Zdroj: pixabay.com](blizzard.jpg)
-
 # Parciální derivace, pocitová teplota analyticky
 
-[video](https://youtu.be/VdtIj5TGBZE)
+https://youtu.be/VdtIj5TGBZE
+
+![Zdroj: pixabay.com](blizzard.jpg)
+
 
 Kanadský empirický vzorec pro pocitovou teplotu v zimě (wind chill factor) je nesmírně důležitý vzorec, který v drsných severských podmínkách rozhoduje o přežití. Je založen na tom, že pocitově je teplota vnímána i podle intenzity větru. Tento efekt, známý odjakživa, byl v roce 2001 proměřen a původní vzorec (z roku 1961) byl nahrazen vzorcem 
 $$
@@ -63,7 +64,7 @@ $$
 Za dané teploty a rychlosti větru je pocitová teplota $-20.2$ stupňů
 Celsia. Nárůst teploty o jeden stupeň způsobí nárůst pocitové teploty
 přibližně o $1.3$ stupně. Tedy změna teploty se projeví na pocitové
-teplotě $1.3$-násobkem, tj. každkouzměnu vnímáme o třicet procent
+teplotě $1.3$-násobkem, tj. každou změnu vnímáme o třicet procent
 intenzivněji.
 
 Podobně, zesílení větru o jeden kilometr za hodinu způsobí snížení
@@ -73,15 +74,14 @@ pocitové teploty přibližně o $0.16$ stupně.
 
 # Pocitová teplota numericky
 
+https://youtu.be/J0pTAxDwZj8
+
 ![](air-temperature.jpg)
-
-
-[video](https://youtu.be/J0pTAxDwZj8)
 
 Běžný kanaďan nenosí kalkulačku a nepočítá pocitovou teplotu z minulého příkladu pomocí výše uvedeného vzorce, ale má tabulku jako je na obrázku. Nám tato tabulka poslouží jako model funkce dvou proměnných zadané funkčními hodnotami v konečném počtu bodů. 
 
 1. Vypočtěte pomocí centrální diference parciální derivaci
-$\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost větru $40\,\mathrm{km}\,\mathrm{hod}^{-1}$ a intepretujte výsledek slovně.
+$\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost větru $40\,\mathrm{km}\,\mathrm{hod}^{-1}$ a interpretujte výsledek slovně.
 1. Pocitová teplota $W$ je lineární v proměnné $T$. Proto derivace $\frac{\partial W}{\partial T}$ nezávisí na $T$. Jak se tato skutečnost
   odrazí v tabulce?
   1. Odhadněte z tabulky, zda vliv větru klesá nebo roste s rychlostí větru. Potvrďte svou hypotézu analytickým výpočtem parciální derivace $\frac{\partial W}{\partial v}$ a vysvětlete fyzikálně.
@@ -89,23 +89,24 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 <div class=reseni>
 
 1.  $$\frac {\partial W}{\partial v}(T=-15,v=40)\approx\frac{-29-(-26)}{50-30}\frac{{}^\circ \mathrm C}{\mathrm{km}\,\mathrm{hod}^{-1}}=-0.15^\circ \mathrm C/(\mathrm{km}\,\mathrm{hod}^{-1})$$  Za podmínek, kde je $15$ stupňů pod nulou a vítr o rychlosti $40$ kilometrů za hodinu každé další zesílení větru o kilometr za hodinu sníží pocitovou teplotu přibližně o patnáct setin stupně.
-1. Neformálně: V rámci každého řádku jsou stejně velké   skoky. Přesněji: V každém řádku je přibližně aritmetická   posloupnost, data se mění odečtením pevné konstantny. Případné  fluktuace od tohoto pravidla jsou způsobeny zaokrouhlením.
-1. Pokud se díváme na data po sloupcích, s rostoucí silou větru  jsou skoky menší a proto parciálni derivace podle větru s rostoucí  rychlostí větru klesá. To potvrzuje i analytický výpočet, protože u  rychlosti je mocnina menší než jedna a ta se po zderivání změní na  zápornou mocninu a tím se změní charakter závislosti na rychlosti  větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem  tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je  vítr silný, nestačí se tato mikrovstva vytvořit ani v minimální míře  a proto je jedno, jestli fouká hodně nebo ještě více.
+1. Neformálně: V rámci každého řádku jsou stejně velké   skoky. Přesněji: V každém řádku je přibližně aritmetická   posloupnost, data se mění odečtením pevné konstanty. Případné  fluktuace od tohoto pravidla jsou způsobeny zaokrouhlením.
+1. Pokud se díváme na data po sloupcích, s rostoucí silou větru  jsou skoky menší a proto parciální derivace podle větru s rostoucí  rychlostí větru klesá. To potvrzuje i analytický výpočet, protože u  rychlosti je mocnina menší než jedna a ta se po zderivování změní na  zápornou mocninu a tím se změní charakter závislosti na rychlosti  větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem  tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je  vítr silný, nestačí se tato mikrovrstva vytvořit ani v minimální míře  a proto je jedno, jestli fouká hodně nebo ještě více.
 
 </div>
 
 
-![Zdroj: Wood handbook](wood_heat_capacity.png)
 
 # Parciální derivace, tepelná kapacita dřeva
 
-[video](https://youtu.be/PjPYisnQa0A)
+https://youtu.be/PjPYisnQa0A
+
+![Zdroj: Wood handbook](wood_heat_capacity.png)
 
 Vypočtěte a slovně interpretujte parciální derivaci měrné tepelné kapacity dřeva $c$ podle teploty $T$ a podle obsahu vody MC $w$ v bodě o hodnotě MC 12\% a teplotě $27^\circ\mathrm C$.
 
-Pro obě derivace použijte dopřednou diferenci (v tabulce nejsou ekvidistatní kroky MC).
+Pro obě derivace použijte dopřednou diferenci (v tabulce nejsou ekvidistantní kroky MC).
 
-*Poznámka:* Kromě dopředné diference je možné uvažovat ještě zpětou diferenci definovanou vztahem $$\frac{f(x)-f(x-h)}{h},$$ což je vlastně dopředná diference na předhozím intervalu. Ukažte, že centrální diference je průměrem dopředné a zpětné diference.
+*Poznámka:* Kromě dopředné diference je možné uvažovat ještě zpětnou diferenci definovanou vztahem $$\frac{f(x)-f(x-h)}{h},$$ což je vlastně dopředná diference na předchozím intervalu. Ukažte, že centrální diference je průměrem dopředné a zpětné diference.
 
 <div class=reseni>
 
@@ -129,6 +130,8 @@ $$
 
 # Veličiny z rovnice vedení tepla
 
+https://youtu.be/YvAFRS8zeos
+
 V případech, kdy je při tepelné výměně nutno uvažovat vedení tepla (vysoké Biotovo číslo), modelujeme změnu teploty podle rovnice vedení tepla, kterou jsme na přednášce odvodili pro jednorozměrný případ ve tvaru
 $$\varrho c \frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\Bigl(\lambda\frac{\partial T}{\partial x}\Bigr).$$  Typickým případem vedení tepla v jedné dimenzi je vedení tepla ve stěně. 
 
@@ -147,7 +150,7 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 
 <div class=reseni>
 
-1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je $\frac {\partial T}{\partial t}$ a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestaně měnit. Měříme ve stupních celsia za sekundu.
+1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je $\frac {\partial T}{\partial t}$ a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních celsia za sekundu.
   $\left[\frac {\partial T}{\partial t}\right]={}^\circ\mathrm{C}\,\mathrm{s}^{-1}$
 1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je $\frac {\partial T}{\partial x}$ a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních celsia na metr.
     $\left[\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}$
