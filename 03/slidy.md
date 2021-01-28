@@ -4,6 +4,8 @@
 
 # Transportní jevy
 
+https://youtu.be/p1Qu89EKc94
+
   Pochopení a modelování transportních dějů je
   důležité pro většinu technických oborů. Podstata těchto dějů je často
   odlišná, přesto mají navenek podobné chování a tím je umožněn
@@ -48,6 +50,7 @@ podle času. Měřit změny v toku přenášejícím sledovanou veličinu jsme s
 
 # Změna toku vektorového pole
 
+https://youtu.be/cXT6ULeZFJs
 
 \iffalse 
 
@@ -89,6 +92,8 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 
 # Divergence
 
+https://youtu.be/ejDQx3QjgfI
+
 Výše uvedenými úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci.)
 
 > Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\mathop{\mathrm{div}}\vec F$ nebo $\nabla \cdot \vec F$.
@@ -122,6 +127,8 @@ Viz [cvičení](http://user.mendelu.cz/marik/am/slidy/cviceni/cviceni03.md.html)
 
 
 # Rovnice kontinuity
+
+https://youtu.be/HiOmERpTdV0
 
 \iffalse 
 
@@ -206,6 +213,8 @@ a nazývá se Saint-Venantova rovnice nebo též *rovnice mělké vody*. Tato ro
 
 
 # Difuzní rovnice
+
+https://youtu.be/p2FTgyAWzA4
 
 Difuzní rovnice je rovnice kontiuity s dosazeným konstitučním vztahem
 pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu

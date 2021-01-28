@@ -185,11 +185,13 @@ $$J(x,y)=\begin{pmatrix} \frac{\partial f_1}{\partial x}(x ,y ) & \frac{\partial
 je Jacobiho matice funkce $\vec F$. 
 
 Lineární aproximace v okolí nuly pro funkci, která je v nule nulová,
-tj. $x_0=y_0=\vec F(0,0)=0$ je $$\vec F(x,y)\approx \vec J(0,0)
+tj. $x_0=y_0=\vec F(0,0)=0$ je $$\vec F(x,y)\approx J(0,0)
 \begin{pmatrix}x\\ y\end{pmatrix}.$$ 
 
 
 # Vícerozměrné konstitutivní zákony
+
+https://youtu.be/uTzCAxOOye8
 
 Konstitutivní vztahy tvoří z hlediska materiálového inženýrství jednu
 z nejdůležitějších aplikací gradientu. Jedná se o vztahy dávající do vzájemné relace gradient stavové veličiny, pomocí níž charakterizujeme stav studovaného objektu, a tok, který se snaží zahladit nerovnoměrnost v rozložení stavové veličiny. Například při nerovnoměrném rozložení koncentrace látky se tato koncentrace vyrovnává difuzním tokem. Při nerovnoměrném rozložení vnitřní energie v systému se tato nerovnoměrnost navenek projevuje rozdílnými teplotami v různých částech tělesa a vyrovnává tokem tepla. Při různých piezometrických hladinách podzemní vody (hladina podzemní vody se započtením případného tlaku a dalších parametrů majících vliv na proudění vody) se tato nerovnoměrnost vyrovnává prouděním podzemní vody. 
@@ -318,6 +320,8 @@ elektrického proudu.
 \fi
 
 # Speciální případy vztahu mezi gradientem a tokem
+
+https://youtu.be/vrPhbc-GJqc
 
 \iffalse
 

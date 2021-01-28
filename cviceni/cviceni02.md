@@ -1,8 +1,11 @@
 % Gradient
 
-![Zdroj: pixabay.com](blizzard.jpg)
 
 # Linearizace pocitové teploty
+
+https://youtu.be/NFymct4-4jQ
+
+![Zdroj: pixabay.com](blizzard.jpg)
 
 Pocitová teplota $W$ z minulého cvičení má v bodě odpovídajícím teplotě $T=-11{}^\circ\mathrm C$ a rcyhlosti větru $v=26\,\mathrm {km}\,\mathrm{hod}^{-1}$ má hodnotu $$W=-20.2 ^\circ\mathrm C$$ a parciální derivace $$\pdv{W}{v}=-0.163 ^\circ\mathrm C\, \mathrm {hod}\,\mathrm{km}^{-1}$$ a
 $$\pdv{W}{T}=1.289.$$ Najděte pomocí lineární aproximace vzorec pro pocitovou teplotu v okolí tohoto bodu.
@@ -18,6 +21,8 @@ přičemž všechny veličiny dostazujeme v jednotkách SI (stupně Celsia a kil
 </div>
 
 # Parciální derivace, gradient
+
+https://youtu.be/Gnl5liHh2fA
 
 Určete gradient funkcí $z=ax^2y-2xy^2$ a $h=\frac {ax}{y^2}+5x^3y^2$, kde $a\in\mathbb R$ je reálný parametr.
 
@@ -53,6 +58,7 @@ Vektor $(2x,2y)$ v bodě $(x,y)$ míří směrem od počátku, tj ve směru spoj
 
 # Gradient funkce s paprskovitými vrstevnicemi
 
+
 Určete gradient funkce $z=\mathop{\mathrm{arctg}} \frac yx$ a zkontrolujte, že je v každém bodě tečný ke kružnici se středem v počátku. Využijte toho, že tečna je kolmá na poloměr.
 
 
@@ -72,6 +78,8 @@ Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$ a míří směrem od
 
 
 # Tečná rovina atd.
+
+https://youtu.be/FpvNOIR56Vs
 
 Pro funkci $f(x,y)=x^2+\frac x{y^2}-6$ najděte
 
@@ -103,7 +111,7 @@ $$
 1. Z rovnice tečny k vrstevnici $$5(x-2)-4(y-1)=0$$
   dostáváme $$y=1+\frac 54 (x-2)$$
   a proto
-  $$\sqrt{\frac{x}{6-x^2}}\approx 1+\frac 54 (x-2)$$ v okolí $x=2$.
+  $$\sqrt{\frac{x}{6-x^2}}\approx 1+\frac 54 (x-2)$$ v okolí $x=2$. Všimněte si, že jsme nepotřebovali aproximovanou funkci vůbec derivovat. To je výhoda, protože derivace odmocniny z podílu se nepočítá zcela příjemně. Namísto toho jsme využili výsledek z teorie funkce více proměnných. Přitom se musela využít nadřazená teorie, ale k výpočtu nebylo třeba derivovat nic horšího, než mocninnou funkci.
 
 </div>
 
@@ -144,11 +152,14 @@ V bodě $(0,0)$ potom
 </div>
 
 
-![Zdroj: Wood handbook](anatomicke_smery_dreva.png)
 
 # Parciální derivace, gradient a násobení matic
 
-Vypočtěte gradient funkce $$T=10-\sqrt{x^2+y^2}.$$ Ukažte, že vrstevnice
+https://youtu.be/mNKV8TUgY8Q
+
+![Zdroj: Wood handbook](anatomicke_smery_dreva.png)
+
+Vypočtěte gradient funkce $$T=10-\sqrt{x^2+y^2}$$ definující teplotu ve dvourozměrném materiálu. Ukažte, že vrstevnice
 této funkce jsou kružnice se středem v počátku, nakreslete obrázek s
 těmito vrstevnicemi a vyznačte do tohoto obrázku gradienty v bodech
 $A=(0,1)$, $B=(1,0)$ a $C=(1,1)$

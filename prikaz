@@ -59,6 +59,10 @@ do
 
   sed -i "s/<!-- menu -->/ $menu /" index.html
 
+  datum=`stat slidy.md | grep Change | cut -d" " -f2`
+
+  sed -i "s/<h3 class=\"date\">.*h3>/<p class=\"date\"><em><small>Poslední modifikace: $datum <\/small><\/em><\/p>/" index.html
+
   echo $cislo
   if (( $cislo < -13 ));
   then 

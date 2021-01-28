@@ -3,6 +3,9 @@
 
 # Rotace vektorového pole v rovině
 
+https://youtu.be/IRjknyO2_yo
+
+
 Vypočtěte rotaci funkce $\vec F=xy^2\vec \imath + 2xy\vec\jmath$.
 
 <div class=reseni>
@@ -25,6 +28,9 @@ Vypočtěte rotaci funkce $\vec F=xy^2\vec \imath + 2xy\vec\jmath$.
 </div>
 
 # Rotace vektorového pole v prostoru
+
+
+https://youtu.be/U_USLTQF5fM
 
 Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
 
@@ -52,6 +58,10 @@ Vypočtěte rotaci funkce $\vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k$.
 </div>
 
 # Divergence a rotace 2D funkce s parametrem
+
+
+https://youtu.be/ZRIHxmBzf5s
+
 Vypočtěte divergenci a rotaci funkce $\vec F=ax^2y^3\vec \imath + (x^2+y)\vec\jmath$.
 
 <div class=reseni>
