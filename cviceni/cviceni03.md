@@ -3,6 +3,7 @@
 
 # Divegrence vektorového pole
 
+https://youtu.be/BS2FR1mqn18
 
 1. Vypočtěte divergenci vektorového pole
   $$\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath.$$
@@ -22,6 +23,8 @@
 
 # Divegrence vektorového pole s parametrem
 
+https://youtu.be/zwYPRlEIrHI
+
 1. Vypočtěte divergenci vektorového pole
   $$\vec F=ax^3y^2\vec \imath + 3x^2y\vec \jmath,$$ kde
   $a\in\mathbb R$ je reálný parametr.
@@ -35,9 +38,13 @@
 
 </div>
 
+# Rovnice vedení tepla v dvourozměrném materiálu
+
+
+https://youtu.be/U9_0wbKT_2I
+
 ![Zdroj: pixabay.com](drevo_textura.jpg)
 
-# Rovnice vedení tepla v dvourozměrném materiálu
 
 Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ zachycené v určitém okamžiku termokamerou je popsána rovnicí
   $$T(x,y)=(2x-y)^2+x^4.$$
@@ -102,6 +109,8 @@ $$
 -->
 
 # Vedení tepla v různých materiálech
+
+https://youtu.be/MnThGZphPps
 
 1. Zapište rovnici vedení tepla v trojrozměrném izotropním a v
   trojrozměrném ortotropním materiálu. Ve druhém případě volte osy ve

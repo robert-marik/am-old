@@ -218,7 +218,9 @@ Následující poznámka je nenápadná a přirozená, protože je analogií ste
 
 # Rovnice vedení tepla  v 1D
 
-https://youtu.be/tZDKXyomaJE
+<!-- https://youtu.be/tZDKXyomaJE -->
+
+https://youtu.be/ilAaBQNoySI
 
 
 Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou
