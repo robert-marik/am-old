@@ -31,6 +31,11 @@ Vypočtěte následující parciální derivace
 
 </div>
 
+ww:problems/parcialni_derivace/parcialni_derivace.pg
+
+ww:problems/parcialni_derivace/parcialni_derivace_s_parametrem.pg
+
+ww:problems/parcialni_derivace/parcialni_derivace_druheho_radu.pg
 
 # Parciální derivace, pocitová teplota analyticky
 

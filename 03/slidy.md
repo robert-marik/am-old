@@ -251,6 +251,8 @@ $$
       {\frac{\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x} \left(D\frac{\partial u}{\partial x}\right)}.$$
 To jsme viděli již v první přednášce.
 
+ww:problems/difuzni_rce/interpretace_clenu.pg
+
 # Vedení tepla
 
 \iffalse

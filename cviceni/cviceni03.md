@@ -121,7 +121,7 @@ https://youtu.be/MnThGZphPps
 
 <div class=reseni>
 
-Pomůže [cheatsheet](https://raw.githubusercontent.com/robert-marik/apl-slidy/master/cheatsheet/cheatsheet-AM.pdf)
+Pomůže [cheatsheet](https://github.com/robert-marik/apl-slidy/blob/master/cheatsheet/cheatsheet-AM.pdf)
 
 1. Izotropní: $\varrho c \pdv{T}{t} = \pdv{x}(k\pdv{T}{x})+\pdv{y}(k\pdv{T}{y})+\pdv{z}(k\pdv{T}{z})$
 
@@ -132,3 +132,4 @@ Pomůže [cheatsheet](https://raw.githubusercontent.com/robert-marik/apl-slidy/m
 
 </div>
 
+ww:problems/difuzni_rce/napis_rovnici.pg

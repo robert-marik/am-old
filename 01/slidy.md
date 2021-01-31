@@ -208,6 +208,8 @@ Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne
 (Zpracováno podle Stewart: Biocalculus)
 
 
+ww:parcialni_derivace/povrch_tela.pg
+
 # Linearita parciální derivace
 
 Následující poznámka je nenápadná a přirozená, protože je analogií stejného tvrzení pro obyčejné derivace. Má však mimořádnou důležitost, protože udává vlastnost, které se můžeme držet při studiu rovnic obsahujících derivace. Stejné věty zformulujeme i u dalších operací s funkcemi a později se je naučíme využívat.
@@ -265,13 +267,12 @@ $$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\
 kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě jsou hustota i měrná tepelná kapacita vztaženy ne k jednotce objemu, jak jsme zvyklí, ale k jednotce délky. Například $\rho$ je lineární hustota, tj. v gramech na centimetr).
 * Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu.
 
-
-
-
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
 bilance toku tepla. Rozdíl o kolik se v daném místě snižuje tok tepla
 udává, kolik tepla se v daném místě spotřebovalo. Tato spotřeba tepla
 se projeví zvýšením teploty v daném bodě.
+
+ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg 
 
 **Numerické modelování.**
 Rovnici je možno použít k simulaci časového vývoje teploty například [takto.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) (Pokud si rozkliknete odkaz, neuvidíte rovnici s počátečními podmínkami a příkaz k jejímu vyřešení, ale poměrně dlouhý kód převadějící řešení rovnice vedení tepla na řešení vhodné soustavy lineárních rovnic. V tomto případě se čtyřicetkrát řeší soustava 100 rovnic o 100 neznámých. V inženýrsky zajímavých aplikacích bývají takových rovnic tisíce.)

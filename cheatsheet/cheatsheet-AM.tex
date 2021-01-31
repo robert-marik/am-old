@@ -3,6 +3,7 @@
 \usepackage[czech]{babel}
 \usepackage[latin2]{inputenc}
 \usepackage{amsmath, amsfonts}
+
 \usepackage{multicol, enumerate, tikz}
 \setlength{\columnseprule}{0.4pt}
 \everymath{\displaystyle}
@@ -44,14 +45,14 @@
 \def\textbf{\smallskip\hrule\oldtextbf}
 \vspace*{-10pt}
 
-Determinant 2$\times$2: \hfill$
+Determinant 2$\times$2 \hfill$
 \begin{vmatrix}
   a & b \\ c &d
 \end{vmatrix}
 =ad-bc
 $
 
-Determinant 3$\times$3: \\\null\hfill$
+Determinant 3$\times$3 \\\null\hfill$
 \begin{vmatrix}
   a & b & c \\ d & e &f \\ g & h & i
 \end{vmatrix}
@@ -60,10 +61,10 @@ $\hfill\null
 
 \textbf{Vektory}, $\vec a=(a_1,a_2,a_3)$, $\vec b=(b_1,b_2,b_3)$, 
 
-Skalární souèin vektorù:
+Skalární souèin vektorù
 $\vec a\cdot\vec b=a_1 b_1 + a_2 b_2+a_3b_3$
 
-Vektorový souèin vektorù:
+Vektorový souèin vektorù
 \vspace*{-8pt}
 $$\vec a\times \vec b=
 \begin{vmatrix}
@@ -73,7 +74,7 @@ $$\vec a\times \vec b=
 \end{vmatrix}
 $$
 
-Délka vektoru : $|\vec a|=\sqrt{a_1^2+a_2^2+a_3^2}$
+Délka vektoru  $|\vec a|=\sqrt{a_1^2+a_2^2+a_3^2}$
 
 \newcount\formulacount
 \def\hopla{\advance\formulacount by 1 {\scriptsize ({\the\formulacount})\ }}
@@ -176,11 +177,11 @@ Délka vektoru : $|\vec a|=\sqrt{a_1^2+a_2^2+a_3^2}$
 
 \vspace*{-10pt}
 
-Gradient:\hfill $\mathop{\mathrm{grad}}f=\nabla f= \left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)$
+Gradient\hfill $\mathop{\mathrm{grad}}f=\nabla f= \left(\frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z}\right)$
 
-Laplaceùv operátor:\hfill $\nabla^2 f=\frac{\partial^2 }{(\partial x)^2}f+\frac{\partial^2 }{(\partial y)^2}f+\frac{\partial^2 }{(\partial z)^2}f$
+Laplaceùv operátor\hfill $\nabla^2 f=\frac{\partial^2 }{(\partial x)^2}f+\frac{\partial^2 }{(\partial y)^2}f+\frac{\partial^2 }{(\partial z)^2}f$
 
-Lineární aproximace:
+Lineární aproximace
 \begin{align*}
   f(x,y)&\approx f(x_0, y_0)\\&\quad+\frac{\partial f (x_0,y_0)}{\partial
     x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0) \\
@@ -188,17 +189,17 @@ Lineární aproximace:
 \end{align*}
 
 
-Teèna k vrstevnici $f(x,y)=C$ v bodì $(x_0,y_0)$:
+Teèna k vrstevnici $f(x,y)=C$ v bodì $(x_0,y_0)$
 $$     \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0)=0$$
 
 
-Zákon ¹íøení chyb:
+Zákon ¹íøení chyb
 \vspace*{-10pt}
 $$
   \Delta f(x_1,x_2,\dots x_n)\approx\sqrt{\left(\frac{\partial f}{\partial x_1}\Delta x_1\right)^2+\cdots+\left(\frac{\partial f}{\partial x_n}\Delta x_n\right)^2}
 $$
 
-Schwarzova vìta:
+Schwarzova vìta
 \vspace*{-10pt}
 $$ \frac{\partial }{\partial x}
   \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}
@@ -206,9 +207,9 @@ $$ \frac{\partial }{\partial x}
 
 \textbf{Vektorová analýza}\hfill $\vec F=(P,Q,R)=P\vec i+Q\vec j + R\vec k$
 
-Divergence: \hfill$\mathop{\mathrm{div}}\vec F=\nabla \cdot \vec F=\frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R}{\partial z}$
+Divergence \hfill$\mathop{\mathrm{div}}\vec F=\nabla \cdot \vec F=\frac{\partial P}{\partial x} +\frac{\partial Q}{\partial y} +\frac{\partial R}{\partial z}$
 
-Rotace: \hfill $
+Rotace \hfill $
 \begin{aligned}[t]
   \mathop{\mathrm{rot}}\vec F&=\nabla \times \vec F = \begin{vmatrix}
     \vec i & \vec j &\vec k\\
@@ -283,16 +284,16 @@ $$\frac{\partial u}{\partial t}=\sigma +
 \frac{\partial }{\partial z}\left(D_z \frac{\partial u}{\partial z}\right)
 $$
 
-\textit{Stacionární pøípad} (sledujeme stav po dosa¾ení rovnováhy): polo¾íme navíc $\frac{\partial u}{\partial t}=0$
+Ve \textit{Stacionárním pøípadì} (sledujeme stav po dosa¾ení rovnováhy) polo¾íme navíc $\frac{\partial u}{\partial t}=0$.
 
-\textit{Bezzdrojový pøípad} (stavová velièina nemù¾e vznikat ani zanikat): polo¾íme navíc $\sigma=0$
+Pro \textit{bezzdrojový pøípad} (stavová velièina nemù¾e vznikat ani zanikat) polo¾íme navíc $\sigma=0$.
 
-Souèasnì \textit{homogenní} materiál s \textit{lineárními materiálovými vlastnostmi} (v v¹ech místech má materiál stejné vlastnosti a ty se nemìní pøi zmìnì stavové velièiny): kvaziderivace
+Studujeme-li materiál souèasnì \textit{homogenní} a s \textit{lineárními materiálovými vlastnostmi} (v v¹ech místech má materiál stejné vlastnosti a ty se nemìní pøi zmìnì stavové velièiny), potom kvaziderivace
 $$\frac{\partial }{\partial x}\left(D_x \frac{\partial u}{\partial x}\right)$$
 upravíme a pou¾ijeme druhé derivace
-$$D_x \frac{\partial^2 u}{\partial x^2}$$ (pro ostatní promìnné analogicky)
+$$D_x \frac{\partial^2 u}{\partial x^2}$$ ( a pro ostatní promìnné analogicky).
 
-\textit{Izotropní materiál} (materiál  má ve v¹ech smìrech stejné vlastnosti): nerozli¹ujeme materiálové charakteristiky v jednolivých smìrech, klademe $D_x=D_y=D_z=D.$
+U \textit{izotropního materiálu} ( má ve v¹ech smìrech stejné vlastnosti) nerozli¹ujeme materiálové charakteristiky v jednolivých smìrech, klademe $D_x=D_y=D_z=D.$
 
 Pro ménì dimenzí  pou¾ijeme pouze odpovídající poèet difuzních èlenù. Jednotlivé pøedpoklady je mo¾no libovolnì kombinovat.
 
@@ -356,7 +357,7 @@ V integrálu napravo jsou do slo¾ek $P$ a $Q$ funkce $\vec F$ za $x$ a $y$ dosaze
 }
 \textbf{Nezávislost integrálu na integraèní cestì}
 
-$C:\vec r(t)=\phi(t)\vec i+\psi(t)\vec j$, $t\in[a,b]$
+$C\vec r(t)=\phi(t)\vec i+\psi(t)\vec j$, $t\in[a,b]$
 
 Následující výroky jsou ekvivalentní.
 
@@ -408,7 +409,7 @@ $\begin{aligned}
 
 (2) Oblast mezi funkcemi promìnné $x$
 
-$M_1$: $a\leq x \leq b$, $\phi(x)\leq y \leq \psi(x)$ 
+$M_1$ $a\leq x \leq b$, $\phi(x)\leq y \leq \psi(x)$ 
 
 $\iint_{M_1}f(x,y)\dx\dy=\int_a^b \int_{\phi(x)}^{\psi(x)} f(x,y) \dy \dx$
 
@@ -427,7 +428,7 @@ $\iint_{M_1}f(x,y)\dx\dy=\int_a^b \int_{\phi(x)}^{\psi(x)} f(x,y) \dy \dx$
 
 (3) Oblast mezi funkcemi promìnné $y$
 
-$M_2$: $a\leq y \leq b$, $\phi(y)\leq x \leq \psi(y)$ 
+$M_2$ $a\leq y \leq b$, $\phi(y)\leq x \leq \psi(y)$ 
 
 $\iint_{M_2}f(x,y)\dx\dy=\int_a^b \int_{\phi(y)}^{\psi(y)} f(x,y) \dx \dy$
 
@@ -448,7 +449,7 @@ $\iint_{M_2}f(x,y)\dx\dy=\int_a^b \int_{\phi(y)}^{\psi(y)} f(x,y) \dx \dy$
 
 (4) Oblast mezi kruhy nebo kruhovými výseky
 
-$M_3$: $r_1\leq r\leq r_2$, $\phi_1\leq \phi\leq \phi_2$
+$M_3$ $r_1\leq r\leq r_2$, $\phi_1\leq \phi\leq \phi_2$
 
 $\iint_{M_3}f(x,y)\dx\dy=\int_{\phi_1}^{\phi_2} \int_{r_1}^{r_2} f(r,\phi) r \dphi  \dr$
 
@@ -460,7 +461,7 @@ $\iint_{M_3}f(x,y)\dx\dy=\int_{\phi_1}^{\phi_2} \int_{r_1}^{r_2} f(r,\phi) r \dp
   \end{scope}
   \draw[->](0,0)--(3.4,0)node[right]{$x$};
   \draw[->](0,0)--(0,4)node[above]{$y$};
-  %\draw[fill=lightgray, domain=0.5:4] plot ({-0.5+0.15*\x*(\x-1)+1},{\x})-- plot ({3-0.3*\x*(\x-3)},{4.5-\x}) -- cycle;
+  %\draw[fill=lightgray, domain=0.54] plot ({-0.5+0.15*\x*(\x-1)+1},{\x})-- plot ({3-0.3*\x*(\x-3)},{4.5-\x}) -- cycle;
   % \draw[dashed] (1,1)--(1,0) node[below]{$a$};
   % \draw[dashed] (3,4)--(3,0) node[below]{$b$};
   % \draw[dashed] (1,0.5)--(0,0.5) node[left]{$c$};
@@ -492,9 +493,9 @@ $\hfill\null
 
 \textbf{Lineární DR 1. øádu}\hfill $y'+a(x)y=b(x)$
 
-Integraèní faktor:\hfill $e^{\int a(x)dx}$
+Integraèní faktor\hfill $e^{\int a(x)dx}$
 
-Rovnice vynásobená integraèním faktorem:
+Rovnice vynásobená integraèním faktorem
 $$\left(y e^{\int a(x)dx}\right)'=e^{\int a(x)dx} b(x) $$
 
 %$y e^{\int a(x)dx}=C+\int e^{\int a(x)dx} b(x) dx$
@@ -537,7 +538,7 @@ Obecné øe¹ení je
 $$y=C_1y_1+C_2y_2,$$
 kde $y_i$ jsou libovolná lineárnì nezávislá øe¹ení. 
 
-Charakteristická rovnice: $\lambda^2+p\lambda+q=0$
+Charakteristická rovnice $\lambda^2+p\lambda+q=0$
 
 (1) Jsou-li $\lambda_1,\lambda_2\in\mathbb{R}$ dva rùzné reálné koøeny charakteristické
      rovnice, lze polo¾it $${y_1=e^{\lambda_1 x}}, \qquad{y_2=e^{\lambda_2 x}}.$$
@@ -567,15 +568,15 @@ je jedno z partikulárních øe¹ení polynom stejného stupnì.
 %   x&=r\cos\phi\\  y&=r\sin\phi, \quad r\in[0,\infty),\ \phi\in[0,2\pi)
 % \end{aligned}
 % $$
-% Diferenciální operátory v polárních souøadnicích: viz literatura
+% Diferenciální operátory v polárních souøadnicích viz literatura
 
-% Dvojný integrál v polárních souøadnicích: viz Dvojný integrál (5).
+% Dvojný integrál v polárních souøadnicích viz Dvojný integrál (5).
 
 
 
 \textbf{Parametrizace bì¾ných køivek}
 
-(1) Úseèka z $[a_1,a_2]$ do $[b_1,b_2]$:
+(1) Úseèka z $[a_1,a_2]$ do $[b_1,b_2]$
 $$
 \begin{aligned}
   x&=a_1+t(b_1-a_1)\\
@@ -583,7 +584,7 @@ $$
 \end{aligned}
 $$
 
-(2) Kru¾nice se støedem v poèátku a polomìrem $r$:
+(2) Kru¾nice se støedem v poèátku a polomìrem $r$
 $$
 \begin{aligned}
   x&=r\cos(t)\\
@@ -591,7 +592,7 @@ $$
 \end{aligned}
 $$
 
-(3) Èást grafu funkce $y=f(x)$ nad intervalem $[a,b]$:
+(3) Èást grafu funkce $y=f(x)$ nad intervalem $[a,b]$
 $$
 \begin{aligned}
   x&=t\\
@@ -600,26 +601,9 @@ $$
 $$
 
 
-% Vlnová rovnice\hfill
-% $
-%    \frac 1{c^2}\frac{\partial^2 u}{\partial t^2}=\nabla^2 u
-% $
+\columnbreak
 
 
-% Maxwellovy rovnice
-% $$
-% \begin{aligned}
-%       \mathop{\mathrm{div}}\vec E&=\frac{\rho}{\epsilon_0}&&&
-%       \mathop{\mathrm{div}} \vec B&=0\\
-%       \mathop{\mathrm{rot}}\vec E&=-\frac{\partial \vec B}{\partial t}&&&
-%       \mathop{\mathrm{rot}}\vec B&=\mu_0\vec j+\mu_0\epsilon_0\frac{\partial\vec E}{\partial t}
-% \end{aligned}
-% $$
-
-
-
-\end{multicols}
-\end{document}
 \textbf{Separace promìnných v PDR}  
 (Pro jednoduchost uva¾ujme rovnici v 1D s Dirichletovou úlohou a homogenními okrajovými podmínkami.)
 
@@ -694,6 +678,32 @@ Podobnì jako u rovnice vedení tepla, ale máme dvì poèáteèní podmínky a diferenci
 }
 \vfill\vfill\vfill\vfill\vfill\vfill
 \null
+\columnbreak
+
+\vfill\vfill\vfill\vfill\vfill\vfill
+\null
+
+
+% Vlnová rovnice\hfill
+% $
+%    \frac 1{c^2}\frac{\partial^2 u}{\partial t^2}=\nabla^2 u
+% $
+
+
+% Maxwellovy rovnice
+% $$
+% \begin{aligned}
+%       \mathop{\mathrm{div}}\vec E&=\frac{\rho}{\epsilon_0}&&&
+%       \mathop{\mathrm{div}} \vec B&=0\\
+%       \mathop{\mathrm{rot}}\vec E&=-\frac{\partial \vec B}{\partial t}&&&
+%       \mathop{\mathrm{rot}}\vec B&=\mu_0\vec j+\mu_0\epsilon_0\frac{\partial\vec E}{\partial t}
+% \end{aligned}
+% $$
+
+
+
+\end{multicols}
+\end{document}
 
 
 \end{multicols}
