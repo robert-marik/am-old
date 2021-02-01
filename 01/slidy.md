@@ -208,7 +208,7 @@ Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne
 (Zpracováno podle Stewart: Biocalculus)
 
 
-ww:parcialni_derivace/povrch_tela.pg
+ww:problems/parcialni_derivace/povrch_tela.pg
 
 # Linearita parciální derivace
 
@@ -351,6 +351,8 @@ Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciá
 > Platí následující aproximace derivace podle $y$.
 > $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \\ \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\\\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
 >
+
+ww:problems/parcialni_derivace/centralni_diference.pg
 
 ## Diskerizace diferenciálních rovnic pomocí konečných diferencí
 
