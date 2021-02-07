@@ -82,6 +82,8 @@ $$\nabla\cdot \vec F=\pdv{x}(ax^2y^3)+\pdv{y}(x^2+y)=2axy^3+1$$
 
 # Nalezení kmenové funkce 1/3
 
+https://youtu.be/cjN80-0M77Q
+
 Pro vektorové pole $$\frac 45 x y^3\vec \imath + \frac 65x^2y^2\vec\jmath$$ najděte funkci $\varphi$ tak, že zadané vektorové pole je rovno gradientu $\nabla \varphi.$
 
 <div class=reseni>
@@ -102,6 +104,8 @@ $$\varphi(x,y)=\frac 25 x^2y^3+C,\quad C\in\mathbb R.$$
 
 # Nalezení kmenové funkce 2/3
 
+https://youtu.be/Km-_WWQi_kg
+
 Pro vektorové pole $$\left(x^2+\frac 45 x y^3\right)\vec \imath + \left(\frac 65x^2y^2+y\right)\vec\jmath$$ najděte funkci $\varphi$ tak, že zadané vektorové pole je rovno gradientu $\nabla \varphi.$
 
 <div class=reseni>
@@ -120,6 +124,8 @@ $$\varphi(x,y)=\frac {1}{3}x^3+\frac 25 x^2y^3+\frac 12 y^2+C,\quad C\in\mathbb 
 </div>
 
 # Nalezení kmenové funkce 3/3
+
+https://youtu.be/mgZl8AScBgI
 
 Pro vektorové pole $$\left(y+\frac 45 x y^3\right)\vec \imath + \left(\frac 65x^2y^2+x^2\right)\vec\jmath$$ najděte funkci $\varphi$ tak, že zadané vektorové pole je rovno gradientu $\nabla \varphi.$
 

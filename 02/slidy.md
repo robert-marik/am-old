@@ -1,14 +1,15 @@
 % Gradient, lineární aproximace
 % Robert Mařík
-% 2020
+% 2020,2021
 
 
 > Anotace.
 >
-> * Umíme pomocí derivace najít rychlost, s jakou se mění veličina, která je objektem našeho zájmu. Budeme sledovat rychlost s jakou se mění veličina jako funkce prostorových proměnných.
-> * Aparát představený v této přednášce má smysl ve dvourozměrném a trojrozměrném světě. Budeme schopni sledovat, v jakém směru veličina roste a klesá maximální rychlostí. Tato veličina v mnoha případech determinuje rychlost s jakou probíhají fyzikální procesy typu difuze nebo vedení tepla. Obecněji tento aparát slouží k lineární aproximaci funkce.
+> * Umíme pomocí derivace najít rychlost, s jakou se mění veličina, která je objektem našeho zájmu. Tuto rychlost je možné chápat obecně, ale my se zaměříme na prakticky nejlépe využitelný případ, kdy budeme sledovat závislost na prostorových proměnných. 
+> * Aparát představený v této přednášce má smysl zejména ve dvourozměrném a trojrozměrném světě. Budeme schopni sledovat, v jakém směru veličina roste a klesá maximální rychlostí. Tato veličina v mnoha případech determinuje rychlost s jakou probíhají fyzikální procesy typu difuze nebo vedení tepla. Obecněji tento aparát slouží k lineární aproximaci funkce.
 > * Naučíme se lineární aproximaci použít i pro vektorové funkce. To umožňuje formulování fyzikálních zákonů dávajících do souvislosti tok a gradient veličiny (spád veličiny) v případě, kdy tyto vektory nemají stejný směr. To umožňuje popis vlastností anizotropních materiálů. Při této příležitosti zjistíme, že některé fyzikální veličiny mají podobu matic. Zpravidla na ně odkazujeme jako na tenzorové veličiny.
 > * Jako vedlejší produkt slouží gradient k nalezení lokální extrémů funkce.
+
 
 > Prerekvizity.
 >
@@ -418,6 +419,8 @@ $\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opač
 
 # Tečna k vrstevnici
 
+https://youtu.be/tc8pmUNyhhI
+
 \iffalse
 
 <div class="obtekat">
@@ -515,7 +518,7 @@ následující věta.
 
 
 
-Na závěr jedna aplikace z oblasti parciálních derivací. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
+Na závěr jedna aplikace z oblasti parciálních derivací a lineárních aproximací vektorových funkcí více proměnných. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
 
 Vektorovou funkci je možné chápat jako zobrazení roviny do sebe, které může odpovídat transformaci tělesa, například působením síly. Popišme tuto deformaci vektorem  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$. Udává o kolik a kterým směrem se posune bod o souřadnicích $(x_1,x_2)$. Pokud je tato vektorová funkce nulová, s tělesem se nic neděje, zůstává na místě. Pokud je konstantní, každý bod se posune stejně a jedná se o posun, bez změny tvaru. V obecném případě však tato funkce konstantní není. Lineární aproximací v bodě $(x_1,x_2)$ dostáváme
 $$\vec U(x_1+\Delta x_1,x_2+\Delta x_2)\approx 
@@ -542,4 +545,22 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 [Obrázky a online výpočty.](https://sagecell.sagemath.org/?z=eJydU8tq20AU3Rv8DxdlESmaKLbadBEyBbeFkoU3behGmDCWbuKpRzNiNHIr_UO-oKt8QL7C-bBePeq42FCoQGIe555z7kMnMI3gi2nWSmRglphqBGeFLu-NzUWKoAUYZ1LUEgSUdY7OynRtqn2UHI9OIH7l2cEOuWRjnDUFsaWidESZ4UYKZywtdmTj0aYxtuZ-MmGTBUumw3dK30l0yabRu3bV7-kuGI9mPBck-dNPkojgUXzZYSeX7DyKFx3ils-izk5hSvTp5MMdGeX-LJzdBhdxuxf9wflwcALf6nKDTrXZ97dXsIbCyrLAzbpisHZoa7BYWGxQu-o7QpOjrv7ULGctOhM5gswIIB0FiWWdrkwOOSoqA6qDYrZWqFC8M9h6TsnvRXw2UNR3Q65xlwRVsEeed1EHtun-3667NqQSTDa0SMuVaWMKkVX_mQQtYQ5SQ5LMmPcR1fZp12X0qD99SZk3I87dzBDo5XH7VDpSNVTGl0fU22eCQ9JlybyvR6BN_vKLxstthK0GLOXBvJth3rbPA7RH1n8hKXnmfaIKbJ_2J7FVXVyNR0CPWVrR1Dzx58lkER42IjjbYErBvgygzVu2eXdTvOgJbuafeWGkdn5PxSA1ylh-ajE7ZVDKBvnbSRAWRtUPRh9HCVWsBKdfIAiV1HgMFLzK0Rv2kp2RncgOv1QVHgb0-kPIvVSK39oK98SPxpcr88NfuVz53vUqfu-F82S6CL3ri3YT7IHA110RGWTyQbqSv9m_9ckDSdGkpu7OCicNnx5TsC3pb7sKl7c=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
+
+
+# Z ptačí perspektivy
+
+\iffalse
+
+<div class='obtekat'>
+
+![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+
+</div>
+
+
+\fi
+
+
+* Parciální derivace z minulé přednášky sleduje vliv každé vstupní proměnné na funkční hodnotu funkce samostatně. Gradient se snaží podchytit informaci od všech prostorových proměnných současně do vektoru, mířícího směrem maximálního růstu funkčních hodnot a majícího velikost odpovídající nárůstu na intervalu jednotkové délky.
+* Pomocí gradientu dokážeme formulovat lineární aproximaci funkce. U vektorových  funkcí tuto aproximaci můžeme formulovat pro každou komponentu samostatně a dostáváme tak nástroj, jak pomocí maticového násobení aproximovat funkční vztahy, kde na vstupu i na výstupu je vektor. To umožňuje jednotný popis všech materiálových vztahů, kde vektorová veličina, která je podnětem, vyvolává jako odezvu jinou vektorovou veličinu. Například pokles teploty, definovaný směrem a intenzitou, vyvolává tok tepla odpovídajícím směrem a odpovídající intenzitě.
 

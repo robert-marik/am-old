@@ -10,7 +10,7 @@ do
     temp=`cat cache/$cislo.txt`
     tempM=`echo $temp |  cut -d: -f1`
     tempS=`echo $temp |  cut -d: -f2`
-    l=$((tempM*60+tempS+l))
+    l=$(( 10#$tempM * 60 + 10#$tempS +l))
     echo "$i $temp min."
 done
 

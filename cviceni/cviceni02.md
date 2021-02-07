@@ -20,6 +20,7 @@ přičemž všechny veličiny dostazujeme v jednotkách SI (stupně Celsia a kil
 
 </div>
 
+
 # Parciální derivace, gradient
 
 https://youtu.be/Gnl5liHh2fA
@@ -43,6 +44,10 @@ $$
 
 # Gradient funkce s vrstevnicemi ve tvaru kružnic
 
+
+https://youtu.be/irOsyX_k620
+
+
 Určete gradient funkce $z=x^2+y^2$ a zkontrolujte, že je v každém bodě kolmý ke kružnici se středem v počátku. Využijte toho, že spojnice bodu na kružnici se středem kružnice je kolmá k této kružnici. 
 
 <div class=reseni>
@@ -58,6 +63,7 @@ Vektor $(2x,2y)$ v bodě $(x,y)$ míří směrem od počátku, tj ve směru spoj
 
 # Gradient funkce s paprskovitými vrstevnicemi
 
+https://youtu.be/OeEuQqRGeBY
 
 Určete gradient funkce $z=\mathop{\mathrm{arctg}} \frac yx$ a zkontrolujte, že je v každém bodě tečný ke kružnici se středem v počátku. Využijte toho, že tečna je kolmá na poloměr.
 
@@ -115,8 +121,18 @@ $$
 
 </div>
 
+ww:problems/gradient/01.pg
+
+ww:problems/gradient/02.pg
+
+ww:problems/gradient/05.pg
+
+ww:problems/gradient/06.pg
+
 
 # Linearizace vektorové funkce, Jacobiho matice
+
+https://youtu.be/y66fyasf8iw
 
 Jacobiho matice se používá k linearizaci vektorových funkcí, které
 mají na vstupu i na výstupu vektor. Jsou to matice, kde gradienty
@@ -151,6 +167,10 @@ V bodě $(0,0)$ potom
 
 </div>
 
+
+ww:problems/gradient/07.pg
+
+ww:problems/gradient/08.pg
 
 
 # Parciální derivace, gradient a násobení matic
@@ -195,4 +215,73 @@ Dosazením dostáváme $\vec q(A)=(0,3)^T$, $\vec q(B)=(2,0)^T$, $\vec q(C)=\fra
 </div>
 
 
+ww:problems/gradient/10.pg
+
+ww:problems/gradient/11.pg
+
+ww:problems/gradient/12.pg
+
+
+
+# Gradient numericky
+
+https://youtu.be/A13omrC6i2I
+
+<div class=chart>
+
+$T$|$-30$|$-25$|$-20$|$-15$|$-10$|$-5$|$0$|$5$|$10$|$15$|$20$|$25$|$30$
+--|---|---|---|---|---|--|-|-|--|--|--|--|--
+$-30$|81.39|84.14|86.39|88.14|89.39|90.14|90.39|90.14|89.39|88.14|86.39|84.14|81.39
+$-25$|83.47|86.22|88.47|90.22|91.47|92.22|92.47|92.22|91.47|90.22|88.47|86.22|83.47
+$-20$|85.54|88.29|90.54|92.29|93.54|94.29|94.54|94.29|93.54|92.29|90.54|88.29|85.54
+$-15$|87.62|90.37|92.62|94.37|95.62|96.37|96.62|96.37|95.62|94.37|92.62|90.37|87.62
+$-10$|89.69|92.44|94.69|96.44|97.69|98.44|98.69|98.44|97.69|96.44|94.69|92.44|89.69
+$-5$|91.77|94.52|96.77|98.52|99.77|100.52|100.77|100.52|99.77|98.52|96.77|94.52|91.77
+$0$|93.84|96.59|98.84|100.59|101.84|102.59|102.84|102.59|101.84|100.59|98.84|96.59|93.84
+$5$|95.92|98.67|100.92|102.67|103.92|104.67|104.92|104.67|103.92|102.67|100.92|98.67|95.92
+$10$|97.99|100.74|102.99|104.74|105.99|106.74|106.99|106.74|105.99|104.74|102.99|100.74|97.99
+$15$|100.07|102.82|105.07|106.82|108.07|108.82|109.07|108.82|108.07|106.82|105.07|102.82|100.07
+$20$|102.14|104.89|107.14|108.89|110.14|110.89|111.14|110.89|110.14|108.89|107.14|104.89|102.14
+$25$|104.22|106.97|109.22|110.97|112.22|112.97|113.22|112.97|112.22|110.97|109.22|106.97|104.22
+$30$|106.29|109.04|111.29|113.04|114.29|115.04|115.29|115.04|114.29|113.04|111.29|109.04|106.29
+
+Tabulka $T(x,y)$, vodorovně $x$, svisle $y$
+
+
+</div>
+
+
+<style>
+
+.chart td {padding-left:0.5em; padding-right:0.5em; }
+.chart td:nth-child(1){  
+  background-color:#0a5028;
+  color:white;
+
+}
+
+.chart tr { padding:5px;}
+
+</style>
+
+!["Termosnímek" k tabulce. Pozor na to, že v tabulce rostou hodnoty $y$ směrem dolů, ale v grafu nahoru.](gradient_num.png)
+
+Rozložení teploty v plošném materiálu je po vyhodnocení dat z termosnímku dáno tabulkou. Situace může vypadat například jako v tomto zadání. Určete gradient teploty v bodě o souřadnicích $x=20$ a $y=5$.
+
+**Poznámka:** Ve skutečnosti se nejedná a termosnímek, ale o graf funkce dané tabulkou. Barvy jsou interpolovány pro hladší přechody. Příkazy generující tabulku a obrázek jsou [zde](https://sagecell.sagemath.org/?z=eJyVU81um0AQvlvyO4ySi3FsB5xaqhL5lkfwLUqlNYzNGtily4JY3qEPUPWUYw9R7706ea98i-OkShOpBYFm4Ztvvvlrl9OL8HJxeRFeEdEpKVFZ0bCSVHAnqTTaPwUrxcOBewUPBzdtOyHnbmkJaJVujUxo5D8FV56oMLLLRE-QGa5yUA4Hw8EK8Cj8PJ-GszAat-3sy5zOKJx9ihZj52gKcx4t5viD4xV4GhenGkoSYQUOW1Zs6h0XTIp3ItM1bWqVxQA0sJ-1wmc4qOpi2Wf1b9cplcKIgq2pqU5EI3YSrAhBhY6pUyLViZKI65UgkeXqDBHGRqhkVMmOR6sg-Dja6SGBk07ASbESJ3RghOiGc4SC5Vmj8ygMaUxG1yBezcY4fsj7zNoJnQGfosgCtCgFVHLFViqcCll5wcNBGetcmxH65txkFcB7a8SGLJe5ts4jekAhSkq1pTfz4LH1hNbCNGCrUpFItSWpLJvyXWTj0lx06Be6wmhi4p4DgOI1gb_cDG_YsIrx5QWNLNY6Q33KtahKju3oJiLct8F7DJXlndr_pOLhx-P3_b3NtCfQa5RaV_u7OO2nsspqyw_fPLDTa-OV7u_7XmS6spL2v9P88Rc1cDT7u85Hx9An7SRxt0tESiQriwadL4LD6jSu1DFbOv7rHa6XNwvCFIYQe4AlclN3fr-ElTF7jNVZu5yO6HoUTaJgnLTYCG_PYTs6rBMwPdAdgPM_gPMXoCdLdZ6QVsPB11o2fOx2Lzt4KXrjjjuJhDOrjW44xabrHIOjqS9HVmMbj7m8ofOK_aun_A86uDwB2ZdivQ==&lang=octave&interacts=eJyLjgUAARUAuQ==).
+
+<!-- https://sagecell.sagemath.org/?z=eJyVU9uOmzAQfUfiH0abl5BNssA2UrURb_sJeYtSyQuT4AA2NQZhvr7HySatdlu1RQLNmDNnzlw8Zqvn-GXz8hwT0YyU6KwYWElqeJLUGu3fhpXiMHB3bBjsx3FJzh0oA7IrT0YWNPdH0dbzNEZOlbjEV4a7GoxhEAY7wJP4a7qK13GyGMf1t5QeKV5_STYL52gFM002Kf7A3YJncHmpIaQQVsA5sWLTn7lhUnwWle7p2KsqB2CA_S4VMWHQ9U0WQ8s_PjNqhRENW9NTX4hBnCVYkYIandOkRKkLJZHXK0Eh2e4RGRZGqGLeyYnnuyj6c7bZtYCHSSBIsRIPdGWE6IFrpILlWZOnJI5pQUb3IN6tF3Cjv7BOQlfAl2iyAC1aAZXcsZUKXiM7LzgM2lzX2swxN-eWuwjRJyOOZLmttXUecQE0oqVSW_qwDh7bL-lNmAFsXSkKqU4klWXT_hY5uLIWE-aFqTCGWLj3BKD4WcCnMMNHNqxynNzRqOJNV72XuC_GZeEOGdCFZGXRoqdNdKEaXKtztnT7dcG_ZvskJuxBTMlhe-2ZPPaTX3BhZc4eZHU1Zqs5vc6TZRItihE76e0UtqPrQgNzAborMP0FmN6BnqzUdUFahcH3Xg586_dFdnQve3C3W4HxV1YbPXCJq6ZrjE6TfjNiqnrch1sxH-i8Yv9x0f_RIeQHCMIuJQ==&lang=octave&interacts=eJyLjgUAARUAuQ== -->
+
+<div class=reseni>
+
+Pomocí centrální diference odhadneme parciální derivace pro $x=20$ a $y=5$.
+$$\frac{\partial T}{\partial x}\approx \frac{98.67-102.67}{2\times 5}=-0.4$$
+$$\frac{\partial T}{\partial y}\approx \frac{102.99-98.84}{2\times 5}=0.415$$
+Gradient je $$\nabla T=\begin{pmatrix} -0.400\\ 0.415\end{pmatrix}.$$
+Směřuje tedy doleva nahoru. To koresponduje s obrázkem, v bodě $x=20$ a $y=5$ teplota roste směrem doleva a nahoru.
+
+</div>
+
+
+ww:problems/gradient/gradient_numericky.pg
 

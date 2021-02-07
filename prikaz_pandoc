@@ -22,7 +22,7 @@ sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="container"> <iframe cla
 # Vymena jmena prikladu za odkaz je nadvakrat kvuli predavani retezce
 # jako argumentu funkce.
 
-sed -i 's/<p>ww:\(.*\)<\/p>/<a onclick="otevrit(\1);" target="_blank" class="WWotazka">Testová otázka<\/a>/' index.html
+sed -i 's/<p>ww:\(.*\)<\/p>/<a onclick="otevrit(\1);" target="_blank" class="WWotazka">WW-otázka<\/a>/' index.html
 
 sed -i "s/otevrit(problem\(.*\))/otevrit('problem\1')/" index.html
 

@@ -1,6 +1,22 @@
 % Divergence vektorového pole, rovnice kontinuity
 % Robert Mařík
-% 2020
+% 2020, 2021
+
+
+> Anotace.
+>
+> * Představíme si univerzální nástroj umožňující popsat libovolný transportní děj v přírodě. Tedy transport energie (vedení tepla), transport vody (sušení dřeva, proudění podzemní vody, proudění tzv. mělké vody) a transport látky obecně (pohyb sedimentů, pohyb tektonických vrstev).
+> * Aparát představený v této přednášce se věnuje základním principům transportních dějů. Naučíme se základní představu o fungování těchto dějů naformulovat matematicky. Vzniklé rovnice řešit nebudeme, což vůbec nevadí. Řešení za nás zvládnou počítače, role člověka je však nezastupitelná právě při formulaci modelu, což bude naším hlavním úkolem.
+> * Během analýzy transportních jevů si představíme nový diferenciální operátor, operátor divergence. Vyjadřuje, zda tok zesiluje a nabírá na intenzitě (tj. z daného místa více vytéká, než teče dovnitř) nebo naopak.
+
+
+> Prerekvizity.
+>
+> * Navážeme na využití vektorových funkcí a gradientu k popisu proudění látky nebo energie prostředím.
+> * Ukážeme si, jak se matematicky odrazí v popisu izotropie nebo homogenita materiálu, jak se liší popis stacionárních a nestacionárních jevů, jak se liší popis materiálů s lineárními a nelineárními materiálovými vlastnostmi. Pod těmito pojmy je vždy vhodné si představovat konkrétní situace a pokud se budete při používání těchto pojmů cítit zaskočeni, můžete si oživit znalosti například na Wikipedii.
+> * Zobecníme si rovnici vedení tepla v jedné dimenzi, kterou jsme si odvodili v úvodní přednášce. Je proto vhodné si základní fakta o této rovnici zopakovat.
+
+
 
 # Transportní jevy
 
@@ -232,7 +248,7 @@ $$
 a vztahu  pro tok stavové veličiny dostáváme rovnici
 $$
       {\frac{\partial u}{\partial t}=\sigma - \nabla\cdot \bigl(-D\nabla u\bigr)}.$$
-      Tuto rovici je možno upravit na tvar
+      Tuto rovnici je možno upravit na tvar
 $$
       {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)},$$
 který se nazývá *difuzní rovnice*.
@@ -281,7 +297,7 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(k\nabla T\bigr)}$$
 >* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
 >* Výraz $k\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-k\nabla T$.
 >* Člen $\nabla\cdot(k\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
->* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divegrence toku $\nabla\cdot (-k\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (k\nabla T)$ je proto záporný.
+>* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divergence toku $\nabla\cdot (-k\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (k\nabla T)$ je proto záporný.
 
 \iffalse
 
