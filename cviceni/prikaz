@@ -20,6 +20,9 @@ sed -i 's/\\(/\\(\\displaystyle /g' *.html
 
 sed -i "s/<!-- menu -->/$menu/" *md.html
 
+sed -i -e :a -e '/<blockquote>$/N; s/<blockquote>\n/<blockquote>/; ta' *md.html 
+sed -i 's/<blockquote><p>Anotace./<blockquote class="anotace"><p class="anotacename">Anotace.<\/p><p>/' *md.html
+
 for i in `ls cviceni*.md.html`
 do
     sed -i "s/' href='$i'/ ACTIVE' href='$i'/"  $i

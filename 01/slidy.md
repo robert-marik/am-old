@@ -167,7 +167,7 @@ dráha vychází v metrech.
  
 \iffalse
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&lang=sage&interacts=eJyLjgUAARUAuQ==https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&lang=sage)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPIVtfk5cpWsFUw1jMx1TI0iNPQNQOK-ABFsrVytcrijHi5cg2APENDAwNerjIwE8QqKMrMK1HQ8NHItc010CmzLTPQ1ESI6qVkpqVplGnik81FkQUABtslGg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 \fi
 

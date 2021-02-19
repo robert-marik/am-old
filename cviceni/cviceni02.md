@@ -1,6 +1,14 @@
 % Gradient
 
 
+> Anotace.
+>
+> * V úvodu si osaháme gradient a jeho využití k lineární aproximaci a jeho vztah k vrstevnicím.
+> * Komplexnější je příklad číslo 5, kde mimo jiné v podúkolu číslo 7 vlastně najdeme lineární aproximaci relativně komplikované funkce jedné proměnné (nalezené v podúkolu 6). V podstatě tečnu k vrstevnici nemusíme hledat derivováním funkce zadané touto vrstevnicí. Můžeme najít tečnou rovinu k funkci více proměnných a poté přislušný řez této tečé roviny bude tečnou k vrstevnici. Použitý aparát je sice pokročilješí (používáme funkce více proměnných tam, kde by stačily funkce jedné proměnné), ale početní náročnost je nižší (derivujeme podstatně jednodušší funkce).
+> * V šestém příkladě si ilustrujeme na příkladě linearizaci vektorové funkce v počátku, což je v podstatě cesta k jednotné formulaci konstitučních zákonů. Ukázku použití takového zákona si představíme v sedmém příkladě.
+> * Poslední příklad nás vrací do reality zpracování reálných dat a vyzkoušíme si nalezení gradientu numerickou cestou.
+
+
 # Linearizace pocitové teploty
 
 https://youtu.be/NFymct4-4jQ

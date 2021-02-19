@@ -14,6 +14,9 @@ U křivkového integrálu jsme se setkali s momentem setrvačnosti a jak řešit
 
 Řešení obou nesnází je stejné: použití dvojného integrálu. Ten si nyní představíme.
 
+
+https://youtu.be/DYySq6o6WTk
+
 \def\maxwidth{5cm}
 
 \iffalse
@@ -99,6 +102,7 @@ U křivkového integrálu jsme se setkali s momentem setrvačnosti a jak řešit
 
 # Dvojný integrál
 
+https://youtu.be/tPf-7dZ4Il0
 
 <div class='obtekat'>
 
@@ -147,7 +151,11 @@ konstantnou. Přesněji, platí následující věty.
 
 > Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
 
+# Výpočet dvojného integrálu
 
+https://youtu.be/ItTWxJGD3sY
+
+Výpočet dvojného integrálu se provádí převodem, na integrály funkcí jedné proměnné.
 
 # Výpočet (oblast mezi funkcemi proměnné $x$)
 
@@ -234,6 +242,8 @@ snazší.
 
 
 # Výpočet (obdélníková oblast)
+
+https://youtu.be/o38mi3tTAvw
 
 <div class='obtekat'>
 ![Integrál přes obdélník.](fub_3.png)

@@ -79,7 +79,7 @@ nazýváme *integrálem po uzavřené křivce*.
 
 </div>
 
-# Převod na Riemannův integrál (rovinná křivka)
+## Převod na Riemannův integrál (rovinná křivka)
 
 <div class="sloupce">
 
@@ -108,7 +108,7 @@ $$
 </div>
 
 
-# Převod na Riemannův integrál (prostorová  křivka)
+## Převod na Riemannův integrál (prostorová  křivka)
 
 Podobně jako v rovině převádíme na Riemannův integrál i křivkový integrál prvního druhu po prostorové křivce 
 $$
@@ -124,7 +124,7 @@ $$
 $$
 
 
-# Aplikace křivkového integrálu prvního druhu
+## Aplikace křivkového integrálu prvního druhu
 
 <style>
 table, th, td {
@@ -170,7 +170,7 @@ th {text-align: center;}
 
 
 
-# Vlastnosti křivkového integrálu prvního druhu
+## Vlastnosti křivkového integrálu prvního druhu
 
 * Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci
   křivky $C$. Pro různé parametrizace stejné křivky má integrál
@@ -468,7 +468,6 @@ rovnoběžné osy.
 
 ## Online výpočet křivkového integrálu
 
-* [Mathematical assistant on web](http://um.mendelu.cz/maw-html/index.php?lang=cs&form=lineintegral) - i s postupem a grafem křivky
 * Křivkový integrál prvního druhu. [numericky pomocí Sage](https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&lang=sage)
 * Křivkový integrál druhého druhu, [numericky pomocí Sage](https://sagecell.sagemath.org/?z=eJxtkMFuwyAQRO-W_A8r5RBIaepGOVXi6p-o2ogaUiEbcDGxgK8v2CFqoywXntjRzDAzi7Zui-tqs9lAZJxpCeeL7jtRV61HngQSMX0OiUIhnyAWaOoqnyy3ZtayEzBaA72Vc59UHjlMD7vOTOlSVyHjJPUCMUNT1ErEVToyy5Rwtq6ckpo4xTxtyOvLcTfKm9mDWV70RQkrOzacpHbi27IBwRl5mnOQQLM_iTQ7Y9jB9GMd4vKcNvKDw5-HpwXDf4wFMYE0t1z4vfnIttxMLAotT2ttqtiIYGDqizMY38biD9cAcE1AALWetIFAG3H6kBSXS6HdvX6_hMjCNefaYumAs_2D0rPonLHoLhjec-NO6ZP5pXNlp7jiP-WgtPsFHlShKA==&lang=sage)
 

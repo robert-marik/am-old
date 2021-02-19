@@ -489,3 +489,22 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
   difuzní rovnicí a lineárním konstitučním vztahem s konstantním
   skalárním difuzním koeficientem (homogenní izotropní prostředí s
   lineární materiálovou odezvou).
+
+
+# Z ptačí perspektivy
+
+\iffalse
+
+<div class='obtekat'>
+
+![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+
+</div>
+
+
+\fi
+
+* U vektorového pole nás zajímá, jestli popisuje tok, který nabírá na intezitě nebo naopak slábne. Toto je skryto v pojmu divergence.
+* Formulováním bilance dávající do souvislosti intenzitu změny toku s vydatností zdrojů a s časvovou změnou je možno formulovat matematické modely popisující transportní jevy. Nezáleží na charakteru přenášené veličiny, může se jednat o energii i o hmotu, nezáleží ani na tom, pomocí jakého parametru množství přenášené tokem měříme. Výsledkem je rovnice kontinuty.
+* Rovnici kontinutity často spojujeme ještě se zákonem udávajícím tok jako veličinu určenou gradientem stavové veličiny a konstitutivním zákonem. Výsledným spojením je difuzní rovnice. 
+* Difuzní rovnice je základním nástrojem pro popis transportu vody ve dřevě nebo v propustných vrstvách půdy, je také základním nástrojem pro modelování vedení tepla, tj. například pro popis tepelného namáhání stěny domu, detailu okna či dvěří, ulice v rozpáleném městě nebo krajiny, ve které jsou umístěny lesy, pole, města.

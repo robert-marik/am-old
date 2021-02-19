@@ -14,6 +14,8 @@
 
 # Příklady vektorových polí v rovině
 
+https://youtu.be/KR42PRY-72U
+
 * Homogenní pole $$\vec F_1=(0,-1)=-\vec \jmath.$$ Každý vektor je stejný (směr i velikost).
 * Radiální pole $$\vec F_2=(x,y)=x\vec \imath+y\vec \jmath.$$ Každý vektor směřuje od počátku souřadnic.
 * Rotující pole $$\vec F_3=(-y,x)=-y\vec \imath+x\vec \jmath.$$ Je kolmé na radiální pole. Každý vektor je tečný ke kružnici se středem v počátku souřadnic. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJyr0KlUsFUoSyzSUK_QqVTX5OVKBPILcvJL4stSk0vyi-LTMlNzUjQ0gLKaOgpAStdYxxjEqoSxkvNz8ots1ZNySlNB-pOw69et1KnAb0BRagpIf3FGfrlGooK2QpKOQmJxAdCQ-KLEksx8W0NNAAglMj4=&lang=sage)
@@ -29,6 +31,8 @@
   modelovat vektorovým polem $$\vec F_6=(y(1-y),0)=y(1-y)\vec \imath.$$
 
 # Totální diferenciál
+
+https://youtu.be/nD_nqakTN-A
 
 > Definice (totální diferenciál). Totálním diferenciálem funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ nazýváme výraz
 $$      \mathrm{d}f=
@@ -62,6 +66,7 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 
 # Rotace
 
+https://youtu.be/ev3eFilaGpw
 
 > Definice (rotace vektorového pole). Pro vektorovou funkci tří proměnných  $$\vec
   F=P\vec \imath+Q\vec \jmath+R\vec k$$ definujeme operátor <span class='red'>rotace</span> symbolicky
@@ -106,6 +111,8 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 <!-- ![Nevírové pole](nevirove.svg)	 -->
 
 # Rotace významných polí
+
+https://youtu.be/JChhJ4nDAtw
 
 * Dostředivé pole ubývající s libovolnou mocninou vzdálenosti má nulovou rotaci. Pro $$\vec F(x,y)=-\frac{x\vec \imath +y \vec \jmath}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=0.$$ [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3Q16iIM9KujDPSjMvT0a1E4RoAVRZn5JdrQJTDeBoKKZlpaRpu0YaxYHGdCk1dqIgBVKRSU0FTrzgztyAnM60yPq00J0cDKAIAmQYn8A==&lang=sage)
 
@@ -306,7 +313,7 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 
 \iffalse
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJxdjMEKwyAQRO-B_EPIJaux4iqx9OBfLHgpgYIEcgmtDfv9tUgK6W3mPWb4kWEgxYNomwgliIBOox2N9hYnSRdE7a6SZzAavSjc3XzhP9I2iULUaV0WIAEcrFcUyuxr-DD8Z5553fYuVthVqvr71h8q0bnyqb5feQdIJI22YrYjJJZTCfXjA7FANgY=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJx1jEEKgzAQRfeCdxA3zqgJJmJKF7nFgItSoTQVXFTbVOb8jUitXXT3_3t_hi8eMio5wzhqIQS0qpZKF5U0WjU5CaVkfci5g0oqg4HXRxP4RuLIkW2lG_oeCIGtNiXZcIZ5JXWw_LH8a5s4evhhnBNoV56sAjeeCiHSb3W0y_x39nr6GZZxp4tl1-ndS75d58nDyVHp-IxynPwdEN_qCUOs&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 \fi 
 
@@ -788,3 +795,23 @@ označovaný **zákon šíření chyb**.
 
 
 -->
+
+
+
+
+# Z ptačí perspektivy
+
+\iffalse
+
+<div class='obtekat'>
+
+![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+
+</div>
+
+
+\fi
+
+* Rotace vektorového pole je další z diferenciálních operátorů. Význam tohoto operátoru nespatřujeme v jeho základním určení, které mu dalo název a srozumitelnou interpretaci (roztáčí unášené objekty okolo své osy), ale v jeho souvislosti s existencí skalárního potenciálu vektorového pole. 
+* Ve dvourozměrné formulaci je nulovost rotace nutná a současně postačující podmínka k zavedení skalárního potenciálu, tj. k možnosti přejít od vektorového popisu pole ke skalárnímu popisu (skalární je jednodušší).
+* V závěru přednášky, bez souvislosti s operátorem rotace, jsme se seznámili s dovedností analyzovat vliv nepřesností ve vstupních datech na nepřesnost na výstupu. Zákon šíření chyb umožní naplánovat experiment zaměřený na stanovení nepřímo měřené veličiny a umožní identifikovat ty části procesu, které podstatně ovlivňují spolehlivost výsledku.

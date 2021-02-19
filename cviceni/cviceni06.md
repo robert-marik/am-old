@@ -2,6 +2,8 @@
 
 # Integrál přes obdélník
 
+https://youtu.be/oFbhyqFRjmQ
+
 ![Nákres integrační množiny](fig0.png)
 
 Vypočtěte dvojný integrál $$\iint_\Omega xy^2\mathrm dx\mathrm dy$$
@@ -27,6 +29,8 @@ $$
 </div>
 
 # Kvadratický moment pro obdélník
+
+https://youtu.be/ykJy7r7Ena4
 
 Vypočtěte integrál
 $$
@@ -56,6 +60,8 @@ $$
 </div>
 
 # Integrál závislý na parametru
+
+https://youtu.be/GhdGvrx_pks
 
 ![Nákres integrační množiny](fig1.png)
 
@@ -87,6 +93,8 @@ tj. ve dvou třetinách hloubky.
 
 
 # Integrál přes trojúhelník
+
+https://youtu.be/w0iqtpQvhAE
 
 ![Nákres integrační množiny](fig2.png)
 
@@ -125,6 +133,8 @@ $$
 
 
 # Integrál pod parabolou
+
+https://youtu.be/Sur6lhdR3ts
 
 ![Nákres integrační množiny](fig3.png)
 

@@ -2,6 +2,8 @@
 
 # Křivkový integrál druhého druhu po třech různých křivkách
 
+https://youtu.be/i-y8bRLmopE
+
 Vypočtěte $$\int_{C_i} \vec F \mathrm d\vec r$$ pro vektorové pole $$\vec F=-y\vec \imath + x\vec\jmath$$ po třech různých křivkách $C_1$, $C_2$ a $C_3$.
 $$\begin{aligned}
   C_1&\colon \vec r=\cos(t)\vec \imath + \sin (t)\vec\jmath, \quad t\in\qty[0,\frac\pi 2]\\
@@ -64,7 +66,7 @@ $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(t^2+1)\,\mathrm dt=
 $$
 
 
-![vlastní](priklad_5_1_prace.png)
+![Zdroj: vlastní](priklad_5_1_prace.png)
 
 **Interpretace jako práce, srovnání.**
 
@@ -75,7 +77,7 @@ Integrál fyzikálně znamená práci vektorového pole $(-y,x)$ po zadané kři
 Křivka $C_1$ je nejdále od počátku a vektorové pole je na ní nejsilnější. Navíc v každém bodě je síla ve směru křivky a proto se projeví ve výsledném příspěvku bez redukování. Díky tomu můžeme integrál po kružnici počítat stejně jako práci na přímce, tj. součinem délky  křivky $\frac \pi 2$ a velikosti síly $|\vec F|=1$. Po dalších křivkách je síla menší (křivky jdou blíže ke středu) a navíc se neuplatní celá velikost síly, protože síla svírá s křivkou nenulový úhel a při práci se projeví pouze tečná komponenta.
 
 
-![vlastní](priklad_5_1.png)
+![Zdroj: vlastní](priklad_5_1.png)
 
 <!--
 %https://sagecell.sagemath.org/?z=eJx1kMFuwjAQRO-R8g8rgRRHMW3snH3iB3LgRmgUEkMNxo5sQ5u_r01SlbbhtCPN7hvN3hqDkiFJ40hcem0cqOulH-LIEXZXL1Io2zctRzkGhXrxSlNM8twfODqzQiZzTdh222qLRIqtUH7s4KANCBAKHNn5Deo3yEpg8ejQ4BSj80b_eyVhUlhX91I7tCYYgjhpoXjHNubKMUh-5KqrZbPnkplkua5J1WqpFSA_LThc2UBLl0laxVH2gKMzuHBqWGJ4l8yx6chGZOXwHLJ4jjwaztUstPiB-h_csXHku1MWWPWNt06b-iC47BD6xEOKwY8ckyCGSUwpe9m053Bv3_UHKklW-paN7T2jNo0TmpE7PI4WZTHHHzKK8zFhRb4jJvWriccsxpCsLP5mYHDCSe77bfQZei05LCsfBCc2JfiSX8c_x8Q=&lang=sage&interacts=eJyLjgUAARUAuQ==
@@ -95,6 +97,7 @@ Proto je hodnota po křivce nejblíže počátku nejmenší atd. Na křivce $C_1
 
 # Křivkový integrál druhého druhu po parabole
 
+https://youtu.be/udS4xy2WIws
 
 Vypočtěte $$\int_{C} \vec F \mathrm d\vec r$$ pro vektorové pole $$\vec F=x^2\vec \imath + (x+y)\vec\jmath$$ po části paraboly
 $$\begin{aligned}
@@ -163,15 +166,22 @@ $$\int_C\vec F\mathrm d\vec r=\int_0^{1}(2t^3+3t^7)\,\mathrm dt
 
 
 
+ww:problems/krivkovy_integral/09.pg
 
-\obrazek[vlastní]{priklad_5_4.png}
+ww:problems/krivkovy_integral/10.pg
+
 
 # Tok vektorového pole uzavřenou křivkou
+
+https://youtu.be/nqbi-7hwcD4
+
+![Zdroj: vlastní](priklad_5_4.png)
+
 
 Vypočtěte tok vektorového pole $$\vec \Phi_1=(x+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
 
 
-\textit{Návod:} $$\int_0^{2\pi}\sin^2 t\,\mathrm dt=\int_0^{2\pi}\cos^2 t\,\mathrm dt= \pi$$
+**Návod:** Platí $$\int_0^{2\pi}\sin^2 t\,\mathrm dt=\int_0^{2\pi}\cos^2 t\,\mathrm dt= \pi$$
 a tento integrál je možno najít například grafickou cestou.
 
 <div class=reseni>
@@ -197,14 +207,16 @@ kde poslední Riemannův integrál není nutné počítat, protože integrál z 
 
 
 
-\obrazek[vlastní]{priklad_5_5.png}
 
 # Tok vektorového pole uzavřenou křivkou
+
+![Zdroj: vlastní](priklad_5_5.png)
+
 
 Vypočtěte tok vektorového pole $$\vec \Phi_2=(y+2)\vec\imath$$ jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. $$C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].$$
 
 
-\textit{Návod:} $$\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0$$
+**Návod:** Platí $$\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0.$$
 
 <div class=reseni>
 Vektorové pole teče směrem doprava. Kromě toho zesiluje směrem nahoru. Dá se čekat, že tok ven pravou polovinou kružnice bude v každý výšce stejný jako tok dovnitř levou polovinou kružnice a celkový tok bude nulový.
@@ -228,7 +240,3 @@ $$\int_C\vec F\mathrm d\vec r=0$$
 
 
 </div>
-
-
-
-\definecolor{zelena}{HTML}{0A5028}

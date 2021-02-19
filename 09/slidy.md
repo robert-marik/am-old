@@ -96,8 +96,8 @@ $$y'-y=0,$$
 tj.
 $$y'=y.$$
 
-Operátorovými rovnicemi (na množině konstantních vektorových funkcí) jsou i soustavy lineárních rovnic $$AX=B.$$ Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice 
-$$\frac{\mathrm dX}{\mathrm dt}-AX= B$$ operátorová rovnice s lineárním operátorem. Tyto rovnice se v případě, kdy matice $A$ a $B$ nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat v příští přednášce.
+* Operátorovými rovnicemi (na množině konstantních vektorových funkcí) jsou i soustavy lineárních rovnic $$AX=B.$$
+* Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice $$\frac{\mathrm dX}{\mathrm dt}-AX= B$$ operátorová rovnice s lineárním operátorem. Tyto rovnice se v případě, kdy matice $A$ a $B$ nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat za chvíli.
 
 Následující věta vlastně vyjadřuje totéž co princip superpozice z minulého slidu, pouze v jiných pojmech: v pojmech řešení rovnice s lineárním operátorem. 
 
@@ -107,13 +107,13 @@ Následující věta vlastně vyjadřuje totéž co princip superpozice z minul�
 
 Pro $b_1(x)=b_2(x)=0$ všechny tři výše uvedené rovnice splynou a lineární kombinace dvou řešení homogenní lineární rovnice je také řešením. Toto je možné pochopitelně rozšířit na libovolný konečný počet funkcí. 
 
-Pro $b_1(x)=0$ a $C_2=1$ jsou obě nehomogenní rovnice stejné a pokud k řešení rovnie přičteme řešení asociované homogenní rovnice (se stejným operátorem na levé straně, ale nulou na pravé straně), dostaneme řešení stejné rovnice.
+Pro $b_1(x)=0$ a $C_2=1$ jsou obě nehomogenní rovnice stejné a pokud k řešení rovnice přičteme řešení asociované homogenní rovnice (se stejným operátorem na levé straně, ale nulou na pravé straně), dostaneme řešení stejné rovnice.
 
 Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.
 
 * Pokud máme k dispozici několik řešení homogenní rovnice, libovolná jejich lineární kombinace je také řešením. 
 * Za určitých okolností lineární kombinace z předchozího bodu umožní splnit libovolnou počáteční podmínku a vzhledem k jednoznačnosti řešení, která lineární rovnice zpravidla provází, je jistota, že žádné další řešení neexistuje. Nalezení těchto funkcí je tedy zásadní krok při řešení rovnice. 
-* U nehomogenní rovnice stačí najít jedno řešení. Obecné řešení (zahrnující všechna řešení) potom dostaneme tak, že k tomuto řešení přičteme obecné řešení homogenní rovnice, která má stejný lineární operátor, ale pravá strana je nahrazena nulou. Že dostaneme řešení stejné nehomogenní rovnice zajišťuje linearita, že žádné další řešení neexistuje zajišťuje jednoznačnost řešení.
+* U nehomogenní rovnice stačí se úloha najít všechna řešení dá rozdělit na dvě podúlohy: najít jenom jedno řešení a k tomu najít všechna řešení homogenní rovnice se stejnou levou stranou. Každá z těchto dvou úloh je mnohem lehčí než úloha celková a součtem jednoho rešení nehomogenní rovnice a obecného řešení asociované homogenní rovnice dostaneme obecné řešení nehomogenní rovnice.
 
 
 # Příklady využití linearity 
@@ -167,7 +167,7 @@ ověřit přímým dosazením. Toto řešení se nazývá *triviální řešení
 
 <!--
 
-# Operátorová symbolika a linearita operátoru
+### Operátorová symbolika a linearita operátoru
 
 Definujeme-li na množině všech funkcí
 diferencovatelných na intervalu $I$ operátor $L$ vztahem
@@ -193,8 +193,6 @@ $$\begin{aligned}
     &{}=C_1L[y_1](x)+C_2L[y_2](x).
   \end{aligned}$$
 
-# Operátorová symbolika a linearita operátoru (pokračování)
-
 Důsledkem vztahu $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2],$$
 tj. důsledkem skutečnosti že lineární operátor zachovává lineární
 kombinaci funkcí jsou vztahy $$L[Cy]=CL[y]$$ (pro $C_2=0$, $C_1=C$, $y_1=y$) a 
@@ -207,7 +205,7 @@ multiplikativní konstanty. To jsou obraty dobře známé při výpočtu
 derivací a je možné je použít i při dosazování do lineárního
 operátoru.
 
-# Násobek řešení homogenní LDE je řešením téže LDE
+### Násobek řešení homogenní LDE je řešením téže LDE
 
 <div class=sloupce>
 Buď $y_{p0}(x)$ řešením rovnice $$L[y]=0,$$ tj. nechť platí
@@ -239,7 +237,7 @@ požadované vlastnosti.
 </div>
 
 
-# Obecné řešení homogenní LDE
+### Obecné řešení homogenní LDE
 
 Uvažujme homogenní LDE
 $$y'+a(x)y=0. \tag{HLDE}$$
@@ -254,7 +252,7 @@ $$y=Ce^{-\int a(x)\mathrm{d}x}.$$
 
 -->
 
-# Obecné řešení homogenní LDE
+### Obecné řešení homogenní LDE
 
 Uvažujme homogenní LDE
 $$y'+a(x)y=0. \tag{HLDE}$$
@@ -273,7 +271,7 @@ $$y_0=C y_{p0}(x_0)$$ a tuto rovnici je možno vyřešit vzhledem k $C$ vždy, p
 $$y(x)=C e^{-\int a(x)\mathrm{d}x}.$$
 
 
-# Obecné řešení nehomogenní LDE pomocí partikulárního řešení
+### Obecné řešení nehomogenní LDE pomocí partikulárního řešení
 
 Je-li $y_p$ řešením nehomogenní LDE
 $$y'+a(x)y=b(x),$$ je obecným řešením této rovnice
@@ -295,7 +293,7 @@ kde $Cy_{p0}(x)$ je obecným řešením asociované homogenní LDE.
 
 
 
-# Obecné řešení nehomogenní LDE ještě jednou a prakticky
+### Obecné řešení nehomogenní LDE ještě jednou a prakticky
 
 Slovně:
 
@@ -316,7 +314,7 @@ sestavíme obecné řešení zadané rovnice.
 
 <!--
 
-# Nehomogenní LDE – metoda variace konstanty
+### Nehomogenní LDE – metoda variace konstanty
  
  <div class=sloupce>
 Než začneme hledat řešení
@@ -341,7 +339,6 @@ funkce a řešení asociované homogenní rovnice* – a provádíme všechny
 
 </div>
 
-# Nehomogenní LDE – metoda variace konstanty (pokračování)
 
  <div class=sloupce> 
 Pokud v předchozím volíme $u=e^{-\int a(x)\mathrm{d}x}$, je $$v'=b(x)e^{\int a(x)\mathrm{d}x}$$ a odsud $$v=\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x.$$ Partikulární řešení je $$uv=e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$ a obecné řešení LDE
@@ -353,7 +350,7 @@ $$y=Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\ma
 -->
 
 
-# Nehomogenní LDE – metoda integračního faktoru
+### Nehomogenní LDE – metoda integračního faktoru
 
 Zůstává otázka, jak najít partikulární řešení nehomogenní rovnice.
 
@@ -371,4 +368,116 @@ a explicitní tvar řešení je
 $$y =Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$
 
 Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x.$$
+
+
+
+# Autonomní systém ve dvou dimenzích, vektorový zápis
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com](vajicko.jpg)
+
+
+</div>
+
+\fi
+
+
+
+Následující příklad je mírně modifikovaný příklad z [kurzu MIT o diferenciálních rovnicích](https://youtu.be/MCrDzhpu3-s?t=671). Budeme modelovat ohřívání vejce ve vodě o konstantní teplotě $T_0$. Na počátku mají bílek a žloutek teplotu $T_1$ a $T_2$. Žloutek přebírá teplo od bílku rychlostí úměrnou rozdílu teplot žloutku a bílku. Bílek přebírá teplo od vodní lázně rychlostí úměrnou rozdílu teplot a předává teplo žloutku procesem popsaným v předchozí větě. Vody je hodně a její teplota se nemění. Proces můžeme modelovat soustavou diferenciálních rovnic $$\begin{aligned}T_1^\prime &= k_1(T_0-T_1)-k_2(T_1-T_2) \\ T_2^\prime&=k_2(T_1-T_2)\end{aligned}$$
+Tento systém je možno přepsat do tvaru
+$$\begin{aligned}T_1^\prime &= -(k_1+k_2)T_1+k_2T_2+T_0k_1 \\ T_2^\prime&=k_2T_1-k_2T_2\end{aligned}$$
+a zapsat maticově $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
+\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
+\begin{pmatrix}T_1\\T_2\end{pmatrix}
++
+\begin{pmatrix}k_1T_0\\0\end{pmatrix}.
+$$
+Pokud zvolíme teplotní stupnici tak, že teplota vroucí vody je v naší nové stupnici nula, můžeme dokonce eliminovat druhý člen a dostáváme
+$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
+\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
+\begin{pmatrix}T_1\\T_2\end{pmatrix}
+$$
+tj. symbolicky $X'=AX$, kde $X=(T_1,T_2)^T$ je vektorová funkce (sloupcový vektor) a $A$ je $2\times 2$ matice.
+
+# Autonomní systém $X'=AX$
+
+Je-li determinant matice nenulový, má soustava $AX=0$ pouze nulové řešení a systém $$X'=AX$$ má jediné konstantní řešení, kterým je počátek. Konstantní řešení bude nazývat stacionární bod.
+
+Tento autonomní systém můžeme přepsat na $$X'-AX=0$$ a tento systém je lineární, protože díky distributivnímu zákonu pro matice pro operátor $L[X]=X'-AX$ platí
+\dm$$\begin{aligned}L[X_1+X_2]&=(X_1+X_2)'-A(X_1+X_2)\\&=X_1^\prime+X_2^\prime-AX_1 -AX_2\\&=(X_1^\prime -AX_1)+(X_2^\prime-AX_2)\\&=L[X_1]+L[X_2]\end{aligned}$$
+a díky komutativitě při násobení s konstantou $C\in\mathbb R$ také
+\dm$$L[CX]=(CX)'-A(CX)=CX'-CAX=C(X'-AX)=CL[X].$$
+
+Je možné ukázat, že každá počáteční úloha je jednoznačně řešitelná a pro obecné řešení stačí najít tolik nezávislých řešení, kolik komponent má neznámá vektorová funkce $X$. Platí následující věta, kterou je možno ověřit přímo dosazením.
+
+> Věta (souvislost vlastních čísel matice a řešení autonomního systému). Má-li matice $A$ vlastní číslo $\lambda$ a příslušný vlastní vektor je $v$, tj. platí $A v =\lambda v$, je funkce $X(t)=v e^{\lambda t}$ řešením systému $X'=AX.$ Jsou-li $\lambda$ a $v$ komplexní, je řešením i samostatně reálná část a imaginární část.
+
+Autonomní systém $$X'=AX+B\tag{2}$$ je možno na předchozí případ převést po přepsání do tvaru $(X-X_0)'=A(X-X_0)$, kde $X_0$ je řešením soustavy $AX+B=0$, což odpovídá posunu stacionárního bodu do počátku.
+
+> Poznámka (vlastní hodnoty a řešení). Následující poznatky jsou shrnutím a specifikací výše uvedeného a klasifikují stabilitu některých řešení systému (2), tj. $$X'=AX+B.$$ 
+>
+> * Jakmile má systém reálnou kladnou vlastní hodnotu, existuje řešení, které se vzdaluje od stacionárního bodu směrem daným příslušným vlastním vektorem.
+> * Jakmile má systém reálnou zápornou vlastní hodnotu, existuje řešení, které se přibližuje ke stacionárnímu bodu ze směru daného příslušným vlastním vektorem.
+> * Jakmile má systém komplexní hodnotu s kladnou reálnou částí, existuje řešení, které se v oscilacích vzdaluje od stacionárního bodu.
+> * Jakmile má systém komplexní hodnotu se zápornou reálnou částí, existuje řešení, které se v oscilacích přibližuje ke stacionárnímu bodu.
+
+Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté takto čísla generují řešení konvergující do stacionárního bodu. Díky linearitě, jednoznačnosti řešení a tomu, že máme tolik řešení, kolik je nutno pro splnění libovolné podmínky, je možné pomocí těchto dílčích řešení zapsat i libovolné jiné řešení. Tím pádem ale všechna řešení konvergují do stacionárního bodu. Podobně, pokud všechny vlastní hodnoty jsou kladné, všechna řešení se od stacionárního bodu vzdalují. 
+
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156](krvinky.jpg)
+
+
+</div>
+
+\fi
+
+
+**Příklad.** Model ohřívání vajíčka z předchozí části této přednášky má stacionární bod $(0,0)$. Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
+$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
+\begin{pmatrix}-3 & 2 \\ 2 & -2\end{pmatrix}
+\begin{pmatrix}T_1\\T_2\end{pmatrix}.
+$$
+Charakteristická rovnice je 
+$$\lambda^2+5\lambda+2=0$$
+se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$. Budou tedy existovat dvě nezávislá řešení konvergující do počátku a všechna další řešení dostaneme jako jejich lineární kombinaci. Proto všechna řešení konvergují k počátku tj. $T_1=T_2=0$. Obě teploty v naší posunuté stupnici se tedy ustálí na teplotě vodní lázně. Nic jiného jsme ani nečekali, ať mají žloutek a bílek na začátku jakoukoliv teplotu, po čase se teplota ustálí na teplotě vodní lázně. V tomto případě není zajímavé vědět, do jakého stavu systém konverguje, ale například za jak dlouho bude dosaženo potřebné teploty ve žloutku nebo v bílku. V praxi se podobným způsobem neřeší vaření vajec, ale předávání chemických látek jako jsou léky nebo enzymy mezi tkáněmi, prostřednictvím krve. Podobně jako u Newtononova zákona tepelné výměny, i zde je rychlost procesu úměrná množství, v tomto případě úměrná rozdílu koncentrací.
+
+
+
+# Mechanický oscilátor
+
+\iffalse 
+
+<div class='obtekat'>
+
+![Příklad mechanického oscilátoru Zdroj: pixabay.com, Couleur](houpacka.jpg)
+
+
+</div>
+
+\fi
+
+S mechanickým oscilátorem se setkáváme tam, kde je systém vychýlen z rovnováné polohy a nějaká síla jej do této rovnovážné polohy vrací. Přičemž v některých situacích dojde (například vlivem setrvačnosti) k tomu, že systém se přehoupne přes rovnovážnou polohu na opačnou stranu a vrací se zpět. Klasickým případem je těleso o hmotnosti $m$ na pružině. Pokud sílu závisející na rychlosti $v$ a výchylce $x$ označíme $F$, dostáváme
+$$\begin{aligned}\frac {\mathrm dx}{\mathrm dt}&=v, \\ \frac {\mathrm dv}{\mathrm dt}&=\frac 1m F(v,x), \end{aligned}$$
+přičemž první rovnice vyjadřuje, že rychlost je derivace polohy a druhá rovnice je Newtonův zákon síly. Pro pružinu tuhosti $k$ a odpor prostředí úměrný rychlosti dostáváme
+$$\begin{aligned}\frac {\mathrm dx}{\mathrm dt}&=v, \\ \frac {\mathrm dv}{\mathrm dt}&=-\frac km x - bv,\end{aligned}$$
+nebo ve vektorovém tvaru
+$$\frac{\mathrm d}{\mathrm dt}\begin{pmatrix}x\\v \end{pmatrix}=\begin{pmatrix}0&1\\-\frac km & -b \end{pmatrix}\begin{pmatrix}x\\v \end{pmatrix}.$$
+Charakteristická rovnice je
+$$\begin{vmatrix}-\lambda&1\\-\frac km & -b-\lambda \end{vmatrix}=-\lambda (-b-\lambda)+\frac km = \lambda^2+b\lambda + \frac km=0.$$
+Pro velké tlumení, tj. $b^2> \frac {4k}m$ má rovnice dva záporné reálné kořeny
+$$\lambda_{1,2}=\frac{- b \pm \sqrt{b^2-\frac{4k}{m}}}{2}$$
+Systém se tedy bez oscilací překlopí do rovnovážného stau. Při opačné nerovnosti jsou kořeny charakteristické rovnice
+$$\lambda_{1,2}=-\frac{b}{2} \pm \frac 12 i \sqrt{-b^2+\frac{4k}{m}}$$
+komplexní a systém osciluje okolo rovnovážné polohy. Pro $b>0$ mají tyto kořeny zápornou reálnou  část a systém osciluje okolo rovnovážné polohy se zmenšující se amplitudou. Pro $b=0$ se amplituda nezmenšuje a oscilátor kmitá do nekonečna. Případ $b<0$ neuvažujeme, protože odpor prostředí je síla působící proti pohybu.
+
+> Poznámka (diferenciální rovnice druhého řádu). Uvažovaný systém se v literatuře často vyskytuje ve tvau, kdy je rychlost $v$ dosazena do druhé rovnice a poté dostáváme model ve tvaru
+$$\frac{\mathrm d^2 x}{\mathrm dt^2}=-\frac km x - b \frac{\mathrm dx}{\mathrm dt}, $$
+tj. ve tvaru rovnice obsahující první dvě derivace neznámé funkce. V podstatě celá klasická mechanika je založena právě na rovnicích tohoto typu.
 
