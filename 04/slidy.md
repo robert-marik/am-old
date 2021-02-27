@@ -2,7 +2,24 @@
 % Robert Mařík
 % 2020
 
+> Anotace.
+>
+> * Již nějakou dobu studujeme vektorová pole. V této přednášce si několik typických zkusíme vizualizovat. 
+> * Seznámíme se s pojmy kmenová funkce, skalární potenciál, kmenová funkce. Tyto pojmy udávají, zda vektorové pole je či není možné obdržet jako výsledek výpočtu gradientu nějaké skalární funkce. Není to akademická otázka, ale odpověď má dalekosáhlé důsledky. Zjednodušeně řečeno, pokud je odpověď kladná, dají se některé úlohy místo ve vektorovém poli řešit v poli skalárním, což nese výrazné usnadnění.
+> * S výše uvedenou problematikou souvisí pojem rotace vektorového pole, který si uvedeme jako další z diferenciálních operátorů vektorové analýzy.
+> * Ukážeme si, že parciální derivace jsou vhodným nástrojem pro jakousi citlivostní analýzu. Seznámíme se v této souvislosti se zákonem šíření chyb.
+
+
+> Prerekvizity.
+>
+> * I zde se seznámíme s diferenciálními operátory. Je žádoucí umět spolehlivě derivovat.
+> * Budeme počítat vektorový součin vektorů. Ten je nejsnazší počítat pomocí determinantů třetího řádu. Tuto dovednost tedy využijeme.
+
+
+
 # Vektorová pole
+
+
 
 * Studujeme funkce $\mathbb{R}^2\to\mathbb{R}^2$ nebo $\mathbb{R}^3\to\mathbb{R}^3$.
 * Bodům v rovině jsou přiřazeny vektory. Můžeme interpretovat jako rychlostní pole nebo silové pole. 
@@ -241,6 +258,8 @@ Na následujících obrázcích jsou modrou barvou vrstevnice proudové funkce a
 
 # Zákon šíření chyb  (chyba nepřímo měřené veličiny)
 
+https://youtu.be/52W524bSOKQ
+
 \iffalse 
 
 <div class='obtekat'>
@@ -289,7 +308,7 @@ factor](https://en.wikipedia.org/wiki/Wind_chill)) je $$W(T,v) =
 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},$$ kde $T$ je teplota
 (ve stupních Celsia) a $v$ je rychlost větru (v km/hod). Teplota byla
 změřena $-11.0\,{}^\circ\!\text{C}$ s chybou $0.2\,{}^\circ\!\text{C}$ a rychlost $26
-\,\text{km/hod}$ s chybou $5\,\text{km/hod}$. S využítím zákona šíření
+\,\text{km/hod}$ s chybou $5\,\text{km/hod}$. S využitím zákona šíření
 chyb určíme, jaký vliv mají nepřesnosti v měření na nepřesnost
 vypočítané veličiny.
 
@@ -814,4 +833,5 @@ označovaný **zákon šíření chyb**.
 
 * Rotace vektorového pole je další z diferenciálních operátorů. Význam tohoto operátoru nespatřujeme v jeho základním určení, které mu dalo název a srozumitelnou interpretaci (roztáčí unášené objekty okolo své osy), ale v jeho souvislosti s existencí skalárního potenciálu vektorového pole. 
 * Ve dvourozměrné formulaci je nulovost rotace nutná a současně postačující podmínka k zavedení skalárního potenciálu, tj. k možnosti přejít od vektorového popisu pole ke skalárnímu popisu (skalární je jednodušší).
+* Rotace je jedním z vyjadřovacích prostředků, které použijeme později pro formulaci Greenovy věty, které zprostředkovává přechod mezi difuzní rovnicí v bodě (v nekonečně malém objemu) a bilancí stavové veličiny v měřitelném makroskopickém tělese.
 * V závěru přednášky, bez souvislosti s operátorem rotace, jsme se seznámili s dovedností analyzovat vliv nepřesností ve vstupních datech na nepřesnost na výstupu. Zákon šíření chyb umožní naplánovat experiment zaměřený na stanovení nepřímo měřené veličiny a umožní identifikovat ty části procesu, které podstatně ovlivňují spolehlivost výsledku.

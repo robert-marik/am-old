@@ -157,7 +157,7 @@ https://youtu.be/ItTWxJGD3sY
 
 Výpočet dvojného integrálu se provádí převodem, na integrály funkcí jedné proměnné.
 
-# Výpočet (oblast mezi funkcemi proměnné $x$)
+### Výpočet (oblast mezi funkcemi proměnné $x$)
 
 <div class='obtekat'>
 
@@ -183,7 +183,7 @@ integrál. Mají název **Fubiniovy věty**.
 > $$
 
 
-# Výpočet (oblast mezi funkcemi proměnné $y$)
+### Výpočet (oblast mezi funkcemi proměnné $y$)
 
 <div class='obtekat'>
 ![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
@@ -205,7 +205,7 @@ integrál. Mají název **Fubiniovy věty**.
 > 
 
 
-# Záměna pořadí integrace
+### Záměna pořadí integrace
 
 <div class='obtekat'>
 
@@ -270,8 +270,11 @@ obdélníkovou oblast.
 >   $$
 > 
 
+# Aplikace dvojného integrálu
 
-# Matematické aplikace dvojného integrálu
+https://youtu.be/8YS2Fn8st5I
+
+### Matematické aplikace dvojného integrálu
 
 
 
@@ -285,7 +288,7 @@ obdélníkovou oblast.
 
   \iffalse
 
-# Objem kopce nebo jezera pomocí vrstevnic
+### Objem kopce nebo jezera pomocí vrstevnic
 
 <div class='obtekat'>
 
@@ -308,7 +311,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
   \fi
   
-# Fyzikální aplikace dvojného integrálu
+### Fyzikální aplikace dvojného integrálu
 
 
 
@@ -332,7 +335,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   procházející kolmo počátkem je $\rho(x,y)=\sqrt{x^2+y^2}$.
 
 
-# Technické aplikace dvojného integrálu
+### Technické aplikace dvojného integrálu
 
 
 \iffalse
@@ -368,7 +371,9 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   kde $S=\mu (M)$ je obsah množiny $M$.
   Poloha těžiště je tedy střední hodnotou funkcí $x$ a $y$.
 
-# Aplikace dvojného integrálu - tuhost nosníků, stabilita stromů
+
+
+### Tuhost nosníků, stabilita stromů
 
 
 \iffalse
@@ -425,7 +430,7 @@ Odsud máme okamžitě několik pozorování
 
 \iffalse 
 
-# Aplikace dvojného integrálu - těžiště složeného obrazce
+### Těžiště složeného obrazce
 
 Uvažujme množinu $M$ s jednotkovou plošnou hustotou, rozdělenou na dvě
 disjunktní části $M_1$ a $M_2$. Tyto množiny mají $x$-ovou polohu
@@ -459,7 +464,7 @@ Zobecnění výše uvedených myšlenek na množinu rozdělenou na více část�
 je již snadné.
 
 
-# Aplikace dvojného integrálu - Steinerova věta
+### Steinerova věta
 
 Nechť je dána množina $M$ s plošnou hustotou $\sigma(x,y)$. *Ukážeme,
 že vzhledem k ose procházející těžištěm je nejmenší moment
@@ -501,7 +506,7 @@ v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k
 
 \fi
 
-# Aplikace dvojného integrálu - tlak na svislou plochu
+### Tlak na svislou plochu
 
 \iffalse
 
@@ -572,7 +577,7 @@ Nikde ve výpočtu jsme nepoužili konkrétní meze pro integraci. Výsledek
 tedy platí nejenom pro hráz dosahující k hladině, ale například i pro
 poklop výpusti, který je celý pod vodou.
 
-# Aplikace dvojného integrálu - působiště tlakové síly
+### Působiště tlakové síly
 
 Budeme pokračovat v předchozím příkladě a hledat působiště výsledné
 tlakové síly.
@@ -617,7 +622,11 @@ $y$-ové polohy těžiště $y_0$.
 
 \fi
 
-# Polární souřadnice
+# Dvojný integrál v\ polárních souřadnicích
+
+https://youtu.be/lEObYHpX72w
+
+### Polární souřadnice
 
 <div class='sloupce'>
 
@@ -644,7 +653,7 @@ $x$.
 
 \newpage
 
-# Množiny s jednoduchým vyjádřením v polárních souřadnicích
+### Množiny s jednoduchým vyjádřením v polárních souřadnicích
 
 Nejsnáze se při výpočtu dvojného integrálu pracuje s obdélníkovými
 množinami, tj. s množinami charakterizovanými nerovnostmi pro jednotlivé
@@ -700,8 +709,7 @@ th {text-align: center;}
 
 \velkatabulkakonec
 
-# Dvojný integrál v\ polárních souřadnicích
-
+### Převod dvojnýho integrálu do polárních souřadnic
 
 \def\maxwidth{5cm}
 

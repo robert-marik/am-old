@@ -1,2 +1,2 @@
-% Diferenciální rovnice II
+% Lineární autonomní systémy
 

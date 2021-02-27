@@ -40,9 +40,11 @@ _Umění najít řešení diferenciální rovnice je sympatické, není to však
 
 </div>
 
-\obrazek{mladata.jpg}
+# Jednoduché modely založené na diferenciálních rovnicích
 
-# Model růstu úměrného velikosti chybějícího množství
+## Model růstu úměrného velikosti chybějícího množství
+
+![pixabay.com](mladata.jpg)
 
 Mnoho
 živočichů roste tak, že mohou dorůstat jisté maximální délky a
@@ -62,17 +64,18 @@ Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky ch
 $$\dv {L}{t}=k (L_{\max}-L).$$
 </div>
 
-![pixabay.com](kontaminace.jpg)
 
-# Kontaminace a čištění
+## Kontaminace a čištění
+
+![pixabay.com](kontaminace.jpg)
 
 Znečišťující látky se v kontaminované oblasti rozkládají tak, že za den se samovolně rozloží 
 $8\%$ aktuálního znečištění. Kromě toho pracovníci odstraňují látky rychlostí $30$
 galonů denně. Vyjádřete tento proces kvantitativně pomocí vhodného
 modelu.
 
-\textit{Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na změně podílejí dva procesy a jejich účinek se sčítá. Příklad navíc připomíná, jak se pracuje se změnou vyjádřenou procenty. Toto je používané například při úročení spojitým úrokem. Pokud pokles změníme na růst, tj. pokud změníme
-  znaménka u derivace, máme okamžitě model růstu financí na účtu, na kterém se pravidelně připisuje úrok a k tomu se přidává fixní úložka.}
+_Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na změně podílejí dva procesy a jejich účinek se sčítá. Příklad navíc připomíná, jak se pracuje se změnou vyjádřenou procenty. Toto je používané například při úročení spojitým úrokem. Pokud pokles změníme na růst, tj. pokud změníme
+  znaménka u derivace, máme okamžitě model růstu financí na účtu, na kterém se pravidelně připisuje úrok a k tomu se přidává fixní úložka._
 
 <div class=reseni> Je-li $y$ znečištění v galonech a $t$ čas ve dnech, má model tvar
 $$\dv {y}{t}=-0.08y-30.$$
@@ -106,9 +109,10 @@ $$\dv {y}{t}=-0.08y-30.$$
 
 
 
-![pixabay.com, autor Free-Photos](deer.jpg)
 
-# Populace jelenů
+## Populace jelenů
+
+![pixabay.com, autor Free-Photos](deer.jpg)
 
 Populace jelenů v národním parku přibývá rychlostí 10\% za
 rok. Správa parku každý rok odebere 50 jedinců. Napište
@@ -120,7 +124,7 @@ $$ \dv {x}{t}=0.10 x-50, $$ kde $t$ je čas v letech.
 </div>
 
 
-# Hrubý model chřipkové epidemie
+## Hrubý model chřipkové epidemie
 
 Rychlost s jakou roste počet nemocných chřipkou je úměrný současně
 počtu nemocných a počtu zdravých jedinců. Sestavte model takového
@@ -133,9 +137,10 @@ Je-li $M$ velikost populace a $y$ počet nemocných, je v populaci $M-y$ zdravý
 $$\dv {y}{t}=ky(M-y).$$
 </div>
 
-![](olej.jpg)
 
-# Ropná skvrna
+## Ropná skvrna
+
+![pixabay.com](olej.jpg)
 
 Kruhová ropná skvrna na hladině se rozšiřuje tak, že její poloměr jako
 funkce času roste rychlostí, která je nepřímo úměrná druhé mocnině
@@ -146,7 +151,7 @@ Je-li $r$ poloměr, je $r^2$ druhá mocnina a protože se jedná o nepřímou ú
 $$\dv {r}{t}=\frac{k}{r^2}.$$
 </div>
 
-# Model učení
+## Model učení
 
 Rychlost učení (tj. časová změna objemu osvojené látky nebo procento z
 maximální manuální zručnosti) je úměrná objemu dosud nenaučené
@@ -158,9 +163,10 @@ $$\dv {L}{t}=k (L_{\max}-L).$$
 </div>
 
 
-![](ledni_medved.jpg)
 
-# Tloušťka ledu
+## Tloušťka ledu
+
+![pixabay.com](ledni_medved.jpg)
 
 Takzvaný Stefanův zákon (J. Stefan, Uber die Theorie der Eisbildung, insbesondere uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve
 stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište
@@ -185,9 +191,10 @@ $$
 
 
 
-![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
 
 # Model vypouštění nádrže
+
+![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
 
 Z fyziky je známo, že rychlost s jakou
 vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny
@@ -199,13 +206,13 @@ hladiny.
 Ukažte, že matematickým popisem procesu je diferenciální rovnice.
 Napište rovnici pro výšku hladiny vody v nádrži jako funkci času.
 Uvažujte tři případy:
-nádrž \textbf{cylindrického tvaru} (válec postavený na podstavu),
+nádrž _cylindrického tvaru_ (válec postavený na podstavu),
 nádrž ve tvaru
-\textbf{kvádru} 
-a nádrž ve tvaru \textbf{kužele} otočeného vrcholem dolů (trychtýř). 
+_kvádru_
+a nádrž ve tvaru _kužele_ otočeného vrcholem dolů (trychtýř). 
 
 
-\textit{V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky.}
+_V tomto příkladě vystupuje derivace jak rychlost, ale po přepisu zadání do modelu máme v rovnici dvě různé veličiny, které se mění: objem vody a výšku hladiny. Musíme ještě najít a použít vztah mezi rychlostmi změn těchto veličin. Fyzikální zákon je formulován pro derivaci objemu a nás zajímá derivace výšky._
 
 <div class=reseni>
 Buď $V$ objem vody a $h$ výška hladiny od dna.
@@ -231,10 +238,11 @@ $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 </div>
 
 
-![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
 
 
 # Problematika jednoznačnosti v modelu vypouštění nádrže
+
+![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
 
 Dříve jsme odvodili rovnici
 $$\dv {h}{t}=-k\sqrt h$$

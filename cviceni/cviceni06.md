@@ -192,7 +192,11 @@ $$
 Obsah je $\frac 23$ a souřadnice těžiště jsou $\left[\frac 38,\frac 4{10}\right]$. Toto je možné porovnat s obsahem a souřadnicemi těžiště trojúhelníka, který vznikne nahrazením paraboly přímkou a tento trojúhelník má obsah $\frac 12$ a souřadnice těžiště $\left[\frac 13,\frac 13\right].$
 
 </div> 
+
+
 # Integrál přes čtvrtkružnici
+
+https://youtu.be/_YT3FDpfZsQ
 
 ![Nákres integrační množiny](fig4.png)
 
@@ -212,32 +216,32 @@ Určete obsah a polohu těžiště této čtvrtkružnice.
 
 V polárních souřadnicích daných rovnicemi $$
 \begin{aligned}
-  x&=r\cos\phi\\
-  y&=r\sin\phi
+  x&=r\cos\varphi\\
+  y&=r\sin\varphi
 \end{aligned}
 $$
-má čtvrtkružnice vyjádření $0\leq r\leq 1$, $0\leq \phi\leq \frac \pi2$.
+má čtvrtkružnice vyjádření $0\leq r\leq 1$, $0\leq \varphi\leq \frac \pi2$.
 $$
 \begin{aligned}
   \iint_\Omega x\,\mathrm dx\mathrm dy
-  &=\int_0^1 \int_0^{\frac \pi2} r\cos\phi \times r\,\mathrm d\phi\mathrm dr
-  =\int_0^1 r^2 \,\mathrm dr \times \int_0^{\frac \pi2}\cos\phi \mathrm d \phi
-  \\&=\left[\frac 13 r^3\right]_0^1\times \left[\sin\phi\right]_0^{\frac \pi2}=\frac 13 \times 1=\frac 13
+  &=\int_0^1 \int_0^{\frac \pi2} r\cos\varphi \times r\,\mathrm d\varphi\mathrm dr
+  =\int_0^1 r^2 \,\mathrm dr \times \int_0^{\frac \pi2}\cos\varphi \mathrm d \varphi
+  \\&=\left[\frac 13 r^3\right]_0^1\times \left[\sin\varphi\right]_0^{\frac \pi2}=\frac 13 \times 1=\frac 13
 \end{aligned}
 $$$$
 \begin{aligned}
   \iint_\Omega y\,\mathrm dx\mathrm dy
-  &=\int_0^1 \int_0^{\frac \pi2} r\sin\phi \times r\,\mathrm d\phi\mathrm dr
-  =\int_0^1 r^2 \,\mathrm dr \times \int_0^{\frac \pi2}\sin\phi \mathrm d \phi
-  \\&=\left[\frac 13 r^3\right]_0^1\times \left[-\cos\phi\right]_0^{\frac \pi2}=\frac 13 \times 1=\frac 13
+  &=\int_0^1 \int_0^{\frac \pi2} r\sin\varphi \times r\,\mathrm d\varphi\mathrm dr
+  =\int_0^1 r^2 \,\mathrm dr \times \int_0^{\frac \pi2}\sin\varphi \mathrm d \varphi
+  \\&=\left[\frac 13 r^3\right]_0^1\times \left[-\cos\varphi\right]_0^{\frac \pi2}=\frac 13 \times 1=\frac 13
 \end{aligned}
 $$
 $$
 \begin{aligned}
   \iint_\Omega \,\mathrm dx\mathrm dy
-  &=\int_0^1 \int_0^{\frac \pi2} 1 \times r\,\mathrm d\phi\mathrm dr
-  =\int_0^1 r \,\mathrm dr \times \int_0^{\frac \pi2}\mathrm d \phi
-  \\&=\left[\frac 12 r^2\right]_0^1\times {\pi2}=\frac 12 \times \frac \pi 2=\frac \pi 4
+  &=\int_0^1 \int_0^{\frac \pi2} 1 \times r\,\mathrm d\varphi\mathrm dr
+  =\int_0^1 r \,\mathrm dr \times \int_0^{\frac \pi2}\mathrm d \varphi
+  \\&=\left[\frac 12 r^2\right]_0^1\times {\frac \pi2}=\frac 12 \times \frac \pi 2=\frac \pi 4
 \end{aligned}
 $$
 
@@ -249,7 +253,9 @@ což odpovídá tomu, že těžište je posunuto doprava nahoru ve srovnání t�
 
 # Kvadratický moment kruhu
 
-Vypočtěte kvadratický moment kruhu o poloěmru $R$ vzhledem k ose procházející středem.
+https://youtu.be/OPqy2AU-SKU
+
+Vypočtěte kvadratický moment kruhu o poloměru $R$ vzhledem k ose procházející středem.
 
 <div class=reseni>
 

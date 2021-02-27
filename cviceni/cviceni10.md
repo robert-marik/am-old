@@ -1,9 +1,10 @@
 % Autonomní rovnice a systémy
 
-![Zdroj: vlastní](pokros.jpg)
 
 
 # Stavebniny vedle čebínského nádraží: model
+
+![Zdroj: vlastní](pokros.jpg)
 
 Hromada sypkého
 materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný
@@ -40,9 +41,10 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 
 
 
-![Zdroj: vlastní](trolejbus.jpg)
 
 # Časový rozestup mezi trolejbusy
+
+![Zdroj: vlastní](trolejbus.jpg)
 
 Uvažujme dva trolejbusy jedoucí za sebou po stejné trati. Označme
 $x(t)$ jejich časový odstup. Pokud první trolejbus zastaví na určité
@@ -81,9 +83,10 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 </div>
 
 
-![pixabay.com](kost.jpg)
 
 # Propeptid kolagenu
+
+![pixabay.com](kost.jpg)
 
 Kolagen je klíčový protein pojivových tkání. Jeden z kroků při syntéze
 kolagenu spočívá v reakci tří molekul propeptidu kolagenu, zkráceně
@@ -101,9 +104,10 @@ $$\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P$$
 </div>
 
 
-![Jelen a los](moose.jpg)
 
 # Jelen a los
+
+![Jelen a los](moose.jpg)
 
 Uvažujme populaci jelenů a losů. Tyto populace spolu soupeří o potravu. \textbf{(1)} Bez konkurence by populace jelena rostla rychlostí $3$ a  populace losa rychlostí $2$ na jeden kus. \textbf{(2)} Vnitrodruhová konkurence se projevuje v obou populacích stejně a je rovna druhé mocnině příslušné velikosti populace. \textbf{(3)} Mezidruhová konkurence je vyjádřena členem rovným součinu velikosti populací a tato konkurence se projeví s koeficientem 0.5 v populaci losa a s koeficientem 1 v populaci jelena.
 
@@ -136,9 +140,10 @@ $$
 % %https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x*(1-x/10000)-5*0.00001*x*y&dydt=0.25*y*(1-y/6000)-3*0.00001*x*y&x=0,10000,20&y=0,6000,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B4907.407407407408,5229.428571428572%5D,%5B7444.444444444444,3746.6985645933014%5D,%5B8407.407407407407,2633.9712918660284%5D,%5B9259.25925925926,1111.2918660287078%5D,%5B9648.148148148148,423.1578947368416%5D,%5B3240.740740740741,306.0287081339711%5D,%5B1407.4074074074074,935.5980861244016%5D,%5B4611.111111111111,203.5406698564584%5D,%5B5518.518518518518,57.129186602870504%5D
 -->
 
-![wikimedia](pustik.jpg)
 
 # Puštík obecný
+
+![wikimedia](pustik.jpg)
 
 Puštík obecný se téměř výhradně živí malými hlodavci. Předpokládejme následující vztahy.
 \textbf{(1)} Populace hlodavců má porodnost 0.1 na jedince a úmrtnost 0.025 na jedince za jednotku času.
@@ -165,9 +170,10 @@ $$
 </div>
 
 
-![Kůň Převalského](prevalski.jpg)
-
 # Kůň Převalského
+
+
+![Kůň Převalského](prevalski.jpg)
 
 Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tyto koně loveni vlky. Napište matematický model založený na následujících předpokladech.
 \textbf{(1)} Porodnost v populaci koní je  0.15 na jedince. \textbf{(2)} Úmrtnost v populaci koní je  0.01 na jedince.

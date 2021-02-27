@@ -141,9 +141,10 @@ V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být
 
 </div>
 
-![pixabay.com](chladic.jpg)
 
 # Stacionární vedení tepla v žebru chladiče
+
+![pixabay.com](chladic.jpg)
 
 Vyjímečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
 Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako

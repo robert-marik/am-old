@@ -2,6 +2,21 @@
 % Robert Mařík
 % 2020
 
+
+> Anotace.
+>
+> * V přednášce se seznámíme s nástrojem, který umožňuje sečíst příspěvky k veličině, která nás zajímá, podél křivky. Seznámíme se s křivkovým integrálem. 
+> * Seznámíme se s pojmy kmenová funkce, skalární potenciál, kmenová funkce. Tyto pojmy udávají, zda vektorové pole je či není možné obdržet jako výsledek výpočtu gradientu nějaké skalární funkce. Není to akademická otázka, ale odpověď má dalekosáhlé důsledky. Zjednodušeně řečeno, pokud je odpověď kladná, dají se některé úlohy místo ve vektorovém poli řešit v poli sklárním, což nese výrazné usnadnění.
+> * S výše uvedeou problematikou souvisí pojem rotace vektorového pole, který si uvedeme jako další z diferenciálních operátorů vektorové analýzy.
+> * Ukážeme si, že parciální derivace jsou vhodným nástrojem pro jakousi citlivostní analýzu. Seznámíme se v této souvislosti se zákonem šíření chyb.
+
+
+> Prerekvizity.
+>
+> * Křivkový integrál počítáme převodem na Riemannův integrál. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
+
+
+
 # Křivkový integrál
 
 https://youtu.be/n2roVUrXgcw
@@ -54,6 +69,8 @@ resp. dvojicí skalárních funkcí.
 
 
 # Křivkový integrál prvního druhu
+
+https://youtu.be/ZRed88fgDkI
 
 <div class='obtekat'>
 
@@ -252,6 +269,8 @@ Pokud se chcete dozvědět více, zkuste Google a heslo "hoop stress".
 
 # Křivkový integrál druhého druhu
 
+https://youtu.be/GeJgtBHy_sM
+
 <div class='obtekat'>
 
 \iffalse
@@ -396,6 +415,8 @@ i+Q(x,y)\vec j,$
 * Křivkový integrál prvního druhu **nezávisí na orientaci** křivky.
 * Křivkový integrál druhého druhu **při změně orientace křivky mění znaménko**.
 
+<!--
+
 \iffalse
 
 # Steinerova věta
@@ -429,6 +450,8 @@ rovnoběžné osy.
 </div>
 
 \fi
+
+-->
 
 # Závěrečné informace
 
@@ -465,8 +488,6 @@ column-count:5;}
 column-count:3;}
 .sloupce4 ul li {display:inline-block; max-width:100%;}
 </style>
-
-
 
 
 # Z ptačí perspektivy
