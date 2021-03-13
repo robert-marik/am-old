@@ -1,8 +1,15 @@
 % Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity
 
+> Anotace.
+>
+> * V úvodních příkladech ilustrujeme výpočet křivkového interálu pomocí kmenové funkce. Příkaldů je několik, aby se zapsalo do paměti to nejdůlěžitější: že se křivkový integrál dá v některých případech vypočítat snadno pomocí kmenové funkce. Jak konkrétně postupovat je již dovednost navazující.
+> * Greenova věta pro nás bude mít spíše teoretickcý význam. Umožňuje přepis křivkového integrálu na dvojný. Vlastní použití není těžké a osaháme si jej i v domácích úlohách. I zde je důležité v první řadě vědět, že to jde a teprve potom přemýšlet nad tím, jak konkrétně se to dělá.
+> * V příkladě se vrátíme i k difuzní rovnici.
+
 
 # Křivkový integrál pomocí kmenové funkce
 
+https://youtu.be/-VCnGpRz3K0
 
 Určete, pro jako hodnotu parametru $a\in \mathbb R$ křivkový integrál vektorového pole $$\vec F=ax^2y\vec\imath + (x^3+1)\vec\jmath$$ po křivce $C$, tj. $$\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy$$ nezávisí na integrační cestě v $\mathbb R^2$. Najděte kmenovou funkci příslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu $[0,0]$ do bodu $[1,2]$.
 
@@ -48,6 +55,8 @@ $$\int _C \vec F\mathrm d\vec r=\varphi(1,2)-\varphi(0,0)=2+2-0=4.$$
 
 # Křivkový integrál pomocí kmenové funkce 2
 
+https://youtu.be/WtLoQ79wUdo
+
 Pro jakou hodnotu parametru $m$ je křivkový integrál
 $$\int (6x^2y+x+y)\,\mathrm dx+(mx^3+x)\,\mathrm dy$$ nezávislý na
 integrační cestě v $\mathbb R^2$? Vypočtěte hodnotu tohoto integrálu
@@ -80,6 +89,8 @@ $$\varphi(1,3)-\varphi(2,1)=6+\frac 12 +3-\qty(16+2+2)=-\frac{21}2.$$
 
 # Kmenová funkce pomocí křivkového integrálu
 
+https://youtu.be/y-gTOlGVRXI
+
 Ukažte, že vektorové pole
 $\vec F=(6x^2y+x+y,2x^3+x)$ má kmenovou funkci. Vypočtěte z definice křivkový integrál v tomto vektorovém poli po křivce $\vec r(t)=(at,bt)$, $t\in[0,1]$, tj. po úsečce z počátku do bodu $(a,b)$ a ukažte, že tímto způsobem obdržíme kmenovou funkci.  
 
@@ -111,6 +122,8 @@ $$\varphi(x,y)=2x^3y+\frac 12 x^2+xy+C.$$
 
 # Greenova věta
 
+https://youtu.be/J6BVkOzg0mg
+
 Určete integrál $$\oint_C \vec F\,\mathrm d\vec r$$ po křivce, která je kladně orientovanou hranicí jednotkového čtverce s vrcholy v bodech $(0,0)$, $(1,0)$, $(0,1)$, $(1,1)$ pro vektorovou funkci $$\vec F=x^7\vec i+xy\vec j.$$
 
 <div class=reseni>
@@ -130,6 +143,8 @@ $$
 
 # Rovnice vedení tepla v materiálech různých vlastností
 
+https://youtu.be/CKZNkuyDd5Y
+
 Rovnice vedení tepla v ortotropním materiálu umístěném do souřadné soustavy tak, aby vlastní směry tenzoru tepelné vodivosti (jako např. anatomické směry dřeva) má nejobecnější možné vyjádření
 $$c\rho\pdv{T}{t}=\pdv{x}\qty(\lambda_x\pdv{T}{x} )+\pdv{y}\qty(\lambda_y\pdv{T}{y}) . $$
 Za jakých okolností je možno veličiny $\lambda_x$ a $\lambda_y$ napsat před vnější derivaci tak, aby v rovnici vznikly druhé derivace? 
@@ -143,6 +158,8 @@ V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být
 
 
 # Stacionární vedení tepla v žebru chladiče
+
+https://youtu.be/zvs3TsvBrho
 
 ![pixabay.com](chladic.jpg)
 

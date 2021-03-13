@@ -452,7 +452,7 @@ kol., Štruktúra a vlastnosti
 dreva](https://katalog.mendelu.cz/documents/21654), str. 359)
 $$\frac{\mathrm d^2 y}{\mathrm dx^2}+\alpha^2 y=0,\quad y(0)=y(l)=0,$$
 kde $\alpha^2=\frac{F}{EI}$ je parametr závislý na působící síle,
-materálu a kvadratickém momentu průřezu nosníku. (Pro jiné způsoby uchycení se rovnice a okrajové podmínky mohou mírně lišit, rovnice může být například i nehomogenní a pro jiné druhy zatížení i vyššího řádu, zásadní vlastnosti jsou však stejné.) Toto je stejná úloha jako u kmitání struny. Při síle, která se postupně zvětšuje, se nenulové řešení objeví v bodě, kde platí $$\alpha l=\pi,$$ (odpovídá základní frekvenci struny) tj.
+materiálu a kvadratickém momentu průřezu nosníku. (Pro jiné způsoby uchycení se rovnice a okrajové podmínky mohou mírně lišit, rovnice může být například i nehomogenní a pro jiné druhy zatížení i vyššího řádu, zásadní vlastnosti jsou však stejné.) Toto je stejná úloha jako u kmitání struny. Při síle, která se postupně zvětšuje, se nenulové řešení objeví v bodě, kde platí $$\alpha l=\pi,$$ (odpovídá základní frekvenci struny) tj.
 $$\sqrt{\frac {F}{EI}}l=\pi$$
 a
 $$F=\frac{\pi^2 EI}{l^2}.$$
@@ -526,7 +526,7 @@ $$\varphi''+\lambda^2\varphi=0$$
 a okrajové podmínky si vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji viděli u kmitů struny nebo u namáhání na vzpěr. Řešením je funkce $\varphi(x)=\sin(\lambda x)$, kde $\lambda$ je vlastní hodnota této úlohy.
 Funkce $$u(x,t)=\sin(\lambda x)e^{-\lambda^2 t}$$ je tedy řešením rovnice 
 $$\frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}.$$ 
-Rovnici je monžo přepsat do tvaru
+Rovnici je možno přepsat do tvaru
 $$\frac{\partial u}{\partial t}-\frac{\partial^2 u}{\partial x^2}=0,$$
 kdy na levé straně stojí lineární operátor a na pravé straně je nula. Proto je každá lineární kombinace řešení opět řešením a pro libovolnou volbu konstant je funkce
 $$u(x,t)=\sum_{\lambda}C_\lambda\sin(\lambda x)e^{-\lambda^2 t}$$

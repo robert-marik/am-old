@@ -2,6 +2,20 @@
 % Robert Mařík
 % 2020
 
+
+> Anotace.
+>
+> * V přednášce se seznámíme s nástrojem, který umožňuje předvádět mezi sebou křivkové a dvojné integrály. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+> * Dále se seznámíme s vektorovou obdobou Newtonovy-Leibnizovy věty. Naučíme se počítat křivkový integrál druhého druhu pomocí rozdílu potenciálu v koncových bodech. Tato možnost není k dispozici automaticky (pouze pro vektorová pole s nulovou rotací, pro která existuje kmenová funkce), ale pokud je možné touto cestou jít, bývá to velké ulehčení.
+
+> Prerekvizity.
+>
+> * Křivkový integrál převádíme na dvojný integrál. Je proto dobré ovládat výpočet dvojného integrálu.
+> * Pro pochopení odvození rovnice kontinuity v integrálním tvaru je nutné znát význam dvojného integrálu hustoty a umět pomocí křivkového integrálu vypočítat tok.
+> * Dostaneme se jinou cestou ke stejné rovnici, kterou jsme poznali dříve jako difuzní rovnici. Je vhodné si ujasnit fyzikální význam jednotlivých členů této rovnice a jak se ve speciálních případech tyto členy mohou redukovat na členy jednodušší (izotropní materiál, homogenní materiál, materiál s lineárními vlastnostmi, stacionární děj, proces bez zdrojů).
+
+
+
 # Úvod 
 
 
@@ -39,7 +53,7 @@ možno nalézt v literatuře.
   u\ uzavřených křivek).
 * Křivka se nazývá **regulární**, pokud funkce z jejího parametrického
   vyjádření jsou hladké (mají spojité derivace) a v každém bodě je
-  aspoň jedna z těchto funkcí nenulová.
+  aspoň jedna z těchto derivací nenulová.
 * Pokud platí pro libovolné dvě regulární křivky $C$ a $C_1$, které leží v
   $\Omega$ a mají stejné počáteční body a stejné koncové body, platí
   $$
@@ -53,6 +67,8 @@ možno nalézt v literatuře.
   neobsahuje otvory.
 
 # Věta o\ nezávislosti integrálu na integrační cestě
+
+https://youtu.be/zQorgqarHG4
 
 Podle této věty je tedy vektorové pole v\ prostoru
 konzervativní právě tehdy, když je jeho rotace nulová a to je právě
@@ -84,7 +100,7 @@ zavést potenciál (záporně vzatá kmenová funkce).
 >  kde $A$ a $B$ jsou počáteční a koncový bod křivky $C$ a $\varphi$ je
 >  kmenová funkce vektorového pole $\vec F$.
 
-# Poznámky k\ větě o\ nezávislosti křivkového integrálu na integrační cestě
+## Poznámky k\ větě o\ nezávislosti křivkového integrálu na integrační cestě
 
 Větu je možno formálně vyslovit i\ pro jiný než trojrozměrný
 prostor. Pokud je pole v\ předchozí větě pouze v\ rovině, tj. $\vec
@@ -111,7 +127,7 @@ $z=0$ je roven $2\pi$.
 \iffalse
 
 
-# Závislost a nezávislost integrálu na integrační cestě
+## Závislost a nezávislost integrálu na integrační cestě
 
 
 \fi
@@ -144,7 +160,9 @@ $z=0$ je roven $2\pi$.
 
 # Greenova věta
 
-> Věta (Greenova věta).  Nechť $\Omega\subseteq\mathbb{R}^2$ je jednoduše souvislá regulární oblast,jejíž hranicí je po částech regulární křivka $\partial \Omega$
+https://youtu.be/L9iF8H43feQ
+
+> Věta (Greenova věta).  Nechť $\Omega\subseteq\mathbb{R}^2$ je jednoduše souvislá regulární oblast, jejíž hranicí je po částech regulární křivka $\partial \Omega$
 > orientovaná tak, že při obíhání podél křivky $\partial \Omega$ je
 > oblast $\Omega$ vlevo. Nechť vektorová funkce $\vec
 > F(x,y)=P(x,y)\vec i+Q(x,y)\vec j$ je hladká uvnitř nějaké oblasti,
@@ -159,8 +177,8 @@ $z=0$ je roven $2\pi$.
 Použijeme-li pro funkci $\vec F$ vystupující v\ Greenově větě
 třídimenzionální rozšíření (třetí komponenta nulová),
 vidíme, že vpravo v\ dvojném integrálu figuruje třetí komponenta rotace
-$\nabla \times \vec F$. Je to současně jediná nenulová komponenta vektoru
-rotace, zbylé dvě komponenty vektoru rotace jsou rovny nule.
+$\nabla \times \vec F$. Je to současně jediná komponenta vektoru
+rotace, která může být neulová. Zbylé dvě komponenty vektoru rotace jsou rovny nule automaticky.
 
 Pokud zvolíme funkce $P$ a $Q$ tak, že platí $\frac{\partial
 Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}=1$, potom
@@ -170,7 +188,7 @@ principu fungují planimetry.
 
 \fi
 
-# Varianta Greenovy věty pro tok křivkou 
+## Varianta Greenovy věty pro tok křivkou 
 
 Nahradíme-li formálně vektorové pole $P\vec i+Q\vec j$ vektorovým polem $-Q\vec
 i+P\vec j$, dostáváme následující vztah mezi dvojným integrálem
@@ -198,7 +216,7 @@ ani spotřebičů je tok dovnitř křivky stejný jako tok ven (co do
 uzavřeného prostoru vteče, to i\ vyteče ven) a divergence je rovna
 nule.
 
-# Greenova věta a přechod mezi lokálním a globálním tvarem rovnice kontinuity
+## Greenova věta a přechod mezi lokálním a globálním tvarem rovnice kontinuity
 
 Greenova  věta umožňuje přechod mezi lokálním tvarem fyzikálních zákonů (co se děje v daném bodě prostoru) a globálním tvarem (co se děje v konečném objemu). Z fyzikálního hlediska je zajímavější lokální tvar, protože dává náhled, jak fungují studované procesy. Z hlediska pozorovatele je zajímavější globální tvar, protože pracuje s reálně měřitelnými pojmy. Vzhledem k možnosti přechodu mezi těmito přístupy je užitečnost Greenovy věty a jejího trojrozměrného zobecnění nezastupitelná.
 

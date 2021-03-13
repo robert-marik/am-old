@@ -2,6 +2,21 @@
 % Robert Mařík
 % 2020
 
+
+> Anotace.
+>
+> * V přednášce se seznámíme s nástrojem, který umožňuje sečíst příspěvky k veličině, která nás zajímá, ve dvourozměrné množině. Seznámíme se s dvojným integrálem.
+> * Mezi aplikace spadá střední hodnota na dvourozměrné množině.
+> * Pomocí dvojného integrálu je definován kvadratický moment, což je zásadní veličina ovlivňující tuhost a chování nosníků.
+> * Pomocí dvojného integrálu je možné určit množství veličiny ze znalosti její plošné hustoty. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+
+
+> Prerekvizity.
+>
+> * Dvojný integrál počítáme převodem na dva jednorozměrné Riemannovy integrály. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
+
+
+
 V praxi pracujeme s řadou veličin, které se počítají tak, že se parametr systému násobí obsahem. 
 
 * Z plošné hustoty a obsahu násobením obdržíme hmotnost. 
@@ -38,7 +53,7 @@ https://youtu.be/DYySq6o6WTk
 * Toto funguje pro desky s konstantní plošnou hustotou, kdy má deska
   ve všech místech stejné fyzikální vlastnostmi.
 * Pokud je deska slepená z konečného počtu malých homogenních desek o
-  různných plošných hustotách, určíme hmotnost každé jednotlivé desky
+  různých plošných hustotách, určíme hmotnost každé jednotlivé desky
   samostatně a výsledky potom sečteme.
   $$m=\sigma_1 S_1+\sigma_2 S_2+\cdots + \sigma_n S_n$$
 * Pokud není možné nebo vhodné použít předchozí bod, musíme
@@ -145,7 +160,7 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
 veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
 funkcí, nebo integračních oborů) a s násobení integrované funkce
-konstantnou. Přesněji, platí následující věty.
+konstantou. Přesněji, platí následující věty.
 
 > Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí \dm$$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
 
@@ -458,7 +473,7 @@ tedy *váženým průměrem* těžišť jednotlivých složek, kde váha každé
 složky je určena její hmotností. Protože se jedná o vážený průměr,
 tj. vlastně o lineární kombinaci bodů, kdy součet koeficientů je roven
 jedné, okamžitě vidíme, že těžiště složeného obrazce je na úsečce mezi
-těžištmi jednotlivých částí.
+těžišti jednotlivých částí.
 
 Zobecnění výše uvedených myšlenek na množinu rozdělenou na více částí
 je již snadné.
@@ -583,7 +598,7 @@ Budeme pokračovat v předchozím příkladě a hledat působiště výsledné
 tlakové síly.
 
 Tlaková síla působící na svislou hráz má celkový nulový moment
-vzhledem k ose proházející působištěm. Je-li hráz definována množinou
+vzhledem k ose procházející působištěm. Je-li hráz definována množinou
 $M$ a je-li $y_c$ působiště výsledné tlakové síly, je v hloubce $y$
 tlak na plošku o velikosti $\Delta S$ roven $y\rho g \Delta S$ a
 součin $(y_c-y)y\rho g\Delta S$ je příspěvek k\ otáčivému momentu
@@ -709,7 +724,7 @@ th {text-align: center;}
 
 \velkatabulkakonec
 
-### Převod dvojnýho integrálu do polárních souřadnic
+### Převod dvojného integrálu do polárních souřadnic
 
 \def\maxwidth{5cm}
 

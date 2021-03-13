@@ -1,46 +1,16 @@
 % Diferenciální rovnice I
 
 
-# Řešení ODE a IVP 
+> Anotace.
+>
+> * V úvodním příkladu si natrénujeme nejdůležitější schopnost související s diferenciálními rovnicemi: schopnost přepsat slovní formulaci modelu do kvantitativní formy, která umožňuje detailní kvantitativní analýzu. Schopnost sestavit diferenciální rovnici podle slovního zadání.
+> * V dalších úlohách se budeme zabývat problematikou existence a jednoznačnosti řešení. 
+> * Nakonec se naučíme řešit diferenciální rovnice se separovanými proměnnými dvojím integrováním.
 
-1. $\frac{\mathrm dy}{\mathrm dx}=xy^2$
-1. $\frac{\mathrm dy}{\mathrm dt}=te^y$
-1. $\frac{\mathrm dy}{\mathrm dx}=x\sqrt y$
-1. $\frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1$
-1. $\frac{\mathrm dr}{\mathrm dt}=kr^3,\ \ r(0)=r_0>0$
-1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=0$
-1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2$
-
-_Umění najít řešení diferenciální rovnice je sympatické, není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu, připomeneme si v následujícím modelu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech._
-
-
-<div class=reseni>
-
-1. $\frac{\mathrm dy}{\mathrm dx}=x\cdot y^2$
-   *  Konstantní řešení jsou řešení rovnice $$ y^2=0,$$ tj. je jediné konstantní řešení $$ y=0.$$
-    * Pro nekonstantní řešení dostaneme po separaci  $$ y^{-2}\mathrm dy=x\mathrm dx $$ a integrováním $$ -\frac 1y=\frac 12 x^2+C.$$
-1. $\frac{\mathrm dy}{\mathrm dt}=t\cdot e^y$
-    * Konstantní řešení jsou řešení rovnice $$ e^y=0.$$ Protože tato rovnice nemá řešení, zadaná diferenciální rovnice nemá konstantní řešení.
-    * Pro nekonstantní řešení dostaneme po separaci  $$ e^{-y}\mathrm dy= t\mathrm dt$$ a integrováním $$ -e^{-y}=\frac 12 t^2 +C.$$
-1. $\frac{\mathrm dy}{\mathrm dx}=x\cdot \sqrt y$
-    * Konstantní řešení jsou řešení rovnice $$ \sqrt y=0,$$ tj. jediné řešení $$ y=0.$$
-    * Pro nekonstantní řešení dostaneme po separaci  $$ \frac 1{\sqrt y}\mathrm dy=x\mathrm dx $$ a integrováním $$ 2\sqrt y=\frac 12 x^2+C.$$
-1. $\frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1$
-    * Konstantní řešení $$y=0$$ (viz předchozí příklad) nesplňuje počáteční podmínku a proto jej nemusíme uvažovat
-    * Obecné řešení  $$ 2\sqrt y=\frac 12x^2 +C$$ dává po dosazení $x=0$ a $y=1$ rovnici $$2\sqrt 1=0+C.$$ Odsud dostáváme $C=2$ a řešení zadané počáteční úlohy je $$2\sqrt y=\frac 12 x^2+2.$$
-1. $\frac{\mathrm dr}{\mathrm dt}=k\cdot r^3,\ \ r(0)=r_0>0$
-    * Konstantní řešení jsou řešení rovnice $$ r^3=0,$$ tj. jediné konstantní řešení je $$ r=0$$ a toto řešení nesplňuje počáteční podmínku.
-    * Pro nekonstantní řešení dostaneme po separaci  $$ r^{-3}\mathrm dr=k\mathrm dt $$ a integrováním $$ -\frac 12 r^{-2}=kt+C.$$ Dosazením počáteční podmínky $t=0$, $r=r_0$ dostáváme $$ -\frac 12 r_0^{-2}=C.$$ Tím je dána konstanta $C$ a po použití této konstanty v obecném řešení dostáváme řešení počáteční úlohy ve tvaru $$ -\frac 12 r^{-2}=kt-\frac 12 r_0^{-2}.$$
-1. $\frac{\mathrm dm}{\mathrm dt}=m+2$, $m(0)=0$
-    * Konstantní řešení jsou řešení rovnice $$ m+2=0,$$ tj. $$ m=-2$$ a toto řešení nesplňuje počáteční podmínku.
-    * Pro nekonstantní řešení dostaneme po separaci  $$ \frac1{m+2}\mathrm dm=dt $$ a integrováním $$ \ln|m+2|=t+C.$$ Po dosazení počáteční podmínky $t=m=0$ dostáváme $$C=\ln 2$$ a počáteční úloha má řešení $$\ln(m+2)=t+\ln (2).$$ (Vzhledem k počáteční podmínce je $m$ kladné a nemusíme psát absolutní hodnotu.)
-1. $\frac{\mathrm dm}{\mathrm dt}=m+2$, $m(0)=-2$
-    * Konstantní řešení jsou řešení rovnice $$ m+2=0,$$ tj. $$ m=-2.$$ Toto řešení splňuje počáteční podmínku.
-    * Pravá strana má ohraničenou (dokonce konstantní) derivaci podle $m$. Proto je řešení každé počáteční úlohy určeno jednoznačně. Řešení z předchozího bodu je jediné a další nemusíme hledat.
-
-</div>
 
 # Jednoduché modely založené na diferenciálních rovnicích
+
+https://youtu.be/QckWe55HikI
 
 ## Model růstu úměrného velikosti chybějícího množství
 
@@ -62,6 +32,9 @@ _Jakmile vidíme, že v zadání figuruje rychlost změny veličiny,
 <div class=reseni>
 Je-li $L$ délka a $L_{\max}$ maximální délka, potom do maximální délky chybí  $L_{\max}-L$ a model má tvar
 $$\dv {L}{t}=k (L_{\max}-L).$$
+Konstanta $k$ vyjadřuje rychlost s jakou roste délka při jednotkovém rozdílu mezi aktuální délkou a délkou maximální.
+
+
 </div>
 
 
@@ -148,7 +121,7 @@ poloměru. Vyjádřete proces kvantitativně pomocí derivací.
 
 <div class=reseni>
 Je-li $r$ poloměr, je $r^2$ druhá mocnina a protože se jedná o nepřímou úměrnost, platí
-$$\dv {r}{t}=\frac{k}{r^2}.$$
+$$\dv {r}{t}=\frac{k}{r^2}.$$ Konstanta $k$ vyjadřuje rychlost s jakou roste ropná skvrna ve fázi, kdy má jednotkový poloměr $r$.
 </div>
 
 ## Model učení
@@ -174,13 +147,14 @@ tento fakt pomocí vhodného matematického modelu a najděte řešení
 vzniklé diferenciální rovnice.
 
 <div class=reseni>
-
+Je-li $h$ tloušťka ledu, je matematickým vyjádřením situace model
+$$\frac{\mathrm dh}{\mathrm dt}=\frac kh,$$ kde $k$ je konstanta úměrnosti a vyjadřuje rychlost, s jakou roste tloušťka ledu v okamžiku, kdy je tato tloušťka rovna jedné. Postupným řešením získáváme následující vztahy.
 $$
 \begin{aligned}
 \frac{\mathrm dh}{\mathrm dt}&=\frac kh\\
 h\,\mathrm dh&=k\, \mathrm dt\\
 \int h\,\mathrm dh&=\int k\, \mathrm dt\\
-\frac {h^2}{2}&=kt+C\\
+\frac {h^2}{2}&=kt+C
 \end{aligned}
 $$
 
@@ -193,6 +167,8 @@ $$
 
 
 # Model vypouštění nádrže
+
+https://youtu.be/K08zq2cC0DM
 
 ![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
 
@@ -238,9 +214,9 @@ $$\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.$$
 </div>
 
 
-
-
 # Problematika jednoznačnosti v modelu vypouštění nádrže
+
+https://youtu.be/FAatA34JeEo
 
 ![Zdroj: www.rodovystatek.cz](voda_plastovky.jpg)
 
@@ -284,6 +260,50 @@ Zkontrolujte dosazením (pozor: pro $t<0$ platí $\sqrt {t^2}=|t|=-t$) a rozmysl
     $$ a obě strany rovnice jsou stejné. Pro $h=0$ je dosazení triviální. Je-li $h(t_0)=0$, může to být proto, že voda v čase $t_0$ právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například $h(t)=0$ je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce $h(t)=\frac 14 k^2t^2$ pro $t<0$ odpovídá tomu, že pro $t<0$ v nádrži voda byla a vytekla v čase $t=0$.
 
 </div>
+
+
+# Řešení ODE a IVP 
+
+https://youtu.be/XUKvuqSgA6U
+
+1. $\frac{\mathrm dy}{\mathrm dx}=xy^2$
+1. $\frac{\mathrm dy}{\mathrm dt}=te^y$
+1. $\frac{\mathrm dy}{\mathrm dx}=x\sqrt y$
+1. $\frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1$
+1. $\frac{\mathrm dr}{\mathrm dt}=kr^3,\ \ r(0)=r_0>0$
+1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=0$
+1. $\frac{\mathrm dm}{\mathrm dt}=m+2,\ \ m(0)=-2$
+
+_Umění najít řešení diferenciální rovnice je sympatické, není to však nic proti umění sestavit model (naučili jsme se již ve druhém týdnu, připomeneme si v následujícím modelu), umění posoudit jednoznačnost řešení (většina modelů se řeší numericky a musíme být přesvědčeni o smysluplnosti takové činnosti) a  stabilitu řešení (řešení, která nejsou stabilní, jsou sice v souladu s přírodními zákony, ale pravděpodobnost jejich spontánního výskytu je nulová). Jednoznačnost a zjednodušenou verzi stability řešení (stabilita konstantních řešení) jsme viděli na přednášce a připomeneme v dalších příkladech._
+
+
+<div class=reseni>
+
+1. $\frac{\mathrm dy}{\mathrm dx}=x\cdot y^2$
+   *  Konstantní řešení jsou řešení rovnice $$ y^2=0,$$ tj. je jediné konstantní řešení $$ y=0.$$
+    * Pro nekonstantní řešení dostaneme po separaci  $$ y^{-2}\mathrm dy=x\mathrm dx $$ a integrováním $$ -\frac 1y=\frac 12 x^2+C.$$
+1. $\frac{\mathrm dy}{\mathrm dt}=t\cdot e^y$
+    * Konstantní řešení jsou řešení rovnice $$ e^y=0.$$ Protože tato rovnice nemá řešení, zadaná diferenciální rovnice nemá konstantní řešení.
+    * Pro nekonstantní řešení dostaneme po separaci  $$ e^{-y}\mathrm dy= t\mathrm dt$$ a integrováním $$ -e^{-y}=\frac 12 t^2 +C.$$
+1. $\frac{\mathrm dy}{\mathrm dx}=x\cdot \sqrt y$
+    * Konstantní řešení jsou řešení rovnice $$ \sqrt y=0,$$ tj. jediné řešení $$ y=0.$$
+    * Pro nekonstantní řešení dostaneme po separaci  $$ \frac 1{\sqrt y}\mathrm dy=x\mathrm dx $$ a integrováním $$ 2\sqrt y=\frac 12 x^2+C.$$
+1. $\frac{\mathrm dy}{\mathrm dx}=x\sqrt y,\ \ y(0)=1$
+    * Konstantní řešení $$y=0$$ (viz předchozí příklad) nesplňuje počáteční podmínku a proto jej nemusíme uvažovat
+    * Obecné řešení  $$ 2\sqrt y=\frac 12x^2 +C$$ dává po dosazení $x=0$ a $y=1$ rovnici $$2\sqrt 1=0+C.$$ Odsud dostáváme $C=2$ a řešení zadané počáteční úlohy je $$2\sqrt y=\frac 12 x^2+2.$$
+1. $\frac{\mathrm dr}{\mathrm dt}=k\cdot r^3,\ \ r(0)=r_0>0$
+    * Konstantní řešení jsou řešení rovnice $$ r^3=0,$$ tj. jediné konstantní řešení je $$ r=0$$ a toto řešení nesplňuje počáteční podmínku.
+    * Pro nekonstantní řešení dostaneme po separaci  $$ r^{-3}\mathrm dr=k\mathrm dt $$ a integrováním $$ -\frac 12 r^{-2}=kt+C.$$ Dosazením počáteční podmínky $t=0$, $r=r_0$ dostáváme $$ -\frac 12 r_0^{-2}=C.$$ Tím je dána konstanta $C$ a po použití této konstanty v obecném řešení dostáváme řešení počáteční úlohy ve tvaru $$ -\frac 12 r^{-2}=kt-\frac 12 r_0^{-2}.$$
+1. $\frac{\mathrm dm}{\mathrm dt}=m+2$, $m(0)=0$
+    * Konstantní řešení jsou řešení rovnice $$ m+2=0,$$ tj. $$ m=-2$$ a toto řešení nesplňuje počáteční podmínku.
+    * Pro nekonstantní řešení dostaneme po separaci  $$ \frac1{m+2}\mathrm dm=dt $$ a integrováním $$ \ln|m+2|=t+C.$$ Po dosazení počáteční podmínky $t=m=0$ dostáváme $$C=\ln 2$$ a počáteční úloha má řešení $$\ln(m+2)=t+\ln (2).$$ (Vzhledem k počáteční podmínce je $m$ kladné a nemusíme psát absolutní hodnotu.)
+1. $\frac{\mathrm dm}{\mathrm dt}=m+2$, $m(0)=-2$
+    * Konstantní řešení jsou řešení rovnice $$ m+2=0,$$ tj. $$ m=-2.$$ Toto řešení splňuje počáteční podmínku.
+    * Pravá strana má ohraničenou (dokonce konstantní) derivaci podle $m$. Proto je řešení každé počáteční úlohy určeno jednoznačně. Řešení z předchozího bodu je jediné a další nemusíme hledat.
+
+</div>
+
+
 
 <!--
 

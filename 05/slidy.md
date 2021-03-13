@@ -5,17 +5,13 @@
 
 > Anotace.
 >
-> * V přednášce se seznámíme s nástrojem, který umožňuje sečíst příspěvky k veličině, která nás zajímá, podél křivky. Seznámíme se s křivkovým integrálem. 
-> * Seznámíme se s pojmy kmenová funkce, skalární potenciál, kmenová funkce. Tyto pojmy udávají, zda vektorové pole je či není možné obdržet jako výsledek výpočtu gradientu nějaké skalární funkce. Není to akademická otázka, ale odpověď má dalekosáhlé důsledky. Zjednodušeně řečeno, pokud je odpověď kladná, dají se některé úlohy místo ve vektorovém poli řešit v poli sklárním, což nese výrazné usnadnění.
-> * S výše uvedeou problematikou souvisí pojem rotace vektorového pole, který si uvedeme jako další z diferenciálních operátorů vektorové analýzy.
-> * Ukážeme si, že parciální derivace jsou vhodným nástrojem pro jakousi citlivostní analýzu. Seznámíme se v této souvislosti se zákonem šíření chyb.
-
+> * V přednášce se seznámíme s nástrojem, který umožňuje sečíst příspěvky k veličině, která nás zajímá, podél křivky. Seznámíme se s křivkovým integrálem.
+> * Zaměříme se na křivkový integrál druhého druhu, v cizojazyčné literatuře též nazývaný integrál vektorového pole. Ten umožňuje vypočítat práci nebo obecně potenciál a tím přejít (pokud to jde) ke skalárnímu popisu pole, namísto vektorového. Tím se problémy zjednoduší.
+> * Další aplikací křivkového integrálu druhého druhu je tok vektorového pole křivkou. Ten využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
 
 > Prerekvizity.
 >
 > * Křivkový integrál počítáme převodem na Riemannův integrál. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
-
-
 
 # Křivkový integrál
 

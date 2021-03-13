@@ -1,8 +1,7 @@
 % Autonomní rovnice a systémy
 
 
-
-# Stavebniny vedle čebínského nádraží: model
+# Stavebniny vedle čebínského nádraží
 
 ![Zdroj: vlastní](pokros.jpg)
 
@@ -41,49 +40,6 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 
 
 
-
-# Časový rozestup mezi trolejbusy
-
-![Zdroj: vlastní](trolejbus.jpg)
-
-Uvažujme dva trolejbusy jedoucí za sebou po stejné trati. Označme
-$x(t)$ jejich časový odstup. Pokud první trolejbus zastaví na určité
-zastávce v čase $t$, druhý trolejbus na tuto zastávku dorazí v čase
-$x(t)$. Naším úkolem je zjistit, jak se $x(t)$ mění s\ rostoucím $t$.
-
-Předpokládejme, že **(1)** pokud žádní pasažéři nečekají na druhý vůz, druhý vůz se
-  pohybuje rychleji než první vůz a oba vozy se "sjedou", tj. $x(t)$
-  klesá konstantní rychlostí, pokud na druhý vůz nečekají žádní pasažéři
-**(2)** rychlost druhého vozu klesá (a rozestup roste) s rostoucím počtem pasažérů, kteří
-  čekají na zastávce 
-**(3)** počet pasažérů kteří čekají na zastávce roste s rostoucím
-  intervalem mezi oběma vozy.
-
-Navrhněte model pro rozestup trolejbusů, najděte stacionární řešení a posuďte jeho stabilitu.
-
-
-<div class=reseni>
-
-Situaci je možno modelovat diferenciální rovnicí
-$$ 
-  \frac{\mathrm dx}{\mathrm  dt}=\beta x-\alpha,
-$$
-kde $\alpha$ a $\beta$ jsou kladné reálné konstanty. Tato rovnice má konstantní řešení $x=\frac \alpha\beta$. Toto řešení je nestabilní, protože 
-$$\frac{\mathrm d}{\mathrm dx}(\beta x-\alpha)=\beta>0.$$ Žádné jiné
-konstantní řešení neexistuje a proto všechna řešení klesají na nulu
-nebo neohraničeně rostou.
-
-Vzhledem k nestabilitě stacionárního řešení nemůžeme nechat řidiče
-veřejné dopravy jezdit "jak jim to vyjde". Situace by směřovala k
-tomu, že cestující budou nejprve dlouho čekat na trolejbus a nakonec
-přijede několik trolejbusů těsně za sebou. (Podle knihy P.  Blanchard,
-R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
-(2006), 828 pp.)
-
-</div>
-
-
-
 # Propeptid kolagenu
 
 ![pixabay.com](kost.jpg)
@@ -92,20 +48,28 @@ Kolagen je klíčový protein pojivových tkání. Jeden z kroků při syntéze
 kolagenu spočívá v reakci tří molekul propeptidu kolagenu, zkráceně
 propeptidu. Tento propeptid se formuje konstantní rychlostí a kromě
 toho, že je surovinou pro produkci kolagenu, se ještě rozpadá
-rychlostí úměrnou koncentraci. Napište matematický model pro množství
-(koncentraci) propeptidu kolagenu.
+rychlostí úměrnou koncentraci.
+
+1. Napište matematický model pro množství (koncentraci) propeptidu kolagenu.
+2. Popište různá chování modelu z hlediska počtu stacionárnícho bodů a jejich stability.
 
 _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life_
 
 <div class=reseni>
 
-$$\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P$$
+Rovnice má tvar
+$$\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P,$$
+kde $k_1$, $k_2$ a $k_3$ jsou kladné konstanty úměrnosti. Rovnici je možno zapsat ve tvaru
+$$\frac{\mathrm dP}{\mathrm dt}=\Bigl(k_2-k_3 P\Bigr)-\Bigl(k_1 P^3\Bigr) $$
+s rozdílem klesající a rosoucí funkce na pravé straně. Tyto funkce mají jediný průsečík a proto má rovnice jediný stacionární bod. Tento bod je stabilní, protože pro vysoké hodnoty $P$ je pravá strana rpvnice záporná (dominantní člen je $-k_1 P^3$) a pro malé hodnoty $P$ je pravá strana kladná (v nule je rovna konstantě $k_2$).
 
 </div>
 
 
+# Modely interagujících populací
 
-# Jelen a los
+
+## Jelen a los
 
 ![Jelen a los](moose.jpg)
 
@@ -113,6 +77,7 @@ Uvažujme populaci jelenů a losů. Tyto populace spolu soupeří o potravu. \te
 
 Sestavte matematický model a otestujte jej numerickým experimentem na stabilitu stacionárních bodů. Poté zdvojnásobte parametry mezidruhové konkurence a sledujte změnu odezvy. 
 
+_Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life_
 
 
 <div class=reseni>
@@ -125,6 +90,7 @@ $$
 $$
 
 [Sage](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=3*x%20-%20x%5E2%20-%20x*y&dydt=2*y%20-%20y%5E2%20-%200.5%20*%20x%20*%20y&x=0,4,20&y=0,3,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.3,0.28328571428571436%5D,%5B0.20714285714285716,0.6434928229665071%5D,%5B2.664285714285714,2.158851674641148%5D,%5B3.1714285714285713,0.7533014354066987%5D,%5B1.7785714285714285,0.2115789473684213%5D)
+
 
 </div>
 
@@ -141,7 +107,7 @@ $$
 -->
 
 
-# Puštík obecný
+## Puštík obecný
 
 ![wikimedia](pustik.jpg)
 
@@ -170,7 +136,7 @@ $$
 </div>
 
 
-# Kůň Převalského
+## Kůň Převalského
 
 
 ![Kůň Převalského](prevalski.jpg)
@@ -211,7 +177,7 @@ $$
 -->
 
 
-# Analýza pomocí vlastních čísel
+# Analýza 2D systému pomocí vlastních čísel
 
 Autonomní systém
 $$

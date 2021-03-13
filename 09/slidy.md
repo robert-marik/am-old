@@ -2,7 +2,7 @@
 % Robert Mařík
 % 2014–2020
 
-# Lineární operátor
+# Lineární operátory
 
 
 **Operátorem** rozumíme zobrazení, které má na vstupu i na výstupu
@@ -25,7 +25,7 @@ funkcí a násobek konstantou, tj. platí $$L[y_1+y_2]=L[y_1]+L[y_2]$$ a
 $$L[C y_1]=C L[y_1]$$ pro libovolné reálné číslo $C$ a libovolné
 funkce $y_1$ a $y_2$ z definičního oboru operátoru $L$.
 
-# Příklady lineárních operátorů
+## Příklady lineárních operátorů
 
 Linearitu se naučíme využívat k tomu, abychom úlohu najít řešení
 rovnice rozkouskovali na řešení jednodušších úloh. Například je možné
@@ -70,9 +70,7 @@ $$ - \frac 12 \nabla\cdot \bigl(k\nabla (h^2)\bigr)= \sigma $$
 a levá strana definuje lineární operátor v proměnné $h^2$.
 
 
-
-
-# Princip superpozice
+## Princip superpozice
 
 > Věta (princip superpozice). Každý lineární operátor zachovává lineární kombinaci funkcí, tj. platí
 > $$L[C_1 y_1+C_2 y_2]=C_1 L[y_1]+C_2 L[y_2]$$
@@ -116,7 +114,7 @@ Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.
 * U nehomogenní rovnice stačí se úloha najít všechna řešení dá rozdělit na dvě podúlohy: najít jenom jedno řešení a k tomu najít všechna řešení homogenní rovnice se stejnou levou stranou. Každá z těchto dvou úloh je mnohem lehčí než úloha celková a součtem jednoho rešení nehomogenní rovnice a obecného řešení asociované homogenní rovnice dostaneme obecné řešení nehomogenní rovnice.
 
 
-# Příklady využití linearity 
+## Příklady využití linearity 
 
 Pro konkrétnost specifikujeme myšlenky z předchozího slidu na příkladech.
 
@@ -125,6 +123,8 @@ Pro konkrétnost specifikujeme myšlenky z předchozího slidu na příkladech.
   násobky. Proto je obecné řešení rovnice součtem jednoho řešení
   rovnice a obecného řešení asociované homogenní rovnice. Toto řešení
   asociované homogenní rovnice je násobkem jednoho nenulového řešení. Například  funkce $y=e^x$ splňuje rovnici $$y'-y=0$$ a funkce $y=-\pi$ splňuje rovnici $$y'-y=\pi.$$ Všechna řešení této rovnice jsou tvaru $y=Ce^x-\pi$
+* Podobně, jenom s obecnějšími hodnotami a v jiném označení, obecné řešení rovnice  $$\frac{\mathrm dx}{\mathrm dt}+ax=bx,$$ nebo jak ji vídáme v aplikacích častěji $$\frac{\mathrm dx}{\mathrm dt}=b-ax,$$  
+je $$x(t)=\frac ba+Ce^{-at}.$$ Pro $t$ jdoucí do nekonečna toto řešení za předpokladu $a>0$ konverguje ke stacionárnímu řešení $\frac ba$. Partikulární řešení odpovídající počáteční podmínce $x(0)=0$ je $$x(t)=\frac ba-\frac bae^{-at}=\frac ba\Bigl(1-e^{-at}\Bigr).$$ To znamená, že řešení se exponenciálně přibližuje ke stacionárnímu řešení. Pro $a<0$ se naopak od stacionárního řešení exponenciálně vzdaluje.
 * Pro skalární lineární diferenciální rovnice druhého řádu je situace
   obdobná, pouze pro řešení asociované homogenní diferenciální rovnice
   potřebujeme dvě lineárně nezávislé řešení (jedno není násobkem
@@ -371,7 +371,7 @@ Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\ma
 
 
 
-# Autonomní systém ve dvou dimenzích, vektorový zápis
+# Autonomní systém ve dvou dimenzích
 
 \iffalse 
 
@@ -398,7 +398,7 @@ $$
 Pokud zvolíme teplotní stupnici tak, že teplota vroucí vody je v naší nové stupnici nula, můžeme dokonce eliminovat druhý člen a dostáváme
 $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
 \begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
-\begin{pmatrix}T_1\\T_2\end{pmatrix}
+\begin{pmatrix}T_1\\T_2\end{pmatrix} \tag{**}
 $$
 tj. symbolicky $X'=AX$, kde $X=(T_1,T_2)^T$ je vektorová funkce (sloupcový vektor) a $A$ je $2\times 2$ matice.
 
@@ -439,7 +439,7 @@ Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté
 \fi
 
 
-**Příklad.** Model ohřívání vajíčka z předchozí části této přednášky má stacionární bod $(0,0)$. Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
+**Příklad.** Model ohřívání vajíčka (**) z předchozí části této přednášky má stacionární bod $(0,0)$. Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
 $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
 \begin{pmatrix}-3 & 2 \\ 2 & -2\end{pmatrix}
 \begin{pmatrix}T_1\\T_2\end{pmatrix}.

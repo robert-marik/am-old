@@ -26,10 +26,13 @@ $endif$
 $for(css)$
   <link rel="stylesheet" href="$css$" type="text/css" />
 $endfor$
-$if(math)$
-  $math$
-$endif$
-$for(header-includes)$
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
+  $for(header-includes)$
   $header-includes$
   $endfor$
 

@@ -2,7 +2,278 @@
 % Robert Mařík
 % 2020
 
+
+> Anotace.
+>
+> * V přednášce se seznámíme s rovnicemi, obsahujícími derivace neznámé funkce. Jejich využití je všude tam, kde rychlosti změn veličin jsou dány hodnotami těchto veličin. 
+> * Typickým příkladem je radioaktivita, protože množství rozpadlých atomů je dáno množstvím nestabilních atomů. Aplikace potom můžeme najít například při ochraně budov před radioaktivním radonem.
+> * Jiným typickým příkladem jsou populační modely, kdy přírůstek populace je dán počtem jedinců schopných reprodukce a ten zpětně souvisí s velikostí populace.  Využití je při návrhu trvale udržitelného hospodaření s přírodními zdroji při lovu. 
+> * Technicky významným příkladem je i model tepelná výměny, kdy se rychlost změny teploty při tepelné výměně se mění podle intenzity toku a ta se mění s teplotním rozdílem. 
+> * Řada diferenciálních rovnic má speciální vlastnosti, které můžeme využít při prozkoumávání řešení. Dokonce můžeme například popsat, jak vypadají všechna řešení, aniž bychom je museli počítat. Některé z těchto taktik se naučíme v přednáškách v dalších týdnech věnovaných lineárním rovnicím (následující přednáška) a autonomním systémům (přednáška následující po přednášce o lineárních rovnicích). Teď to zmiňujeme proto, aby šlo vidět, že v případě diferenciálních rovnic nejsou dovednosti spojené s výpočtem jejich řešení tak důležité, jak jsme zvyklí u jiných druhů rovnic. Proto jsou v následujícím seznamu dovedností až na konci.
+> * Důležité dovednosti, které se naučíme v souvislosti s diferenciálními rovnicemi jsou zejména (1) schopnost naformulovat diferenciální rovnici podle slovního popisu mechanismu modelovaného děje, (2) dovednost posoudit existenci a jednoznačnost řešení, (3) dovednost snížit transformací počet parametrů rovnice a až v poslední řadě najít řešení (4) numericky nebo (5) analytickou cestou.
+
+> Prerekvizity.
+>
+> * Diferenciální rovnice souvisí s derivacemi. Pro úspěšné rozhodnutí, zda se úloha dá modelovat pomocí diferenciální rovnice nutně potřebujeme spolehlivě znát využití derivace. V podstatě s jistotou všude tam, kde se mluví o rychlostech, ale aplikace jsou i jinde. 
+> * Pro nalezení analytického řešení diferenciální je třeba ovládat integrál funkce jedné proměnné.
+
+
+
+# Modely založené na rychlostech (derivacích)
+
+https://youtu.be/08uAuAgY-lw
+
+## Tepelná výměna, kafe v hrnku
+
+\iffalse
+
+<div class='obtekat'>
+
+![Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot,
+ https://pixabay.com](hot.jpg)
+
+</div>
+
+\fi
+
+* Z fyziky víme, že *rychlost tepelné výměny mezi dvěma tělesy je úměrná rozdílu jejich teplot* (Newtonův zákon tepelné výměny). Rychlostí tepelné výměny můžeme rozumět například rychlost s jakou roste teplote studeného tělesa v teplém prostředí nebo s jakou klesá teplota horkého tělesa umístěného v chladnějším prostředí.
+* Rychlost s jakou roste teplota $T$ tělesa tělesa v čase je derivace teploty podle času. Pokud potřebujeme pracovat s poklesem, uvažujeme záporně vzatou derivaci. Úměrnost matematicky vyjádříme násobením konstantou a teplotní rozdíl může být například při umístění horkého tělesa o teplotě $T$ v chladné místnosti o teplotě $T_0$ vyjádřen rozdílem $T-T_0$.
+* Proces tepelné výměny probíhající podle Newtonova zákona
+  je tedy možno modelovat vztahem $$ \frac{\mathrm
+  dT}{\mathrm dt}=-k(T-T_0).  $$
+* K rovnici v ideálním případě dodáváme materiálovou charakteristiku
+  (konstantu úměrnosti $k$) a počáteční teplotu. Řešením je
+  funkce udávající závislost teploty na čase. Chceme-li znát teplotu
+  za určitý čas, není nutné provádět pokus a čekat na uplynutí
+  požadované doby. Můžeme teplotu přímo vypočítat.
+* Někdy může být vhodné nesledovat teplotu $T$, ale rozdíl oproti
+  okolní teplotě, $\tau=T-T_0$. Model se potom zjednoduší na $$
+  \frac{\mathrm d\tau}{\mathrm dt}=-k\tau,$$
+  tedy na model, kdy rychlost změny je úměrná funkční hodnotě.
+
+## Radioaktivní rozpad, radon ve sklepě 
+
+\iffalse
+
+<div class='obtekat'>
+
+![Model úbytku rychlostí úměrnou množství modeluje radioaktivní rozpad. V České republice nás zajímá radioaktivní rozpad například z hlediska nežádoucího hromadění radonu v obytných budovách. Zdroj: pixabay.com, rabedirkwennigsen](nuclear-waste.jpg)
+
+
+</div>
+\fi
+
+* Radioaktivní prvky se rozpadají
+  rychlostí, která je úměrná množství dosud nerozpadnutého materiálu. Rychlost, s\ jakou se mění množství (a tedy i\ koncentrace $y$ v daném
+  vzorku) nerozpadnutého radioaktivního materiálu je tedy popsána matematickým modelem
+  $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
+  kde $\lambda$ je konstanta úměrnosti. Tato rovnice je přirozeným
+  důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
+  stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
+  pravděpodobnost se s\ časem nemění.
+* Nejznámější aplikací této rovnice je datování archeologických vzorků pomocí radioaktivního uhlíku $^{14}C$. V tomto případě se sleduje vzájemná relace mezi množstvím tohoto nestabilního uhlíku a množstvím stabilního $^{12}C$. Počáteční podmínka je známa (předpokládáme stejný poměr zastoupení jako relativně
+  nedávno, před průmyslovou revolucí) a díky tomu můžeme najít funkci
+  udávající, jak s\ časem klesá zastoupení radioaktivního uhlíku. Obsah
+  radioaktivního i\ stabilního uhlíku je možné změřit a tím získáme
+  odhad, kolik procent radioaktivního
+  uhlíku se rozpadlo. Řešení počáteční úlohy poté použijeme pro odhad
+  doby, kdy organismus přestal spotřebovávat uhlík z atmosféry,
+  tj. odhad stáří vzorku.
+* Při pokusu o datování kostí dinosaurů klesne množství
+  radioaktivního uhlíku pod měřitelnou úroveň. Proto se
+  v tomto případě používají látky s\ delším poločasem rozpadu.
+* Optikou běžného života je nejzajímavější aplikací této rovnice model rozpadu v radioaktivní radě uranu, kdy vzniká plynný radon, který může působit problémy ve stavbách a v rizikových lokalitách je potřeba vhodnými konstrukčními přístupy nebo aktivními zařízeními na lapání a odvětrávání radonu.
+
+## Samočištění jezer, kontaminace v jezeře
+
+\iffalse
+
+<div class='obtekat'>
+
+![Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,
+ se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot
+ je úměrná míře znečištění.  https://pixabay.com](voda.jpg)
+
+</div>
+
+\fi
+
+
+* Nechť veličina $y$ udává množství látky, která znečišťuje vodu v\ jezeře o\ objemu $V$.
+* Předpokládejme, že do jezera přitéká čistá voda a stejnou rychlostí
+  odtéká voda s\ nečistotami (hladina se nemění, je v\ ustáleném
+  stavu). Nechť veličina $r$ udává, jaký objem vody se v\ jezeře takto
+  vymění za jeden den.  Předpokládejme dále (poněkud nerealisticky),
+  že rozdělení znečišťujících částic v\ jezeře je rovnoměrné.
+* Úbytek hmotnosti nečistot za časovou jednotku je dán derivací
+  $\frac{\mathrm dy}{\mathrm dt}$.
+* Protože koncentrace nečistot v jezeře a v odtékající vodě je $\frac
+  yV$, je úbytek znečištění možno vyjádřit též ve tvaru $\frac
+  rVy$. Podíl $\frac rV$ je pro dané jezero kladná konstanta
+  udávající, jak velká část z\ celkového množství vody se v\ jezeře
+  vymění za časovou jednotku.  Označíme-li tuto konstantu symbolem
+  $k$, je proces úbytku nečistot v\ jezeře popsán vztahem
+  $$
+  \frac{\mathrm dy}{\mathrm dt}  =-ky.
+  $$
+* Výše uvedený model se nazývá *rovnice samočištění jezer*, ale tento
+  název je čistě formální. Jedná se vlastně o stejnou rovnici, která
+  popisuje radioaktivní rozpad nebo změnu rozdílu mezi teplotou
+  horkého nápoje a místnosti při chladnutí nápoje.
+* Stejnou rovnicí je možné popsat nejenom odbourávání nečistot z
+  životního prostředí, ale i\ odbourávání léků nebo drog z
+  těla. Považujme krevní oběh za jezero a lék nebo drogu za
+  znečišťující látku. V případě, že rychlost odbourávání je úměrná
+  koncentraci (platí pro farmakokinetiku prvního řádu, toto splňuje
+  většina léčiv za běžných koncentrací), řídí se proces odbourávání
+  stejnou diferenciální rovnicí.
+
+
+\iffalse
+
+
+## Akutní normovolemická hemodiluce aneb o krvinky neradi přicházíme
+
+
+<div class='obtekat'>
+
+![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: 
+ https://pixabay.com](chirurg.jpg)
+
+</div>
+
+
+
+* Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s
+  ní i\ krvinky. Při konstantní intenzitě krvácení to znamená, že
+  pacient ztrácí krvinky rychlostí úměrnou počtu krvinek. Formálně na
+  krvinky v krvi můžeme pohlížet stejně jako na znečištění
+  jezera. Jedná se o stejný proces vyplavování látek obsažených v
+  tekutině, jenom měníme interpretaci veličin.
+* Pokud očekáváme takový průběh operace, že i\ po uvedeném poklesu bude
+  pořád množství krvinek nad minimální přípustnou hodnotou, je možné
+  před operací toto množství snížit tím, že se část krve odebere a
+  krev se poté doplní vhodnými roztoky.
+* Protože pacient bude po výše uvedeném zákroku už od začátku operace
+  menší počet krvinek, ztrácí tyto krvinky pomaleji a celkový úbytek
+  během operace je menší. Na konci operace se pacientovi vrátí dříve
+  odebraná krev. Výsledkem je, že po operaci v jeho těle koluje více
+  krvinek, než pokud by byl operován s\ "původní krví".
+* Aby metoda fungovala, je nutné odhadnout ztrátu krve během
+  operace. Modelování pomocí matematických metod dokáže
+  předpovědět, kolik krve odebrat na začátku tak, aby i\ po plánované
+  době operace zůstaly krevní hodnoty pacienta v bezpečných
+  mezích. Pokud na začátku operace část krve dáme bokem a poté tekutiny
+  doplňujeme fyziologickým roztokem (s tím, že vlastní krev vrátíme po
+  skončení operace), jedná se o stejný proces a stejnou rovnici jako
+  samočištění jezer. Pokud krev doplňujeme během operace z krve
+  dopředu odebrané,
+  dokážeme model samočištění jezer modifikovat pro daný proces.
+* Metoda *akutní normovolemické hemodiluce* nachází v současné praxi
+  široké využití v řadě operačních oborů. Poskytuje totiž možnost
+  vyhnout se podání alogenní krevní transfuze a tím eliminovat rizika
+  z ní vyplývající. Současně je tato metoda výrazně finančně levnější
+  a její přínos je tak i\ ekonomický. (Podle https://zdravi.euro.cz/)
+
+
+\fi
+
+## RC obvod a chytré stěny ve dřevostavbách.
+
+\iffalse
+
+<div class='obtekat'>
+
+<!--
+![RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$
+ Zdroj: Wikipedia](RC_circuit.png)
+ -->
+
+![Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby. 
+ Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term
+Wood Moisture Monitoring Based on
+Electrical Methods (2019)](RC_circuit_drevostavba.jpg)
+
+</div>
+
+\fi
+
+
+Při nabíjení kondenzátoru o kapacitě $C$ přes odpor o velikosti $R$ roste napětí na kondenzátoru, tím se mění nabíjecí proud a proto se mění i rychlost nabíjení. Pomocí zákonů elektrotechniky je [možno ukázat](http://fyzikalniolympiada.cz/texty/matematika/difro.pdf), že nabíjecí proud $i$ kondenzátoru se řídí vztahem
+$$R\frac{\mathrm di}{\mathrm dt}+\frac 1Ci=0.$$
+Napětí na kondenzátoru je možno odvodit buď z proudu, napětí na rezistoru a napětí zdroje, nebo z celkového proudu, který prošel kondenzátorem.
+
+Rovnice je tedy stejná jako rovnice radioaktivního rozpadu a rovnice samočištění jezer. Vhodnou manipulací s parametry součástek je možno měnit koeficient u této rovnice a vhodným spojováním těchto obvodů dokážeme podobně simulovat i složitější rovnice. To je bylo základem analogových počítačů, které nepracovaly s čísly, ale s napětími. Tyto počítače sehrály svou roli v době, kdy číslicové počítače byly nedostupné, pomalé a nespolehlivé. Tím byla historická úloha analogových počítačů splněna a již se nepoužívají. 
+
+RC obvod jako takový má však důležité místo i dnes. Dokáže například filtrovat signály podle frekvence. Výpočet jeho charakteristiky (tj. vyřešení rovnice) a sledování napětí na kondenzátoru umožní měření elektrického odporu tam, kde není vhodné odpor určovat z proudu a napětí pomocí Ohmova zákona. Typickým příkladem je odpor dřeva a jeho vodivost, tj. převrácená hodnota odporu. Tato veličina se používá k rychlému stanovení vlhkosti dřeva, nebo je možno ji dlouhodobě sledovat pomocí senzorů zabudovaných do dřevostavby. 
+
+Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s [operačním zesilovačem](https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D) (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).
+
+
+## Vývoj populace a její ekologický lov
+
+
+\iffalse
+
+<div class='obtekat'>
+
+![Při intenzivním lovu může dojít ke zničení populace
+ https://pixabay.com](kralik.jpg)
+
+</div>
+
+\fi
+
+
+* Zkoumejme velikost $y$  určité populace, v prostředí s\ nosnou kapacitou $K$.
+* Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s\ omezenými úživnými
+  vlastnostmi specifická míru růstu populace (rychlost s\ jakou
+  se velikost populace zvětšuje vztažená na jednotkové množství
+  populace) klesá s\ tím, jak se velikost populace přibližuje k nosné
+  kapacitě, a rychlost růstu populace je modelována funkcí $ry\left(1-\frac yK\right)$.  Podle
+  velkosti koeficientů v této funkci dělíme živočichy na [r-stratégy
+  a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
+  toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.
+* Za uvedených předpokladů je možno vývoj populace popsat modelem
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right),$$ který se nazývá *logistická rovnice.*
+* Pokud lovem snížíme přírůstky populace, můžeme tento proces popsat modelem 
+  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$
+  kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
+  tohoto procesu umožní nalezení ekonomicky výhodné ale přitom trvale
+  udržitelné strategie lovu.
+
+
+\iffalse
+
+## Lovci meteoritů z ČSSR a ČR
+
+
+
+<div class='obtekat'>
+
+![Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/](benesov.jpeg)
+
+</div>
+
+
+
+
+Česká republika je na světové špičce ve oblasti propočítávání dráhy meteoritů ze světelné stopy zachycené sítí bolidových kamer. Vědcům z Astronomického ústavu se podařilo 
+
+* jako prvním na světě najít pozůstatky meteoritu propočítáním jeho dráhy ze snímků zachycených speciálními kamerami a zpětně propočítat, odkud meteorit přiletěl (meteorit Příbram, 1959, první "meteorit s rodokmenem", tj. s doloženým původem),
+* jako prvním na světě najít pozůstatky meteoritu 20 let po dopadu použitím analýz, které v době dopadu meteoritu nebyly k dispozici (meteorit Benešov, dopad 1991, nalezen 2011),
+* propočítat a najít (mimo jiné i na dně jezera!) zbytky meteoritu Čeljabinsk z roku 2013.
+
+Meteority s vystopovaným původem jsou extrémně vzácné (do roku 2000 jenom 5 meteoritů, do roku 2016 pouze 31 meteoritů) a tým založený Zdeňkem Ceplechou a nyní vedený Pavlem Spurným se podílel na výpočtu drah většiny z nich.
+Použité metody jsou popsány například v článku *Ceplecha, Revelle: Fragmentation model of meteoroid motion, mass loss, and radiation in the atmosphere, Meteoritics & Planetary Science 40, Nr 1, 35–54 (2005).* Například ztráta rychlosti třením v atmosféře je modelována rovnicí $$\frac{\mathrm dv}{\mathrm dt}=-K\rho m^{-1/3}v^{2}$$ a ztráta hmotnosti vypařováním 
+$$\frac{\mathrm dm}{\mathrm dt}=-K\sigma \rho m^{2/3}v^3.$$
+Jedná se o rovnice, kde zrychlení (derivace rychlosti) a časová změna hmotnosti (derivace hmotnosti podle času, rychlost, s jakou ubývá hmotnost)  jsou úměrné vhodným mocninám těchto veličin.
+
+\fi
+
 # Obyčejná diferenciální rovnice prvního řádu
+
+https://youtu.be/3HTs6zJ0gMk
 
 Obyčejná diferenciální rovnice je rovnice, kde vystupuje neznámá
 funkce a její derivace. Setkáváme se s\ ní například všude tam, kde
@@ -66,7 +337,7 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
 
 
 
-# Obecné a partikulární řešení
+## Obecné a partikulární řešení
 
 
 Řešení diferenciální rovnice je nekonečně mnoho. Zpravidla je dokážeme
@@ -94,276 +365,22 @@ splňující diferenciální rovnici.
 \fi
 
 
+# Úvod do problematiky numerického řešení diferenciálních rovnic
 
-# Příklad - tepelná výměna
+Nejprve si naznačíme možnosti numerického řešení. To vychází z grafické interpretace diferenciální rovnice a odpovídá v podstatě modelování, kdy postupně prodlužujeme řešení od zadané počáteční podmínky dopředu či dozadu v čase. Přitom musíme řešit situaci vždy pro konkrétní numerické hodnoty počáteční podmínky a všech parametrů. Naštěstí se dá vhodnou transformací (resp. vhodnou volbou jednotek) počet parametrů zredukovat a tím se zvýší obecná použitelnost numerického výpočtu.
 
-\iffalse
+https://youtu.be/7tm1QbNDiz8
 
-<div class='obtekat'>
-
-![Tepelná výměna probíhá intenzivněji při velkém rozdílu teplot,
- https://pixabay.com](hot.jpg)
-
-</div>
-
-\fi
-
-* Z fyziky víme, že *rychlost tepelné výměny mezi dvěma tělesy je úměrná rozdílu jejich
-  teplot* (Newtonův zákon).
-* Z přednášek o derivacích víme, že rychlost je matematicky
-  derivace. Proces tepelné výměny probíhající podle Newtonova zákona
-  je tedy možno modelovat diferenciální rovnicí $$ \frac{\mathrm
-  dT}{\mathrm dt}=-k(T-T_0).  $$
-* Rovnice udává, že teplota $T$ horkého tělesa se mění (rychlost změny
-  je derivace) tak, že klesá (znaménko minus) rychlostí úměrnou
-  (konstanta $k$) teplotnímu rozdílu mezi teplotou tělesa a teplotou
-  okolí $T_0$ (člen $T-T_0$).
-* K rovnici v ideálním případě dodáváme materiálovou charakteristiku
-  (konstantu úměrnosti $k$) a počáteční teplotu. Řešením rovnice je
-  funkce udávající závislost teploty na čase. Chceme-li znát teplotu
-  za určitý čas, není nutné provádět pokus a čekat na uplynutí
-  požadované doby. Můžeme teplotu přímo vypočítat.
-* Někdy může být vhodné nesledovat teplotu $T$, ale rozdíl oproti
-  okolní teplotě, $\tau=T-T_0$. Rovnice se potom zjednoduší na $$
-  \frac{\mathrm d\tau}{\mathrm dt}=-k\tau,$$
-  tedy na rovnici, kdy rychlost změny je úměrná funkční hodnotě.
-
-# Příklad - datování pomocí uhlíku
-
-\iffalse
+## Geometrická interpretace ODE
 
 <div class='obtekat'>
 
-![Rovnice konstantního růstu nebo úbytku je základem datování pomocí uhlíku,
- https://www.flickr.com/photos/capturetheuncapturable, licence CC BY 2.0](archeology.jpg)
-
-
-</div>
-\fi
-
-* Při datování archeologických nálezů pozůstatků živých organismů se
-  využívá fyzikálního poznatku, že radioaktivní prvky se rozpadají
-  rychlostí, která je úměrná množství dosud nerozpadnutého materiálu.
-* Rychlost, s\ jakou se mění množství (a tedy i\ koncentrace $y$ v daném
-  vzorku) nerozpadnutého radioaktivního materiálu je tedy matematicky popsána rovnicí
-  $$\frac{\mathrm dy}{\mathrm dt}=-\lambda y,$$
-  kde $\lambda$ je konstanta úměrnosti. Tato rovnice je přirozeným
-  důsledkem toho, že pro daný nestabilní izotop mají všechny atomy
-  stejnou pravděpodobnost, že u nich dojde k rozpadu a tato
-  pravděpodobnost se s\ časem nemění.
-* Vhodný radioaktivní prvek vybereme podle toho, jak starý vzorek
-  chceme datovat. Nejčastěji měříme množství radioaktivního uhlíku
-  $^{14}C$ vztažené k množství stabilního $^{12}C$. Počáteční podmínka
-  je známa (předpokládáme stejný poměr zastoupení jako relativně
-  nedávno, před průmyslovou revolucí) a díky tomu můžeme najít funkci
-  udávající, jak s\ časem klesá zastoupení radioaktivního uhlíku. Obsah
-  radioaktivního i\ stabilního uhlíku je možné změřit a tím získáme
-  odhad, kolik procent radioaktivního
-  uhlíku se rozpadlo. Řešení počáteční úlohy poté použijeme pro odhad
-  doby, kdy organismus přestal spotřebovávat uhlík z atmosféry,
-  tj. odhad stáří vzorku.
-* Při pokusu o datování kostí dinosaurů klesne množství
-  radioaktivního uhlíku pod měřitelnou úroveň. Proto se
-  v tomto případě používají látky s\ delším poločasem rozpadu.
-
-
-# Příklad - rovnice samočištění jezer
-
-\iffalse
-
-<div class='obtekat'>
-
-![Jezero, ve kterém se přirozeně obměňuje znečištěná voda za čistou,
- se dokáže samo zotavit ze znečištění.  Rychlost vyplavování nečistot
- je úměrná míře znečištění.  https://pixabay.com](voda.jpg)
-
-</div>
-
-\fi
-
-
-* Nechť veličina $y$ udává množství látky, která znečišťuje vodu v\ jezeře o\ objemu $V$.
-* Předpokládejme, že do jezera přitéká čistá voda a stejnou rychlostí
-  odtéká voda s\ nečistotami (hladina se nemění, je v\ ustáleném
-  stavu). Nechť veličina $r$ udává, jaký objem vody se v\ jezeře takto
-  vymění za jeden den.  Předpokládejme dále (poněkud nerealisticky),
-  že rozdělení znečišťujících částic v\ jezeře je rovnoměrné.
-* Úbytek hmotnosti nečistot za časovou jednotku je dán derivací
-  $\frac{\mathrm dy}{\mathrm dt}$.
-* Protože koncentrace nečistot v jezeře a v odtékající vodě je $\frac
-  yV$, je úbytek znečištění možno vyjádřit též ve tvaru $\frac
-  rVy$. Podíl $\frac rV$ je pro dané jezero kladná konstanta
-  udávající, jak velká část z\ celkového množství vody se v\ jezeře
-  vymění za časovou jednotku.  Označíme-li tuto konstantu symbolem
-  $k$, je proces úbytku nečistot v\ jezeře popsán diferenciální
-  rovnicí
-  $$
-  \frac{\mathrm dy}{\mathrm dt}  =-ky.
-  $$
-* Výše uvedená rovnice na nazývá *rovnice samočištění jezer*, ale
-  tento název je čistě formální. Jedná se vlastně o stejnou rovnici,
-  která popisuje radioaktivní rozpad nebo
-  změnu rozdílu mezi teplotou horkého nápoje a místnosti při chladnutí
-  nápoje.
-* Stejnou rovnicí je možné popsat nejenom odbourávání nečistot z
-  životního prostředí, ale i\ odbourávání léků nebo drog z
-  těla. Považujme krevní oběh za jezero a lék nebo drogu za
-  znečišťující látku. V případě, že rychlost odbourávání je úměrná
-  koncentraci (platí pro farmakokinetiku prvního řádu, toto splňuje
-  většina léčiv za běžných koncentrací), řídí se proces odbourávání
-  stejnou diferenciální rovnicí.
-
-
-\iffalse
-
-
-# Příklad - akutní normovolemická hemodiluce
-
-
-<div class='obtekat'>
-
-![Při operaci ztrácí pacient krvinky rychlostí úměrnou koncentraci krvinek. Pokud je tato koncentrace malá, pacient ztratí krvinek málo. Zdroj: 
- https://pixabay.com](chirurg.jpg)
-
-</div>
-
-
-
-* Při chirurgické operaci dochází ke krvácení. Pacient ztrácí krev s
-  ní i\ krvinky. Při konstantní intenzitě krvácení to znamená, že
-  pacient ztrácí krvinky rychlostí úměrnou počtu krvinek. Formálně na
-  krvinky v krvi můžeme pohlížet stejně jako na znečištění
-  jezera. Jedná se o stejný proces vyplavování látek obsažených v
-  tekutině, jenom měníme interpretaci veličin.
-* Pokud očekáváme takový průběh operace, že i\ po uvedeném poklesu bude
-  pořád množství krvinek nad minimální přípustnou hodnotou, je možné
-  před operací toto množství snížit tím, že se část krve odebere a
-  krev se poté doplní vhodnými roztoky.
-* Protože pacient bude po výše uvedeném zákroku už od začátku operace
-  menší počet krvinek, ztrácí tyto krvinky pomaleji a celkový úbytek
-  během operace je menší. Na konci operace se pacientovi vrátí dříve
-  odebraná krev. Výsledkem je, že po operaci v jeho těle koluje více
-  krvinek, než pokud by byl operován s\ "původní krví".
-* Aby metoda fungovala, je nutné odhadnout ztrátu krve během
-  operace. Modelování pomocí diferenciálních rovnic dokáže
-  předpovědět, kolik krve odebrat na začátku tak, aby i\ po plánované
-  době operace zůstaly krevní hodnoty pacienta v bezpečných
-  mezích. Pokud na začátku operace část krve dáme bokem a poté tekutiny
-  doplňujeme fyziologickým roztokem (s tím, že vlastní krev vrátíme po
-  skončení operace), jedná se o stejný proces a stejnou rovnici jako
-  samočištění jezer. Pokud krev doplňujeme během operace z krve
-  dopředu odebrané,
-  dokážeme model samočištění jezer modifikovat pro daný proces.
-* Metoda *akutní normovolemické hemodiluce* nachází v současné praxi
-  široké využití v řadě operačních oborů. Poskytuje totiž možnost
-  vyhnout se podání alogenní krevní transfuze a tím eliminovat rizika
-  z ní vyplývající. Současně je tato metoda výrazně finančně levnější
-  a její přínos je tak i\ ekonomický. (Podle https://zdravi.euro.cz/)
-
-
-\fi
-
-# Příklad - RC obvod
-
-\iffalse
-
-<div class='obtekat'>
-
-![RC obvod. Pro vysoké frekvence platí $V_c\approx \frac{1}{RC}\int_0^t V_{in}\,\mathrm dt.$
- Zdroj: Wikipedia](RC_circuit.png)
-
-![Senzor pro sledování vlhkosti dřeva vyvinutý na ÚNOD LDF MENDELU a zabudovaný do dřevostavby. 
- Zdroj: R. Slávik et. al., A Nondestructive Indirect Approach to Long-Term
-Wood Moisture Monitoring Based on
-Electrical Methods (2019)](RC_circuit_drevostavba.jpg)
-
-</div>
-
-\fi
-
-
-Při nabíjení kondenzátoru o kapacitě $C$ přes odpor o velikosti $R$ roste napětí na kondenzátoru, tím se mění nabíjecí proud a proto se mění i rychlost nabíení. Pomocí zákonů elektrotechniky je [možno ukázat](http://fyzikalniolympiada.cz/texty/matematika/difro.pdf), že nabíjecí proud $i$ kondenzátoru se řídí diferenciální rovnicí
-$$R\frac{\mathrm di}{\mathrm dt}+\frac 1Ci=0.$$
-Napětí na kondenzátoru je možno odvodit buď z proudu, napětí na rezistoru a napětí zdroje, nebo z celkového proudu, který prošel kondenzátorem.
-
-Rovnice je tedy stejná jako rovnice radioaktivního rozpadu a rovnice samočištění jezer. Vhodnou manipulací s parametry součástek je možno měnit koeficient u této rovnice a vhodným spojováním těchto obvodů dokážeme podobně simulovat i složitější rovnice. To je bylo základem analogových počítačů, které nepracovaly s čísly, ale s napětími. Tyto počítače sehrály svou roli v době, kdy číslicové počítače byly nedostupné, pomalé a nespolehlivé. Tím byla historická úloha analogových počítačů splněna a již se nepoužívají. 
-
-RC obvod jako takový má však důležité místo i dnes. Dokáže například filtrovat signály podle frekvence. Výpočet jeho charakteristiky (tj. vyřešení rovnice) a sledování napětí na kondenzátoru umožní měření elektrického odporu tam, kde není vhodné odpor určovat z proudu a napětí pomocí Ohmova zákona. Typickým příkladem je odpor dřeva a jeho vodivost, tj. převrácená hodnota odporu. Tato veličina se používá k rychlému stanovení vlhkosti dřeva, nebo je možno ji dlouhodobě sledovat pomocí senzorů zabudovaných do dřevostavby. 
-
-Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s [operačním zesilovačem](https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D) (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).
-
-
-# Příklad - vývoj populace a její ekologický lov
-
-
-\iffalse
-
-<div class='obtekat'>
-
-![Při intenzivním lovu může dojít ke zničení populace
- https://pixabay.com](kralik.jpg)
-
-</div>
-
-\fi
-
-
-* Zkoumejme velikost $y$  určité populace, v prostředí s\ nosnou kapacitou $K$.
-* Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s\ omezenými úživnými
-  vlastnostmi specifická míru růstu populace (rychlost s\ jakou
-  se velikost populace zvětšuje vztažená na jednotkové množství
-  populace) klesá s\ tím, jak se velikost populace přibližuje k nosné
-  kapacitě, a rychlost růstu populace je modelována funkcí $ry\left(1-\frac yK\right)$.  Podle
-  velkosti koeficientů v této rovnici dělíme živočichy na [r-stratégy
-  a K-stratégy](http://cs.wikipedia.org/wiki/%C5%BDivotn%C3%AD_strategie) a
-  toto dělení odráží, jak se snaží druh vyrovnávat se změnami prostředí.
-* Za uvedených předpokladů je možno vývoj populace popsat rovnicí 
-  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right).$$ Tato rovnice se nazývá *logistická rovnice.*
-* Pokud lovem snížíme přírůstky populace, můžeme tento proces modelovat rovnicí 
-  $$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h(y),$$
-  kde $h(y)$ je intenzita lovu populace o velikosti $y$. Modelování
-  tohoto procesu umožní nalezení ekonomicky výhodné ale přitom trvale
-  udržitelné strategie lovu.
-
-
-\iffalse
-
-# Příklad - lovci meteoritů z ČSSR a ČR
-
-
-
-<div class='obtekat'>
-
-![Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/](benesov.jpeg)
-
-</div>
-
-
-
-
-Česká republika je na světové špičce ve oblasti propočítávání dráhy meteoritů ze světelné stopy zachycené sítí bolidových kamer. Vědcům z Astronomického ústavu se podařilo 
-
-* jako prvním na světě najít pozůstatky meteoritu propočítáním jeho dráhy ze snímků zachycených speciálními kamerami a zpětně propočítat, odkud meteorit přiletěl (meteorit Příbram, 1959, první "meteorit s rodokmenem", tj. s doloženým původem),
-* jako prvním na světě najít pozůstatky meteoritu 20 let po dopadu použitím analýz, které v době dopadu meteoritu nebyly k dispozici (meteorit Benešov, dopad 1991, nalezen 2011),
-* propočítat a najít (mimo jiné i na dně jezera!) zbytky meteoritu Čeljabinsk z roku 2013.
-
-Meteority s vystopovaným původem jsou extrémně vzácné (do roku 2000 jenom 5 meteoritů, do roku 2016 pouze 31 meteoritů) a tým založený Zdeňkem Ceplechou a nyní vedený Pavlem Spurným se podílel na výpočtu drah většiny z nich.
-Použité metody jsou popsány například v článku *Ceplecha, Revelle: Fragmentation model of meteoroid motion, mass loss, and radiation in the atmosphere, Meteoritics & Planetary Science 40, Nr 1, 35–54 (2005).* Například ztráta rychlosti třením v atmosféře je modelována rovnicí $$\frac{\mathrm dv}{\mathrm dt}=-K\rho m^{-1/3}v^{2}$$ a ztráta hmotnosti vypařováním 
-$$\frac{\mathrm dm}{\mathrm dt}=-K\sigma \rho m^{2/3}v^3.$$
-Jedná se o diferenciální rovnice, kde zrychlení (derivace rychlosti) a časová změna hmotnosti (derivace hmotnosti podle času, rychlost, s jakou ubývá hmotnost)  je úměrná vhodným mocninám těchto veličin.
-
-\fi
-
-# Geometrická interpretace ODE
-
-<div class='obtekat'>
-
-![Směrové pole diferenciálni rovnice, integrální křivky, isokliny](smerove_pole_2.png)
+![Směrové pole diferenciální rovnice, integrální křivky, isokliny](smerove_pole_2.png)
 
 </div>
 
 Protože derivace funkce v bodě udává směrnici tečny ke grafu funkce
-v tomto bodě, lze rovnici $$y'=\varphi(x,y)\tag{1}$$ chápat jako předpis, který
+v tomto bodě, lze rovnici $$y'=\varphi(x,y)$$ chápat jako předpis, který
 každému bodu v rovině přiřadí směrnici tečny k integrální křivce,
 která tímto bodem prochází.  Sestrojíme-li v dostatečném počtu
 (například i náhodně zvolených) bodů $[x,y]$ v rovině vektory
@@ -386,7 +403,7 @@ konstantní, nazývají **izokliny**.
 
 \iffalse
 
-# Numerické řešení IVP
+## Numerické řešení IVP
 
 
 <div class='obtekat'>
@@ -412,7 +429,7 @@ metoda).
 Vyjdeme-li z počáteční úlohy $$y'=\varphi(x,y), \quad y(x_0)=y_0,$$
 má lineární aproximace řešení v bodě $[x_0,y_0]$ tvar $$y=y_0+\varphi(x_0,y_0)(x-x_0).$$
 Funkční hodnotu v bodě $x=x_1$ označíme $y_1$ a tento bod bude dalším  body lomené čáry, tj. $$y_1=y_0+\varphi(x_0,y_0)(x_1-x_0).$$
-Hodnota $x_1-x_0$ je krok Eulerovy metody označovaný $h$. Tento postup opkaujeme s počáteční podmínkou $y(x_1)=y_1$.
+Hodnota $x_1-x_0$ je krok Eulerovy metody označovaný $h$. Tento postup opakujeme s počáteční podmínkou $y(x_1)=y_1$.
 Iterační formule Eulerovy metody má potom následující tvar. $$\begin{aligned}x_{n+1}&=x_n+h, \\ y_{n+1}&=y_n+\varphi(x_n,y_n)h.\end{aligned}$$
 
 Stačí tedy mít zvolen *krok* numerické
@@ -438,12 +455,11 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 **Online řešiče ODE (numericky):**
 
-* [dfield](http://math.rice.edu/~dfield/dfpp.html)
 * [Sage](https://sagecell.sagemath.org/?z=eJyFj0EKgzAQRfdC7pCdSTsVTbudO2RfREQjDY1GErXm9nU8QLv5zB_mP-YPYockMV3EfkuSZSxLo52Ap7HdOfISuKKl7WKFzxLKoqpPp8jRzDKtsDfRu8004f0Qw0mEBMcVUg7s1gbcwUx9M3s7LZGy9xr8uszrgnl0fjbNYI3r8-MFXf3kqb-82fklB9555wPmwZxUlgldXbWSRXz5j6B-SALUF0nkF_PaU9U=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 \fi
 
-# Transformace diferenciální rovnice
+## Transformace diferenciální rovnice
 
 \iffalse
 
@@ -457,7 +473,7 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 
 Naučíme se vyjadřovat diferenciální rovnici v jiných proměnných tak,
 aby bylo možné snížit počet parametrů v této rovnici. Pro jednoduchost
-budeme uvažovat jenom případ, kdy nová proměnný je lineární funkcí
+budeme uvažovat jenom případ, kdy nová proměnná je lineární funkcí
 původní proměnné.
 
 Uvažujme funkci $y$ proměnné $x$. Připomeneme si vzorce pro derivaci
@@ -479,7 +495,7 @@ Výše uvedené výpočty je možno shrnout do pravidla v následující poznám
 
 Navíc vzorec z poznámky silně připomíná klasické počítání se   zlomky. Proto máme Leibnizův tvar zápisu derivací $\frac{\mathrm   dy}{\mathrm dx}$ při studiu diferenciálních rovnic více v oblibě, než zápis Lagrangeův, $y'$.
 
-**Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního protředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s\ fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
+**Příklad.** Diferenciální rovnice tepelné výměny $$\frac{\mathrm dT}{\mathrm dt}=-k(T-T_\infty), \quad T(0)=T_0\tag{*}$$ obsahuje tři parametry: teplotu okolního prostředí $T_\infty$, počáteční teplotu $T_0$ a konstantu $k$ související s\ fyzikálními vlastnostmi prostředí. Postupně můžeme posunout  teplotní stupnici tak, aby teplota okolí byla nula a počáteční teplota jedna, tj. hodnotu $T$ snížíme o $T_\infty$ a upravíme dílek stupnice $(T_0-T_\infty)$-krát
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{\mathrm dt}=-k\frac{T-T_\infty}{T_0-T_\infty}$$
 vydělit konstantou $k$
 $$\frac{\mathrm d\left(\frac{T-T_\infty}{T_0-T_\infty}\right)}{k\mathrm dt}=-\frac{T-T_\infty}{T_0-T_\infty}$$
@@ -644,6 +660,9 @@ R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
 
 # ODE tvaru $\frac{\mathrm dy}{\mathrm dx}=f(x)g(y)$ (rovnice se separovanými proměnnými)
 
+https://youtu.be/yH6jzK_999E
+
+Najít řešení obecné diferenciální rovnice je nemožné, ani však takové ambice mít nemusíme. V praxi se setkáváme s poměrně speciálními druhy diferenciálních rovnic a pro ně jsou metody řešení k dispozici. Jeden takový jednoduše řešitelný druh diferenciální rovnice je představen v následujícím textu.
 
 > Definice (ODE se separovanými proměnnými). Diferenciální rovnice tvaru
 > $$    \frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y) \tag{S}$$
@@ -692,7 +711,13 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 > Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 
 
-# Redukce parciální diferenciální rovnice na obyčejnou, jednorozměrný případ
+# Redukce parciální diferenciální rovnice na obyčejnou
+
+https://youtu.be/vDEQBp8y6Jk
+
+V předchozích týdnech jsme se seznámili s modely založenými na parciálních derivacích, zejména s difuzní rovnicí. V případě, kdy hledaná stavová veličina je funkcí jenom jedné proměnné se parciální derivace redukují na obyčejné derivace a můžeme takové modely řešit v rámci obyčejných diferenciálních rovnic.
+
+## Jednorozměrný případ
 
 Ukážeme si , že parciální diferenciální rovnice popisující tok tepla nebo tok podzemní vody se ve speciálních případech redukují na diferenciální rovnice, jaké jsme se právě naučili řešit.
 
@@ -704,7 +729,7 @@ V ustáleném stavu je $T$ funkcí jedné proměnné $x$ a parciální derivace 
 $$\frac{\mathrm d}{\mathrm d x}\left(k\frac{\mathrm d T}{\mathrm d x}\right)=0.$$
 Po integraci dostáváme $$k\frac{\mathrm d T}{\mathrm d x}=C_1.$$ Tuto rovnici budeme řešit ve dvou různých situacích, a to pro lineární a nelineární materiálové vztahy.
 
-## Lineární materiálové vztahy, tj. konstantní materiálová charakteristika
+### Lineární materiálové vztahy, tj. konstantní materiálová charakteristika
 
 * Je-li $k$ konstantní, dostáváme
 $$\frac{\mathrm dT}{\mathrm dx}=\frac {C_1}k$$
@@ -713,7 +738,7 @@ $$T=\frac {C_1}k x + C_2.$$
 Konstanty $C_1$ a $C_2$ určíme z podmínek na teplotu na jednotlivých stranách stěny. Vidíme, že teplota ve stěně klesá lineárně.
 * Stejná rovnice a stejné řešení vychází i pro piezometrickou hladinu při rovinném ustáleném proudění podzemní vody v případě, že materiálová charakteristika je konstantní, tj. při proudění s napjatou hladinou (podzemní kolektor s nepropustným stropem a pod tlakem).
 
-## Nelineární materiálové vztahy, tj. nekonstantní materiálová charakteristika
+### Nelineární materiálové vztahy, tj. nekonstantní materiálová charakteristika
 
 * Zopakujme předchozí výpočet pro materiál s nelineární materiálovou odezvou, kdy Fourierův (Darcyho v případě podzemní vody) zákon není lineární, tj. $k$ závisí na teplotě. Nejjednodušší zobecnění je případ, kdy $k(T)$ je lineární, tj. platí $$k(T)=a+bT.$$
 Poté má rovnice tvar 
@@ -724,7 +749,7 @@ a
 $$\frac 12 aT^2+bT=C_1x+C_2.$$ Teplotní profil není lineární, ale parabolický s parabolou otočenou naležato. Kterou polovinu paraboly vybrat poznáme z toho, že teplota uvnitř stěny je mezi teplotami na okrajích.
 * Stejný výpočet pro $b=0$ odpovídá proudění podzemní vody s volnou hladinou. Toto je jiným způsobem (přímé odvození rovnice z Darcyho zákona) odvozeno v textu Dana Říhová a Jana Marková, Poznámky k přednáškám z Hydrauliky, přednáška č. 9. Hladina podzemní vody tedy klesá jako ležatá parabola.
 
-# Redukce parciální diferenciální rovnice na obyčejnou, radiálně symetrický případ
+## Dvourozměrný radiálně symetrický případ
 
 Jiný případ, kdy je možno redukovat složitost problému na jednu dimenzi je stacionární děj v rovině, kdy je situace radiálně symetrická. K tomu je nutno transformovat divergenci a gradient do polárních souřadnic. Příslušné vzorce nebudeme odvozovat, dodá je [Wikipedie](https://en.wikipedia.org/wiki/Del_in_cylindrical_and_spherical_coordinates#Del_formula).
 
@@ -744,7 +769,7 @@ Odsud
 $$k\mathrm d T=\frac{C_1}r {\mathrm d r}$$
 a
 $$kT={C_1}\ln(r)+C_2.$$
-Konstany $C_1$ a $C_2$ se určí z teplot na vnitřním a vnějším povrchu trubky.
+Konstanty $C_1$ a $C_2$ se určí z teplot na vnitřním a vnějším povrchu trubky.
 * Stejný vzorec platí pro analogické radiální proudění podzemní vody při proudění s napjatou hladinou. Toho se využívá při čerpacích zkouškách nebo při umělém snižování hladiny spodní vody. Po dosazení relevantních veličin a výpočtu konstant se odvozený vzorec uvádí ve tvaru $$h-h_0=\frac{Q}{2\pi T}\ln \frac r{r_0}$$ a nazývá [Thiemova rovnice.](https://en.wikipedia.org/wiki/Aquifer_test#Steady-state_Thiem_solution)
 * Předchozí postup můžeme modifikovat i pro radiální proudění s volnou hladinou, tj. proudění modelované rovnicí $$\nabla (K\nabla h)=0,$$ kde $K=kh$ je materiálová konstanta pro proudění s volnou hladinou. Jako v předchozím případě přejdeme do proměnné $r$ a dostáváme
 $$khr\frac{\mathrm d h}{\mathrm d r}=C_1.$$
@@ -768,6 +793,7 @@ z chemické výroby do vodárensky využívaných vod). V tomto případě je v
 
 # Diferenciální rovnice růstu vodní kapky
 
+https://youtu.be/gJoOmF39rbw
 
 \iffalse
 

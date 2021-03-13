@@ -1,5 +1,14 @@
 % Křivkové integrály
 
+> Anotace.
+>
+> * V úvodu si ukážeme vektorové pole, kde výpočet po třech různých křivkách mezi stejnými body, vede ke třem různým výsledkům.
+> * Poté zkusíme vypočítat bez bližšího kontextu několik křivkových integrálů pro pro získání určité míry jistoty při práci s tímto integrálem. 
+> * Poté se zaměříme tok vektorového pole křivkou a ukážeme si souvislost výsledného toku s grafickým znázorněním situace.
+> * Odhadu křivkového integrálu a toku křivkou se budeme věnovat v posledním příkladě. Naučíme se, čeho si všímat, když chceme zjistit, zda je výsledný integrál nebo tok kladný nebo záporný.
+
+
+
 # Křivkový integrál druhého druhu po třech různých křivkách
 
 https://youtu.be/i-y8bRLmopE
