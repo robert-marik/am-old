@@ -761,3 +761,21 @@ případě mají totiž integrály které vzniknou po transformaci dvojného
 integrálu na dvojnásobný pevné meze a výpočet druhého integrálu je
 zpravidla jednodušší. 
 
+
+
+
+# Z ptačí perspektivy
+
+\iffalse
+
+<div class='obtekat'>
+
+![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+
+</div>
+
+
+\fi
+
+* Dvojný integrál využijeme tam, kde nás zajímá celková hodnota aditivní veličiny, jejíž příspěvky jsou rozloženy ve dvourozměrné ploše. Například celková tlaková síla na stěnu akvária. 
+* Dvojný integrál počítáme jako integrál z integrálu aparátem integrálního počtu funkcí jendé proměnné. V řadě případů se však problém dá zjednodušit. Například při integrování funkcí se separovanými proměnnými přes obdélníkové množiny se integrál dá zapsat jako součin integrálů. Podobně, při inegrování přes množiny které jsou částmi kruhu se dá v mnoha případech integrál přepsat pomocí polárních souřadnic na integrál přes obdélník (v polárních souřadnicích). 

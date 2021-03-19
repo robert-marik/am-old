@@ -1,4 +1,4 @@
-% Diferenciální rovnice I
+% Diferenciální rovnice
 
 
 > Anotace.

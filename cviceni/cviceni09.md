@@ -1,8 +1,9 @@
-% Lineární rovnice
+% Lineární diferenciální rovnice
 
 
 # Radioaktivní rozpad 
 
+https://youtu.be/G7jb5MyMUHM
 
 Množství radioaktivního materiálu se snižuje rychlostí úměrnou tomuto množství. 
 
@@ -26,7 +27,11 @@ $$T=\frac 1k \ln 2.$$ Tato hodnota se nazývá poločas rozpadu a je $\ln2$ nás
 
 # Radioaktivní rozpad a radon v budovách
 
-![V případě malého rizika stačí izolace proti radonu. V oblastech s vyšším rizikem je nutná sofistikovanější ochrana. Zdroj: https://www.estav.cz/cz/5599.ochrana-proti-pronikani-radonu-do-objektu-protiradonova-izolace](radon.jpg)
+Radon je po kouření druhou nejčastější přinou rakoviny plic.
+
+https://youtu.be/26EwlUHLqUc
+
+![V případě malého rizika stačí izolace proti radonu jako na obrázku. V oblastech s vyšším rizikem je nutná sofistikovanější ochrana. Zdroj: https://www.estav.cz/cz/5599.ochrana-proti-pronikani-radonu-do-objektu-protiradonova-izolace](radon.jpg)
 
 
 V zemích s přirozenou radioaktivitou je nebezpečím radon. Na rozdíl od ostatních radioaktivních prvků je plynný a může prostupovat do budov, kde se hromadí zejména v nižších patrech, protože má poměrně velkou hustotu. 
@@ -44,7 +49,7 @@ _Více viz [Radon in the environment](http://www.nat.vu.nl/environmentalphysics/
 
 <div class=reseni>
 1. Je-li $q$ rychlost s jakou radon proniká do budovy, $k$ rozpadová konstanta a $d$ konstanta úměrnosti charakterizující intenzitu s jakou plyn uniká difuzí z budovy, je modelem rovnice $$\frac{\mathrm dy}{\mathrm dt}=q-ky-dy,$$ nebo po úpravě
-$$\frac{\mathrm dy}{\mathrm dt}= =q-(k+d)y.$$
+$$\frac{\mathrm dy}{\mathrm dt}=q-(k+d)y.$$
 2. Stacionární řešení je $$y=\frac{q}{k+d},$$ což zjistíme, pokud do modelu za derivaci dosadíme nulu a vyřešíme vzhledem k $y$.
 3. Rovnice je lineární, což vidíme z tvaru 
 $$\frac{\mathrm dy}{\mathrm dt}+(k+d)y=q.$$
@@ -60,10 +65,12 @@ a exponenciálně klesá. V prakticky smysluplných aplikacích je koncentrace p
 $$ \frac {q}{k+d} - y = Ke^{-(k+d)t}$$ 
 a
 $$y=\frac {q}{k+d} - Ke^{-(k+d)t}.$$ 
-4. Izolace sníží rychlost s jakou radon prostupuje do budovy a sníží tedy konstantu $q$. Větrání zvýší rychlost difuze ven a zvýší koeficient $d$. Každý z těchto efektů nezávisle sníží čitatel resp. zvýší jmenovatel, což vede k menší hodnotě podílu $$\frac {q}{k+d}.$$ Hodnota ve stacionárním stavu klesne.
+4. Izolace sníží rychlost s jakou radon prostupuje do budovy a sníží tedy konstantu $q$. Větrání zvýší rychlost difuze ven a zvýší koeficient $d$. Každý z těchto efektů nezávisle sníží čitatel resp. zvýší jmenovatel podílu $$\frac {q}{k+d},$$ což vede k menší hodnotě. Hodnota ve stacionárním stavu klesne.
 </div>
 
 # Časový rozestup mezi trolejbusy
+
+https://youtu.be/DvHpllR2zLg
 
 ![Zdroj: vlastní](trolejbus.jpg)
 
@@ -84,6 +91,9 @@ Předpokládejme, že
 
 Navrhněte model pro rozestup trolejbusů, najděte stacionární řešení a posuďte kvalitativní chování nekonstantních řešení.
 
+_Podle knihy P.  Blanchard,
+R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
+(2006), 828 pp._
 
 <div class=reseni>
 
@@ -134,14 +144,14 @@ nebo neohraničeně rostou. -->
 Vzhledem k nestabilitě stacionárního řešení nemůžeme nechat řidiče
 veřejné dopravy jezdit "jak jim to vyjde". Situace by směřovala k
 tomu, že cestující budou nejprve dlouho čekat na trolejbus a nakonec
-přijede několik trolejbusů těsně za sebou. (Podle knihy P.  Blanchard,
-R. L. Devaney, G.  R. Hall: Differential equations, Cengage Learning
-(2006), 828 pp.)
+přijede několik trolejbusů těsně za sebou. 
 
 </div>
 
 
 # Pásová brzda
+
+https://youtu.be/XlUuxd3Ws10
 
 ![Pásová brzda v provedení pro majitele jachet. Zdroj: https://www.sailspar.co.uk/yacht-products/scott-boomlock/](boomlock-shot.jpg)
 
@@ -162,7 +172,7 @@ Poznámky.
 
 <div class=reseni>
 
-1. Jedná se o klasickou homogenní lienární diferenciální rovnici s konstantním koeficientem. Jedno řešení je $$T=e^{\mu\theta}$$ a obecné řešení $$T=Ce^{\mu\theta}.$$ Pro $\theta = 0$ dostáváme $T=C$ a je-li $T_0$ tah na jenom konci (méně namáhaném), je tah na druhém konci $$T=T_0 e^{\mu\theta}.$$ Tah se tedy zvýší multiplikativním faktorem $e^{\mu\theta}.$ Pokud brzdné účinky definujeme jako podíl tahů na obou koncích, dostáváme 
+1. Jedná se o klasickou homogenní lineární diferenciální rovnici s konstantním koeficientem. Jedno řešení je $$T=e^{\mu\theta}$$ a obecné řešení $$T=Ce^{\mu\theta}.$$ Pro $\theta = 0$ dostáváme $T=C$ a je-li $T_0$ tah na jenom konci (méně namáhaném), je tah na druhém konci $$T=T_0 e^{\mu\theta}.$$ Tah se tedy zvýší multiplikativním faktorem $e^{\mu\theta}.$ Pokud brzdné účinky definujeme jako podíl tahů na obou koncích, dostáváme 
 $$\frac{T(\theta)}{T_0}=e^{\mu\theta}$$ a tento podíl roste exponenciálně s úhlem $\theta$.
 2. Podle zadání platí $$\frac {1}{0.75}=e^{\mu \frac \pi 2}$$ a chceme najít $e^{\mu \pi }$, $e^{\mu 2\pi }$ a $e^{\mu 4\pi }.$ 
 Umocněním získáme
@@ -186,9 +196,13 @@ $$\frac{T_1}{T_3}=e^{\mu\theta_1}e^{\mu\theta_2}=e^{\mu(\theta_1+\theta_2)},$$ c
 
 # Regulace stacionárního stavu a jeho robustnost
 
+Následující příklad je z knihy _Uri Alon, An introduction to systems biology, Design principles of biological circuits._ Kniha popisuje svět syntéz bílkovin a dalších sloučenin nutných pro život i tak jednoduchých organismů, jako je buňka. Aby byly buňky a živé organismy schopny reagovat na vnější podněty, musí syntéza potřebných bílkovin probíhat včas, rychle a stacionární stavy musí být robustní (nezávislé na změnách parametrů). 
+
+https://youtu.be/NH2A3ycWezc
+
 ![V chemických procesech probíhajících v živých organizmech je jistá setrvačnost a pro životaschopnost organismů je nutné udržovat rovnováhu důležitých enzymů a dalších látek. Trošku by to mohlo připomínat vytápění krbem, kde není zapínání a vypínání tak pružné, jako u plynového kotle a proto je potřeba mít pro řízení teploty vhodný plán. V případě buněk takový plán vyvinula evoluce. Zdroj: pixabay.com, autor joseclaudioguima](room-1706801_960_720.jpg)
 
-Následující příklad je z knihy _Uri Alon, An intruduction to systems biology, design principles of biological circuits._ Kniha popisuje svět syntéz bílkovin a dalších sloučenin nutných pro život i tak jednoduchých organismů, jako je buňka. Aby byly buňky a živé organismy schopny reagovat na vnější podněty, musí syntéza potřebných bílkovin probíhat včas, rychle a stacionární stavy musí být robustní (nezávislé na změnách parametrů). Pro jednoduchost si naformulujeme problematiku pro jednoduše představitelný případ regulace teploty v místnosti. Podobné mechanismy se však dlouhodobou evolucí vyvinuly a optimalizovaly i v buňkách a fungují tedy v tělech rostlin a živočichů. 
+Pro jednoduchost si naformulujeme problematiku pro jednoduše představitelný případ regulace teploty v místnosti. Podobné mechanismy se však dlouhodobou evolucí vyvinuly a optimalizovaly i v buňkách a fungují tedy v tělech rostlin a živočichů. 
 
 Uvažujme místnost, ve které je umístěno topné zařízení, další zdroje tepla a teplo může unikat z místnosti stěnami. 
 
@@ -201,8 +215,8 @@ Uvažujme místnost, ve které je umístěno topné zařízení, další zdroje 
 $$\frac{\mathrm dP}{\mathrm dt}=-k(T-T_0).$$ Okomentujte slovně, v čem regulace spočívá. Poté přidejte tento vztah v rovnici pro teplotu, čímž vznikne lineární autonomní systém. Ukažte, že stacionární teplotou je teplota $T_0$. Všimněte si, že tato hodnota je robustní: nezávisí na konstantách $a$, $b$, $k$ nebo $S$.
 3. Předpokládejme nejobecnější lineární systém regulace výkonu
 $$\frac{\mathrm dP}{\mathrm dt}=\alpha P-k T + \gamma.$$ 
-Ukažte, že stacionární stav je robustní (roven $T_0=\frac\gamma k$ a nezávislý na ostatních parametrech) tehdy jen a tehdy, když platí $\alpha =0$.
-4. Najděte vlastní čísla autonomního systému vytvořeného v tomto modelu a okomentujte, jak se budou chovat řešení. Ukažte, že parametry systému je možné shluknout do jednoho bezrozměrného parametr, jehož hodnota dokáže odlišit kvalitativně různá chování systému. 
+Ukažte, že stacionární stav je robustní (roven $T_0=\frac\gamma k$ a nezávislý na ostatních parametrech) tehdy a jen tehdy, když platí $\alpha =0$.
+4. Najděte vlastní čísla autonomního systému vytvořeného v tomto modelu a okomentujte, jak se budou chovat řešení. Ukažte, že parametry systému je možné shluknout do jednoho bezrozměrného parametru, jehož hodnota dokáže odlišit kvalitativně různá chování systému. Všimněte si, že situace je stejná (až na konkrétní roli v jaké vystupují parametry systému) jako u soustavy popisující [kmity tlumeného oscilátoru v přednášce](../09/#mechanick%C3%BD-oscil%C3%A1tor).
 
 
 <div class=reseni>
@@ -238,7 +252,7 @@ $$\begin{aligned}
 \end{aligned}
 $$
 Pokud první rovnici vynásobíme faktorem $-\alpha$, druhou rovnici faktorem $a$ a sečteme, dostáváme
-$$0=-\alpha S +\alpha b T - a k T+\gamma a=0$$
+$$0=-\alpha S +\alpha b T - a k T+\gamma a$$
 a odsud
 $$T=\frac{\alpha S-a\gamma}{\alpha b-ak}.$$
 Aby řešení nezáviselo na $S$, musí být $\alpha =0.$ Potom dostáváme 
@@ -253,7 +267,9 @@ $$\frac{\mathrm d}{\mathrm dt}\begin{pmatrix}T\\P\end{pmatrix}=\begin{pmatrix}-b
 Charakteristický polynom v proměnné $\lambda$ je 
 $$0=\begin{vmatrix}-b-\lambda&a\\-k&-\lambda\end{vmatrix}=\lambda^2+b\lambda+ak.$$
 a kořeny jsou $$\lambda_{1,2}=\frac{-b\pm\sqrt{b^2-4ak}}{2}.$$
-Pokud je $b^2-4ak>0$, jsou oba kořeny reálné záporné a ve stacionárním bodě je stabilní uzel. Systém přejde do stacionárního bodu bez oscilací. Pokud je $b^2-4ak<0$, jsou oba kořeny komplexně sdružené se zápornou reálnou částí a systém přejde do stabilního stavu oscilacemi se snižující se amplitudou. Z podmínek vidíme, že o chování rozhoduje to, zda je výraz $\frac{b^2}{ak}$ větší či menší v porovnání s hodnotou $4$. Pokud větší, oscilace se nevyskytnou. Pokud menší, systém osciluje k rovnováze. Tyto oscilace se tedy objeví, pokud je $a$ nebo $k$ velké. Pro systém to znamená, že oscilace se objeví, pokud příkon $P$ výrazně reaguje na odchylku od rovnovážné teploty (velké $k$), nebo teplota výrazně reaguje na změny v příkonu (velké $a$). Že se v takových situacích může rovnovážná teplota "přestřelit" a budeme se ní blížit zase z opačného směru není proto nijak překvapující.
+Pokud je $b^2-4ak>0$, jsou oba kořeny reálné záporné a ve stacionárním bodě je stabilní uzel. Systém přejde do stacionárního bodu bez oscilací. Pokud je $b^2-4ak<0$, jsou oba kořeny komplexně sdružené se zápornou reálnou částí a systém přejde do stabilního stavu oscilacemi se snižující se amplitudou. Z podmínek vidíme, že o chování rozhoduje to, zda je výraz $\frac{b^2}{ak}$ větší či menší v porovnání s hodnotou $4$. Pokud větší, oscilace se nevyskytnou. Pokud menší, systém osciluje k rovnováze. Tyto oscilace se tedy objeví, pokud je $a$ nebo $k$ velké. Pro systém to znamená, že oscilace se objeví, pokud příkon $P$ výrazně reaguje na odchylku od rovnovážné teploty (velké $k$), nebo teplota výrazně reaguje na změny v příkonu (velké $a$). Že se v takových situacích může rovnovážná teplota "přestřelit" a budeme se ní blížit zase z opačného směru není proto nijak překvapující. Přirozenou analýzou vyplynulo, že kvalitativní chování systému (oscilace versus neoscilace) nezávisí na jednotlivých parametrech samostatně, ale na čísle $\frac{b^2}{ak}$. Pokud prohodíme pořadí proměnných, má soustava tvar 
+$$\frac{\mathrm d}{\mathrm dt}\begin{pmatrix}P\\T\end{pmatrix}=\begin{pmatrix}0&-k\\a&-b\end{pmatrix}\begin{pmatrix}P\\T\end{pmatrix}+\begin{pmatrix}kT_0\\S\end{pmatrix}.$$
+Posunutím stupnic měření výkonu a tepla dosáhneme toho, že se druhý vektor na pravé straně vynuluje a soustava má formálně stejný tvar jako soustava pro mechanický oscilátor z přednášky (vlevo nahoře nula, jinak nenulové hodnoty, po vynásobení teploty faktorem $-1$ bychom dosáhli i stejných znamének u koeficientů).
 
 </div>
 

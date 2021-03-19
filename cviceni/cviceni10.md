@@ -1,7 +1,7 @@
 % Autonomní rovnice a systémy
 
 
-# Stavebniny vedle čebínského nádraží
+# Skladování stavebního recyklátu
 
 ![Zdroj: vlastní](pokros.jpg)
 

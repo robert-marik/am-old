@@ -54,9 +54,9 @@ druhého řádu $$E(x)\approx E(x_0)+E'(x_0)x+\frac 12E''(x_0)x^2.$$
 Vzhledem k tomu, že v $x_0$ je minimum, platí $E'(x_0)=0$. Síla je
 poté dána vztahem $$F(x)=-\frac{\partial}{\partial x}E(x)=-E''(0)x.$$
 Síla $F$ je tedy úměrná výchylce $x$ a vrací těleso do rovnovážné
-polohy. Situace tedy perfektně koresponduje s kmitáním na pružině i
-když potenciální energie uvažovaná v tomto odstavci může být jiného
-charakteru.
+polohy. 
+
+Situace tedy perfektně koresponduje s kmitáním na pružině i když potenciální energie uvažovaná v tomto odstavci může být jiného charakteru. Něco podobného jsme viděli již u autonomních systémů, kdy systém modelující tlumený oscilátor z předášky byl stejný jako systém modelující regulaci topení ze cvičení a tento systém byl jenom lépe představitelnou realizací systému regulace syntézy protinů.
 
 # Řešitelnost LDE druhého řádu
 

@@ -1,6 +1,6 @@
-% Autonomní systémy
+% Autonomní rovnice a systémy
 % Robert Mařík
-% 2020
+% 2020-2021
 
 # Opakování
 
@@ -21,11 +21,9 @@ jednoznačnost řešení. To je například, pokud funkce na pravé straně
 rovnice má ohraničené parciální derivace, což bude v níže uvedených
 příkladech vždy splněno.
 
-# Autonomní systém v jedné dimenzi
+# Autonomní diferenciální rovnice
 
-
-Rovnice $$\frac{\mathrm dy}{\mathrm dt}=f(y)\tag{1}$$ je autonomní
-systém v jedné dimenzi. Je speciálním případem rovnice se separovanými
+Autonomní diferenciální rovnice je rovnice tvaru $$\frac{\mathrm dy}{\mathrm dt}=f(y).\tag{1}$$ Je speciálním případem rovnice se separovanými
 proměnnými a umíme ji řešit
 analytickou cestou. Proto se nyní nebudeme zaměřovat na hledání
 obecného řešení, ale pokusíme se popsat chování řešení, aniž bychom
@@ -47,7 +45,38 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 
 Věta je odvozena z pozorování, že rovnice $y'=ky$ má řešení $y(t)=Ce^{kt}$ a toto řešení se pro velká $t$ blíží k nule nebo roste neohraničeně, v závislosti na znaménku hodnoty $k$. Pravou stranu rovnice, funkci $f(y)$, je možné aproximovat vztahem $f(y)\approx f'(y_0)(y-y_0)$ a odsud a z poznatku, že malá změna rovnice vetšinou nemění dramaticky chování řešení (přesněji, existuje spojitá závislost na parametrech) a proto rovnice $y'=f(y)$ kopíruje v okolí bodu $y_0$ chování rovnice $(y-y_0)'=f'(y_0)(y-y_0)$, pokud vynecháme patologické případy, což je zde $f'(y_0)=0$. Řešení je tedy $y\approx y_0+Ce^{f'(y_0)t}$ a tato funkce buď konverguje k $y_0$ nebo roste neohraničeně, v závislosti na znaménku derivace $f'(y_0)$.
 
-# Model soupeření jestřábí a holubičí povahy
+
+## Logistická diferenciální rovnice s konstantním lovem
+
+
+<div class='obtekat'>
+
+![Pravá strana k modelu lovu s konstantní intenzitou.](logisticka-lov.png)
+
+</div>
+
+
+Logistická diferenciální rovnice s konstantním lovem $h$, tj. rovnice
+$$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h,$$ má pro
+malé $h$ dva stacionární body. Funkce $ry\left(1-\frac yK\right)$ je
+parabola otočená vrcholem nahoru a s nulovými body $y=0$ a $y=K$. V
+prvním stacionárním bodě je funkce rostoucí a tento stacionární bod je
+nestabilní. Ve druhém stacionárním bodě je funkce klesající a tento
+stacionární bod je stabilní. Jak se zvyšuje faktor $h$, graf paraboly
+se posouvá směrem dolů a oba stacionární body se posouvají směrem k
+sobě a k\ vrcholu. Jejich stabilita zůstává neporušena. To znamená, že
+sice pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu
+se tento stacionární stav dostává stále blíže ke stavu nestacionárnímu
+a rovnováha je tedy poněkud křehká.
+
+[Nakreslit online](https://sagecell.sagemath.org/?z=eJx90D8OgjAYh-HdxDswkLRIIW3p2tm1NzAFChhqawpo8U6ewosJOPgvId_8Pr_kE4Sfte2h30GS-AhBjzAiEdKqVqY8aJkrzUHYcJxiHIJouxH0q0hwStYqMlWosNo6DpwqFyH7FeiaQD-E2illFoP9GWwVYW8k17JoZ2S-rrFXKEgsaCyyWDA0no6GTx4mqD_2WnGwd7IKuou8tUNQDaYtHvcgHLl_LTfTV577N1xo&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
+Pokud se intenzita lov zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule. 
+
+> Poznámka (strukturální stabilita modelu, bifurkace). Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu budeme *strukturální stabilitou* modelu závislého na parametrech rozumět stav, kdy malá změna parametrů nemění kvalitativní vlastnosti rovnice nebo systému, tj. například zůstává stejný počet stacionárních bodů, zachovává se jejich stabilita. To je očekávatlené chování, malá změna modelu zplsobí malé změny v řešení. Pro některé hodnoty parametrů však strukturální stabilitu ztrácíme. V takovém případě se i při nepatrných změnách parametrů dramaticky mění chování rovnice nebo systému. Například při zvyšování lovu v právě uvažovaném modelu dva stacionární body splynou v jeden a zaniknou. Takové chování se nazývá *bifurkace* a hodnoty parametrů, při kterých k bifurkaci dojde, jsou důležité pro další vývoj předmětu. Zjednodušeně řečeno, malé změny parametrů v oblasti daleko od bifurkace znamenají, že chování modelu se mění pozvolna. Blízko k bifurkační hodnotě je situace komplikovanější a může se stát, že malá změna parametrů modelu způsobí dramaticky odlišné chování modelu. Rovnice blízká bifurkaci je citlivá na rozkolísání.
+
+
+## Model soupeření jestřábí a holubičí povahy
 
 \iffalse 
 
@@ -118,42 +147,13 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nu
   ve vytvoření vyššího kmene, užitkem je světlo.*
 
 
-# Logistická diferenciální rovnice s konstantním lovem
-
-
-<div class='obtekat'>
-
-![Pravá strana k modelu lovu s konstantní intenzitou.](logisticka-lov.png)
-
-</div>
-
-
-Logistická diferenciální rovnice s konstantním lovem $h$, tj. rovnice
-$$\frac{\mathrm dy}{\mathrm dt}=ry\left(1-\frac yK\right)-h,$$ má pro
-malé $h$ dva stacionární body. Funkce $ry\left(1-\frac yK\right)$ je
-parabola otočená vrcholem nahoru a s nulovými body $y=0$ a $y=K$. V
-prvním stacionárním bodě je funkce rostoucí a tento stacionární bod je
-nestabilní. Ve druhém stacionárním bodě je funkce klesající a tento
-stacionární bod je stabilní. Jak se zvyšuje faktor $h$, graf paraboly
-se posouvá směrem dolů a oba stacionární body se posouvají směrem k
-sobě a k\ vrcholu. Jejich stabilita zůstává neporušena. To znamená, že
-sice pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu
-se tento stacionární stav dostává stále blíže ke stavu nestacionárnímu
-a rovnováha je tedy poněkud křehká.
-
-[Nakreslit online](https://sagecell.sagemath.org/?z=eJx90D8OgjAYh-HdxDswkLRIIW3p2tm1NzAFChhqawpo8U6ewosJOPgvId_8Pr_kE4Sfte2h30GS-AhBjzAiEdKqVqY8aJkrzUHYcJxiHIJouxH0q0hwStYqMlWosNo6DpwqFyH7FeiaQD-E2illFoP9GWwVYW8k17JoZ2S-rrFXKEgsaCyyWDA0no6GTx4mqD_2WnGwd7IKuou8tUNQDaYtHvcgHLl_LTfTV577N1xo&lang=sage&interacts=eJyLjgUAARUAuQ==)
-
-Pokud se intenzita lov zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule. 
-
-> Poznámka (strukturální stabilita modelu, bifurkace). Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu budeme *strukturální stabilitou* modelu závislého na parametrech rozumět stav, kdy malá změna parametrů nemění kvalitativní vlastnosti systému, tj. například zůstává stejný počet stacionárních bodů, zachovává se jejich stabilita. To je očekávatlené chování, malá změna modelu zplsobí malé změny v řešení. Pro některé hodnoty parametrů však strukturální stabilitu ztrácíme. V takovém případě se i při nepatrných změnách parametrů dramaticky mění chování systému. Například při zvyšování lovu v právě uvažovaném modelu dva stacionární body splynou v jeden a zaniknou. Takové chování se nazývá *bifurkace* a hodnoty parametrů, při kterých k bifurkaci dojde, jsou důležité pro další vývoj předmětu. Zjednodušeně řečeno, malé změny parametrů v oblasti daleko od bifurkace znamenají, že chování modelu se mění pozvolna. Blízko k bifurkační hodnotě je situace komplikovanější a může se stát, že malá změna parametrů modelu způsobí dramaticky odlišné chování modelu. Systém blízký bifurkaci je citlivý na rozkolísání.
-
 
 # Autonomní rovnice s pravou stranou ve tvaru rozdílu
 
 > Poznámka (autonomní rovnice s rozdílem na pravé straně). Rovnice $$\frac{\mathrm dy}{\mathrm dt}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
 
 
-# Teplotní bilance Země
+## Teplotní bilance Země
 
 <div class='obtekat'>
 
@@ -165,7 +165,7 @@ Pokud se intenzita lov zvětšuje tak, že se parabola dostane vrcholem na vodor
 $$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů. [Online model.](https://sagecell.sagemath.org/?z=eJx9Ve1u2zYU_W_A70DEKSzZjCE7cVoU0I-hKNZuKOK2xgbMcQ1aoiNGFKmJlGe76CP0AYb96gPsEfYr3XvtUJIdpw1mA7Y-yHvPPffcww75iWXckF-ZNAklL6TImOUk0zGXUqgbIhSJxWrFC66sYJLw30tmhVam3Wq31qzwutOuTzok5qlkBYs4SfHSMmUJI3mhM67UNkrarbfh-cWo3TLiJmPheHD5tDcMPnhnz3wXqNPpkNfKcrUTlhGTSq5Eqtc80YSveGrLAZloI3msBFF8x3K9UyzDCqYYSXSsNLblEsjaLZ4bIbUKg8HTMYBlTG7vI27reMerLglWGVtUwb9f2LlfeeHi4UY9FrDdEiigWCNdOJuNgoCOxsGczvBLR8-qq2cBPQ_cFX7pOd7OEe-wy7FFEtTIgCMvSsMjkZYkLcSapxQtQclkWcbc9QdvLSnzgq2FJbmOJSdWJ5qSW5aS9fY25kQvC7bjabtF8Gm3mMwT5k191DHuB4NRDz1KvGAw7Hmjy_HZ1PeJI0LH2CXW2lhKjC7XwoAUl0FInhGgKwlg_MYzgf4aDuLYGi-YzbSBSrbtlk6AGDW4XG973vBsn9l38X9YGl0sXeO2wAmtkLdkx8l7WaqII6USO45XugbClS5JxByYfRRyy49AgihBLM-lBitT1wUdJZLt9B7B9MNFr9Jcr-mjA_HLdseKagmJNQRrsnKf2umXr0QkoHfUtd_kelMNRb3rEYW63JNh6JB4RxRQb0ovA3oRBD4lkZa6CLuQWpeCyxuu4oVkSy7Donv6bvHxGsOXFNlHoT59Ou26hji0L6APx8lNwVY1Z0CbQjWgqUpUtQPZR032Bww4AN_kX8qS_z8AXdo9gg55A7ofzV6poM5W3nJX_gCyXDRxdV75hLfSyi4MuA2Ho3rYwX9acOMorFWals_hDIn-w5sM-5MR3WYC84Y_tgndrGzc_XDsLvAEtVByXeuaWGElD09euh6Ajn__5OsSytxzcPdF3f3tgH79i5LT62s41n6en5jTkyfKa25pLG6ENeG5fx-bbbip6THhrIuSoYAtfEdE6d2XRnWMzH7mci3UvEu767t_nKIxIBm3Bfn62a5hnF8_A0N3Th8J2_BCq2dojN5AGhVJjqZXjRmoErKDiZKlxvitSpVGYHvlbfzwoLSNf3bc9w2CgGIwHM7mWKsLIpyXH9zmeQ3GFvsr92l21H_92UqgjYWGpFZUzGBcYjac-_N6Pd9EPLdHm3NmzP6u3cJc4gjwTiaNkWHaSU0Uj5Ln5KQPx_XqRL7_6HLnLWWuBOp-AaoE2--aibPR0_PBcEwOZdWB5v6Bujf3s_qylBzDDiNBU3Ssy8PJNaG2Jvvdq_fe5IjMyUMyJ5VzObNl7qBwZw4CAhl3m2MLSw3G1RkoUwbD1ilyGOjDhOPA7dQR3Lp57r6b0B0QfYEj8KgGpm64hxmZVwdSWuYCibAXB3JU0QAXxiA4S68ihhigB43ezOvw34SskPhNp5AaM-QFVHmiH9ue52pHC-DOh22beTX3DXGs5o254wBWDId0ZrhGmxKY0gFfgy7d1nkeSIn0SQWulsZV-GPB8kRExvNrsLf3YKvK9mCvwqu-FMYuKl-bidnt_LueU-Je3moQE4fTouSNx7i97s3CSJ3zxUpwGXt1o6ln6dXAmYrnVxcgxMfTCYzyarCtb_3afCHMnMUo2mSODBSvJW_M6oqS2qn8_wB7gQNv&lang=sage&interacts=eJyLjgUAARUAuQ==https://sagecell.sagemath.org/?z=eJx9Ve1u2zYU_W_A70DEKSzZjCE7cVoU0I-hKNZuKOK2xgbMcQ1aoiNGFKmJlGe76CP0AYb96gPsEfYr3XvtUJIdpw1mA7Y-yHvPPffcww75iWXckF-ZNAklL6TImOUk0zGXUqgbIhSJxWrFC66sYJLw30tmhVam3Wq31qzwutOuTzok5qlkBYs4SfHSMmUJI3mhM67UNkrarbfh-cWo3TLiJmPheHD5tDcMPnhnz3wXqNPpkNfKcrUTlhGTSq5Eqtc80YSveGrLAZloI3msBFF8x3K9UyzDCqYYSXSsNLblEsjaLZ4bIbUKg8HTMYBlTG7vI27reMerLglWGVtUwb9f2LlfeeHi4UY9FrDdEiigWCNdOJuNgoCOxsGczvBLR8-qq2cBPQ_cFX7pOd7OEe-wy7FFEtTIgCMvSsMjkZYkLcSapxQtQclkWcbc9QdvLSnzgq2FJbmOJSdWJ5qSW5aS9fY25kQvC7bjabtF8Gm3mMwT5k191DHuB4NRDz1KvGAw7Hmjy_HZ1PeJI0LH2CXW2lhKjC7XwoAUl0FInhGgKwlg_MYzgf4aDuLYGi-YzbSBSrbtlk6AGDW4XG973vBsn9l38X9YGl0sXeO2wAmtkLdkx8l7WaqII6USO45XugbClS5JxByYfRRyy49AgihBLM-lBitT1wUdJZLt9B7B9MNFr9Jcr-mjA_HLdseKagmJNQRrsnKf2umXr0QkoHfUtd_kelMNRb3rEYW63JNh6JB4RxRQb0ovA3oRBD4lkZa6CLuQWpeCyxuu4oVkSy7Donv6bvHxGsOXFNlHoT59Ou26hji0L6APx8lNwVY1Z0CbQjWgqUpUtQPZR032Bww4AN_kX8qS_z8AXdo9gg55A7ofzV6poM5W3nJX_gCyXDRxdV75hLfSyi4MuA2Ho3rYwX9acOMorFWals_hDIn-w5sM-5MR3WYC84Y_tgndrGzc_XDsLvAEtVByXeuaWGElD09euh6Ajn__5OsSytxzcPdF3f3tgH79i5LT62s41n6en5jTkyfKa25pLG6ENeG5fx-bbbip6THhrIuSoYAtfEdE6d2XRnWMzH7mci3UvEu767t_nKIxIBm3Bfn62a5hnF8_A0N3Th8J2_BCq2dojN5AGhVJjqZXjRmoErKDiZKlxvitSpVGYHvlbfzwoLSNf3bc9w2CgGIwHM7mWKsLIpyXH9zmeQ3GFvsr92l21H_92UqgjYWGpFZUzGBcYjac-_N6Pd9EPLdHm3NmzP6u3cJc4gjwTiaNkWHaSU0Uj5Ln5KQPx_XqRL7_6HLnLWWuBOp-AaoE2--aibPR0_PBcEwOZdWB5v6Bujf3s_qylBzDDiNBU3Ssy8PJNaG2Jvvdq_fe5IjMyUMyJ5VzObNl7qBwZw4CAhl3m2MLSw3G1RkoUwbD1ilyGOjDhOPA7dQR3Lp57r6b0B0QfYEj8KgGpm64hxmZVwdSWuYCibAXB3JU0QAXxiA4S68ihhigB43ezOvw34SskPhNp5AaM-QFVHmiH9ue52pHC-DOh22beTX3DXGs5o254wBWDId0ZrhGmxKY0gFfgy7d1nkeSIn0SQWulsZV-GPB8kRExvNrsLf3YKvK9mCvwqu-FMYuKl-bidnt_LueU-Je3moQE4fTouSNx7i97s3CSJ3zxUpwGXt1o6ln6dXAmYrnVxcgxMfTCYzyarCtb_3afCHMnMUo2mSODBSvJW_M6oqS2qn8_wB7gQNv&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 
-# Logistická diferenciální rovnice s predátory
+## Logistická diferenciální rovnice s predátory
 
 <div class='obtekat'>
 
@@ -250,7 +250,7 @@ od něj.
   změně koeficientů v systému se nezmění typ singulárních bodů se
   nazývá *strukturální stabilita*.
 
-# Bruselátor
+## Bruselátor
 
 \iffalse 
 
