@@ -61,7 +61,7 @@ Rovnice má tvar
 $$\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P,$$
 kde $k_1$, $k_2$ a $k_3$ jsou kladné konstanty úměrnosti. Rovnici je možno zapsat ve tvaru
 $$\frac{\mathrm dP}{\mathrm dt}=\Bigl(k_2-k_3 P\Bigr)-\Bigl(k_1 P^3\Bigr) $$
-s rozdílem klesající a rosoucí funkce na pravé straně. Tyto funkce mají jediný průsečík a proto má rovnice jediný stacionární bod. Tento bod je stabilní, protože pro vysoké hodnoty $P$ je pravá strana rpvnice záporná (dominantní člen je $-k_1 P^3$) a pro malé hodnoty $P$ je pravá strana kladná (v nule je rovna konstantě $k_2$).
+s rozdílem klesající a rostoucí funkce na pravé straně. Tyto funkce mají jediný průsečík a proto má rovnice jediný stacionární bod. Tento bod je stabilní, protože pro vysoké hodnoty $P$ je pravá strana rovnice záporná (dominantní člen je $-k_1 P^3$) a pro malé hodnoty $P$ je pravá strana kladná (v nule je rovna konstantě $k_2$).
 
 </div>
 
@@ -113,13 +113,13 @@ $$
 
 Puštík obecný se téměř výhradně živí malými hlodavci. Předpokládejme následující vztahy.
 \textbf{(1)} Populace hlodavců má porodnost 0.1 na jedince a úmrtnost 0.025 na jedince za jednotku času.
-\textbf{(2)} Rychlost s jakou jeden puštík konzumuje hlodavce je úměrná počtu hlodavců s kostantou úměrnosti 0.01.
+\textbf{(2)} Rychlost s jakou jeden puštík konzumuje hlodavce je úměrná počtu hlodavců s konstantou úměrnosti 0.01.
 \textbf{(3)} Porodnost v populaci puštíka je úměrná množství zkonzumované potravy s konstantou úměrnosti 0.05.
 \textbf{(4)} Úmrtnost v populaci puštíka je 0.1 na jedince za jednotku času.
 
 Vyjádřete tyto vztahy matematickým modelem.
 
-_Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life. Doslova přeloženo. Porodnost je ve skutečnosti společný efekt zvýšené porodnosti a snižené úmrtnosti v případě, že puštík má přístup k potravě._
+_Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life. Doslova přeloženo. Porodnost je ve skutečnosti společný efekt zvýšené porodnosti a snížené úmrtnosti v případě, že puštík má přístup k potravě._
 
 
 <div class=reseni>
@@ -186,7 +186,7 @@ $$
   \frac{\mathrm dy}{\mathrm dt}&= 3xy^2-3y
 \end{aligned}
 $$
-má stacionární bod $(1,1)$. Najděte Jacobiho matici v tomto bodě, vlastní čísla této matice a určete typ stacioárního bodu.
+má stacionární bod $(1,1)$. Najděte Jacobiho matici v tomto bodě, vlastní čísla této matice a určete typ stacionárního bodu.
 
 <div class=reseni>
 
