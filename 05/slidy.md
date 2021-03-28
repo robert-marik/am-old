@@ -8,7 +8,7 @@
 > * V přednášce se seznámíme s nástrojem, který umožňuje sečíst příspěvky k veličině, která nás zajímá, podél křivky. Seznámíme se s křivkovým integrálem.
 > * Zaměříme se na křivkový integrál druhého druhu, v cizojazyčné literatuře též nazývaný integrál vektorového pole. Ten umožňuje vypočítat práci nebo obecně potenciál a tím přejít (pokud to jde) ke skalárnímu popisu pole, namísto vektorového. Tím se problémy zjednoduší.
 > * Další aplikací křivkového integrálu druhého druhu je tok vektorového pole křivkou. Ten využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
-> * Motivace je v [numerickém odhadu toku na netriviální množině](https://colab.research.google.com/drive/1GAywkB3TEC1UTwq4VAdCyFoL2kFuvqoz?usp=sharing).
+> * Motivace je v [numerickém odhadu toku hranicí množiny](http://user.mendelu.cz/marik/aromamath/Krivkovy_integral.html).
 
 > Prerekvizity.
 >
