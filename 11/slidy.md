@@ -507,23 +507,26 @@ si ukážeme v následující přednášce. Teď si ukážeme, jak řešení rov
 vede na řešení LDR druhého řádu. Uvažujme pro jednoduchost okrajovou
 úlohu, kdy konce tyče jsou udržovány na nulové teplotě, tj. je-li tyč
 délky $l$ položena v ose $x$ tak že levý konec je v počátku, platí pro
-teplotu $u(x,t)$ podmínky $u(0,t)=u(l,t)$ v libovolném čase $t$.
+teplotu $u(x,t)$ podmínky $u(0,t)=u(l,t)=0$ v libovolném čase $t$.
 
 Budeme řešení hledat ve tvaru $u(x,t)=\varphi(x)\psi(t)$, kde $\varphi$ a $\psi$ jsou funkcemi jedné proměnné.
 Platí
-$$\frac{\partial u}{\partial t}=\varphi(x)\psi'(t), \quad \frac{\partial^2 u}{\partial x^2}=\varphi''(x) $$
+$$\frac{\partial u}{\partial t}=\varphi(x)\psi'(t), \quad \frac{\partial^2 u}{\partial x^2}=\varphi''(x) \psi(t)$$
 a rovnice má tvar
 $$\varphi(x)\psi'(t)=\varphi''(x)\psi (t).$$
 Vydělením této rovnice součinem $\varphi(x)\psi(t)$ dostáváme
 $$\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}.$$
-Toto je rovnice, kde levá strana je funkcí proměnné $t$ a pravá strana funkcí proměnné $x$. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě. Označme tuto konstantu $-\lambda^2$. Platí tedy
+Toto je rovnice, kde levá strana je funkcí proměnné $t$ a pravá strana funkcí proměnné $x$. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě. 
+
+Okrajové podmínky si vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$
+a díky tomu máme pouze nulové řešení pokud je tato konstanta kladná (viz výše výpočet vlastních hodnot pro tuto úlohu). Společná konstanta tedy musí být záporná. 
+Označme ji $-\lambda^2$. Platí tedy
 $$\frac {\psi'(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.$$
 První rovnice představuje lineární diferenciální rovnici prvního řádu
 $$\psi'=-\lambda^2\psi$$
 s partikulárním řešením $\psi(t)=e^{-\lambda^2 t}.$
-Druhá rovnice představuje lineární diferenciální rovnici druhého řádu
-$$\varphi''+\lambda^2\varphi=0$$
-a okrajové podmínky si vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji viděli u kmitů struny nebo u namáhání na vzpěr. Řešením je funkce $\varphi(x)=\sin(\lambda x)$, kde $\lambda$ je vlastní hodnota této úlohy.
+Druhá rovnice představuje společně s okrajovou podmínkou okrajovou úlohu pro lineární diferenciální rovnici druhého řádu
+$$\varphi''+\lambda^2\varphi=0, \quad \varphi(0)=\varphi(l)=0.$$ Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji viděli u kmitů struny nebo u namáhání na vzpěr. Řešením je funkce $\varphi(x)=\sin(\lambda x)$, kde $\lambda$ je vlastní hodnota této úlohy.
 Funkce $$u(x,t)=\sin(\lambda x)e^{-\lambda^2 t}$$ je tedy řešením rovnice 
 $$\frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}.$$ 
 Rovnici je možno přepsat do tvaru

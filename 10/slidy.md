@@ -23,6 +23,8 @@ příkladech vždy splněno.
 
 # Autonomní diferenciální rovnice
 
+https://youtu.be/9PbghCvHQ5c
+
 Autonomní diferenciální rovnice je rovnice tvaru $$\frac{\mathrm dy}{\mathrm dt}=f(y).\tag{1}$$ Je speciálním případem rovnice se separovanými
 proměnnými a umíme ji řešit
 analytickou cestou. Proto se nyní nebudeme zaměřovat na hledání
@@ -69,7 +71,7 @@ sice pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu
 se tento stacionární stav dostává stále blíže ke stavu nestacionárnímu
 a rovnováha je tedy poněkud křehká.
 
-[Nakreslit online](https://sagecell.sagemath.org/?z=eJx90D8OgjAYh-HdxDswkLRIIW3p2tm1NzAFChhqawpo8U6ewosJOPgvId_8Pr_kE4Sfte2h30GS-AhBjzAiEdKqVqY8aJkrzUHYcJxiHIJouxH0q0hwStYqMlWosNo6DpwqFyH7FeiaQD-E2illFoP9GWwVYW8k17JoZ2S-rrFXKEgsaCyyWDA0no6GTx4mqD_2WnGwd7IKuou8tUNQDaYtHvcgHLl_LTfTV577N1xo&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Numerický model](http://user.mendelu.cz/marik/aromamath/Lov_populace.html)
 
 Pokud se intenzita lov zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule. 
 
@@ -150,6 +152,8 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nu
 
 # Autonomní rovnice s pravou stranou ve tvaru rozdílu
 
+https://youtu.be/ccWuBp4kies
+
 > Poznámka (autonomní rovnice s rozdílem na pravé straně). Rovnice $$\frac{\mathrm dy}{\mathrm dt}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
 
 
@@ -162,7 +166,9 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nu
 </div>
 
 **Příklad.** Teplotní bilanci Země je možno vyjádřit rovnicí
-$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů. [Online model.](http://user.mendelu.cz/marik/aromamath/Teplotni_bilance_Zeme.html)
+$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů. 
+
+[Online model.](http://user.mendelu.cz/marik/aromamath/Teplotni_bilance_Zeme.html)
 
 
 ## Logistická diferenciální rovnice s predátory
@@ -198,7 +204,9 @@ stabilitě, ale s vyšším výskytem škůdce odpovídající stacionárnímu
 bodu $7.3$.
 
 Poněkud jednodušší je kvalitativní analýza, pokud zvolíme jednotku veličiny $y$ tak, aby koeficient $A$ byl roven jedné, zvolíme jednotku času tak, aby koeficient $H$ byl roven jedné a vytkneme proměnnou $y$. Model má potom tvar
-$$y'=y\left [ r\left(1-\frac yK\right)-\frac{y}{y^2+1}\right].$$ Na pravé straně v hranaté závorce zůstává rozdíl funkce $\frac{y^2}{y^2+1}$ neobsahující žádný parametr a lineární funkce, se kterou snadno dokážeme manipulovat. [Ukázka možné vzájemné polohy křivek je na obrázku.](https://sagecell.sagemath.org/?z=eJwrSyzSUK9U1-TlKrI10DPl5fK2NTTg5fKwNeTlcgQRaRqVmrZFWhqGupX63kBl6SC-h1alvkZlnJG2Y5wRUCzA0LYgJ79EA6RWR6NSx0DH0EBTR6EyNzPPVtdAzxCkxAiiJB2HEh2F5Pyc_CJb9aLUFHWwkdoBRgBhcSZp&lang=sage&interacts=eJyLjgUAARUAuQ==)
+$$y'=y\left [ r\left(1-\frac yK\right)-\frac{y}{y^2+1}\right].$$ Na pravé straně v hranaté závorce zůstává rozdíl funkce $\frac{y^2}{y^2+1}$ neobsahující žádný parametr a lineární funkce, se kterou snadno dokážeme manipulovat. 
+
+[Numerický model](http://user.mendelu.cz/marik/aromamath/Populace_pod_tlakem_predatoru.html)
 
 Brauer a Kirbs vysvětlují situaci tak, že s růstem lesa se mění
 parametry modelu, stacionární body se posunují a populace obaleče se
@@ -214,6 +222,8 @@ devastující účinky pro les.
 
 
 # Autonomní systém $X'=f(X)$
+
+https://youtu.be/udATObf0s8I
 
 Soustava diferenciálních rovnic, kde pravé strany nezávisí na čase, se nazývá autonomní systém. Seznámili jsme se již s lineárními autonomními systémy, obecný autonomní systém však lineární být nemusí. Například při modelování chemických reakcí je rychlost úměrná mocnině koncentrace reagujících látek odpovídající počtu molekul, které do reakce vstupují. Níže uvidíme příklad takového modelu.
 
@@ -297,9 +307,9 @@ Taková rovnice nemá řešení v množině reálných čísel a vlastní čísl
 
 <div class='obtekat'>
 
-![Stacionární body spojené s reálnými vlastními čísly.](sp_real.png)
+![Trajektorie pro stacionární body spojené s reálnými vlastními čísly.](sp_real.png)
 
-![Stacionární body spojené s nereálnými vlastními čísly.](sp_complex.png)
+![Trajektorie pro stacionární body spojené s nereálnými vlastními čísly.](sp_complex.png)
 
 </div>
 
@@ -310,10 +320,14 @@ $$ \begin{aligned}
    x'=f(x,y),\\
    y'=g(x,y).
  \end{aligned}$$
-Řešení $x(t)$, $y(t)$ definuje parametrickou křivku v rovině, která se
-nazývá *trajektorie*. Dvě různé trajektorie se nemohou protnout díky
-jednoznačné řešitelnosti. Díky tomu existuje jenom několik málo druhů
-trajektorií.
+ Pro autonomní systémy v rovině používáme dva základní způsoby vizualizace. Oba si můžete prohlédnout výše v příkladu s bruselátorem.
+ 
+ 1. Řešení zobrazíme jako *grafy funkcí $x(t)$ a $y(t)$*. Tímto přístupem dokážeme posoudit dynamiku v čase, odhadnout rychlost s jakou se mění obě komponenty řešení. Často kreslíme do jednoho obrázku a často máme v tomto obrázku dvojí souřadnicový systém: jeden pro hodnoty $x$ a jedn pro hodnoty $y$. 
+ 1. Řešení zobrazíme jako parametrickou křivku $\vec r(t)=[x(t), y(t)]$. Tato křivka se nazývá *trajektorie*. V tomto případě sice nemáme informaci o dynamice v čase, ale můžeme lehce posoudit, jak se chovají řešení vyhcházející z různých počátečních podmínek. Proto tento způsob zpravidla prefererujeme. Tento způsob znázornění se nazývá *fázový portrét*.
+ 
+Křivky tvořené trajektriemi mají speciální vlastnosti. Například se
+díky jednoznačné řešitelnosti nemohou dvě různé trajektrie
+protnout. Díky tomu existuje jenom několik málo druhů trajektorií.
 
 * Stacionární body. Tyto body odpovídají konstantním řešením.
 *  Uzavřené trajektorie, cykly.

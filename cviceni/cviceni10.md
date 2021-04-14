@@ -1,8 +1,10 @@
 % Autonomní rovnice a systémy
 
-K cvičení je k dispozici [Jupyter zápisník na Google Colab](https://colab.research.google.com/drive/1ayfkL4TCEfzXNxYYuEq8WCj08EjWMR3l?usp=sharing).
+K cvičení je k dispozici [Jupyter zápisník s numerickými simulacemi](http://user.mendelu.cz/marik/aromamath/Autonomni_rovnice_a_systemy.html) zde představených modelů. Tento zápisník je možné si naklonovat a samostatně modifikovat příkazy nebo texty a zkoušet vlastní numerické simulace.
 
 # Skladování stavebního recyklátu
+
+https://youtu.be/5gOGLPv8BeU
 
 ![Zdroj: vlastní](pokros.jpg)
 
@@ -43,6 +45,8 @@ Protože $f$ je pro velké $V$ záporná, pro velkou hromadu objem ubývá (víc
 
 # Propeptid kolagenu
 
+https://youtu.be/yAHdtic9b18
+
 ![pixabay.com](kost.jpg)
 
 Kolagen je klíčový protein pojivových tkání. Jeden z kroků při syntéze
@@ -70,11 +74,17 @@ s rozdílem klesající a rostoucí funkce na pravé straně. Tyto funkce mají 
 # Modely interagujících populací
 
 
+https://youtu.be/Rd_5KC2iFtE
+
 ## Jelen a los
 
 ![Jelen a los](moose.jpg)
 
-Uvažujme populaci jelenů a losů. Tyto populace spolu soupeří o potravu. \textbf{(1)} Bez konkurence by populace jelena rostla rychlostí $3$ a  populace losa rychlostí $2$ na jeden kus. \textbf{(2)} Vnitrodruhová konkurence se projevuje v obou populacích stejně a je rovna druhé mocnině příslušné velikosti populace. \textbf{(3)} Mezidruhová konkurence je vyjádřena členem rovným součinu velikosti populací a tato konkurence se projeví s koeficientem 0.5 v populaci losa a s koeficientem 1 v populaci jelena.
+Uvažujme populaci jelenů a losů. Tyto populace spolu soupeří o potravu. 
+
+1. Bez konkurence by populace jelena rostla rychlostí $3$ a  populace losa rychlostí $2$ na jeden kus. 
+2. Vnitrodruhová konkurence se projevuje v obou populacích stejně a je rovna druhé mocnině příslušné velikosti populace. 
+3. Mezidruhová konkurence je vyjádřena členem rovným součinu velikosti populací a tato konkurence se projeví s koeficientem 0.5 v populaci losa a s koeficientem 1 v populaci jelena.
 
 Sestavte matematický model a otestujte jej numerickým experimentem na stabilitu stacionárních bodů. Poté zdvojnásobte parametry mezidruhové konkurence a sledujte změnu odezvy. 
 
@@ -113,10 +123,10 @@ $$
 ![wikimedia](pustik.jpg)
 
 Puštík obecný se téměř výhradně živí malými hlodavci. Předpokládejme následující vztahy.
-\textbf{(1)} Populace hlodavců má porodnost 0.1 na jedince a úmrtnost 0.025 na jedince za jednotku času.
-\textbf{(2)} Rychlost s jakou jeden puštík konzumuje hlodavce je úměrná počtu hlodavců s konstantou úměrnosti 0.01.
-\textbf{(3)} Porodnost v populaci puštíka je úměrná množství zkonzumované potravy s konstantou úměrnosti 0.05.
-\textbf{(4)} Úmrtnost v populaci puštíka je 0.1 na jedince za jednotku času.
+1. Populace hlodavců má porodnost 0.1 na jedince a úmrtnost 0.025 na jedince za jednotku času.
+2. Rychlost s jakou jeden puštík konzumuje hlodavce je úměrná počtu hlodavců s konstantou úměrnosti 0.01.
+3. Porodnost v populaci puštíka je úměrná množství zkonzumované potravy. Ta souvisí s dostupností hlodavců. Předpokládejme, že porodnost je úměrná popoulaci hlodavců s konstantou úměrnosti 0.05.
+4. Úmrtnost v populaci puštíka je 0.1 na jedince za jednotku času.
 
 Vyjádřete tyto vztahy matematickým modelem.
 
@@ -143,10 +153,11 @@ $$
 ![Kůň Převalského](prevalski.jpg)
 
 Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tyto koně loveni vlky. Napište matematický model založený na následujících předpokladech.
-\textbf{(1)} Porodnost v populaci koní je  0.15 na jedince. \textbf{(2)} Úmrtnost v populaci koní je  0.01 na jedince.
-\textbf{(3)} Vlci se živí i jinou potravou, mají tedy kladnou porodnost. Ta je 0.1 na jedince.
-\textbf{(4)} Vlci mají konstantní úmrtnost 0.05 na jedince.
-\textbf{(5)} Pravděpodobnost s jakou je kůň uloven vlkem je úměrná počtu vlků s konstantou úměrnosti 0.02.
+1. Porodnost v populaci koní je  0.15 na jedince. 
+2. Úmrtnost v populaci koní je  0.01 na jedince.
+3. Vlci se živí i jinou potravou, mají tedy kladnou porodnost. Ta je 0.1 na jedince.
+4. Vlci mají konstantní úmrtnost 0.05 na jedince.
+5. Pravděpodobnost s jakou je kůň uloven vlkem je úměrná počtu vlků s konstantou úměrnosti 0.02.
 
 _Podle Alan Garfinkel, Jane Shevtsov, Yina Guo: Modeling Life_
 
@@ -179,6 +190,8 @@ $$
 
 
 # Analýza 2D systému pomocí vlastních čísel
+
+https://youtu.be/bEc6CTxRB3g
 
 Autonomní systém
 $$

@@ -491,17 +491,24 @@ $\hfill\null
 \columnbreak
 
 
-\textbf{Lineární DR 1. øádu}\hfill $y'+a(x)y=b(x)$
+\textbf{Lineární DR 1. øádu s konstantními koeficienty}
+$$\frac{\mathrm dy}{\mathrm dt}+ay=b,\quad a,b\in\mathbb{R}$$ 
 
-Integraèní faktor\hfill $e^{\int a(x)dx}$
+Konstantní (stacionární) øe¹ení: $y(t)=\frac ba$
 
-Rovnice vynásobená integraèním faktorem
-$$\left(y e^{\int a(x)dx}\right)'=e^{\int a(x)dx} b(x) $$
+Obecné øe¹ení: $$y = Ce^{-at}+ \frac ba$$
 
-%$y e^{\int a(x)dx}=C+\int e^{\int a(x)dx} b(x) dx$
+Obecné øe¹ení konverguje ke stacionárnímu pokud $a>0.$
 
-Obecné øe¹ení
-$$y = Ce^{-\int a(x)dx}+ e^{-\int a(x)dx}\int e^{\int a(x)dx} b(x) dx$$
+
+\textbf{Autonomní DR 1. øádu}
+$$\frac{\mathrm dy}{\mathrm dt}=f(y)$$ 
+
+Konstantních øe¹ení je tolik, kolik je nulových bodù funkce $f(y)$.
+
+Stabilní konstantní øe¹ení jsou v bodech, kde je funkce $f$ klesající. 
+
+Netabilní konstantní øe¹ení jsou v bodech, kde je funkce $f$ rostoucí. 
 
 
 \textbf{Lineární autonomní systémy}\hfill
@@ -521,13 +528,14 @@ $
 je $\lambda$ øe¹ením rovnice $\lambda^2-(a+d)\lambda + (ad-bc)=0.$
 
 
+\columnbreak
+
 \textbf{Linearizace nelineárního autonomního systému}
 $$\frac{\mathrm dX}{\mathrm dt}=F(X)$$
 $X=(x_1,\dots, x_n)^T$, $F(X)=(F_1(X),\dots,F_n(X))^T$
 
 Nech» $X_0$ je bod takový, ¾e $F(X_0)=0$. Buï $J(X_0)=\left(\frac{\partial F_i(X_0)}{\partial x_j}\right)$ Jacobiho matice funkce $F$ v bodì $X_0$. Je-li $|J(X_0)|\neq 0$, mají autonomní systémy
 $$\frac{\mathrm dX}{\mathrm dt}=F(X)\qquad \text{a}\qquad \frac{\mathrm dX}{\mathrm dt}=J(X_0) X$$ v bodì $X_0$ stejný typ stacionárního bodu, pokud jsou vlastní hodnoty mimo hranièní a patologické pøípady (vlastní hodnoty nejsou násobné, nejsou nulové a komplexní vlastní hodnoty nemají nulové reálné èásti).
-\columnbreak
 
 \textbf{Lineární DR 2. øádu s konstantními koeficienty}
 
@@ -601,7 +609,6 @@ $$
 $$
 
 
-\columnbreak
 
 
 \textbf{Separace promìnných v PDR}  

@@ -100,6 +100,12 @@ zavést potenciál (záporně vzatá kmenová funkce).
 >  kde $A$ a $B$ jsou počáteční a koncový bod křivky $C$ a $\varphi$ je
 >  kmenová funkce vektorového pole $\vec F$.
 
+Tato věta je použitelná na mnoho způsobů.
+
+* Věta přímo udává efektivní kritérium, kdy křivkový integrál nezávisí na integrační cestě. Rotace vektorového pole musí být nulová. Pokud máme vektorové pole zadané analytickým předpisem jednotlivých komponent, je toto nejsnazší kriterium na ověření.
+* Věta přímo udává, jak ze znalosti kmenové funkce snando určit hodnotu křivkového integrálu. Stačí vypočítat změnu kmenové funkce (změnu skalárního potenciálu) mezi počátečním a koncovým bodem křivky.
+* Věta také udává, jak vypočítat skalární potenciál pomocí křivkového intergálu. Ač se ve sbírkách příkladů studenti setkávají s výpočtem křivkového integrálu pomocí skalárního potenciálu, je toto typické využití jenom v případech s analyticky snadným řešením. V případě numerických výpočtů s naměřenými daty je hledání skalárního potenciálu v podstatě nemožné provést klasickou cestou. Pomocí křivkového integrálu to je naopak snadné. Stačí si vybrat výchozí bod a počítat křivkové integrály po libovolných křivkách (zpravidla úsečky) do bodů, kde chceme znát skalární potenciál. Tomuto je věnován [Jupyter zápisník ilustrující uvedenou větu](http://user.mendelu.cz/marik/aromamath/Nezavislost_na_integracni_ceste.html).
+
 ## Poznámky k\ větě o\ nezávislosti křivkového integrálu na integrační cestě
 
 Větu je možno formálně vyslovit i\ pro jiný než trojrozměrný
