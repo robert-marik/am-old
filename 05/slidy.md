@@ -76,8 +76,6 @@ https://youtu.be/ZRed88fgDkI
 ![Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a>](krivkovy_integral_prvniho_druhu_1.png)
 
 
-
-
 \fi
 
 </div>
@@ -110,6 +108,7 @@ nazýváme *integrálem po uzavřené křivce*.
 <div class='obtekat'>
 
 \iffalse
+
 \def\maxfactor{0.4}
 
 ![Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky](delkovy_element.png)

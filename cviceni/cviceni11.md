@@ -1,5 +1,7 @@
 % Diferenciální rovnice druhého řádu
 
+https://youtu.be/a308Zs_6bq0
+
 # Okrajová úloha
 
 Ukažte, že úloha
@@ -41,7 +43,7 @@ $$\varphi(x)\psi''(t)=\varphi''(x)\psi (t).$$
 Vydělením této rovnice součinem $\varphi(x)\psi(t)$ dostáváme
 $$\frac {\psi''(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}.$$
 Toto je rovnice, kde levá strana je funkcí proměnné $t$ a pravá strana funkcí proměnné $x$. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě. Označme tuto konstantu $-\lambda^2$. Platí tedy
-$$\frac {\psi'(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.$$
+$$\frac {\psi''(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.$$
 První rovnice představuje lineární diferenciální rovnici druhého řádu
 $$\psi''+\lambda^2\psi=0.$$
 Druhá rovnice představuje lineární diferenciální rovnici druhého řádu

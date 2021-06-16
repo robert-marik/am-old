@@ -7,7 +7,7 @@ done
 
 menu="<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0<\/a><a class='menu' href='cviceni01.md.html'>1<\/a><a class='menu' href='cviceni02.md.html'>2<\/a><a class='menu' href='cviceni03.md.html'>3<\/a><a class='menu' href='cviceni04.md.html'>4<\/a><a class='menu' href='cviceni05.md.html'>5<\/a><a class='menu' href='cviceni06.md.html'>6<\/a><a class='menu' href='cviceni07.md.html'>7<\/a><a class='menu' href='cviceni08.md.html'>8<\/a><a class='menu' href='cviceni09.md.html'>9<\/a><a class='menu' href='cviceni10.md.html'>10<\/a><a class='menu' href='cviceni11.md.html'>11<\/a><\/div>"
 
-sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="container"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' *.html
+sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ycontainer"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' *.html
 
 # Vymena jmena prikladu za odkaz je nadvakrat kvuli predavani retezce
 # jako argumentu funkce.

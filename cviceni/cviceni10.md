@@ -123,6 +123,7 @@ $$
 ![wikimedia](pustik.jpg)
 
 Puštík obecný se téměř výhradně živí malými hlodavci. Předpokládejme následující vztahy.
+
 1. Populace hlodavců má porodnost 0.1 na jedince a úmrtnost 0.025 na jedince za jednotku času.
 2. Rychlost s jakou jeden puštík konzumuje hlodavce je úměrná počtu hlodavců s konstantou úměrnosti 0.01.
 3. Porodnost v populaci puštíka je úměrná množství zkonzumované potravy. Ta souvisí s dostupností hlodavců. Předpokládejme, že porodnost je úměrná popoulaci hlodavců s konstantou úměrnosti 0.05.
@@ -153,6 +154,7 @@ $$
 ![Kůň Převalského](prevalski.jpg)
 
 Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tyto koně loveni vlky. Napište matematický model založený na následujících předpokladech.
+
 1. Porodnost v populaci koní je  0.15 na jedince. 
 2. Úmrtnost v populaci koní je  0.01 na jedince.
 3. Vlci se živí i jinou potravou, mají tedy kladnou porodnost. Ta je 0.1 na jedince.

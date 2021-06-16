@@ -1,4 +1,6 @@
-body {margin:20px;}
+body {margin:0px;}
+
+.container {margin:20px;}
 
 img {max-width:80%; width:80%;  margin-right:auto; margin-left:auto; text-align:center; display:block;}
 
@@ -135,7 +137,8 @@ a[href*="sagecell"] {
 .tlacitko {display:none;}
 
 
-body {background: #eeeeee; max-width:1000px; margin:auto; padding:30px;}
+.container {/*  background: #eeeeee; */
+	    max-width:1000px; margin:auto; padding:30px;}
 .obtekat {max-width:60%}
 figcaption {font-size: 60%;}
 
@@ -177,11 +180,19 @@ figcaption {font-size: 60%;}
 
 .menu {display:inline-block; width:8.33%;text-align:center; color:white; text-decoration:none; border-style:solid; border-color:#eeeeee;box-sizing:border-box;     background-color:#006131; border-width:1px;}
 
+.menu4 {width:25%;}
+
+.menu {height:50px; 
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .ACTIVE {color:white; background-color:#E41F1F;}
 
 blockquote {margin-left:0px; margin-right:0px;box-sizing:border-box; }
 
-.container {
+.Ycontainer {
   position: relative;
   overflow: hidden;
   width: 90%;
@@ -206,3 +217,8 @@ blockquote {margin-left:0px; margin-right:0px;box-sizing:border-box; }
 
 
 .reseni, .menu-obalka {clear:both;}
+
+.footer{background-color:#666; color:white; margin:auto; text-align:center;}
+
+ .footer a {color:white;}
+ .footer a:visited {color:white;}

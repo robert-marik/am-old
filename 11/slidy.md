@@ -3,8 +3,18 @@
 % 2020
 
 
+> Anotace.
+>
+> * Lineární difernciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice. 
+> * Soustřeďte se na vysvětlení, jak souvisí DR druhého řádu se zrychlením tělena a působící silou v úlohách z mechaniky, jak se může jednorozměrná difuzní stacionární rovnice redukovat na LDR druhého řádu a jak se metodou separace proměnných dá nestacionární difuzní rovnice rozdělit na obyčejnou diferenciální rovnici prvního a druhého řádu. 
+> * Soustřeďte se na pasáže týkající se toho, jak okrajová podmínka dokáže vybrat hodnoty parametrů pro které existuje nenulové řešení. To determinuje například frekvenci při mechanickém kmitání.
+> * [Numerické experimenty](https://user.mendelu.cz/marik/aromamath/DR_druheho_radu.html) s rovnicí.
+> * Konkrétní nalezení řešení rovnice pomocí řešení kvadratické rovnice, pomocí metody neučitých koeficientů pro nalezení partikulárního řešení atd. je pro nás málo zajímavé a věnujte se mu připadně až v poslední fázi. 
+
+
 # Lineární diferenciální rovnice druhého řádu
 
+https://youtu.be/PcNc0tfv7Q0
 
 > Definice (Lineární diferenciální rovnice druhého řádu). Buďte $p$, $q$ a $f$
 > funkce definované a spojité na intervalu $I$. Diferenciální rovnice
@@ -60,6 +70,7 @@ Situace tedy perfektně koresponduje s kmitáním na pružině i když potenciá
 
 # Řešitelnost LDE druhého řádu
 
+https://youtu.be/sw5EvXHFtA0
 
 $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 
@@ -335,6 +346,8 @@ dosazením do rovnice určíme potřebné hodnoty těchto koeficientů.
 
 # Dirichletova okrajová úloha, vlastní čísla
 
+https://youtu.be/9rFZAfiOM5Y
+
 Někdy je nutné řešit diferenciální rovnice druhého řádu s jinými než
 počátečními podmínkami. Ukážeme si na jednoduchém příkladě odlišnost
 od počáteční úlohy. Následující úloha má velké uplatnění při studiu
@@ -497,6 +510,8 @@ $b$ volný konec.
 
 
 # Fourierova metoda separace proměnných
+
+https://youtu.be/wfvY6bwlxaw
 
 Budeme se zabývat jednorozměrnou rovnicí vedení tepla ve tvaru
 $$\frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}.$$ V

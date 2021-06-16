@@ -126,7 +126,9 @@ https://youtu.be/tPf-7dZ4Il0
 \def\maxfactor{0.3}
 
 \iffalse
+
 ![](dvojny_integral.png)
+
 \fi
 
 </div>
@@ -303,7 +305,7 @@ https://youtu.be/8YS2Fn8st5I
   kde $\mu (\Omega)=\iint_\Omega\mathrm{d}x\mathrm{d}y$ je obsah
   množiny $\Omega$.
 
-  \iffalse
+\iffalse
 
 ### Objem kopce nebo jezera pomocí vrstevnic
 

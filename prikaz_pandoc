@@ -2,7 +2,7 @@ cp slidy.md slidy_kopie.md
 sed -i 's/\\iffalse//' slidy_kopie.md
 sed -i 's/\\fi//' slidy_kopie.md
 
-pandoc -t html --toc --css ../my.css?ver=2021-01-27 --template ../default.html -s slidy.md -o index.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+pandoc -t html --toc --css ../my.css?ver=2021-06-16 --template ../default.html -s slidy.md -o index.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 sed -i -e :a -e '/<blockquote>$/N; s/<blockquote>\n/<blockquote>/; ta' index.html 
 sed -i 's/<blockquote><p>Definice (\([^\.]*\))./<blockquote class="definice"><p class="definicename">Definice (\1).<\/p><p>/' index.html
@@ -16,7 +16,7 @@ sed -i 's/<blockquote><p>Anotace./<blockquote class="anotace"><p class="anotacen
 sed -i 's/<blockquote><p>Prerekvizity./<blockquote class="prerekvizity"><p class="prerekvizityname">Prerekvizity.<\/p><p>/' index.html
 
 
-sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="container"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' index.html
+sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ycontainer"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' index.html
 
 
 # Vymena jmena prikladu za odkaz je nadvakrat kvuli predavani retezce
