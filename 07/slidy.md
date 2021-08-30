@@ -2,10 +2,24 @@
 % Robert Mařík
 % 2020
 
+
+> Anotace.
+>
+> * V přednášce se seznámíme s nástrojem, který umožňuje předvádět mezi sebou křivkové a dvojné integrály. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+> * Dále se seznámíme s vektorovou obdobou Newtonovy-Leibnizovy věty. Naučíme se počítat křivkový integrál druhého druhu pomocí rozdílu potenciálu v koncových bodech. Tato možnost není k dispozici automaticky (pouze pro vektorová pole s nulovou rotací, pro která existuje kmenová funkce), ale pokud je možné touto cestou jít, bývá to velké ulehčení.
+
+> Prerekvizity.
+>
+> * Křivkový integrál převádíme na dvojný integrál. Je proto dobré ovládat výpočet dvojného integrálu.
+> * Pro pochopení odvození rovnice kontinuity v integrálním tvaru je nutné znát význam dvojného integrálu hustoty a umět pomocí křivkového integrálu vypočítat tok.
+> * Dostaneme se jinou cestou ke stejné rovnici, kterou jsme poznali dříve jako difuzní rovnici. Je vhodné si ujasnit fyzikální význam jednotlivých členů této rovnice a jak se ve speciálních případech tyto členy mohou redukovat na členy jednodušší (izotropní materiál, homogenní materiál, materiál s lineárními vlastnostmi, stacionární děj, proces bez zdrojů).
+
+
+
 # Úvod 
 
 
-V této přednášce se seznámíme s nástroji pro pohodlný výpočet křikvového integrálu v případě, kdy tento integrál nezávisí na integrační cestě a s metodou převodu křivkového interálu na dvojný integrál. Tyto myšlenky dnes stojí v samotném základu mnoha dalších teorií a jsou důležité pro přechod mezi lokálním a globálním (mikroskopickým a makroskopickým) popisem transportních jevů. Proto je až neuvěřitelné, že uvedený postup odvodil pekař a samouk [George Green](https://cs.wikipedia.org/wiki/George_Green), který absolvoval jenom jediný rok školní docházky ve věku od osmi do devíti let! Své dílo opublikoval vlastním nákladem a povětšinou rozdal přátelům, kteří však textu pravděpodobně nemohli vůbec rozumět. Proto nevešlo okamžitě ve známost. Nezávisle na Greenovi podobný přístup objevili i někteří další fyzikové.
+V této přednášce se seznámíme s nástroji pro pohodlný výpočet křivkového integrálu v případě, kdy tento integrál nezávisí na integrační cestě a s metodou převodu křivkového integrálu na dvojný integrál. Tyto myšlenky dnes stojí v samotném základu mnoha dalších teorií a jsou důležité pro přechod mezi lokálním a globálním (mikroskopickým a makroskopickým) popisem transportních jevů. Proto je až neuvěřitelné, že uvedený postup odvodil pekař a samouk [George Green](https://cs.wikipedia.org/wiki/George_Green), který absolvoval jenom jediný rok školní docházky ve věku od osmi do devíti let! Své dílo opublikoval vlastním nákladem a povětšinou rozdal přátelům, kteří však textu pravděpodobně nemohli vůbec rozumět. Proto nevešlo okamžitě ve známost. Nezávisle na Greenovi podobný přístup objevili i někteří další fyzikové.
 
 
 \iffalse 
@@ -39,7 +53,7 @@ možno nalézt v literatuře.
   u\ uzavřených křivek).
 * Křivka se nazývá **regulární**, pokud funkce z jejího parametrického
   vyjádření jsou hladké (mají spojité derivace) a v každém bodě je
-  aspoň jedna z těchto funkcí nenulová.
+  aspoň jedna z těchto derivací nenulová.
 * Pokud platí pro libovolné dvě regulární křivky $C$ a $C_1$, které leží v
   $\Omega$ a mají stejné počáteční body a stejné koncové body, platí
   $$
@@ -53,6 +67,8 @@ možno nalézt v literatuře.
   neobsahuje otvory.
 
 # Věta o\ nezávislosti integrálu na integrační cestě
+
+https://youtu.be/zQorgqarHG4
 
 Podle této věty je tedy vektorové pole v\ prostoru
 konzervativní právě tehdy, když je jeho rotace nulová a to je právě
@@ -84,7 +100,13 @@ zavést potenciál (záporně vzatá kmenová funkce).
 >  kde $A$ a $B$ jsou počáteční a koncový bod křivky $C$ a $\varphi$ je
 >  kmenová funkce vektorového pole $\vec F$.
 
-# Poznámky k\ větě o\ nezávislosti křivkového integrálu na integrační cestě
+Tato věta je použitelná na mnoho způsobů.
+
+* Věta přímo udává efektivní kritérium, kdy křivkový integrál nezávisí na integrační cestě. Rotace vektorového pole musí být nulová. Pokud máme vektorové pole zadané analytickým předpisem jednotlivých komponent, je toto nejsnazší kriterium na ověření.
+* Věta přímo udává, jak ze znalosti kmenové funkce snando určit hodnotu křivkového integrálu. Stačí vypočítat změnu kmenové funkce (změnu skalárního potenciálu) mezi počátečním a koncovým bodem křivky.
+* Věta také udává, jak vypočítat skalární potenciál pomocí křivkového intergálu. Ač se ve sbírkách příkladů studenti setkávají s výpočtem křivkového integrálu pomocí skalárního potenciálu, je toto typické využití jenom v případech s analyticky snadným řešením. V případě numerických výpočtů s naměřenými daty je hledání skalárního potenciálu v podstatě nemožné provést klasickou cestou. Pomocí křivkového integrálu to je naopak snadné. Stačí si vybrat výchozí bod a počítat křivkové integrály po libovolných křivkách (zpravidla úsečky) do bodů, kde chceme znát skalární potenciál. Tomuto je věnován [Jupyter zápisník ilustrující uvedenou větu](http://user.mendelu.cz/marik/aromamath/Nezavislost_na_integracni_ceste.html).
+
+## Poznámky k\ větě o\ nezávislosti křivkového integrálu na integrační cestě
 
 Větu je možno formálně vyslovit i\ pro jiný než trojrozměrný
 prostor. Pokud je pole v\ předchozí větě pouze v\ rovině, tj. $\vec
@@ -111,7 +133,7 @@ $z=0$ je roven $2\pi$.
 \iffalse
 
 
-# Závislost a nezávislost integrálu na integrační cestě
+## Závislost a nezávislost integrálu na integrační cestě
 
 
 \fi
@@ -128,7 +150,7 @@ $z=0$ je roven $2\pi$.
 \iffalse
 
 
-* [online výpočet integrálů z\ obrázků](https://sagecell.sagemath.org/?z=eJx1kUFOwzAQRfeVeoeRlQgbDK3THcIsEVI2XbALKTKJS6OEJNhOSY7CgbgX4zQVrRCWLHs0_4-fvvfKAL3o-cDdBZvP2qbSAiTQ62FhP4yj_Sa6GjYR4_15PWmjSfurg_63AFTNZ5mQVFw77rDKIkmzxtK2uHQLr7ZFfSy8OlsdtOA2q9Gc6y2UptiXzX54KWqn34yqgLZLDq3gUOJZCnY7nwEuo11nalp379oUmarODDe2e7W0l94ySDRd5sV2S7F07KoV_7UFtvmSC5Ys05Fo2xhYQ1HjTB8Wcvgcjgh213zSnXuvKLnbmXu_iQ_rvGewGd2v0XgLwfNeZ_AgaWh5aFlwt8AWCYFWyumerv27_HgXKWNjUH6eU69dVSqZJCT-_sKMFOHkscnrximSpgeRx41H3AxZswj36gh7MuRGta2uc5oYEvQytAGHYJhO91zUCUaQBiScqOITqnik4n9-aUTn4KE5xON9lKYMnz1JBAkqTScODjutcm1eTPMpn0ynGfsB9VrANw==&lang=sage)
+* [online výpočet integrálů z\ obrázků](https://sagecell.sagemath.org/?z=eJx1kcFOhDAQhu88xaSB2K7V3bI3s_VoTLjswRuypkLXJSBgW1Z4FB_I93KKmHVjbNK0k_-fma_TozJALwY-cnfBgq6ttQAJ9Gpc2jfj6LCLL8ddzPhwHn9b49l6ssFwCoAFQS4kFVeOOxbksaR5a2lXLtzSW23Z_ARozdffTnC7NSYWeg-VKY9VexyfysbpF6NqoN2KQyc4VHhWgt0EgMto15uGNv2rNmWu6jP_te2fLR2kzxgl5iyKcr-nGDp22Yn_ZIEyX3HB0lWGOPvWwBbKBiv6ESGEf_7c3x7ad3pwrzUlm4O59ZvghM4lg1p8u8W0GwgfjzqHO0kjyyPLws0SJRIBrZXTA936nvznLjLG_IB8Oaee-7pSMk1J8vmB01GEk_u2aFqnSJZNHo-aTKg5cuYx7vUM-qvEteo63RQ0NSQcZGRDDuE4n-6xbFJ8exaSaEZKfiElExL_8zsTNwdPzCGZ7pM1Y9j2NA0EqDWdMTgctCq0eTLtu3wwvWbsC89xv1o=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * [online výpočet rotace nekonzervativního pole z\ obrázku](https://sagecell.sagemath.org/?z=eJyNUsFywiAQvTvjP-w42sBI2pg71_5Eoxk0QZkhISVoQcd_L2Am6dgeygF22bc89u1a4siVXphGiQUH1wTPZ_MZRzbcY4pS99Z_aoPsLl-7XY6JffKzmGAb0RKwDbMEXLSdt4FCRmBD4h5glbhwiirBOeIf2ZZYvB6czZa40cm3nhu_9qLppOCu5Gcpkec5nLWcvgZoyr3idMp1v3PJCM4Dazp94Q-iCZyFx9KJxv4GQ6y_P6kvdDKNRHqxLPb1UbQ3JsWxras7FJf6AO8vFFY9FAUU8xkAFA0zJ9Xd4qmbm5fmfv8XUiszIoEGZN1WI9tysYpZSDJTW-Tlol4wGrrsSyXwuA6NeI4MoUHknzG_QpGdVKb0vEbpkotaVihKFBuSYRIUGuwgoSVxKMJMBNeROBfu4bK-8--UmhmhqB-Qg5JK02Qvz3WCvwFPt855&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * [online výpočet rotace konzervativního pole z\ obrázku](https://sagecell.sagemath.org/?z=eJyNUsGOwiAQvZv4DxOjW4h0t_bOdX9iq021oCS0NBRd0PjvC9i0Zt3DcoAZ5g2PeTOWOHKll0qjxIKDa4Lns_mMIxvuMUWp-0B2l6_dLsfEPtlZBNpGtARsU1kCLtrO20AhI7AhcQ-wWlw4RbXgHPGvbEssXg_OZkvc6ORbz4nfe9F0UnBX8rOUyPMczlpOXwI05V5xOuW611wygvPAmk5f-INoAmfhsXSisa9giPX3J_WNTqaRSC-WxZ4dRXurpDi2rL5DcWEH-HyjsOqhKKCYzwCgaCpzUt0tnrq5eWnu938htTIjEmhAsrYe2ZaLVcxCsjLMIi8X9YLR0F1fKoHHdWjE78gQGkR-jvkViuykMqXnNUqXXDBZoyhRbEiGSVBosIOElsShCDMRXEfiXLiHW_Wdf6fUlRGK-gE5KKk0TfbyzBL8A1uuyuU=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
@@ -144,7 +166,9 @@ $z=0$ je roven $2\pi$.
 
 # Greenova věta
 
-> Věta (Greenova věta).  Nechť $\Omega\subseteq\mathbb{R}^2$ je jednoduše souvislá regulární oblast,jejíž hranicí je po částech regulární křivka $\partial \Omega$
+https://youtu.be/L9iF8H43feQ
+
+> Věta (Greenova věta).  Nechť $\Omega\subseteq\mathbb{R}^2$ je jednoduše souvislá regulární oblast, jejíž hranicí je po částech regulární křivka $\partial \Omega$
 > orientovaná tak, že při obíhání podél křivky $\partial \Omega$ je
 > oblast $\Omega$ vlevo. Nechť vektorová funkce $\vec
 > F(x,y)=P(x,y)\vec i+Q(x,y)\vec j$ je hladká uvnitř nějaké oblasti,
@@ -159,8 +183,8 @@ $z=0$ je roven $2\pi$.
 Použijeme-li pro funkci $\vec F$ vystupující v\ Greenově větě
 třídimenzionální rozšíření (třetí komponenta nulová),
 vidíme, že vpravo v\ dvojném integrálu figuruje třetí komponenta rotace
-$\nabla \times \vec F$. Je to současně jediná nenulová komponenta vektoru
-rotace, zbylé dvě komponenty vektoru rotace jsou rovny nule.
+$\nabla \times \vec F$. Je to současně jediná komponenta vektoru
+rotace, která může být neulová. Zbylé dvě komponenty vektoru rotace jsou rovny nule automaticky.
 
 Pokud zvolíme funkce $P$ a $Q$ tak, že platí $\frac{\partial
 Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}=1$, potom
@@ -170,7 +194,7 @@ principu fungují planimetry.
 
 \fi
 
-# Varianta Greenovy věty pro tok křivkou 
+## Varianta Greenovy věty pro tok křivkou 
 
 Nahradíme-li formálně vektorové pole $P\vec i+Q\vec j$ vektorovým polem $-Q\vec
 i+P\vec j$, dostáváme následující vztah mezi dvojným integrálem
@@ -198,17 +222,17 @@ ani spotřebičů je tok dovnitř křivky stejný jako tok ven (co do
 uzavřeného prostoru vteče, to i\ vyteče ven) a divergence je rovna
 nule.
 
-# Greenova věta a přechod mezi lokálním a globálním tvarem rovnice kontinuity
+## Greenova věta a přechod mezi lokálním a globálním tvarem rovnice kontinuity
 
-Greenova  věta umožňuje přechod mezi lokálním tvarem fyzikálních zákonů (co se děje v daném bodě prostoru) a globálním tvarem (co se děje v konečném objemu). Z fyzikálního hlediska je zajímavější lokální tvar, protože dává náhled, jak fungují studované procesy. Z hlediska pozorovatele je zajímavější globální tvar, protože pracuje s reálně měřitelnými pojmy. Vzhledem k možnosti přechodu mezi těmito přistupy je užitečnost Greenovy věty a jejího trojrozměrného zobecnění nezastupitelná.
+Greenova  věta umožňuje přechod mezi lokálním tvarem fyzikálních zákonů (co se děje v daném bodě prostoru) a globálním tvarem (co se děje v konečném objemu). Z fyzikálního hlediska je zajímavější lokální tvar, protože dává náhled, jak fungují studované procesy. Z hlediska pozorovatele je zajímavější globální tvar, protože pracuje s reálně měřitelnými pojmy. Vzhledem k možnosti přechodu mezi těmito přístupy je užitečnost Greenovy věty a jejího trojrozměrného zobecnění nezastupitelná.
 
-Navážeme na koncept představený v přednášce o divergenci vektorového pole a pododnou bilanci stavové veličiny, jakou jsme použili v odvození rovnice kontinuity a difuzní rovnice použijeme pro konečně velký objem.
+Navážeme na koncept představený v přednášce o divergenci vektorového pole a podobnou bilanci stavové veličiny, jakou jsme použili v odvození rovnice kontinuity a difuzní rovnice použijeme pro konečně velký objem.
 
 Je-li $u(x,y)$ hustota stavové veličiny v množině $M$, $\sigma(x,y)$ vydatnost zdrojů a $\vec J=(P,Q)$ pole popisující tok stavové veličiny, je rychlost s jakou roste množství stavové veličiny v množině $M$ (tj. derivace množství podle času) dána vydatností zdrojů stavové veličiny snížené o odtok stavové veličiny přes hranici množiny $M$. Matematicky vyjádřeno platí
 \dm$$\frac{\mathrm d}{\mathrm dt}\left(\iint_M u\,\mathrm dx\mathrm dy\right)=\iint_M \sigma\,\mathrm dx\mathrm dy-\oint_{\partial M}-Q\,\mathrm dx+P\,\mathrm dy.$$
 Díky nezávislosti $x$ a $y$ na čase $t$ můžeme zaměnit pořadí derivace podle času a dvojného integrálu vlevo. Křivkový integrál vpravo můžeme přepsat pomocí Greenovy věty na dvojný integrál. Tím dostáváme
 \dm$$\iint_M\frac{\partial u}{\partial t}\,\mathrm dx\mathrm dy=\iint_M \sigma\,\mathrm dx\mathrm dy-\iint_{M}\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)\,\mathrm dx\mathrm dy$$
-a po zkrácení označení v posledním dvojném integrálu a využití lienarity integrálu vztah přejde do tvaru
+a po zkrácení označení v posledním dvojném integrálu a využití linearity integrálu vztah přejde do tvaru
 \dm$$\iint_M\frac{\partial u}{\partial t}\,\mathrm dx\mathrm dy=\iint_M \sigma-\nabla\cdot \vec J\,\mathrm dx\mathrm dy.$$
 Protože tato rovnost má platit pro libovolnou množinu $M$, musí se rovnat nejenom integrály, ale i integrované funkce, tj. musí platit
 \dm$$\frac{\partial u}{\partial t}= \sigma-\nabla\cdot \vec J.$$

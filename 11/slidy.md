@@ -3,8 +3,18 @@
 % 2020
 
 
+> Anotace.
+>
+> * Lineární difernciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice. 
+> * Soustřeďte se na vysvětlení, jak souvisí DR druhého řádu se zrychlením tělena a působící silou v úlohách z mechaniky, jak se může jednorozměrná difuzní stacionární rovnice redukovat na LDR druhého řádu a jak se metodou separace proměnných dá nestacionární difuzní rovnice rozdělit na obyčejnou diferenciální rovnici prvního a druhého řádu. 
+> * Soustřeďte se na pasáže týkající se toho, jak okrajová podmínka dokáže vybrat hodnoty parametrů pro které existuje nenulové řešení. To determinuje například frekvenci při mechanickém kmitání.
+> * [Numerické experimenty](https://user.mendelu.cz/marik/aromamath/DR_druheho_radu.html) s rovnicí.
+> * Konkrétní nalezení řešení rovnice pomocí řešení kvadratické rovnice, pomocí metody neučitých koeficientů pro nalezení partikulárního řešení atd. je pro nás málo zajímavé a věnujte se mu připadně až v poslední fázi. 
+
+
 # Lineární diferenciální rovnice druhého řádu
 
+https://youtu.be/PcNc0tfv7Q0
 
 > Definice (Lineární diferenciální rovnice druhého řádu). Buďte $p$, $q$ a $f$
 > funkce definované a spojité na intervalu $I$. Diferenciální rovnice
@@ -54,12 +64,13 @@ druhého řádu $$E(x)\approx E(x_0)+E'(x_0)x+\frac 12E''(x_0)x^2.$$
 Vzhledem k tomu, že v $x_0$ je minimum, platí $E'(x_0)=0$. Síla je
 poté dána vztahem $$F(x)=-\frac{\partial}{\partial x}E(x)=-E''(0)x.$$
 Síla $F$ je tedy úměrná výchylce $x$ a vrací těleso do rovnovážné
-polohy. Situace tedy perfektně koresponduje s kmitáním na pružině i
-když potenciální energie uvažovaná v tomto odstavci může být jiného
-charakteru.
+polohy. 
+
+Situace tedy perfektně koresponduje s kmitáním na pružině i když potenciální energie uvažovaná v tomto odstavci může být jiného charakteru. Něco podobného jsme viděli již u autonomních systémů, kdy systém modelující tlumený oscilátor z předášky byl stejný jako systém modelující regulaci topení ze cvičení a tento systém byl jenom lépe představitelnou realizací systému regulace syntézy protinů.
 
 # Řešitelnost LDE druhého řádu
 
+https://youtu.be/sw5EvXHFtA0
 
 $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 
@@ -335,6 +346,8 @@ dosazením do rovnice určíme potřebné hodnoty těchto koeficientů.
 
 # Dirichletova okrajová úloha, vlastní čísla
 
+https://youtu.be/9rFZAfiOM5Y
+
 Někdy je nutné řešit diferenciální rovnice druhého řádu s jinými než
 počátečními podmínkami. Ukážeme si na jednoduchém příkladě odlišnost
 od počáteční úlohy. Následující úloha má velké uplatnění při studiu
@@ -404,7 +417,7 @@ V praktických úlohách, kdy požadujeme existenci nenulového řešení, zprav
 $$y''+\lambda^2 y=0,$$ abychom zdůraznili kladnou hodnotu parametru a abychom dostávali řešení formálně bez druhé odmocniny. 
 Tedy okrajová úloha 
 $$y''+\lambda^2 y=0,\quad y(0)=0=y(1)$$
-má vlastní čísla $\lambda=ḱ\pi$, kde $k$ je kladné celé číslo.
+má vlastní čísla $\lambda=k\pi$, kde $k$ je kladné celé číslo.
 
 
 # Kmity struny
@@ -452,7 +465,7 @@ kol., Štruktúra a vlastnosti
 dreva](https://katalog.mendelu.cz/documents/21654), str. 359)
 $$\frac{\mathrm d^2 y}{\mathrm dx^2}+\alpha^2 y=0,\quad y(0)=y(l)=0,$$
 kde $\alpha^2=\frac{F}{EI}$ je parametr závislý na působící síle,
-materálu a kvadratickém momentu průřezu nosníku. (Pro jiné způsoby uchycení se rovnice a okrajové podmínky mohou mírně lišit, rovnice může být například i nehomogenní a pro jiné druhy zatížení i vyššího řádu, zásadní vlastnosti jsou však stejné.) Toto je stejná úloha jako u kmitání struny. Při síle, která se postupně zvětšuje, se nenulové řešení objeví v bodě, kde platí $$\alpha l=\pi,$$ (odpovídá základní frekvenci struny) tj.
+materiálu a kvadratickém momentu průřezu nosníku. (Pro jiné způsoby uchycení se rovnice a okrajové podmínky mohou mírně lišit, rovnice může být například i nehomogenní a pro jiné druhy zatížení i vyššího řádu, zásadní vlastnosti jsou však stejné.) Toto je stejná úloha jako u kmitání struny. Při síle, která se postupně zvětšuje, se nenulové řešení objeví v bodě, kde platí $$\alpha l=\pi,$$ (odpovídá základní frekvenci struny) tj.
 $$\sqrt{\frac {F}{EI}}l=\pi$$
 a
 $$F=\frac{\pi^2 EI}{l^2}.$$
@@ -498,6 +511,8 @@ $b$ volný konec.
 
 # Fourierova metoda separace proměnných
 
+https://youtu.be/wfvY6bwlxaw
+
 Budeme se zabývat jednorozměrnou rovnicí vedení tepla ve tvaru
 $$\frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}.$$ V
 tomto tvaru rovnice neobsahuje žádné konstanty a je to tvar, se kterým
@@ -507,26 +522,29 @@ si ukážeme v následující přednášce. Teď si ukážeme, jak řešení rov
 vede na řešení LDR druhého řádu. Uvažujme pro jednoduchost okrajovou
 úlohu, kdy konce tyče jsou udržovány na nulové teplotě, tj. je-li tyč
 délky $l$ položena v ose $x$ tak že levý konec je v počátku, platí pro
-teplotu $u(x,t)$ podmínky $u(0,t)=u(l,t)$ v libovolném čase $t$.
+teplotu $u(x,t)$ podmínky $u(0,t)=u(l,t)=0$ v libovolném čase $t$.
 
 Budeme řešení hledat ve tvaru $u(x,t)=\varphi(x)\psi(t)$, kde $\varphi$ a $\psi$ jsou funkcemi jedné proměnné.
 Platí
-$$\frac{\partial u}{\partial t}=\varphi(x)\psi'(t), \quad \frac{\partial^2 u}{\partial x^2}=\varphi''(x) $$
+$$\frac{\partial u}{\partial t}=\varphi(x)\psi'(t), \quad \frac{\partial^2 u}{\partial x^2}=\varphi''(x) \psi(t)$$
 a rovnice má tvar
 $$\varphi(x)\psi'(t)=\varphi''(x)\psi (t).$$
 Vydělením této rovnice součinem $\varphi(x)\psi(t)$ dostáváme
 $$\frac {\psi'(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}.$$
-Toto je rovnice, kde levá strana je funkcí proměnné $t$ a pravá strana funkcí proměnné $x$. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě. Označme tuto konstantu $-\lambda^2$. Platí tedy
+Toto je rovnice, kde levá strana je funkcí proměnné $t$ a pravá strana funkcí proměnné $x$. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě. 
+
+Okrajové podmínky si vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$
+a díky tomu máme pouze nulové řešení pokud je tato konstanta kladná (viz výše výpočet vlastních hodnot pro tuto úlohu). Společná konstanta tedy musí být záporná. 
+Označme ji $-\lambda^2$. Platí tedy
 $$\frac {\psi'(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.$$
 První rovnice představuje lineární diferenciální rovnici prvního řádu
 $$\psi'=-\lambda^2\psi$$
 s partikulárním řešením $\psi(t)=e^{-\lambda^2 t}.$
-Druhá rovnice představuje lineární diferenciální rovnici druhého řádu
-$$\varphi''+\lambda^2\varphi=0$$
-a okrajové podmínky si vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji viděli u kmitů struny nebo u namáhání na vzpěr. Řešením je funkce $\varphi(x)=\sin(\lambda x)$, kde $\lambda$ je vlastní hodnota této úlohy.
+Druhá rovnice představuje společně s okrajovou podmínkou okrajovou úlohu pro lineární diferenciální rovnici druhého řádu
+$$\varphi''+\lambda^2\varphi=0, \quad \varphi(0)=\varphi(l)=0.$$ Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji viděli u kmitů struny nebo u namáhání na vzpěr. Řešením je funkce $\varphi(x)=\sin(\lambda x)$, kde $\lambda$ je vlastní hodnota této úlohy.
 Funkce $$u(x,t)=\sin(\lambda x)e^{-\lambda^2 t}$$ je tedy řešením rovnice 
 $$\frac{\partial u}{\partial t}=\frac{\partial^2 u}{\partial x^2}.$$ 
-Rovnici je monžo přepsat do tvaru
+Rovnici je možno přepsat do tvaru
 $$\frac{\partial u}{\partial t}-\frac{\partial^2 u}{\partial x^2}=0,$$
 kdy na levé straně stojí lineární operátor a na pravé straně je nula. Proto je každá lineární kombinace řešení opět řešením a pro libovolnou volbu konstant je funkce
 $$u(x,t)=\sum_{\lambda}C_\lambda\sin(\lambda x)e^{-\lambda^2 t}$$

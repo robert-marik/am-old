@@ -1,8 +1,26 @@
 % Divergence vektorového pole, rovnice kontinuity
 % Robert Mařík
-% 2020
+% 2020, 2021
+
+
+> Anotace.
+>
+> * Představíme si univerzální nástroj umožňující popsat libovolný transportní děj v přírodě. Tedy transport energie (vedení tepla), transport vody (sušení dřeva, proudění podzemní vody, proudění tzv. mělké vody) a transport látky obecně (pohyb sedimentů, pohyb tektonických vrstev).
+> * Aparát představený v této přednášce se věnuje základním principům transportních dějů. Naučíme se základní představu o fungování těchto dějů naformulovat matematicky. Vzniklé rovnice řešit nebudeme, což vůbec nevadí. Řešení za nás zvládnou počítače, role člověka je však nezastupitelná právě při formulaci modelu, což bude naším hlavním úkolem.
+> * Během analýzy transportních jevů si představíme nový diferenciální operátor, operátor divergence. Vyjadřuje, zda tok zesiluje a nabírá na intenzitě (tj. z daného místa více vytéká, než teče dovnitř) nebo naopak.
+
+
+> Prerekvizity.
+>
+> * Navážeme na využití vektorových funkcí a gradientu k popisu proudění látky nebo energie prostředím.
+> * Ukážeme si, jak se matematicky odrazí v popisu izotropie nebo homogenita materiálu, jak se liší popis stacionárních a nestacionárních jevů, jak se liší popis materiálů s lineárními a nelineárními materiálovými vlastnostmi. Pod těmito pojmy je vždy vhodné si představovat konkrétní situace a pokud se budete při používání těchto pojmů cítit zaskočeni, můžete si oživit znalosti například na Wikipedii.
+> * Zobecníme si rovnici vedení tepla v jedné dimenzi, kterou jsme si odvodili v úvodní přednášce. Je proto vhodné si základní fakta o této rovnici zopakovat.
+
+
 
 # Transportní jevy
+
+https://youtu.be/p1Qu89EKc94
 
   Pochopení a modelování transportních dějů je
   důležité pro většinu technických oborů. Podstata těchto dějů je často
@@ -48,6 +66,8 @@ podle času. Měřit změny v toku přenášejícím sledovanou veličinu jsme s
 
 # Změna toku vektorového pole
 
+https://youtu.be/cXT6ULeZFJs
+
 \iffalse 
 
 <div class='obtekat'>
@@ -56,16 +76,16 @@ podle času. Měřit změny v toku přenášejícím sledovanou veličinu jsme s
 
 </div>
 
-\fi 
+\fi
 
 Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v daném místě mění.
 
 * Pro jednoduchost rozdělíme tok na tři nezávislé části ve směru jednotlivých os a vztáhneme vše k jednotkám času a průřezu, tj. budeme uvažovat hustotu toku nějaké fyzikální veličiny.
 * Je-li tato hustota toku popsána vektorovým polem  $\vec q=(P,Q,R)$ v jednotkách kilogram na metr čtvereční za sekundu, znamená to, že kolmým průřezem jednotkového obsahu projde za jednotku času $P$ kilogramů sledované látky, jejíž tok popisujeme. Často se pracuje i s objemovým tokem, kdy množství neměříme v kilogramech ale v metrech krychlových a například při ustáleném proudění v trubici (hydrodynamika) je tok roven vektoru rychlosti a při proudění porézním materiálem (proudění podzemní vody) je roven filtrační rychlosti.
-* Derivace $\frac{\partial P}{\partial x}$ udává, o kolik studovaný tok v daném místě vzroste ve směru osy $x$ a tento nárůst je vztažený na jednotku délky.
-* Ve směru osy $y$ máme tok vyjádřený veličinou $Q$ a proto nás podobně zajímá $\frac{\partial Q}{\partial y}$.
-* Analogicky $\frac{\partial R}{\partial z}$.
-* Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Jestli se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli v daném místě může ubývat již z čisté matematiky nezjistíme. Záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
+* Uvažování toku v souřadnicích nám umožní tok rozdělit na nezávislé toky ve směru os. Můžeme si pro jednoduchost představit tři trubky, ve směru každé osy jednu. Funkce $P$ udává tok v trubce mířící směrem v ose $x$ (v kladném směru kladný tok a naopak) a potřebujeme zjistit, jestli tento tok narůstá nebo slábne. To jsme již řešili v případě toku tepla u rovnice vedení tepla v úvodní přednášce. Derivace $\frac{\partial P}{\partial x}$ udává, o kolik studovaná komponenta toku v daném místě vzroste a tento nárůst je vztažený na jednotku délky.
+* Ve směru osy $y$ máme tok vyjádřený veličinou $Q$ a proto nás pro popis zesilování či zeslabování zajímá $\frac{\partial Q}{\partial y}$.
+* Analogicky $\frac{\partial R}{\partial z}$ ve směru osy $z$.
+* Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že tok zesiluje. Z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Jestli se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli v daném místě může ubývat již z čisté matematiky nezjistíme. Záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
 * Při preciznější argumentaci dávající do souvislosti parciální derivace jednotlivých komponent toku s tím, co se reálně s vektorovým polem děje, je nutné si pomoci stejně jako u derivací, tj. uvažovat ne dané místo, ale jistý konečně velký objem (viz obrázek), vztáhnout dané veličiny na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.
 
 <!--
@@ -88,6 +108,8 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 
 # Divergence
 
+https://youtu.be/ejDQx3QjgfI
+
 Výše uvedenými úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci.)
 
 > Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\mathop{\mathrm{div}}\vec F$ nebo $\nabla \cdot \vec F$.
@@ -101,11 +123,11 @@ Výše uvedenými úvahami je motivována následující definice a věta. (Defi
 > $$\nabla \cdot (\vec F+\vec G)=\nabla \cdot \vec F +\nabla \cdot \vec G, \qquad \nabla \cdot (c\vec F)=c\nabla \cdot \vec F.$$
 
 
-> Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok zhušťuje a nabývá na intenzitě (kladná divergence) nebo řídne a ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
+> Poznámka (fyzikální interpretace divergence). Vektorové pole používáme k modelování toku veličin, které nás zajímají (teplo v materiálu, tekutina nebo chemická látka v materiálu, voda nebo plyn v půdě a podobně). Divergence vektorového pole udává tok z jednotkového objemu látky v daném místě. Udává, jestli se v daném místě a čase tok nabývá na intenzitě (kladná divergence) nebo ustává (záporná divergence). Tento efekt může být způsoben tím, že veličina přenášená tímto polem se v daném místě buď kumuluje, nebo ubývá a také tím, že daná veličina v bodě může vznikat nebo zanikat.
 
 Divergence je lokální veličina. Udává informaci o daném bodě. Pro měření však je nutné mít konečný objem a pro stanovení toku konečně velkou hranici. Vzájemný vztah mezi lokální veličinou a konečným objemem je založený na předpokladu, že podmínky se nemění skokem a okolí každého bodu jsou nepříliš odlišné od podmínek v okolních bodech.
 
-> Poznámka (fyzikální interpretace divergence v měřitelných pojmech). Protože tok přes hranici umíme měřit u těles, představíme si okolo bodu který nás zajímá, těleso. Například kouli nebo krychli. Poté určíme tok přes hranici. Tok hranicí ven počítáme kladně a dovnitř záporně. Celkový tok hranicí určíme jako součet přes všechny části hranice. Podíl celkového toku přes hranici tělesa a objemu tohoto tělesa je odhad pro divergenci v daném bodě.
+> Poznámka (fyzikální interpretace divergence v měřitelných pojmech). Protože tok přes hranici umíme měřit u těles, představíme si okolo bodu který nás zajímá, těleso. Například kouli nebo krychli. Poté určíme tok přes hranici. Tok hranicí ven počítáme kladně a dovnitř záporně. Celkový tok hranicí určíme jako součet přes všechny části hranice. Podíl celkového toku přes hranici tělesa a objemu tohoto tělesa je odhad pro divergenci v daném bodě. Naopak, ze známé divergence je možno odhadnout zesílení toku v malé oblasti okolo studovaného bodu jako součin divergence a objemu (nebo obsahu ve 2D) oblasti.
 
 Přesnou divergenci získáme postupem uvedeným v předchozí poznámce, pokud limitním přechodem stáhneme rozměry tělesa k nule. 
 
@@ -117,10 +139,12 @@ Ze střední školy z fyziky umíme modelovat vektorové pole pomocí siločar.
 
 # Výpočet divergence
 
-Viz cvičení. Jedná se o prosté derivování se následným sečtením derivací.
+Viz [cvičení](http://user.mendelu.cz/marik/am/slidy/cviceni/cviceni03.md.html). Jedná se o prosté derivování se následným sečtením derivací.
 
 
 # Rovnice kontinuity
+
+https://youtu.be/HiOmERpTdV0
 
 \iffalse 
 
@@ -206,6 +230,8 @@ a nazývá se Saint-Venantova rovnice nebo též *rovnice mělké vody*. Tato ro
 
 # Difuzní rovnice
 
+https://youtu.be/p2FTgyAWzA4
+
 Difuzní rovnice je rovnice kontiuity s dosazeným konstitučním vztahem
 pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu
 lineární aproximaci, je možné psát
@@ -222,7 +248,7 @@ $$
 a vztahu  pro tok stavové veličiny dostáváme rovnici
 $$
       {\frac{\partial u}{\partial t}=\sigma - \nabla\cdot \bigl(-D\nabla u\bigr)}.$$
-      Tuto rovici je možno upravit na tvar
+      Tuto rovnici je možno upravit na tvar
 $$
       {\frac{\partial u}{\partial t}=\sigma + \nabla\cdot \bigl(D\nabla u\bigr)},$$
 který se nazývá *difuzní rovnice*.
@@ -240,6 +266,8 @@ V jednorozměrném případě (proudění jedním směrem) gradient splývá s p
 $$
       {\frac{\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x} \left(D\frac{\partial u}{\partial x}\right)}.$$
 To jsme viděli již v první přednášce.
+
+ww:problems/difuzni_rce/interpretace_clenu.pg
 
 # Vedení tepla
 
@@ -269,7 +297,7 @@ $${\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(k\nabla T\bigr)}$$
 >* Veličina $\frac{\partial T}{\partial t}$ udává rychlost růstu teploty tělesa a koeficient $\rho c$ tuto hodnotu přepočítává na údaj, jak rychle roste vnitřní energie tělesa (kinetická energie molekul.)
 >* Výraz $k\nabla T$ udává (až na znaménko), jak se nerovnoměrnost v rozložení teploty vyrovnává tokem tepla. Přesněji, tok tepla je $-k\nabla T$.
 >* Člen $\nabla\cdot(k\nabla T)$ udává, kolik tepla z celkového toku v daném místě zůstává a podílí se na zvýšení teploty. Vzhledem k absenci zdrojů je to také jediný mechanismus, jak v daném místě může vnitřní energie přibývat či ubývat.
->* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divegrence toku $\nabla\cdot (-k\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (k\nabla T)$ je proto záporný.
+>* Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divergence toku $\nabla\cdot (-k\nabla T)$ kladná a výraz z rovnice $\nabla\cdot (k\nabla T)$ je proto záporný.
 
 \iffalse
 
@@ -461,3 +489,22 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
   difuzní rovnicí a lineárním konstitučním vztahem s konstantním
   skalárním difuzním koeficientem (homogenní izotropní prostředí s
   lineární materiálovou odezvou).
+
+
+# Z ptačí perspektivy
+
+\iffalse
+
+<div class='obtekat'>
+
+![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+
+</div>
+
+
+\fi
+
+* U vektorového pole nás zajímá, jestli popisuje tok, který nabírá na intezitě nebo naopak slábne. Toto je skryto v pojmu divergence.
+* Formulováním bilance dávající do souvislosti intenzitu změny toku s vydatností zdrojů a s časvovou změnou je možno formulovat matematické modely popisující transportní jevy. Nezáleží na charakteru přenášené veličiny, může se jednat o energii i o hmotu, nezáleží ani na tom, pomocí jakého parametru množství přenášené tokem měříme. Výsledkem je rovnice kontinuty.
+* Rovnici kontinutity často spojujeme ještě se zákonem udávajícím tok jako veličinu určenou gradientem stavové veličiny a konstitutivním zákonem. Výsledným spojením je difuzní rovnice. 
+* Difuzní rovnice je základním nástrojem pro popis transportu vody ve dřevě nebo v propustných vrstvách půdy, je také základním nástrojem pro modelování vedení tepla, tj. například pro popis tepelného namáhání stěny domu, detailu okna či dvěří, ulice v rozpáleném městě nebo krajiny, ve které jsou umístěny lesy, pole, města.

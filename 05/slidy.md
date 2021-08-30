@@ -2,7 +2,21 @@
 % Robert Mařík
 % 2020
 
+
+> Anotace.
+>
+> * V přednášce se seznámíme s nástrojem, který umožňuje sečíst příspěvky k veličině, která nás zajímá, podél křivky. Seznámíme se s křivkovým integrálem.
+> * Zaměříme se na křivkový integrál druhého druhu, v cizojazyčné literatuře též nazývaný integrál vektorového pole. Ten umožňuje vypočítat práci nebo obecně potenciál a tím přejít (pokud to jde) ke skalárnímu popisu pole, namísto vektorového. Tím se problémy zjednoduší.
+> * Další aplikací křivkového integrálu druhého druhu je tok vektorového pole křivkou. Ten využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+> * Motivace je v [numerickém odhadu toku hranicí množiny](http://user.mendelu.cz/marik/aromamath/Krivkovy_integral.html).
+
+> Prerekvizity.
+>
+> * Křivkový integrál počítáme převodem na Riemannův integrál. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
+
 # Křivkový integrál
+
+https://youtu.be/n2roVUrXgcw
 
 <div class='obtekat'>
 
@@ -27,6 +41,9 @@ například při výpočtu práce vykonané po křivce.
 
 # Parametrické rovnice křivky
 
+https://youtu.be/MRk4HRAWlA4
+
+
 <div class='obtekat'>
 
 ![Dvě různé parametrizace jednotkové kružnice](parametricke_krivky.png)
@@ -45,18 +62,18 @@ resp. dvojicí skalárních funkcí.
 * Graf křivky dostaneme tak, že pro každé $t$ z intervalu $[\alpha, \beta]$ kreslíme ve 2D bod $[\varphi(t), \psi(t)]$.
 * Funkce $\varphi(t)$, $\psi(t)$ nazýváme *parametrizace* křivky $C$
 * Pro danou křivku $C$ v rovině $xy$, nejsou její parametrické rovnice dány jednoznačně. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxtkcFugzAMhu9IvEMEhyRbpC1o2i3nXfMERR5Nu4iQoGAx0qcfgY5DVd8s-_v_3_IMkdGFJMrLoizquiYxzN52howxkD7auU9l4ZUsi4UhV12YGJ78up1yO1l_b3d4MLedHCHCYDCWBQ7WCxxgUe-CNS-j5Scm33Zkg55UnmipRheQZVvBUBw6XBBnrsafWwffximaN3L-ldDydYPSE6gLLkRFoznTR4V0V5h-wi_TUpCLvU72ZhT7FB8rihadUdVXhEsi2Y4ASSzxartCN-r_XNu1m_-eOss-xDhMGgHTaDpsI6ANSh4m-pDqYX8AVPwPID58GQ==&lang=sage)
-* Parametrizace kružnice, úsečky a grafu funkce jedné proměnné: viz [seznam vzorců](http://user.mendelu.cz/marik/am/cheatsheet.pdf)
+* Parametrizace kružnice, úsečky a grafu funkce jedné proměnné: viz [cheatsheet](https://raw.githubusercontent.com/robert-marik/apl-slidy/master/cheatsheet/cheatsheet-AM.pdf)
 
 
 # Křivkový integrál prvního druhu
+
+https://youtu.be/ZRed88fgDkI
 
 <div class='obtekat'>
 
 \iffalse
 
 ![Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a>](krivkovy_integral_prvniho_druhu_1.png)
-
-
 
 
 \fi
@@ -86,11 +103,12 @@ $C$ splývají, píšeme též $$ \oint_C f\;\mathrm{d} s $$ a integrál
 nazýváme *integrálem po uzavřené křivce*.
 
 
-# Převod na Riemannův integrál (rovinná křivka)
+## Převod na Riemannův integrál (rovinná křivka)
 
 <div class='obtekat'>
 
 \iffalse
+
 \def\maxfactor{0.4}
 
 ![Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky](delkovy_element.png)
@@ -116,7 +134,7 @@ $$
 
 
 
-# Převod na Riemannův integrál (prostorová  křivka)
+## Převod na Riemannův integrál (prostorová  křivka)
 
 Podobně jako v rovině převádíme na Riemannův integrál i křivkový integrál prvního druhu po prostorové křivce 
 $$
@@ -130,7 +148,7 @@ a integrál má tvar
 \dm$$ \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{\varphi^{\prime 2}(t)+\psi^{\prime 2}(t)+\xi^{\prime 2}(t)}\;\mathrm{d} t. $$
 
 
-# Aplikace křivkového integrálu prvního druhu
+## Aplikace křivkového integrálu prvního druhu
 
 <style>
 table, th, td {
@@ -185,7 +203,7 @@ th {text-align: center;}
 
 
 
-# Vlastnosti křivkového integrálu prvního druhu
+## Vlastnosti křivkového integrálu prvního druhu
 
 > Věta (nezávislost na zvolené parametrizaci). Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci
   křivky $C$. Pro různé parametrizace stejné křivky má integrál
@@ -204,7 +222,7 @@ $$
 \int_{C} f\;\mathrm{d}s = \int_{C_1} f\;\mathrm{d}s + \int_{C_2} f\;\mathrm{d}s .
 $$
 
-# Proč trubky praskají podélně?
+## Proč trubky praskají podélně?
 
 <div class='obtekat'>
 
@@ -246,6 +264,8 @@ Pokud se chcete dozvědět více, zkuste Google a heslo "hoop stress".
 
 
 # Křivkový integrál druhého druhu
+
+https://youtu.be/GeJgtBHy_sM
 
 <div class='obtekat'>
 
@@ -391,6 +411,8 @@ i+Q(x,y)\vec j,$
 * Křivkový integrál prvního druhu **nezávisí na orientaci** křivky.
 * Křivkový integrál druhého druhu **při změně orientace křivky mění znaménko**.
 
+<!--
+
 \iffalse
 
 # Steinerova věta
@@ -425,6 +447,8 @@ rovnoběžné osy.
 
 \fi
 
+-->
+
 # Závěrečné informace
 
 ## Parametrizace úsečky
@@ -439,7 +463,6 @@ rovnoběžné osy.
 
 ## Online výpočet křivkového integrálu
 
-* [Mathematical assistant on web](http://um.mendelu.cz/maw-html/index.php?lang=cs&form=lineintegral) - i s postupem a grafem křivky
 * Křivkový integrál prvního druhu. [numericky pomocí Sage](https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&lang=sage)
 * Křivkový integrál druhého druhu, [numericky pomocí Sage](https://sagecell.sagemath.org/?z=eJxtkMFuwyAQRO-W_A8r5RBIaepGOVXi6p-o2ogaUiEbcDGxgK8v2CFqoywXntjRzDAzi7Zui-tqs9lAZJxpCeeL7jtRV61HngQSMX0OiUIhnyAWaOoqnyy3ZtayEzBaA72Vc59UHjlMD7vOTOlSVyHjJPUCMUNT1ErEVToyy5Rwtq6ckpo4xTxtyOvLcTfKm9mDWV70RQkrOzacpHbi27IBwRl5mnOQQLM_iTQ7Y9jB9GMd4vKcNvKDw5-HpwXDf4wFMYE0t1z4vfnIttxMLAotT2ttqtiIYGDqizMY38biD9cAcE1AALWetIFAG3H6kBSXS6HdvX6_hMjCNefaYumAs_2D0rPonLHoLhjec-NO6ZP5pXNlp7jiP-WgtPsFHlShKA==&lang=sage)
 
@@ -462,3 +485,28 @@ column-count:3;}
 .sloupce4 ul li {display:inline-block; max-width:100%;}
 </style>
 
+
+# Z ptačí perspektivy
+
+\iffalse
+
+<div class='obtekat'>
+
+![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+
+</div>
+
+
+\fi
+
+* Křivkový integrál druhého druhu souvisí s prací silového
+  pole. Vzhledem ke zkušenostem z mechaniky by toto měla být cesta ke
+  skalárnímu popisu vektorovhé pole. Protože v minulém týdnu jsme
+  jednu takovou cetu otevřeli, pojem rotace a její nulovost či
+  nenulovost, dá se očekávat, že tyto pojmy budou souvistet. Tuto
+  souvislost si ukážeme později, za dva týdny (Greenova věta).
+* Křivkový integrál druhého druhu může souviset s i s tokem
+  vektorového pole křivkou a to je zase doména difuzní rovnice a
+  divergence vektorového pole. Oba pojmy, křivkový intergál a
+  divergence spolu opravdu souvisí a přesdvěčí nás o tom později opět
+  Greenova věta.

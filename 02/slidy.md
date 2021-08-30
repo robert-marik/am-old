@@ -1,6 +1,22 @@
 % Gradient, lineární aproximace
 % Robert Mařík
-% 2020
+% 2020,2021
+
+
+> Anotace.
+>
+> * Umíme pomocí derivace najít rychlost, s jakou se mění veličina, která je objektem našeho zájmu. Tuto rychlost je možné chápat obecně, ale my se zaměříme na prakticky nejlépe využitelný případ, kdy budeme sledovat závislost na prostorových proměnných. 
+> * Aparát představený v této přednášce má smysl zejména ve dvourozměrném a trojrozměrném světě. Budeme schopni sledovat, v jakém směru veličina roste a klesá maximální rychlostí. Tato veličina v mnoha případech determinuje rychlost s jakou probíhají fyzikální procesy typu difuze nebo vedení tepla. Obecněji tento aparát slouží k lineární aproximaci funkce.
+> * Naučíme se lineární aproximaci použít i pro vektorové funkce. To umožňuje formulování fyzikálních zákonů dávajících do souvislosti tok a gradient veličiny (spád veličiny) v případě, kdy tyto vektory nemají stejný směr. To umožňuje popis vlastností anizotropních materiálů. Při této příležitosti zjistíme, že některé fyzikální veličiny mají podobu matic. Zpravidla na ně odkazujeme jako na tenzorové veličiny.
+> * Jako vedlejší produkt slouží gradient k nalezení lokální extrémů funkce.
+
+
+> Prerekvizity.
+>
+> * Navážeme na znalosti parciálních derivací z minulé přednášky.
+> * Pro efektivní formulaci využijeme maticový součin. Ten většina studentů pozná v úvodních přednáškách z matematiky. Například [zde](http://user.mendelu.cz/marik/mtk/mat-slidy/matice/).
+> * Před snahou o lineární aproximaci funkce více proměnných je vhodné si zopakovat [lineární aproximaci funkce jedné proměnné.](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/)
+
 
 # Opakování
 
@@ -8,7 +24,7 @@
 
 \iffalse
 
-![Rovnovážná vlhkost dřeva v závislosti na teplotě a relativní vlhkosti. Pro přehlednost jsou vrstevnice označeny funkční hodnotou a prostor mezi vrstevnicemi barevne rozlišen. Zdroj: Wood handbook, Wood as an Engineering Material.](vrstevnice_drevo.png)
+![Rovnovážná vlhkost dřeva v závislosti na teplotě a relativní vlhkosti. Pro přehlednost jsou vrstevnice označeny funkční hodnotou a prostor mezi vrstevnicemi barevně rozlišen. Zdroj: Wood handbook, Wood as an Engineering Material.](vrstevnice_drevo.png)
 
 \fi
 
@@ -23,7 +39,7 @@
 
 * Skalární součin vektorů
   $$(u_1,u_2)\cdot (v_1,v_2)=u_1v_1+u_2v_2$$
-  Pro kolmé vektory je nulový. Má-li jeden z vektor jednotkovou délku, je skalárí součin průmětem druhého vektoru do směru daného uvažovaným jednotkovým vektorem. 
+  Pro kolmé vektory je nulový. Má-li jeden z vektor jednotkovou délku, je skalární součin průmětem druhého vektoru do směru daného uvažovaným jednotkovým vektorem. 
 
 ## Lineární algebra
 
@@ -56,6 +72,8 @@ parciálních derivací.*
 
 # Gradient
 
+https://youtu.be/9RwaJnV5TUs
+
 > Definice (gradient). *Gradient* skalární funkce dvou proměnných $f(x,y)$ je vektorové pole označené a definované následovně.
   $$\nabla f=\left(\frac{\partial f}{\partial
   x}, \frac{\partial f}{\partial y}\right)$$
@@ -65,7 +83,12 @@ Podobně je definován gradient skalární funkce tří proměnných $f(x,y,z)$.
   \frac{\partial f}{\partial z}\right)$$
 
 
+Význam a postavení gardientu ilustruje následující příklad, který je poté zobecněn do poznámky shrnující fyzikální význam gradientu.
+
+**Příklad.** Pokud teplota v rovině v bodě $(x,y)$ je dána předpisem $$T=(x^2-xy^2)^\circ\mathrm C,$$ je gradientem vektor $$\nabla T=\begin{pmatrix}2x-y^2, -2xy\end{pmatrix} {}^\circ\mathrm C \mathrm m^{-1}.$$ V bodě $(1,1)$ je gradient $$\nabla T(1,1)=\begin{pmatrix}1,-2\end{pmatrix}{}^{\circ}\mathrm C \mathrm m^{-1}.$$ To znamená, že v tomto bodě roste teplota ve směru osy $x$ rychlostí $1$ stupeň Celsia na každý metr délky a ve směru osy $y$ klesá rychlostí $2$ stupně Celsia na každý metr délky. Vektor definovaný tímto gradientem má směr doprava dolů (pod úhlem splňujícím podmínku $\tan \varphi = -2$) a délku $\sqrt{(1)^2+(-2)^2}=\sqrt 5\approx 2.2$. To znamená, že maximální nárůst teploty je směrem doprava dolů a tento nárůst je $2.2$ stupně Celsia na každý metr délky.
+
 > Poznámka (fyzikální význam gradientu). Gradient skalární veličiny $f$ je vektorová veličina, která vyjadřuje směr a intenzitu maximálního růstu veličiny $f$. Přesněji, výsledkem gradientu je vektor ve směru maximálního růstu veličiny $f$. Délka tohoto vektoru je nárůst veličiny $f$ na intervalu jednotkové délky. Pro rovnoměrně rozloženou veličinu  v prostoru (konstantní) je gradient nulový. Proto je možné gradient chápat jako míru nerovnoměrného rozložení veličiny v prostoru. Řada fyzikálních dějů probíhá tak, že tato nerovnoměrnost vyvolá proudění, které se snaží tuto nerovnoměrnost vyrovnat, například vedení tepla nebo difuze. V praxi nás proto většinou zajímá směr maximálního poklesu, tj. $-\nabla f$.
+
 
 <div class="obtekat">
 
@@ -100,6 +123,7 @@ Gradient je v každém bodě kolmý k vrstevnici (ve 2D) resp. k ekvipotenciáln
 
 # Gradient v přírodě
 
+https://youtu.be/Mpb4EAdIPPM
 
 \iffalse 
 
@@ -119,18 +143,21 @@ Gradient je v každém bodě kolmý k vrstevnici (ve 2D) resp. k ekvipotenciáln
 * V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu *tepelně izolačních vlastností* materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.
 * S gradientem souvisí *majáková navigace* při migraci živočichů. Ti sledují určitý chemický podnět a pohybují se ve směru největšího růstu tohoto podnětu (tj. ve směru gradientu). Například žralok ve vodě takto sleduje koncentraci krve. Pokud je mezi žralokem a zdrojem krve proud, který krev unáší, nepopluje žralok rovnou čarou ke zdroji krve, ale koncentrace krve ho povede po delší trase.
 * Pokud se zajímáme nejenom o směr, ale i velikost gradientu, pomůže to k posouzení jak rychle se mění veličina v\ prostoru (gradient je velký, jsou-li vrstevnice nahusto).
-* Při proudění podzemní vody sledujeme hydroizohypsy, křivky spojující místa se stejnou hladinou podzemní vody nebo obecněji se stejnou piezometrickou výškou. Tok vody je v homogenním prostředí kolmý na tyto křivky a intenzivní podle hustoty křivek, tj. násobkem záporně vzatého gradientu piezometrické výšky. Zjednodušeně řečeno, i podzemní voda má snahu téct "z kopce", ale "z kopce" je ve smyslu nejrychlejšího poklesu piezometrické výšky. V anizotropním prostředí se tento tok může odklánět do směru, ve kterém půda klade toku podzmení vody menší odpor.
+* Při proudění podzemní vody sledujeme hydroizohypsy, křivky spojující místa se stejnou hladinou podzemní vody nebo obecněji se stejnou piezometrickou výškou. Tok vody je v homogenním prostředí kolmý na tyto křivky a intenzivní podle hustoty křivek, tj. násobkem záporně vzatého gradientu piezometrické výšky. Zjednodušeně řečeno, i podzemní voda má snahu téct "z kopce", ale "z kopce" je ve smyslu nejrychlejšího poklesu piezometrické výšky. V anizotropním prostředí se tento tok může odklánět do směru, ve kterém půda klade toku podzemní vody menší odpor.
 <!-- * *Síla* ($\vec F$) působící na těleso v silovém poli ve kterém je možno zavést potenciální energii ($V$) je gradientem potenciální energie vynásobeným faktorem $-1$ (záporně vzatý gradient). -->
 <!-- $$\vec F=-\nabla V$$ -->
 <!-- Pro jednorozměrnou úlohu a těleso v potenciálové jámě (tj. v rovnovážném stavu, kdy je minimum potenciální energie) můžeme potenciál v okolí minima aproximovat pomocí Taylorova rozvoje $$V(x)\approx V_0+\frac 12 V''(0)x^2+\cdots $$ (souřadnice volíme tak, že toto minimum je pro $x=0$) a je-li $|xV'''(0)|\ll V''(0)$, potom -->
 <!-- $$\vec F=-\nabla V=-V''(0)x=-kx.$$ To znamená, že síla je úměrná výchylce, stejně jako u tělesa na pružině. Podobně ve vícerozměrném případě. -->
 
+# Lineární aproximace
 
-# Lineární aproximace skalární funkce
+https://youtu.be/3wTwWTtbkis
+
+## Lineární aproximace skalární funkce
 
 * Lineární aproximací funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ je
 \dm $$      f(x,y)\approx f(x_0, y_0)+\frac{\partial f (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f (x_0,y_0)}{\partial y}(y-y_0)$$
-nebo (pomocí skálárního součinu a gradientu)
+nebo (pomocí skalárního součinu a gradientu)
 $$      f(x,y)\approx f(x_0, y_0)+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
 * Tečná rovina ke grafu funkce $z=f(x,y)$ vedená bodem
   $[x_0,y_0,z_0]$, kde $z_0=f(x_0,y_0)$ má rovnici
@@ -140,7 +167,7 @@ $$      z= z_0+ \nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
 
 
 
-# Lineární aproximace vektorové funkce
+## Lineární aproximace vektorové funkce
 
 Lineární aproximací vektorové funkce je lineární aproximace jejích skalárních složek. Tj. pro funkci $\vec F(x,y)=f_1(x,y)\vec \imath + f_2(x,y)\vec\jmath$ v bodě $(x_0, y_0)$ je
 \dm $$      f_1(x,y)\approx f_1(x_0, y_0)+\frac{\partial f_1 (x_0,y_0)}{\partial x}(x-x_0)+\frac{\partial f_1 (x_0,y_0)}{\partial y}(y-y_0)$$
@@ -159,11 +186,13 @@ $$J(x,y)=\begin{pmatrix} \frac{\partial f_1}{\partial x}(x ,y ) & \frac{\partial
 je Jacobiho matice funkce $\vec F$. 
 
 Lineární aproximace v okolí nuly pro funkci, která je v nule nulová,
-tj. $x_0=y_0=\vec F(0,0)=0$ je $$\vec F(x,y)\approx \vec J(0,0)
+tj. $x_0=y_0=\vec F(0,0)=0$ je $$\vec F(x,y)\approx J(0,0)
 \begin{pmatrix}x\\ y\end{pmatrix}.$$ 
 
 
 # Vícerozměrné konstitutivní zákony
+
+https://youtu.be/uTzCAxOOye8
 
 Konstitutivní vztahy tvoří z hlediska materiálového inženýrství jednu
 z nejdůležitějších aplikací gradientu. Jedná se o vztahy dávající do vzájemné relace gradient stavové veličiny, pomocí níž charakterizujeme stav studovaného objektu, a tok, který se snaží zahladit nerovnoměrnost v rozložení stavové veličiny. Například při nerovnoměrném rozložení koncentrace látky se tato koncentrace vyrovnává difuzním tokem. Při nerovnoměrném rozložení vnitřní energie v systému se tato nerovnoměrnost navenek projevuje rozdílnými teplotami v různých částech tělesa a vyrovnává tokem tepla. Při různých piezometrických hladinách podzemní vody (hladina podzemní vody se započtením případného tlaku a dalších parametrů majících vliv na proudění vody) se tato nerovnoměrnost vyrovnává prouděním podzemní vody. 
@@ -281,7 +310,7 @@ tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot
 je nahrazen rozdílem potenciálů. Znalost zapojování elektrických
 obvodů, jako je například paralelní nebo sériové zapojení rezistorů,
 bývá běžná a toho se často využívá při modelování tepelného odporu
-pomocí eletrického odporu. Formálně jsou vztahy identické.
+pomocí elektrického odporu. Formálně jsou vztahy identické.
 
 Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v
 případě Ohmova zákona konstanta úměrnosti uvažována jako reálné číslo,
@@ -292,6 +321,8 @@ elektrického proudu.
 \fi
 
 # Speciální případy vztahu mezi gradientem a tokem
+
+https://youtu.be/vrPhbc-GJqc
 
 \iffalse
 
@@ -383,10 +414,12 @@ Stejné jako ve 3D, pouze chybí třetí rovnice.
 ## Izotropní případ
 
 Stejné jako ortotropní případ, ale navíc platí $k_{11}=k_{22}=k_{33}=k.$ Potom
-$\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr. V tomto případě, narozdíl od ortotropního případu, nezávisí na volbě souřadné soustavy, tenzor materiálových vlastností se redukuje na jednorozměrnou konstantu v libovolné souřadné soustavě.
+$\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr. V tomto případě, na rozdíl od ortotropního případu, nezávisí na volbě souřadné soustavy, tenzor materiálových vlastností se redukuje na jednorozměrnou konstantu v libovolné souřadné soustavě.
 
 
 # Tečna k vrstevnici
+
+https://youtu.be/tc8pmUNyhhI
 
 \iffalse
 
@@ -485,9 +518,9 @@ následující věta.
 
 
 
-Na závěr jedna aplikace z oblasti parciálních derivací. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
+Na závěr jedna aplikace z oblasti parciálních derivací a lineárních aproximací vektorových funkcí více proměnných. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
 
-Vektorovou funkci je možné chápat jako zobrazení roviny do sebe, které může odpovídat deformaci tělesa působením síly. Popišme tuto deformaci  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$.  Lineární aproximací dostáváme
+Vektorovou funkci je možné chápat jako zobrazení roviny do sebe, které může odpovídat transformaci tělesa, například působením síly. Popišme tuto deformaci vektorem  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$. Udává o kolik a kterým směrem se posune bod o souřadnicích $(x_1,x_2)$. Pokud je tato vektorová funkce nulová, s tělesem se nic neděje, zůstává na místě. Pokud je konstantní, každý bod se posune stejně a jedná se o posun, bez změny tvaru. V obecném případě však tato funkce konstantní není. Lineární aproximací v bodě $(x_1,x_2)$ dostáváme
 $$\vec U(x_1+\Delta x_1,x_2+\Delta x_2)\approx 
 \vec U(x_1,x_2) + J(x_1,x_2) \begin{pmatrix}\Delta x_1 \\ \Delta x_2 \end{pmatrix}.$$
       Člen $\vec U(x_1,x_2)$ je posunutí, proto nás zajímá až druhý člen, obsahující deformaci. Pokud 
@@ -497,7 +530,7 @@ $$A=\frac{A+A^T}2+\frac{A-A^T}2.$$ První matice v tomto součtu je symetrická 
 Pro Jacobiho matici dostáváme
 \dm$$\frac{J+J^T}2= \begin{pmatrix}         \frac{\partial u_{1}}{\partial x_{1}} &  \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}    .$$
 Tato matice
-      popisuje změnu tvaru a nazývá se [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátor (souvisí se zmenou tvaru bez započtení zvětšení či zmenšení).
+      popisuje změnu tvaru a nazývá se [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátor (souvisí se změnou tvaru bez započtení zvětšení či zmenšení).
 
 Pro využití v dřevařských úlohách viz též A. Požgaj, Štruktúra a
 vlastnosti dreva str 318 nebo P. Horáček, Fyzikální a mechanické
@@ -512,4 +545,22 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 
 [Obrázky a online výpočty.](https://sagecell.sagemath.org/?z=eJydU8tq20AU3Rv8DxdlESmaKLbadBEyBbeFkoU3behGmDCWbuKpRzNiNHIr_UO-oKt8QL7C-bBePeq42FCoQGIe555z7kMnMI3gi2nWSmRglphqBGeFLu-NzUWKoAUYZ1LUEgSUdY7OynRtqn2UHI9OIH7l2cEOuWRjnDUFsaWidESZ4UYKZywtdmTj0aYxtuZ-MmGTBUumw3dK30l0yabRu3bV7-kuGI9mPBck-dNPkojgUXzZYSeX7DyKFx3ils-izk5hSvTp5MMdGeX-LJzdBhdxuxf9wflwcALf6nKDTrXZ97dXsIbCyrLAzbpisHZoa7BYWGxQu-o7QpOjrv7ULGctOhM5gswIIB0FiWWdrkwOOSoqA6qDYrZWqFC8M9h6TsnvRXw2UNR3Q65xlwRVsEeed1EHtun-3667NqQSTDa0SMuVaWMKkVX_mQQtYQ5SQ5LMmPcR1fZp12X0qD99SZk3I87dzBDo5XH7VDpSNVTGl0fU22eCQ9JlybyvR6BN_vKLxstthK0GLOXBvJth3rbPA7RH1n8hKXnmfaIKbJ_2J7FVXVyNR0CPWVrR1Dzx58lkER42IjjbYErBvgygzVu2eXdTvOgJbuafeWGkdn5PxSA1ylh-ajE7ZVDKBvnbSRAWRtUPRh9HCVWsBKdfIAiV1HgMFLzK0Rv2kp2RncgOv1QVHgb0-kPIvVSK39oK98SPxpcr88NfuVz53vUqfu-F82S6CL3ri3YT7IHA110RGWTyQbqSv9m_9ckDSdGkpu7OCicNnx5TsC3pb7sKl7c=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
+
+
+# Z ptačí perspektivy
+
+\iffalse
+
+<div class='obtekat'>
+
+![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+
+</div>
+
+
+\fi
+
+
+* Parciální derivace z minulé přednášky sleduje vliv každé vstupní proměnné na funkční hodnotu funkce samostatně. Gradient se snaží podchytit informaci od všech prostorových proměnných současně do vektoru, mířícího směrem maximálního růstu funkčních hodnot a majícího velikost odpovídající nárůstu na intervalu jednotkové délky.
+* Pomocí gradientu dokážeme formulovat lineární aproximaci funkce. U vektorových  funkcí tuto aproximaci můžeme formulovat pro každou komponentu samostatně a dostáváme tak nástroj, jak pomocí maticového násobení aproximovat funkční vztahy, kde na vstupu i na výstupu je vektor. To umožňuje jednotný popis všech materiálových vztahů, kde vektorová veličina, která je podnětem, vyvolává jako odezvu jinou vektorovou veličinu. Například pokles teploty, definovaný směrem a intenzitou, vyvolává tok tepla odpovídajícím směrem a odpovídající intenzitě.
 

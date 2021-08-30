@@ -26,17 +26,37 @@ $endif$
 $for(css)$
   <link rel="stylesheet" href="$css$" type="text/css" />
 $endfor$
-$if(math)$
-  $math$
-$endif$
-$for(header-includes)$
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
+  $for(header-includes)$
   $header-includes$
-$endfor$
+  $endfor$
+
+ <script type="text/javascript">
+
+   function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+
+  </script>
+  
 </head>
 <body>
-<a href="index_h.html"><div class="tlacitko">	&#9654; &#9654; &#9654; Slidy</div></a>
-<!-- <div class="tlacitko"><img src="../pdf.png">PDF</div> -->
-    
+
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='https://user.mendelu.cz/marik/am/'>Aplikovaná matematika</a><a class='menu menu4' href='https://user.mendelu.cz/marik/am/slidy/'>Přednáška</a><a class='menu menu4' href='https://user.mendelu.cz/marik/am/slidy/cviceni/cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+<!-- menu -->
+
+<div class="container">
 $for(include-before)$
 $include-before$
 $endfor$
@@ -63,5 +83,21 @@ $body$
 $for(include-after)$
 $include-after$
 $endfor$
+
+</div>  <!-- container -->
+<div style="clear:both;"></div>
+
+
+
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='https://user.mendelu.cz/marik/am/'>Aplikovaná matematika</a><a class='menu menu4' href='https://user.mendelu.cz/marik/am/slidy/'>Přednáška</a><a class='menu menu4' href='https://user.mendelu.cz/marik/am/slidy/cviceni/cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+<!-- menu -->
+
+<div class="footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; width:81px; display:inline-block" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+  
 </body>
 </html>

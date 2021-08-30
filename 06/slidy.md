@@ -2,6 +2,23 @@
 % Robert Mařík
 % 2020
 
+
+> Anotace.
+>
+> * V přednášce se seznámíme s nástrojem, který umožňuje sečíst příspěvky k veličině, která nás zajímá, ve dvourozměrné množině. Seznámíme se s dvojným integrálem.
+> * Mezi aplikace spadá střední hodnota na dvourozměrné množině.
+> * Pomocí dvojného integrálu je definován kvadratický moment, což je zásadní veličina ovlivňující tuhost a chování nosníků.
+> * Pomocí dvojného integrálu je možné určit množství veličiny ze znalosti její plošné hustoty. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
+
+
+> Prerekvizity.
+>
+> * Dvojný integrál počítáme převodem na dva jednorozměrné Riemannovy integrály. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
+
+
+[Motivace pro dvojný integrál](http://user.mendelu.cz/marik/aromamath/Dvojny_integral.html) - ve výpočetním prostředí Jupyter notebooku numericky určíme parametry, jaké zdroje tepla je potřeba dodat do rovinné desky vedoucí teplo tak, aby teplotní profil byl takový, jaký požadujeme. Vyjde, že výkon zdrojů se liší podle toho, v jakém bodě je zdroj umístěn. Pokud chceme celkový výkon, musíme posčítat příspěvky k celkovému výkonu. Tyto příspěvky jsou spojitě rozloženy na dvourozměrné množině a prostý součet konečného počtu sčítanců nestačí. Nástrojem, který takové příspěvky umí posčítat je dvojný integrál.
+
+
 V praxi pracujeme s řadou veličin, které se počítají tak, že se parametr systému násobí obsahem. 
 
 * Z plošné hustoty a obsahu násobením obdržíme hmotnost. 
@@ -13,6 +30,9 @@ Je však otázka, jak tento přístup použít v případě, že daný parametr 
 U křivkového integrálu jsme se setkali s momentem setrvačnosti a jak řešit situace, kdy stanovujeme moment setrvačnosti množiny, která má hmotnost rozloženu na křivce. Při výpočtu namáhání nosníků, trámů, polic nebo stromů potřebujeme moment setrvačnosti průřezu nosníku, tj. hmotnost je rozložena ve dvourozměnrné množině a pro jednotlivé body se liší vzdálenost od osy otáčení. 
 
 Řešení obou nesnází je stejné: použití dvojného integrálu. Ten si nyní představíme.
+
+
+https://youtu.be/DYySq6o6WTk
 
 \def\maxwidth{5cm}
 
@@ -35,7 +55,7 @@ U křivkového integrálu jsme se setkali s momentem setrvačnosti a jak řešit
 * Toto funguje pro desky s konstantní plošnou hustotou, kdy má deska
   ve všech místech stejné fyzikální vlastnostmi.
 * Pokud je deska slepená z konečného počtu malých homogenních desek o
-  různných plošných hustotách, určíme hmotnost každé jednotlivé desky
+  různých plošných hustotách, určíme hmotnost každé jednotlivé desky
   samostatně a výsledky potom sečteme.
   $$m=\sigma_1 S_1+\sigma_2 S_2+\cdots + \sigma_n S_n$$
 * Pokud není možné nebo vhodné použít předchozí bod, musíme
@@ -99,13 +119,16 @@ U křivkového integrálu jsme se setkali s momentem setrvačnosti a jak řešit
 
 # Dvojný integrál
 
+https://youtu.be/tPf-7dZ4Il0
 
 <div class='obtekat'>
 
 \def\maxfactor{0.3}
 
 \iffalse
+
 ![](dvojny_integral.png)
+
 \fi
 
 </div>
@@ -141,17 +164,25 @@ $$ \iint_\Omega f(x,y)\mathrm{d}S.$$
 Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
 veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
 funkcí, nebo integračních oborů) a s násobení integrované funkce
-konstantnou. Přesněji, platí následující věty.
+konstantou. Přesněji, platí následující věty.
 
 > Věta (linearita dvojného integrálu).   Buď $f_1$, $f_2$ funkce integrovatelné v $\Omega$ a $c_1$, $c_2$   libovolná reálná čísla. Platí \dm$$     \iint_{\Omega} \bigl[c_1f_1(x,y)+c_2f_2(x,y)\bigr]\mathrm dx\mathrm dy     =     c_1\iint_{\Omega} f_1(x,y)\mathrm dx\mathrm dy+     c_2\iint_{\Omega} f_2(x,y)\mathrm dx\mathrm dy $$
 
 > Věta (aditivita vzhledem k oboru integrace).  Nechť je množina $\Omega$ rozdělena na dvě oblasti $\Omega_1$   a $\Omega_2$, které mají společné nejvýše hraniční body. Platí $$     \iint_\Omega f(x,y)\mathrm dx\mathrm dy=     \iint_{\Omega_1} f(x,y)\mathrm dx\mathrm dy+     \iint_{\Omega_2} f(x,y)\mathrm dx\mathrm dy. $$
 
+# Výpočet dvojného integrálu
 
+https://youtu.be/ItTWxJGD3sY
 
-# Výpočet (oblast mezi funkcemi proměnné $x$)
+Výpočet dvojného integrálu se provádí převodem, na integrály funkcí jedné proměnné.
 
-<div class='sloupce_'>
+### Výpočet (oblast mezi funkcemi proměnné $x$)
+
+<div class='obtekat'>
+
+![Oblast mezi funkcemi proměnné $x$.](fub_1.png)
+
+</div>
 
 V\ závislosti na tom, jakými nerovnostmi množinu $\Omega$ definujeme,
 můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
@@ -170,13 +201,14 @@ integrál. Mají název **Fubiniovy věty**.
 >   f(x,y){\mathrm{d}y }\Bigr]{\mathrm{d}x }.
 > $$
 
-![Oblast mezi funkcemi proměnné $x$.](fub_1.png)
 
-</div> 
+### Výpočet (oblast mezi funkcemi proměnné $y$)
 
-# Výpočet (oblast mezi funkcemi proměnné $y$)
+<div class='obtekat'>
+![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
 
-<div class='sloupce_'>
+</div>
+
 
 > Věta (Fubiniova věta pro jiné pořadí integrace). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
 > $$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
@@ -191,11 +223,8 @@ integrál. Mají název **Fubiniovy věty**.
 > $$
 > 
 
-![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
 
-</div>
-
-# Záměna pořadí integrace
+### Záměna pořadí integrace
 
 <div class='obtekat'>
 
@@ -233,7 +262,13 @@ snazší.
 
 # Výpočet (obdélníková oblast)
 
-<div class='sloupce_'>
+https://youtu.be/o38mi3tTAvw
+
+<div class='obtekat'>
+![Integrál přes obdélník.](fub_3.png)
+
+</div>
+
 
 Výše uvedené problémy se stanovením a případným přepočítáváním mezí
 při záměně pořadí integrace se nevyskytují při integrování přes
@@ -254,11 +289,11 @@ obdélníkovou oblast.
 >   $$
 > 
 
-![Integrál přes obdélník.](fub_3.png)
+# Aplikace dvojného integrálu
 
-</div>
+https://youtu.be/8YS2Fn8st5I
 
-# Matematické aplikace dvojného integrálu
+### Matematické aplikace dvojného integrálu
 
 
 
@@ -270,9 +305,9 @@ obdélníkovou oblast.
   kde $\mu (\Omega)=\iint_\Omega\mathrm{d}x\mathrm{d}y$ je obsah
   množiny $\Omega$.
 
-  \iffalse
+\iffalse
 
-# Objem kopce nebo jezera pomocí vrstevnic
+### Objem kopce nebo jezera pomocí vrstevnic
 
 <div class='obtekat'>
 
@@ -295,7 +330,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
   \fi
   
-# Fyzikální aplikace dvojného integrálu
+### Fyzikální aplikace dvojného integrálu
 
 
 
@@ -319,7 +354,7 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   procházející kolmo počátkem je $\rho(x,y)=\sqrt{x^2+y^2}$.
 
 
-# Technické aplikace dvojného integrálu
+### Technické aplikace dvojného integrálu
 
 
 \iffalse
@@ -355,7 +390,9 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
   kde $S=\mu (M)$ je obsah množiny $M$.
   Poloha těžiště je tedy střední hodnotou funkcí $x$ a $y$.
 
-# Aplikace dvojného integrálu - tuhost nosníků, stabilita stromů
+
+
+### Tuhost nosníků, stabilita stromů
 
 
 \iffalse
@@ -412,7 +449,7 @@ Odsud máme okamžitě několik pozorování
 
 \iffalse 
 
-# Aplikace dvojného integrálu - těžiště složeného obrazce
+### Těžiště složeného obrazce
 
 Uvažujme množinu $M$ s jednotkovou plošnou hustotou, rozdělenou na dvě
 disjunktní části $M_1$ a $M_2$. Tyto množiny mají $x$-ovou polohu
@@ -440,13 +477,13 @@ tedy *váženým průměrem* těžišť jednotlivých složek, kde váha každé
 složky je určena její hmotností. Protože se jedná o vážený průměr,
 tj. vlastně o lineární kombinaci bodů, kdy součet koeficientů je roven
 jedné, okamžitě vidíme, že těžiště složeného obrazce je na úsečce mezi
-těžištmi jednotlivých částí.
+těžišti jednotlivých částí.
 
 Zobecnění výše uvedených myšlenek na množinu rozdělenou na více částí
 je již snadné.
 
 
-# Aplikace dvojného integrálu - Steinerova věta
+### Steinerova věta
 
 Nechť je dána množina $M$ s plošnou hustotou $\sigma(x,y)$. *Ukážeme,
 že vzhledem k ose procházející těžištěm je nejmenší moment
@@ -488,7 +525,7 @@ v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k
 
 \fi
 
-# Aplikace dvojného integrálu - tlak na svislou plochu
+### Tlak na svislou plochu
 
 \iffalse
 
@@ -559,13 +596,13 @@ Nikde ve výpočtu jsme nepoužili konkrétní meze pro integraci. Výsledek
 tedy platí nejenom pro hráz dosahující k hladině, ale například i pro
 poklop výpusti, který je celý pod vodou.
 
-# Aplikace dvojného integrálu - působiště tlakové síly
+### Působiště tlakové síly
 
 Budeme pokračovat v předchozím příkladě a hledat působiště výsledné
 tlakové síly.
 
 Tlaková síla působící na svislou hráz má celkový nulový moment
-vzhledem k ose proházející působištěm. Je-li hráz definována množinou
+vzhledem k ose procházející působištěm. Je-li hráz definována množinou
 $M$ a je-li $y_c$ působiště výsledné tlakové síly, je v hloubce $y$
 tlak na plošku o velikosti $\Delta S$ roven $y\rho g \Delta S$ a
 součin $(y_c-y)y\rho g\Delta S$ je příspěvek k\ otáčivému momentu
@@ -604,7 +641,11 @@ $y$-ové polohy těžiště $y_0$.
 
 \fi
 
-# Polární souřadnice
+# Dvojný integrál v\ polárních souřadnicích
+
+https://youtu.be/lEObYHpX72w
+
+### Polární souřadnice
 
 <div class='sloupce'>
 
@@ -631,7 +672,7 @@ $x$.
 
 \newpage
 
-# Množiny s jednoduchým vyjádřením v polárních souřadnicích
+### Množiny s jednoduchým vyjádřením v polárních souřadnicích
 
 Nejsnáze se při výpočtu dvojného integrálu pracuje s obdélníkovými
 množinami, tj. s množinami charakterizovanými nerovnostmi pro jednotlivé
@@ -687,8 +728,7 @@ th {text-align: center;}
 
 \velkatabulkakonec
 
-# Dvojný integrál v\ polárních souřadnicích
-
+### Převod dvojného integrálu do polárních souřadnic
 
 \def\maxwidth{5cm}
 
@@ -725,3 +765,21 @@ případě mají totiž integrály které vzniknou po transformaci dvojného
 integrálu na dvojnásobný pevné meze a výpočet druhého integrálu je
 zpravidla jednodušší. 
 
+
+
+
+# Z ptačí perspektivy
+
+\iffalse
+
+<div class='obtekat'>
+
+![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+
+</div>
+
+
+\fi
+
+* Dvojný integrál využijeme tam, kde nás zajímá celková hodnota aditivní veličiny, jejíž příspěvky jsou rozloženy ve dvourozměrné ploše. Například celková tlaková síla na stěnu akvária. 
+* Dvojný integrál počítáme jako integrál z integrálu aparátem integrálního počtu funkcí jendé proměnné. V řadě případů se však problém dá zjednodušit. Například při integrování funkcí se separovanými proměnnými přes obdélníkové množiny se integrál dá zapsat jako součin integrálů. Podobně, při inegrování přes množiny které jsou částmi kruhu se dá v mnoha případech integrál přepsat pomocí polárních souřadnic na integrál přes obdélník (v polárních souřadnicích). 

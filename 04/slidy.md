@@ -2,7 +2,24 @@
 % Robert Mařík
 % 2020
 
+> Anotace.
+>
+> * Již nějakou dobu studujeme vektorová pole. V této přednášce si několik typických zkusíme vizualizovat. 
+> * Seznámíme se s pojmy kmenová funkce, skalární potenciál, kmenová funkce. Tyto pojmy udávají, zda vektorové pole je či není možné obdržet jako výsledek výpočtu gradientu nějaké skalární funkce. Není to akademická otázka, ale odpověď má dalekosáhlé důsledky. Zjednodušeně řečeno, pokud je odpověď kladná, dají se některé úlohy místo ve vektorovém poli řešit v poli skalárním, což nese výrazné usnadnění.
+> * S výše uvedenou problematikou souvisí pojem rotace vektorového pole, který si uvedeme jako další z diferenciálních operátorů vektorové analýzy.
+> * Ukážeme si, že parciální derivace jsou vhodným nástrojem pro jakousi citlivostní analýzu. Seznámíme se v této souvislosti se zákonem šíření chyb.
+
+
+> Prerekvizity.
+>
+> * I zde se seznámíme s diferenciálními operátory. Je žádoucí umět spolehlivě derivovat.
+> * Budeme počítat vektorový součin vektorů. Ten je nejsnazší počítat pomocí determinantů třetího řádu. Tuto dovednost tedy využijeme.
+
+
+
 # Vektorová pole
+
+
 
 * Studujeme funkce $\mathbb{R}^2\to\mathbb{R}^2$ nebo $\mathbb{R}^3\to\mathbb{R}^3$.
 * Bodům v rovině jsou přiřazeny vektory. Můžeme interpretovat jako rychlostní pole nebo silové pole. 
@@ -13,6 +30,8 @@
 
 
 # Příklady vektorových polí v rovině
+
+https://youtu.be/KR42PRY-72U
 
 * Homogenní pole $$\vec F_1=(0,-1)=-\vec \jmath.$$ Každý vektor je stejný (směr i velikost).
 * Radiální pole $$\vec F_2=(x,y)=x\vec \imath+y\vec \jmath.$$ Každý vektor směřuje od počátku souřadnic.
@@ -29,6 +48,8 @@
   modelovat vektorovým polem $$\vec F_6=(y(1-y),0)=y(1-y)\vec \imath.$$
 
 # Totální diferenciál
+
+https://youtu.be/nD_nqakTN-A
 
 > Definice (totální diferenciál). Totálním diferenciálem funkce $z=f(x,y)$ v bodě $(x_0, y_0)$ nazýváme výraz
 $$      \mathrm{d}f=
@@ -62,6 +83,7 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 
 # Rotace
 
+https://youtu.be/ev3eFilaGpw
 
 > Definice (rotace vektorového pole). Pro vektorovou funkci tří proměnných  $$\vec
   F=P\vec \imath+Q\vec \jmath+R\vec k$$ definujeme operátor <span class='red'>rotace</span> symbolicky
@@ -106,6 +128,8 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 <!-- ![Nevírové pole](nevirove.svg)	 -->
 
 # Rotace významných polí
+
+https://youtu.be/JChhJ4nDAtw
 
 * Dostředivé pole ubývající s libovolnou mocninou vzdálenosti má nulovou rotaci. Pro $$\vec F(x,y)=-\frac{x\vec \imath +y \vec \jmath}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=0.$$ [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3Q16iIM9KujDPSjMvT0a1E4RoAVRZn5JdrQJTDeBoKKZlpaRpu0YaxYHGdCk1dqIgBVKRSU0FTrzgztyAnM60yPq00J0cDKAIAmQYn8A==&lang=sage)
 
@@ -234,6 +258,8 @@ Na následujících obrázcích jsou modrou barvou vrstevnice proudové funkce a
 
 # Zákon šíření chyb  (chyba nepřímo měřené veličiny)
 
+https://youtu.be/52W524bSOKQ
+
 \iffalse 
 
 <div class='obtekat'>
@@ -282,7 +308,7 @@ factor](https://en.wikipedia.org/wiki/Wind_chill)) je $$W(T,v) =
 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},$$ kde $T$ je teplota
 (ve stupních Celsia) a $v$ je rychlost větru (v km/hod). Teplota byla
 změřena $-11.0\,{}^\circ\!\text{C}$ s chybou $0.2\,{}^\circ\!\text{C}$ a rychlost $26
-\,\text{km/hod}$ s chybou $5\,\text{km/hod}$. S využítím zákona šíření
+\,\text{km/hod}$ s chybou $5\,\text{km/hod}$. S využitím zákona šíření
 chyb určíme, jaký vliv mají nepřesnosti v měření na nepřesnost
 vypočítané veličiny.
 
@@ -306,7 +332,7 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 
 \iffalse
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJxdjMEKwyAQRO-B_EPIJaux4iqx9OBfLHgpgYIEcgmtDfv9tUgK6W3mPWb4kWEgxYNomwgliIBOox2N9hYnSRdE7a6SZzAavSjc3XzhP9I2iULUaV0WIAEcrFcUyuxr-DD8Z5553fYuVthVqvr71h8q0bnyqb5feQdIJI22YrYjJJZTCfXjA7FANgY=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Online výpočet.](https://sagecell.sagemath.org/?z=eJx1jEEKgzAQRfeCdxA3zqgJJmJKF7nFgItSoTQVXFTbVOb8jUitXXT3_3t_hi8eMio5wzhqIQS0qpZKF5U0WjU5CaVkfci5g0oqg4HXRxP4RuLIkW2lG_oeCIGtNiXZcIZ5JXWw_LH8a5s4evhhnBNoV56sAjeeCiHSb3W0y_x39nr6GZZxp4tl1-ndS75d58nDyVHp-IxynPwdEN_qCUOs&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 \fi 
 
@@ -782,9 +808,30 @@ $$
 $$
 označovaný **zákon šíření chyb**.
 
-[Příklad](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&lang=sage&in=%23+Vlhkost+ve+dreve++http%3A%2F%2Fen.wikipedia.org%2Fwiki%2FEquilibrium_moisture_content%0D%0A%0D%0AM%28m%2Cmod%29%3D%28m-mod%29%2Fmod%0D%0A%0D%0A%0D%0Am_hodnota%3D3.6%0D%0Am_chyba%3D0.2%0D%0A%0D%0Amod_hodnota%3D2.2%0D%0Amod_chyba%3D0.1%0D%0A%0D%0Ahtml%28r%27%24%24M%3D%25s%24%24+%24%24m%3D%25s%5Cpm%25s%24%24+%24%24mod%3D%25s%5Cpm%25s%24%24%27%5C%0D%0A+++++%25%28latex%28M%28m%2C+mod%29%29%2Clatex%28m_hodnota%29%2C+latex%28m_chyba%29%2Clatex%28mod_hodnota%29%2C+latex%28mod_chyba%29%29%29%0D%0A%0D%0Aderivace_m%3DM.diff%28m%29.subs%28m%3Dm_hodnota%2C+mod%3Dmod_hodnota%29%28%29%0D%0Aderivace_mod%3DM.diff%28mod%29.subs%28m%3Dm_hodnota%2C+mod%3Dmod_hodnota%29%28%29%0D%0A%0D%0Ahodnota%3DM%28m_hodnota%2Cmod_hodnota%29+++%23+dosazeni%0D%0Achyba1%3Dabs%28derivace_m%2Am_chyba%29+%2B+abs%28derivace_mod%2Amod_chyba%29++++++++%23+diferencial%0D%0Achyba2%3Dsqrt%28%28derivace_m%2Am_chyba%29%5E2+%2B+%28derivace_mod%2Amod_chyba%29%5E2%29++++%23+zakon+sireni+chyb%0D%0A%0D%0Ahtml+%28%22Hodnota%3A+%25s%22%25hodnota%29%0D%0A%0D%0Ahtml+%28%22%3Chr%3E%22%29%0D%0A%0D%0Ahtml+%28%22Gradient%3A+%28%25s%2C%25s%29%22%25%28derivace_m%2C+derivace_mod%29+%29%0D%0Ahtml+%28%22Chyby%3A+%28%25s%2C%25s%29%22%25%28m_chyba%2C+mod_chyba%29+%29%0D%0Ahtml+%28%22Vliv+chyb+na+vysledek+%3A+%28%25s%2C%25s%29%22%25%28m_chyba%2Aderivace_m%2C+mod_chyba%2Aderivace_mod%29+%29%0D%0A%0D%0Ahtml+%28%22%3Chr%3E%22%29%0D%0A%0D%0Ahtml%28+%22Chyba+pomoci+diferencialu%3A+%25s%22%25chyba1+%29%0D%0A%0D%0Ahtml+%28%22%3Chr%3E%22%29%0D%0A%0D%0Ahtml%28+%22Chyba+pomoci+zakona+sireni+chyb%3A+%25s%22%25chyba2+%29%0D%0A)
+[Příklad](https://sagecell.sagemath.org/?z=eJyVks9vmzAUx-_-K54SUO2UwcqkHaJ5l6laL7n2VCVysDusYJzaJm3619eGAm7VahsHw_v19ee9x_K2qQ_aOjgJ4Eb4s3buuC4K0eaP8iCPgkuWa_OnCFZx_dDJRu6N7NROaWldZ8Su0q0TrUNog1WmNCcUqy_hXfgDIaR2teatdox-y797q6rPe0a_5qUPaT4FS-8I9hi-QsjW-hHXTjXYXCTJhqY2SSBJlP-4O6rR0ny2LxD4J8UNc-IJByAIJCQbHBMKyWD09PdNCTPQnDJCEf8gxIWRJ1aJnaKbnMv7e6xIbru9xYpO-v21NFbDJKr0sbHW0_1bNRoHtZnbyOIcWF5ybdmzaCXqea8o87rzrauxWbiEtxHNV3OXfoBL8HDCiLaSrBnESmofjMMfyW1LL_iZ2rYkQe-ZHXQLVnpNCSESb3dxM7SwhtQu0rEf8iblR21-Lt75fhvGpf_11oBTm6WWLNIII4MYKewuKv3lEc5x3Wsz_eindccVt4089eTQMjidbSO4OHygsIoJJrHVe5a_9RYAGRy10pWMt9ENQxoW_L86_RZYvIZIrSTkBXa0WeY=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 (vzorec na výpočet vlhkosti dřeva podle [Wikipedie](http://en.wikipedia.org/wiki/Equilibrium_moisture_content)): $M=\frac{m-m_{od}}{m_{od}}$, $m=3.6\pm0.2$, $m_{od}=2.2\pm0.1$
 
 
 
 -->
+
+
+
+
+# Z ptačí perspektivy
+
+\iffalse
+
+<div class='obtekat'>
+
+![Ještě pohled s trochou nadhledu. Zdroj: pixabay.com](../falcon.jpg)
+
+</div>
+
+
+\fi
+
+* Rotace vektorového pole je další z diferenciálních operátorů. Význam tohoto operátoru nespatřujeme v jeho základním určení, které mu dalo název a srozumitelnou interpretaci (roztáčí unášené objekty okolo své osy), ale v jeho souvislosti s existencí skalárního potenciálu vektorového pole. 
+* Ve dvourozměrné formulaci je nulovost rotace nutná a současně postačující podmínka k zavedení skalárního potenciálu, tj. k možnosti přejít od vektorového popisu pole ke skalárnímu popisu (skalární je jednodušší).
+* Rotace je jedním z vyjadřovacích prostředků, které použijeme později pro formulaci Greenovy věty, které zprostředkovává přechod mezi difuzní rovnicí v bodě (v nekonečně malém objemu) a bilancí stavové veličiny v měřitelném makroskopickém tělese.
+* V závěru přednášky, bez souvislosti s operátorem rotace, jsme se seznámili s dovedností analyzovat vliv nepřesností ve vstupních datech na nepřesnost na výstupu. Zákon šíření chyb umožní naplánovat experiment zaměřený na stanovení nepřímo měřené veličiny a umožní identifikovat ty části procesu, které podstatně ovlivňují spolehlivost výsledku.

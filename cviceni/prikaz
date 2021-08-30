@@ -1,24 +1,47 @@
-pdflatex amat-cviceni
-pdflatex amat-cviceni
-pdflatex amat-cviceni-screen
-pdflatex amat-cviceni-screen
-pdflatex amat-cviceni-screen-reseni
-pdflatex amat-cviceni-screen-reseni
-pdflatex amat-cviceni-reseni
-pdflatex amat-cviceni-reseni
+for i in `ls cviceni*.md`
+do
+   echo $i
+   pandoc -t html --number-sections --toc --css ../my.css?ver=2021-01-27 --css cviceni.css --template cviceni.html -s $i -o $i.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+done
 
-echo scp amat-cvic*.pdf cornus.mendelu.cz:html/am/
 
-#scp mat-cviceni.pdf kiwi:html/mt/
-#scp mat-cviceni-screen.pdf kiwi:html/mt/
+menu="<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0<\/a><a class='menu' href='cviceni01.md.html'>1<\/a><a class='menu' href='cviceni02.md.html'>2<\/a><a class='menu' href='cviceni03.md.html'>3<\/a><a class='menu' href='cviceni04.md.html'>4<\/a><a class='menu' href='cviceni05.md.html'>5<\/a><a class='menu' href='cviceni06.md.html'>6<\/a><a class='menu' href='cviceni07.md.html'>7<\/a><a class='menu' href='cviceni08.md.html'>8<\/a><a class='menu' href='cviceni09.md.html'>9<\/a><a class='menu' href='cviceni10.md.html'>10<\/a><a class='menu' href='cviceni11.md.html'>11<\/a><\/div>"
 
-#pdftk mat-cviceni-reseni.pdf output mat-cviceni-r.pdf user_pw martina
-#pdftk mat-cviceni-screen-reseni.pdf output mat-cviceni-screen-r.pdf user_pw martina
+sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ycontainer"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' *.html
 
-#cp mat-cviceni-reseni.pdf mat-cviceni-r.pdf
-#cp mat-cviceni-screen-reseni.pdf mat-cviceni-screen-r.pdf 
+# Vymena jmena prikladu za odkaz je nadvakrat kvuli predavani retezce
+# jako argumentu funkce.
 
-#scp amat-cviceni.pdf kiwi:html/am/
-#scp amat-cviceni-screen.pdf kiwi:html/am/
-#scp amat-cviceni-reseni.pdf kiwi:html/am/
-#scp amat-cviceni-screen-reseni.pdf kiwi:html/am/
+sed -i 's/<p>ww:\(.*\)<\/p>/<a onclick="otevrit(\1);" target="_blank" class="WWotazka">WW-otázka<\/a>/' cviceni*.md.html
+
+sed -i "s/otevrit(problem\(.*\))/otevrit('problem\1')/" cviceni*.md.html
+
+sed -i 's/\\(/\\(\\displaystyle /g' *.html
+
+sed -i "s/<!-- menu -->/$menu/" *md.html
+
+sed -i -e :a -e '/<blockquote>$/N; s/<blockquote>\n/<blockquote>/; ta' *md.html 
+sed -i 's/<blockquote><p>Anotace./<blockquote class="anotace"><p class="anotacename">Anotace.<\/p><p>/' *md.html
+
+for i in `ls cviceni*.md.html`
+do
+    sed -i "s/' href='$i'/ ACTIVE' href='$i'/"  $i
+done
+
+# for i in `seq 12`
+# do
+#    ytbid=`cat cviceni.txt | head -n$i | tail -n1`
+#    echo $ytbid
+
+#     substituce="<div style='background-color: #E41F1F; display:inline-div;width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https:\/\/youtu.be\/$ytbid' style='text-decoration:none; color:lightgray;'><img src='https:\/\/img.youtube.com\/vi\/$ytbid\/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube cvičení<\/a><\/div>"
+
+#     if (( $i < 10 ))
+#     then
+#        sed -i "s/<!-- YTB -->/$substituce/" cviceni0$i.md.html
+#     else
+#        sed -i "s/<!-- YTB -->/$substituce/" cviceni$i.md.html
+#     fi   
+
+# done
+
+scp cviceni*html  cornus.mendelu.cz:html/am/slidy/cviceni/

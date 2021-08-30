@@ -1,12 +1,14 @@
-% Autonomní systémy
+% Autonomní rovnice a systémy
 % Robert Mařík
-% 2020
+% 2020-2021
 
 # Opakování
 
 * Maticový součin
 * Řešitelnost homogenní soustavy lineárních rovnic
 * Vlastní hodnoty a vlastní vektory
+* Řešitelnost kvadratických funkcí v komplexním oboru
+* Eulerova identita
 * Chování exponenciální funkce $e^{kt}$ v nekonečnu
 
 # Úmluva
@@ -19,11 +21,11 @@ jednoznačnost řešení. To je například, pokud funkce na pravé straně
 rovnice má ohraničené parciální derivace, což bude v níže uvedených
 příkladech vždy splněno.
 
-# Autonomní systém v jedné dimenzi
+# Autonomní diferenciální rovnice
 
+https://youtu.be/9PbghCvHQ5c
 
-Rovnice $$\frac{\mathrm dy}{\mathrm dt}=f(y)\tag{1}$$ je autonomní
-systém v jedné dimenzi. Je speciálním případem rovnice se separovanými
+Autonomní diferenciální rovnice je rovnice tvaru $$\frac{\mathrm dy}{\mathrm dt}=f(y).\tag{1}$$ Je speciálním případem rovnice se separovanými
 proměnnými a umíme ji řešit
 analytickou cestou. Proto se nyní nebudeme zaměřovat na hledání
 obecného řešení, ale pokusíme se popsat chování řešení, aniž bychom
@@ -45,7 +47,8 @@ má tedy pravá strana derivaci různou od nuly, poznáme stabilitu z\ monotonie
 
 Věta je odvozena z pozorování, že rovnice $y'=ky$ má řešení $y(t)=Ce^{kt}$ a toto řešení se pro velká $t$ blíží k nule nebo roste neohraničeně, v závislosti na znaménku hodnoty $k$. Pravou stranu rovnice, funkci $f(y)$, je možné aproximovat vztahem $f(y)\approx f'(y_0)(y-y_0)$ a odsud a z poznatku, že malá změna rovnice vetšinou nemění dramaticky chování řešení (přesněji, existuje spojitá závislost na parametrech) a proto rovnice $y'=f(y)$ kopíruje v okolí bodu $y_0$ chování rovnice $(y-y_0)'=f'(y_0)(y-y_0)$, pokud vynecháme patologické případy, což je zde $f'(y_0)=0$. Řešení je tedy $y\approx y_0+Ce^{f'(y_0)t}$ a tato funkce buď konverguje k $y_0$ nebo roste neohraničeně, v závislosti na znaménku derivace $f'(y_0)$.
 
-# Logistická diferenciální rovnice s konstantním lovem
+
+## Logistická diferenciální rovnice s konstantním lovem
 
 
 <div class='obtekat'>
@@ -68,54 +71,14 @@ sice pořád existuje stabilní stav, ale se zvyšující se intenzitou lovu
 se tento stacionární stav dostává stále blíže ke stavu nestacionárnímu
 a rovnováha je tedy poněkud křehká.
 
-[Nakreslit online](https://sagecell.sagemath.org/?z=eJx90D8OgjAYh-HdxDswkLRIIW3p2tm1NzAFChhqawpo8U6ewosJOPgvId_8Pr_kE4Sfte2h30GS-AhBjzAiEdKqVqY8aJkrzUHYcJxiHIJouxH0q0hwStYqMlWosNo6DpwqFyH7FeiaQD-E2illFoP9GWwVYW8k17JoZ2S-rrFXKEgsaCyyWDA0no6GTx4mqD_2WnGwd7IKuou8tUNQDaYtHvcgHLl_LTfTV577N1xo&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Numerický model](http://user.mendelu.cz/marik/aromamath/Lov_populace.html)
+
+Pokud se intenzita lov zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule. 
+
+> Poznámka (strukturální stabilita modelu, bifurkace). Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu budeme *strukturální stabilitou* modelu závislého na parametrech rozumět stav, kdy malá změna parametrů nemění kvalitativní vlastnosti rovnice nebo systému, tj. například zůstává stejný počet stacionárních bodů, zachovává se jejich stabilita. To je očekávatlené chování, malá změna modelu zplsobí malé změny v řešení. Pro některé hodnoty parametrů však strukturální stabilitu ztrácíme. V takovém případě se i při nepatrných změnách parametrů dramaticky mění chování rovnice nebo systému. Například při zvyšování lovu v právě uvažovaném modelu dva stacionární body splynou v jeden a zaniknou. Takové chování se nazývá *bifurkace* a hodnoty parametrů, při kterých k bifurkaci dojde, jsou důležité pro další vývoj předmětu. Zjednodušeně řečeno, malé změny parametrů v oblasti daleko od bifurkace znamenají, že chování modelu se mění pozvolna. Blízko k bifurkační hodnotě je situace komplikovanější a může se stát, že malá změna parametrů modelu způsobí dramaticky odlišné chování modelu. Rovnice blízká bifurkaci je citlivá na rozkolísání.
 
 
-# Logistická diferenciální rovnice s predátory
-
-<div class='obtekat'>
-
-\iffalse
-
-![Model obaleče byl publikován v D. Ludwig, D.D. Jones and C.S. Holling, Qualitative analysis of insect outbreak systems: the spruce budworm and forest, Journal of Animal Ecology 47(1): 315–332, February 1978 a v tomto odstavci je zpracován podle knihy [Brauer, Kribs, Dynamical systems for biological modelling](https://katalog.mendelu.cz/documents/223086?back=https%3A%2F%2Fkatalog.mendelu.cz%2Fsearch%3Ftype%3Dglobal%26q%3DDYNAMICAL%2BSYSTEMS%2BFOR%2BBIOLOGICAL%2BMODELING&group=223086,175427,175821), plný text je pro uživatele MENDELU zdarma. zdroj: Wikimedia.org](obalec.jpg)
-
-\fi
-
-![Pravá strana diferenciální rovnice modelu obaleče jako funkce proměnné $y$.](budworm.png)
-
-</div>
-
-Následující model je model obaleče *Choristoneura fumiferana*, který periodicky atakuje lesy severní Ameriky. Jeho populace je relativně malá, ale některé roky (historicky cca po
-40 letech) se velikost populace zvýší tisícinásobně a dokáže zahubit
-$80\%$ stromů v lese a prakticky zničit les. Populaci je možno modelovat logistickou rovnicí $$y'=ry\left(1-\frac yK\right)-H\frac{y^2}{y^2+A^2},$$
-kde druhý člen na pravé straně charakterizuje vliv predátorů. Jedná se o funkci, která zpomaluje růst, podobně jako lov. Protože však predátoři mají určitou hodnotu, nad kterou jsou saturovaní a nestačí brzdit růst populace, je tato funkce ohraničená. Platí $$H\frac{y^2}{y^2+A^2}  \leq H.$$ To má dalekosáhlé důsledky.
-Pro určité hodnoty parametrů může mít pravá strana rovnice dva nebo čtyři nulové body. Nakreslíme si [druhou variantu](https://sagecell.sagemath.org/?z=eJwrSyzSUK9U1-TlKrI10DPl5fK2NTTg5fKwNeTlcgQRaRqVmrZFWpVaGoa6lfremroeWpVxRvoaQELbMc4IqLEgJ79EA6RMR6NSx0DH0EBTR6EyNzPPVtdAz1ATAENFFxg=&lang=sage&interacts=eJyLjgUAARUAuQ==). 
-
-Vidíme dva průsečíky, kde je funkce rostoucí, to odpovídá nestabilním
-stavům. Vidíme i dva stabilní stavy, přibližně pro hodnoty $0.6$ a
-$7.3$. Malé populace, které se rozvíjejí od nuly, dospějí do nižšího
-stabilního stavu. Pokud se nějakým způsobem změní velikost populace o
-malé množství, systém se po čase díky stabilitě vrátí do původního
-stavu. Pokud však skok je velký a systém populace se dostane nad
-hodnotu nestabilního stavu, růst pokračuje a systém spěje ke
-stabilitě, ale s vyšším výskytem škůdce odpovídající stacionárnímu
-bodu $7.3$.
-
-Brauer a Kirbs vysvětlují situaci tak, že s růstem lesa se mění
-parametry modelu, stacionární body se posunují a populace obaleče se
-tomu přizpůsobuje. Více stromů znamená vyšší nosnou kapacitu prostředí
-pro obaleče a predátoři svou činností populaci obaleče udržují na
-rozumné míře. Pokud však nosná kapacita prostředí dosáhne takové
-hodnoty, že predátoři jsou nasycení a nestačí populaci redukovat,
-odpovídá to posunu nestabilního stacionárního bodu pod hodnotu
-velikosti populace a dojde k přemnožení. Toto přemnožení má
-devastující účinky pro les.
-
-
-
-
-
-# Model soupeření jestřábí a holubičí povahy
+## Model soupeření jestřábí a holubičí povahy
 
 \iffalse 
 
@@ -187,88 +150,82 @@ $$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nu
 
 
 
-# Autonomní systém ve dvou dimenzích, vektorový zápis
+# Autonomní rovnice s pravou stranou ve tvaru rozdílu
 
-\iffalse 
+https://youtu.be/ccWuBp4kies
 
-<div class='obtekat'>
-
-![Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com](vajicko.jpg)
+> Poznámka (autonomní rovnice s rozdílem na pravé straně). Rovnice $$\frac{\mathrm dy}{\mathrm dt}=g(y)-h(y)$$ má stacionární bod $y_0$, jestliže $$g(y_0)=h(y_0).$$ Často jsou funkce $g$ a $h$ zadány graficky a stacionární bod je v průsečíku grafů funkcí $g$ a $h$. Ze vzájemné polohy těchto grafů také vidíme, zda je stacionární bod stabilní (funkce $g$ je napravo od bodu $y_0$ pod funkcí $h$ a nalevo nad ní) nebo nestabilní (naopak).
 
 
-</div>
-
-\fi
-
-
-
-Následující příklad je mírně modifikovaný příklad z [kurzu MIT o diferenciálních rovnicích](https://youtu.be/MCrDzhpu3-s?t=671). Budeme modelovat ohřívání vejce ve vodě o konstantní teplotě $T_0$. Na počátku mají bílek a žloutek teplotu $T_1$ a $T_2$. Žloutek přebírá teplo od bílku rychlostí úměrnou rozdílu teplot žloutku a bílku. Bílek přebírá teplo od vodní lázně rychlostí úměrnou rozdílu teplot a předává teplo žloutku procesem popsaným v předchozí větě. Vody je hodně a její teplota se nemění. Proces můžeme modelovat soustavou diferenciálních rovnic $$\begin{aligned}T_1^\prime &= k_1(T_0-T_1)-k_2(T_1-T_2) \\ T_2^\prime&=k_2(T_1-T_2)\end{aligned}$$
-Tento systém je možno přepsat do tvaru
-$$\begin{aligned}T_1^\prime &= -(k_1+k_2)T_1+k_2T_2+T_0k_1 \\ T_2^\prime&=k_2T_1-k_2T_2\end{aligned}$$
-a zapsat maticově $$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
-\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
-\begin{pmatrix}T_1\\T_2\end{pmatrix}
-+
-\begin{pmatrix}k_1T_0\\0\end{pmatrix}.
-$$
-Pokud zvolíme teplotní stupnici tak, že teplotě vroucí vody je v naší nové stupnici nula, můžeme dokonce eliminovat druhý člen a dostáváme
-$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
-\begin{pmatrix}-(k_1+k_2) & k_2 \\ k_2 & -k_2\end{pmatrix}
-\begin{pmatrix}T_1\\T_2\end{pmatrix}
-$$
-tj. symbolicky $X'=AX$, kde $X=(T_1,T_2)^T$ je vektorová funkce (sloupcový vektor) a $A$ je $2\times 2$ matice.
-
-# Autonomní systém $X'=AX$
-
-Je-li determinant matice nenulový, má soustava $AX=0$ pouze nulové řešení a systém $$X'=AX$$ má jediné konstantní řešení, kterým je počátek. Konstantní řešení bude nazývat stacionární bod.
-
-Tento autonomní systém můžeme přepsat na $$X'-AX=0$$ a tento systém je lineární, protože díky distributivnímu zákonu pro matice pro operátor $L[X]=X'-AX$ platí
-\dm$$\begin{aligned}L[X_1+X_2]&=(X_1+X_2)'-A(X_1+X_2)\\&=X_1^\prime+X_2^\prime-AX_1 -AX_2\\&=(X_1^\prime -AX_1)+(X_2^\prime-AX_2)\\&=L[X_1]+L[X_2]\end{aligned}$$
-a díky komutativitě při násobení s konstantou $C\in\mathbb R$ také
-\dm$$L[CX]=(CX)'-A(CX)=CX'-CAX=C(X'-AX)=CL[X].$$
-
-Je možné ukázat, že každá počáteční úloha je jednoznačně řešitelná a pro obecné řešení stačí najít tolik nezávislých řešení, kolik komponent má neznámá vektorová funkce $X$. Platí následující věta, kterou je možno ověřit přímo dosazením.
-
-> Věta (souvislost vlastních čísel matice a řešení autonomního systému). Má-li matice $A$ vlastní číslo $\lambda$ a příslušný vlastní vektor je $v$, tj. platí $A v =\lambda v$, je funkce $X(t)=v e^{\lambda t}$ řešením systému $X'=AX.$ Jsou-li $\lambda$ a $v$ komplexní, je řešením i samostatně reálná část a imaginární část.
-
-Autonomní systém $$X'=AX+B\tag{2}$$ je možno na předchozí případ převést po přepsání do tvaru $(X-X_0)'=A(X-X_0)$, kde $X_0$ je řešením soustavy $AX+B=0$, což odpovídá posunu stacionárního bodu do počátku.
-
-> Poznámka (vlastní hodnoty a řešení). Následující poznatky jsou shrnutím a specifikací výše uvedeného a klasifikují stabilitu některých řešení systému (2), tj. $$X'=AX+B.$$ 
->
-> * Jakmile má systém reálnou kladnou vlastní hodnotu, existuje řešení, které se vzdaluje od stacionárního bodu směrem daným příslušným vlastním vektorem.
-> * Jakmile má systém reálnou zápornou vlastní hodnotu, existuje řešení, které se přibližuje ke stacionárnímu bodu ze směru daného příslušným vlastním vektorem.
-> * Jakmile má systém komplexní hodnotu s kladnou reálnou částí, existuje řešení, které se v oscilacích vzdaluje od stacionárního bodu.
-> * Jakmile má systém komplexní hodnotu se zápornou reálnou částí, existuje řešení, které se v oscilacích přibližuje ke stacionárnímu bodu.
-
-Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté takto čísla generují řešení konvergující do stacionárního bodu. Díky linearitě, jednoznačnosti řešení a tomu, že máme tolik řešení, kolik je nutno pro splnění libovolné podmínky, je možné pomocí těchto dílčích řešení zapsat i libovolné jiné řešení. Tím pádem ale všechna řešení konvergují do stacionárního bodu. Podobně, pokud všechny vlastní hodnoty jsou kladné, všechna řešení se od stacionárního bodu vzdalují. 
-
-
-\iffalse 
+## Teplotní bilance Země
 
 <div class='obtekat'>
 
-![Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156](krvinky.jpg)
-
+![Funkce z pravé strany rovnice pro teplotní bilanci Země](img_earth_balance_2.png) 
 
 </div>
 
+**Příklad.** Teplotní bilanci Země je možno vyjádřit rovnicí
+$$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\text{in}}$ a $R_{\text{out}}$ jsou funkce dané na obrázku. Vidíme tři průsečíky, tj. tři stacionární body. Uvažujme stacionární bod nejvíce napravo. Malá výchylka nahoru k větší teplotě nás posune do oblasti, kde převažuje vyzařování energie, $R_{\text{out}}$ je vetší než $R_{\text{in}}$, pravá strana je záporná a teplota klesá zpět do stacionárního stavu. Podobně, malá výchylka směrem dolů způsobí nárůst a opět návrat do stacionárního stavu. Stacionární stav zcela vpravo je tedy stabilní. Podobně ukážeme, že stacionární stav odpovídající průsečíku zcela vlevo je také stabilní. Naopak, stacionární stav uprostřed je nestabilní, libovolná výchylka z tohoto stavu způsobí přechod systému do některého ze stabilních stavů. 
+
+[Online model.](http://user.mendelu.cz/marik/aromamath/Teplotni_bilance_Zeme.html)
+
+
+## Logistická diferenciální rovnice s predátory
+
+<div class='obtekat'>
+
+\iffalse
+
+![Model obaleče byl publikován v D. Ludwig, D.D. Jones and C.S. Holling, Qualitative analysis of insect outbreak systems: the spruce budworm and forest, Journal of Animal Ecology 47(1): 315–332, February 1978 a v tomto odstavci je zpracován podle knihy [Brauer, Kribs, Dynamical systems for biological modelling](https://katalog.mendelu.cz/documents/223086?back=https%3A%2F%2Fkatalog.mendelu.cz%2Fsearch%3Ftype%3Dglobal%26q%3DDYNAMICAL%2BSYSTEMS%2BFOR%2BBIOLOGICAL%2BMODELING&group=223086,175427,175821), plný text je pro uživatele MENDELU zdarma. zdroj: Wikimedia.org](obalec.jpg)
+
 \fi
 
+![Pravá strana diferenciální rovnice modelu obaleče jako funkce proměnné $y$.](budworm.png)
 
-**Příklad.** Model ohřívání vajíčka z předchozí části této přednášky má stacionární bod $(0,0)$. Zkusíme zvolit parametry $k_1$ a $k_2$ a určit chování trajektorií v okolí tohoto bodu. Pro $k_1=1$ a $k_2=2$ dostáváme
-$$\begin{pmatrix}T_1\\T_2\end{pmatrix}'=
-\begin{pmatrix}-3 & 2 \\ 2 & -2\end{pmatrix}
-\begin{pmatrix}T_1\\T_2\end{pmatrix}.
-$$
-Charakteristická rovnice je 
-$$\lambda^2+5\lambda+2=0$$
-se dvěma zápornými kořeny $\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots$. Budou tedy existovat dvě nezávislá řešení konvergující do počátku a všechna další řešení dostaneme jako jejich lineární kombinaci. Proto všechna řešení konvergují k počátku tj. $T_1=T_2=0$. Obě teploty v naší posunuté stupnici se tedy ustálí na teplotě vodní lázně. Nic jiného jsme ani nečekali, ať mají žloutek a bílek na začátku jakoukoliv teplotu, po čase se teplota ustálí na teplotě vodní lázně. V tomto případě není zajímavé vědět, do jakého stavu systém konverguje, ale například za jak dlouho bude dosaženo potřebné teploty ve žloutku nebo v bílku. V praxi se podobným způsobem neřeší vaření vajec, ale předávání chemických látek jako jsou léky nebo enzymy mezi tkáněmi, prostřednictvím krve. Podobně jako u Newtononova zákona tepelné výměny, i zde je rychlost procesu úměrná množství, v tomto případě úměrná rozdílu koncentrací.
+![Křivky udávající znaménko pravé strany diferenciální rovnice z modelu obaleče.](budworm2.png)
+
+</div>
+
+Následující model je model obaleče *Choristoneura fumiferana*, který periodicky atakuje lesy severní Ameriky. Jeho populace je relativně malá, ale některé roky (historicky cca po
+40 letech) se velikost populace zvýší tisícinásobně a dokáže zahubit
+$80\%$ stromů v lese a prakticky zničit les. Populaci je možno modelovat logistickou rovnicí $$y'=ry\left(1-\frac yK\right)-H\frac{y^2}{y^2+A^2},$$
+kde druhý člen na pravé straně charakterizuje vliv predátorů. Jedná se o funkci, která zpomaluje růst, podobně jako lov. Protože však predátoři mají určitou hodnotu, nad kterou jsou saturovaní a nestačí brzdit růst populace, je tato funkce ohraničená. Platí $$H\frac{y^2}{y^2+A^2}  \leq H.$$ To má dalekosáhlé důsledky.
+Pro určité hodnoty parametrů může mít pravá strana rovnice dva nebo čtyři nulové body. Nakreslíme si [druhou variantu](https://sagecell.sagemath.org/?z=eJwrSyzSUK9U1-TlKrI10DPl5fK2NTTg5fKwNeTlcgQRaRqVmrZFWpVaGoa6lfremroeWpVxRvoaQELbMc4IqLEgJ79EA6RMR6NSx0DH0EBTR6EyNzPPVtdAz1ATAENFFxg=&lang=sage&interacts=eJyLjgUAARUAuQ==). 
+
+Vidíme dva průsečíky, kde je funkce rostoucí, to odpovídá nestabilním
+stavům. Vidíme i dva stabilní stavy, přibližně pro hodnoty $0.6$ a
+$7.3$. Malé populace, které se rozvíjejí od nuly, dospějí do nižšího
+stabilního stavu. Pokud se nějakým způsobem změní velikost populace o
+malé množství, systém se po čase díky stabilitě vrátí do původního
+stavu. Pokud však skok je velký a systém populace se dostane nad
+hodnotu nestabilního stavu, růst pokračuje a systém spěje ke
+stabilitě, ale s vyšším výskytem škůdce odpovídající stacionárnímu
+bodu $7.3$.
+
+Poněkud jednodušší je kvalitativní analýza, pokud zvolíme jednotku veličiny $y$ tak, aby koeficient $A$ byl roven jedné, zvolíme jednotku času tak, aby koeficient $H$ byl roven jedné a vytkneme proměnnou $y$. Model má potom tvar
+$$y'=y\left [ r\left(1-\frac yK\right)-\frac{y}{y^2+1}\right].$$ Na pravé straně v hranaté závorce zůstává rozdíl funkce $\frac{y^2}{y^2+1}$ neobsahující žádný parametr a lineární funkce, se kterou snadno dokážeme manipulovat. 
+
+[Numerický model](http://user.mendelu.cz/marik/aromamath/Populace_pod_tlakem_predatoru.html)
+
+Brauer a Kirbs vysvětlují situaci tak, že s růstem lesa se mění
+parametry modelu, stacionární body se posunují a populace obaleče se
+tomu přizpůsobuje. Více stromů znamená vyšší nosnou kapacitu prostředí
+pro obaleče a predátoři svou činností populaci obaleče udržují na
+rozumné míře. Pokud však nosná kapacita prostředí dosáhne takové
+hodnoty, že predátoři jsou nasycení a nestačí populaci redukovat,
+odpovídá to posunu nestabilního stacionárního bodu pod hodnotu
+velikosti populace a dojde k přemnožení. Toto přemnožení má
+devastující účinky pro les.
+
 
 
 
 # Autonomní systém $X'=f(X)$
 
-Obecný autonomní systém nemusí být lineární. Například při modelování chemických reakcí je rychlost úměrná mocnině koncentrace reagujících látek odpovídající počtu molekul, které do reakce vstupují. Na dalším slidu uvidíme příklad takového modelu.
+https://youtu.be/udATObf0s8I
+
+Soustava diferenciálních rovnic, kde pravé strany nezávisí na čase, se nazývá autonomní systém. Seznámili jsme se již s lineárními autonomními systémy, obecný autonomní systém však lineární být nemusí. Například při modelování chemických reakcí je rychlost úměrná mocnině koncentrace reagujících látek odpovídající počtu molekul, které do reakce vstupují. Níže uvidíme příklad takového modelu.
 
 Ukážeme si, jak studovat nelineární systém pomocí lineárního a pomocí vlastních čísel. Půjde o lineární aproximaci. V tomto případě o lineární aproximaci vektorové funkce definující pravé strany rovnic.
 
@@ -303,7 +260,7 @@ od něj.
   změně koeficientů v systému se nezmění typ singulárních bodů se
   nazývá *strukturální stabilita*.
 
-# Bruselátor
+## Bruselátor
 
 \iffalse 
 
@@ -350,9 +307,9 @@ Taková rovnice nemá řešení v množině reálných čísel a vlastní čísl
 
 <div class='obtekat'>
 
-![Stacionární body spojené s reálnými vlastními čísly.](sp_real.png)
+![Trajektorie pro stacionární body spojené s reálnými vlastními čísly.](sp_real.png)
 
-![Stacionární body spojené s nereálnými vlastními čísly.](sp_complex.png)
+![Trajektorie pro stacionární body spojené s nereálnými vlastními čísly.](sp_complex.png)
 
 </div>
 
@@ -363,10 +320,14 @@ $$ \begin{aligned}
    x'=f(x,y),\\
    y'=g(x,y).
  \end{aligned}$$
-Řešení $x(t)$, $y(t)$ definuje parametrickou křivku v rovině, která se
-nazývá *trajektorie*. Dvě různé trajektorie se nemohou protnout díky
-jednoznačné řešitelnosti. Díky tomu existuje jenom několik málo druhů
-trajektorií.
+ Pro autonomní systémy v rovině používáme dva základní způsoby vizualizace. Oba si můžete prohlédnout výše v příkladu s bruselátorem.
+ 
+ 1. Řešení zobrazíme jako *grafy funkcí $x(t)$ a $y(t)$*. Tímto přístupem dokážeme posoudit dynamiku v čase, odhadnout rychlost s jakou se mění obě komponenty řešení. Často kreslíme do jednoho obrázku a často máme v tomto obrázku dvojí souřadnicový systém: jeden pro hodnoty $x$ a jedn pro hodnoty $y$. 
+ 1. Řešení zobrazíme jako parametrickou křivku $\vec r(t)=[x(t), y(t)]$. Tato křivka se nazývá *trajektorie*. V tomto případě sice nemáme informaci o dynamice v čase, ale můžeme lehce posoudit, jak se chovají řešení vyhcházející z různých počátečních podmínek. Proto tento způsob zpravidla prefererujeme. Tento způsob znázornění se nazývá *fázový portrét*.
+ 
+Křivky tvořené trajektriemi mají speciální vlastnosti. Například se
+díky jednoznačné řešitelnosti nemohou dvě různé trajektrie
+protnout. Díky tomu existuje jenom několik málo druhů trajektorií.
 
 * Stacionární body. Tyto body odpovídají konstantním řešením.
 *  Uzavřené trajektorie, cykly.
@@ -397,8 +358,36 @@ tomto stacionárním bodě.
     v nějakém okolí existují pouze cykly, nazývá se tento
     bod navíc střed.  Bod rotace souvisí s komplexně sdruženými vlastními čísly s nulovou reálnou částí, ale v těchto případech může stacionární bod být i ohniskem.
 
+# Základní modely populační ekologie
+
+Populační ekologie je součást ekologie zabývající se modelováním vývoje populací. Základním vyjadřovacím jazykem jsou dierenciální rovnice nebo jejich diskrétní obdoba, kdy se čas mění po skocích, diferenční rovnice. Málokdy uvažujeme jedinou populaci, většinou studujeme bohatší ekosystémy, což vede na soustavy rovnic. Dva nejklasičtější si zde stručně uvedeme a prostudujeme ve cvičení.
+
+## Model konkurence dvou druhů
+
+Situace kdy dva druhy žijí ve společné lokalitě a přítomnost jednoho druhu ovlivňuje druhý druh je modelována autonomním systémem
+$$
+\begin{aligned}
+\frac{\mathrm dx}{\mathrm dt}&=x r_1 (1-a x-by),\\
+\frac{\mathrm dy}{\mathrm dt}&=y r_2 (1-c x-dy).
+\end{aligned}
+$$
+Tento systém vychází z logistické rovnice pro každou z populací s doplněním členů $r_1 bxy$ a $r_2 cxy$, které charakterizují mezidruhovou konkurenci. Ukazuje se, že tento systém má kapacitu popsat všechny v přírodě pozorované druhy interakcí (slabá konkurence, silná konkurence, dominance jednoho z druhů) a je výchozím systémem pro veškeré modely používané v populační ekologii.
+
+## Model dravce a kořisti
+
+Skutečnost kdy žijí ve společné lokalitě a přítomnost jednoho druhu umožňuje přežití druhého je modelována autonomním systémem
+$$
+\begin{aligned}
+\frac{\mathrm dx}{\mathrm dt}&=x r (1-a x) -V(x)y,\\
+\frac{\mathrm dy}{\mathrm dt}&=y (-\alpha+kV(x)).
+\end{aligned}
+$$
+V tomto případě je $V(x)$ trofická funkce. Pro $V(x)=k_0x$ a $a=0$, (tj. pro nenažrané dravce kteří nejsou nikdy saturováni a bez vnitrodruhové konkurence v populaci kořisti) dostáváme klasický Lotkův-Voterrův model, který v jistém smyslu odstartoval využití matematiky v modelování biologických systémů. Povedlo se mu vysvětlit oscilace mezi populacemi kořisti a dravce. Přes tento úspěch se však pro praktické modelování využívají dokonalejší modely. Zejména je nutno uvažovat ohraničenou trofickou funkci.
+
+
 
 
 # Vícerozměrné autonomní systémy, kompartmentové modely
 
-Kompartmentové modely jsou modely, kde se je studovaná veličina rozdělena do několika stavů a mezi těmito stavy se v jakémsi smyslu přelévá definovanou rychlostí. Klasickým připadem v roce 2020 je model epidemie, například [SIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=sir_epidemie) nebo [SEIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=karantena).
+Kompartmentové modely jsou modely, kde se je studovaná veličina rozdělena do několika stavů a mezi těmito stavy se v jakémsi smyslu přelévá definovanou rychlostí. Klasickým případem v roce 2020 je model epidemie, například [SIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=sir_epidemie) nebo [SEIR model](http://user.mendelu.cz/marik/wiki/doku.php?id=karantena).
+
