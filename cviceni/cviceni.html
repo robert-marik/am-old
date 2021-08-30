@@ -39,6 +39,19 @@ $endif$
     };
 
     
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+    
+    
  </script>
 
   $if(quotes)$
@@ -113,6 +126,12 @@ $if(toc)$
 $toc$
 </div>
 $endif$
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+</div>
+
+
 $body$
 $for(include-after)$
 $include-after$

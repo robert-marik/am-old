@@ -19,15 +19,17 @@
 https://youtu.be/zhaebxHbqhs
 
 
-<div class='obtekat'>
-
 \iffalse 
+
+
+<div class='obtekat'>
 
 ![2d graf funkce jedné proměnné.](2D_graf.png)
 
+</div>
+
 \fi
 
-</div>
 
 Základní informace o funkci jedné proměnné a její derivaci si můžete osvěžit v materiálech k předmětu [Matematika](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/).
 
@@ -74,15 +76,16 @@ s celkem jednoduše naměřitelnou číselnou konstantou $k$.
 
 <br style="clear:both">
 
-<div class='obtekat'>
-
 \iffalse 
+
+<div class='obtekat'>
 
 ![Kvalita života ve městech souvisí s hospodařením s teplem a tzv. tepelnými ostrovy. Zdroj: pixabay.com](park.jpg)
 
+</div>
+
 \fi
 
-</div>
 
 Příkladem skalární funkce dvou prostorových proměnných je teplota v určitém okamžiku na dvourozměrném povrchu. Aparát funkcí dvou proměnných se tedy jistě uplatní při studiu tepelných ostrovů souvisejících s urbanizací a kvalitou života ve městech.
 
@@ -133,15 +136,15 @@ Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé 
 
 https://youtu.be/UE_nkyDe7bw
 
-\iffalse 
-
 <div class='obtekat'>
+
+\iffalse 
 
 ![Brzdy v autě musí absorbovat kinetickou energii, která je lineární funkcí hmotnosti a kvadratickou funkcí rychlosti. Zdroj: pixabay.com](car.jpg)
 
-</div>
-
 \fi
+
+</div>
 
 *Příklad:* Brzdná dráha $L$ (v metrech) auta o hmotnosti $m$ (v kilogramech) brzdícího z rychlosti $v$ (v kilometrech za hodinu) je dána vzorcem
 $$L=k m v^2, $$ kde $k= 3.45 \times 10 ^{-6}\,(\mathrm{m}\,\mathrm{hod}^2)/(\mathrm{kg}\,\mathrm{km}^2)$. Pro $m=1100\,\mathrm{kg}$ a $v=100\,\mathrm{km}/\mathrm{hod}$ je brzdná dráha $37.95\,\mathrm{m}$.

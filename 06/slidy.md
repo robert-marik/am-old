@@ -305,15 +305,17 @@ https://youtu.be/8YS2Fn8st5I
   kde $\mu (\Omega)=\iint_\Omega\mathrm{d}x\mathrm{d}y$ je obsah
   množiny $\Omega$.
 
-\iffalse
-
 ### Objem kopce nebo jezera pomocí vrstevnic
+
+\iffalse
 
 <div class='obtekat'>
 
 ![Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic. Zdroj: https://www.pixabay.com](fuji.jpg)
 
 </div>
+
+\fi
 
 * Obsah množiny ohraničené vrstevnicí na mapě vynásobený rozestupem
 mezi vrstevnicemi je přibližně roven objemu vrstvy mezi dvěma
@@ -327,8 +329,6 @@ výškou.
 * V tomto případě je dvojný integrál pouze koncept. Samozřejmě nemáme
 ambice vyjadřovat vrstevnice v analytickém tvaru a integrovat pomocí
 Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
-
-  \fi
   
 ### Fyzikální aplikace dvojného integrálu
 
@@ -713,6 +713,7 @@ th {
 th {text-align: center;}
 </style>
 
+\iffalse
 
 \maxwidthdefault
 \def\velkatabulka{\begin{table*}\setlength{\columnwidth}{18cm}}
@@ -727,6 +728,8 @@ th {text-align: center;}
 |  \vspace*{0pt} ![](polarni_3.png)  | $$\begin{gathered}0\leq r\leq 1 \\ \frac\pi 4\leq \varphi\leq \frac\pi 2\end{gathered}$$  | $$\begin{gathered}0\leq x\leq \frac {\sqrt 2}2 \\ x\leq y\leq \sqrt{1-x^2}\end{gathered}$$ |
 
 \velkatabulkakonec
+
+\fi
 
 ### Převod dvojného integrálu do polárních souřadnic
 
