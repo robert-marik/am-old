@@ -253,6 +253,8 @@ $if(institute)$
 $endif$
 \date{$date$}
 
+\def\arraybackslash{\let\\\tabularnewline}
+
 \begin{document}
 $if(title)$
 \maketitle

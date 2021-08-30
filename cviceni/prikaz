@@ -9,6 +9,8 @@ menu="<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0<\/a><a
 
 sed -i 's/<p>https:\/\/youtu.be\/\(.*\)<\/p>/<div class="Ycontainer"> <iframe class="responsive-iframe" src="https:\/\/www.youtube.com\/embed\/\1"><\/iframe> <\/div>/' *.html
 
+sed -i 's/<div class="reseni">/<button onclick="myFunction()">Řešení on\/off<\/button><div class="reseni"><p class="p_reseni">Řešení<\/p>/' *.html
+
 # Vymena jmena prikladu za odkaz je nadvakrat kvuli predavani retezce
 # jako argumentu funkce.
 

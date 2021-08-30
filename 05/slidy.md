@@ -182,6 +182,8 @@ th {
 th {text-align: center;}
 </style>
 
+\iffalse
+
 \maxwidthdefault
 \def\velkatabulka{Aplikace křivkového integrálu prvního druhu jsou shrnuty v tabulce.\begin{table*}\setlength{\columnwidth}{18cm}}
 \def\velkatabulkakonec{\caption{Aplikace křivkového integrálu prvního druhu}\end{table*}}
@@ -201,6 +203,7 @@ th {text-align: center;}
 
 \velkatabulkakonec
 
+\fi
 
 
 ## Vlastnosti křivkového integrálu prvního druhu

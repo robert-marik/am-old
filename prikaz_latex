@@ -21,15 +21,20 @@ do
   sed -i 's/♠/\\ensuremath{\\spadesuit}/g' slidy.tex
   sed -i 's/\\begin{longtable}/{\\centering\\begin{supertabular}/g' slidy.tex
   sed -i 's/\\end{longtable}/\\end{supertabular}\\par}/g' slidy.tex
+  sed -i 's/textbackslash iffalse/iffalse/g' slidy.tex
+
 
   sed -i 's/♣/\\ensuremath{\\clubsuit}/g' $jj.tex
   sed -i 's/♠/\\ensuremath{\\spadesuit}/g' $jj.tex
   sed -i 's/\\begin{longtable}/{\\centering\\begin{supertabular}/g' $jj.tex
   sed -i 's/\\end{longtable}/\\end{supertabular}\\par}/g' $jj.tex
+  sed -i 's/textbackslash iffalse/iffalse/g' $jj.tex
 
-  pdflatex slidy.tex
-  pdflatex slidy.tex
+
+  xelatex slidy.tex
+  xelatex slidy.tex
   cp slidy.pdf ../$i.pdf
+  cp slidy.log $i.log
   #cp slidy.pdf ../$jj.pdf
   cd ..
 #  rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mt/mat-slidy/
@@ -40,8 +45,8 @@ rm tex/??.tex
 cp ??/??.tex tex/
 cd tex
 export TEXINPUTS=.:..//:
-pdflatex all
-pdflatex all
+xelatex all
+xelatex all
 
 mv all.pdf ../am_slidy_all.pdf
 #rm ??.pdf

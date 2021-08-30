@@ -130,7 +130,7 @@ Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané tep
 
 
 
-Průměr centrální a zpětné diference:
+Průměr dopředné a zpětné diference:
 $$
   \frac{\frac{f(x)-f(x-h)}{h} + \frac{f(x+h)-f(x)}{h}}{2}=
   \frac{\frac{f(x)-f(x-h)+f(x+h)-f(x)}{h}}{2}=
@@ -159,6 +159,8 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 1. Rychlost, jak rychle se klesá teplota jako funkce polohy, tj. směrem doprava.
 1. Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy.
 1. Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy.
+
+_Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasnění si toho, co derivace vyjadřují a kdy jsou kladné a kdy záporné. To je nutné znát při zadávání modelů do numerických simulací. Výpočet za člověka udělají počítače, ale slovní interpretaci ani kontrolu, že je model relevantní a nemá popletená znaménka, za člověka nikdo neudělá._
 
 <div class=reseni>
 
