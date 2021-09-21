@@ -55,8 +55,7 @@ background-color: #E4E5E7;
 
 # Zásady pro WeBWorK
 
-* WeBWorK je napsaný v jazyce PERL, kde má symbol dolaru speciální postavení. Proto používejte pro matematické prostředí dvojici `\(` a `\)`. Pro matematické prostředí naformátované na samostatný řádek potom `\[` a `\]`.
-* V prostředí WeBWorK se musí ručně zobrazovat náhled textu. Proto je lepší používat [demo programu MathJax](https://www.mathjax.org/#demo), kde je živý náhled. Kompatibilita není stoprocentní, nezapomeňte vyznačovat matematiku pomocí zpětného lomítka a závorek. Na dolary a dvojdolary raději zapomeňte.
+* WeBWorK je napsaný v jazyce PERL, kde má symbol dolaru speciální postavení. Proto používejte pro matematické prostředí dvojici `\(` a `\)`. Pro matematické prostředí naformátované na samostatný řádek potom `\[` a `\]`. Na dolary a dvojdolary raději zapomeňte.
 
 # Zásady pro Markdown
 
