@@ -1,6 +1,6 @@
 % LaTeXové snippety
 % Robert Mařík
-% 2018–2020
+% 2018–2021
 
 # Snippety
 
@@ -9,6 +9,8 @@
 li code{
 background-color: #E4E5E7;
 }
+
+.menu-obalka {display:none;}
 </style>
 
 
@@ -206,3 +208,15 @@ $$
 \end{aligned}
 \tag{M}
 $$
+
+
+# Komentované ukázky chybných zápisů
+
+|Číslo|Špatně|Správně|Vysvětlení|
+|-|----|----|----|
+|1|Derivace rychlosti dinosaura podle délky kroku je $$\frac{\mathrm dv}{\mathrm dl}=1.336*l^{0.67}.$$|Derivace rychlosti dinosaura podle délky kroku je $$\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.$$|Špatně je zápis násobení. Násobení zapisujeme hvězdičkou jenom ve vstupech pro počítač. Pro texty určené lidem **hvězdičku nepoužíváme**. Nepíšeme buď nic, nebo `\times` nebo `\cdot`, tj. $1.336\times l^{0.67}$ nebo $1.336\cdot l^{0.67}$.|
+|2|Derivace rychlosti dinosaura podle délky kroku je $$\frac{\mathrm dv}{\mathrm dl}=1.336 \mathrm l^{0.67}.$$|Derivace rychlosti dinosaura podle délky kroku je $$\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.$$|Špatně je font pro proměnnou označující délku kroku. Matematické proměnné zapisujeme matematickou kurzívou. To je defaultní font v matematickém prostředí, tedy v praxi to znamená, že **nic ručně nepřepínáme**, pokud si opravdu nejsme jisti, že to je potřeba (jako například u jednotek).|
+|3|Derivace rychlosti dinosaura podle délky kroku je $$\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}$$|Derivace rychlosti dinosaura podle délky kroku je $$\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.$$|Špatně je chybějící konec věty. Na konci věty píšeme **tečku**. (Pozor, toto pravidlo nemusí platit v anglickém textu, tam záleží na typografovi publikace.)|
+|4|Jednotka derivace rychlosti dinosaura podle délky kroku je $s^{-1}.$|Jednotka derivace rychlosti dinosaura podle délky kroku je $\mathrm s^{-1}.$|Špatně je font pro zápis jednotky. Úmysl byl zapsat převrácenou hodnotu sekundy, ale zapsána je převrácená hodnota dráhy. Fyzikální jednotky se nepíšou matematickou kurzívou, ta je vyhrazena pro proměnné. Přepínáme do **textového fontu** příkazem `\mathrm`.| 
+|5|Jednotka derivace rychlosti dinosaura podle délky kroku je $$\mathrm s^{-1}.$$|Jednotka derivace rychlosti dinosaura podle délky kroku je $\mathrm s^{-1}.$|Špatně je umístění vzorce s jednotkou na samostatný řádek. Velmi krátké vzorce si umístění na **samostatný řádek** zaslouží jenom vyjímečně. Napříkad pokud vzorec potřebujeme očíslovat. Krátké matematické výrazy píšeme do textu odstavce.| 
+|6|Derivace rychlosti dinosaura podle délky kroku je: $$\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.$$|Derivace rychlosti dinosaura podle délky kroku je $$\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.$$|Špatně je použití dvojtečky. Snažíme se o co nejhladší začlenění matematických výrazů do textu. Kdyby místo vzorce bylo slovo, tak žádnou **dvojtečku nepoužíváme**, proto není vhodné ji v této situaci psát ani když je místo slova vzorec. Co není potřeba psát a nepřispívá k čitelnosti, to ani nepíšeme. (Podobně jako tečka za větou, pravidlo nemusí platit v jiných jazycích a při speciálních požadavcích typografa.)|
