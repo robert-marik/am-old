@@ -122,7 +122,7 @@ https://youtu.be/ev3eFilaGpw
 * Pozor: anglický výraz pro rotaci je "curl".
 
 > Poznámka (linearita rotace). Rotace zachovává součet a násobení konstantou, tj. pro libovolné vektorové funkce $\vec F$ a $\vec G$ a konstantu $c$ platí
-> $$\nabla \times (\vec F+\vec G)=\nabla \times \vec F +\nabla \times \vec G, \qquad \nabla \times (c\vec F)=c\nabla \cdot \vec F.$$
+> $$\nabla \times (\vec F+\vec G)=\nabla \times \vec F +\nabla \times \vec G, \qquad \nabla \times (c\vec F)=c\nabla \times \vec F.$$
 
 
 <!-- ![Nevírové pole](nevirove.svg)	 -->
