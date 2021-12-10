@@ -2,7 +2,7 @@
 
 K cvičení je k dispozici [Jupyter zápisník s numerickými simulacemi](http://user.mendelu.cz/marik/aromamath/Autonomni_rovnice_a_systemy.html) zde představených modelů. Tento zápisník je možné si naklonovat a samostatně modifikovat příkazy nebo texty a zkoušet vlastní numerické simulace.
 
-# Instrukce k online výuce prosinec 2021
+## Instrukce k online výuce prosinec 2021
 
 * V úlohách bude podstatná schopnost sestavení diferenciální rovnice a umění detekovat, zda kde je pravá strana rovnice nulová, kde kladná  a  kde záporná. To je dostatečná informace k tomu, abychom dokázali odhalit stacionární body (to jsou stavy kdy je systém v rovnováze a do jednoho s těchto stavů časem dospěje), nestabilní stacionární body (stavy, kdy je systém v křehké rovnováze, která je narušena i malým výkyvem) a stabilní stacionární body (systém je v robustní rovnováze, která se po malých výchylkách sama automaticky obnovuje). V první úloze je možné uvažovat pravou stranu jako celek a zakreslit si situaci graficky. Ve druhé úloze je členů více a je výhodnější pravou stranu uvažovat jako rozdíl dvou funkcí a hledat průsečíky a intervaly, kdy je jedna funkce nad druhou a naopak. 
 * Ve třetí úloze si ukážeme, jak se dají namodelovat soustavy rovnic diferenciálních rovnic. Použijeme k tomu lehce představitelný případ konkurence populací v ekosystému. Kromě sestavení rovnice si ukážeme nástroj umožňující pohodlné modelování, jak se budou chovat řešení. (Význam tohoto nástroje je čistě pedagogický. V praxi je nutné aby toto modelování bylo stavebním kamenem nějaké celkové analýzy, zahrnující jednotlivé scénáře, pravděpodobnostní rozložení hodnot parametrů a podobně. Zde jakýkoliv interaktivní nástroj nemá šanci na uplatnitelnost.)
