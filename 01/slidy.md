@@ -225,6 +225,8 @@ Následující poznámka je nenápadná a přirozená, protože je analogií ste
 
 <!-- https://youtu.be/tZDKXyomaJE -->
 
+https://youtu.be/1tbe5YUvoqg
+
 https://youtu.be/ilAaBQNoySI
 
 

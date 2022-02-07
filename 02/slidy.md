@@ -192,6 +192,8 @@ tj. $x_0=y_0=\vec F(0,0)=0$ je $$\vec F(x,y)\approx J(0,0)
 
 # Vícerozměrné konstitutivní zákony
 
+https://youtu.be/PzFh8f9Qzf8
+
 https://youtu.be/uTzCAxOOye8
 
 Konstitutivní vztahy tvoří z hlediska materiálového inženýrství jednu
