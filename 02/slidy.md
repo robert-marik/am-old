@@ -288,9 +288,9 @@ látky. Většinou je hybatelem procesu nerovnoměrnost v rozložení látky,
 která se tímto procesem transportuje. Nemusí to však být
 vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný
 nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$
-kde $s$ je koeficient termodifuze. Na rozdíl od předchozích zákonů, u Soretova efektu dochází k transportu nejenom ve
-směru maximálního poklesu (záporného gradientu) teploty, ale někdy i ve směru 
-gradientu teploty. Viz Wikipedia a heslo Thermophoresis.
+kde $s$ je koeficient termodifuze. 
+
+Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. Te je v kontrastu s ostatními konstitutivními zákony, kde tok proudí vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis.
 
 ## Ohmův zákon
 
