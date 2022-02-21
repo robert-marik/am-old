@@ -52,6 +52,7 @@
   $$\begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}a\\c\end{pmatrix}\quad\text{a}\quad \begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix}=\lambda \begin{pmatrix}1\\0\end{pmatrix}$$
   si vynutí $c=0$. Podobně bychom dostali pro vektor ve směru druhé osy $b=0$.
 
+[Animace](https://user.mendelu.cz/marik/manim/MatrixMultiplication/)
 
 # Diferenciální operátory
 
@@ -194,6 +195,8 @@ tj. $x_0=y_0=\vec F(0,0)=0$ je $$\vec F(x,y)\approx J(0,0)
 
 https://youtu.be/PzFh8f9Qzf8
 
+[Animace](https://user.mendelu.cz/marik/manim/Flow)
+
 https://youtu.be/uTzCAxOOye8
 
 Konstitutivní vztahy tvoří z hlediska materiálového inženýrství jednu
@@ -325,6 +328,9 @@ elektrického proudu.
 # Speciální případy vztahu mezi gradientem a tokem
 
 https://youtu.be/vrPhbc-GJqc
+
+[Animace](https://user.mendelu.cz/marik/manim/Eigenvectors)
+
 
 \iffalse
 
