@@ -10,7 +10,7 @@
 
 # Divergence vektorového pole
 
-https://youtu.be/BS2FR1mqn18
+https://youtu.be/bdnxbITOIrM
 
 1. Vypočtěte divergenci vektorového pole
   $$\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath.$$
