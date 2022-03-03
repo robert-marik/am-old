@@ -5,12 +5,12 @@
 > Anotace.
 >
 > * Naučíme se sledovat rychlost, s jakou se mění veličina, která je objektem našeho zájmu.
-> * Budeme schopni sledovat reakci sledované veličiny na současné změny více parametrů. Například u teploty můžeme v daném místě sledovat změnu teploty v čase, nebo můžeme v daném čase sledovat změnu teploty s polohou.
+> * U veličin závisejících na několika parametrech budeme schopni sledovat reakci těchto veličin na změny těchto parametrů. Například u teploty můžeme v daném místě sledovat změnu teploty v čase, nebo můžeme v daném čase sledovat změnu teploty s polohou.
 > * Aparát využijeme k tomu, že z fyzikálních zákonů sestavíme rovnici vedení tepla. To bude matematický model umožňující jednak modelování přenosu tepla a jednak kontrolu toho, že fyzikální zákony vedoucí k formulaci této rovnice jsou správné.
 
 > Prerekvizity.
 >
-> * Navážeme na znalosti z diferenciálního počtu funkcí jedné proměnných. Zejména definice, využití a výpočet derivace.
+> * Navážeme na znalosti z diferenciálního počtu funkcí jedné proměnných. Zejména kje nutné si připomenout definici, využití a výpočet derivace.
 > * Zopakujte si fyzikální (praktický) význam derivace a pro osahání si konkrétních příkladů také základní metody výpočtu.
 
 
@@ -35,11 +35,11 @@ Základní informace o funkci jedné proměnné a její derivaci si můžete osv
 
 * Zobrazení $f: \mathbb{R}\to \mathbb{R}$ se nazývá funkce jedné proměnné. 
 * V kartézské rovině píšeme též $y=f(x)$, kreslíme uspořádané dvojice bodů $[x,y]$ a výstupem je zpravidla křivka v rovině ([Nakreslit online.](https://sagecell.sagemath.org/?z=eJxL06jQtK3QSq0o0NCt0OTlKsjJL9FQSAOKKugoaFTo6BrqmGgqaAIA3aEKBw==&lang=sage))
-* Rychlost změny je derivace:
-$$f'(x):=\lim_{h\to 0}\frac{f(x+h)-f(x)}h$$
-* Podle kontextu a oborových zvyklostí zapisujeme derivaci pomocí čárky (někdy tečky) nebo jako podíl diferenciálů
+* Rychlost změny je derivace definovaná vztahem
+$$f'(x):=\lim_{h\to 0}\frac{f(x+h)-f(x)}h.$$
+* Podle kontextu a oborových zvyklostí zapisujeme derivaci pomocí čárky (někdy tečky) nebo jako podíl diferenciálů.
 $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
-* rychlost změny změny je druhá derivace: $$y'',\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y$$
+* Rychlost s jakou se mění rychlost změny je druhá derivace definovaná vztahem $$y'',\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y.$$
 
 > Poznámka (Newtonův zákon tepelné výměny). Je-li $T(t)$ teplota tělesa v čase $t$, je $\frac{\mathrm dT}{\mathrm dt}$ změna této teploty za jednotku času, tj. rychlost s jakou roste teplota. Například hodnota derivace $$\frac{\mathrm dT}{\mathrm dt}(6)=2 ^\circ \mathrm {C}/\mathrm{min},$$ kdy teplotu ve stupních Celsia sledujeme jako funkci času v minutách, nás informuje o tom, že v čase $6$ minut roste teplota okamžitou rychlostí $2$ stupně Celsila za minutu. Pokud tento růst vydrží celou minutu, bude v čase $7$ miunt teplota o dva stupně Celsia vyšší. Pokud tato rychlost růstu vydrží deset minut, jsme schopni podobně určit změnu teploty i za delší časový úsek.
 >
