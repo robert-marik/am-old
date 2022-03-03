@@ -225,6 +225,8 @@ Následující poznámka je nenápadná a přirozená, protože je analogií ste
 
 <!-- https://youtu.be/tZDKXyomaJE -->
 
+https://youtu.be/1tbe5YUvoqg
+
 https://youtu.be/ilAaBQNoySI
 
 
@@ -259,15 +261,26 @@ jednoduchou představu) nebo proudění vlhkosti (pro odvození rovnice
 difuze namísto rovnice vedení tepla). Budeme uvažovat libovolné místo materiálu a budeme matematicky vyjadřovat děje, které přispívají ke změně teploty.
 
 * Rychlost s jakou s daném místě roste teplota (v čase) je $$\frac{\partial T}{\partial t}$$ a měříme ji například ve stupních Celsia za minutu. Tato rychlost je úměrná rychlosti s jakou do daného místa dodáváme teplo. Proto v dalším budeme hledat rychlost dodávání tepla a daného místa a poté se sem vrátíme a dáme tuto rychlost do souvislosti s rychlostí růstu teploty.
-* Rychlost s jakou s daném místě roste teplota jako funkce polohy je $\frac{\partial T}{\partial x}$ a měříme ji například ve stupních Celsia na centimetr. Tato rychlost musíme vzít záporně, abychom dostali pokles teploty a vynásobit konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme $k$ (nazývá se součinitel teplné vodivosti a dodá nám ji fyzika, přesněji Fourierův zákon) a tok tepla $q$ ve směru osy $x$ je $$q=-k\frac{\partial T}{\partial x}.$$ To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času.
-* Pokud do daného místa přitéká teplo stejnou rychlostí jako odtéká, teplota se nemění a dané místo se ani neohřívá ani neochlazuje. Intenzita ochazování je dána bilancí mezi přítokem a odtokem. Můžeme si to představit tak, že z tepla které do daného bodu přiteče, se část "oddělí" a přispěje k navýšení teploty a zbytek teče dál. Pro zjištění, kolik tepla se z toku "oddělí" a způsobí v daném místě navýšení teploty potřebujeme vědět, jak rychle v daném místě tok klesá jako funkce proměnné $x$. Nárůst určíme derivací podle $x$ a pokles z nárůstu uděláme změnou znaménka. Pokles toku tepla je tedy $$-\frac{\partial q}{\partial x}=
+  * Je-li například parciální derivace $\frac{\partial T}{\partial t}$ rovna $2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že v daném místě roste teplota v čase rychlostí dva stupně Celsia za minutu. 
+  * Pokud je parciální derivace záporná a rovna například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že teplota v tomto místě klesá rychlostí dva stupně Celsia za minutu.
+* Rychlost s jakou s daném místě roste teplota jako funkce polohy je $\frac{\partial T}{\partial x}$ a měříme ji například ve stupních Celsia na centimetr. 
+  * Je-li například parciální derivace $\frac{\partial T}{\partial x}$ rovna $2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to, že v daném místě roste teplota ve směru osy $x$ tak, že na každém centimetru naroste o dva stupně Celsia. 
+  * Pokud je parciální derivace záporná a rovna například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to, že ve směru osy $x$ teplota klesá a na každém centimetru klesne o dva stupně Celsia.
+* Pro přepočet nerovnoměrného rozložení teploty na tok tepla nás zajímá nikoliv jak teplota v prostoru roste, ale jak klesá. Proto musíme vzít derivaci podle prostorové proměnné záporně, abychom dostali pokles teploty.Tento pokles vynásobíme konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme $k$ (nazývá se součinitel tepelné vodivosti a dodá nám ji fyzika, přesněji Fourierův zákon) a tok tepla $q$ ve směru osy $x$ je $$q=-k\frac{\partial T}{\partial x}.$$ To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času. 
+  * Je-li $q$ rovno $7\,\mathrm{J}/\mathrm{min}$ znamená to, že průřezem proteče ve směru osy $x$ sedm joulů za minutu. 
+  * Je-li $q$ záporné a rovno $-7\,\mathrm{J}/\mathrm{min}$, znamená to, že sedm joulů za minutu proteče v daném místě proti směru osy $x$.
+* Pokud do daného místa přitéká teplo stejnou rychlostí jako odtéká, teplota se nemění a dané místo se ani neohřívá ani neochlazuje. Intenzita ochlazování je dána bilancí mezi přítokem a odtokem. Můžeme si to představit tak, že z tepla které do daného bodu přiteče, se část "oddělí" a přispěje k navýšení teploty a zbytek teče dál. Pro zjištění, kolik tepla se z toku "oddělí" a způsobí v daném místě navýšení teploty potřebujeme vědět, jak rychle v daném místě tok klesá jako funkce proměnné $x$. Nárůst určíme derivací podle $x$ a pokles z nárůstu uděláme změnou znaménka. Pokles toku tepla je tedy $$-\frac{\partial q}{\partial x}=
 -\frac{\partial }{\partial x}\left(-k\frac{\partial T}{\partial x}\right)=
 \frac{\partial }{\partial x}\left(k\frac{\partial T}{\partial x}\right).
-$$
+$$ 
+  * Například pokles $-\frac{\partial q}{\partial x}=2\,\mathrm{J}/(\mathrm{min}\,\mathrm{cm})$ toku $q=10\,\mathrm{J}/\mathrm{min}$ znamená, že o centimetr dál ve směru osy $x$ proteče průřezem směrem doprava už nikoliv deset, ale pouze osm joulů za minutu. 
+  * Stejný pokles u toku $q=-10\,\mathrm{J}/\mathrm{min}$ znamená, že v daném místě proteče směrem doleva deset joulů za minutu, ale o centimetr více vpravo je o $2$ méně, tj. $-10-2=-12$ a směrem doleva teče dvanáct joulů za minutu. 
+  * V obou případech intenzita toku klesá podél tohoto toku. Tok slábne.
 * Pokles toku vypočtený v předchozím bodě je úměrný rychlosti růstu teploty. Příslušné konstanty úměrnosti dodá fyzika a platí
 $$\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t},$$
-kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě jsou hustota i měrná tepelná kapacita vztaženy ne k jednotce objemu, jak jsme zvyklí, ale k jednotce délky. Například $\rho$ je lineární hustota, tj. v gramech na centimetr).
-* Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu.
+kde $c$ je měrná tepelná kapacita a $\rho$ je hustota. (V tomto případě jsou hustota i měrná tepelná kapacita vztaženy ne k jednotce objemu, jak jsme zvyklí, ale k jednotce délky. Například $\rho$ je lineární hustota, tj. v gramech na centimetr). 
+  * Například pokles $-\frac{\partial q}{\partial x}=2\,\mathrm{J}/(\mathrm{min}\,\mathrm{cm})$ toku $q=10\,\mathrm{J}/\mathrm{min}$ znamená, že o centimetr dál ve směru osy $x$ proteče průřezem směrem doprava už nikoliv deset, ale pouze osm joulů za minutu. Tedy každou minutu se v jenom centimetru délky od toku "odpojí" energie o velikosti dva jouly a ta se "uloží" do materiálu. Navenek se to projeví ohřevem, přičemž hrají roli fyzikální vlastnosti materiálu.
+* Rovnice odvozená v předchozím kroku se nazývá **rovnice vedení tepla** a dokáže modelovat například prostup tepla stěnou domu. Tato rovnice zachycuje matematicky to, jak funguje vedení tepla. 
 
 **Shrnutí.** V odvození vidíme, že rovnice vedení tepla je vlastně
 bilance toku tepla. Rozdíl o kolik se v daném místě snižuje tok tepla
@@ -277,7 +290,7 @@ se projeví zvýšením teploty v daném bodě.
 ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg 
 
 **Numerické modelování.**
-Rovnici je možno použít k simulaci časového vývoje teploty například [takto.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) (Pokud si rozkliknete odkaz, neuvidíte rovnici s počátečními podmínkami a příkaz k jejímu vyřešení, ale poměrně dlouhý kód převadějící řešení rovnice vedení tepla na řešení vhodné soustavy lineárních rovnic. V tomto případě se čtyřicetkrát řeší soustava 100 rovnic o 100 neznámých. V inženýrsky zajímavých aplikacích bývají takových rovnic tisíce.)
+Rovnici je možno použít k simulaci časového vývoje teploty například [takto.](https://sagecell.sagemath.org/?z=eJx1U0tv2zAMvgfIf-CliNw6bRTslELA0nMxDEOxFdgLis00ah0pkyjD9q8fJTtrMWw-WB_f_CjqAj651poKocUarQHCU6Ph5B08Y22dd8MRvXURqK8gwN50rtW2P46ejjQjq-HF2cpUB8gokLbEuU6u0oSVPfu6eD2fXcDDGAiBi6a0BrhK44Z0ttalegiiMRa1T1m825umeBP6R8kH1lC7oAfu_TjGt0k4OOAu2piZ-DhwxkqHHgYTXvQRYci-f_PONT6YAZk8aA7tzFGzj8eAmc_RcbfMkEn1zLY2e_TIzOez-exeyVvaq9X1u9v5TKv3ggpYMdyNUK6S8MRCN-prYt-VTKg7I92cDlrVdFN3P9Ys207dM06IFO1vamJIUq02NW1oz0KXhW5zzziqAb0LwtKVLG13JYukFJtSFkoLkouzjLYu1O5VI8tNoZ5ElwN4Bsv_fGz6guB2AX2LQAcE_BU1GWdByAJMAGNh7_zxJ2wvo6CyK9SSz6VkxMHb5CJSZ2N7ENKsA-fwyFtE3nTz2VZhj-LcPmcDo9YbyxbgbytMaZZyY9isvuZ5wVIu15cjzP_vHMcUMxUY20iFayRerWh5ZQL3jZaMbpr-TQ2e21jlLrXNZXgui9tRldXMUrGhzK29avM8kz6BPMKzLUpQYvvtjtPAqE1uiU4BKkqRUTLlfv89eNZ_5K0nY5_yzHkbY0PhOtV5lOrFOyt4Jad7l0U53uPDW9M08HK68so1fEv6BAdH89kpi-JRlg-yjEXKGw66TvWM5ZmdpoCd9rx9hhoUi8996575dcUdHuL0vvvpPS84RdfoHTZi0SWhnwRKwjAJcVH8Bv3_UjQ=&lang=octave&interacts=eJyLjgUAARUAuQ==) (Pokud si rozkliknete odkaz, neuvidíte rovnici s počátečními podmínkami a příkaz k jejímu vyřešení, ale poměrně dlouhý kód převadějící řešení rovnice vedení tepla na řešení vhodné soustavy lineárních rovnic. V tomto případě se čtyřicetkrát řeší soustava 100 rovnic o 100 neznámých. V inženýrsky zajímavých aplikacích bývají takových rovnic tisíce.)
 
 # Druhá derivace
 

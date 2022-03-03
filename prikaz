@@ -17,10 +17,10 @@ h1,h2 {text-align:center;}
 </style>
 </head><html>' > index.html
 
-echo  '<div class="menu-obalka">  <a class="menu menu4" href="https://user.mendelu.cz/marik/am/">Aplikovaná matematika</a><a class="menu menu4" href="https://user.mendelu.cz/marik/am/slidy/">Přednáška</a><a class="menu menu4" href="https://user.mendelu.cz/marik/am/slidy/cviceni/cviceni00.md.html">Cvičení</a><a class="menu menu4" href="https://um.mendelu.cz/">WeBWorK</a>  </div>' >> index.html
+echo  '<div class="menu-obalka">  <a class="menu menu4" href="/marik/am/">Aplikovaná matematika</a><a class="menu menu4 ACTIVE" href="/marik/am/slidy/">Přednáška</a><a class="menu menu4" href="/marik/am/slidy/cviceni/cviceni00.md.html">Cvičení</a><a class="menu menu4" href="https://um.mendelu.cz/">WeBWorK</a>  </div>' >> index.html
 
-echo ' <div class='menu-obalka'><a class="menu ACTIVE" href="http://user.mendelu.cz/marik/am/slidy/">0</a><a class="menu  " href="01">1</a><a class="menu " href="02">2</a><a class="menu  " href="02">3</a><a class="menu  " href="04">4</a><a class="menu  " href="05">5</a><a class="menu  " href="06">6</a><a class="menu  " href="07">7</a><a class="menu  " href="08">8</a><a class="menu  " href="09">9</a><a class="menu  " href="10">10</a><a class="menu  " href="11">11</a></div> ' >> index.html
-   echo '<div class=container><h1>Prezentace z přednášek z Aplikované matematiky</h1><h2>Letní semestr 2020/2021</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="http://user.mendelu.cz/marik/am/">Aplikovaná matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF (neobsahuje obrázky a motivační slidy), pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown. Můžete použít i variantu, kdy jsou <a href="http://user.mendelu.cz/marik/wiki/am/slidy/am_slidy_all.pdf">všechny přednášky v jednom PDF</a></p><p> Cvičení jsou na <a href="http://user.mendelu.cz/marik/am/slidy/cviceni/cviceni00.md.html">samostatné stránce</a></p>' >> index.html
+echo ' <div class='menu-obalka'><a class="menu ACTIVE" href="/marik/am/slidy/">0</a><a class="menu  " href="01">1</a><a class="menu " href="02">2</a><a class="menu  " href="02">3</a><a class="menu  " href="04">4</a><a class="menu  " href="05">5</a><a class="menu  " href="06">6</a><a class="menu  " href="07">7</a><a class="menu  " href="08">8</a><a class="menu  " href="09">9</a><a class="menu  " href="10">10</a><a class="menu  " href="11">11</a></div> ' >> index.html
+   echo '<div class=container><h1>Prezentace z přednášek z Aplikované matematiky</h1><h2>Letní semestr 2020/2021</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="/marik/am/">Aplikovaná matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF (neobsahuje obrázky a motivační slidy), pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown. Můžete použít i variantu, kdy jsou <a href="http://user.mendelu.cz/marik/wiki/am/slidy/am_slidy_all.pdf">všechny přednášky v jednom PDF</a></p><p> Cvičení jsou na <a href="/marik/am/slidy/cviceni/cviceni00.md.html">samostatné stránce</a></p>' >> index.html
    echo '<div class="CSSTableGenerator"><table>'>>index.html
    echo '<tr><td>Název</td><td>Html</td><td>PDF</td><td>markdown</td></tr>'>>index.html
 
@@ -47,7 +47,7 @@ do
   cp prikaz_pandoc $i/prikaz
   cd $i
   bash prikaz
-  menu="<div class='menu-obalka'><a class='menu' href='http:\/\/user.mendelu.cz\/marik\/am\/slidy\/'>0<\/a>"
+  menu="<div class='menu-obalka'><a class='menu' href='\/marik\/am\/slidy\/'>0<\/a>"
   j=1
   for ii in $all;
   do

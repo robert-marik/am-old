@@ -61,7 +61,7 @@ resp. dvojicí skalárních funkcí.
   \end{cases}$$
 * Graf křivky dostaneme tak, že pro každé $t$ z intervalu $[\alpha, \beta]$ kreslíme ve 2D bod $[\varphi(t), \psi(t)]$.
 * Funkce $\varphi(t)$, $\psi(t)$ nazýváme *parametrizace* křivky $C$
-* Pro danou křivku $C$ v rovině $xy$, nejsou její parametrické rovnice dány jednoznačně. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxtkcFugzAMhu9IvEMEhyRbpC1o2i3nXfMERR5Nu4iQoGAx0qcfgY5DVd8s-_v_3_IMkdGFJMrLoizquiYxzN52howxkD7auU9l4ZUsi4UhV12YGJ78up1yO1l_b3d4MLedHCHCYDCWBQ7WCxxgUe-CNS-j5Scm33Zkg55UnmipRheQZVvBUBw6XBBnrsafWwffximaN3L-ldDydYPSE6gLLkRFoznTR4V0V5h-wi_TUpCLvU72ZhT7FB8rihadUdVXhEsi2Y4ASSzxartCN-r_XNu1m_-eOss-xDhMGgHTaDpsI6ANSh4m-pDqYX8AVPwPID58GQ==&lang=sage)
+* Pro danou křivku $C$ v rovině $xy$, nejsou její parametrické rovnice dány jednoznačně. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxtkUFvhCAQhe8m_geiB7AlaTFNb5x75ResmbLslohgcGJlf31Ftx42y23C-957k5khMrqQRJuyKIu6rkkMs7fakDEG0kc796ksvBRlsTBspA4Tw5Nf1SmPk_X3cYcHc9vJESIMBmNZ4GA9xwEW-c5Z-zLa5sTE245s0JOXf5SQowvIcixnyA-fhhNnrsafOwffxkmaFbn_SijxukHpCaSDC1HSaM700SHdHaaf8MuU4ORir5O9Gck--ceKokVnZPUV4ZJIjiNAMlNtW6hW_q9rdbfl762z5KHGEdJymEajsYuANkhxhKjDqof9AFA1fx4nfBQ=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * Parametrizace kružnice, úsečky a grafu funkce jedné proměnné: viz [cheatsheet](https://raw.githubusercontent.com/robert-marik/apl-slidy/master/cheatsheet/cheatsheet-AM.pdf)
 
 
@@ -253,14 +253,13 @@ Směrem radiálně od osy se tlaková síla rozkládá na celou plochu pláště
 Vypočteme poslední složku přispívající k namáhání pláště válce, obvodové napětí. K tomu musíme vypočítat sílu, která působí po obvodě válce, tj. která se snaží válec roztrhnout v řezu B. Tento řez má obsah (červeně vyznačeno) $2Lt$. Nejtěžší bude najít celkovou sílu, která od sebe oddaluje dvě poloviny pláště. To je místo, kde zapojíme integrál. 
 
 Křivka vzniklá průmětem poloviny pláště má rovnici $\vec r(t)=r\cos(t)\vec i+r\sin (t)\vec j$, kde $r$ je poloměr a $t\in\left[-\frac \pi 2,\frac \pi 2\right]$ je úhel mezi spojnicí elementu v bodě $(x,y)$ a mezi kladnou částí osy $x$. Kousek pláště válce odpovídající úseku $\Delta s$ má obsah $L\Delta s$ a tlaková síla na tento kousek je součin tlaku a obsahu, tj. $$\Delta F=pS=p L\Delta s.$$ Směr je kolmý k plášti válce a s vodorovnou osou svírá úhel $t$.  Průmět této síly do vodorovného směru je $$\Delta F_x=pL\Delta s \cos t$$ a tyto příspěvky musíme posčítat křivkovým integrálem přes celou křivku. Platí $\mathrm ds=r\mathrm dt$. Celková síla, která se snaží nádobu roztrhnout podélně je 
-\dm$$F_x=\int_C pL \cos t \,\mathrm d s
-\int_{-\frac \pi 2}^{\frac \pi 2} pLr \cos t \,\mathrm d t
-=prL [\sin t]_{-\frac \pi 2}^{\frac \pi 2}=prL \left[\sin\frac \pi 2 -\sin\left(-\frac \pi2 \right)\right]=2p rL.$$ Povrch na který tato síla působí odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah $2Lt$ a napětí je tedy 
+\dm$$F_x=\int_C pL \cos t \,\mathrm d s = \int_{-\frac \pi 2}^{\frac \pi 2} pLr \cos t \,\mathrm d t =prL [\sin t]_{-\frac \pi 2}^{\frac \pi 2}=prL \left[\sin\frac \pi 2 -\sin\left(-\frac \pi2 \right)\right]=2p rL.$$ 
+Povrch na který tato síla působí odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah $2Lt$ a napětí je tedy 
 $$\sigma_{h}=\frac{2pLr}{2Lt}=\frac{pr}t=2\sigma_p.$$ Vidíme, že toto napětí je dvojnásobkem napětí v podélné ose. 
 
 Ještě je vhodné ověřit, že svislý průmět, tj . $$\Delta F_y=pL\Delta s \sin t$$ k namáhání nepřispívá, protože 
-\dm$$F_y=\int_{C} pL \sin t \,\mathrm d s
-=0.$$ To však je možné očekávat i ze symetrie.
+\dm$$F_y=\int_{C} pL \sin t \,\mathrm d s =0.$$ 
+To však je možné očekávat i ze symetrie.
 
 Pokud se chcete dozvědět více, zkuste Google a heslo "hoop stress".
 

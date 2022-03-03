@@ -66,6 +66,11 @@ podle času. Měřit změny v toku přenášejícím sledovanou veličinu jsme s
 
 # Změna toku vektorového pole
 
+
+https://youtu.be/Vk8OAq3_40g
+
+[Prezentace](https://user.mendelu.cz/marik/manim/Divergence/)
+
 https://youtu.be/cXT6ULeZFJs
 
 \iffalse 

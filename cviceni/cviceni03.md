@@ -8,9 +8,9 @@
 > * V závěru přednášky si zopakujeme difuzní rovnici a jak se některé členy této rovnice mohou za speciálních podmínek zjednodušit. 
 
 
-# Divegrence vektorového pole
+# Divergence vektorového pole
 
-https://youtu.be/BS2FR1mqn18
+https://youtu.be/bdnxbITOIrM
 
 1. Vypočtěte divergenci vektorového pole
   $$\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath.$$
