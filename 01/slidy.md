@@ -5,7 +5,7 @@
 > Anotace.
 >
 > * Naučíme se sledovat rychlost, s jakou se mění veličina, která je objektem našeho zájmu.
-> * Budeme schopni sledovat rekci sledované veličiny na současné změny více parametrů. Například u teploty můžeme sledovat jak se v daném místě mění teplota v čase, nebo jak se v daný okamžik mění teplota s polohou.
+> * Budeme schopni sledovat reakci sledované veličiny na současné změny více parametrů. Například u teploty můžeme v daném místě sledovat změnu teploty v čase, nebo můžeme v daném čase sledovat změnu teploty s polohou.
 > * Aparát využijeme k tomu, že z fyzikálních zákonů sestavíme rovnici vedení tepla. To bude matematický model umožňující jednak modelování přenosu tepla a jednak kontrolu toho, že fyzikální zákony vedoucí k formulaci této rovnice jsou správné.
 
 > Prerekvizity.
