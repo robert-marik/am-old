@@ -6,14 +6,14 @@
 > Anotace.
 >
 > * Představíme si univerzální nástroj umožňující popsat libovolný transportní děj v přírodě. Tedy transport energie (vedení tepla), transport vody (sušení dřeva, proudění podzemní vody, proudění tzv. mělké vody) a transport látky obecně (pohyb sedimentů, pohyb tektonických vrstev).
-> * Aparát představený v této přednášce se věnuje základním principům transportních dějů. Naučíme se základní představu o fungování těchto dějů naformulovat matematicky. Vzniklé rovnice řešit nebudeme, což vůbec nevadí. Řešení za nás zvládnou počítače, role člověka je však nezastupitelná právě při formulaci modelu, což bude naším hlavním úkolem.
+> * Aparát představený v této přednášce se věnuje základním principům transportních dějů. Naučíme se základní představu o fungování těchto dějů naformulovat matematicky. Vzniklé rovnice řešit nebudeme, což vůbec nevadí. Řešení za nás zvládnou počítače, role člověka je však nezastupitelná právě při formulaci modelu. To bude i naším hlavním úkolem.
 > * Během analýzy transportních jevů si představíme nový diferenciální operátor, operátor divergence. Vyjadřuje, zda tok zesiluje a nabírá na intenzitě (tj. z daného místa více vytéká, než teče dovnitř) nebo naopak.
 
 
 > Prerekvizity.
 >
 > * Navážeme na využití vektorových funkcí a gradientu k popisu proudění látky nebo energie prostředím.
-> * Ukážeme si, jak se matematicky odrazí v popisu izotropie nebo homogenita materiálu, jak se liší popis stacionárních a nestacionárních jevů, jak se liší popis materiálů s lineárními a nelineárními materiálovými vlastnostmi. Pod těmito pojmy je vždy vhodné si představovat konkrétní situace a pokud se budete při používání těchto pojmů cítit zaskočeni, můžete si oživit znalosti například na Wikipedii.
+> * Ukážeme si, jak se v matematickém popisu zohlední izotropie nebo homogenita materiálu, jak se liší popis stacionárních a nestacionárních jevů, jak se liší popis materiálů s lineárními a nelineárními materiálovými vlastnostmi. Pod těmito pojmy je vždy vhodné si představovat konkrétní situace a pokud se budete při používání těchto pojmů cítit zaskočeni, můžete si oživit znalosti například na Wikipedii.
 > * Zobecníme si rovnici vedení tepla v jedné dimenzi, kterou jsme si odvodili v úvodní přednášce. Je proto vhodné si základní fakta o této rovnici zopakovat.
 
 
@@ -22,44 +22,27 @@
 
 https://youtu.be/p1Qu89EKc94
 
-  Pochopení a modelování transportních dějů je
-  důležité pro většinu technických oborů. Podstata těchto dějů je často
-  odlišná, přesto mají navenek podobné chování a tím je umožněn
-  jednotný přístup při matematickém modelování.
+  Pochopení a modelování transportních dějů je důležité pro většinu technických oborů. Podstata těchto dějů je často  odlišná, přesto mají navenek podobné chování a tím je umožněn jednotný přístup při matematickém modelování.
 
-Příklady transportních dějů
+Příklady transportních dějů:
 
-* povrchová voda
-* podzemní voda
-* teplo
-* voda ve dřevě
+* pohyb povrchové vody,
+* pohyb podzemní vody,
+* vedení tepla,
+* transport vody ve dřevě.
 
 Obecná bilance veličiny, která má zdroje a spotřebiče a je přenášena tokem vypadá následovně.
 
-* Existuje veličina, spojitě rozložená v prostoru, charakterizující stav systému. Tuto veličinu budeme nazývat
-    *stavovou veličinou* a její hustotu označíme $u$.
-* Stavová veličina se může v prostoru přemisťovat *tokem* $\vec
-    \jmath$.
-* Stavová veličina může vznikat a zanikat.
-    *Zdroje* i *spotřebiče* budeme
-    uvažovat společně a jejich vydatnost rozlišíme
-    znaménkem: spotřebiče budou zdroje se zápornou vydatností. Celkovou vydatnost zdrojů a spotřebičů v daném místě, tj.
-    množství veličiny vygenerované na jednotku objemu (nebo plochy,
-    nebo délky, podle počtu dimenzí v úloze) za jednotku času,
-    označíme $\sigma$.
+* Existuje veličina, spojitě rozložená v prostoru, charakterizující stav systému. Tuto veličinu budeme nazývat *stavovou veličinou* a její hustotu označíme $u$.
+* Stavová veličina se může v prostoru přemisťovat *tokem* $\vec \jmath$.
+* Stavová veličina může vznikat a zanikat. *Zdroje* i *spotřebiče* budeme uvažovat  společně a jejich vydatnost rozlišíme znaménkem: spotřebiče budou zdroje se zápornou vydatností. Celkovou vydatnost zdrojů a spotřebičů v daném místě, tj. množství veličiny vygenerované  za jednotku času v jednotce objemu (nebo plochy, nebo délky, podle počtu dimenzí v úloze), označíme $\sigma$.
 
 
-Zákon zachování (se zohledněním toku a zdrojů) je vlastně celková
-bilance stavové veličiny. Přirozeným jazykem je možno tuto bilanci
-formulovat následovně.  
+Zákon zachování (se zohledněním toku a zdrojů) je vlastně celková bilance stavové veličiny. Přirozeným jazykem je možno tuto bilanci formulovat následovně.  
 
 > Přírůstek množství veličiny je součtem přírůstku způsobeného tokem a přírůstku ze zdrojů. Akumulace je přítok plus zisk z interních zdrojů.
 
-Toto je jednoduchý, ale přitom neuvěřitelně silný nástroj, který
-umožní popsat řadu zcela odlišných dějů. Pro použití v matematickém
-modelu ale musíme jednotlivé pojmy kvantifikovat. Měřit rychlost, s
-jakou se mění množství veličiny v daném místě umíme pomocí derivace
-podle času. Měřit změny v toku přenášejícím sledovanou veličinu jsme se naučili jako jednu z prvních aplikací parciálních derivací: jedná se o záporně vzatou derivaci podle prostorové proměnné vynásobenou fyzikální materiálovou konstantou. Ještě se musíme naučit měřit změny v toku ve dvou nebo třech dimenzích.
+Toto je jednoduchý, ale přitom neuvěřitelně silný nástroj, který umožní jednotným způsobem popsat řadu zcela odlišných dějů. Pro použití v matematickém modelu ale musíme jednotlivé pojmy kvantifikovat. Měřit rychlost změny množství veličiny v daném místě umíme pomocí derivace podle času. Měřit změny v toku přenášejícím sledovanou veličinu jsme se naučili jako jednu z prvních aplikací parciálních derivací: jedná se o záporně vzatou derivaci podle prostorové proměnné vynásobenou fyzikální materiálovou konstantou. Ještě se musíme naučit měřit změny v toku ve dvou nebo třech dimenzích.
 
 
 
@@ -85,13 +68,13 @@ https://youtu.be/cXT6ULeZFJs
 
 Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v daném místě mění.
 
-* Pro jednoduchost rozdělíme tok na tři nezávislé části ve směru jednotlivých os a vztáhneme vše k jednotkám času a průřezu, tj. budeme uvažovat hustotu toku nějaké fyzikální veličiny.
+* Pro jednoduchost rozdělíme tok na tři nezávislé části ve směru jednotlivých os a vztáhneme vše k jednotkám času a průřezu. Tedy budeme uvažovat hustotu toku nějaké fyzikální veličiny.
 * Je-li tato hustota toku popsána vektorovým polem  $\vec q=(P,Q,R)$ v jednotkách kilogram na metr čtvereční za sekundu, znamená to, že kolmým průřezem jednotkového obsahu projde za jednotku času $P$ kilogramů sledované látky, jejíž tok popisujeme. Často se pracuje i s objemovým tokem, kdy množství neměříme v kilogramech ale v metrech krychlových a například při ustáleném proudění v trubici (hydrodynamika) je tok roven vektoru rychlosti a při proudění porézním materiálem (proudění podzemní vody) je roven filtrační rychlosti.
 * Uvažování toku v souřadnicích nám umožní tok rozdělit na nezávislé toky ve směru os. Můžeme si pro jednoduchost představit tři trubky, ve směru každé osy jednu. Funkce $P$ udává tok v trubce mířící směrem v ose $x$ (v kladném směru kladný tok a naopak) a potřebujeme zjistit, jestli tento tok narůstá nebo slábne. To jsme již řešili v případě toku tepla u rovnice vedení tepla v úvodní přednášce. Derivace $\frac{\partial P}{\partial x}$ udává, o kolik studovaná komponenta toku v daném místě vzroste a tento nárůst je vztažený na jednotku délky.
 * Ve směru osy $y$ máme tok vyjádřený veličinou $Q$ a proto nás pro popis zesilování či zeslabování zajímá $\frac{\partial Q}{\partial y}$.
 * Analogicky $\frac{\partial R}{\partial z}$ ve směru osy $z$.
-* Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že tok zesiluje. Z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Jestli se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli v daném místě může ubývat již z čisté matematiky nezjistíme. Záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
-* Při preciznější argumentaci dávající do souvislosti parciální derivace jednotlivých komponent toku s tím, co se reálně s vektorovým polem děje, je nutné si pomoci stejně jako u derivací, tj. uvažovat ne dané místo, ale jistý konečně velký objem (viz obrázek), vztáhnout dané veličiny na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.
+* Celková změna toku bude součtem všech tří příspěvků. Pokud je kladná, znamená to, že tok zesiluje. Z daného místa více veličiny vytéká, než kolik teče dovnitř. Pokud je záporná, je tomu naopak. Pokud se v případě nerovnováhy v daném místě může proudící veličina tvořit nebo spotřebovávat nebo akumulovat nebo jestli v daném místě může ubývat již z čisté matematiky nezjistíme. Záleží na charakteru proudící veličiny a na okolnostech s tímto prouděním spojených. Tuto informaci nám pro další popis musí dodat externí věda (obecná fyzika, fyzika materiálu, fyzika životního prostředí, hydrologie, pedologie, ...).
+* Při preciznějším formulaci výše uvedených myšlenek je nutné pracovat s konečně velkým objemem (viz obrázek), vztáhnout výsledek na jednotku objemu a rozměry tohoto objemu limitně stáhnout k nule. Toto však již přesahuje ambice v našem kurzu a jedná se o formalismus, kterému se vyhneme přímým představením hotového výsledku.
 
 <!--
 Budeme sledovat tok vektorového pole ze zvoleného 
@@ -115,13 +98,12 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 
 https://youtu.be/ejDQx3QjgfI
 
-Výše uvedenými úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci.)
+Výše uvedenými úvahami je motivována následující definice a věta. (Definice je maličko nepřesná, protože nemáme nástroje pro pečlivější formulaci. Ale je v ní  skryta hlavní myšlenka vedoucí k zavedení pojmu divergence.)
 
 > Definice (divergence). *Divergence* vektorového pole $\vec F$ v daném bodě je převis toku vektorového pole z tohoto místa nad tokem do tohoto místa. Tento tok se počítá přes hranici infinitezimálně malého referenčního tělesa a je vztažený na jednotku objemu. Divergenci vektorového pole $\vec F$ označujeme $\mathop{\mathrm{div}}\vec F$ nebo $\nabla \cdot \vec F$.
 
 
-> Věta (výpočet divergence).
-> Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\mathop{\mathrm {div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
+> Věta (výpočet divergence). Pro vektorovou funkci $$\vec F=(P,Q,R)=P\vec i + Q\vec j + R\vec k,$$ kde $P$, $Q$ a $R$ jsou funkce tří proměnných $x$, $y$ a $z$ vypočteme divergenci vztahem 	  $$\mathop{\mathrm {div}}\vec F=\nabla\cdot\vec F=\frac{\partial P}{\partial x}+\frac{\partial Q}{\partial y}+\frac{\partial R}{\partial z}.$$
 > Pro vektorovou funkci dvou proměnných vypočteme divergenci analogicky, pouze chybí třetí člen. 
 
 > Poznámka (linearita divergence). Divergence zachovává součet a násobení konstantou, tj. pro libovolné vektorové funkce $\vec F$ a $\vec G$ a konstantu $c$ platí
@@ -136,9 +118,9 @@ Divergence je lokální veličina. Udává informaci o daném bodě. Pro měřen
 
 Přesnou divergenci získáme postupem uvedeným v předchozí poznámce, pokud limitním přechodem stáhneme rozměry tělesa k nule. 
 
-Pokud se daném místě množství veličiny nemění s časem, tj. žádná veličina se tam neakumuluje ani neubývá, mluvíme o stacionárním proudění a stacionárním poli. Situace se zjednoduší, protože potom divergence souvisí jenom s přítomností zdrojů a spotřebičů.
+Pokud se daném místě množství veličiny nemění s časem, tj. žádná veličina se tam neakumuluje ani neubývá, mluvíme o stacionárním proudění a stacionárním poli. V takovém případě se situace zjednoduší, protože potom divergence souvisí jenom s přítomností zdrojů a spotřebičů.
 
-> Poznámka (praktická interpretace divergence stacionárního pole). Pokud při ustáleném proudění je v některém místě divergence kladná, znamená to, že v tomto místě musí být zdroj této veličiny. Pokud je záporná, je v daném místě spotřebič. Pro pohodlí při popisu toku bereme spotřebiče jako záporné zdroje. Vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové pole**. To proto, že pokud toto pole popisuje ustálený tok, tak se jedná o tok v prostředí bez zdrojů a spotřebičů.
+> Poznámka (praktická interpretace divergence stacionárního pole). Pokud při ustáleném proudění je v některém místě divergence kladná, znamená to, že v tomto místě musí být zdroj této veličiny. Pokud je záporná, je v daném místě spotřebič. Vektorové pole, jehož divergence je rovna nule, se nazývá **nezřídlové pole**. To proto, že pokud toto pole popisuje ustálený tok, tak se jedná o tok v prostředí bez zdrojů a spotřebičů. (Zkráceně říkáme jenom "bez zdrojů", protože jak jsme uvedli na začátku, ypotřebiče považujeme za zdroje se zápornou vydatností.)
 
 Ze střední školy z fyziky umíme modelovat vektorové pole pomocí siločar. Ty začínají ve zdrojích a končí ve spotřebičích. Siločáry stacionárního nezřídlového pole nikde nezačínají ani nekončí a jsou to uzavřené křivky.  Například stacionární magnetické pole je nezřídlové. Absence zdrojů magnetického pole se projevuje tak, že rozříznutím tyčového magnetu vzniknou dva menší plnohodnotné magnety. Nevznikne samostatný jižní pól a samostatný severní pól magnetu. To je rozdíl oproti poli elektrickému, kdy rozdělením tyče s opačně nabitými konci vznikne jedna kladně nabitá a jedna záporně nabitá tyč poloviční délky.
 

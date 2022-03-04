@@ -272,14 +272,14 @@ Rovnici je možno použít k simulaci časového vývoje teploty například [ta
 
 https://youtu.be/vJVRrik3EAw
 
-Druhá derivace je derivace první derivace. U funkce dvou proměnných připadají v úvahu čtyři kombinace. Buď derivujeme pokaždé podle stejné proměnné, tj. 
+Druhá derivace je derivace první derivace. U funkce dvou proměnných každá ze dvou po sobě jdoucích derivací může být podle některé ze dvou proměnných a v úvahu připadají čtyři kombinace. Ppokud derivujeme dvakrát podle stejné proměnné, dostaneme
   $$
-\frac{\partial^2 f}{\partial x^2}:=\frac{\partial}{\partial x}\frac{\partial f}{\partial x},\quad 
-\frac{\partial^2 f}{\partial y^2}:=\frac{\partial}{\partial y}\frac{\partial f}{\partial y},
+\frac{\partial^2 f}{\partial x^2}:=\frac{\partial}{\partial x}\frac{\partial f}{\partial x}\quad\text{a}\quad 
+\frac{\partial^2 f}{\partial y^2}:=\frac{\partial}{\partial y}\frac{\partial f}{\partial y}.
 $$
-nebo pokaždé podle jiné proměnné. Tady existují teoreticky dvě možnosti
-$$\frac{\partial }{\partial x}\frac{\partial f}{\partial y},
-\frac{\partial}{\partial y}\frac{\partial f}{\partial x}$$
+Pokud derivujeme pokaždé podle jiné proměnné, dostaneme v závislosti na pořadí
+$$\frac{\partial }{\partial x}\frac{\partial f}{\partial y}\quad\text{a}\quad
+\frac{\partial}{\partial y}\frac{\partial f}{\partial x}.$$
 Poději si ukážeme, že tyto dvě možnosti jsou v praxi zpravidla vždy totožné.
 
 Je-li tepelná vodivost $k$ v rovnici vedení tepla 
@@ -303,7 +303,7 @@ Základním přístupem při numerickém odhadu derivace je vynechání limitní
 
 ## Centrální diference
 
-> Poznámka (Taylorův polynom). V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d) jako nejlepší polynomiální aproximace funkce. S jeho využitím platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
+> Poznámka (Taylorův polynom). V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Touto aproximací je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d). S jeho využitím pro aproximaci kvadratickoku funkcí platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
 
 Přesnější aproximace derivace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů $$ f(x+h)\approx f(x)+f'(x)h+\frac 12 f''(x)h^2$$ a $$f(x-h)\approx f(x)-f'(x)h+\frac 12 f''(x)h^2.$$ Pokud tyto vztahy sečteme a odečteme, dostaneme $$f(x+h)+f(x-h)\approx2f(x)+ f''(x)h^2$$ a $$f(x+h)-f(x-h)\approx2f'(x)h.$$ Odsud dostáváme aproximace první a druhé derivace $$ f'(x)=\frac{\mathrm d f}{\mathrm dx}\approx  \frac{f(x+h)-f(x-h)}{2h}  $$ a $$ f''(x)=\frac{\mathrm d^2f}{\mathrm dx^2}\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 Analogicky pro parciální derivaci podle $x$
@@ -325,13 +325,13 @@ ww:problems/parcialni_derivace/centralni_diference.pg
 
 ## Diskerizace diferenciálních rovnic pomocí konečných diferencí
 
-Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a i v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximace derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme v následující poznámce, která je čistě informativní a není toho typu, že byste měli umět výpočty v ní uvedené reprodukovat. Je však důležitá pro pochopení, co nám z rovnic vlastně může vyplývat a jeké jsou zhruba požadavky na výpočetní prostředky..
+Rovnice obsahující parciální derivace jsou přirozeným jazykem, kterým modelujeme fyzikální děje. To jsme viděli na rovnici vedení tepla výše a setkáme se s tím i dále. Bohužel tyto rovnice umíme ručně vyřešit jenom v poměrně speciálních případech a ani v těchto případech to není snadná práce. Proto v inženýrské praxi dáváme přednost numerickému řešení rovnice. To je založeno na numerické aproximaci derivací a převádí řešení rovnic s parciálními derivacemi na řešení lineárních rovnic. Možnosti si naznačíme v následující poznámce, která je čistě informativní a není toho typu, že byste měli umět výpočty v ní uvedené reprodukovat. Je však důležitá pro pochopení, co nám z rovnic vlastně může vyplývat a jaké jsou zhruba požadavky na výpočetní prostředky.
 
 > Poznámka (explicitní metoda řešení rovnice vedení tepla).
-> Po převedení derivací z rovnice vedení tepla $$\rho c\frac{\partial T}{\partial t}=k \frac{\partial ^2 T}{\partial x^2}$$ bychom dostali $$\rho c\frac{T(x,t+\Delta t)-T(x,t)}{\Delta t}= k\frac{T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)}{\Delta x^2},$$ kde $\Delta x$ a $\Delta t$ jsou intervaly oddělující body a časy, ve kterých aproximujeme teplotu. Odsud $$T(x,t+\Delta t)=T(x,t)+\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr]$$ a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě $x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních bodech $x+\Delta x$ a $x-\Delta x$. Toto je vzorec pro takzvanou explicitní metodu řešení rovnice vedení tepla a tuto metodu je snadné implementovat [programovým kódem](https://sagecell.sagemath.org/?z=eJyVVUGO4zYQvBvwH_pijOzR7NoD5DKGf7DIIRgsAgTJghY5a1oUKUikIOlPeUU-lmqKsjUzhyA-WKJEVldXV7c29JvrrC4UdUoqq8mr2giqG0dXJa1r3FipxrpAfiiopTfdu07YoZp2Oi9wZwWVzha6uFC8a72wHli1K4RXhZ33uvBlvdrQ63SQWgRlWE2IYtzI1846jqcoM9oq0TBK49602S6O3h7ioiRJ14oR3KvpfMeLiyOw6ELMpAkjEAvRDjTqthSVojHu_Zh3jPGrHhWSJ4Gjva4E9jSqVTGfyoEtMkRSA7KV-k01CpmT6mujC83UKuWdhGBPk4IyFBfBEumqNqpS1otC5ySMIqvA8ayNxbp2ZZB4AgAQdd1AZeNKpOajhIoqYYb1CgQjR8HZYXNcr1ff6ESHI02_DUllSsHSqvXKx1frle1x88v-mLagNsrTGfRSEXIoQaVXDSd2DhJUeZNG_FS-ABAfQSaUGYSJMgp4I57kON--2v44bWmQAmyUEqKsGyVyt3hKsoNMrQstdDqze5jOFhAc5ct-v-eUNks9ctIWFDth4MWrKIdqptqRFFZVDKGoNUrCB55gXjsk-lCPlr93wFSFVtN58PRB8pyu2gq8B66Z6jMXjYUPYDoq5JhZ_3jIbf942B5nfA2DaWH0yB6CECBjVY4IUWc1Uw-lEfKmcizy648OZeCWONF-B7-12R18Azel8t9bDOpdHOzmF4czZeWWy58KNrH6r8MoT8txbzDHhWTLlGL-4HV4icw-H9lQQFtzpPR47ko-mZz8fZhMhIYrhtKENp9MSKFy421ysL3QdmWjPPd5LLKIF1BPDuIsuiGM2sem7xLwTdUNMJA7rBGuSKKayg_LOEyEUZdxODGvN9fQ9YSs_D3v2MreaO4R2GW42T2aKomWHban_b0LeSaiurIZw5XrbJfDEWTTAC0u7zC4ZqdUsf-F8cHeS6NHS9t__p7FmMTxAIyHOGF9ekYZP529gcomXMQPqRrdsZtPlN1tplH9p-fd4sH2cbF4Omy39JVk_9fzlNRisjIs_hPsLdoshn7nKl4-fmSyI-mPn3hvZmWiFyZLp3ZP5Y6xIHYSP4U4pcj3KkapMAWh_AzJfUv40GB6zW06f-AiWsiumAUv4P4JbW4IZlW7Uapry90BY8OY00iZON3aY36FXezdMiSX_vH7IX89_Al9KtVefjZaZvsX2aOIO9nnuPUw8E76LWZ_4YxrKlGjy9HidVxm8XzO83a9ai9Cavtzmq51OnAWDT4f2huVPXwfOncF63BWl3C3UfxyPACiN-KsTPbQ82JIC_-w_ReYO7Kb&lang=octave&interacts=eJyLjgUAARUAuQ==). Dokonce, pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://sagecell.sagemath.org/?z=eJyFVMFu2zgQvRvwP8zFsJworR1gLwn2kHvRw8IIFii6AC2OY1oUKUgUYekf9gMWe9oP2E_YvbT5r76hZCcpCtRBbFEk37x582YW9JuPzhRMkTU7Q4Frq6huPB1ZO9_4oeLG-Y5CX1BLe3PyUbm-Gk_6oPDkFJXeFaY4UHpqg3IBWLUvVODCnc_67t18tqDteJFaBBVYQ4hi_SC_0XmJx5RZ41g1gtL4vbGrV1cvL_HDmrRv1QDu1Xg_yuLgCSxilzJpugGIhWp7GkxbqoppSGe_zzvF-GgGRvKkcPVkKoUzDbec8qk82CJDJNUjW2323DAyJz7V1hRGqFUcvIZgN6OCuisOSiQyVW25YhdUYXJSlskxOO6MdVjXvuw03gAARH3sqWx8KbmFpCFTpWw_n8nfguSfPipJETewktcf6Ffa3NP4WZBmWyrRl2XTnbD7y_p-2kRpONAO7KYa5BCCysCN5LXrNJjKIYPoU_U6gIQEMqKcQYSnoIA2ImmJ8-G9O92PRxokABed88nioJG6w1vSESq1vmsh007MI3RWgJAo79brtSSzeC1HTsaBYlQWVjyqcqjOVCNp5bgSCKbWsoYNAsG7rh_pz2f0-vMGlqquNbTrw_dy53Q0TmEfqHYszrliomkHngMjw8yF603uTteb1f0Z38BdRlkziIEgA6g4zhEhqcxn4l1plb5onAq8Bez6CiZrsxfQBSw0lfulr6DZwcNjISfXWY8KTjAUW8BLcgjhxH6pQYGdsdMrMcpUxZ8jT30uNy6dnrIHu81d4ge87eSJCP9IKwuinHrAXvCAMGHIPt3c5pt8lExSu9msPo_JxT5E3wiFSgUzKkYGQimx7wNO360uar-V-qWksU8qqDQf0N0YAo3SMOeE-SBIyP9nWG-RvNjph2CpF1MrPlpI6L78S_HLf7X_-ifaQhEQnv9neYui16r6-nc4t-reN3QEh9s7tNQlapoXwZqYKlf2l6bCrphiS9ekw_tMn_64XdEVZQ_42i5XyyThqBYYxwFKFiDeDSYqtJkqG3FYo1xbozYFbAh5gx9EZlV0RzFim9JDS1SYBCV6lqtxSqV8xVuwid9Jifade8KlVKPW-q5O2-OtPrHtsuP1j9wBSQYexzf4DZqPaLzYlxiwNg0yVAcAF2Efz1sQ8fkvfv5HniYNP_2-ybebz0CvuD08NUZn6zt9QswrfcrxGCDulQ6r-_ms8NY3laph6jCf1WmZpfu5TJz5rD0obdzTOF_q6cJONfNZMMFytnzsoz-Cd7fjQ_fSZml2LgFxsmrHNlueZNFPi7BcfQPOnGh8&lang=octave&interacts=eJyLjgUAARUAuQ==), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
+> Po převedení derivací z rovnice vedení tepla $$\rho c\frac{\partial T}{\partial t}=k \frac{\partial ^2 T}{\partial x^2}$$ bychom dostali $$\rho c\frac{T(x,t+\Delta t)-T(x,t)}{\Delta t}= k\frac{T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)}{\Delta x^2},$$ kde $\Delta x$ a $\Delta t$ jsou intervaly oddělující body a časy, ve kterých aproximujeme teplotu. Odsud $$T(x,t+\Delta t)=T(x,t)+\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr]$$ a teplotu $T(x,t+\Delta t)$ v následujícím časovém okamžiku v libovolném bodě $x$ dokážeme vypočítat ze současné teploty v tomto bodě a z teploty v sousedních bodech $x+\Delta x$ a $x-\Delta x$. Toto je vzorec pro takzvanou _explicitní_ metodu řešení rovnice vedení tepla a tuto metodu je snadné implementovat [programovým kódem](https://sagecell.sagemath.org/?z=eJyVVUGO4zYQvBvwH_pijOzR7NoD5DKGf7DIIRgsAgTJghY5a1oUKUikIOlPeUU-lmqKsjUzhyA-WKJEVldXV7c29JvrrC4UdUoqq8mr2giqG0dXJa1r3FipxrpAfiiopTfdu07YoZp2Oi9wZwWVzha6uFC8a72wHli1K4RXhZ33uvBlvdrQ63SQWgRlWE2IYtzI1846jqcoM9oq0TBK49602S6O3h7ioiRJ14oR3KvpfMeLiyOw6ELMpAkjEAvRDjTqthSVojHu_Zh3jPGrHhWSJ4Gjva4E9jSqVTGfyoEtMkRSA7KV-k01CpmT6mujC83UKuWdhGBPk4IyFBfBEumqNqpS1otC5ySMIqvA8ayNxbp2ZZB4AgAQdd1AZeNKpOajhIoqYYb1CgQjR8HZYXNcr1ff6ESHI02_DUllSsHSqvXKx1frle1x88v-mLagNsrTGfRSEXIoQaVXDSd2DhJUeZNG_FS-ABAfQSaUGYSJMgp4I57kON--2v44bWmQAmyUEqKsGyVyt3hKsoNMrQstdDqze5jOFhAc5ct-v-eUNks9ctIWFDth4MWrKIdqptqRFFZVDKGoNUrCB55gXjsk-lCPlr93wFSFVtN58PRB8pyu2gq8B66Z6jMXjYUPYDoq5JhZ_3jIbf942B5nfA2DaWH0yB6CECBjVY4IUWc1Uw-lEfKmcizy648OZeCWONF-B7-12R18Azel8t9bDOpdHOzmF4czZeWWy58KNrH6r8MoT8txbzDHhWTLlGL-4HV4icw-H9lQQFtzpPR47ko-mZz8fZhMhIYrhtKENp9MSKFy421ysL3QdmWjPPd5LLKIF1BPDuIsuiGM2sem7xLwTdUNMJA7rBGuSKKayg_LOEyEUZdxODGvN9fQ9YSs_D3v2MreaO4R2GW42T2aKomWHban_b0LeSaiurIZw5XrbJfDEWTTAC0u7zC4ZqdUsf-F8cHeS6NHS9t__p7FmMTxAIyHOGF9ekYZP529gcomXMQPqRrdsZtPlN1tplH9p-fd4sH2cbF4Omy39JVk_9fzlNRisjIs_hPsLdoshn7nKl4-fmSyI-mPn3hvZmWiFyZLp3ZP5Y6xIHYSP4U4pcj3KkapMAWh_AzJfUv40GB6zW06f-AiWsiumAUv4P4JbW4IZlW7Uapry90BY8OY00iZON3aY36FXezdMiSX_vH7IX89_Al9KtVefjZaZvsX2aOIO9nnuPUw8E76LWZ_4YxrKlGjy9HidVxm8XzO83a9ai9Cavtzmq51OnAWDT4f2huVPXwfOncF63BWl3C3UfxyPACiN-KsTPbQ82JIC_-w_ReYO7Kb&lang=octave&interacts=eJyLjgUAARUAuQ==). Pokud teploty v čase $t$ uspořádáme do sloupcového vektoru $\vec T(t)$, je dokonce možno předchozí vztah zapsat pro všechny body současně jedinou maticovou rovnicí $$\vec T(t+\Delta t)=\vec T(t)+\frac{k \Delta t}{\rho c (\Delta x)^2} A \vec T(t),$$ kde $A$ je matice, která má v hlavní diagonále čísla $-2$, podél diagonály má čísla $1$ a jinak nuly s výjimkou prvního a posledního řádku, které jsou nulové. Viz [výsledný kód](https://sagecell.sagemath.org/?z=eJyFVMFu2zgQvRvwP8zFsJworR1gLwn2kHvRw8IIFii6AC2OY1oUKUgUYekf9gMWe9oP2E_YvbT5r76hZCcpCtRBbFEk37x582YW9JuPzhRMkTU7Q4Frq6huPB1ZO9_4oeLG-Y5CX1BLe3PyUbm-Gk_6oPDkFJXeFaY4UHpqg3IBWLUvVODCnc_67t18tqDteJFaBBVYQ4hi_SC_0XmJx5RZ41g1gtL4vbGrV1cvL_HDmrRv1QDu1Xg_yuLgCSxilzJpugGIhWp7GkxbqoppSGe_zzvF-GgGRvKkcPVkKoUzDbec8qk82CJDJNUjW2323DAyJz7V1hRGqFUcvIZgN6OCuisOSiQyVW25YhdUYXJSlskxOO6MdVjXvuw03gAARH3sqWx8KbmFpCFTpWw_n8nfguSfPipJETewktcf6Ffa3NP4WZBmWyrRl2XTnbD7y_p-2kRpONAO7KYa5BCCysCN5LXrNJjKIYPoU_U6gIQEMqKcQYSnoIA2ImmJ8-G9O92PRxokABed88nioJG6w1vSESq1vmsh007MI3RWgJAo79brtSSzeC1HTsaBYlQWVjyqcqjOVCNp5bgSCKbWsoYNAsG7rh_pz2f0-vMGlqquNbTrw_dy53Q0TmEfqHYszrliomkHngMjw8yF603uTteb1f0Z38BdRlkziIEgA6g4zhEhqcxn4l1plb5onAq8Bez6CiZrsxfQBSw0lfulr6DZwcNjISfXWY8KTjAUW8BLcgjhxH6pQYGdsdMrMcpUxZ8jT30uNy6dnrIHu81d4ge87eSJCP9IKwuinHrAXvCAMGHIPt3c5pt8lExSu9msPo_JxT5E3wiFSgUzKkYGQimx7wNO360uar-V-qWksU8qqDQf0N0YAo3SMOeE-SBIyP9nWG-RvNjph2CpF1MrPlpI6L78S_HLf7X_-ifaQhEQnv9neYui16r6-nc4t-reN3QEh9s7tNQlapoXwZqYKlf2l6bCrphiS9ekw_tMn_64XdEVZQ_42i5XyyThqBYYxwFKFiDeDSYqtJkqG3FYo1xbozYFbAh5gx9EZlV0RzFim9JDS1SYBCV6lqtxSqV8xVuwid9Jifade8KlVKPW-q5O2-OtPrHtsuP1j9wBSQYexzf4DZqPaLzYlxiwNg0yVAcAF2Efz1sQ8fkvfv5HniYNP_2-ybebz0CvuD08NUZn6zt9QswrfcrxGCDulQ6r-_ms8NY3laph6jCf1WmZpfu5TJz5rD0obdzTOF_q6cJONfNZMMFytnzsoz-Cd7fjQ_fSZml2LgFxsmrHNlueZNFPi7BcfQPOnGh8&lang=octave&interacts=eJyLjgUAARUAuQ==), kde je jenom jeden cyklus pro posun v čase a namísto cyklu přes všechny body v tyči je zde maticové násobení. 
 >
 >
-> Ještě existuje implicitní metoda založená na zpětné diferenci v čase namísto dopředné, tj. $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$ a odsud $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$ Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Bohužel však v každém tomto vztahu figurují tři teploty v čase $t$, které ještě neznáme. Úloha vede na řešení soustavy lineárních rovnic, kterých je stejně jako je uvažovaný počet bodů v tyči, tj. v prakticky využitelných úlohách počty začínají řádově stovkami či tisíci a omezeny jsou jenom pamětí počítačů. Každá rovnice v soustavě má sice jenom tři neznámé, ale jako celek je postup komplikovanější na naprogramování i na výpočet. Přesto se ukazuje jako výhodnější, protože je stabilnější a dovoluje řešení počítat po větších časových skocích, než metoda předchozí. Programová relizace je založena na řešení rovnice a v programech Octave nebo Matlab může vypadat [následovně.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) Tento přístup se nazývá [implicitní metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation). 
+> Ještě existuje metoda založená na zpětné diferenci v čase namísto dopředné, tj. $$\frac{\partial T(x,t)}{\partial t}=\frac{T(x,t)-T(x,t-\Delta t)}{\Delta t}$$ a odsud $$T(x,t) = T(x,t-\Delta t) +\frac{k\Delta t}{\rho c (\Delta x)^2}\Bigl[T(x-\Delta x,t)-2T(x,t)+T(x+\Delta x,t)\Bigr].$$ Toto vztah umožňující výpočet teplot v čase $t$ z teplot v čase $t-\Delta t$. Bohužel však v každém tomto vztahu figurují tři teploty v čase $t$, které ještě neznáme. Úloha vede na řešení soustavy lineárních rovnic, kterých je stejně jako je uvažovaný počet bodů v tyči. Tedy v prakticky využitelných úlohách počty rovnic a proměnných začínají řádově stovkami či tisíci a omezeny jsou jenom pamětí počítačů. Každá rovnice v soustavě má sice jenom tři neznámé, ale jako celek je postup komplikovanější na naprogramování i na výpočet. Přesto se ukazuje jako výhodnější, protože je stabilnější a dovoluje řešení počítat po větších časových skocích než při explicitní metodě. Programová relizace je založena na řešení rovnice a v programech Octave nebo Matlab může vypadat [následovně.](https://sagecell.sagemath.org/?z=eJx1U01v2zAMvQfIf-CliNw6bVTslELA0nMxDEOxFWi3QbGZRq0jZRJl2P71o2RnLYbNB-vxm4-izuCLa62pEFqs0RogPDYajt7BC9bWeTcc0FsXgfoKAuxM51pt-8Po6Ugzshpena1MtYeMAmlLnOvoKk1Y2ZOvi5fz2Rncj4EQuGhKa4CrNG5IZ2tdqocgGmNR-5TFu51pinehf5R8YA21C3rg3g9jfJuEvQPuoo2ZiY8DZ6x06GEw4VUfEIbs-zfvXOOTGZDJg-bQzhw0-3gMmPkcHHfLDJlUz2xrs0OPzHw-m8_ulLyhnVpdfriZz7T6KKiAFcPtCOUqCc8sdKO-JvZdyYS6E9LNca9VTVd19-OaZdupO8YJkaLdVU0MSarVuqY17VjostCt7xhHNaB3QVi6kKXtLmSRlGJdykJpQXJxktHWhdq-aWS5LtSz6HIAz2D5n49N3xDcNqBvEWiPgL-iJuMsCFmACWAs7Jw__ITNeRRUdoVa8rmUjDh4k1xE6mxsD0KadeAcHnmLyJtuPtso7FGc2udsYNT12rIF-NsIU5qlXBs2q8c8L1jK5fX5CPP_O8cxxUwFxjZS4RqJVytaXpnAfaMlo5umf1eD5zZWuU1tcxmey-JmVGU1s1RsKHNrb9o8z6RPII_wZIsSlNg8Pd1yHhjVyS_xKUBFKTJKptzwvyfP-s-89mTscx46r2NsKFymQg9SvXpnBe_kdPGyKMeLvH9vmiZeTndeuYavSR9h72g-O2ZRPMjyXpaxSHnDXtepnrE8tOMUsNWe189Qg2LxtW_dCz-vuMV9nB54Pz3oBafoGr3FRiy6JPSTQEkYJiEuit9lQlKQ&lang=octave&interacts=eJyLjgUAARUAuQ==) Tento přístup se nazývá [_implicitní_ metoda řešení](https://en.wikipedia.org/wiki/Finite_difference_method#Example:_The_heat_equation). 
 
 
 <!--
@@ -453,7 +453,7 @@ ylabel('t')
 
 # Vzdálenost a pojmy s ní související
 
-Instrukce: V podkapitole věnované popisu bodů, množin a jejich vlastností v euklidovském prostoru se ujistíme, že dokážeme dát přesný obsah tak běžným pojmům jako vzdálenost nebo hranice množiny. Protože tyto pojmy nejdou nijak proti intuici, není nutné se učit jednotlivé definice. Jenom si rámcově odneste přehled, jak jsou tyto pojmy definovány a jaké pojmy vlastně používáme. V případě nutnosti se k těmto definicím můýžete kdykoliv vrátit. 
+V podkapitole věnované popisu bodů, množin a jejich vlastností v euklidovském prostoru se ujistíme, že dokážeme dát přesný obsah tak běžným pojmům, jako vzdálenost nebo hranice množiny. Protože matematické pojetí těchto pojmů plně vystihuje a zobecňuje základní představu z běžného života, není v tuto chvíli nutné se učit jednotlivé definice. Jenom si rámcově odneste přehled, jak jsou tyto pojmy definovány a jaké pojmy vlastně používáme. V případě nutnosti se k těmto definicím můýžete kdykoliv vrátit. 
 
 https://youtu.be/owfHzLBonRA
 
@@ -511,53 +511,20 @@ $$
 
 ## Významné vlastnosti množin v Euklidovském prostoru
 
+V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq\mathbb{E}^n$ podmnožina v Euklidovském prostoru $\mathbb{E}^n$ ($n=2$ nebo $3$). Abstraktně je možno s těmito pojmy pracovat i v prostorech libovolné konečné dimenze.
 
-V následujících definicích je $X\in\mathbb{E}^n$ bod a $M\subseteq
-\mathbb{E}^n$ podmnožina v Euklidovském prostoru $\mathbb{E}^n$ ($n=2$
-nebo $3$). Abstraktně je možno s těmito pojmy pracovat i v prostorech
-libovolné konečné dimenze.
+**Ohraničená množina**: Množina $M$ se nazývá *ohraničená*, jestliže leží v (dostatečně velkém) okolí nějakého bodu $Y\in\mathbb{E}^n$.
 
+**Vnitřní bod, vnitřek,  otevřená množina**: Bod $X$ se nazývá *vnitřním bodem množiny $M$*, jestliže  $X\in M$ a existuje nějaké okolí $O(X)$ bodu $X$ ležící celé v množině $M$, tj. $O(X)\subseteq M$. Množina všech vnitřních bodů množiny $M$ se nazývá *vnitřek množiny $M$* a  označuje $M^o$. Je-li množina $M$ totožná se svým vnitřkem, tj. je-li každý bod množiny $M$ vnitřní, říkáme, že množina $M$ je *otevřená*.
 
-**Ohraničená množina**:
-  Množina $M$ se nazývá *ohraničená*, jestliže leží
-  v (dostatečně velkém) okolí nějakého bodu $Y\in\mathbb{E}^n$.
+**Hraniční bod,  hranice**: Bod $X$ se nazývá *hraničním bodem množiny $M$*, jestliže každé okolí bodu $X$ obsahuje alespoň jeden bod ležící v množině $M$ a současně alespoň jeden bod neležící v množině $M$. Množina všech hraničních bodů množiny $M$ se nazývá *hranice množiny $M$* a označuje $\partial M$.
 
+**Uzávěr,  uzavřená množina**: *Uzávěrem množiny $M$* rozumíme množinu $\overline M$
+  definovanou jako sjednocení vnitřku a hranice množiny $M$, tj. $\overline M=M^o\cup\partial M$. Je-li množina totožná se svým uzávěrem (tj. obsahuje-li všechny své hraniční body), nazývá se *uzavřená*.
 
+**Souvislá množina**: Množina $M$ se nazývá souvislá, jestliže každé dva body, ležící v množině $M$ lze spojit lomenou čarou, ležící v $M$.
 
-**Vnitřní bod, vnitřek,  otevřená množina**:
-  Bod $X$ se nazývá *vnitřním bodem množiny $M$*, jestliže
-  $X\in M$ a existuje nějaké okolí $O(X)$ bodu $X$ ležící celé
-  v množině $M$, tj. $O(X)\subseteq M$. Množina všech vnitřních
-  bodů množiny $M$ se nazývá \textit{vnitřek množiny $M$} a
-  označuje $M^o$. Je-li množina $M$ totožná se svým vnitřkem, tj.
-  je-li každý bod množiny $M$ vnitřní, říkáme, že množina $M$ je
-  *otevřená*.
-
-
-**Hraniční bod,  hranice**:
-  Bod $X$ se nazývá *hraničním bodem množiny $M$*, jestliže
-  každé okolí bodu $X$ obsahuje alespoň jeden bod ležící v množině $M$
-  a současně alespoň jeden bod neležící v množině $M$. Množina všech
-  hraničních bodů množiny $M$ se nazývá *hranice množiny $M$*
-  a označuje $\partial M$.
-
-
-**Uzávěr,  uzavřená množina**:
-  *Uzávěrem množiny $M$* rozumíme množinu $\overline M$
-  definovanou jako sjednocení vnitřku a hranice množiny $M$,
-  tj. $\overline M=M^o\cup\partial M$. Je-li množina totožná se svým
-  uzávěrem (tj. obsahuje-li všechny své hraniční body), nazývá se
-  *uzavřená*.
-
-**Souvislá množina**:
-  Množina $M$ se nazývá souvislá, jestliže každé dva body, ležící
-  v množině $M$ lze spojit lomenou čarou, ležící v $M$.
-
-**Oblast, uzavřená oblast,  kompaktní množina**:
-   Otevřená souvislá množina se nazývá *oblast*. Uzavřená
-  souvislá množina se nazývá *uzavřená oblast*. Uzavřená
-    ohraničená  množina se nazývá *kompaktní*.
-
+**Oblast, uzavřená oblast,  kompaktní množina**: Otevřená souvislá množina se nazývá *oblast*. Uzavřená souvislá množina se nazývá *uzavřená oblast*. Uzavřená    ohraničená  množina se nazývá *kompaktní*.
 
 # Spojitost funkce
 
@@ -571,56 +538,28 @@ libovolné konečné dimenze.
 
 \fi
 
+**Spojitost skalární funkce**: Nechť $f\colon\mathbb{R}^n\to \mathbb{R}$ je skalární funkce $n$ proměnných definovaná v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě $A$ *spojitá*, pokud pro každé okolí $O(f(A))$ bodu $f(A)$ existuje okolí $\overline O(A)$ bodu $A$ takové, že obrazy všech bodů z tohoto okolí bodu $A$ leží v okolí bodu $O(f(A))$, tj.  pro všechna $X\in \overline O(A)$ platí $f(X)\in O(f(A))$.
+
+**Spojitost vektorové funkce**: Nechť $f\colon\mathbb{R}^n\to \mathbb{R}^m$ je vektorová funkce $n$ proměnných definovaná  v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě $A$ *spojitá*, jestliže je v tomto bodě spojitá každá její komponenta.
 
 
-**Spojitost skalární funkce**:
-  Nechť $f:\mathbb{R}^n\to \mathbb{R}$ je skalární funkce $n$ proměnných definovaná
-  v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě
-  $A$ *spojitá*, pokud pro každé okolí $O(f(A))$ bodu $f(A)$ existuje
-  okolí $\overline O(A)$ bodu $A$ takové, že obrazy všech bodů
-  z tohoto okolí bodu $A$ leží v okolí bodu $O(f(A))$, tj.  pro
-  všechna $X\in \overline O(A)$ platí $f(X)\in O(f(A))$.
-
-**Spojitost vektorové funkce**:
-  Nechť $f:\mathbb{R}^n\to \mathbb{R}^m$ je vektorová funkce $n$ proměnných definovaná
-  v nějakém okolí bodu $A\in\mathbb{R}^n$. Řekneme, že funkce $f$ je v bodě
-  $A$ *spojitá*, jestliže je v tomto bodě spojitá každá její komponenta.
-
-
-**Elementární funkce**: 
-  Všechny mnohočleny, goniometrické, cyklometrické, exponenciální a
-  logaritmické funkce a obecná mocnina se nazývají *základní
-    elementární funkce* 
-  Všechny funkce, které ze základních
-  elementárních funkcí získáme konečným počtem operací sčítání,
-  odečítání, násobení, dělení a skládání těchto funkcí navzájem se
-  nazývají *elementární funkce*.
+**Elementární funkce**: Všechny mnohočleny, goniometrické, cyklometrické, exponenciální a  logaritmické funkce a obecná mocnina se nazývají *základní elementární funkce*   Všechny funkce, které ze základních  elementárních funkcí získáme konečným počtem operací sčítání, odečítání, násobení, dělení a skládání těchto funkcí navzájem se nazývají *elementární funkce*.
 
 \iffalse
 
-Elementární funkce jsou tedy všechny funkce, které umíme v konečném
-  tvaru vyjádřit explicitním vzorcem za použití funkcí známých ze
-  střední školy a cyklometrických funkcí.
+Elementární funkce jsou tedy všechny funkce, které umíme v konečném tvaru vyjádřit explicitním vzorcem za použití funkcí známých ze střední školy a cyklometrických funkcí.
 
-Elementární neznamená jednoduchý. 
-Funkce $$f(x,y)=\frac{x^2+\sin(x^2-y^2)}{\ln(x^2+y^2-1)},\quad g(x,y)=\frac{1}{1+\frac x{1+\frac {y}{x^2}}} $$ jsou elementárními funkcemi ve smyslu výše uvedené definice. Funkce $$h(x,y)=\begin{cases} 1 & x=0 \text{ nebo }y=0\\0 &\text{jinak}\end{cases}$$ není elementární funkce.
+Elementární neznamená jednoduchý. Funkce $$f(x,y)=\frac{x^2+\sin(x^2-y^2)}{\ln(x^2+y^2-1)},\quad g(x,y)=\frac{1}{1+\frac x{1+\frac {y}{x^2}}} $$ jsou elementárními funkcemi ve smyslu výše uvedené definice. Funkce $$h(x,y)=\begin{cases} 1 & x=0 \text{ nebo }y=0\\0 &\text{jinak}\end{cases}$$ není elementární funkce.
 
-Následující věta ukazuje, že u elementárních funkcí je spojitost v
-libovolném bodě zaručena již tím, že je funkce v tomto bodě
-definována.
+Následující věta ukazuje, že u elementárních funkcí je spojitost v libovolném bodě zaručena již tím, že je funkce v tomto bodě definována.
 
 \fi
 
 > Věta (spojitost elementárních funkcí). Všechny [elementární funkce](http://cs.wikipedia.org/wiki/Elementární_funkce}) jsou spojité v každém vnitřním bodě svého definičního oboru.
 
-
-
-
 # Schwarzova věta
 
-
 > Věta (Schwarzova). Jsou-li smíšené derivace spojité na otevřené množině, jsou zde stejné, tj. platí  $$ \frac{\partial }{\partial x}   \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}   \frac{\partial f}{\partial x}.$$
-
 
 \iffalse 
 
@@ -632,16 +571,7 @@ definována.
 
 \fi
 
-Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát
-  $$
-\frac{\partial^2 f}{\partial x^2},\quad 
-\frac{\partial^2 f}{\partial x \partial y},\quad 
-\frac{\partial^2 f}{\partial y^2},
-$$
-nebo
-$$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
-
-
+Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát $$\frac{\partial^2 f}{\partial x^2},\quad \frac{\partial^2 f}{\partial x \partial y},\quad \frac{\partial^2 f}{\partial y^2}, $$ nebo $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
 
 # Z ptačí perspektivy
 
@@ -653,14 +583,12 @@ $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
 
 </div>
 
-
 \fi
 
-
-* U měnících se veličin běžně udáváme, o kolik se změní za jednotku času nebo o kolik se změní na jednotce délky. Například o kolik vzroste teplota za hodinu. Pomocí parciálních derivací můžeme tyto změny sledovat a popsat jejich okamžité rychlosti. To je nutné pro představu, jak fungují vztahy mezi veličinami.
-* Parciální derivace udává okamžitou rychlost s jakou se mění funkce více proměnných při změně vybrané nezávislé proměnné. Tedy změna funkčních hodnot při změně jedné nezávislé proměnné o jednotku a zafixování ostatních proměnných. Tato změna se počítá na nekonečně malém intervalu a jedná se tedy o okamžitou rychlost.
+* U měnících se veličin běžně udáváme, jak se změní za jednotku času nebo jak se změní na jednotce délky. Například o kolik vzroste teplota za hodinu. Pomocí parciálních derivací můžeme tyto změny sledovat a popsat jejich okamžité rychlosti. Tato dovednost je nutná pro matematické vyjádření představ, jak fungují vztahy mezi veličinami závislými na více proměnných.
+* Parciální derivace udává okamžitou rychlost, s jakou se mění funkce více proměnných při změně vybrané nezávislé proměnné. Tedy je to změna funkčních hodnot při změně jedné nezávislé proměnné o jednotku a zafixování ostatních proměnných. Tato změna se počítá na nekonečně malém intervalu a jedná se tedy o okamžitou rychlost.
 * Příroda funguje tak, že děj v daném okamžiku probíhá rychlostí související s aktuálními hodnotami veličin, které mají na děj vliv. Potřebujeme tedy nástroj pro měření rychlosti. Tím je derivace. V případě, kdy výsledek je ovlivněn více vstupními daty, máme funkci více proměnných a parciální derivace, kdy sledujeme vliv každé vstupní veličiny samostatně.
 * Přírodní zákony jsou formulovány buď přibližně, pomocí součinů, podílů a průměrných rychlostí, nebo přesně pomocí derivací a okamžitých rychlostí. Nám jde o detailní popis, tj. o přesnou fomrulaci.
-* Kvalitativní představa může být, že teplo teče do studenějšího místa a v místě, kam se dodává teplo, roste teplota. Toto je pouze hrubý model. Pomocí parciálních derivací tento děj umíme namodelovat kvantitativně.
+* Kvalitativní představa může být, že teplo teče do studenějšího místa a v místě, kam se dodává teplo, roste teplota. Toto je pouze hrubý model. Pomocí parciálních derivací tento děj umíme namodelovat kvantitativně. Můžeme si tak sestrojit model, porovnat s experimentem a přesvědčit se, že naše metody kvantitativního vyjádření fyzikálních zákonů jsou správné. Tím si potvrzujeme, že jsou správné naše představy o fungování materiálů.
 * V praxi často derivace počítáme pro funkce dané tabulkou. V tomto případě používáme numerickou aproximaci derivace. Nejčastěji pomocí centrální diference.
 
