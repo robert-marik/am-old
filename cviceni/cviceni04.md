@@ -23,7 +23,7 @@ Vypočtěte rotaci funkce $\vec F=xy^2\vec \imath + 2xy\vec\jmath$.
    \pdv{x} & \pdv{y} & \pdv{z} \\
    xy^2 & 2xy & 0
  \end{vmatrix}
- &=\vec k\qty({\pdv x{2xy}-\pdv y {xy^2}})\\&
+ &=\vec k\qty({\pdv {2xy}{x}-\pdv {xy^2}{y}})\\&
  =\vec k(2y-2xy)\\&=2y(1-x)\vec k
 \end{aligned}
  $$
@@ -145,7 +145,7 @@ $$\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int y+\frac 45 xy^3 \,\mathrm dx
 =xy+\frac 45 \frac {x^2}{2}y^3=xy+\frac 25 x^2y^3+C_1(y)$$
 a
 $$\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 +x^2 \,\mathrm dy
-=\frac 25 {x^2}\frac{y^3}3+x^2y=\frac 25 x^2y^3+x^2y+ C_2(x).$$
+=\frac 65 {x^2}\frac{y^3}3+x^2y=\frac 25 x^2y^3+x^2y+ C_2(x).$$
 Porovnáním musí být
 $$xy+C_1(y)=x^2y+C_2(x),$$
 což není možné splnit.
