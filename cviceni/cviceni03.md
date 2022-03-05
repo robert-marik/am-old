@@ -1,12 +1,10 @@
 % Divergence, rovnice vedení tepla
 
-
 > Anotace.
 >
 > * V úvodu si zkusíme vypočítat několik divergencí pro získání určité míry jistoty při práci s tímto operátorem. 
-> * Poté vypočteme divergenci vektorového pole, které dostaneme jako gradient stavové veličiny vynásobení difuzní maticí. Přesně takto se s divergencí pracuje v aplikacích, abychom zjistili, kde tok nabývá na intenzitě a kde naopak slábne.
+> * Poté vypočteme divergenci vektorového pole, které dostaneme jako záporně vzatý gradient stavové veličiny vynásobený difuzní maticí. Přesně takto se s divergencí pracuje v aplikacích, abychom zjistili, kde tok nabývá na intenzitě a kde naopak slábne.
 > * V závěru přednášky si zopakujeme difuzní rovnici a jak se některé členy této rovnice mohou za speciálních podmínek zjednodušit. 
-
 
 # Divergence vektorového pole
 
@@ -55,15 +53,14 @@ https://youtu.be/U9_0wbKT_2I
 
 Teplota ve dvourozměrné desce pro $0\leq x\leq 10$ a $0\leq y\leq 10$ zachycené v určitém okamžiku termokamerou je popsána rovnicí
   $$T(x,y)=(2x-y)^2+x^4.$$
-  Rozměry jsou v centimetrech, teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která jeho rozměr opraví. Pro jednoduchost tuto komplikaci vynecháme.)
-
+  Rozměry jsou v centimetrech a teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která jeho rozměr opraví. Pro jednoduchost tuto komplikaci vynecháme.)
 
 1. Vypočtěte gradient $\nabla T$  a tok tepla $-k \cdot \nabla T.$
 Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je $k=
   \begin{pmatrix}
     4 & 1\\1&6
   \end{pmatrix}.$ 
-1. Určete, zda na levém okraji desky teče teplo dovnitř desky nebo z desky ven.
+1. Určete, zda na levém okraji desky teče teplo dovnitř do desky nebo z desky ven.
 1. Vypočtěte divergenci toku tepla, tj. $\nabla\cdot(-k \cdot \nabla T).$
 1. V desce nejsou zdroje tepla. Ochlazuje se deska uprostřed, nebo otepluje?
 

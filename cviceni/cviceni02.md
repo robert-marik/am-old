@@ -4,10 +4,9 @@
 > Anotace.
 >
 > * V úvodu si osaháme gradient a jeho využití k lineární aproximaci a jeho vztah k vrstevnicím.
-> * Komplexnější je příklad číslo 5, kde mimo jiné v podúkolu číslo 7 vlastně najdeme lineární aproximaci relativně komplikované funkce jedné proměnné (nalezené v podúkolu 6). V podstatě tečnu k vrstevnici nemusíme hledat derivováním funkce zadané touto vrstevnicí. Můžeme najít tečnou rovinu k funkci více proměnných a poté přislušný řez této tečé roviny bude tečnou k vrstevnici. Použitý aparát je sice pokročilješí (používáme funkce více proměnných tam, kde by stačily funkce jedné proměnné), ale početní náročnost je nižší (derivujeme podstatně jednodušší funkce).
-> * V šestém příkladě si ilustrujeme na příkladě linearizaci vektorové funkce v počátku, což je v podstatě cesta k jednotné formulaci konstitučních zákonů. Ukázku použití takového zákona si představíme v sedmém příkladě.
-> * Poslední příklad nás vrací do reality zpracování reálných dat a vyzkoušíme si nalezení gradientu numerickou cestou.
-
+> * Komplexnější je příklad číslo 5. Ukazuje mimo jiné, že někdy je výhodnější řešit úlohu v rámci obecnější teorie. 
+> * V šestém příkladě si ilustrujeme na příkladě linearizaci vektorové funkce v počátku. Tato linearizace je v podstatě cesta k jednotné formulaci konstitučních zákonů. Ukázku použití takového zákona si představíme v sedmém příkladě.
+> * Poslední příklad nás zavede do světa zpracování reálných dat a vyzkoušíme si nalezení gradientu numerickou cestou.
 
 # Linearizace pocitové teploty
 
@@ -59,22 +58,15 @@ https://youtu.be/irOsyX_k620
 Určete gradient funkce $z=x^2+y^2$ a zkontrolujte, že je v každém bodě kolmý ke kružnici se středem v počátku. Využijte toho, že spojnice bodu na kružnici se středem kružnice je kolmá k této kružnici. 
 
 <div class=reseni>
-$$\begin{aligned}
-  \pdv{z}{x} &= 2x\\
-  \pdv{z}{y} &= 2y\\
-  \nabla z &= (2x, 2y) = 2x\vec \imath + 2y\vec \jmath
-\end{aligned}$$
+$$\begin{aligned} \pdv{z}{x} &= 2x\\ \pdv{z}{y} &= 2y\\ \nabla z &= (2x, 2y) = x\vec \imath + 2y\vec \jmath \end{aligned}$$
 Vektor $(2x,2y)$ v bodě $(x,y)$ míří směrem od počátku, tj ve směru spojnice se středem a tedy je kolmý k vrstevnici.
 </div>
-
-
 
 # Gradient funkce s paprskovitými vrstevnicemi
 
 https://youtu.be/OeEuQqRGeBY
 
 Určete gradient funkce $z=\mathop{\mathrm{arctg}} \frac yx$ a zkontrolujte, že je v každém bodě tečný ke kružnici se středem v počátku. Využijte toho, že tečna je kolmá na poloměr.
-
 
 <div class=reseni>
 
@@ -86,7 +78,7 @@ $$
   \end{aligned}
 $$
 
-Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$ a míří směrem od počátku, tj. k poloměru. Proto je tečný ke kružnici.
+Vektor $(-y,x)$ v bodě $(x,y)$ je kolmý k vektoru $(x,y)$. Proto je tečný ke kružnici.
 </div>
 
 
@@ -104,6 +96,8 @@ Pro funkci $f(x,y)=x^2+\frac x{y^2}-6$ najděte
 1. rovnici vrstevnice bodem $(2,1)$ a rovnici tečny k vrstevnici tímto bodem,
 1. explicitní vyjádření funkce dané v okolí bodu $(2,1)$ implicitně rovnicí $f(x,y)=0$,
 1. lineární aproximace v okolí bodu $x=2$ pro funkci získanou v předchozím bodu.
+
+_Zde mimo jiné v podúkolu číslo 7 vlastně najdeme lineární aproximaci relativně komplikované funkce jedné proměnné (nalezené v podúkolu 6). To se dá udělat prostředky diferenciálního počtu funkcí jedné proměnné, ale výpočet by byl poměrně nepříjemný, protože by bylo nutno derivovat funkci s nepříjemnou odmocninou. Alternativa je najít tečnou rovinu k funkci více proměnných a poté použít příslušný řez této tečé roviny bude tečnou k vrstevnici. Použitý aparát je sice pokročilješí (používáme funkce více proměnných tam, kde by stačily funkce jedné proměnné), ale početní náročnost je nižší. Technicky je derivování nepříjemné odmocniny ze zlomku nahrazeno derivováním polynomu._
 
 <div class=reseni>
 
@@ -143,7 +137,7 @@ ww:problems/gradient/06.pg
 https://youtu.be/y66fyasf8iw
 
 Jacobiho matice se používá k linearizaci vektorových funkcí, které
-mají na vstupu i na výstupu vektor. Jsou to matice, kde gradienty
+mají na vstupu i na výstupu uspořádanou n-tici. Jsou to matice, kde gradienty
 jednotlivých komponent vektorové funkce jsou zapsány do řádků matice.
 
 Najděte Jacobiho matici pro funkci $$\vec F(x,y)=(x^2+xy+6y)\vec i + e^{3x}\vec j$$ a poté hodnotu této matice v bodě $(0,0)$.
@@ -158,20 +152,16 @@ $$\begin{aligned}
   \frac{\partial }{\partial y}\left(e^{3x}\right) &=0\\
 \end{aligned}$$
 a proto má Jacobiho matice tvar
-\begin{equation*}
-  J(x,y)=
+$$  J(x,y)=
   \begin{pmatrix}
     2x+y & x+6\\ 3e^{3x} & 0
   \end{pmatrix}.
-\end{equation*}
-V bodě $(0,0)$ potom 
-\begin{equation*}
-  J(0,0)=
+$$V bodě $(0,0)$ potom platí
+$$  J(0,0)=
   \begin{pmatrix}
     0 & 6\\ 3 & 0
   \end{pmatrix}.
-\end{equation*}
-
+$$
 
 </div>
 
@@ -228,8 +218,6 @@ ww:problems/gradient/10.pg
 ww:problems/gradient/11.pg
 
 ww:problems/gradient/12.pg
-
-
 
 # Gradient numericky
 
