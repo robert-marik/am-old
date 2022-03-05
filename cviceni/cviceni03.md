@@ -4,7 +4,7 @@
 >
 > * V úvodu si zkusíme vypočítat několik divergencí pro získání určité míry jistoty při práci s tímto operátorem. 
 > * Poté vypočteme divergenci vektorového pole, které dostaneme jako záporně vzatý gradient stavové veličiny vynásobený difuzní maticí. Přesně takto se s divergencí pracuje v aplikacích, abychom zjistili, kde tok nabývá na intenzitě a kde naopak slábne.
-> * V závěru přednášky si zopakujeme difuzní rovnici a jak se některé členy této rovnice mohou za speciálních podmínek zjednodušit. 
+> * V závěru si zopakujeme difuzní rovnici a jak se některé členy této rovnice mohou za speciálních podmínek zjednodušit. 
 
 # Divergence vektorového pole
 
