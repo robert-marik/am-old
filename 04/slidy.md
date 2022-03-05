@@ -9,39 +9,33 @@
 > * S výše uvedenou problematikou souvisí pojem rotace vektorového pole, který si uvedeme jako další z diferenciálních operátorů vektorové analýzy.
 > * Ukážeme si, že parciální derivace jsou vhodným nástrojem pro jakousi citlivostní analýzu. Seznámíme se v této souvislosti se zákonem šíření chyb.
 
-
 > Prerekvizity.
 >
-> * I zde se seznámíme s diferenciálními operátory. Je žádoucí umět spolehlivě derivovat.
+> * I zde budeme pracovat s diferenciálními operátory. Je žádoucí umět spolehlivě derivovat.
 > * Budeme počítat vektorový součin vektorů. Ten je nejsnazší počítat pomocí determinantů třetího řádu. Tuto dovednost tedy využijeme.
-
-
 
 # Vektorová pole
 
-
-
 * Studujeme funkce $\mathbb{R}^2\to\mathbb{R}^2$ nebo $\mathbb{R}^3\to\mathbb{R}^3$.
-* Bodům v rovině jsou přiřazeny vektory. Můžeme interpretovat jako rychlostní pole nebo silové pole. 
-* 2D: $\vec F:\mathbb {R}^2 \to \mathbb {R}^2$, ve složkách píšeme
+* Uspořádané dvojice nebo trojice na vstupu vektorového pole chápeme jako body v rovině nebo v prostoru. Uspořádané dvojice nebo trojice na výstupu chápeme jako vektory. Bodům v rovině nebo v prostoru jsou tedy přiřazeny vektory. Můžeme proto vektorové pole interpretovat jako rychlostní pole nebo silové pole. 
+* 2D:  $\vec F:\mathbb {R}^2 \to \mathbb {R}^2$. Ve složkách píšeme
   $$ \vec F = (P, Q) = P\vec \imath + Q\vec \jmath,$$ kde $P$ a $Q$ jsou (skalární) funkce dvou proměnných.
-* 3D: $\vec F:\mathbb {R}^3 \to \mathbb {R}^3$, ve složkách píšeme
+* 3D: $\vec F:\mathbb {R}^3 \to \mathbb {R}^3$. Ve složkách píšeme
   $$ \vec F = (P, Q, R) = P\vec \imath + Q\vec \jmath + R\vec k,$$ kde $P$, $Q$ a $R$ jsou (skalární) funkce tří  proměnných.
-
 
 # Příklady vektorových polí v rovině
 
 https://youtu.be/KR42PRY-72U
 
-* Homogenní pole $$\vec F_1=(0,-1)=-\vec \jmath.$$ Každý vektor je stejný (směr i velikost).
-* Radiální pole $$\vec F_2=(x,y)=x\vec \imath+y\vec \jmath.$$ Každý vektor směřuje od počátku souřadnic.
-* Rotující pole $$\vec F_3=(-y,x)=-y\vec \imath+x\vec \jmath.$$ Je kolmé na radiální pole. Každý vektor je tečný ke kružnici se středem v počátku souřadnic. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJyr0KlUsFUoSyzSUK_QqVTX5OVKBPILcvJL4stSk0vyi-LTMlNzUjQ0gLKaOgpAStdYxxjEqoSxkvNz8ots1ZNySlNB-pOw69et1KnAb0BRagpIf3FGfrlGooK2QpKOQmJxAdCQ-KLEksx8W0NNAAglMj4=&lang=sage)
-* Radiální pole s konstantní velikostí vektorů $$\vec
-  F_4=\frac{\vec F_2}{|\vec F_2|}=\frac{(x,y)}{\sqrt{x^2+y^2}}=\frac{x\vec \imath +y\vec \jmath}{\sqrt{x^2+y^2}}.$$ Každý vektor směřuje od počátku
+* Předpis $$\vec F_1=(0,-1)=-\vec \jmath$$ definuje _homogenní pole_. Každý vektor je stejný (směr i velikost).
+* Předpis $$\vec F_2=(x,y)=x\vec \imath+y\vec \jmath$$ definuje _radiální pole_. Každý vektor směřuje od počátku souřadnic.
+* Předpis $$\vec F_3=(-y,x)=-y\vec \imath+x\vec \jmath$$ definuje _rotující pole_. Je kolmé na radiální pole. Každý vektor je tečný ke kružnici se středem v počátku souřadnic. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJyr0KlUsFUoSyzSUK_QqVTX5OVKBPILcvJL4stSk0vyi-LTMlNzUjQ0gLKaOgpAStdYxxjEqoSxkvNz8ots1ZNySlNB-pOw69et1KnAb0BRagpIf3FGfrlGooK2QpKOQmJxAdCQ-KLEksx8W0NNAAglMj4=&lang=sage)
+* Předpis $$\vec
+  F_4=\frac{\vec F_2}{|\vec F_2|}=\frac{(x,y)}{\sqrt{x^2+y^2}}=\frac{x\vec \imath +y\vec \jmath}{\sqrt{x^2+y^2}}$$ definuje _radiální pole s konstantní velikostí vektorů_. Každý vektor směřuje od počátku
   souřadnic a má jednotkovou délku.
-* Radiální pole ubývající s kvadrátem vzdálenosti od počátku a mířící
-  do středu $$\vec F_5=-\frac{\vec
-  F_4}{x^2+y^2}=-\frac{x \vec \imath+y\vec \jmath}{(x^2+y^2)^{3/2}}.$$ S druhou mocninou ve jmenovateli ubývá například  3D gravitační pole nebo elektrostatické pole generované
+* Předpis $$\vec F_5=-\frac{\vec
+  F_4}{x^2+y^2}=-\frac{x \vec \imath+y\vec \jmath}{(x^2+y^2)^{3/2}}$$ definuje _radiální pole ubývající s kvadrátem vzdálenosti od počátku a mířící
+  do středu_. S druhou mocninou ve jmenovateli ubývá například  3D gravitační pole nebo elektrostatické pole generované
   hmotným bodem nebo koulí.
 * Rychlost při proudění vazké tekutiny ubývá směrem ke
   stěnám. Tekutinu proudící doprava je možné pro $y\in [0,1]$
@@ -57,25 +51,24 @@ $$      \mathrm{d}f=
 $$
 
 V souvislosti s totálním diferenciálem často vyvstává otázka, zda pro
-zadané vektorové pole $$\vec F(x,y)=(P(x,y),Q(x,y)),$$ existuje
+zadané vektorové pole $$\vec F(x,y)=(P(x,y),Q(x,y))$$ existuje
 skalární funkce $f$, jejímž gradientem je zadané vektorové pole $\vec
-F$. Toto je důležitá otázka ve fyzice, protože umožňuje rozhodnout, ke
+F$. Toto je důležitá otázka ve fyzice. Umožňuje rozhodnout, ke
 kterému silovém poli je možno zavést potenciální energii.  Funkce $f$
 se v tomto kontextu nazývá **skalární potenciál** vektorového pole $\vec F$
 nebo také **kmenová funkce**.  Následující věta platí za
 předpokladu dostatečně hladkých funkcí na otevřené množině.
 
->  Věta (nutná a postačující podmínka pro existenci kmenové funkce ve 2D).  Vektor   $$\vec F(x,y) = \left(   P(x,y) , Q(x,y)\right)$$ je gradientem nějaké funkce $f(x,y)$ právě tehdy když platí   $$      \frac{\partial }{\partial y}P(x,y)=\frac{\partial}{\partial x}Q(x,y).$$ 
+>  Věta (nutná a postačující podmínka pro existenci kmenové funkce ve 2D).  Vektor   $$\vec F(x,y) = \left(   P(x,y) , Q(x,y)\right)$$ je gradientem nějaké funkce $f(x,y)$ právě tehdy, když platí   $$\frac{\partial }{\partial y}P(x,y)=\frac{\partial}{\partial x}Q(x,y).$$ 
 
-Jeden směr implikace v předchozí větě je snadný a plyne hned ze
-Schwarzovy věty.
+Jeden směr implikace v předchozí větě je snadný a plyne hned ze Schwarzovy věty.
 
 # Skalární a vektorový součin
 
 Diferenciální operátor divergence jsme poznali v minulé přednášce v
-souvislosti s difuzní rovnicí. Formálně jde o skalární součin
-$\nabla=\left(\frac{\partial }{\partial x},\frac{\partial }{\partial
-y},\frac{\partial }{\partial z}\right)$ a vektorového pole.
+souvislosti s difuzní rovnicí. Formálně jde o skalární součin operátoru $\nabla$ definovaného vztahem
+$$\nabla=\left(\frac{\partial }{\partial x},\frac{\partial }{\partial
+y},\frac{\partial }{\partial z}\right)$$ a vektorového pole.
 
 Vektorovým součinem $\vec a \times \vec b$ vektorů $\vec
 a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor 
@@ -86,8 +79,7 @@ a=(a_1,a_2,a_3)$ a $\vec b=(b_1,b_2,b_3)$ rozumíme vektor
 https://youtu.be/ev3eFilaGpw
 
 > Definice (rotace vektorového pole). Pro vektorovou funkci tří proměnných  $$\vec
-  F=P\vec \imath+Q\vec \jmath+R\vec k$$ definujeme operátor <span class='red'>rotace</span> symbolicky
-  vztahem
+  F=P\vec \imath+Q\vec \jmath+R\vec k$$ definujeme operátor _rotace_ vztahem
   $$
   \mathop{\mathrm{rot}} \vec F=\nabla \times \vec F=
   \begin{vmatrix}
@@ -96,9 +88,7 @@ https://youtu.be/ev3eFilaGpw
   \end{vmatrix}.
   $$
 
-
 * Výsledkem rotace je tedy vektorové pole, jehož komponenty jsou \dm$$\nabla \times \vec F=\left(\frac{\partial R}{\partial y}-\frac{\partial    Q}{\partial z}\right)\vec \imath +\left( \frac{\partial P}{\partial z}-\frac{\partial    R}{\partial x}\right)\vec \jmath + \left( \frac{\partial Q}{\partial x}-\frac{\partial    P}{\partial y}\right)\vec k.$$
-
 
 <div class="obtekat">
 
@@ -106,24 +96,13 @@ https://youtu.be/ev3eFilaGpw
 
 </div>
   
-
-* Ve dvourozměrném vektorovém poli doplníme třetí komponentu nulovou. Rotace má potom první dvě komponenty nulové ($R=\frac{\partial Q}{\partial z}=\frac{\partial P}{\partial z}=0$) a třetí komponenta je nulová právě tehdy, když k vektorovému poli existuje skalární potenciál.
-* Vektorové pole, jehož rotace je rovna nulovému vektoru se nazývá
-      **nevírové pole** a ve fyzice má důležité postavení - je v něm
-      možno zavést potenciál a potenciální energii.
-* Představme si vektorové pole charakterizující rychlost proudící
-      tekutiny. Rotace udává, zda má pole tendenci uvést do rotace
-      objekt unášený tímto prouděním. Nejedná se tedy o to, zda se
-      pole točí či netočí jako u víru při vypouštění
-      umyvadla. Příkladem je přímý tok v řece, kdy rychlost u břehu
-      klesá. V důsledku toho se loďka, která odrazí od břehu
-	  kolmo stočí po proudu. Mimo středovou osu má pole nenulovou
-      rotaci, i když ve všech bodech míří stejným směrem.  [Online výpočet.](https://sagecell.sagemath.org/?z=eJyNUUFuwyAQvEfKH1ZRUkNLWlz1yrWfqCOLxJAgYWNhkkKi_L1ALLvqqRzMDjO76531JJAru3CLCg8BrgVeLpYLiXx6xwxR4p9RufX4pXz7IDSzvlUdAd9yTyDkOMQYGFACJcnfJGvURTLUKCmR_KI7EmuMoNyRMIH3XWyEXwfV9lrJUMuz1ij2OZytnv8D5tQr3s6pAROYkZ8omnQTRZNwO5fwGPIkw8l8o5NrNbKrdbUXR9XduFbHTjR3qC7iAJ9PDDYDVBVUywUAVC13J9Pf8m3bWxzyfv-X0ho3KYElpeiaqdt6tclZSHMnPIqDszg6S8uJ7hB4PCdL_zIjNdr1m4snDdlr4-rY1xlbSyV0g7Ij2VqKSTJkjGO1GOX1pu0mGEjecHhAPvSxTm25U4bFVR-MNpYVe30WBf4BTyS0Gg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
+* Ve dvourozměrném vektorovém poli doplníme třetí komponentu nulovou. Rotace má potom první dvě komponenty nulové ($R=\frac{\partial Q}{\partial z}=\frac{\partial P}{\partial z}=0$). Třetí komponenta rotace dvourozměrného vektorového pole je nulová právě tehdy, když k tomuto vektorovému poli existuje skalární potenciál.
+* Ve fyzice má důležité postavení vektorové pole s nulovou rotací. Je v něm totiž možno zavést potenciál a potenciální energii. Takové pole se nazývá **nevírové pole**.
+* Představme si vektorové pole charakterizující rychlost proudící       tekutiny. Rotace udává, zda má pole tendenci uvést do rotace objekt unášený tímto prouděním. Jedná se o lokální chrakteristiku a nesouvisí se směrem proudění. Rotace může být nulová i pro tok cirkulující okolo jednoho bodu (uvidíme níže). Naopak, pro to v přímce může být rotace nenulová. Příkladem je přímý tok v řece, kdy rychlost u břehu klesá. V důsledku toho se loďka, která odrazí od břehu kolmo stočí po proudu. Mimo středovou osu má pole nenulovou rotaci, i když ve všech bodech míří stejným směrem.  [Online výpočet.](https://sagecell.sagemath.org/?z=eJyNUUFuwyAQvEfKH1ZRUkNLWlz1yrWfqCOLxJAgYWNhkkKi_L1ALLvqqRzMDjO76531JJAru3CLCg8BrgVeLpYLiXx6xwxR4p9RufX4pXz7IDSzvlUdAd9yTyDkOMQYGFACJcnfJGvURTLUKCmR_KI7EmuMoNyRMIH3XWyEXwfV9lrJUMuz1ij2OZytnv8D5tQr3s6pAROYkZ8omnQTRZNwO5fwGPIkw8l8o5NrNbKrdbUXR9XduFbHTjR3qC7iAJ9PDDYDVBVUywUAVC13J9Pf8m3bWxzyfv-X0ho3KYElpeiaqdt6tclZSHMnPIqDszg6S8uJ7hB4PCdL_zIjNdr1m4snDdlr4-rY1xlbSyV0g7Ij2VqKSTJkjGO1GOX1pu0mGEjecHhAPvSxTm25U4bFVR-MNpYVe30WBf4BTyS0Gg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * Pozor: anglický výraz pro rotaci je "curl".
 
 > Poznámka (linearita rotace). Rotace zachovává součet a násobení konstantou, tj. pro libovolné vektorové funkce $\vec F$ a $\vec G$ a konstantu $c$ platí
 > $$\nabla \times (\vec F+\vec G)=\nabla \times \vec F +\nabla \times \vec G, \qquad \nabla \times (c\vec F)=c\nabla \times \vec F.$$
-
 
 <!-- ![Nevírové pole](nevirove.svg)	 -->
 
@@ -133,7 +112,7 @@ https://youtu.be/JChhJ4nDAtw
 
 * Dostředivé pole ubývající s libovolnou mocninou vzdálenosti má nulovou rotaci. Pro $$\vec F(x,y)=-\frac{x\vec \imath +y \vec \jmath}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=0.$$ [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3Q16iIM9KujDPSjMvT0a1E4RoAVRZn5JdrQJTDeBoKKZlpaRpu0YaxYHGdCk1dqIgBVKRSU0FTrzgztyAnM60yPq00J0cDKAIAmQYn8A==&lang=sage)
 
-* Rotace pole kolmého na dostředivé pole závisí na mocnině, se kterou toto pole ubývá. Pro $$\vec F(x,y)=\frac{-y\vec \imath +x\vec \jmath}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=-\frac{2(n-1)}{(x^2+y^2)^n}\vec k.$$ Všechna tato pole rotují (ve smyslu celkového pohybu) proti směru hodinových ručiček, rotace (ve smyslu operátoru rotace) je však jednou kladná a jednou záporná, podle znaménka výrazu $n-1$. Pokud bychom takovým polem nechali unášet drobný míček, v jednom případě by jej pole otáčelo po směru a v jiném případě proti směru hodinových ručiček. Pro $n=1$ by se míček neroztočil okolo vlastní osy vůbec. [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3U16iIM9KujDPSjMvTqUDhGQAVFmfkl2tAVMN4GgopmWlpGm7RhrFgcZ0KTV2oiAFUpFJTQVOvODO3ICczrTI-rTQnRwMoAgB8XCfD&lang=sage) [Nakreslit online.](https://sagecell.sagemath.org/?z=eJztVNFOwjAUfV-yf7iJmLWzDIEXQjL_AoIhxJRRsLHrZtdp-_e2hQVZUJ-N3jXr3T1n3d3pSXlZV0qDbMvaAm1A1nHEj7WS6lpUWvBtVlufebwWOo78teeH3D1kbm4VQ2OCZmSGMcQRNZCDK2eHgiIcR55lXoqdz-PIlFwSMCU1BGzIbRneGE4JuBEmT3SI4CXXDhqPJgTus3EcNc_VO3rWpUDJQOa3zSC5FVQzgyTGYfkd28Nub5AhFs9BMd0qCWhoR8ik6eTOuhtOU4k7pu0xzXXii2KN4PqCfCY-hEZP3xeaupbvs0kcrcgjWZBlvt6QbgTpKgUGuHRiZ1RReWDosyphCTyPI3DhufaSe1atx_XBe72eER-ru3xtNpe1R1ezvdrC1ToVe9AyQLaDjtv72vI3ptDpfwkUlahUnmwT7O2QNUw_0aZmhUYJe22pSAgkO6qp0y05OSTsbJDw5npMj777bAsCYy_zj6b4DbbwGhRif5Tg3yHfOuQLj_Ts4c6MSTb9t8efsscHFNPTYw==&lang=sage)
+* Rotace pole kolmého na dostředivé pole závisí na mocnině, se kterou toto pole ubývá. Pro $$\vec F(x,y)=\frac{-y\vec \imath +x\vec \jmath}{(x^2+y^2)^n}$$ platí $$\nabla\times \vec F(x,y)=-\frac{2(n-1)}{(x^2+y^2)^n}\vec k.$$ Pro různé $n$ toto pole cirkuluje okolo počátku proti směru hodinových ručiček. Rotace (ve smyslu operátoru rotace) však může být kladná i záporná, což je určeno znaménkem výrazu $n-1$. Pokud bychom takovým polem nechali unášet drobný míček, v jednom případě by jej pole otáčelo po směru a v jiném případě proti směru hodinových ručiček. Pro $n=1$ by se míček neroztočil okolo vlastní osy vůbec, rotace je nulová. [Online výpočet.](https://sagecell.sagemath.org/?z=eJyr0KnUybMtSyzSUK9QqFTIU9fk5XLTqNCp1LTV0K3U16iIM9KujDPSjMvTqUDhGQAVFmfkl2tAVMN4GgopmWlpGm7RhrFgcZ0KTV2oiAFUpFJTQVOvODO3ICczrTI-rTQnRwMoAgB8XCfD&lang=sage) [Nakreslit online.](https://sagecell.sagemath.org/?z=eJztVNFOwjAUfV-yf7iJmLWzDIEXQjL_AoIhxJRRsLHrZtdp-_e2hQVZUJ-N3jXr3T1n3d3pSXlZV0qDbMvaAm1A1nHEj7WS6lpUWvBtVlufebwWOo78teeH3D1kbm4VQ2OCZmSGMcQRNZCDK2eHgiIcR55lXoqdz-PIlFwSMCU1BGzIbRneGE4JuBEmT3SI4CXXDhqPJgTus3EcNc_VO3rWpUDJQOa3zSC5FVQzgyTGYfkd28Nub5AhFs9BMd0qCWhoR8ik6eTOuhtOU4k7pu0xzXXii2KN4PqCfCY-hEZP3xeaupbvs0kcrcgjWZBlvt6QbgTpKgUGuHRiZ1RReWDosyphCTyPI3DhufaSe1atx_XBe72eER-ru3xtNpe1R1ezvdrC1ToVe9AyQLaDjtv72vI3ptDpfwkUlahUnmwT7O2QNUw_0aZmhUYJe22pSAgkO6qp0y05OSTsbJDw5npMj777bAsCYy_zj6b4DbbwGhRif5Tg3yHfOuQLj_Ts4c6MSTb9t8efsscHFNPTYw==&lang=sage)
 
 <!--
 # Rotace gradientu je nulový vektor
@@ -270,10 +249,9 @@ https://youtu.be/52W524bSOKQ
 
 \fi
 
-Nepřímo měřená veličina je taková, kterou neměříme přímo ale
-vypočítáváme příslušným vzorcem z jiných naměřených veličin.
+Některé veličiny neměříme přímo, ale vypočítáváme z jiných naměřených veličin. Takové věličiny se nazývají nepřímo měřené veličiny.
 
-* V praxi často měříme nepřímo veličinu $f$ tak, že měříme veličiny
+* Předpokládejme, že měříme nepřímo veličinu $f$ tak, že měříme veličiny
 $x_1$, $x_2$, $\dots$, $x_n$ a hodnotu veličiny $f$ určíme pomocí vzorce
 $f(x_1, x_2, \dots, x_n)$. 
 * Měření každé z veličin je zatíženo
@@ -300,8 +278,6 @@ označovaný **zákon šíření chyb**.
 </div>
 
 \fi
-
-
 
 Kanadský empirický vzorec pro pocitovou teplotu v zimě ([wind-chill
 factor](https://en.wikipedia.org/wiki/Wind_chill)) je $$W(T,v) =
@@ -832,6 +808,6 @@ označovaný **zákon šíření chyb**.
 \fi
 
 * Rotace vektorového pole je další z diferenciálních operátorů. Význam tohoto operátoru nespatřujeme v jeho základním určení, které mu dalo název a srozumitelnou interpretaci (roztáčí unášené objekty okolo své osy), ale v jeho souvislosti s existencí skalárního potenciálu vektorového pole. 
-* Ve dvourozměrné formulaci je nulovost rotace nutná a současně postačující podmínka k zavedení skalárního potenciálu, tj. k možnosti přejít od vektorového popisu pole ke skalárnímu popisu (skalární je jednodušší).
-* Rotace je jedním z vyjadřovacích prostředků, které použijeme později pro formulaci Greenovy věty, které zprostředkovává přechod mezi difuzní rovnicí v bodě (v nekonečně malém objemu) a bilancí stavové veličiny v měřitelném makroskopickém tělese.
+* Ve dvourozměrné formulaci je nulovost rotace nutná a současně postačující podmínka k možnosti zavedení skalárního potenciálu. V takovém případě je možno přejít od vektorového popisu pole ke skalárnímu popisu (skalární je jednodušší).
+* Rotace je jedním z vyjadřovacích prostředků, které použijeme později pro formulaci Greenovy věty. Ta zprostředkovává přechod mezi difuzní rovnicí v bodě (v nekonečně malém objemu) a bilancí stavové veličiny v měřitelném makroskopickém tělese.
 * V závěru přednášky, bez souvislosti s operátorem rotace, jsme se seznámili s dovedností analyzovat vliv nepřesností ve vstupních datech na nepřesnost na výstupu. Zákon šíření chyb umožní naplánovat experiment zaměřený na stanovení nepřímo měřené veličiny a umožní identifikovat ty části procesu, které podstatně ovlivňují spolehlivost výsledku.

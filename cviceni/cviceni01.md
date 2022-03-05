@@ -5,13 +5,13 @@
 > * V úvodu si osaháme vzorce pro derivování.
 > * Poté si na poměrně jednoduše představitelném příkladě reálně používaného vzorce pro pocitovou teplotu naformulujeme slovní interpretaci derivace.
 > * V dalších dvou příkladech si vyzkoušíme numerické derivování. Pokud Vám to však bude připadat jako naivní počítání pomocí trojčlenky a selské logiky, gratuluji. Nic jiného to totiž vlastně není, jenom je to teď pevněji uchopeno pro případné použití v matematických modelech.
-> * Základním modelem postaveným na parciálních derivacích je rovnice vedení tepla v jedné dimenzi. V tomto případě spád teploty podél jednorozměrné tyče determinuje tok tepla a změny mezi průtokem v různých místech tyče determinují, jestli se mezi těmito průřezy teplo kumuluje, ubývá, čí zachovává. Tento fakt zpětně ovlivní teplotu v daném místě a spád teploty podél tyče. Tím se uzavře jakási zpětná vazba řídící celý proces. Situace je dostatečně jednoduchá na představu, ideální pro popis pomocí parciálních derivací a současně dostatečně obecná, aby se později dala zobecnit je libovolný transportní děj přenášející energii nebo hmotu. Abychom formulaci co nejlépe porozuměli a za možná děsivě vyhlížejícími symboly viděli opravdu vyjádření používá v tomto odstavci, ještě jednou si rovnici tepla rozebereme. Ať již z hlediska slovní interpretace jednotlivých členů, či z hlediska formulace okrajových podmínek pro zachycení vlivu okolního prostředí.
+> * Základním modelem postaveným na parciálních derivacích je rovnice vedení tepla v jedné dimenzi. V tomto případě spád teploty podél jednorozměrné tyče vyvolá tok tepla. Změny v toku tepla v různých místech tyče zase určují, jestli se mezi těmito průřezy teplo kumuluje, ubývá, či zachovává. Tento fakt ovlivní teplotu v daném místě a ta zase má vliv na spád teploty podél tyče. Tím se uzavře jakási zpětná vazba řídící celý proces. Situace je dostatečně jednoduchá na představu, ideální pro popis pomocí parciálních derivací a současně dostatečně obecná, aby se později dala zobecnit je libovolný transportní děj přenášející energii nebo hmotu. Abychom formulaci co nejlépe porozuměli a za možná děsivě vyhlížejícími symboly viděli opravdu vyjádření používaná v tomto odstavci, ještě jednou si rovnici tepla rozebereme. Ať již z hlediska slovní interpretace jednotlivých členů, či z hlediska formulace okrajových podmínek pro zachycení vlivu okolního prostředí.
 
 # Výpočet pomocí vzorců
 
 https://youtu.be/KykczBw2Kcg
 
-Vypočtěte následující parciální derivace
+Vypočtěte následující parciální derivace.
 
 1. $\frac{\partial }{\partial x}(x^2y+2xy^3+x+1)$
 1. $\frac{\partial }{\partial y}(x^2y+2xy^3+x+1)$
@@ -51,13 +51,17 @@ https://youtu.be/VdtIj5TGBZE
 ![Zdroj: pixabay.com](blizzard.jpg)
 
 
-Kanadský empirický vzorec pro pocitovou teplotu v zimě (wind chill factor) je nesmírně důležitý vzorec, který v drsných severských podmínkách rozhoduje o přežití. Je založen na tom, že pocitově je teplota vnímána i podle intenzity větru. Tento efekt, známý odjakživa, byl v roce 2001 proměřen a původní vzorec (z roku 1961) byl nahrazen vzorcem 
+Kanadský empirický vzorec pro pocitovou teplotu v zimě (wind chill factor) je nesmírně důležitý vzorec, který v drsných severských podmínkách rozhoduje o přežití. Je založen na tom, že pocitově je teplota vnímána i podle intenzity větru. Tento odjakživa známý efekt byl v roce 2001 proměřen a původní vzorec z roku 1961 byl nahrazen vzorcem 
 $$
 W(T,v) = 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},
 $$
 kde $W$ a $T$ jsou pocitová teplota a naměřená teplota
-(obě ve stupních Celsia) a $v$ je rychlost větru (v km/hod). Teplota je $-11.0\,{}^\circ\!\text{C}$  a rychlost větru $26
-\,\text{km/hod}$. Určete parciální derivace pocitové teploty podle skutečné teploty a podle rychlosti větru (včetně jednotky) a výsledky interpretujte slovně.
+(obě ve stupních Celsia) a $v$ je rychlost větru (v km/hod). 
+
+Uvažujte situaci, kdy teplota je $-11.0\,{}^\circ\!\text{C}$  a rychlost větru $26
+\,\text{km/hod}$. 
+
+Určete parciální derivace pocitové teploty podle skutečné teploty a podle rychlosti větru (včetně jednotky) a výsledky interpretujte slovně.
 
 _Další informace: Wikipedia a Wind chill._
 
@@ -76,10 +80,10 @@ $$
 Za dané teploty a rychlosti větru je pocitová teplota $-20.2$ stupňů
 Celsia. Nárůst teploty o jeden stupeň způsobí nárůst pocitové teploty
 přibližně o $1.3$ stupně. Tedy změna teploty se projeví na pocitové
-teplotě $1.3$-násobkem, tj. každou změnu vnímáme o třicet procent
+teplotě $1.3$-násobkem. K každou změnu teploty vnímáme o třicet procent
 intenzivněji.
 
-Podobně, zesílení větru o jeden kilometr za hodinu způsobí snížení
+Hodnota derivace podle rychlosti větru říká, že zesílení větru o jeden kilometr za hodinu způsobí snížení
 pocitové teploty přibližně o $0.16$ stupně.
 
 </div>
@@ -100,9 +104,9 @@ $\frac {\partial W}{\partial v}$ pro teplotu $-15^\circ\mathrm C$ a rychlost vě
 
 <div class=reseni>
 
-1.  $$\frac {\partial W}{\partial v}(T=-15,v=40)\approx\frac{-29-(-26)}{50-30}\frac{{}^\circ \mathrm C}{\mathrm{km}\,\mathrm{hod}^{-1}}=-0.15^\circ \mathrm C/(\mathrm{km}\,\mathrm{hod}^{-1})$$  Za podmínek, kde je $15$ stupňů pod nulou a vítr o rychlosti $40$ kilometrů za hodinu každé další zesílení větru o kilometr za hodinu sníží pocitovou teplotu přibližně o patnáct setin stupně.
+1.  $$\frac {\partial W}{\partial v}(T=-15,v=40)\approx\frac{-29-(-26)}{50-30}\frac{{}^\circ \mathrm C}{\mathrm{km}\,\mathrm{hod}^{-1}}=-0.15^\circ \mathrm C/(\mathrm{km}\,\mathrm{hod}^{-1})$$  Za podmínek, kde je $15$ stupňů pod nulou a vane vítr o rychlosti $40$ kilometrů za hodinu každé další zesílení větru o kilometr za hodinu sníží pocitovou teplotu přibližně o patnáct setin stupně.
 1. Neformálně: V rámci každého řádku jsou stejně velké   skoky. Přesněji: V každém řádku je přibližně aritmetická   posloupnost, data se mění odečtením pevné konstanty. Případné  fluktuace od tohoto pravidla jsou způsobeny zaokrouhlením.
-1. Pokud se díváme na data po sloupcích, s rostoucí silou větru  jsou skoky menší a proto parciální derivace podle větru s rostoucí  rychlostí větru klesá. To potvrzuje i analytický výpočet, protože u  rychlosti je mocnina menší než jedna a ta se po zderivování změní na  zápornou mocninu a tím se změní charakter závislosti na rychlosti  větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem  tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je  vítr silný, nestačí se tato mikrovrstva vytvořit ani v minimální míře  a proto je jedno, jestli fouká hodně nebo ještě více.
+1. Pokud se díváme na data po sloupcích, s rostoucí silou větru  jsou skoky menší a proto parciální derivace podle větru s rostoucí  rychlostí větru klesá. To potvrzuje i analytický výpočet, protože u  rychlosti je mocnina menší než jedna a ta se po zderivování změní na  zápornou mocninu. Tím se změní charakter závislosti na rychlosti  větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem  tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je  vítr silný, nestačí se tato mikrovrstva vytvořit ani v minimální míře  a proto je jedno, jestli fouká hodně nebo ještě více.
 
 </div>
 
