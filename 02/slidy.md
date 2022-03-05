@@ -237,16 +237,9 @@ Veličina $k$ se nazývá součinitel tepelné vodivosti, koeficient tepelné vo
 
 ## Soretův efekt (termodifuze)
 
-Většinou je hybatelem procesu nerovnoměrnost v rozložení veličiny,
-která se tímto procesem transportuje. 
-Například tok tepla je vyvolaný nerovnoměrným rozložením teploty. Nebo difuze chemické
-látky je vyvolána nerovnoměrným rozložením koncentrace této
-látky. Nemusí tomu však být
-vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný
-nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$
-kde $s$ je koeficient termodifuze. 
+Většinou je hybatelem transportního děje nerovnoměrnost v rozložení té stejné veličiny, která se tímto dějem transportuje. Například tok tepla (vnitřní energie) je vyvolaný nerovnoměrným rozložením vnitřní energie, kterou vyjadřujeme pohodlněji pomocí teplotu. Nebo difuze chemické látky je vyvolána nerovnoměrným rozložením koncentrace této látky. Nemusí tomu však být vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s nerovnoměrným rozložením teploty je tok dán vztahem $$\vec J=-D\nabla c - sD\nabla T, $$ kde $s$ je koeficient termodifuze. 
 
-Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. Te je v kontrastu s ostatními konstitutivními zákony, kde tok proudí vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis.
+Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. To je v kontrastu s ostatními konstitutivními zákony, kde tok stavové veličiny směřuje vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis.
 
 ## Ohmův zákon
 
@@ -257,24 +250,9 @@ Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k tran
 </div>
 
 
-Ohmův zákon je velice známý vztah mezi napětím a proudem. Přeformulováno z
-integrálního tvaru $I=\frac 1R U$ (pro elektrické obvody) do diferenciálního tvaru
-(pro popis děje v látce) tento zákon říká, že hustota elektrického
-proudu $\vec j$ je přímo úměrná intenzitě elektrického pole $\vec
-E$. A tato intenzita je gradientem potenciálu $\varphi$ elektrického
-pole, tj. $\vec E=\nabla \varphi$. Spojeno, platí $$\vec j=\gamma
-\nabla \varphi.$$ Formálně máme tedy stejný tvar zákona jako u vedení
-tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot
-je nahrazen rozdílem potenciálů. Znalost zapojování elektrických
-obvodů, jako je například paralelní nebo sériové zapojení rezistorů,
-bývá běžná a toho se často využívá při modelování tepelného odporu
-pomocí elektrického odporu. Formálně jsou vztahy identické.
+Ohmův zákon je velice známý vztah mezi napětím a proudem. Přeformulováno z integrálního tvaru $I=\frac 1R U$ (pro elektrické obvody) do diferenciálního tvaru (pro popis děje v látce) tento zákon říká, že hustota elektrického proudu $\vec j$ je dána intenzitou  elektrického pole $\vec E$. A tato intenzita je gradientem potenciálu $\varphi$ elektrického pole, tj. $\vec E=\nabla \varphi$. Spojenením těchto poznatků a při použití  lineární aproximace dostáváme $$\vec j=\gamma \nabla \varphi,$$ což je Ohmův zákon v diferenciálním tvaru. Formálně máme tedy stejný tvar zákona jako u vedení tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot je nahrazen rozdílem potenciálů. Znalost zapojování elektrických obvodů, jako je například paralelní nebo sériové zapojení rezistorů, bývá běžná a toho se často využívá při modelování tepelného odporu pomocí elektrického odporu. Formálně jsou vztahy identické.
 
-Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v
-případě Ohmova zákona konstanta úměrnosti uvažována jako reálné číslo,
-nikoliv matice. Tím se věci znatelně zjednodušují, ale vyplývají odsud
-i limity použitelnosti při modelování vedení tepla jako vedení
-elektrického proudu.
+Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v případě Ohmova zákona konstanta úměrnosti uvažována jako reálné číslo, nikoliv matice. Tím se věci znatelně zjednodušují, ale vyplývají odsud i limity použitelnosti při modelování vedení tepla jako vedení elektrického proudu. Například při průchodu elektrického proudu dřevem je konstanta úměrnosti z Ohmova zákona tenzorová a její nahrazení jedinou skalární hodnotou je pouze zjendodušení reálné situace.
 
 \fi
 
@@ -335,7 +313,7 @@ což zjistíme prostým maticovým násobením. Prostor pro další úpravu nen�
 
 \fi
 
-V obecném případě je zpravidla možné transformovat soustavu souřadnic tak, aby tenzor $K$ byl diagonální. Pro praktické výpočty se toto však často nevyplatí. Pokud však je studovaný problém ortotropní, má charakteristické směry (přesněji, má tři roviny symetrie materiálových vlastností), je možné zvolit souřadnice v souladu s těmito směry a matice $K$ je diagonální. 
+V obecném případě je zpravidla možné transformovat soustavu souřadnic tak, aby tenzor $K$ byl diagonální. Pokud je studovaný problém ortotropní, má charakteristické směry (přesněji, má tři roviny symetrie materiálových vlastností), bude tato diagonalita tenzoru $K$ v případě, že zvolíme souřadnice v souladu s těmito charakteristickými směry. 
 
 $$K=
 \begin{pmatrix}
@@ -345,7 +323,7 @@ $$K=
 \end{pmatrix}
 $$
 
-Komponenty vektoru $\vec j$ jsou
+Komponenty vektoru $\vec j$ jsou potom dány vztahy
 $$
 \begin{aligned}
   j_x&=-k_{11}\frac{\partial u }{\partial x},\\
@@ -375,7 +353,7 @@ Stejné jako ve 3D, pouze chybí třetí rovnice.
 ## Izotropní případ
 
 Stejné jako ortotropní případ, ale navíc platí $k_{11}=k_{22}=k_{33}=k.$ Potom
-$\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr. V tomto případě, na rozdíl od ortotropního případu, nezávisí na volbě souřadné soustavy, tenzor materiálových vlastností se redukuje na jednorozměrnou konstantu v libovolné souřadné soustavě.
+$\vec j=-k\nabla u$, kde $k$ je konstanta a vektory toku a gradientu mají opačný směr. V tomto případě, na rozdíl od ortotropního případu, nezávisí na volbě souřadné soustavy, tenzor materiálových vlastností se redukuje na jednorozměrnou konstantu v libovolné souřadné soustavě. Toto je nejjednodušší případ. Proto je studium izotropních materiálů mnohem mnohem jednodušší, než studium materiálů obecnějších. To je nejzásadnější vlastnost, která činí studium biologických materiálů mnohem komplikovanějším, než je třeba studium vlastností kovů. Biologické materiály mají typicky určitou vnitřní strukturu, která jim dává v různých směrech různé vlastnosti. Postupy odvozené pro izotropní materiály zde nefungují.
 
 
 # Tečna k vrstevnici
@@ -392,9 +370,8 @@ https://youtu.be/tc8pmUNyhhI
 
 \fi
 
-Pro $z=0=z_0$ dostáváme z tečné roviny následující: Nechť
-  $f(x_0,y_0)=0$. Tečna k vrstevnici funkce $f(x,y)$ na úrovni nula,
-  tj. ke křivce $0=f(x,y)$, vedená bodem $[x_0,y_0]$ má rovnici
+Vyjdeme z rovnice pro tečnou rovinu v bodě $(x_0,y_0)$, který je na vrstevnici na úrovni nula, tj. platí $f(x_0,y_0)=0$. 
+V řezu vodorovnou rovinou $z=0$ z grafu funkce a z tečné roviny zůstanou vrstevnice na úrovni nula a tečna k vrstevnici v bodě $(x_0,y_0)$. Rovnici tečny získáme dosazením $z=0=z_0$ do rovnice tečné roviny. 
   $$0=\nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).$$
   
 \iffalse
@@ -418,7 +395,7 @@ Pro $z=0=z_0$ dostáváme z tečné roviny následující: Nechť
 
 \fi
 
-Ve speciálním případě, pokud tečna k vrstevnici není rovnoběžná s osou $y$, je možno vrstevnici chápat jako graf funkce jedné proměnné. Taková funkce je do jisté míry určena jednoznačně, jak ukazuje následující věta.
+Pokud tečna k vrstevnici není rovnoběžná s osou $y$, je možno vrstevnici chápat jako graf funkce jedné proměnné. Taková funkce je do jisté míry určena jednoznačně, jak ukazuje následující věta.
 
 >  Věta (o implicitní funkci). Uvažujme funkci $f(x,y)$ dvou proměnných, splňující v nějakém bodě
 >  $(x_0, y_0)$ podmínku $f(x_0, y_0)=0$ a mající v okolí bodu $(x_0,
@@ -441,20 +418,9 @@ Ve speciálním případě, pokud tečna k vrstevnici není rovnoběžná s osou
 
 \fi
 
-Podobně jako pro funkce jedné proměnné definujeme i pro funkce více
-proměnných **lokální extrémy** následovně: funkce má v daném
-bodě **lokální minimum**, pokud v nějakém okolí tohoto bodu
-neexistuje bod s menší funkční hodnotou a podobně, funkce má v bodě
-**lokální maximum**, pokud v okolí tohoto bodu neexistuje bod
-s vyšší funkční hodnotou. 
+Pro funkce více proměnných definujeme  **lokální extrémy** stejně jako pro funkce jedné proměnné. Funkce má tedy v daném bodě **lokální minimum**, pokud v nějakém okolí tohoto bodu neexistuje bod s menší funkční hodnotou. Funkce má v bodě **lokální maximum**, pokud v okolí tohoto bodu neexistuje bod s vyšší funkční hodnotou. 
 
-Funkce jedné proměnné určitě nemá v bodě lokální extrém, pokud má v
-tomto bodě kladnou derivaci (protože potom funkce roste), nebo pokud
-má v tomto bodě zápornou derivaci (protože potom funkce
-klesá). Derivace v bodě kde nastává lokální extrém tedy musí být buď
-nulová nebo nesmí existovat. Stejná myšlenková úvaha se dá provést pro
-křivky vzniklé na řezech funkce dvou proměnných a proto platí
-následující věta.
+Funkce jedné proměnné určitě nemá lokální extrém v bodě, ve kterém má kladnou derivaci (protože tam funkce roste). Stejně tak nemá lokální extrém v bodě, ve kterém má zápornou derivaci (protože tam funkce klesá). Derivace v bodě lokálního extrému tedy musí být buď nulová nebo nesmí existovat. Stejná myšlenková úvaha se dá provést pro křivky vzniklé na svislých řezech funkce dvou proměnných. Proto platí následující věta.
 
 > Věta (Fermatova nutná podmínka pro lokální extrémy).
 > Jestliže funkce více proměnných má v nějakém bodě svůj lokální
@@ -471,7 +437,7 @@ následující věta.
 
 \iffalse
 
-![Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou, jako je posunutí a otočení. V souvislosti s deformací nás zajímá jednom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos.](beer-mugs-deformace.jpg)
+![Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou. Tedy posunutí a otočení. V souvislosti s deformací nás zajímá jednom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos.](beer-mugs-deformace.jpg)
 
 \fi
 
@@ -481,23 +447,21 @@ následující věta.
 
 Na závěr jedna aplikace z oblasti parciálních derivací a lineárních aproximací vektorových funkcí více proměnných. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.
 
-Vektorovou funkci je možné chápat jako zobrazení roviny do sebe, které může odpovídat transformaci tělesa, například působením síly. Popišme tuto deformaci vektorem  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$. Udává o kolik a kterým směrem se posune bod o souřadnicích $(x_1,x_2)$. Pokud je tato vektorová funkce nulová, s tělesem se nic neděje, zůstává na místě. Pokud je konstantní, každý bod se posune stejně a jedná se o posun, bez změny tvaru. V obecném případě však tato funkce konstantní není. Lineární aproximací v bodě $(x_1,x_2)$ dostáváme
+Vektorovou funkci je možné chápat jako zobrazení roviny do sebe. Toto zobrazení může odpovídat transformaci tělesa,  působením síly. Popišme tuto deformaci vektorem  $\vec U(x_1,x_2)=(u_1(x_1,x_2), u_2(x_1,x_2))$. Tneto vektor udává posunutí bodu o souřadnicích $(x_1,x_2)$ vlivem působící síly. Pokud je tato vektorová funkce nulová, s tělesem se nic neděje, každý jeho bod zůstává na místě. Pokud je konstantní, každý bod se posune stejně a jedná se o posun, bez změny tvaru. V obecném případě však tato funkce konstantní není. Lineární aproximací v bodě $(x_1,x_2)$ dostáváme
 $$\vec U(x_1+\Delta x_1,x_2+\Delta x_2)\approx 
 \vec U(x_1,x_2) + J(x_1,x_2) \begin{pmatrix}\Delta x_1 \\ \Delta x_2 \end{pmatrix}.$$
-      Člen $\vec U(x_1,x_2)$ je posunutí, proto nás zajímá až druhý člen, obsahující deformaci. Pokud 
-      matici $J(x_1,x_2)$ rozdělíme na součet symetrické a
-antisymetrické matice, dostaneme matici, odpovídající změně tvaru a matici, odpovídající pootočení. Pootočení (antisymetrická část) nás nezajímá, zajímá nás jenom změna tvaru. Obecný postup, jak rozdělit matici na součet symetrické a antisymetrické matice je 
-$$A=\frac{A+A^T}2+\frac{A-A^T}2.$$ První matice v tomto součtu je symetrická a druhá antisymetrická.
+Člen $\vec U(x_1,x_2)$ je posunutí. Tento člen nás při studiu deformace nezajímá, nesouvisí se změnou tvaru. Zajímá nás až druhý člen, obsahující zkombinované deformaci a pootočení. Toto pootočení musíme z druhého člene eliminovat. Uděláme to tak, že člen rozdělíme na část obsahující potočení a zbytek, související se změnou tvaru. Nás bude zajímat až tento zbytek. 
+
+Pokud matici $J(x_1,x_2)$ rozdělíme na součet symetrické a antisymetrické matice, dostaneme matici, odpovídající změně tvaru a matici, odpovídající pootočení. Pootočení (antisymetrická část) nás nezajímá, zajímá nás jenom změna tvaru. Obecný postup, jak rozdělit matici na součet symetrické a antisymetrické matice je $$A=\frac{A+A^T}2+\frac{A-A^T}2.$$ První matice v tomto součtu je symetrická a druhá antisymetrická.
 Pro Jacobiho matici dostáváme
 \dm$$\frac{J+J^T}2= \begin{pmatrix}         \frac{\partial u_{1}}{\partial x_{1}} &  \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)\\         \frac 12\left(\frac{\partial u_{1}}{\partial x_{2}}+\frac{\partial u_{2}}{\partial x_{1}}\right)& \frac{\partial u_{2}}{\partial x_{2}}       \end{pmatrix}    .$$
-Tato matice
-      popisuje změnu tvaru a nazývá se [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátor (souvisí se změnou tvaru bez započtení zvětšení či zmenšení).
+Tato matice popisuje změnu tvaru a nazývá se [*tenzor malých deformací*](https://cs.wikipedia.org/wiki/Deformace#Tenzor_mal%C3%BDch_deformac%C3%AD). Ten se ještě někdy rozděluje na součet vhodného konstantního násobku jednotkové matice (souvisí se zvětšením nebo zmenšením, tj. se změnou objemu) a deviátor (souvisí se změnou tvaru bez započtení zvětšení či zmenšení).
 
 Pro využití v dřevařských úlohách viz též A. Požgaj, Štruktúra a
 vlastnosti dreva str 318 nebo P. Horáček, Fyzikální a mechanické
-vlastnosti dřeva I, str. 40. Analogicky, ale pro rychlosti, je
+vlastnosti dřeva I, str. 40. Analogicky jako tenzor deformace je
 definován tenzor rychlosti přetvoření (deformační rychlost) používaný
-v hydrodynamice. Můžeme ji dostat jako derivaci tenzoru malých
+v hydrodynamice. Můžeme jej dostat jako derivaci tenzoru malých
 deformací (při studiu deformací), nebo jako [symetrickou
 část](https://en.wikipedia.org/wiki/Strain-rate_tensor#Symmetric_and_antisymmetric_parts)
 matice vytvořené gradienty jednotlivých komponent rychlosti
@@ -522,6 +486,6 @@ hydrodynamických a disperzních jevů, kap. 3.3.
 \fi
 
 
-* Parciální derivace z minulé přednášky sleduje vliv každé vstupní proměnné na funkční hodnotu funkce samostatně. Gradient se snaží podchytit informaci od všech prostorových proměnných současně do vektoru, mířícího směrem maximálního růstu funkčních hodnot a majícího velikost odpovídající nárůstu na intervalu jednotkové délky.
-* Pomocí gradientu dokážeme formulovat lineární aproximaci funkce. U vektorových  funkcí tuto aproximaci můžeme formulovat pro každou komponentu samostatně a dostáváme tak nástroj, jak pomocí maticového násobení aproximovat funkční vztahy, kde na vstupu i na výstupu je vektor. To umožňuje jednotný popis všech materiálových vztahů, kde vektorová veličina, která je podnětem, vyvolává jako odezvu jinou vektorovou veličinu. Například pokles teploty, definovaný směrem a intenzitou, vyvolává tok tepla odpovídajícím směrem a odpovídající intenzitě.
+* Parciální derivace z minulé přednášky sleduje vliv každé vstupní proměnné na funkční hodnotu funkce samostatně. Gradient se snaží podchytit informaci od všech prostorových proměnných současně do vektoru, který míří směrem maximálního růstu funkčních hodnot a má velikost odpovídající nárůstu na intervalu jednotkové délky.
+* Pomocí gradientu dokážeme formulovat lineární aproximaci funkce. U vektorových  funkcí tuto aproximaci můžeme formulovat pro každou komponentu samostatně a dostáváme tak nástroj, jak pomocí maticového násobení aproximovat funkční vztahy, kde na vstupu i na výstupu je vektor. Tímn získáme jednotný popis všech materiálových vztahů, kde vektorová veličina, která je podnětem, vyvolává jako odezvu jinou vektorovou veličinu. Například pokles teploty, definovaný směrem a intenzitou, vyvolává tok tepla odpovídajícím směrem a odpovídající intenzitou.
 
