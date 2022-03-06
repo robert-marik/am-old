@@ -5,16 +5,14 @@
 
 > Anotace.
 >
-> * V přednášce se seznámíme s nástrojem, který umožňuje sečíst příspěvky k veličině, která nás zajímá, ve dvourozměrné množině. Seznámíme se s dvojným integrálem.
-> * Mezi aplikace spadá střední hodnota na dvourozměrné množině.
-> * Pomocí dvojného integrálu je definován kvadratický moment, což je zásadní veličina ovlivňující tuhost a chování nosníků.
+> * V předchozí přednášce jsme si ukázali rozšíření integrálu, které nám umožnilo počítat integrál nejenom po úsečce, ale i po libovolné křivce. V této přenášce se naučíme integrovat přes dvourozměrný obrazec v rovině. Seznámíme se s dvojným integrálem.
+> * Mezi aplikace spadá střední hodnota na dvourozměrné oblasti.
+> * Pomocí dvojného integrálu je definován kvadratický moment průřezu nosníku, což je zásadní veličina ovlivňující tuhost a chování těchto nosníků při deformaci.
 > * Pomocí dvojného integrálu je možné určit množství veličiny ze znalosti její plošné hustoty. To využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
-
 
 > Prerekvizity.
 >
 > * Dvojný integrál počítáme převodem na dva jednorozměrné Riemannovy integrály. Je proto tedy dobré ovládat výpočet neurčitého a určitého Riemannova integrálu.
-
 
 [Motivace pro dvojný integrál](http://user.mendelu.cz/marik/aromamath/Dvojny_integral.html) - ve výpočetním prostředí Jupyter notebooku numericky určíme parametry, jaké zdroje tepla je potřeba dodat do rovinné desky vedoucí teplo tak, aby teplotní profil byl takový, jaký požadujeme. Vyjde, že výkon zdrojů se liší podle toho, v jakém bodě je zdroj umístěn. Pokud chceme celkový výkon, musíme posčítat příspěvky k celkovému výkonu. Tyto příspěvky jsou spojitě rozloženy na dvourozměrné množině a prostý součet konečného počtu sčítanců nestačí. Nástrojem, který takové příspěvky umí posčítat je dvojný integrál.
 
