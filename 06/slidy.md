@@ -232,13 +232,7 @@ $$\int_0^2 \int _0^{x^2} f(x,y)\;\mathrm{d}y\;\mathrm{d}x$$
 anebo
 $$\int_0^4 \int _{\sqrt y}^{2} f(x,y)\;\mathrm{d}x\;\mathrm{d}y.$$
 
-Všimněte si, že nestačí prosté prohození integrálů. Je nutno
-přepočítávat meze a hraniční křivky je nutno vyjádřit jednou jako
-funkce proměnné $x$ a jednou jako funkce proměnné $y$. V důsledku
-tohoto dochází v průběhu výpočtu dvěma různými způsoby k\ tomu, že
-pracujeme se dvěma různými integrály. Výsledky jsou stejné, nemusí
-však být dosažitelné srovnatelnou námahou, jedna z cest může být
-snazší.
+Všimněte si, že nestačí prosté prohození integrálů. Je nutno přepočítávat meze a hraniční křivky je nutno vyjádřit jednou jako funkce proměnné $x$ a jednou jako funkce proměnné $y$. V důsledku tohoto dochází v průběhu výpočtu dvěma různými způsoby k\ tomu, že pracujeme se dvěma různými integrály. Výsledky jsou samozřejmě stejné, ale nemusí být dosažitelné srovnatelnou námahou. Jedna z cest může být snazší.
 
 
 # Výpočet (obdélníková oblast)
