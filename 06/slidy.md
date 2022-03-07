@@ -19,15 +19,15 @@
 
 V praxi pracujeme s řadou veličin, které se počítají tak, že se parametr systému násobí obsahem. 
 
-* Z plošné hustoty a obsahu násobením obdržíme hmotnost. 
-* Z hloubky nádrže a obsahu obdržíme násobením objem. 
-* Z tlaku a obsahu obdržíme násobením tlakovou sílu. 
+* Z plošné hustoty desky a jejího obsahu násobením obdržíme hmotnost desky. 
+* Z hloubky nádrže (se svislými stěnami) a obsahu hladiny obdržíme násobením objem. 
+* Z tlaku a obsahu stěny obdržíme násobením tlakovou sílu působící na stěnu nádrže. 
 
-Je však otázka, jak tento přístup použít v případě, že daný parametr není po celé ploše na které je rozložen konstantní. Deska může být nehomogenní, nádrž nemusí mít vodorovné dno a ponořená deska nemusí mít všechny své části ve stejné hloubce. 
+Je však otázka, jak tento přístup použít v případě, že daný parametr není po celé ploše konstantní. Deska může být nehomogenní, nádrž nemusí mít vodorovné dno a tlak působící na stěnu nádrže není ve všech místech stejný, protože různé části stěny jsou v různé hloubce. 
 
-U křivkového integrálu jsme se setkali s momentem setrvačnosti a jak řešit situace, kdy stanovujeme moment setrvačnosti množiny, která má hmotnost rozloženu na křivce. Při výpočtu namáhání nosníků, trámů, polic nebo stromů potřebujeme moment setrvačnosti průřezu nosníku, tj. hmotnost je rozložena ve dvourozměnrné množině a pro jednotlivé body se liší vzdálenost od osy otáčení. 
+U křivkového integrálu jsme se setkali s momentem setrvačnosti. Ukázali jsme si, jak stanovit moment setrvačnosti množiny, která má hmotnost rozloženu na křivce a třeba i nerovnoměrně. Při výpočtu namáhání nosníků, trámů, polic nebo stromů řešíme podobnou úlohu, ale pro množiny v rovině namísto křivek. Potřebujeme zohlednit, že  při deformaci nosníků se pro jednotlivé body průřezu liší vzdálenost od neutrální osy. 
 
-Řešení obou nesnází je stejné: použití dvojného integrálu. Ten si nyní představíme.
+Řešení uvedených nesnází je stejné: další rozšíření integrálního počtu a zavedení  dvojného integrálu. Ten si nyní představíme.
 
 
 https://youtu.be/DYySq6o6WTk
@@ -48,8 +48,8 @@ https://youtu.be/DYySq6o6WTk
 </div>
 
 
-* Hmotnost desky $\Omega$ je možno vypočítat jako součin plošné
-  hustoty (hmotnost na jednotku obsahu) a obsahu desky. $$M=\sigma S$$
+* Hmotnost $m$ desky $\Omega$ je možno vypočítat jako součin plošné
+  hustoty $\sigma$ (hmotnost na jednotku obsahu) a obsahu $S$ desky podle vzorce $$m=\sigma S.$$
 * Toto funguje pro desky s konstantní plošnou hustotou, kdy má deska
   ve všech místech stejné fyzikální vlastnostmi.
 * Pokud je deska slepená z konečného počtu malých homogenních desek o
@@ -75,45 +75,35 @@ https://youtu.be/DYySq6o6WTk
 
 * Objem vody $V$ v nádrži nebo bazénu (se svislými stěnami, ale jinak
   i nepravidelného půdorysu $\Omega$) vypočteme jako součin obsahu
-  hladiny $S$ a hloubky vody $h$, tj. $$V=Sh$$ To ovšem platí jenom,
+  hladiny $S$ a hloubky vody $h$ podle vzorce $$V=Sh.$$ To ovšem platí jenom,
   pokud je v každém místě stejná hloubka.
 * Pokud má jedna část bazénu jinou hloubku než část druhá, vypočteme
-  objem u každé hloubky samostatně a příspěvky sečteme,
-  tj. $$V=S_1h_1+S_2h_2.$$
+  objem u každé hloubky samostatně a příspěvky sečteme. Objem je tedy dán vztahem $$V=S_1h_1+S_2h_2.$$
 * Předchozí postup je možné aplikovat pro konečně mnoho hloubek, ale
   někdy to je nevhodné nebo, v případě spojitě se měnící hloubky,
   dokonce nemožné. Potom místo součtu konečně mnoha příspěvků
   použijeme dvojný integrál a dostáváme $$V=\iint_\Omega h\mathrm dS.$$
 
-
 # Motivace 3 (průtok)
-
 
 <div class='obtekat'>
 
 ![Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji
  než ve středu, potrubí na Aljašce. Zdroj: https://www.pixabay.com](pipe.jpg)
 
-
 </div>
-
-
 
 * Teče-li průřezem $\Omega$ tekutina kolmo na průřez rychlostí $v$, je
   celkový průtok $Q$ (objem, který proteče průřezem za jednotku času)
   dán součinem $$Q=vS,$$ kde $S$ je plošný obsah průřezu.
 * Teče-li různými místy průřezu voda různou rychlostí, sečteme
-  jednotlivé příspěvky.  $$Q=v_1S_1+v_2S_2+\dots +v_nS_n$$
+  jednotlivé příspěvky podle vzorce  $$Q=v_1S_1+v_2S_2+\dots +v_nS_n.$$
 * Myšlenku z předchozího bodu není snadné udělat, pokud se rychlost
   mění spojitě. Například v potrubí je rychlost rozdělena parabolicky
   a ubývá se vzdáleností od středu. Situaci zachraňuje dvojný integrál
   $$Q=\iint_\Omega v\,\mathrm dS.$$
 
-
-
-
 \fi
-
 
 # Dvojný integrál
 
@@ -130,8 +120,6 @@ https://youtu.be/tPf-7dZ4Il0
 \fi
 
 </div>
-
-
 
 Pro dvojný integrál použijeme podobnou myšlenkovou konstrukci jako
 u\ křivkového integrálu prvního druhu, pouze místo drátu s\ danou
@@ -155,9 +143,7 @@ $$ \iint_\Omega f(x,y)\mathrm{d}A$$
 nebo 
 $$ \iint_\Omega f(x,y)\mathrm{d}S.$$ 
 
-
 # Linearita a aditivita
-
 
 Dvojný integrál je odvozen (tak jako všechny integrály) pro aditivní
 veličiny a proto se "dobře snáší" se sčítáním (ať už integrovaných
@@ -187,7 +173,6 @@ můžeme pro výpočet dvojného integrálu použít následující věty. Tyto
 věty udávají, jak je možno dvojný integrál přepsat jako dvojnásobný
 integrál. Mají název **Fubiniovy věty**.
 
-
 > Věta (Fubiniova věta). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
 > $$  
 >   \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq x\leq b}\text{ a }
@@ -199,14 +184,12 @@ integrál. Mají název **Fubiniovy věty**.
 >   f(x,y){\mathrm{d}y }\Bigr]{\mathrm{d}x }.
 > $$
 
-
 ### Výpočet (oblast mezi funkcemi proměnné $y$)
 
 <div class='obtekat'>
 ![Oblast mezi funkcemi proměnné $y$.](fub_2.png)
 
 </div>
-
 
 > Věta (Fubiniova věta pro jiné pořadí integrace). Nechť $f$ je funkce spojitá v\ uzavřené oblasti
 > $$  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
@@ -244,9 +227,9 @@ $$\begin{gathered}
 \sqrt{y}\leq x\leq  2.
 \end{gathered}$$
 
-Pro integrál funkce $f(x,y)$ přes takovou množinu tedy máme dvě alternativy:
+Pro integrál funkce $f(x,y)$ přes takovou množinu tedy máme dvě alternativy. Buď
 $$\int_0^2 \int _0^{x^2} f(x,y)\;\mathrm{d}y\;\mathrm{d}x$$
-a
+anebo
 $$\int_0^4 \int _{\sqrt y}^{2} f(x,y)\;\mathrm{d}x\;\mathrm{d}y.$$
 
 Všimněte si, že nestačí prosté prohození integrálů. Je nutno
