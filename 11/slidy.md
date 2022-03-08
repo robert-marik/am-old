@@ -2,15 +2,13 @@
 % Robert Mařík
 % 2020
 
-
 > Anotace.
 >
-> * Lineární difernciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice. 
-> * Soustřeďte se na vysvětlení, jak souvisí DR druhého řádu se zrychlením tělena a působící silou v úlohách z mechaniky, jak se může jednorozměrná difuzní stacionární rovnice redukovat na LDR druhého řádu a jak se metodou separace proměnných dá nestacionární difuzní rovnice rozdělit na obyčejnou diferenciální rovnici prvního a druhého řádu. 
+> * Lineární diferenciální rovnice druhého řádu se vyskytují v úlohách z mechaniky a při řešení difuzní rovnice. 
+> * Soustřeďte se na vysvětlení, jak souvisí DR druhého řádu se zrychlením tělesa a působící silou v úlohách z mechaniky, jak se může jednorozměrná difuzní stacionární rovnice redukovat na LDR druhého řádu a jak se metodou separace proměnných dá nestacionární difuzní rovnice rozdělit na obyčejnou diferenciální rovnici prvního a druhého řádu. 
 > * Soustřeďte se na pasáže týkající se toho, jak okrajová podmínka dokáže vybrat hodnoty parametrů pro které existuje nenulové řešení. To determinuje například frekvenci při mechanickém kmitání.
 > * [Numerické experimenty](https://user.mendelu.cz/marik/aromamath/DR_druheho_radu.html) s rovnicí.
-> * Konkrétní nalezení řešení rovnice pomocí řešení kvadratické rovnice, pomocí metody neučitých koeficientů pro nalezení partikulárního řešení atd. je pro nás málo zajímavé a věnujte se mu připadně až v poslední fázi. 
-
+> * Konkrétní nalezení řešení rovnice pomocí řešení kvadratické rovnice, pomocí metody neurčitých koeficientů pro nalezení partikulárního řešení atd. je pro nás málo zajímavé a věnujte se mu případně až v poslední fázi. 
 
 # Lineární diferenciální rovnice druhého řádu
 
@@ -66,7 +64,7 @@ poté dána vztahem $$F(x)=-\frac{\partial}{\partial x}E(x)=-E''(0)x.$$
 Síla $F$ je tedy úměrná výchylce $x$ a vrací těleso do rovnovážné
 polohy. 
 
-Situace tedy perfektně koresponduje s kmitáním na pružině i když potenciální energie uvažovaná v tomto odstavci může být jiného charakteru. Něco podobného jsme viděli již u autonomních systémů, kdy systém modelující tlumený oscilátor z předášky byl stejný jako systém modelující regulaci topení ze cvičení a tento systém byl jenom lépe představitelnou realizací systému regulace syntézy protinů.
+Situace tedy perfektně koresponduje s kmitáním na pružině i když potenciální energie uvažovaná v tomto odstavci může být jiného charakteru. Něco podobného jsme viděli již u autonomních systémů, kdy systém modelující tlumený oscilátor z přednášky byl stejný jako systém modelující regulaci topení ze cvičení a tento systém byl jenom lépe představitelnou realizací systému regulace syntézy proteinů.
 
 # Řešitelnost LDE druhého řádu
 
@@ -78,7 +76,6 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 > počáteční úloha pro LDE druhého řádu má řešení, které je určeno
 > jednoznačně a toto řešení je definované na celém intervalu $I$.
 
-
 > Definice (speciální typy LDE druhého řádu). Platí-li v\ rovnici (LDE) $f(x)=0$
 > pro všechna $x\in I$, nazývá se rovnice (LDE) *homogenní*, v\ opačném
 > případě *nehomogenní*. 
@@ -87,23 +84,17 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE}$$
 > $I$ konstantní funkce, nazývá se (LDE) *rovnice s\ konstantními
 > koeficienty*.
 
-
 > Definice (triviální řešení). Funkce $y(x)\equiv 0$ je řešením
 > homogenní LDE druhého řádu $$y''+p(x)y'+q(x)y=0$$ vždy, bez ohledu na tvar koeficientů $p$, $q$. Toto řešení nazýváme *triviální řešení*.
-
 
 > Definice (asociovaná homogenní rovnice). Nahradíme-li v\ nehomogenní LDE
 > pravou stranu (tj. funkci $f$) nulovou funkcí obdržíme rovnici
 > $$ y''+p(x)y'+q(x)y=0.$$
 > Tato rovnice se nazývá *asociovaná homogenní rovnice k\ rovnici (LDE)*.
 
-
-
 > Definice (obecné řešení). Všechna řešení LDE druhého řádu 
 > lze vyjádřit ve tvaru obsahujícím dvě nezávislé konstanty $C_1$,
 > $C_2\in\mathbb{R}$. Takovýto předpis se nazývá *obecné řešení rovnice (LDE)*.
-
-
 
 <!--
 # Operátorová symbolika
@@ -137,7 +128,6 @@ diferencovatelné funkci přiřazuje levou stranu rovnice (LDE). Rovnici
 
 Nechť $L$ je lineární diferenciální operátor druhého řádu.
 Jako speciální případ vztahu  $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2]$$ dostáváme následující. 
-
 
 * Platí $$L[y_1]=L[y_2]=0\ \implies \ L[C_1y_1+C_2y_2]=0,$$ tj. každá
   lineární kombinace dvou řešení homogenní LDE je opět řešením této
@@ -259,7 +249,6 @@ Dvojicí lineárně nezávislých řešení rozumíme dvě řešení taková, ž
 > Definice (fundamentální systém řešení). Dvojici funkcí $y_1$ a $y_2$ z\ předchozí
 > věty nazýváme *fundamentální systém řešení rovnice (LDE0)*.
 
-
 # Homogenní LDE 2. řádu s\ konstantními koeficienty
 
 \iffalse 
@@ -282,7 +271,6 @@ Pouze v\ tomto případě bude uvažovaná funkce řešením rovnice (1).
 
 -->
 
-
 \fi
 
 Rovnici $$y''+py'+qy=0$$ je možno přepsat na
@@ -299,9 +287,6 @@ U řešitelnosti této rovnice hraje velkou roli charakteristická rovnice matic
 > Definice (charakteristická rovnice). Kvadratická rovnice
 > $$z^2+pz+q=0$$ s\ neznámou $z$ se nazývá *charakteristická rovnice*
 > pro rovnici $$y''+py'+qy=0.$$
-
-
-
 
 > Věta (o obecném řešení LDE s\ konstantními koeficienty).
 >  Uvažujme LDE $$y''+py'+qy=0,\tag{1}$$ a její charakteristickou rovnici
@@ -320,14 +305,11 @@ U řešitelnosti této rovnice hraje velkou roli charakteristická rovnice matic
 > Potom obecné řešení rovnice (1) je
 > $$y(x,C_1,C_2)=C_1y_1(x)+C_2y_2(x),\qquad C_1\in\mathbb{R},\ C_2\in\mathbb{R}.$$
 
-
 # Nehomogenní LDE 2. řádu
-
 
 > Věta (o obecném řešení nehomogenní LDE). Součet libovolného partikulárního řešení
 > nehomogenní lineární diferenciální rovnice a obecného řešení asociované
 > homogenní rovnice je obecným řešením původní nehomogenní rovnice
-
 
 Následující věta udává jednu z\ metod nalezení partikulárního řešení,
 pokud je diferenciální rovnice do jisté míry speciální: má konstantní
@@ -343,7 +325,6 @@ koeficienty a polynomiální pravou stranu.
 V\ praxi polynom který má být řešením napíšeme s\ neurčitými koeficienty a
 dosazením do rovnice určíme potřebné hodnoty těchto koeficientů.
 
-
 # Dirichletova okrajová úloha, vlastní čísla
 
 https://youtu.be/9rFZAfiOM5Y
@@ -353,33 +334,27 @@ počátečními podmínkami. Ukážeme si na jednoduchém příkladě odlišnost
 od počáteční úlohy. Následující úloha má velké uplatnění při studiu
 kmitavých pohybů.
 
-
 Pro parametr $\lambda\in\mathbb{R}$ najděte řešení rovnice 
 $$y''+\lambda y=0 \tag{*}$$
 splňující podmínky
 $$y(0)=0=y(1). \tag{**}$$
 
-
 > Definice (okrajová úloha). Úloha najít řešení diferenciální
 > rovnice (\*), které splňuje podmínky (\*\*) se nazývá (Dirichletova)
 > *okrajová úloha*.
-
 
 Odlišnost Dirichletovy úlohy od (Cauchyovy) počáteční úlohy je v tom,
 že nezadáváme funkční hodnotu a derivaci v jednom bodě, ale funkční
 hodnotu ve dvou různých bodech.
 
-
 Jedno z\ řešení Dirichletovy úlohy je triviální řešení
 $y(x)=0$. Ukazuje se, že netriviální řešení existuje jen pro některé
 hodnoty parametru $\lambda$.
-
 
 > Definice (vlastní funkce, vlastní hodnota okrajové úlohy). Hodnota $\lambda$,
 > pro kterou existuje netriviální řešení Dirichletovy okrajové úlohy
 > se nazývá *vlastní hodnota okrajové úlohy* a příslušné řešení se
 > nazývá *vlastní funkce okrajové úlohy*.
-
 
 # Výpočet vlastních hodnot
 
@@ -395,10 +370,8 @@ Z\ podmínky $y(1)=0$ dostáváme
 $$0=C_1\sin(\sqrt\lambda),$$
 která je splněna pokud $C_1=0$, nebo $\sqrt\lambda=k\pi$, $k\in\mathbb{Z}$
 
-
 Okrajová úloha $$y''+\lambda y=0, \quad y(0)=0=y(1)$$ má vlastní hodnoty 
 $\lambda=(k\pi)^2$, $k\in\mathbb{Z}$
-
 
 ## Případ $\lambda<0$
 
@@ -418,7 +391,6 @@ $$y''+\lambda^2 y=0,$$ abychom zdůraznili kladnou hodnotu parametru a abychom d
 Tedy okrajová úloha 
 $$y''+\lambda^2 y=0,\quad y(0)=0=y(1)$$
 má vlastní čísla $\lambda=k\pi$, kde $k$ je kladné celé číslo.
-
 
 # Kmity struny
 
@@ -471,23 +443,17 @@ a
 $$F=\frac{\pi^2 EI}{l^2}.$$
 Toto je pro daný nosník kritická síla a ta je pro daný materiál nepřímo úměrná druhé mocnině délky a přímo úměrná kvadratickému momentu $I$.
 
-
-
 # Neumannova a smíšená okrajová úloha
-
 
 \iffalse
 
 <div class='obtekat'>
-
 
 ![Array mbira - [hudební nástroj](https://www.youtube.com/watch?v=5fAAGheYTFA) se smíšenou okrajovou úlohou](array_mbira.jpg) 
 
 </div>
 
 \fi
-
-
 
 Při řešení Dirichletovy úlohy hledáme řešení diferenciální rovnice
 druhého řádu s předepsanými hodnotami ve dvou různých bodech
@@ -502,12 +468,10 @@ nazývají Neumannovy podmínky a úloha najít řešení rovnice, které tyto
 podmínky splňuje se nazývá **Neumannova okrajová úloha**, též
 **Neumannova úloha**.
 
-
 Existují i smíšené úlohy, například při kmitání tělesa s\ jedním
 upevněným a jedním volným koncem je přirozené formulovat **smíšenou
 okrajovou podmínku** $$y(a)=0,\quad y'(b)=0,$$ kde $a$ je upevněný konec a
 $b$ volný konec.
-
 
 # Fourierova metoda separace proměnných
 
@@ -559,7 +523,6 @@ lineární kombinací různých módů. Tato skutečnost lépe vynikne na
 analogické diferenciální rovnici kmitání struny, kdy jednotlivé módy
 přímo vnímáme sluchem: struna nemůže kmitat na libovolné frekvenci ale
 pouze a frekvenci dané okrajovou podmínkou a na frekvencích násobných.
-
 
 Poznámka: Podobná situace a možnost separace proměnných je u rovnice
 kmitů struny

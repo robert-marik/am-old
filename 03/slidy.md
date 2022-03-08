@@ -209,7 +209,7 @@ a nazývá se Saint-Venantova rovnice nebo též *rovnice mělké vody*. Tato ro
 
 https://youtu.be/p2FTgyAWzA4
 
-Difuzní rovnice je rovnice kontiuity s dosazeným konstitučním vztahem pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu lineární aproximaci, je možné psát
+Difuzní rovnice je rovnice kontinuity s dosazeným konstitučním vztahem pro tok.  Použijeme-li pro kvantifikaci souvislosti toku a gradientu lineární aproximaci, je možné psát
 $$      \vec \jmath=-D\nabla u,$$
 kde $D$ konstanta úměrnosti. Pokud tok $\vec \jmath$ a gradient $\nabla u$ leží v jedné přímce,
 je $D$ reálné číslo, jinak je $D$ matice. Například při
@@ -292,7 +292,7 @@ Rovnice vedení tepla se používá například při *tepelné ochraně budov*, 
 
 V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fourierův zákon (P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 88).
 
-V některých případech člen harakterizující zdroje nemusí být nulový. Teplo může vznikat například při tření nebo při průchodu elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po [přidání vody do cementu](http://www.ebeton.cz/pojmy/hydratacni-teplo), známý je problém jak [uchladit Hooverovu přehradu](http://www.ebeton.cz/encyklopedie/hooverova-prehrada) při stavbě.
+V některých případech člen charakterizující zdroje nemusí být nulový. Teplo může vznikat například při tření nebo při průchodu elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po [přidání vody do cementu](http://www.ebeton.cz/pojmy/hydratacni-teplo), známý je problém jak [uchladit Hooverovu přehradu](http://www.ebeton.cz/encyklopedie/hooverova-prehrada) při stavbě.
 
 # Rovnice vedení tepla ve 2D v různých podmínkách
 
@@ -459,7 +459,7 @@ $$ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\big
 
 \fi
 
-* U vektorového pole popisujícího tok nás zajímá, jestli tok nabírá na intezitě nebo naopak slábne. Toto je skryto v pojmu divergence.
-* Formulováním bilance dávající do souvislosti intenzitu změny toku s vydatností zdrojů a s časovou změnou je možno formulovat matematické modely popisující transportní jevy. Nezáleží na charakteru přenášené veličiny, může se jednat o energii i o látku. Nezáleží ani na tom, pomocí jakého parametru množství přenášené tokem měříme. Výsledkem je rovnice kontinuty.
-* Rovnici kontinutity často spojujeme ještě s konstitutivním zákonem. Výsledným spojením je difuzní rovnice. 
+* U vektorového pole popisujícího tok nás zajímá, jestli tok nabírá na intenzitě nebo naopak slábne. Toto je skryto v pojmu divergence.
+* Formulováním bilance dávající do souvislosti intenzitu změny toku s vydatností zdrojů a s časovou změnou je možno formulovat matematické modely popisující transportní jevy. Nezáleží na charakteru přenášené veličiny, může se jednat o energii i o látku. Nezáleží ani na tom, pomocí jakého parametru množství přenášené tokem měříme. Výsledkem je rovnice kontinuity.
+* Rovnici kontinuity často spojujeme ještě s konstitutivním zákonem. Výsledným spojením je difuzní rovnice. 
 * Difuzní rovnice je základním nástrojem pro popis transportu vody ve dřevě nebo v propustných vrstvách půdy. Je také základním nástrojem pro modelování vedení tepla, tj. například pro popis tepelného namáhání stěny domu, detailu okna či dveří, ulice v rozpáleném městě nebo krajiny, ve které jsou umístěny lesy, pole, města.

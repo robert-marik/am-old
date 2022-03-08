@@ -5,7 +5,7 @@
 
 > Anotace.
 >
-> * V přednášce se seznámíme s rozšířením Riemannova integrálu. Ten  umožňuje sečíst příspěvky na úsečce. Zobecníme si tento nástroj tak, že umožní sečíst příspěvky podél křivky. Seznámíme se s křivkovým integrálem.
+> * V přednášce se seznámíme s rozšířením Riemannova integrálu. Riemannův integrál umožňuje sečíst příspěvky na úsečce. Zobecníme si tento nástroj tak, že umožní sečíst příspěvky podél křivky. Seznámíme se s křivkovým integrálem.
 > * Zaměříme se na křivkový integrál druhého druhu. V cizojazyčné literatuře je tento integrál nazývaný též integrál vektorového pole. Umožňuje vypočítat práci nebo obecně potenciál a tím přejít (pokud to jde) ke skalárnímu popisu pole namísto vektorového. Tím se popis studovaných systémů zjednoduší.
 > * Další aplikací křivkového integrálu druhého druhu je tok vektorového pole křivkou. Ten využijeme později při makroskopické formulaci bilance stavové veličiny a při odvození difuzní rovnice v integrálním tvaru.
 > * Motivací pro zavedení křivkového integrálu druhého druhu je i výpočet [toku přes hranici množiny.](http://user.mendelu.cz/marik/aromamath/Krivkovy_integral.html)
@@ -26,9 +26,9 @@ https://youtu.be/n2roVUrXgcw
 
 </div>
 
-Křivový integrál je rozšíření Riemannova integrálu na případ, kdy množinou, přes kterou integrujeme, je místo úsečky obecnější  křivka. Pro jednoduchost budeme uvažovat dvourozměrnou křivku v rovině $x$, $y$.
+Křivkový integrál je rozšíření Riemannova integrálu na případ, kdy množinou, přes kterou integrujeme, je místo úsečky obecnější  křivka. Pro jednoduchost budeme uvažovat dvourozměrnou křivku v rovině $x$, $y$.
 
-Rozeznáváme dva druhy křivkových integrálů. První z nich používáme při práci se skalárními veličinami. Příkladem je kvadratický moment. (Objekty s velkým kvadratickým momentem jsou při rotačních pohybech obdobou objetků velké hmotnosti při posuvných pohybech.) Druhý z křivkových integrálů používáme při práci ve vektorovém poli. Příkladem je výpočet práce vykonané po křivce nebo tok křivkou.
+Rozeznáváme dva druhy křivkových integrálů. První z nich používáme při práci se skalárními veličinami. Příkladem je kvadratický moment. (Objekty s velkým kvadratickým momentem jsou při rotačních pohybech obdobou objektů velké hmotnosti při posuvných pohybech.) Druhý z křivkových integrálů používáme při práci ve vektorovém poli. Příkladem je výpočet práce vykonané po křivce nebo tok křivkou.
 
 # Parametrické rovnice křivky
 
@@ -40,17 +40,8 @@ https://youtu.be/MRk4HRAWlA4
 
 </div>
 
-Nejprve představíme matematický aparát pro popis křivek.  Rovinné
-křivky nejčastěji popisujeme vektorovou funkcí jedné proměnné,
-resp. dvojicí skalárních funkcí.
-
-* $\vec r\colon \mathbb{R}\to \mathbb{R}^2$
-* $\vec r(t)=[\varphi(t),\psi(t)]=\varphi(t) \vec i + \psi(t)\vec j$, $t\in [\alpha,\beta]$
-* $$C=\begin{cases}
-    x=\varphi(t)\\y=\psi(t), \quad t\in[\alpha,\beta]
-  \end{cases}$$
+Nejprve představíme matematický aparát pro popis křivek.  Rovinné křivky nejčastěji popisujeme vektorovou funkcí jedné proměnné $\vec r\colon \mathbb{R}\to \mathbb{R}^2$. Zpravidla s touto vektorovou funkcí pracujeme v komponentách, kdy každá její komponenta je dána skalární funkcí. Vektorově píšeme $$\vec r(t)=[\varphi(t),\psi(t)]=\varphi(t) \vec\imath + \psi(t)\vec\jmath,\quad t\in [\alpha,\beta]$$ a tato vektorová funkce se nazývá *parametrizace* křivky $C$. Často píšeme parametrické rovnice pro jednotlivé souřadnice ve tvaru $$C=\begin{cases} x=\varphi(t)\\y=\psi(t), \quad t\in[\alpha,\beta].\end{cases}$$
 * Graf křivky dostaneme tak, že pro každé $t$ z intervalu $[\alpha, \beta]$ kreslíme ve 2D bod $[\varphi(t), \psi(t)]$.
-* Vektorová funkce $[\varphi(t)$, $\psi(t)]$ se nazývá *parametrizace* křivky $C$
 * Pro danou křivku $C$ v rovině $xy$, nejsou její parametrické rovnice dány jednoznačně. [Nakreslit online.](https://sagecell.sagemath.org/?z=eJxtkUFvhCAQhe8m_geiB7AlaTFNb5x75ResmbLslohgcGJlf31Ftx42y23C-957k5khMrqQRJuyKIu6rkkMs7fakDEG0kc796ksvBRlsTBspA4Tw5Nf1SmPk_X3cYcHc9vJESIMBmNZ4GA9xwEW-c5Z-zLa5sTE245s0JOXf5SQowvIcixnyA-fhhNnrsafOwffxkmaFbn_SijxukHpCaSDC1HSaM700SHdHaaf8MuU4ORir5O9Gck--ceKokVnZPUV4ZJIjiNAMlNtW6hW_q9rdbfl762z5KHGEdJymEajsYuANkhxhKjDqof9AFA1fx4nfBQ=&lang=sage&interacts=eJyLjgUAARUAuQ==)
 * Parametrizace kružnice, úsečky a grafu funkce jedné proměnné jsou v [cheatsheetu.](https://raw.githubusercontent.com/robert-marik/apl-slidy/master/cheatsheet/cheatsheet-AM.pdf)
 
@@ -70,10 +61,8 @@ https://youtu.be/ZRed88fgDkI
 
 </div>
 
-Pokud uvažujeme drát o lineární hustotě $f$ a délce $s$, je hmotnost
-drátu rovna součinu $m=fs$. Uvažujme drát, který není homogenní, leží
-podél rovinné křivky $C$, jeho lineární hustota (specifická hmotnost) se mění a v bodě
-$(x,y)$ je tato lineární hustota dána funkcí $f(x,y)$. Celkovou hmotnost můžeme odhadnout následovně.
+Pokud uvažujeme rovný drát o lineární hustotě $f$ a délce $s$, je hmotnost
+drátu rovna součinu $$m=fs.$$ Pokud by drát nebyl homogenní, je nutné v tomto vzorci místo součinu použít Riemannův integrál $$m=\int _a^b f\,\mathrm ds.$$ Budeme ve zobecňování pokračovat. Uvažujme drát, který není ani homogenní, ani rovný. Nechť leží podél rovinné křivky $C$ a nechť je jeho lineární hustota (specifická hmotnost) v bodě $(x,y)$ dána funkcí $f(x,y)$. Zde již Riemannův integrál nepomůže. Celkovou hmotnost můžeme odhadnout následovně.
 
 * Myšlenkově rozdělíme drát na malé kousíčky a v každém z nich odhadneme lineární hustotu konstantou. Můžeme například použít minimální hodnotu hustoty v tomto kousíčku pro dolní odhad hmotnosti. 
 * Vynásobením délky každého kousíčku a lineární hustotou obdržíme jeho hmotnost a sečtením přes všechny kousky dostaneme odhad pro hmotnost drátu. Tento odhad bude tím přesnější, čím jemnější dělení použijeme. 
@@ -98,10 +87,10 @@ V limitním procesu můžeme nechat délku  kousíčků konvergovat k nule. Pot�
 </div>
 
 Mějme parametrické rovnice křivky $C$ ve vektorovém tvaru
-$$\vec r(t)=\varphi(t) \vec i + \psi(t)\vec j,$$
+$$\vec r(t)=\varphi(t) \vec\imath + \psi(t)\vec\jmath,$$
 kde $t\in[\alpha,\beta]$.
 Derivováním křivky dostaneme
-$$\frac{\mathrm{d} \vec r(t)}{\mathrm{d}t}=\varphi'(t) \vec i + \psi'(t)\vec j.$$
+$$\frac{\mathrm{d} \vec r(t)}{\mathrm{d}t}=\varphi'(t) \vec\imath + \psi'(t)\vec\jmath.$$
 Výpočtem délky vektoru (a formálním vynásobením výrazem $\mathrm{d}t$) dále
 $$\mathrm{d}s=|\mathrm{d}\vec r(t)|=\sqrt{(\varphi'(t))^2 + (\psi'(t))^2}\mathrm{d}t.$$
 Tím se křivkový integrál prvního druhu funkce $f(x,y)$ po křivce $C$
@@ -115,7 +104,7 @@ $$
 
 S křivkovým integrálu po křivce  
 $$
-  C:\quad \varphi(t)\vec i + \psi(t)\vec j + \xi(t) \vec k, \quad t\in[\alpha,\beta]
+  C:\quad \varphi(t)\vec\imath + \psi(t)\vec\jmath + \xi(t) \vec k, \quad t\in[\alpha,\beta]
 $$
 ve trojrozměrném prostoru pracujeme podobně. Délkový element je
 $$
@@ -129,34 +118,23 @@ a integrál má tvar
 
 <style>
 table, th, td {
-   border: 2px solid green;
+   border: 0px solid green;
 } 
 table {width:97%;}
 td {padding:10px}
-tr td:first-child {color:green; background: #E9E9E9;}
 table {
     border-collapse: collapse;
-}
-</style>
-
-<style>
-table, th, td {
-   border: 2px solid green;
-} 
-table {width:97%;}
-td {padding:10px}
-tr td:first-child {color:green; background: #E9E9E9;}
-table {
-    border-collapse: collapse;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
 }
 
 th {
-    background-color: green;
-    color: white;
-    border-color: gray;
-}
+    border-bottom: 2px solid black;
+    text-align: left;
+    }
 
-th {text-align: center;}
 </style>
 
 \iffalse
@@ -217,17 +195,17 @@ $$
 
 </div>
 
-Ukážeme si aplikaci křivkového integrálu prvního druhu k tomu, abychom sečetli komponenty síly, snažící se roztrhnout natlakovanou válcovou nádobu. Tlaková síla je ve všech částech nádoby stejně velká. Protože je však kolmá ke stěně nádoby, mění se směr síly a tím i průměty síly do směru, ve kterém počítáme namáhání. 
+Ukážeme si aplikaci křivkového integrálu prvního druhu k tomu, abychom sečetli komponenty síly, snažící se roztrhnout natlakovanou válcovou nádobu. Tlaková síla je ve všech částech nádoby stejně velká. Protože je však kolmá ke stěně nádoby, mění se směr síly a tím i průměty síly do směru, ve kterém počítáme namáhání. Zjednodušíme si situaci tím, že budeme uvažovat průmět stěny do roviny podstavy, kdy se stěna redukuje na křivku.
 
-Vypočteme sílu, která se snaží roztrhnout válec napříč (viz řez A v obrázku) a podélně (viz řez B v obrázku). Tyto dvě namáhání porovnáme. Ještě existuje namáhání radiálně od osy. Ale v tomto případě se tlaková síla rozkládá na celou plochu pláště válce a v tomto směru je  namáhání minimální. Proto si toto dovolíme zanedbat.
+Vypočteme síly, které se snaží roztrhnout válec napříč (viz řez A v obrázku) a podélně (viz řez B v obrázku). Tato dvě namáhání porovnáme. Ještě existuje namáhání radiálně od osy. Ale v tomto případě se tlaková síla rozkládá na celou plochu pláště válce a v tomto směru je  namáhání minimální. Proto toto namáhání nemusíme uvažovat.
 
 Uvažujme natlakovanou válcovou nádobu s tlakem $p$, výškou $L$, poloměrem podstavy $r$ a stěnou o tloušťce $t$. 
 
-Vypočteme nejprve namáhání v ose, tj. namáhání řezu A. Obsah řezu (vyšrafováno červeně) je $2\pi r t$. Na dno a víko působí síla $F=p\pi r^2$ a v řezu A kolmém na osu válce je tahové napětí $$\sigma_{p} = \frac FS=\frac {p\pi r^2}{2\pi rt}=\frac {pr}{2t}.$$
+Výpočet namáhání v řezu A je snadný. Obsah řezu (vyšrafováno červeně) je $2\pi r t$. Na dno a víko působí síla $F=p\pi r^2$ a v řezu A je tahové napětí $$\sigma_{p} = \frac FS=\frac {p\pi r^2}{2\pi rt}=\frac {pr}{2t}.$$
 
 Nyní vypočteme namáhání, které se snaží roztrhnout válec podélně. K tomu musíme vypočítat sílu, která působí po obvodě válce, tj. která se snaží válec roztrhnout v řezu B. Obsah řezu  (červeně vyznačeno) je $2Lt$. Nejtěžší bude najít celkovou sílu, která od sebe oddaluje dvě poloviny pláště. To je místo, kde zapojíme integrál. 
 
-Budeme se na úlohu dívat shora ze směru, kterým míří osa válce. Tím můžeme snížit dimenzionalitu úlohy. Plášť válce v tomto pohledu vidíme jako kružnici a polovinu pláště jako půlkružnici. Tato půlkružnice  má rovnici $\vec r(t)=r\cos(t)\vec i+r\sin (t)\vec j$, kde $r$ je poloměr válce a $t\in\left[-\frac \pi 2,\frac \pi 2\right]$ je úhel mezi spojnicí elementu v bodě $(x,y)$ a mezi kladnou částí osy $x$. Kousek pláště válce odpovídající v průmětu úseku křivky délky $\Delta s$ má obsah $L\Delta s$. Tlaková síla na tento kousek je součin tlaku a obsahu, tj. $$\Delta F=pS=p L\Delta s.$$ Směr je kolmý k plášti válce a s vodorovnou osou proto síla svírá úhel $t$.  Průmět této síly do vodorovného směru je $$\Delta F_x=pL\Delta s \cos t$$ a tyto příspěvky musíme posčítat křivkovým integrálem přes celou křivku. Platí $\mathrm ds=r\mathrm dt$. Celková síla, která se snaží nádobu roztrhnout podélně je 
+Budeme se na úlohu dívat shora ze směru, kterým míří osa válce. Tím můžeme snížit dimenzionalitu úlohy. Plášť válce v tomto pohledu vidíme jako kružnici a polovinu pláště jako půlkružnici. Tato půlkružnice  má rovnici $\vec r(t)=r\cos(t)\vec\imath+r\sin (t)\vec\jmath$, kde $r$ je poloměr válce a $t\in\left[-\frac \pi 2,\frac \pi 2\right]$ je úhel mezi spojnicí elementu v bodě $(x,y)$ a mezi kladnou částí osy $x$. Kousek pláště válce odpovídající v průmětu úseku křivky délky $\Delta s$ má obsah $L\Delta s$. Tlaková síla na tento kousek je součin tlaku a obsahu, tj. $$\Delta F=pS=p L\Delta s.$$ Směr je kolmý k plášti válce a s vodorovnou osou proto síla svírá úhel $t$.  Průmět této síly do vodorovného směru je $$\Delta F_x=pL\Delta s \cos t$$ a tyto příspěvky musíme sečíst křivkovým integrálem přes celou křivku. Platí $\mathrm ds=r\mathrm dt$. Celková síla, která se snaží nádobu roztrhnout podélně je 
 \dm$$F_x=\int_C pL \cos t \,\mathrm d s = \int_{-\frac \pi 2}^{\frac \pi 2} pLr \cos t \,\mathrm d t =prL [\sin t]_{-\frac \pi 2}^{\frac \pi 2}=prL \left[\sin\frac \pi 2 -\sin\left(-\frac \pi2 \right)\right]=2p rL.$$ 
 Povrch, na který tato síla působí, odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah $2Lt$ a napětí je tedy 
 $$\sigma_{h}=\frac{2pLr}{2Lt}=\frac{pr}t=2\sigma_p.$$ Vidíme, že toto napětí je dvojnásobkem napětí v podélné ose. 
@@ -255,7 +233,6 @@ https://youtu.be/GeJgtBHy_sM
 
 </div>
 
-
 Pokud působíme na těleso silou $F$ a přemísťujeme toto těleso ve směru
 působící síly po dráze délky $s$,
 [konáme práci](http://cs.wikipedia.org/wiki/Mechanická\_práce)
@@ -268,7 +245,7 @@ Předpokládejme, že na těleso působí (obecně nekonstantní) síla $\vec F$
 V limitě dostáváme veličinu, která se nazývá *křivkový integrál
 druhého druhu* funkce $\vec F$ po křivce $C$. Tento integrál zapisujeme $$
 \int_C\vec F\;\mathrm{d}\vec r .$$ Je-li $$ \vec F(x,y)=P(x,y)\vec
-i+Q(x,y)\vec j, $$ zapisujeme někdy křivkový integrál
+i+Q(x,y)\vec\jmath, $$ zapisujeme někdy křivkový integrál
  ve složkách $$ \int_C P(x,y)\mathrm{d}
 x+Q(x,y)\mathrm{d} y.  $$
 
@@ -289,10 +266,10 @@ Protože při pohybu tělesa po křivce jedním směrem se práce koná a při p
 </div>
 
 Známe-li parametrické rovnice
-$$\vec r(t) = \varphi(t)\vec i + \psi(t) \vec j,\quad t\in[\alpha,\beta],$$
+$$\vec r(t) = \varphi(t)\vec\imath + \psi(t) \vec\jmath,\quad t\in[\alpha,\beta],$$
 křivky $C$, je možno křivkový integrál
 druhého druhu funkce
-$$\vec F(x,y)=P(x,y)\vec i + Q(x,y)\vec j$$
+$$\vec F(x,y)=P(x,y)\vec\imath + Q(x,y)\vec\jmath$$
 po křivce $C$ zapsat
 následovně 
 $$
@@ -310,7 +287,7 @@ $$
 
 Následující vlastnosti jsou stejné jako u křivkového integrálu prvního druhu.
 
-> Věta (lineatira a aditivita vzhledem k integračnímu oboru). Křivkový integrál druhého druhu je lineární vzhledem k funkci a
+> Věta (linearita a aditivita vzhledem k integračnímu oboru). Křivkový integrál druhého druhu je lineární vzhledem k funkci a
   aditivní vzhledem k oboru integrace. Přesněji, pro funkce $\vec F$ a $\vec G$
   a konstantu $k$ platí následující.
 $$
@@ -343,7 +320,7 @@ $$
   kterou si uvedeme později.
 * Při odvození křivkového integrálu druhého druhu jako vykonané práce hraje roli vlastně jenom ta
   složka silového pole, která při posunu ve směru křivky koná práci. Uvažujeme tedy jenom složku tečnou ke křivce. Pokud použijeme naopak pouze normálovou komponentu, dostaneme veličinu vyjadřující **tok vektorového pole orientovanou křivkou $C$**. Výsledný vzorec pro tok vektorového pole $\vec F(x,y)=P(x,y)\vec
-i+Q(x,y)\vec j$ křivkou $C$
+i+Q(x,y)\vec\jmath$ křivkou $C$
   je
   $$
   \int_{C}-Q(x,y)\mathrm{d}x+P(x,y)\mathrm{d}y.
@@ -414,7 +391,6 @@ rovnoběžné osy.
 * Křivkový integrál prvního druhu, [numerický výpočet pomocí Sage.](https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&lang=sage)
 * Křivkový integrál druhého druhu, [numerický výpočet pomocí Sage.](https://sagecell.sagemath.org/?z=eJxtkMFuwyAQRO-W_A8r5RBIaepGOVXi6p-o2ogaUiEbcDGxgK8v2CFqoywXntjRzDAzi7Zui-tqs9lAZJxpCeeL7jtRV61HngQSMX0OiUIhnyAWaOoqnyy3ZtayEzBaA72Vc59UHjlMD7vOTOlSVyHjJPUCMUNT1ErEVToyy5Rwtq6ckpo4xTxtyOvLcTfKm9mDWV70RQkrOzacpHbi27IBwRl5mnOQQLM_iTQ7Y9jB9GMd4vKcNvKDw5-HpwXDf4wFMYE0t1z4vfnIttxMLAotT2ttqtiIYGDqizMY38biD9cAcE1AALWetIFAG3H6kBSXS6HdvX6_hMjCNefaYumAs_2D0rPonLHoLhjec-NO6ZP5pXNlp7jiP-WgtPsFHlShKA==&lang=sage)
 
-
 \fi
 
 <style>
@@ -433,7 +409,6 @@ column-count:3;}
 .sloupce4 ul li {display:inline-block; max-width:100%;}
 </style>
 
-
 # Z ptačí perspektivy
 
 \iffalse
@@ -444,8 +419,7 @@ column-count:3;}
 
 </div>
 
-
 \fi
 
-* Křivkový integrál druhého druhu souvisí s prací silového pole. Vzhledem ke zkušenostem z mechaniky by toto měla být cesta ke skalárnímu popisu vektorového pole. Protože v minulém týdnu jsme jednu takovou cetu otevřeli (pojem rotace a její nulovost či nenulovost), dá se očekávat, že obě problematiky budou souvistet. Tuto  souvislost si ukážeme později, za dva týdny (Greenova věta).
-* Křivkový integrál druhého druhu může souviset s i s tokem vektorového pole křivkou a to je zase doména difuzní rovnice a divergence vektorového pole. Oba pojmy, křivkový intergál a divergence spolu opravdu souvisí a přesvědčí nás o tom později opět Greenova věta.
+* Křivkový integrál druhého druhu souvisí s prací silového pole. Vzhledem ke zkušenostem z mechaniky by toto měla být cesta ke skalárnímu popisu vektorového pole. Protože v minulém týdnu jsme jednu takovou cestu otevřeli (pojem rotace a její nulovost či nenulovost), dá se očekávat, že obě problematiky budou souviset. Tuto souvislost si ukážeme později, za dva týdny (Greenova věta).
+* Křivkový integrál druhého druhu může souviset s i s tokem vektorového pole křivkou a to je zase doména difuzní rovnice a divergence vektorového pole. Oba pojmy, křivkový integrál a divergence spolu opravdu souvisí a přesvědčí nás o tom později opět Greenova věta.

@@ -23,7 +23,7 @@
 
 https://youtu.be/08uAuAgY-lw
 
-## Tepelná výměna, kafe v hrnku
+## Tepelná výměna, káva v hrnku
 
 \iffalse
 
@@ -36,7 +36,7 @@ https://youtu.be/08uAuAgY-lw
 
 \fi
 
-* Z fyziky víme, že *rychlost tepelné výměny mezi dvěma tělesy je úměrná rozdílu jejich teplot* (Newtonův zákon tepelné výměny). Rychlostí tepelné výměny můžeme rozumět například rychlost s jakou roste teplote studeného tělesa v teplém prostředí nebo s jakou klesá teplota horkého tělesa umístěného v chladnějším prostředí.
+* Z fyziky víme, že *rychlost tepelné výměny mezi dvěma tělesy je úměrná rozdílu jejich teplot* (Newtonův zákon tepelné výměny). Rychlostí tepelné výměny můžeme rozumět například rychlost s jakou roste teplota studeného tělesa v teplém prostředí nebo s jakou klesá teplota horkého tělesa umístěného v chladnějším prostředí.
 * Rychlost s jakou roste teplota $T$ tělesa tělesa v čase je derivace teploty podle času. Pokud potřebujeme pracovat s poklesem, uvažujeme záporně vzatou derivaci. Úměrnost matematicky vyjádříme násobením konstantou a teplotní rozdíl může být například při umístění horkého tělesa o teplotě $T$ v chladné místnosti o teplotě $T_0$ vyjádřen rozdílem $T-T_0$.
 * Proces tepelné výměny probíhající podle Newtonova zákona
   je tedy možno modelovat vztahem $$ \frac{\mathrm
@@ -209,9 +209,7 @@ RC obvod jako takový má však důležité místo i dnes. Dokáže například 
 
 Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a proto se v obvodu projevují i nežádoucí parazitní charakteristiky. Pokud by toto bylo limitující, je možné obvod nahradit podobně se chovajícím zapojením s [operačním zesilovačem](https://cs.wikipedia.org/wiki/Zapojen%C3%AD_s_opera%C4%8Dn%C3%ADm_zesilova%C4%8Dem#Integra%C4%8Dn%C3%AD_zesilova%C4%8D) (odkazovaná stránka pracuje s rovnicí v integrálním tvaru).
 
-
 ## Vývoj populace a její ekologický lov
-
 
 \iffalse
 
@@ -223,7 +221,6 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 </div>
 
 \fi
-
 
 * Zkoumejme velikost $y$  určité populace, v prostředí s\ nosnou kapacitou $K$.
 * Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s\ omezenými úživnými
@@ -247,16 +244,11 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 ## Lovci meteoritů z ČSSR a ČR
 
-
-
 <div class='obtekat'>
 
 ![Tři dosud nalezené meteority Benešov. foto: Pavel Spurný, převzato z https://dvojka.rozhlas.cz/](benesov.jpeg)
 
 </div>
-
-
-
 
 Česká republika je na světové špičce ve oblasti propočítávání dráhy meteoritů ze světelné stopy zachycené sítí bolidových kamer. Vědcům z Astronomického ústavu se podařilo 
 
@@ -323,9 +315,7 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
 
 **Příklad.** Najděte všechny funkce splňující $y'=2xy$ a $y(0)=3$. (Naučíme se řešit později.)
 
-
 > Věta (existence a jednoznačnost řešení Cauchyovy úlohy). Má-li funkce $\varphi (x,y)$ ohraničenou parciální derivaci $\frac{\partial \varphi}{\partial y}$ v okolí počáteční podmínky, potom má počáteční úloha (1)-(2) právě jedno řešení definované v nějakém okolí počáteční podmínky.
-
 
 **Příklad.** Rovnice $$y'=y\tag{3}$$ má řešení $y=e^x$, což nahlédneme
   snadno, protože exponenciální funkce se nemění
@@ -335,10 +325,7 @@ mechanismus ovlivňuje vývoj systému, ale také stav současný.
 **Příklad.** Řešení počáteční úlohy $$y'=y, \quad y(x_0)=y_0$$ najdeme tak, že využijeme řešení (4) a zařídíme, aby byla splněna počáteční podmínka. Tj. řešením počáteční úlohy je
   $$y=  (y_0 e^{-x_0}) e^x.$$ Vidíme, že toto řešení existuje pro každou počáteční podmínku a proto vzorec (4) popisuje dokonce **všechna** řešení rovnice (3).
 
-
-
 ## Obecné a partikulární řešení
-
 
 Řešení diferenciální rovnice je nekonečně mnoho. Zpravidla je dokážeme
 zapsat pomocí jediného vzorce, který obsahuje nějakou (alespoň do
@@ -354,7 +341,6 @@ splňující diferenciální rovnici.
   $y=5e^{x^2}$. Řešením počáteční úlohy $$y'=2xy, \quad y(0)=3$$ je
   $$y=3e^{x^2}.$$
 
-
 \iffalse
 
 **Online řešiče ODE (symbolicky):**
@@ -363,7 +349,6 @@ splňující diferenciální rovnici.
 * [Sage](https://sagecell.sagemath.org/?z=eJyrtE0rzUsuyczP01CvVNfUqNDk5eLlUlYoyi_Ly0xOVahUt63Ur9A25OWCidgqpGSmpWlU6lRoKtjaKgBlFbQVDCG6js5IPbowNe_wWl6ulNTi_JyyVA2oNh2FSk294oz8cg1NFIUKZUCrqvIOLyzOTwLyV-YqlJQlFpVi159aUZCYl6IBMwgAhplAVA==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 \fi
-
 
 # Úvod do problematiky numerického řešení diferenciálních rovnic
 
@@ -400,24 +385,20 @@ osy $x$. Například v bodech kde platí $\varphi(x,y)=0$ míří všechny
 integrální křivky vodorovně. Proto se křivky, kde je $\varphi(x,y)$
 konstantní, nazývají **izokliny**.
 
-
 \iffalse
 
 ## Numerické řešení IVP
-
 
 <div class='obtekat'>
 
 ![Eulerova metoda s\ velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou
  barvou). Pro lepší výsledek můžeme zmenšit krok nebo vylepšit metodu.](euler.png)
 
-
 ![Metoda Runge Kutta s\ velmi dlouhým krokem (modrou barvou, jde jasně
  vidět aproximace lomenou čarou). Přesné řešení je nakresleno šedou
  barvou.](rk.png)
 
 </div>
-
 
 Řešení počáteční úlohy lze numericky aproximovat poměrně snadno:
 začneme v bodě zadaném počáteční podmínkou a v okolí tohoto bodu
@@ -451,7 +432,6 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
   eliminovat. Jednoduchým a často dostatečným způsobem je volba
   jednotek, obecnější metodou je transformace diferenciální rovnice
   uvedená v následujícím textu.
-
 
 **Online řešiče ODE (numericky):**
 
