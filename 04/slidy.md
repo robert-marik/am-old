@@ -239,6 +239,8 @@ Na následujících obrázcích jsou modrou barvou vrstevnice proudové funkce a
 
 https://youtu.be/52W524bSOKQ
 
+[Prezentace](https://user.mendelu.cz/marik/manim/Chyby)
+
 \iffalse 
 
 <div class='obtekat'>
@@ -249,7 +251,7 @@ https://youtu.be/52W524bSOKQ
 
 \fi
 
-Některé veličiny neměříme přímo, ale vypočítáváme z jiných naměřených veličin. Takové věličiny se nazývají nepřímo měřené veličiny.
+Některé veličiny neměříme přímo, ale vypočítáváme z jiných naměřených veličin. Takové veličiny se nazývají nepřímo měřené veličiny.
 
 * Předpokládejme, že měříme nepřímo veličinu $f$ tak, že měříme veličiny
 $x_1$, $x_2$, $\dots$, $x_n$ a hodnotu veličiny $f$ určíme pomocí vzorce
@@ -266,8 +268,7 @@ jednotlivými veličinami $x_i$. Častěji se však používá následující vz
 \dm $$  \Delta f(x_1,x_2,\dots x_n)\approx\sqrt{\left(\frac{\partial f}{\partial x_1}\Delta x_1\right)^2+\left(\frac{\partial f}{\partial x_2}\Delta x_2\right)^2+\cdots+\left(\frac{\partial f}{\partial x_n}\Delta x_n\right)^2}$$
 označovaný **zákon šíření chyb**.
 
-
-# Zákon šíření chyb  - příklad
+# Zákon šíření chyb (příklad)
 
 \iffalse 
 
