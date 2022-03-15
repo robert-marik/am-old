@@ -251,7 +251,7 @@ Tvar (F.5) je nejobecnější. Pokud je materiál iztropní, redukuje se (F.5) n
 table, th, td {
    border: 0px solid green;
 } 
-table {width:97%;}
+table {min-width:97%;}
 td {padding:10px}
 table {
     border-collapse: collapse;
@@ -274,8 +274,8 @@ th {
 |$q=\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|Ne|
 |$q=-\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|ANO|
 |$q=-\lambda \frac{\mathrm d T}{\mathrm d x}$|1|Nemá smysl|ANO|ANO|
-|$\vec q=-\lambda \nabla{T}$ <br>$\lambda\in\mathbb{R}$|Libovolný|Ne|ANO|ANO|
-|$\vec q=-\lambda \nabla{T}$ <br>$\lambda\in\mathbb{R}^{n\times n}$|Libovolný|ANO|ANO|ANO|
+|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ skalár|Libovolný|Ne|ANO|ANO|
+|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ matice|Libovolný|ANO|ANO|ANO|
 
 \iffalse
 
