@@ -242,7 +242,7 @@ V souvislosti s Fourierovým zákonem prodiskutujeme různé tvary konstitutivn�
 * Zohledníme-li v předešlé formulaci i směr toku tepla (proti růstu teploty, tj. z horkého místa do místa studeného), má Fourierův zákon tvar $$q=-\lambda \frac{\Delta T}{\Delta x}.\tag{F.2}$$
 * Zohledníme-li v předešlé formulaci i možnost, že teplotní profil je nerovnoměrný, musíme změnu teploty počítat derivací místo podílu a poté má Fourierův zákon tvar $$q=-\lambda \frac{\mathrm d T}{\mathrm d x}.\tag{F.3}$$
 * Chceme-li v předešlé formulaci zachytit i vedení tepla v rovinném materiálu či v trojrozměrném tělese, musíme derivaci teploty nahradit gradientem a poté má Fourierův zákon tvar $$\vec q=-\lambda \nabla{T}.\tag{F.4}$$ V souřadnicích potom $$ q_i=-\lambda \frac{\partial T}{\partial x_i}.$$
-* Chceme-li v předešlé formulaci zachytit i vedení tepla v anizotropním materiálu (v různých směrech různé vlastnosti), má Fourierův zákon formálně opět tvar $$\vec q=-\lambda \nabla{T},\tag{F.5}$$ ale veličina $\lambda$ už není skalární veličina, ale matice. V souřadnicích potom $$ q_i=-\sum_{j}\lambda_{ij} \frac{\partial T}{\partial x_j}.$$ Tento vztah se zpravidla zapisuje pomocí zkrácené Einsteinovy notace (přes opakovaný index se sčítá a vynechává se znaménko pro sumu) ve tvaru $$ q_i=-\lambda_{ij} \frac{\partial T}{\partial x_j}.$$
+* Chceme-li v předešlé formulaci zachytit i vedení tepla v anizotropním materiálu (v různých směrech různé vlastnosti), má Fourierův zákon formálně opět tvar $$\vec q=-\lambda \nabla{T},\tag{F.5}$$ ale veličina $\lambda$ už není skalární veličina, je to matice. V souřadnicích potom $$ q_i=-\sum_{j}\lambda_{ij} \frac{\partial T}{\partial x_j}.$$ Tento vztah se zpravidla zapisuje pomocí zkrácené Einsteinovy notace (přes opakovaný index se sčítá a vynechává se znaménko pro sumu) ve tvaru $$ q_i=-\lambda_{ij} \frac{\partial T}{\partial x_j}.$$
 
 Tvar (F.5) je nejobecnější. Pokud je materiál iztropní, redukuje se (F.5) na (F.4). Pokud je úloha jednodimenzionální, redukují se (F.4) a (F.5) automaticky na (F.3). Pokud teplota roste lineárně, je možno derivaci vypočítat pomocí podílu a úloha se dále redukuje na (F.2) nebo (pokud nás zajímá velikost a ne směr) na (F.1).
 
@@ -269,13 +269,13 @@ th {
 </style>
 
 
-|Tvar zákona|Počet dimenzí|Funguje pro anizotropní materiály|Modeluje i nelineární průběh teploty|Udává směr roku tepla|
+|Tvar zákona|Počet dimenzí|Funguje pro anizotropní materiály|Zachycuje i nelineární průběh teploty|Udává směr toku tepla|
 |--|--|--|--|--|
 |$q=\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|Ne|
 |$q=-\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|ANO|
 |$q=-\lambda \frac{\mathrm d T}{\mathrm d x}$|1|Nemá smysl|ANO|ANO|
 |$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ skalár|Libovolný|Ne|ANO|ANO|
-|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ matice|Libovolný|ANO|ANO|ANO|
+|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ tenzor (matice)|Libovolný|ANO|ANO|ANO|
 
 \iffalse
 
