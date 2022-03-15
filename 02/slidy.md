@@ -246,13 +246,36 @@ V souvislosti s Fourierovým zákonem prodiskutujeme různé tvary konstitutivn�
 
 Tvar (F.5) je nejobecnější. Pokud je materiál iztropní, redukuje se (F.5) na (F.4). Pokud je úloha jednodimenzionální, redukují se (F.4) a (F.5) automaticky na (F.3). Pokud teplota roste lineárně, je možno derivaci vypočítat pomocí podílu a úloha se dále redukuje na (F.2) nebo (pokud nás zajímá velikost a ne směr) na (F.1).
 
+
+<style>
+table, th, td {
+   border: 0px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+table {
+    border-collapse: collapse;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+}
+
+th {
+    border-bottom: 2px solid black;
+    text-align: left;
+    }
+
+</style>
+
+
 |Tvar zákona|Počet dimenzí|Funguje pro anizotropní materiály|Modeluje i nelineární průběh teploty|Udává směr roku tepla|
 |--|--|--|--|--|
 |$q=\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|Ne|
 |$q=-\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|ANO|
 |$q=-\lambda \frac{\mathrm d T}{\mathrm d x}$|1|Nemá smysl|ANO|ANO|
 |$\vec q=-\lambda \nabla{T}$ <br>$\lambda\in\mathbb{R}$|Libovolný|Ne|ANO|ANO|
-|$\vec q=-\lambda \nabla{T}$ <br>$\lambda\in\mathbb{R^{n\times n}}$|Libovolný|ANO|ANO|ANO|
+|$\vec q=-\lambda \nabla{T}$ <br>$\lambda\in\mathbb{R}^{n\times n}$|Libovolný|ANO|ANO|ANO|
 
 \iffalse
 
