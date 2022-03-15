@@ -233,6 +233,27 @@ $k$ skalární veličinou, případně skalární veličina násobená
 jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter.
 Veličina $k$ se nazývá součinitel tepelné vodivosti, koeficient tepelné vodivosti nebo Fourierův koeficient.
 
+
+## Různé podoby Fourierova zákona
+
+V souvislosti s Fourierovým zákonem prodiskutujeme různé tvary konstitutivních zákonů. Tento zákon udává tok tepla vyvolaný teplotním gradientem. Je to velmi používaný zákon a proto má několik variant. Začneme od nejjednodušší formulace (F.1), kterou můžeme formulovat pomocí základních matematických operací, násobení a dělení. Tento tvar se snadno používá, ale je vhodný jenom pro jednoduché výpočty, jako například teplotní únik stěnou domu. Složitější formulace (F.2) a (F.3), využívající derivace, dokáží modelovat i to, co se děje uvnitř stěny a jak vypadá teplotní profil. Nejsou však užitečné při studiu vedení tepla v rovině nebo v prostoru. K tomu je nutno použít ještě obecnější (a složitější) formulaci (F.4), využívající gradient místo derivace. I zde jsou však omezení: je-li součinitel tepelné vodivosti skalární hodnota, je možné takto spolehlivě modelovat pouze izotropní materiály. Není možné zohlednit skutečnost, že v některém směru je přenos tepla snadnější než ve směru jiném. Tuto nesnáz odstraňuje až nejobecnější tenzorová formulace (F.5), která kromě gradientu používá i tenzorový tvar součinitele tepelné vodivosti a díky tomu dovoluje modelovat i anizotropní materiály. 
+
+* Jednodimenzionální tvar, kde se nezohledňuje směr toku tepla ani rozložení teploty je $$q=\lambda \frac{\Delta T}{\Delta x},\tag{F.1}$$ kde $\lambda$ je materiálová konstanta, $q$ je tok tepla, $\Delta T$ je teplotní rozdíl na vrstvě materiálu tloušťky $\Delta x$. Toto je nejjednodušší tvar, umožňující základní výpočty i aparátem střední školy, jako například teplotní ztráty stěnou. 
+* Zohledníme-li v předešlé formulaci i směr toku tepla (proti růstu teploty, tj. z horkého místa do místa studeného), má Fourierův zákon tvar $$q=-\lambda \frac{\Delta T}{\Delta x}.\tag{F.2}$$
+* Zohledníme-li v předešlé formulaci i možnost, že teplotní profil je nerovnoměrný, musíme změnu teploty počítat derivací místo podílu a poté má Fourierův zákon tvar $$q=-\lambda \frac{\mathrm d T}{\mathrm d x}.\tag{F.3}$$
+* Chceme-li v předešlé formulaci zachytit i vedení tepla v rovinném materiálu či v trojrozměrném tělese, musíme derivaci teploty nahradit gradientem a poté má Fourierův zákon tvar $$\vec q=-\lambda \nabla{T}.\tag{F.4}$$ V souřadnicích potom $$ q_i=-\lambda \frac{\partial T}{\partial x_i}.$$
+* Chceme-li v předešlé formulaci zachytit i vedení tepla v anizotropním materiálu (v různých směrech různé vlastnosti), má Fourierův zákon formálně opět tvar $$\vec q=-\lambda \nabla{T},\tag{F.5}$$ ale veličina $\lambda$ už není skalární veličina, ale matice. V souřadnicích potom $$ q_i=-\sum_{j}\lambda_{ij} \frac{\partial T}{\partial x_j}.$$ Tento vztah se zpravidla zapisuje pomocí zkrácené Einsteinovy notace (přes opakovaný index se sčítá a vynechává se znaménko pro sumu) ve tvaru $$ q_i=-\lambda_{ij} \frac{\partial T}{\partial x_j}.$$
+
+Tvar (F.5) je nejobecnější. Pokud je materiál iztropní, redukuje se (F.5) na (F.4). Pokud je úloha jednodimenzionální, redukují se (F.4) a (F.5) automaticky na (F.3). Pokud teplota roste lineárně, je možno derivaci vypočítat pomocí podílu a úloha se dále redukuje na (F.2) nebo (pokud nás zajímá velikost a ne směr) na (F.1).
+
+|Tvar zákona|Počet dimenzí|Funguje pro anizotropní materiály|Modeluje i nelineární průběh teploty|Udává směr roku tepla|
+|--|--|--|--|--|
+|$q=\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|Ne|
+|$q=-\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|ANO|
+|$q=-\lambda \frac{\mathrm d T}{\mathrm d x}$|1|Nemá smysl|ANO|ANO|
+|$\vec q=-\lambda \nabla{T}$ <br>$\lambda\in\mathbb{R}$|Libovolný|Ne|ANO|ANO|
+|$\vec q=-\lambda \nabla{T}$ <br>$\lambda\in\mathbb{R^{n\times n}}$|Libovolný|ANO|ANO|ANO|
+
 \iffalse
 
 ## Soretův efekt (termodifuze)
@@ -250,7 +271,7 @@ Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k tran
 </div>
 
 
-Ohmův zákon je velice známý vztah mezi napětím a proudem. Přeformulováno z integrálního tvaru $I=\frac 1R U$ (pro elektrické obvody) do diferenciálního tvaru (pro popis děje v látce) tento zákon říká, že hustota elektrického proudu $\vec j$ je dána intenzitou  elektrického pole $\vec E$. A tato intenzita je gradientem potenciálu $\varphi$ elektrického pole, tj. $\vec E=\nabla \varphi$. Spojenením těchto poznatků a při použití  lineární aproximace dostáváme $$\vec j=\gamma \nabla \varphi,$$ což je Ohmův zákon v diferenciálním tvaru. Formálně máme tedy stejný tvar zákona jako u vedení tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot je nahrazen rozdílem potenciálů. Znalost zapojování elektrických obvodů, jako je například paralelní nebo sériové zapojení rezistorů, bývá běžná a toho se často využívá při modelování tepelného odporu pomocí elektrického odporu. Formálně jsou vztahy identické.
+Ohmův zákon je velice známý vztah mezi napětím a proudem. Přeformulováno z integrálního tvaru $I=\frac 1R U$ (pro elektrické obvody) do diferenciálního tvaru (pro popis děje v látce) tento zákon říká, že hustota elektrického proudu $\vec j$ je dána intenzitou  elektrického pole $\vec E$. A tato intenzita je gradientem potenciálu $\varphi$ elektrického pole, tj. $\vec E=\nabla \varphi$. Spojenením těchto poznatků a při použití  lineární aproximace dostáváme $$\vec j=-\gamma \nabla \varphi,$$ což je Ohmův zákon v diferenciálním tvaru. Formálně máme tedy stejný tvar zákona jako u vedení tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot je nahrazen rozdílem potenciálů. Znalost zapojování elektrických obvodů, jako je například paralelní nebo sériové zapojení rezistorů, bývá běžná a toho se často využívá při modelování tepelného odporu pomocí elektrického odporu. Formálně jsou vztahy identické.
 
 Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v případě Ohmova zákona konstanta úměrnosti uvažována jako reálné číslo, nikoliv matice. Tím se věci znatelně zjednodušují, ale vyplývají odsud i limity použitelnosti při modelování vedení tepla jako vedení elektrického proudu. Například při průchodu elektrického proudu dřevem je konstanta úměrnosti z Ohmova zákona tenzorová a její nahrazení jedinou skalární hodnotou je pouze zjednodušení reálné situace.
 
