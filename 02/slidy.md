@@ -264,18 +264,20 @@ table {
 th {
     border-bottom: 2px solid black;
     text-align: left;
+    padding-top: 10px;
+    padding-bottom: 10px;    
     }
 
 </style>
 
 
-|Tvar zákona|Počet dimenzí|Funguje pro anizotropní materiály|Zachycuje i nelineární průběh teploty|Udává směr toku tepla|
-|--|--|--|--|--|
-|$q=\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|Ne|
-|$q=-\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|ANO|
-|$q=-\lambda \frac{\mathrm d T}{\mathrm d x}$|1|Nemá smysl|ANO|ANO|
-|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ skalár|Libovolný|Ne|ANO|ANO|
-|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ tenzor (matice)|Libovolný|ANO|ANO|ANO|
+|Tvar zákona|Počet dimenzí|Funguje pro anizotropní materiály|Zachytí i nelineární průběh teploty|Udává směr toku tepla|Odlišnost od předchozí formulace (o řádek výše)|
+|--|--|--|--|--|--|
+|$q=\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|Ne|-|
+|$q=-\lambda \frac{\Delta T}{\Delta x}$|1|Nemá smysl|Ne|ANO|Znaménko zohledňuje fakt, že teplo teče od horkého konce ke studenému|
+|$q=-\lambda \frac{\mathrm d T}{\mathrm d x}$|1|Nemá smysl|ANO|ANO|Derivace podle $x$ (jednorozměrný gradient) místo podílu.|
+|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ skalár|Libovolný|Ne|ANO|ANO|Jednorozměrný gradient je nahrazen obecným gradientem. Tok je vektor.|
+|$\vec q=-\lambda \nabla{T}$ <br>$\lambda$ tenzor (matice)|Libovolný|ANO|ANO|ANO|Materiálová charakteristika $\lambda$ je matice.|
 
 \iffalse
 

@@ -254,8 +254,8 @@ Vyřešte příklady na následujících odkazech. Řiďte se popsaným pravidle
 
 ## Křivkový integrál
 
-* Pokud tok a vektorové pole svírají v bodě křivky ostrý úhel, je příspěvek k celkové hodnotě integrálu kladný. Pokud jsou přesně stejným směrem (nulový úhel) je příspěvek roven součinu.
-* Pokud tok a vektorové pole svírají v bodě křivky tupý úhel, je příspěvek k celkové hodnotě integrálu kladný. Pokud jsou přesně opačným směrem (úhel $180^\circ$) je příspěvek roven záporně vzatém součinu.
+* Pokud křivka a vektorové pole svírají ostrý úhel, je příspěvek k celkové hodnotě integrálu kladný. Pokud jsou přesně stejným směrem (nulový úhel) je příspěvek roven součinu.
+* Pokud křivka a vektorové pole svírají tupý úhel, je příspěvek k celkové hodnotě integrálu záporný. Pokud jsou přesně opačným směrem (úhel $180^\circ$) je příspěvek roven záporně vzatém součinu.
 * Intenzivnější vektorové pole nebo delší křivka produkují větší numerickou hodnotu integrálu (více kladnou nebo více zápornou, podle znaménka). Pole více kolmo na křivku produkuje menší numerickou hodnotu integrálu (blíže k nule). 
 
 ww:problems/krivkovy_integral/30_01.pg
@@ -269,7 +269,7 @@ ww:problems/krivkovy_integral/30_04.pg
 
 ## Tok
 
-* Pravidla pro souvislost toku s intenzitou pole a délko křivky jsou analogická jako u křivkového integrálu (delší křivka a intenzivnější vektorové pole způsobují větší tok).
+* Pravidla pro souvislost toku s intenzitou pole a délkou křivky jsou analogická jako u křivkového integrálu (delší křivka a intenzivnější vektorové pole způsobují větší tok).
 * Pokud se díváme ve směru křivky a pole přestupuje přes křivku zleva doprava, je tok kladný, v opačném případě záporný.
 
 ww:problems/krivkovy_integral/30_08.pg
