@@ -436,6 +436,7 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 **Online řešiče ODE (numericky):**
 
 * [Sage](https://sagecell.sagemath.org/?z=eJyFj0EKgzAQRfdC7pCdSTsVTbudO2RfREQjDY1GErXm9nU8QLv5zB_mP-YPYockMV3EfkuSZSxLo52Ap7HdOfISuKKl7WKFzxLKoqpPp8jRzDKtsDfRu8004f0Qw0mEBMcVUg7s1gbcwUx9M3s7LZGy9xr8uszrgnl0fjbNYI3r8-MFXf3kqb-82fklB9555wPmwZxUlgldXbWSRXz5j6B-SALUF0nkF_PaU9U=&lang=sage&interacts=eJyLjgUAARUAuQ==)
+* [Python](https://gist.github.com/robert-marik/db46ca470720b32028e9a83da807a37c)
 
 \fi
 
