@@ -1,0 +1,93 @@
+figure {float:right; max-width:50%;}
+.figure {float:right; max-width:50%;}
+
+.reseni {background-color: #ffffcc; padding:20px; border-bottom-color:black;border-bottom-style:solid; clear:both; }
+li {margin-top:20px;}
+
+.links a {width:25%; margin:0px; display:inline-block;
+  background-color: #0a5028;
+  color: white;
+  padding-top: 1em ;
+  padding-bottom: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  box-sizing: border-box;
+  border-right-style:solid;
+  border-right-color:lightgray;
+	 }
+
+.links a:nth-child(4) {border-right-style:none;}
+
+@media only screen and (max-width: 800px) {
+    .links a { width: 100%; }
+    border-right-style:none;
+    border-bottom-style:solid;
+    border-bottom-color:lightgray;    
+}
+
+.PDF {width:100%; display:inline-block;
+        text-align: center;
+  background-color: red;
+  color: white;
+  padding-top: 1em ;
+  padding-bottom: 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+     }
+
+.PDF {display:inline-block, margin:auto; font-weight:bold;}
+
+ ol {
+   list-style: none;
+   counter-reset: item;
+ }
+ol>li {
+   counter-increment: item;
+   margin-bottom: 5px;
+ }
+ ol>li:before {
+   margin-right: 10px;
+   content: counter(item);
+   background:  #0a5028;
+   border-radius: 100%;
+   color: white;
+   width: 1.2em;
+   text-align: center;
+   display: inline-block;
+ }
+
+
+ h1 {clear:both; color:#0a5028;}
+
+
+ table {min-width:300px; margin:auto;}
+
+ caption {
+     font-size: 80%;
+     font-style: italic;
+ }
+
+ td {
+     text-align: center;
+ }
+
+ .header{
+     background-color:#0a5028;
+     color:white;
+ }
+ 
+ blockquote {
+     width:100%;
+     background-color:#0a5028;
+     color:white;
+}
+
+ .anotace
+ {
+     color:black;
+ }
+ 
+ figure img {width:100%; max-width:100%;}
+
+.p_reseni {font-weight:bold;}
