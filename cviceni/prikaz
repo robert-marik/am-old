@@ -1,7 +1,7 @@
 for i in `ls cviceni*.md`
 do
    echo $i
-   pandoc -t html --number-sections --toc --css ../my.css?ver=2021-01-27 --css cviceni.css --template cviceni.html -s $i -o $i.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+   pandoc -t html --number-sections --toc --css ../my.css?ver=2021-01-27 --css cviceni.css?ver=2020-03-20 --template cviceni.html -s $i -o $i.html --mathjax=http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 done
 
 
