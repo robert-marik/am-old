@@ -404,12 +404,7 @@ Odsud máme okamžitě několik pozorování
   poměrem stran 1:2 je poměr tuhostí při poloze naplacato a nastojato roven 1:4.
 * Pro nosník čtvercového průřezu ($a=b$) roste tuhost se čtvrtou
   mocninou rozměrů. Obsah (a tedy i hmotnost) roste s druhou
-  mocninou. Pokud tedy u nosníku se čtvercovým průřezem zdvojnásobíme
-  množství materiálu, tuhost vzroste čtyřnásobně. Pokud nosník
-  vyrobíme s dutinou tak, že uprostřed čtverce vznikne dutina opět ve
-  tvaru čtverce, vzroste tuhost třikrát oproti situaci, kdy bychom
-  stejné množství materiálu použili na výrobu nosníku čtvercového
-  průřezu.
+  mocninou. Uvažujme tři nosníky. První má čtvercový průřez. Druhý také, ale průřez má dvojnásobný obsah. (Strana je tedy $\sqrt 2$-krát delší.) Třetí nosník bude krabicový nosník. Bude mít vnější rozměry stejné jako větší nosník, ale uvnitř bude čtvercová dutina o rozměrech prvního nosníku. Tuhost prvního nosníku bude referenční, označme ji $I$. Tuhost druhého nosníku bude čtyřnásobná, tj. $4I$ a za toto navýšení tuhosti "platíme" použitím dvojnásobného množství materiálu. Tuhost třetího nosníku najdeme jako rozdíl prvních dvou, tj. $3I$, protože i geometricky největší nosník vznikne zasunutím prvního nosníku do dutiny ve třetím krabicovém nosníku. Nyní porovnjeme původní nosník a krabicový nosník. Oba používají stejné množství materiálu, ale tuhost krabicového nosníku je trojnásobná. To proto, že část materiálu je dál od osy symetrie průřezu. Podobně se dá zdůvodnit a výpočtem ukázat, že profil ve tvaru písmene I, známé íčko, je tužší než tyč vykovaná ze stejného množství materiálu.
 * Pro čtvercový průřez roste tuhost se čtvrtou mocninou délky
   strany. Podobná závislost musí být u\ každého průřezu
   jednoparametrického tvaru, například pro kruh. Jako na nosník s\ kruhovým průřezem můžeme pohlížet i\ na stromy. Například strom, ve
