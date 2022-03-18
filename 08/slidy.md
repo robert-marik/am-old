@@ -2,6 +2,10 @@
 % Robert Mařík
 % 2020
 
+<style>
+.volitelne {font-size:small;}
+h2 {clear:both;}
+</style>  
 
 > Anotace.
 >
@@ -222,7 +226,7 @@ Ve skutečnosti žádná elektronická součástka nemá ideální vlastnosti a 
 
 \fi
 
-* Zkoumejme velikost $y$  určité populace, v prostředí s\ nosnou kapacitou $K$.
+* Zkoumejme velikost $y$ určité populace v prostředí s\ nosnou kapacitou $K$.
 * Realistickým předpokladem dodaným biologickými vědami je, že v prostředí s\ omezenými úživnými
   vlastnostmi specifická míru růstu populace (rychlost s\ jakou
   se velikost populace zvětšuje vztažená na jednotkové množství
@@ -400,6 +404,9 @@ konstantní, nazývají **izokliny**.
 
 </div>
 
+Numerické řešení diferenciálních rovnic je základním nástrojem pro ukázku průběhu simulací pro dané hodnoty parametrů a počátečních podmínek. Jedná se o velice užitečnou a široce používanou činnost při inženýrských simulacích. Neprofesionálům často musí stačit použít hotové postupy, procedury a nástroje. Například [Python](https://gist.github.com/robert-marik/db46ca470720b32028e9a83da807a37c) je jednou z nejvhodnějších voleb.
+
+<div class="volitelne">
 Řešení počáteční úlohy lze numericky aproximovat poměrně snadno:
 začneme v bodě zadaném počáteční podmínkou a v okolí tohoto bodu
 nahradíme integrální křivku její tečnou. Tím se dostaneme do dalšího
@@ -432,6 +439,8 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
   eliminovat. Jednoduchým a často dostatečným způsobem je volba
   jednotek, obecnější metodou je transformace diferenciální rovnice
   uvedená v následujícím textu.
+
+</div>
 
 **Online řešiče ODE (numericky):**
 

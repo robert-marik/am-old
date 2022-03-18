@@ -242,9 +242,7 @@ Integrál z prvního sčítance můžeme vypočítat pomocí primitivní funkce
 $$\int_0^{2\pi} 2\cos x\,\mathrm dx=\qty[2\sin x]_0^{2\pi}=2\sin(2\pi)-2\sin 0 =0$$ a integrál z druhého sčítance je nulový, proto je nulový i celý integrál.
 $$\int_C\vec F\mathrm d\vec r=0$$
 
-
 </div>
-
 
 # Křivkový integrál a tok graficky
 
