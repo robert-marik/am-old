@@ -11,7 +11,7 @@
 
 https://youtu.be/-VCnGpRz3K0
 
-Určete, pro jako hodnotu parametru $a\in \mathbb R$ křivkový integrál vektorového pole $$\vec F=ax^2y\vec\imath + (x^3+1)\vec\jmath$$ po křivce $C$, tj. $$\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy$$ nezávisí na integrační cestě v $\mathbb R^2$. Najděte kmenovou funkci příslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu $[0,0]$ do bodu $[1,2]$.
+Určete, pro jakou hodnotu parametru $a\in \mathbb R$ křivkový integrál vektorového pole $$\vec F=ax^2y\vec\imath + (x^3+1)\vec\jmath$$ po křivce $C$, tj. $$\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy$$ nezávisí na integrační cestě v $\mathbb R^2$. Najděte kmenovou funkci příslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu $[0,0]$ do bodu $[1,2]$.
 
 <div class=reseni>
 
@@ -95,7 +95,7 @@ https://youtu.be/y-gTOlGVRXI
 Ukažte, že vektorové pole
 $\vec F=(6x^2y+x+y,2x^3+x)$ má kmenovou funkci. Vypočtěte z definice křivkový integrál v tomto vektorovém poli po křivce $\vec r(t)=(at,bt)$, $t\in[0,1]$, tj. po úsečce z počátku do bodu $(a,b)$ a ukažte, že tímto způsobem obdržíme kmenovou funkci.
 
-Toto je metoda, jak určit skalární potenciál z numerických dat. Pokud je vektorové pole dáno numericky, je hledání skalárního potenciálu integrováním težce realizovatelné. Ale derivováním a výpočtem rotace je jednoduché zkontrolovat podmínku existence skalárního potenciálu a poté se dá hodnota skalárního potenciálu v libovolném bodě počítat pomocí křivkového integrálu vedoucího z počátku do daného bodu.
+Toto je metoda, jak určit skalární potenciál z numerických dat. Pokud je vektorové pole dáno numericky, je hledání skalárního potenciálu integrováním těžce realizovatelné. Ale derivováním a výpočtem rotace je jednoduché zkontrolovat podmínku existence skalárního potenciálu a poté se dá hodnota skalárního potenciálu v libovolném bodě počítat pomocí křivkového integrálu vedoucího z počátku do daného bodu.
 
 
 <div class=reseni>
@@ -149,14 +149,16 @@ $$
 
 https://youtu.be/CKZNkuyDd5Y
 
-Rovnice vedení tepla v ortotropním materiálu umístěném do souřadné soustavy tak, aby vlastní směry tenzoru tepelné vodivosti (jako např. anatomické směry dřeva) má nejobecnější možné vyjádření
+Rovnice vedení tepla v ortotropním materiálu umístěném do souřadné soustavy tak,
+aby vlastní směry tenzoru tepelné vodivosti (jako např. anatomické směry dřeva)
+byly ve směru souřadnicových os má nejobecnější možné vyjádření
 $$c\rho\pdv{T}{t}=\pdv{x}\qty(\lambda_x\pdv{T}{x} )+\pdv{y}\qty(\lambda_y\pdv{T}{y}) . $$
 Za jakých okolností je možno veličiny $\lambda_x$ a $\lambda_y$ napsat před vnější derivaci tak, aby v rovnici vznikly druhé derivace? 
 
 
 <div class=reseni>
 
-V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být homogenní. Závislost na poloze nesmí být ani zprostředkovaná přes teplotu. Tyto veličiny tedy nesmí být ani funkcemi teploty. Jinými slovy, konstanta úměrnosti ve Fourierově zákoně se nesmí měnit s teplotou, vztah z Fourierova zákona musí být opřesěn lineární a takové materiály se nazvají materiály s lineární materiálovou odezvou (zkráceně lineární materiály). Veličiny  $\lambda_x$ a $\lambda_y$  se dají napsat před vnější derivace pouze pokud je materiál homogenní a lineární.
+V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být homogenní. Závislost na poloze nesmí být ani zprostředkovaná přes teplotu. Tyto veličiny tedy nesmí být ani funkcemi teploty. Jinými slovy, konstanta úměrnosti ve Fourierově zákoně se nesmí měnit s teplotou, vztah z Fourierova zákona musí být přesně lineární a takové materiály se nazývají materiály s lineární materiálovou odezvou (zkráceně lineární materiály). Veličiny  $\lambda_x$ a $\lambda_y$  se dají napsat před vnější derivace pouze pokud je materiál homogenní a lineární.
 
 </div>
 
@@ -167,19 +169,29 @@ https://youtu.be/zvs3TsvBrho
 
 ![pixabay.com](chladic.jpg)
 
-Vyjímečně jsme nuceni do rovnice vedení tepla zahrnout i zdroje. 
-Modelujte vedení tepla v žebru chladiče. Úlohu uvažujte jako
-jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou
-vodivostí. Kolem chladiče proudí vzduch a teplotě $T_0$ a chladič
-ztrácí teplo rychlostí úměrnou rozdílu teploty žebra v daném místě a
-teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficient přestupu tepla a šířkou žebra). Uvažujte stacionární děj.
+Někdy jsme nuceni do rovnice vedení tepla zahrnout i zdroje.
+Modelujte vedení tepla jednom v žebru chladiče.
+
+Úlohu uvažujte jako jednorozměrnou, materiál homogenní izotropní s
+konstantní tepelnou vodivostí. Kolem chladiče proudí vzduch o teplotě
+$T_0$ a tím se chladič ochlazuje. V místě, kde je teplota chladiče
+vysoká je proces odevzdávání tepla do okolí intenzivnější. Obvykle se
+předpokládá, že v každém místě chladič ztrácí teplo rychlostí úměrnou
+rozdílu teploty v daném místě a teploty okolního vzduchu. (Koeficient
+úměrnosti je dán koeficientem přestupu tepla a šířkou žebra). Uvažujte
+stacionární děj.
 
 <div class=reseni>
 
 $$0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)$$
 
+Protože máme konstantní tepelnou vodivost (a homogenita je v kovech splněna přirozeně), je možné místo kvaziderivace použít druhou derivaci.
+
+$$0=-h(T-T_0)+\lambda \frac{\mathrm d^2T}{\mathrm dx^2}$$
 
 Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, Heat transfer, kapitola 3–6 Heat transfer from finned surfaces.
+
+Máme rovnici, kde neznámou je funkce a v rovnici figuruje druhá derivace této funkce. Takové rovnice se naučíme řešit na konci semestru. To nám odpoví na otázku, zda teplota bude podél chladiče klesat lineárně, nebo exponenciálně či nějak jinak.
 
 </div>
 

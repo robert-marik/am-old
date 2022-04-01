@@ -2,12 +2,13 @@
 % Robert Mařík
 % 2020-2021
 
+<!--
 # Instrukce k online výuce prosinec 2021
 
 * Budeme se věnovat autonomním diferenciálním rovnicím. To jsou rovnice, kde pravá strana explicitně nezáleží na čase. Typické je využití například pro modelování populací, kdy závisí jenom na podmínkách ve kterých se populace nachází (například velikost populace, nosná kapacita prostředí a podobně) a nezáleží na tom, jaký je čas, je-li středa nebo pátek. 
 * V těchto případech je snadné u rovnic s jednou neznámou určit pomocí pravé strany rovnice znaménko derivace, odsud zda řešení roste nebo klesá a najít stabilní stacionární body (pod nimi řešení a nad nimi klesá, proto se přibližujeme ke stacionárnímu stavu) a nestabilní stacionární body (pod nimi řešení klesá, nad nimi roste, tedy se řešení vzdaluje od tohoto stavu). K provedení takové analýzy stačí vědět, kdy je pravá strana nulová, kdy kladná a kdy záporná. Na takovou informaci stačí obrázek. Můžeme mít například graf pravé strany. Někdy je pravá strana ve formě rozdílu a potom nás zajímá, která funkce je výš a která níž, protože potom poznáme, je-li rozdíl funkcí kladný nebo záporný. (Nula je pochopitelně tam, kde se funkce protnou.)
 * Poslední část přednášky se vztahuje k diferenciálním rovnicím více neznámými proměnnými. Například dvě populace (konkurence nebo potravní řetězec), enzymy řídící biochemickou reakci, ... . Opět si všímáme nulových bodů pravých stran, ale místo jedné rovnice máme soustavu. Také monotonie nemá smysl, ale ukazuje se, že se dá nahradit jinou relativně dobře zjistitelnou informací: vlastními čísly Jacobiho matice vypočtené ve stacionárním bodě.
-
+-->
 
 # Opakování
 
