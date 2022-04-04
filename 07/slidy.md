@@ -88,6 +88,9 @@ zavést potenciál (záporně vzatá kmenová funkce).
 >  kde $A$ a $B$ jsou počáteční a koncový bod křivky $C$ a $\varphi$ je
 >  kmenová funkce vektorového pole $\vec F$.
 
+
+manimp:integracni_cesta|Křivkový integrál druhého druhu může a nemusí záviset na intergrační cestě. Pokud nezávisí, je jakákoliv práce s úlohou usnadněna, protože je možné= zavést potenciální energii.
+
 Tato věta je použitelná na mnoho způsobů.
 
 * Věta přímo udává efektivní kritérium, kdy křivkový integrál nezávisí na integrační cestě. Rotace vektorového pole musí být nulová. Pokud máme vektorové pole zadané analytickým předpisem jednotlivých komponent, je toto nejsnazší kriterium na ověření.
@@ -95,8 +98,6 @@ Tato věta je použitelná na mnoho způsobů.
 * Věta také udává, jak vypočítat skalární potenciál pomocí křivkového integrálu. Ač se ve sbírkách příkladů studenti setkávají s výpočtem křivkového integrálu pomocí skalárního potenciálu, je toto typické využití jenom v případech s analyticky snadným řešením. V případě numerických výpočtů s naměřenými daty je hledání skalárního potenciálu v podstatě nemožné provést klasickou cestou. Pomocí křivkového integrálu to je naopak snadné. Stačí si vybrat výchozí bod a počítat křivkové integrály po libovolných křivkách (zpravidla úsečky) do bodů, kde chceme znát skalární potenciál. Tomuto je věnován [Jupyter zápisník ilustrující uvedenou větu](http://user.mendelu.cz/marik/aromamath/Nezavislost_na_integracni_ceste.html).
 
 ## Poznámky k\ větě o\ nezávislosti křivkového integrálu na integrační cestě
-
-manimp:integracni_cesta|Křivkový integrál druhého druhu může a nemusí záviset na intergrační cestě. Pokud nezávisí, je jakákoliv práce s úlohou usnadněna, protože je možné= zavést potenciální energii.
 
 Větu je možno formálně vyslovit i\ pro jiný než trojrozměrný
 prostor. Pokud je pole v\ předchozí větě pouze v\ rovině, tj. $\vec
