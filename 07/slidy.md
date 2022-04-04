@@ -22,18 +22,6 @@
 V této přednášce se seznámíme s nástroji pro pohodlný výpočet křivkového integrálu v případě, kdy tento integrál nezávisí na integrační cestě a s metodou převodu křivkového integrálu na dvojný integrál. Tyto myšlenky dnes stojí v samotném základu mnoha dalších teorií a jsou důležité pro přechod mezi lokálním a globálním (mikroskopickým a makroskopickým) popisem transportních jevů. Proto je až neuvěřitelné, že uvedený postup odvodil pekař a samouk [George Green](https://cs.wikipedia.org/wiki/George_Green), který absolvoval jenom jediný rok školní docházky ve věku od osmi do devíti let! Své dílo publikoval vlastním nákladem a povětšinou rozdal přátelům, kteří však textu pravděpodobně nemohli vůbec rozumět. Proto nevešlo okamžitě ve známost. Nezávisle na Greenovi podobný přístup objevili i někteří další fyzikové.
 
 
-\iffalse 
-
-<div class='obtekat'>
-
-![Integrační cesta je nedílnou součástí zadání křivkového integrálu. Přesto na ní někdy nemusí záležet. Potom je možné volit cestu co nejvýhodněji. Zdroj: pixabay.com](cesta.jpg)
-
-</div>
-
-\fi
-
-
-
 V\ následujících větách si ukážeme některé souvislosti mezi
 studovanými pojmy. Tyto souvislosti existují, pokud objekty se kterými
 pracujeme jsou dostatečně pěkné - funkce jsou dostatečně hladké,
