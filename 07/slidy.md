@@ -96,6 +96,8 @@ Tato věta je použitelná na mnoho způsobů.
 
 ## Poznámky k\ větě o\ nezávislosti křivkového integrálu na integrační cestě
 
+manimp:integracni_cesta|Křivkový integrál druhého druhu může a nemusí záviset na intergrační cestě. Pokud nezávisí, je jakákoliv práce s úlohou usnadněna, protože je možné= zavést potenciální energii.
+
 Větu je možno formálně vyslovit i\ pro jiný než trojrozměrný
 prostor. Pokud je pole v\ předchozí větě pouze v\ rovině, tj. $\vec
 F=(F_x, F_y)$, doplníme třetí komponentu pro výpočet rotace
@@ -188,6 +190,7 @@ principu fungují planimetry.
 
 ## Varianta Greenovy věty pro tok křivkou 
 
+
 Nahradíme-li formálně vektorové pole $P\vec i+Q\vec j$ vektorovým polem $-Q\vec
 i+P\vec j$, dostáváme následující vztah mezi dvojným integrálem
 divergence vektorového pole přes oblast $\Omega$ a křivkovým
@@ -215,6 +218,12 @@ uzavřeného prostoru vteče, to i\ vyteče ven) a divergence je rovna
 nule.
 
 ## Greenova věta a přechod mezi lokálním a globálním tvarem rovnice kontinuity
+
+ww:problems/dvojny_integral/13.pg
+
+ww:problems/dvojny_integral/14.pg
+
+ww:problems/dvojny_integral/14a.pg
 
 Greenova  věta umožňuje přechod mezi lokálním tvarem fyzikálních zákonů (co se děje v daném bodě prostoru) a globálním tvarem (co se děje v konečném objemu). Z fyzikálního hlediska je zajímavější lokální tvar, protože dává náhled, jak fungují studované procesy. Z hlediska pozorovatele je zajímavější globální tvar, protože pracuje s reálně měřitelnými pojmy. Vzhledem k možnosti přechodu mezi těmito přístupy je užitečnost Greenovy věty a jejího trojrozměrného zobecnění nezastupitelná.
 

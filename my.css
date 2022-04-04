@@ -222,3 +222,12 @@ blockquote {margin-left:0px; margin-right:0px;box-sizing:border-box; }
 
  .footer a {color:white;}
  .footer a:visited {color:white;}
+
+.but-prez, .but-video {background-color: #006131; color: #eeeeee; margin:3px; text-decoration: none; font-weight: bold;
+    border: none;
+    padding: 1px 3px;
+    text-align: center;
+    display: block;
+}
+
+.but-video {background-color: #a50a0a;}
