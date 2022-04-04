@@ -104,7 +104,8 @@ $$
 \frac {\partial F_x}{\partial y}=\frac {\partial F_y}{\partial x}
 $$
 pro to aby výraz
-$$F_x\mathrm{d}x+F_y\mathrm{d}y$$ byl totálním diferenciálem.  
+$$F_x\mathrm{d}x+F_y\mathrm{d}y$$ 
+byl totálním diferenciálem.  
 
 Pokud pracujeme v\ prostoru vyšší dimenze, podmínka na rotaci je
 nahrazena jinou, komplikovanější podmínkou. Všechny další body věty 
@@ -114,9 +115,12 @@ změny.
 Podmínka hladkosti funkcí na jednoduše souvislé oblasti je
 podstatná. Například pole $\vec v=-\frac{y}{x^2+y^2}\vec
 i+\frac{x}{x^2+y^2}\vec j$ má rotaci rovnu nule ve všech bodech, kde
-je definované, tj. v\ celém prostoru kromě osy $z$. Přímým výpočtem je
+je definované, tj. v\ celém prostoru kromě osy $z$. Opravdu, kromě přímého
+výpočtu to plyne z toho, že se jedná o gradient funkce $\arctan \frac yx$. Přímým výpočtem je
 možno ukázat, že křivkový integrál po jednotkové kružnici v\ rovině
-$z=0$ je roven $2\pi$.
+$z=0$ je roven $2\pi$. To je možné ukázat přímým výpočtem, kdy se díky stejnému
+směru vektorového pole a tečného vektoru křivky integrál redukuje na součin
+délky křivky s vektorovým polem konstantní velikosti. 
 
 \iffalse
 
