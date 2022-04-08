@@ -730,7 +730,7 @@ Konstanty $C_1$ a $C_2$ určíme z podmínek na teplotu na jednotlivých straná
 
 ### Nelineární materiálové vztahy, tj. nekonstantní materiálová charakteristika
 
-* Zopakujme předchozí výpočet pro materiál s nelineární materiálovou odezvou, kdy Fourierův (Darcyho v případě podzemní vody) zákon není lineární, tj. $k$ závisí na teplotě. Nejjednodušší zobecnění je případ, kdy $k(T)$ je lineární, tj. platí $$k(T)=a+bT.$$
+* Zopakujme předchozí výpočet pro materiál s nelineární materiálovou odezvou, kdy Fourierův (Darcyho v případě podzemní vody) zákon není lineární, tj. $k$ závisí na teplotě. Nejjednodušší zobecnění je případ, kdy $k(T)$ je lineární, tj. platí $$k(T)=aT+b.$$
 Poté má rovnice tvar 
 $$({aT+b})\frac{\mathrm dT}{\mathrm dx}={C_1}$$
 a po separaci proměnných dostáváme
@@ -761,7 +761,7 @@ a
 $$kT={C_1}\ln(r)+C_2.$$
 Konstanty $C_1$ a $C_2$ se určí z teplot na vnitřním a vnějším povrchu trubky.
 * Stejný vzorec platí pro analogické radiální proudění podzemní vody při proudění s napjatou hladinou. Toho se využívá při čerpacích zkouškách nebo při umělém snižování hladiny spodní vody. Po dosazení relevantních veličin a výpočtu konstant se odvozený vzorec uvádí ve tvaru $$h-h_0=\frac{Q}{2\pi T}\ln \frac r{r_0}$$ a nazývá [Thiemova rovnice.](https://en.wikipedia.org/wiki/Aquifer_test#Steady-state_Thiem_solution)
-* Předchozí postup můžeme modifikovat i pro radiální proudění s volnou hladinou, tj. proudění modelované rovnicí $$\nabla (K\nabla h)=0,$$ kde $K=kh$ je materiálová konstanta pro proudění s volnou hladinou. Jako v předchozím případě přejdeme do proměnné $r$ a dostáváme
+* Předchozí postup můžeme modifikovat i pro radiální proudění s volnou hladinou, tj. proudění modelované rovnicí $$\nabla \cdot(K\nabla h)=0,$$ kde $K=kh$ je materiálová konstanta pro proudění s volnou hladinou. Jako v předchozím případě přejdeme do proměnné $r$ a dostáváme
 $$khr\frac{\mathrm d h}{\mathrm d r}=C_1.$$
 Odsud 
 $$h{\mathrm d h}=\frac{C_1}{kr}\mathrm dr$$
