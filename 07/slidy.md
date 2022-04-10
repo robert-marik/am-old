@@ -125,6 +125,18 @@ $z=0$ je roven $2\pi$. To je možné ukázat přímým výpočtem, kdy se díky 
 směru vektorového pole a tečného vektoru křivky integrál redukuje na součin
 délky křivky s vektorovým polem konstantní velikosti. 
 
+ww:problems/krivkovy_integral/40_01.pg
+
+ww:problems/krivkovy_integral/40_02.pg
+
+ww:problems/krivkovy_integral/40_03.pg
+
+ww:problems/krivkovy_integral/40_04.pg
+
+ww:problems/krivkovy_integral/40_05.pg
+
+ww:problems/krivkovy_integral/40_06.pg
+
 \iffalse
 
 
