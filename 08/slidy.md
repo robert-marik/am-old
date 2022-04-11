@@ -393,6 +393,8 @@ konstantní, nazývají **izokliny**.
 
 ## Numerické řešení IVP
 
+manim:Diference|r_Ae2mGnfFs|Numerické řešení diferenciální ronvice je zpravidla založeno na aproximaci derivace konečnou diferencí a postupným prodlužováním řešení od počáteční podmínky směrem dopředu nebo dozadu v čase.
+
 <div class='obtekat'>
 
 ![Eulerova metoda s\ velmi dlouhým krokem (modrou barvou) zaostává za přesným řešením (šedou
@@ -450,6 +452,8 @@ výstupem metody bude aproximace integrální křivky pomocí lomené čáry.
 \fi
 
 ## Transformace diferenciální rovnice
+
+manimp:ODE_transformace|Vhodnou transformací je možno zredukovat počet parametrů v rovnici a tím usnadnit numerické simulace. Nematematická cesta k transformaci je vhodná volba jednotek pro sledované veličiny.
 
 \iffalse
 
