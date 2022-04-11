@@ -14,7 +14,13 @@ h2 {clear:both;}
 > * Jiným typickým příkladem jsou populační modely, kdy přírůstek populace je dán počtem jedinců schopných reprodukce a ten zpětně souvisí s velikostí populace.  Využití je při návrhu trvale udržitelného hospodaření s přírodními zdroji při lovu. 
 > * Technicky významným příkladem je i model tepelná výměny, kdy se rychlost změny teploty při tepelné výměně se mění podle intenzity toku a ta se mění s teplotním rozdílem. 
 > * Řada diferenciálních rovnic má speciální vlastnosti, které můžeme využít při prozkoumávání řešení. Dokonce můžeme například popsat, jak vypadají všechna řešení, aniž bychom je museli počítat. Některé z těchto taktik se naučíme v přednáškách v dalších týdnech věnovaných lineárním rovnicím (následující přednáška) a autonomním systémům (přednáška následující po přednášce o lineárních rovnicích). Teď to zmiňujeme proto, aby šlo vidět, že v případě diferenciálních rovnic nejsou dovednosti spojené s výpočtem jejich řešení tak důležité, jak jsme zvyklí u jiných druhů rovnic. Proto jsou v následujícím seznamu dovedností až na konci.
-> * Důležité dovednosti, které se naučíme v souvislosti s diferenciálními rovnicemi jsou zejména (1) schopnost naformulovat diferenciální rovnici podle slovního popisu mechanismu modelovaného děje, (2) dovednost posoudit existenci a jednoznačnost řešení, (3) dovednost snížit transformací počet parametrů rovnice a až v poslední řadě najít řešení (4) numericky nebo (5) analytickou cestou.
+> * Důležité dovednosti, které se naučíme v souvislosti s diferenciálními
+>   rovnicemi, jsou zejména 
+>      * schopnost naformulovat diferenciální rovnici podle slovního popisu
+>        mechanismu modelovaného děje, 
+>      * dovednost posoudit existenci a jednoznačnost řešení, 
+>      * dovednost snížit transformací počet parametrů rovnice 
+>      * a až v poslední řadě najít řešení numericky nebo analytickou cestou.
 
 > Prerekvizity.
 >
@@ -704,6 +710,12 @@ Počáteční úloha má jediné řešení, pokud má pravá strana ohraničenou
 
 > Věta (existence a jednoznačnost řešení Cauchyovy úlohy pro rovnici se separovanými proměnnými). Je-li $g(y_0)\neq 0$, má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad y(x_0)=y_0$$ právě jedno řešení definované v nějakém okolí počáteční podmínky.
 
+> Poznámka (existence a jednoznačnost konstantního řešení). Je-li $g(y_0)=0$,
+> potom má počáteční úloha $$\frac{\mathrm{d}y}{\mathrm{d}x}=f(x)g(y),\qquad
+> y(x_0)=y_0$$ konstantní řešení $y(t)=y_0,$ ale z předchozí věty neplyne nic o
+> jednoznačnosti tohoto řešení. Je možné použít větu o jednoznačnosti platnou pro obecnější
+> rovnici $$\frac{\mathrm{d}y}{\mathrm{d}x}=\varphi(x,y)$$ uvedenou výše a potom je řešení určeno jednoznačně, pokud má funkce
+> $g$ v okolí počáteční podmínky ohraničenou derivaci.
 
 # Redukce parciální diferenciální rovnice na obyčejnou
 
