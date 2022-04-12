@@ -120,7 +120,7 @@ $$\frac{\mathrm dx}{\mathrm dt}=x.$$
 Následující věta vlastně vyjadřuje totéž co princip superpozice z předchozího textu, pouze v jiných pojmech: v pojmech řešení rovnice s lineárním operátorem. 
 
 > Věta (princip superpozice při řešení rovnic). Jsou-li funkce $x_1(t)$ a $x_2(t)$ po řadě řešeními rovnic $$L[x]=b_1(t),\quad L[x]=b_2(t),$$
-> Je funkce $$x(t)=C_1 x_1(x)+C_2 x_2(x)$$ řešením rovnice $$L[x]=C_1 b_1(t)+C_2 b_2(t).$$
+> Je funkce $$x(t)=C_1 x_1(t)+C_2 x_2(t)$$ řešením rovnice $$L[x]=C_1 b_1(t)+C_2 b_2(t).$$
 
 
 Pro $b_1(t)=b_2(t)=0$ všechny tři výše uvedené rovnice splynou a lineární kombinace dvou řešení homogenní lineární rovnice je také řešením. Toto je možné pochopitelně rozšířit na libovolný konečný počet funkcí. 
@@ -131,7 +131,7 @@ Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.
 
 * Pokud máme k dispozici několik řešení homogenní rovnice, libovolná jejich lineární kombinace je také řešením. 
 * Za určitých okolností lineární kombinace z předchozího bodu umožní splnit libovolnou počáteční podmínku a vzhledem k jednoznačnosti řešení, která lineární rovnice zpravidla provází, je jistota, že žádné další řešení neexistuje. Nalezení těchto funkcí je tedy zásadní krok při řešení rovnice. 
-* U nehomogenní rovnice stačí se úloha najít všechna řešení dá rozdělit na dvě dílčí úlohy: najít jenom jedno řešení a k tomu najít všechna řešení homogenní rovnice se stejnou levou stranou. Každá z těchto dvou úloh je mnohem lehčí než úloha celková a součtem jednoho řešení nehomogenní rovnice a obecného řešení asociované homogenní rovnice dostaneme obecné řešení nehomogenní rovnice.
+* U nehomogenní rovnice se úloha najít všechna řešení dá rozdělit na dvě dílčí úlohy: najít jenom jedno řešení a k tomu najít všechna řešení homogenní rovnice se stejnou levou stranou. Každá z těchto dvou úloh je mnohem lehčí než úloha celková a součtem jednoho řešení nehomogenní rovnice a obecného řešení asociované homogenní rovnice dostaneme obecné řešení nehomogenní rovnice.
 
 
 ## Příklad využití linearity v jedné dimenzi
@@ -163,8 +163,8 @@ Obrat, že stacionární řešení je globálně atraktivní znamená, že všec
 
 Pro skalární lineární diferenciální rovnice druhého řádu je situace
 obdobná, pouze pro řešení asociované homogenní diferenciální rovnice
-potřebujeme dvě lineárně nezávislé řešení (jedno není násobkem druhého).   
-Například  $x_1(t)=e^t$ a $x_2(t)=e^{-t}$ nejsou jedna násobkem druhé a obě splňují rovnici $$x''-x=0.$$ Proto všechna řešení jsou tvaru 
+potřebujeme dvě lineárně nezávislá řešení (jedno není násobkem druhého).   
+Například  $x_1(t)=e^t$ a $x_2(t)=e^{-t}$ nejsou jedno násobkem druhého a obě splňují rovnici $$x''-x=0.$$ Proto všechna řešení jsou tvaru 
 $$x(t)=C_1 e^t+C_2 e^{-t},$$
 kde $C_{1,2}\in\mathbb{R}.$ Funkce $x=-t$ splňuje rovnici $$x''-x=t$$ a všechna řešení této rovnice jsou $$x(t)=C_1 e^t+C_2 e^{-t}-t.$$
 Rovnicím majícím derivace vyššího řádu se budeme věnovat později.
