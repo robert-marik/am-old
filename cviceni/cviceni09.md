@@ -190,10 +190,9 @@ $$ e^{\mu 2\pi } =\left(e^{\mu \frac \pi 2}\right)^4=\frac {1}{0.75^4}=\frac{1}{
 a
 $$ e^{\mu 4\pi } =\left(e^{\mu \frac \pi 2}\right)^8=\frac {1}{0.75^8}=\frac{1}{0.1001}.$$
 Postupně tedy poklesne tahová síla o 44 procent (půlotáčka), o 70 procent (celá otáčka) a o 90 procent tj. na desetinu (dvě otáčky).
-1. Jsou-li $T_1$, $T_2$ a $T_3$  tah před prvním kůlem, mezi kůly a za druhým kůlem ze strany od zátěže, platí 
-$$\frac{T_1}{T_2}=e^{\mu\theta_1}\quad\text{a}\quad \frac{T_2}{T_3}=e^{\mu\theta_2}.$$
-Vynásobením dostáváme
-$$\frac{T_1}{T_3}=e^{\mu\theta_1}e^{\mu\theta_2}=e^{\mu(\theta_1+\theta_2)},$$ což bylo dokazováno.
+1. Pokud se první brzdy se tah mění násobkem 
+$e^{\mu\theta_1}$ a u druhé násobkem $e^{\mu\theta_2}$, vynásobením těchto faktorů s pomocí vzorce pro součin exponenciálních výrazů se stejným základem (mocniny o stejném základu se násobí tak, že se sčítají exponenty) dostáváme
+$$e^{\mu\theta_1}e^{\mu\theta_2}=e^{\mu(\theta_1+\theta_2)}.$$ Tah se tedy mění s faktorem odpovídajícím součtu úhlů, což bylo dokazováno.
 
 </div>
 
