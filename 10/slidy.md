@@ -87,7 +87,7 @@ a rovnováha je tedy poněkud křehká.
 
 [Numerický model](http://user.mendelu.cz/marik/aromamath/Lov_populace.html)
 
-Pokud se intenzita lov zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule. 
+Pokud se intenzita lovu zvětšuje tak, že se parabola dostane vrcholem na vodorovnou osu a poté pod tuto osu, oba stacionární body splynou v jeden a zaniknou. V okamžiku, kdy se vrchol dostává pod vodorovnou osu i malinká změna v lovu způsobí dramatickou změnu v modelu. Ztratí se totiž existence stabilního řešení a všechna řešení budou konvergovat k nule. 
 
 > Poznámka (strukturální stabilita modelu, bifurkace). Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu budeme *strukturální stabilitou* modelu závislého na parametrech rozumět stav, kdy malá změna parametrů nemění kvalitativní vlastnosti rovnice nebo systému, tj. například zůstává stejný počet stacionárních bodů, zachovává se jejich stabilita. To je přirozené chování, kdy malá změna parametrů modelu způsobí malé změny v řešení. Pro některé hodnoty parametrů však strukturální stabilitu ztrácíme. V takovém případě se i při nepatrných změnách parametrů dramaticky mění chování rovnice nebo systému. Například při zvyšování lovu v právě uvažovaném modelu dva stacionární body splynou v jeden a zaniknou. Takové chování se nazývá *bifurkace* a hodnoty parametrů, při kterých k bifurkaci dojde, jsou důležité pro další vývoj předmětu. Zjednodušeně řečeno, malé změny parametrů v oblasti daleko od bifurkace znamenají, že chování modelu se mění pozvolna. Blízko k bifurkační hodnotě je situace komplikovanější a může se stát, že malá změna parametrů modelu způsobí dramaticky odlišné chování modelu. Rovnice blízká bifurkaci je citlivá na rozkolísání.
 
@@ -123,7 +123,7 @@ u téhož zdroje (potrava, hnízdiště, apod).
 * Holubice
   o zdroje nebojuje a zkonzumuje zdroj pouze pokud protivník ustoupí
   bez boje.
-* Předpokládejme, že každý jedinec v populaci si zkonzumování
+* Předpokládejme, že každý jedinec v populaci si zkonzumováním
   zdroje si může svou evoluční zdatnost posílit o hodnotu $V$, pokud
   je nucen a ochoten o zdroj bojovat, je jeho evoluční zdatnost naopak
   snížena o hodnotu $D$. 
@@ -138,12 +138,12 @@ u téhož zdroje (potrava, hnízdiště, apod).
   každého jestřába.
 
 Matematický rozbor (J. Kalas, Z. Pospíšil, Spojité modely v biologii) ukazuje, že četnost $x$ výskytu jestřábů v populaci
-řídí diferenciální rovnicí
+se řídí diferenciální rovnicí
 $$x'=x(1-x)\left(\frac V2-\frac D2 x\right).$$
 Jediné realistické hodnoty $x$ jsou z intervalu $[0,1]$. Pro nalezení stacionárních bodů a posouzení jejich stability budeme studovat funkci
-$$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nulové body funkce $f$ a to jsou $x=0$, $x=1$ a $x=\frac VD$. Poslední stacionární bod v závislosti na hodnotě paraemtrů [může a nemusí](https://sagecell.sagemath.org/?z=eJxL06jQCdNx0bSt0NIw1K3Q1NII0zfSddE30qrQ5OUqyMkv0YhOA6ox1DHQM9LUATEN9Ex0DDVjdUBMIEMnJzU9NS8lPicxKTXHNrpIXSXMzkVFXQfEsAEyYjUBCOEZ8g==&lang=sage&interacts=eJyLjgUAARUAuQ==) ležet v intervalu $[0,1]$
+$$f=x(1-x)\left(\frac V2-\frac D2 x\right).$$ Stacionární body rovnice jsou nulové body funkce $f$ a to jsou $x=0$, $x=1$ a $x=\frac VD$. Poslední stacionární bod v závislosti na hodnotě parametrů [může a nemusí](https://sagecell.sagemath.org/?z=eJxL06jQCdNx0bSt0NIw1K3Q1NII0zfSddE30qrQ5OUqyMkv0YhOA6ox1DHQM9LUATEN9Ex0DDVjdUBMIEMnJzU9NS8lPicxKTXHNrpIXSXMzkVFXQfEsAEyYjUBCOEZ8g==&lang=sage&interacts=eJyLjgUAARUAuQ==) ležet v intervalu $[0,1]$
 
-* V bodě $x=0$ funkce $f$ nulová a rostoucí. Stacionární bod $x=0$ je vždy nestabilní. **Ať jsou tedy podmínky jakékoliv, vždy budou v populaci
+* V bodě $x=0$ je funkce $f$ nulová a rostoucí. Stacionární bod $x=0$ je vždy nestabilní. **Ať jsou tedy podmínky jakékoliv, vždy budou v populaci
     přítomni jestřábi.** Přitom právě jestřábi paradoxně plýtvají
   zdroji energie na boj, namísto, aby celou energii zaměřili na
   rozmnožování. Z hlediska efektivity při využívání zdrojů prostředí
@@ -224,7 +224,7 @@ stabilitě, ale s vyšším výskytem škůdce odpovídající stacionárnímu
 bodu $7.3$.
 
 Poněkud jednodušší je kvalitativní analýza, pokud zvolíme jednotku veličiny $y$ tak, aby koeficient $A$ byl roven jedné, zvolíme jednotku času tak, aby koeficient $H$ byl roven jedné a vytkneme proměnnou $y$. Model má potom tvar
-$$y'=y\left [ r\left(1-\frac yK\right)-\frac{y}{y^2+1}\right].$$ Na pravé straně v hranaté závorce zůstává rozdíl funkce $\frac{y^2}{y^2+1}$ neobsahující žádný parametr a lineární funkce, se kterou snadno dokážeme manipulovat. 
+$$y'=y\left [ r\left(1-\frac yK\right)-\frac{y}{y^2+1}\right].$$ Na pravé straně v hranaté závorce zůstává rozdíl funkce $\frac{y}{y^2+1}$ neobsahující žádný parametr a lineární funkce, se kterou snadno dokážeme manipulovat. 
 
 [Numerický model](http://user.mendelu.cz/marik/aromamath/Populace_pod_tlakem_predatoru.html)
 
@@ -251,8 +251,8 @@ Ukážeme si, jak studovat nelineární systém pomocí lineárního a pomocí v
 
 Je-li $f(X_0)=0$, je možno systém $$X'=f(X)$$ v okolí bodu $X_0$ aproximovat lineárním systémem $$X'=J(X_0)(X-X_0),$$
 kde $J(X_0)$ je Jacobiho matice funkce $f(X)$ v bodě $X_0$, tj. pro $f(X)=(f_1(X),\dots,f_n(X))^T$ je
-$$J(X)=\left(\frac{\partial f_i(X_0)}{\partial x_j}\right).$$
-O chování trajektorrií v okolí stacionárního bodu tedy rozhodnou
+$$J(X_0)=\left(\frac{\partial f_i(X_0)}{\partial x_j}\right).$$
+O chování trajektorií v okolí stacionárního bodu tedy rozhodnou
 vlastní čísla Jacobiho matice. Za předpokladu, že jsme relativně
 daleko od případů, kdy se mění typ stacionárního bodu, tj. vlastní
 čísla jsou navzájem různá, jsou nenulová a v případě komplexních
@@ -310,8 +310,8 @@ kde $X$ pro jednoduchost znamená koncentraci látky $X$ a totéž platí i pro 
 Stacionárním bodem je bod $X=A$, $Y=\frac BA$. Pro $A=1$ a $B=4$ má systém tvar
 $$
 \begin{aligned}
-\frac {\mathrm d X}{\mathrm dt}&=    X ^2 Y  - 5 X,\\
-\frac {\mathrm d Y}{\mathrm dt}&= 4X-X^2Y,
+\frac {\mathrm d X}{\mathrm dt}&=  1+  X ^2 Y  - 5 X,\\
+\frac {\mathrm d Y}{\mathrm dt}&= 4X-X^2Y.
 \end{aligned}
 $$
 
