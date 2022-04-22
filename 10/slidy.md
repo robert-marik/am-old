@@ -33,6 +33,8 @@ příkladech vždy splněno.
 
 https://youtu.be/9PbghCvHQ5c
 
+manim:Stabilita|Siu5ZgEA59s|Grafické znázornění stability stacionárních řešení.
+
 Autonomní diferenciální rovnice je rovnice tvaru $$\frac{\mathrm dy}{\mathrm dt}=f(y).\tag{1}$$ Je speciálním případem rovnice se separovanými
 proměnnými a umíme ji řešit
 analytickou cestou. Proto se nyní nebudeme zaměřovat na hledání
@@ -57,6 +59,10 @@ Věta je odvozena z pozorování, že rovnice $y'=ky$ má řešení $y(t)=Ce^{kt
 
 
 ## Logistická diferenciální rovnice s konstantním lovem
+
+
+manim:Logistic|NyLkjOTYzVQ|Logistická rovnice s lovem.
+
 
 
 <div class='obtekat'>
@@ -87,6 +93,9 @@ Pokud se intenzita lov zvětšuje tak, že se parabola dostane vrcholem na vodor
 
 
 ## Model soupeření jestřábí a holubičí povahy
+
+manim:Hawk_and_dove_game|zAzZrIShj9U|Model soupeření dvou povah. Ukazuje, že vždy bude v přírodě určité procento agrasivního vzorce chování. Někdy dokonce tento vzorech chování bude jediný. 
+
 
 \iffalse 
 
@@ -180,6 +189,9 @@ $$\frac{\mathrm dT}{\mathrm dt}=R_{\text{in}}(T)-R_{\text{out}}(T),$$ kde $R_{\t
 
 
 ## Logistická diferenciální rovnice s predátory
+
+manim:Obalec|iFmQWcR_JX4|Model populace pro preddačním tlakem využijeme například při studiu škůdce. Model vykazuje bifurkaci (malá změna vstupních dat může zcela změnit chování modelu) a hysterezi (stav souvisí i s historií modelu).
+
 
 <div class='obtekat'>
 
@@ -372,6 +384,8 @@ Populační ekologie je součást ekologie zabývající se modelováním vývoj
 
 ## Model konkurence dvou druhů
 
+manimp:Konkurence_druhu|Při konkurenci dvou druhů může dojít (podle nastavení parametrů) ke koexistenci nebo ke konkurenčnímu vyloučení. Model ukazuje, jak se konkurence projevuje v nejjednodušším případě, při sledování konkurence dvou populací.
+
 Situace kdy dva druhy žijí ve společné lokalitě a přítomnost jednoho druhu ovlivňuje druhý druh je modelována autonomním systémem
 $$
 \begin{aligned}
@@ -382,6 +396,9 @@ $$
 Tento systém vychází z logistické rovnice pro každou z populací s doplněním členů $r_1 bxy$ a $r_2 cxy$, které charakterizují mezidruhovou konkurenci. Ukazuje se, že tento systém má kapacitu popsat všechny v přírodě pozorované druhy interakcí (slabá konkurence, silná konkurence, dominance jednoho z druhů) a je výchozím systémem pro veškeré modely používané v populační ekologii.
 
 ## Model dravce a kořisti
+
+manim:Predator_prey|zihShrEOJAU|Model dravce a kořisti vysvětluje kolísání populací okolo rovnovážné polohy. Jde o stabilitu, která však nespočívá s konstantních hodnotách stavů, ale v periodickém průběhu. 
+
 
 Skutečnost kdy žijí ve společné lokalitě a přítomnost jednoho druhu umožňuje přežití druhého je modelována autonomním systémem
 $$
