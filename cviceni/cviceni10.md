@@ -223,13 +223,14 @@ $$
   \frac{\partial }{\partial y}(3xy^2-3y)&=6xy-3\\
 \end{aligned}
 $$
-a odsud
+a odsud 
 $$J(x,y)=
 \begin{pmatrix}
   8xy& 4x^2+3y^2 \\ 3y^2 & 6xy-3
-\end{pmatrix}.
+\end{pmatrix}. 
 $$
-Ve stacionárním bodě dostáváme $$J(1,1)=
+Ve stacionárním bodě dostáváme 
+$$J(1,1)=
 \begin{pmatrix}
   8 & 7\\3&3
 \end{pmatrix}.
