@@ -83,7 +83,7 @@ zavést potenciál (záporně vzatá kmenová funkce).
 >  platnost i\ všech ostatních), je možno křivkový integrál vypočítat
 >  podle vzorce
 >  $$
->    \int_C \vec F\mathrm{d}\vec r=\varphi(B)-\varphi(A)
+>    \int_C \vec F\mathrm{d}\vec r=\varphi(B)-\varphi(A),
 >  $$
 >  kde $A$ a $B$ jsou počáteční a koncový bod křivky $C$ a $\varphi$ je
 >  kmenová funkce vektorového pole $\vec F$.

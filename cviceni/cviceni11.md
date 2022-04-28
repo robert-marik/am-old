@@ -1,6 +1,10 @@
 % Diferenciální rovnice druhého řádu
 
+<!--
+
 https://youtu.be/a308Zs_6bq0
+
+-->
 
 # Okrajová úloha
 
