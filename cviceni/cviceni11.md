@@ -31,6 +31,43 @@ $$y(t)=0 e^{\sqrt m t} + 0 e^{-\sqrt m t}=0$$
 tj. na konstantní nulovou funkci.
 </div>
 
+# Okrajová úloha pro rovnici žebra chladiče
+
+*V určitých speciálních případech má smysl formulovat i jiné typy okrajových podmínek, než podmínky na funkční hodnotu (Dirichletova) nebo derivaci (Neumannova) případně na jejich kombinace. Například může být přirozené požadovat ohraničenost.*
+
+Ve cvičení věnovaném difuzní rovnici jsme se zabývali problematikou žebra chladiče z materiálu s koeficientem tepelné vodivosti $\lambda$ v prostředí o teplotě $T_0$. Naformulovali jsme rovnici pro stacionární rozložení teploty ve tvaru $$\lambda \frac{\mathrm d^2T}{\mathrm dx^2} -h (T-T_0) =0,  $$ kde $h$ je koeficient přestupu tepla z chladiče do vnějšího prostředí. 
+
+* Uvažujte dlouhý chladič a ukažte, že teplota klesá exponenciálně s polohou k teplotě okolí. 
+* Ze zkušenosti očekáváme, že pro materiál, který lépe vede teplo, bude konec chladiče více horký. Teplota jako funkce polohy bude klesat pomaleji. Je to splněno pro případ z předchozího bodu? Vysvětlete, odkud to vidíme, nebo zdůvodněte, v jaké situaci tomu tak být nemusí. 
+* Ze zkušenosti očekáváme, že pokud bude teplo intenzivněji vyzařováno do okolí, bude teplota na konci nižší. Při pomalejším vyzařování (například světlá barva chladiče a izolující nános prachu) bude teplota na konci vyšší. Je to splněno pro případ z předchozího bodu? Vysvětlete, odkud to vidíme, nebo zdůvodněte, v jaké situaci tomu tak být nemusí. 
+
+<div class=reseni>
+
+Jedná se o nehomogenní rovnici 
+$$\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = \frac {h}{\lambda} T_0.$$ 
+Tato rovnice má evidentně konstantní řešení, protože pokud je teplota ochlazované součástky stejná jako teplota okolí, bude teplota žebra chladiče v každém bodě rovna hodnotě $T_0$. Tuto skutečnost můžeme ověřit i dosazením. 
+
+Asociovaná homogenní rovnice má tvar
+$$\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = 0.$$ 
+Charakteristický polynom (v proměnné $z$)
+$$z^2 - \frac {h}{\lambda}  = 0$$ 
+má kořeny $$z_{1,2}=\pm\sqrt{\frac{h}\lambda}$$ a obecné řešení rovnice je
+$$ T (x) = T_0 + C_1 e^{\sqrt{\frac{h}\lambda} x} + C_2 e^{-\sqrt{\frac{h}\lambda} x}.$$
+
+* Pro dlouhý chladič musí být teplota ohraničená, proto platí $C_1=0.$ 
+* Teplota chladiče je větší než teplota okolí. Proto dále platí $C_2>0$. 
+
+Stacionární teplota jako funkce polohy je tedy dána vztahem $$ T (x) = T_0 + C e^{-\sqrt{\frac{h}\lambda} x},$$ kde $C$ je kladná konstanta. Teplota podél žebra klesá exponenciálně s polohou k hodnotě $T_0$.
+
+Pokles je exponenciální funkce $e^{-z x}$ je rychlejší, pokud je numericky větší hodnota $z$. 
+
+Pokud materiál lépe vede teplo, je hodnota $\lambda$ větší. Protože je tato hodnota ve jmenovateli zlomku, je hodnota $$ \sqrt{\frac h\lambda} $$ menší. To znamená, že exponenciální faktor se mění pomaleji a funkce klesá pomaleji. Pro hodně dobrý vodič tepla je teplota podél žebra prakticky konstantní. 
+
+Pokud je teplo intenzivněji vyzařováno do okolí, je vyšší hodnota $h$. Proto je i vyšší hodnota $$ \sqrt{\frac h\lambda}.$$ To znamená, že koeficient v exponentu je zápornější a exponenciální část klesá rychleji k nule. 
+
+Pro zadané pevné $x$ a kladné $C$ je funkce $$T=T_0+C e^{-\sqrt{\frac h\lambda}x}$$ rostoucí funkcí proměnné $\lambda$ a klesající funkcí proměnné $h$. Řešení úlohy se tedy chová v souladu s očekáváním.
+
+</div>
 
 # Separce proměnných ve vlnové rovnici, kmity struny
 
