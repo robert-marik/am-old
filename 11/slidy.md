@@ -42,6 +42,8 @@ https://youtu.be/PcNc0tfv7Q0
 
 ![Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh, které se týkají oscilací. Chemické oscilace, považované za základ tzv. buněčných hodin i jiných vnitřních cyklů biologických organismů, jsou ale založeny na jiném popisu. (Viz Brusselator.) Zdroj: pixabay.com](pruzina.jpg)
 
+
+![Vlastní kmity bodu na kmeni stromu ve výšce 4m po vychýlení stromu z rovnovážné polohy a vypuštění. Až na úvodní pasáž v čase cca 52 sekund výchylka odpovídá tlumenému kmitání tělesa na pružině. Zdroj: projekt DYNATREE](kmity_stromu.png)
 </div>
 
 \fi
@@ -58,8 +60,8 @@ však dostáváme i obecněji. Pokud pro jednoduchost předpokládáme, že
 těleso s jedním stupněm volnosti se nachází ve stabilním stavu s
 minimem potenciální energie a energie závisí na poloze $x$, můžeme v
 okolí minima $x_0$ potenciální energii aproximovat Taylorovým rozvojem
-druhého řádu $$E(x)\approx E(x_0)+E'(x_0)x+\frac 12E''(x_0)x^2.$$
-Vzhledem k tomu, že v $x_0$ je minimum, platí $E'(x_0)=0$. Síla je
+druhého řádu $$E(x)\approx E(x_0)+E'(x_0)(x-x_0)+\frac 12E''(x_0)(x-x_0)^2.$$
+Vzhledem k tomu, že v $x_0$ je minimum, platí $E'(x_0)=0$. Je výhodné volit počátek v rovnovážné poloze, protože poté platí $x_0=0$. Síla je
 poté dána vztahem $$F(x)=-\frac{\partial}{\partial x}E(x)=-E''(0)x.$$
 Síla $F$ je tedy úměrná výchylce $x$ a vrací těleso do rovnovážné
 polohy. 

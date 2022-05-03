@@ -44,7 +44,7 @@ Ve cvičení věnovaném difuzní rovnici jsme se zabývali problematikou žebra
 <div class=reseni>
 
 Jedná se o nehomogenní rovnici 
-$$\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = \frac {h}{\lambda} T_0.$$ 
+$$\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = -\frac {h}{\lambda} T_0.$$ 
 Tato rovnice má evidentně konstantní řešení, protože pokud je teplota ochlazované součástky stejná jako teplota okolí, bude teplota žebra chladiče v každém bodě rovna hodnotě $T_0$. Tuto skutečnost můžeme ověřit i dosazením. 
 
 Asociovaná homogenní rovnice má tvar
@@ -85,10 +85,10 @@ Vydělením této rovnice součinem $\varphi(x)\psi(t)$ dostáváme
 $$\frac {\psi''(t)}{\psi(t)}=\frac{\varphi''(x)}{\varphi (x)}.$$
 Toto je rovnice, kde levá strana je funkcí proměnné $t$ a pravá strana funkcí proměnné $x$. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě. Označme tuto konstantu $-\lambda^2$. Platí tedy
 $$\frac {\psi''(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi''(x)}{\varphi (x)}=-\lambda ^2.$$
-První rovnice představuje lineární diferenciální rovnici druhého řádu
-$$\psi''+\lambda^2\psi=0.$$
-Druhá rovnice představuje lineární diferenciální rovnici druhého řádu
-$$\varphi''+\lambda^2\varphi=0$$
-a okrajové podmínky si vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji použili [v přednášce](http://user.mendelu.cz/marik/am/slidy/11/). Řešením je funkce $\varphi(x)=\sin\left (k\frac{\pi}l x\right)$, kde $k\in\mathbb N$.
+
+* První rovnice představuje lineární diferenciální rovnici druhého řádu $$\psi''+\lambda^2\psi=0.$$ Její charakteristická rovnice  $$z^2 +\lambda^2=0$$ má řešení $$z_{1,2}=i\lambda$$ a proto platí $$\psi(t)=C_1\cos(\lambda t) + C_2\sin(\lambda t).$$ Konstanta $C_1$ souvisí s počáteční výchylkou, konstanta $C_2$ s počáteční rychlostí  a konstanta $\lambda$ s frekvencí kmitů.
+* Druhá rovnice představuje lineární diferenciální rovnici druhého řádu $$\varphi''+\lambda^2\varphi=0$$ a okrajové podmínky si  vynucují platnost vztahů $\varphi(0)=\varphi(l)=0$. Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji použili [v přednášce](http://user.mendelu.cz/marik/am/slidy/11/). Řešením je funkce $\varphi(x)=\sin\left (k\frac{\pi}l x\right)$, kde $k\in\mathbb N$.
+* Spojením obdržených výsledků dostáváme rovnici popisující kmity na $k$-t0 vlastní frekvenci ve tvaru $$u_k(x,t)=\psi(t)\varphi(x)=\left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ 
+* Spojením kmitů na všech frekvencích dostaneme řešení rovnice ve tvaru $$u(x,t) = \sum_{k=0}^\infty \left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).$$ Tento vzorec je dostatečně flexibilní, abychom dokázali splnit libovolné počáteční podmínky a proto v sobě obsahuje všechna řešení. Praktická využitelnost vzorce v reálných případech je diskutabilní, proto často používáme numerické simulace využívající numerické řešení zadané rovnice za daných počátečních a okrajových podmínek. 
 
 
