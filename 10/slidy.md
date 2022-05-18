@@ -379,6 +379,11 @@ tomto stacionárním bodě.
     v nějakém okolí existují pouze cykly, nazývá se tento
     bod navíc střed.  Bod rotace souvisí s komplexně sdruženými vlastními čísly s nulovou reálnou částí, ale v těchto případech může stacionární bod být i ohniskem.
 
+ww:problems/autonomni_systemy/10.pg
+ww:problems/autonomni_systemy/11.pg
+ww:problems/autonomni_systemy/12.pg
+ww:problems/autonomni_systemy/14.pg
+
 # Základní modely populační ekologie
 
 Populační ekologie je součást ekologie zabývající se modelováním vývoje populací. Základním vyjadřovacím jazykem jsou diferenciální rovnice nebo jejich diskrétní obdoba, kdy se čas mění po skocích, diferenční rovnice. Málokdy uvažujeme jedinou populaci, většinou studujeme bohatší ekosystémy, což vede na soustavy rovnic. Dva nejklasičtější si zde stručně uvedeme a prostudujeme ve cvičení.
