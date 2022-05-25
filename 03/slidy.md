@@ -42,15 +42,15 @@ Toto je jednoduchý, ale přitom neuvěřitelně silný nástroj. Umožní jedno
 
 # Změna toku vektorového pole
 
-https://youtu.be/Vk8OAq3_40g
-
-[Prezentace](https://user.mendelu.cz/marik/manim/Divergence/)
-
 https://youtu.be/cXT6ULeZFJs
 
 \iffalse 
 
+
+manim:Divergence|Vk8OAq3_40g|Divergence umožňuje identifikovat, zda tok sílí či slábne. Tato znalost je důležitým stavebním kamenem do matematického modelu liboovolného transportního děje probíhajícího v přírodě (rovnice kontinuity a difuzní rovnice).
+
 <div class='obtekat'>
+
 
 ![Divergence a tok pole $\vec q=(0,Q, R)$ tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.](divergence_kostka.png)
 

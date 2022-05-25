@@ -40,13 +40,14 @@
 
 ## Lineární algebra
 
+manimp:MatrixMultiplication|Maticové násobení.
+
 * Součin matice a vektoru je lineární kombinace sloupců matice, přičemž koeficienty této kombinace jsou složky vektoru. Viz následující příklad. $$\begin{pmatrix}2 & 1\\-1 &3 \end{pmatrix} \begin{pmatrix}2\\3\end{pmatrix} = 2\begin{pmatrix}2\\-1\end{pmatrix} + 3\begin{pmatrix}1\\3\end{pmatrix} = \begin{pmatrix}7\\7\end{pmatrix}$$
 * Matice je možno chápat jako zobrazení mezi vektorovými prostory. Vektor můžeme pomocí matice zobrazit na jiný vektor. Zachovávají se přitom důležité vlastnosti, jako se přitom rovnoběžnost a poloha středu úsečky.
 * Matice je možno použít pro přepočet vektorů a tenzorů do jiné soustavy souřadnic. 
 * Pokud se vektor zobrazí na svůj násobek, nazývá se vlastní vektor a tento násobek je vlastní číslo. $$A\vec v=\lambda \vec v$$
 * Matice s vlastními vektory se směru souřadných os je diagonální. Skutečně, například použitím definice maticového součinu a použitím definice vlastního vektoru a čísla dostáváme $$\begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}a\\c\end{pmatrix}\quad\text{a}\quad \begin{pmatrix}a &  b\\c &d \end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix}=\lambda \begin{pmatrix}1\\0\end{pmatrix}.$$ To si vynutí $c=0$. Podobně bychom dostali pro vektor ve směru druhé osy $b=0$.
 
-[Animace](https://user.mendelu.cz/marik/manim/MatrixMultiplication/)
 
 # Diferenciální operátory
 
@@ -169,11 +170,10 @@ V materiálovém inženýrství často provádíme linearizaci v okolí nuly a p
 
 # Vícerozměrné konstitutivní zákony
 
-https://youtu.be/PzFh8f9Qzf8
-
-[Animace](https://user.mendelu.cz/marik/manim/Flow)
 
 https://youtu.be/uTzCAxOOye8
+
+manim:Flow|PzFh8f9Qzf8|Tok v anizotropních materiálech je ve směru opačném než gradient jenom v případě, že se jedná o vlastní směr. 
 
 Konstitutivní vztahy tvoří z hlediska materiálového inženýrství jednu z nejdůležitějších aplikací gradientu. Tyto vztahy dávají do vzájemné relace gradient stavové veličiny, pomocí níž charakterizujeme stav studovaného objektu, a tok, který se snaží zahladit nerovnoměrnost v rozložení stavové veličiny. Například při nerovnoměrném rozložení koncentrace látky se tato koncentrace vyrovnává difuzním tokem. Při nerovnoměrném rozložení vnitřní energie v systému se tato nerovnoměrnost navenek projevuje rozdílnými teplotami v různých částech tělesa a vyrovnává tokem tepla. Při různých piezometrických hladinách podzemní vody (hladina podzemní vody se započtením případného tlaku a dalších parametrů majících vliv na proudění vody) se tato nerovnoměrnost vyrovnává prouděním podzemní vody. 
 

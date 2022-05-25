@@ -209,7 +209,6 @@ Následující poznámka je nenápadná a přirozená, protože je analogií ste
 
 <!-- https://youtu.be/tZDKXyomaJE -->
 
-https://youtu.be/1tbe5YUvoqg
 
 https://youtu.be/ilAaBQNoySI
 
@@ -224,11 +223,13 @@ Studujme vedení tepla v jednorozměrné tyči. Teplota $T$ je funkcí dvou prom
 
 \iffalse
 
+manim:Heat|1tbe5YUvoqg|Rovnice vedení tepla. Animace jak se chová teplo při jednorozměrném transportu a odvození rovnice vedení tepla.
+
 <div class='obtekat'>
 
 ![Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například tok tepla oknem nebo stěnou domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.](domek.png)
 
-![Ukázka možného výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle je čas a barva označuje teplotu. Dole je počáteční stav, kdy je podél celé tyče nulová teplota. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh ukazující, jak v jednotlivých bodech roste teplota, získáme řešením rovnice vedení tepla. Rozložení teploty v tyči pro vybrané časy získáme na vodorovných řezech v obrázku. Časový vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.](octave.png)
+![Ukázka možné vizualizace výstupu z rovnice vedení tepla. Vodorovně je poloha v tyči, svisle je čas a barva označuje teplotu. Dole je počáteční stav, kdy je podél celé tyče nulová teplota. Po ohřátí pravého konce na 100 stupňů a udržování levého konce na nulové teplotě se postupně nastolí rovnováha s lineárním teplotním profilem (teplota rovnoměrně roste doprava). Časový průběh ukazující, jak v jednotlivých bodech roste teplota, získáme řešením rovnice vedení tepla. Rozložení teploty v tyči pro vybrané časy získáme na vodorovných řezech v obrázku. Časový vývoj teploty v pevně sledovaných bodech získáme na svislých řezech.](octave.png)
 
 
 </div>
@@ -303,7 +304,7 @@ Základním přístupem při numerickém odhadu derivace je vynechání limitní
 
 ## Centrální diference
 
-> Poznámka (Taylorův polynom). V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Touto aproximací je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d). S jeho využitím pro aproximaci kvadratickoku funkcí platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
+> Poznámka (Taylorův polynom). V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Touto aproximací je [Taylorův polynom](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_II/#taylor%C5%AFv-polynom-a-polynomi%C3%A1ln%C3%AD-aproximace-v-1d). S jeho využitím pro aproximaci kvadratickou funkcí platí $$f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),$$ kde $O(h^3)$ je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce $h^3$.
 
 Přesnější aproximace derivace vychází z Taylorova polynomu druhého řádu napsaného pro $f(x+h)$ a $f(x-h)$, tj. ze vztahů $$ f(x+h)\approx f(x)+f'(x)h+\frac 12 f''(x)h^2$$ a $$f(x-h)\approx f(x)-f'(x)h+\frac 12 f''(x)h^2.$$ Pokud tyto vztahy sečteme a odečteme, dostaneme $$f(x+h)+f(x-h)\approx2f(x)+ f''(x)h^2$$ a $$f(x+h)-f(x-h)\approx2f'(x)h.$$ Odsud dostáváme aproximace první a druhé derivace $$ f'(x)=\frac{\mathrm d f}{\mathrm dx}\approx  \frac{f(x+h)-f(x-h)}{2h}  $$ a $$ f''(x)=\frac{\mathrm d^2f}{\mathrm dx^2}\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  $$
 Analogicky pro parciální derivaci podle $x$
@@ -312,7 +313,7 @@ a
 $$ \frac{\partial^2f}{\partial x^2}\approx  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}.  $$
 Tato aproximace první derivace se nazývá *centrální diference* a je přesnější než dopředná diference, protože je založena na přesnější aproximaci funkce $f$. Používá totiž polynom druhého stupně. Dopředná diference je založena pouze na lineární aproximaci a proto dává méně přesné výsledky.
 
-Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciální derivaci podle $x$ i $y$. Aproximace uvedeme ve tvaru, ze kterého je možno současně vidět i chybu při použití dané aproximace. Dva vzorce pro každou parciální derivaci prvního řádu a jeden vzorec pro parciální derivaci druhého řádu.
+Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciální derivaci podle $x$ i $y$. Dva vzorce pro každou parciální derivaci prvního řádu a jeden vzorec pro parciální derivaci druhého řádu. Aproximace uvedeme ve tvaru, ze kterého je možno současně vidět i chybu při použití dané aproximace. (Pro určení chyby u druhé derivace aproximujeme polynomem o řád vyšším.)
 
 > Věta (aproximace parciálních derivací pomocí konečných diferencí).
 > Platí následující aproximace derivace podle $x$.
