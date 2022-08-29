@@ -8,33 +8,33 @@ then
    echo '<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"> 
 <html> <head> 
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
-<link rel="stylesheet" type="text/css" href="styl.css" >
+<link rel="stylesheet" type="text/css" href="../styl.css" >
  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
-<link rel="stylesheet" href="my.css" type="text/css" />
+<link rel="stylesheet" href="../my.css" type="text/css" />
 <style>
 h1,h2 {text-align:center;}
 </style>
-</head><html>' > index.html
+</head><html><body>' > 00/index.html
 
-echo  '<div class="menu-obalka">  <a class="menu menu4" href="/marik/am/">Aplikovaná matematika</a><a class="menu menu4 ACTIVE" href="/marik/am/slidy/">Přednáška</a><a class="menu menu4" href="/marik/am/slidy/cviceni/cviceni00.md.html">Cvičení</a><a class="menu menu4" href="https://um.mendelu.cz/">WeBWorK</a>  </div>' >> index.html
+echo  '<div class="menu-obalka">  <a class="menu menu4" href="../">Inženýrská matematika</a><a class="menu menu4 ACTIVE" href="./">Přednáška</a><a class="menu menu4" href="../cviceni/cviceni00.md.html">Cvičení</a><a class="menu menu4" href="https://um.mendelu.cz/">WeBWorK</a>  </div>' >> 00/index.html
 
-echo ' <div class='menu-obalka'><a class="menu ACTIVE" href="/marik/am/slidy/">0</a><a class="menu  " href="01">1</a><a class="menu " href="02">2</a><a class="menu  " href="02">3</a><a class="menu  " href="04">4</a><a class="menu  " href="05">5</a><a class="menu  " href="06">6</a><a class="menu  " href="07">7</a><a class="menu  " href="08">8</a><a class="menu  " href="09">9</a><a class="menu  " href="10">10</a><a class="menu  " href="11">11</a></div> ' >> index.html
-   echo '<div class=container><h1>Prezentace z přednášek z Aplikované matematiky</h1><h2>Letní semestr 2020/2021</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="/marik/am/">Aplikovaná matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF (neobsahuje obrázky a motivační slidy), pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown. Můžete použít i variantu, kdy jsou <a href="http://user.mendelu.cz/marik/wiki/am/slidy/am_slidy_all.pdf">všechny přednášky v jednom PDF</a></p><p> Cvičení jsou na <a href="/marik/am/slidy/cviceni/cviceni00.md.html">samostatné stránce</a></p>' >> index.html
-   echo '<div class="CSSTableGenerator"><table>'>>index.html
-   echo '<tr><td>Název</td><td>Html</td><td>PDF</td><td>markdown</td></tr>'>>index.html
+echo ' <div class='menu-obalka'><a class="menu ACTIVE" href="./">0</a><a class="menu  " href="../01">1</a><a class="menu " href="../02">2</a><a class="menu  " href="../03">3</a><a class="menu  " href="../04">4</a><a class="menu  " href="../05">5</a><a class="menu  " href="../06">6</a><a class="menu  " href="../07">7</a><a class="menu  " href="../08">8</a><a class="menu  " href="../09">9</a><a class="menu  " href="../10">10</a><a class="menu  " href="../11">11</a></div> ' >> 00/index.html
+   echo '<div class=container><h1>Prezentace z přednášek z Inženýrské matematiky</h1><h2>Zimní semestr 2021/2022</h1><p>Tato stránka obsahuje prezentace z předmětu <a href="/marik/am/">Inženýrská matematika</a>. Každá přednáška je v několika formátech pro pohodlí a větší možnost volby uživatele. Pro tisk je nejlepší PDF (neobsahuje obrázky a motivační slidy), pro prohlížení na tabletu html, pro transformaci do široké škály výstupů (programem Pandoc) formát markdown. Můžete použít i variantu, kdy jsou <a href="http://user.mendelu.cz/marik/wiki/am/slidy/am_slidy_all.pdf">všechny přednášky v jednom PDF</a></p><p> Cvičení jsou na <a href="/marik/am/slidy/cviceni/cviceni00.md.html">samostatné stránce</a></p>' >> 00/index.html
+   echo '<div class="CSSTableGenerator"><table>'>> 00/index.html
+   echo '<tr><td>Název</td><td>Html</td><td>PDF</td><td>markdown</td></tr>'>> 00/index.html
 
    for j in $kde
    do
        k=`head -n1 $j/slidy.md | cut -d% -f2`
-       echo "<tr><td>$k</td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j.pdf'  target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> index.html
+       echo "<tr><td>$k</td><td><a href='$j/index.html' target='_blank'>otevřít</a></td><td><a href='$j.pdf'  target='_blank'>otevřít</a></td><td><a href='$j/slidy.md'>otevřít</a></td></tr>"  >> 00/index.html
 
    done
-   echo '</table></div>' >> index.html
+   echo '</table></div>' >> 00/index.html
 
-   echo '<p><ul><li>Díky <em>parciálním derivacím</em> (přednáška 1) se naučíme se sledovat reakci sledované veličiny na změny ve vstupních datech. Například jak se mění teplota v daném místě stěny s časem, nebo jak se mění teplota ve stejném časovém okamžiku napříč stěnou. <li>Díky <em>gradientu</em> (přednáška 2) se naučíme sledovat změny ve vícerozměrných prostorech. To se například uplatní například pokud sledujeme chování teploty ve stěně, ale vlivem efektů u krajů stěn nestačí úlohu uvažovat jednorozměrně, skrz stěnu. <li>Také se naučíme gradient přepočítávat na tok a později (přednáška 3) tuto znalost dále rozvineme. Naučíme se pomocí pojmu <em>divergence</em> sledovat změny toku a díky tomu budeme moci sestavit jakousi bilanci, která vede k jednotné teorii pro formulaci teplotního pole v materiálu, vlhkostního pole v materiálu a dalších. <li>Poté se seznámíme (přednáška 4) s pojmem <em>rotace</em> vektorového pole, který nás informuje o možnosti zavést v libovolném vektorovém poli obdobu potenciální energie a s <em>křivkovým integrálem</em> (přednáška 5), který tuto veličinu umí najít pomocí výpočtu práce po křivce. <li>Tím se dostaneme do světa zobecňování integrálu a po křivkovém integrálu se naučíme (přednáška 6) integrovat ve dvourozměrné oblasti pomocí <em>dvojného integrálu</em>. To se hodí například k nalezení celkové energie v tělese, kde je teplota rozložena nerovnoměrně. <li>Vybaveni dvojným a křivkovým integrálem se naučíme použitím <em>Greenovy věty</em> (přednáška 7) realizovat přechod mezi lokálními a globálními tvary fyzikálních zákonů a tím modelovat vedení tepla nebo vlhkosti nejenom pro dané místo materiálu, ale pro konečně velký objem, tj. v měřitelných pojmech. <li>Protože fyzikální zákony jsou přirozeně formulovány pomocí derivací, v praktických aplikacích se setkáváme s rovnicemi, kde neznámé jsou funkce a rovnicích figurují i derivace těchto neznámých hledaných funkcí. Jedná se o <em>diferenciální rovnice</em> a budeme se jim věnovat v několika přednáškách. Nejprve ty opravdu nejednodušší, které poslouží k řešení speciálních případů rovnice vedení tepla, ale i k modelování jevů, kde se veličiny mění rychlostí související s hodnotami těchto veličin (přednáška 8). Například chladnutí kávy, které probíhá tím intenzivněji, čím je teplotní rozdíl kávy a okolí větší. <li>Poté si ukážeme (přednáška 9), že mnoho rovnic má předem danou strukturu řešení. Je to něco jako skutečnost, že pro zadání přímky mi stačí bod a směr, pro zadání roviny bod a dva směry. Stačí tyto charakteristiky a máme všechny body přímky, roviny, nebo všechny funkce, které vyhovují <em>lineární rovnici.</em> <li>To využijeme (přednáška 10) pro popis chování řešení některých <em>soustav diferenciálních rovnic</em>, které modelují úlohy z mechaniky, ale i ekologie či dnes populární teorie epidemií. <li>Některé modely je vhodné vyjadřovat pomocí rovnic obsahujících <em>derivace druhého řádu</em> (přednáška 11), což bude problematika využitelná například v mechanice, při studiu kmitů nebo selhávání nosníků. </ul></p></div></html>' >> index.html
+   echo '<p><ul><li>Díky <em>parciálním derivacím</em> (přednáška 1) se naučíme se sledovat reakci sledované veličiny na změny ve vstupních datech. Například jak se mění teplota v daném místě stěny s časem, nebo jak se mění teplota ve stejném časovém okamžiku napříč stěnou. <li>Díky <em>gradientu</em> (přednáška 2) se naučíme sledovat změny ve vícerozměrných prostorech. To se například uplatní například pokud sledujeme chování teploty ve stěně, ale vlivem efektů u krajů stěn nestačí úlohu uvažovat jednorozměrně, skrz stěnu. <li>Také se naučíme gradient přepočítávat na tok a později (přednáška 3) tuto znalost dále rozvineme. Naučíme se pomocí pojmu <em>divergence</em> sledovat změny toku a díky tomu budeme moci sestavit jakousi bilanci, která vede k jednotné teorii pro formulaci teplotního pole v materiálu, vlhkostního pole v materiálu a dalších. <li>Poté se seznámíme (přednáška 4) s pojmem <em>rotace</em> vektorového pole, který nás informuje o možnosti zavést v libovolném vektorovém poli obdobu potenciální energie a s <em>křivkovým integrálem</em> (přednáška 5), který tuto veličinu umí najít pomocí výpočtu práce po křivce. <li>Tím se dostaneme do světa zobecňování integrálu a po křivkovém integrálu se naučíme (přednáška 6) integrovat ve dvourozměrné oblasti pomocí <em>dvojného integrálu</em>. To se hodí například k nalezení celkové energie v tělese, kde je teplota rozložena nerovnoměrně. <li>Vybaveni dvojným a křivkovým integrálem se naučíme použitím <em>Greenovy věty</em> (přednáška 7) realizovat přechod mezi lokálními a globálními tvary fyzikálních zákonů a tím modelovat vedení tepla nebo vlhkosti nejenom pro dané místo materiálu, ale pro konečně velký objem, tj. v měřitelných pojmech. <li>Protože fyzikální zákony jsou přirozeně formulovány pomocí derivací, v praktických aplikacích se setkáváme s rovnicemi, kde neznámé jsou funkce a rovnicích figurují i derivace těchto neznámých hledaných funkcí. Jedná se o <em>diferenciální rovnice</em> a budeme se jim věnovat v několika přednáškách. Nejprve ty opravdu nejednodušší, které poslouží k řešení speciálních případů rovnice vedení tepla, ale i k modelování jevů, kde se veličiny mění rychlostí související s hodnotami těchto veličin (přednáška 8). Například chladnutí kávy, které probíhá tím intenzivněji, čím je teplotní rozdíl kávy a okolí větší. <li>Poté si ukážeme (přednáška 9), že mnoho rovnic má předem danou strukturu řešení. Je to něco jako skutečnost, že pro zadání přímky mi stačí bod a směr, pro zadání roviny bod a dva směry. Stačí tyto charakteristiky a máme všechny body přímky, roviny, nebo všechny funkce, které vyhovují <em>lineární rovnici.</em> <li>To využijeme (přednáška 10) pro popis chování řešení některých <em>soustav diferenciálních rovnic</em>, které modelují úlohy z mechaniky, ale i ekologie či dnes populární teorie epidemií. <li>Některé modely je vhodné vyjadřovat pomocí rovnic obsahujících <em>derivace druhého řádu</em> (přednáška 11), což bude problematika využitelná například v mechanice, při studiu kmitů nebo selhávání nosníků. </ul></p></div></body></html>' >> 00/index.html
 
    #scp index.html cornus.mendelu.cz:html/am/slidy/
-   rsync -e "ssh -o StrictHostKeyChecking=no" -av index.html cornus.mendelu.cz:html/am/slidy/
+   rsync -e "ssh -o StrictHostKeyChecking=no" -av 00/index.html cornus.mendelu.cz:html/am/slidy/00
 
 fi  
 
@@ -46,7 +46,7 @@ do
   cp prikaz_pandoc $i/prikaz
   cd $i
   bash prikaz
-  menu="<div class='menu-obalka'><a class='menu' href='\/marik\/am\/slidy\/'>0<\/a>"
+  menu="<div class='menu-obalka'><a class='menu' href='..\/00'>0<\/a>"
   j=1
   for ii in $all;
   do
@@ -61,10 +61,12 @@ do
   done
   menu="$menu <\/div>"
 
+  echo "sed menu"
   sed -i "s/<!-- menu -->/ $menu /" index.html
 
   datum=`stat slidy.md | grep Change | cut -d" " -f2`
 
+  echo "sed datum"
   sed -i "s/<h3 class=\"date\">.*h3>/<p class=\"date\"><em><small>Poslední modifikace: $datum <\/small><\/em><\/p>/" index.html
 
   echo $cislo
@@ -75,11 +77,14 @@ do
 
     substituce="<div style='background-color: #E41F1F; display:inline-div;max-width:300px; color:lightgray; text-align:center; font-weight:bold; float:left; margin-right:10px; border-color:#E41F1F; border-style:solid;' ><a href='https:\/\/youtu.be\/$ytbid' style='text-decoration:none; color:lightgray;'><img src='https:\/\/img.youtube.com\/vi\/$ytbid\/mqdefault.jpg' style='width:100%; max-width:100%;'>Youtube přednáška<\/a><\/div>"
 
+    echo "sed YTB"
     sed -i "s/<!-- YTB -->/$substituce/" index.html
   fi
   
   cislo=$(($cislo+1))
 
+
+  echo "sed iffalse"
   sed -i "s/<p>\\\\iffalse<\/p>//" index.html
 
   cd ..
