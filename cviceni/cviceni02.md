@@ -97,7 +97,7 @@ Pro funkci $f(x,y)=x^2+\frac x{y^2}-6$ najděte
 1. explicitní vyjádření funkce dané v okolí bodu $(2,1)$ implicitně rovnicí $f(x,y)=0$,
 1. lineární aproximace v okolí bodu $x=2$ pro funkci získanou v předchozím bodu.
 
-_Zde mimo jiné v podúkolu číslo 7 vlastně najdeme lineární aproximaci relativně komplikované funkce jedné proměnné (nalezené v podúkolu 6). To se dá udělat prostředky diferenciálního počtu funkcí jedné proměnné, ale výpočet by byl poměrně nepříjemný, protože by bylo nutno derivovat funkci s nepříjemnou odmocninou. Alternativa je najít tečnou rovinu k funkci více proměnných a poté použít příslušný řez této tečé roviny bude tečnou k vrstevnici. Použitý aparát je sice pokročilješí (používáme funkce více proměnných tam, kde by stačily funkce jedné proměnné), ale početní náročnost je nižší. Technicky je derivování nepříjemné odmocniny ze zlomku nahrazeno derivováním polynomu._
+_V tomto příkladě ukazujeme, že někdy je vhodné úlohu řešit v rámci obecnější teorie. Zde v podúkolu číslo 7 vlastně najdeme lineární aproximaci relativně komplikované funkce jedné proměnné (nalezené v podúkolu 6). To se dá udělat prostředky diferenciálního počtu funkcí jedné proměnné, ale výpočet by byl poměrně nepříjemný, protože by bylo nutno derivovat funkci s nepříjemnou odmocninou. Alternativa je najít tečnou rovinu k funkci více proměnných z našeho zadání a příslušný řez této tečné roviny bude tečnou k vrstevnici. Použitý aparát je sice pokročilejší (používáme funkce více proměnných tam, kde by stačily funkce jedné proměnné), ale početní náročnost je nižší. Technicky je derivování nepříjemné odmocniny ze zlomku nahrazeno derivováním polynomu._
 
 <div class=reseni>
 
@@ -262,7 +262,7 @@ Tabulka $T(x,y)$, vodorovně $x$, svisle $y$
 
 !["Termosnímek" k tabulce. Pozor na to, že v tabulce rostou hodnoty $y$ směrem dolů, ale v grafu nahoru.](gradient_num.png)
 
-Rozložení teploty v plošném materiálu je po vyhodnocení dat z termosnímku dáno tabulkou. Situace může vypadat například jako v tomto zadání. Určete gradient teploty v bodě o souřadnicích $x=20$ a $y=5$.
+Rozložení teploty v plošném materiálu je po vyhodnocení dat z termosnímku dáno tabulkou. Situace může vypadat například jako v tomto zadání. Určete gradient teploty v bodě o souřadnicích $x=20$ a $y=5$. Pro výpočet parciálních derivací použijte centrální diferenci.
 
 **Poznámka:** Ve skutečnosti se nejedná a termosnímek, ale o graf funkce dané tabulkou. Barvy jsou interpolovány pro hladší přechody. Příkazy generující tabulku a obrázek jsou [zde](https://sagecell.sagemath.org/?z=eJyVU81um0AQvlvyO4ySi3FsB5xaqhL5lkfwLUqlNYzNGtily4JY3qEPUPWUYw9R7706ea98i-OkShOpBYFm4Ztvvvlrl9OL8HJxeRFeEdEpKVFZ0bCSVHAnqTTaPwUrxcOBewUPBzdtOyHnbmkJaJVujUxo5D8FV56oMLLLRE-QGa5yUA4Hw8EK8Cj8PJ-GszAat-3sy5zOKJx9ihZj52gKcx4t5viD4xV4GhenGkoSYQUOW1Zs6h0XTIp3ItM1bWqVxQA0sJ-1wmc4qOpi2Wf1b9cplcKIgq2pqU5EI3YSrAhBhY6pUyLViZKI65UgkeXqDBHGRqhkVMmOR6sg-Dja6SGBk07ASbESJ3RghOiGc4SC5Vmj8ygMaUxG1yBezcY4fsj7zNoJnQGfosgCtCgFVHLFViqcCll5wcNBGetcmxH65txkFcB7a8SGLJe5ts4jekAhSkq1pTfz4LH1hNbCNGCrUpFItSWpLJvyXWTj0lx06Be6wmhi4p4DgOI1gb_cDG_YsIrx5QWNLNY6Q33KtahKju3oJiLct8F7DJXlndr_pOLhx-P3_b3NtCfQa5RaV_u7OO2nsspqyw_fPLDTa-OV7u_7XmS6spL2v9P88Rc1cDT7u85Hx9An7SRxt0tESiQriwadL4LD6jSu1DFbOv7rHa6XNwvCFIYQe4AlclN3fr-ElTF7jNVZu5yO6HoUTaJgnLTYCG_PYTs6rBMwPdAdgPM_gPMXoCdLdZ6QVsPB11o2fOx2Lzt4KXrjjjuJhDOrjW44xabrHIOjqS9HVmMbj7m8ofOK_aun_A86uDwB2ZdivQ==&lang=octave&interacts=eJyLjgUAARUAuQ==).
 
