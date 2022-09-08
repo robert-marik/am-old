@@ -223,7 +223,7 @@ $$\frac{\mathrm dP}{\mathrm dt}=-k(T-T_0).$$ Okomentujte slovně, v čem regulac
 3. Předpokládejme nejobecnější lineární systém regulace výkonu
 $$\frac{\mathrm dP}{\mathrm dt}=\alpha P-k T + \gamma.$$ 
 Ukažte, že stacionární stav je robustní (roven $T_0=\frac\gamma k$ a nezávislý na ostatních parametrech) tehdy a jen tehdy, když platí $\alpha =0$.
-4. Najděte vlastní čísla autonomního systému vytvořeného v tomto modelu a okomentujte, jak se budou chovat řešení. Ukažte, že parametry systému je možné shluknout do jednoho bezrozměrného parametru, jehož hodnota dokáže odlišit kvalitativně různá chování systému. Všimněte si, že situace je stejná (až na konkrétní roli v jaké vystupují parametry systému) jako u soustavy popisující [kmity tlumeného oscilátoru v přednášce](../09/#mechanick%C3%BD-oscil%C3%A1tor).
+4. Najděte vlastní čísla autonomního systému vytvořeného v tomto modelu a okomentujte, jak se budou chovat řešení. Ukažte, že parametry systému je možné shluknout do jednoho bezrozměrného parametru, jehož hodnota dokáže odlišit kvalitativně různá chování systému. Všimněte si, že situace je skoro stejná jako u soustavy popisující [kmity tlumeného oscilátoru v přednášce](../09/#mechanick%C3%BD-oscil%C3%A1tor).
 
 
 <div class=reseni>
@@ -276,7 +276,7 @@ $$0=\begin{vmatrix}-b-\lambda&a\\-k&-\lambda\end{vmatrix}=\lambda^2+b\lambda+ak.
 a kořeny jsou $$\lambda_{1,2}=\frac{-b\pm\sqrt{b^2-4ak}}{2}.$$
 Pokud je $b^2-4ak>0$, jsou oba kořeny reálné záporné a ve stacionárním bodě je stabilní uzel. Systém přejde do stacionárního bodu bez oscilací. Pokud je $b^2-4ak<0$, jsou oba kořeny komplexně sdružené se zápornou reálnou částí a systém přejde do stabilního stavu oscilacemi se snižující se amplitudou. Z podmínek vidíme, že o chování rozhoduje to, zda je výraz $\frac{b^2}{ak}$ větší či menší v porovnání s hodnotou $4$. Pokud větší, oscilace se nevyskytnou. Pokud menší, systém osciluje k rovnováze. Tyto oscilace se tedy objeví, pokud je $a$ nebo $k$ velké. Pro systém to znamená, že oscilace se objeví, pokud příkon $P$ výrazně reaguje na odchylku od rovnovážné teploty (velké $k$), nebo teplota výrazně reaguje na změny v příkonu (velké $a$). Že se v takových situacích může rovnovážná teplota "přestřelit" a budeme se ní blížit zase z opačného směru není proto nijak překvapující. Přirozenou analýzou vyplynulo, že kvalitativní chování systému (oscilace versus neoscilace) nezávisí na jednotlivých parametrech samostatně, ale na čísle $\frac{b^2}{ak}$. Pokud prohodíme pořadí proměnných, má soustava tvar 
 $$\frac{\mathrm d}{\mathrm dt}\begin{pmatrix}P\\T\end{pmatrix}=\begin{pmatrix}0&-k\\a&-b\end{pmatrix}\begin{pmatrix}P\\T\end{pmatrix}+\begin{pmatrix}kT_0\\S\end{pmatrix}.$$
-Posunutím stupnic měření výkonu a tepla dosáhneme toho, že se druhý vektor na pravé straně vynuluje a soustava má formálně stejný tvar jako soustava pro mechanický oscilátor z přednášky (vlevo nahoře nula, jinak nenulové hodnoty, po vynásobení teploty faktorem $-1$ bychom dosáhli i stejných znamének u koeficientů).
+Až na konstantní člen na pravé straně je systém stejný jako systém pro mechanický oscilátor. Přítomnost konstantního člene způsobí, že stacionární bod není v počátku, ale je posunutý.
 
 </div>
 
