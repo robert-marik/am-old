@@ -264,6 +264,28 @@ bilance toku tepla. Zeslabení toku
 udává, kolik tepla se v daném místě spotřebovalo. Tato spotřeba tepla
 se projeví zvýšením teploty v místě, kde k zeslabení došlo.
 
+|Část rovnice vedení tepla|Slovní interpretace|
+|:---|:---|
+|$\color{red}\displaystyle\frac{\partial T}{\partial t}$|Rychlost s jakou roste v daném místě teplota jako funkce času.|
+|$\displaystyle\frac{\partial T}{\partial x}$|Rychlost s jakou roste v daném okamžiku teplota podél tyče.|
+|$\displaystyle-\frac{\partial T}{\partial x}$|Rychlost s jakou klesá v daném okamžiku teplota podél tyče. Záporně  vzatá rychlost růstu.|
+|$\displaystyle-k\frac{\partial T}{\partial x}$|Tok tepla. Podle Fourierova zákona je úměrný rychlosti s jakou klesá teplota.|
+|$\displaystyle\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$|Rychlost s jakou roste tok tepla podél tyče.|
+|$\displaystyle-\frac{\partial}{\partial x}\left(-k\frac{\partial T}{\partial x}\right)$|Rychlost s jakou klesá tok tepla podél tyče. Toto teplo zůstává v daném místě tyče a projeví se nárůstem teploty v tomto místě.|
+|$\color{red}\displaystyle\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)$|Upravený výraz z předchozího řádku. Rychlost s jakou klesá tok tepla podél tyče.|
+|Rovnice vedení tepla|Červené výrazy jsou si úměrné.|
+
+
+<style>
+
+td {padding:10px; text-align: center;}
+tr:nth-child(even) {color:green; background: #E9E9E9;}
+table {border-collapse: collapse; width:80%; margin:auto; margin-top:20px; margin-bottom:20px;}
+th {color:white; background: #555;}
+
+</style>
+
+
 ww:problems/parcialni_derivace/rovnice_vedeni_tepla_interpretace.pg 
 
 **Numerické modelování.**
