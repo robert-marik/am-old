@@ -173,6 +173,8 @@ V materiálovém inženýrství často provádíme linearizaci v okolí nuly a p
 
 https://youtu.be/uTzCAxOOye8
 
+manim:Eigenvectors|vfzT25D6Zz8|Připomenutí vlastních směrů matice
+
 manim:Flow|PzFh8f9Qzf8|Tok v anizotropních materiálech je ve směru opačném než gradient jenom v případě, že se jedná o vlastní směr. 
 
 Konstitutivní vztahy tvoří z hlediska materiálového inženýrství jednu z nejdůležitějších aplikací gradientu. Tyto vztahy dávají do vzájemné relace gradient stavové veličiny, pomocí níž charakterizujeme stav studovaného objektu, a tok, který se snaží zahladit nerovnoměrnost v rozložení stavové veličiny. Například při nerovnoměrném rozložení koncentrace látky se tato koncentrace vyrovnává difuzním tokem. Při nerovnoměrném rozložení vnitřní energie v systému se tato nerovnoměrnost navenek projevuje rozdílnými teplotami v různých částech tělesa a vyrovnává tokem tepla. Při různých piezometrických hladinách podzemní vody (hladina podzemní vody se započtením případného tlaku a dalších parametrů majících vliv na proudění vody) se tato nerovnoměrnost vyrovnává prouděním podzemní vody. 
@@ -305,8 +307,6 @@ Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v příp
 # Speciální případy vztahu mezi gradientem a tokem
 
 https://youtu.be/vrPhbc-GJqc
-
-[Animace](https://user.mendelu.cz/marik/manim/Eigenvectors)
 
 
 \iffalse
