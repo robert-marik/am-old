@@ -28,6 +28,9 @@ https://youtu.be/zhaebxHbqhs
 
 </div>
 
+
+manimp:Spojitost|Derivace a její definice pomocí limity.
+
 \fi
 
 
@@ -43,7 +46,7 @@ $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 
 > Poznámka (Newtonův zákon tepelné výměny). Je-li $T(t)$ teplota tělesa v čase $t$, je $\frac{\mathrm dT}{\mathrm dt}$ změna této teploty za jednotku času, tj. rychlost s jakou roste teplota. Například pro čas v minutách a teplotu ve stupních Celsia hodnota derivace v šesté minutě může být $$\frac{\mathrm dT}{\mathrm dt}(6)=2 ^\circ \mathrm {C}/\mathrm{min}. $$ To znamená, že v čase $6$ minut roste teplota okamžitou rychlostí $2$ stupně Celsia za minutu. Pokud tento růst vydrží celou minutu, bude v čase $7$ minut teplota o dva stupně Celsia vyšší. Pokud tato rychlost růstu vydrží deset minut, jsme schopni podobně určit změnu teploty i za delší časový úsek.
 >
->V reálných dějích však konstantní rychlosti vídáme zřídka. Například u tepelné výměny se dynamika procesu zastavuje tím, jak se teploty postupně vyrovnávají. Rychlost, s jakou roste teplota chladného tělesa při tepelné výměně s teplejším tělesem není konstantní, ale mění se. Nejčasějším modelem reálné situace je, že tato rychlost je úměrná rozdílu teplot těles zapojených do tepelné výměny. Roli teplejšího tělesa hraje většinou okolí. Pokud je tedy teplota okolí konstantní a rovna $T_0$, je kvantitativním modelem procesu tepelné výměny rovnice $$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T).$$ To platí pro ohřev (teplota okolí je vyšší a teplota tělesa roste). Analogicky můžeme naformulovat model $$\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)$$ pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času).
+>V reálných dějích však konstantní rychlosti vídáme zřídka. Například u tepelné výměny se dynamika procesu zastavuje tím, jak se teploty postupně vyrovnávají. Rychlost, s jakou roste teplota chladného tělesa při tepelné výměně s teplejším tělesem není konstantní, ale mění se. Nejčastějším modelem reálné situace je, že tato rychlost je úměrná rozdílu teplot těles zapojených do tepelné výměny. Roli teplejšího tělesa hraje většinou okolí. Pokud je tedy teplota okolí konstantní a rovna $T_0$, je kvantitativním modelem procesu tepelné výměny rovnice $$\frac{\mathrm dT}{\mathrm dt}= k(T_0-T).$$ To platí pro ohřev (teplota okolí je vyšší a teplota tělesa roste). Analogicky můžeme naformulovat model $$\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)$$ pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času).
 >
 > Tento model se naučíme časem vyřešit. Pro složitější děje bude ve většině případů modelování vývoje probíhat na počítači. K dispozici je celá řada nástrojů, kde si může zájemce daný matematický model naskriptovat a spustit. Například [Sage](https://sagecell.sagemath.org/?z=eJxlU02L2zAQvRv8HwZySbZJmhYKpeBjT4WlFN-WZdFak0aRPGP0tWv_-o7sZDdtdbKsN-89vRmt4D716E1nFQTTJ6c6hMEz3ONLZEoZJmWZgLuTUxNnRQZ0-1FHaGAHFu5g3e7aw6auVvDTm95EkwUycJrkE-KU96B58KgJ4Xty6DmP0GNkPS41DKQ8d4Tn8F6HrybEdDYQ-Ch7W4RnwFK5lZrBG-uUhl-JfuPuR4pR1VVdtc3XA8haQcTBcVQ31vHE8tdhEGRsZpjgJtWpiFaoPYr1ToVUV1rO95_KseyLZevZzsFcUjJ1ZQXyZaawjEfTGaQI4uDQfD787cCyE_zAHcanQpQEsUCSVlmSH9ihRAABNDrLaZZLV21DEX1W7h_9PAaHGm3z8HDYto-Pha8QbSVxsFJS7vucNPYIqWSlopxLrgONkMfM54vDsQR3ZA9GpMArCXR9Y3bzbc5htC6Fuiqhle5H-AAyBu-riIdEkIttXIC6LXNi75YhuSv4FfhROiI-YJILqSy3jqI5gowGGRm_PJLc-xlJzTFgLzoLXWFrRZfWut3c6Mr8xtK7qUfhsYVRYj1LS-DEmjhe7Py3VnOkEqSM1pstGS1-Nf38ErhnIdEYMBoiQUBnArrrwTGRFRgt9NeG7NUwIOn1Q5S2bC4OBz4Xi5ovMJnp0p_SsKW6jBFhtwS9_KqrcOKXtZPH8FQatb4qbKFsz2wIddP6hJvt2BtqDpuZKI_WoyBFjy7PG9-e9x9WM0on&lang=sage&interacts=eJyLjgUAARUAuQ==) je založen na široce rozšířeném jazyce Python, případně [Octave](https://sagecell.sagemath.org/?z=eJwtj81qwzAQhO8CvcNeAlKTFLtQCDY59g18Kz2o1oYK_ayR1wbn6SvZEQjEzsy3I8twh-a97aGeE1gM3oDP5Bcpdq2z3H00fRVX9EwZZhjNTOsWHTyTGb2J7gLeIvwuFiPCRKNjw8A4BSqYoWCemGlWs3uiYq0P2sYrZUzuxV1gynSEeCsp1eoSvB2rZzaZaTWjgz-yidgUR1P0vVp1HEED5Ck4Kfz-r8-XOJlsInKuLgwJy_KIaQMppDjB1xJKvdVAsZA1Zfoo33T3tktLxKAGfW2lqKRBufNeqzw0nMEyvIEvVw3Ntc50LwUmW7m1juLLoKXYgovquwGXHj_6H6tibEk=&lang=octave&interacts=eJyLjgUAARUAuQ==) jako opensource alternativa programu Matlab.
 
@@ -317,6 +320,12 @@ Instrukce: Z podkapitoly věnované numerickým aproximacím si odneste hlavně 
 
 
 https://youtu.be/iGohx4i95FI
+
+<div class='obtekat'>
+
+![V praxi často pracujeme s daty získanými po skocích. Místo spojité funkce (křivky) tedy máme funkci definovanou v bodech (diskrétní funkce). I zde je nutné mít možnost měření rychlosti změny, která je co nejvíce kompatibilní s derivací.](diference.png)
+
+</div>
 
 
 ## Dopředná diference
