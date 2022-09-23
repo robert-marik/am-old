@@ -119,7 +119,7 @@ $$
 1. Z rovnice tečny k vrstevnici $$5(x-2)-4(y-1)=0$$
   dostáváme $$y=1+\frac 54 (x-2)$$
   a proto
-  $$\sqrt{\frac{x}{6-x^2}}\approx 1+\frac 54 (x-2)$$ v okolí $x=2$. Všimněte si, že jsme nepotřebovali aproximovanou funkci vůbec derivovat. To je výhoda, protože derivace odmocniny z podílu se nepočítá zcela příjemně. Namísto toho jsme využili výsledek z teorie funkce více proměnných. Přitom se musela využít nadřazená teorie, ale k výpočtu nebylo třeba derivovat nic horšího, než mocninnou funkci.
+  $$\sqrt{\frac{x}{6-x^2}}\approx 1+\frac 54 (x-2)$$ v okolí $x=2$. Všimněte si, že jsme **nepotřebovali aproximovanou funkci $\sqrt{\frac{x}{6-x^2}}$ vůbec derivovat**. To je výhoda, protože derivace odmocniny z podílu se nepočítá zcela příjemně. Namísto toho jsme využili výsledek z teorie funkce více proměnných. Přitom se musela využít nadřazená teorie, ale k výpočtu nebylo třeba derivovat nic horšího, než mocninnou funkci.
 
 </div>
 

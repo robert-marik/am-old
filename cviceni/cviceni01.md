@@ -208,7 +208,7 @@ Je-li podmínka na teplotu, figuruje v matematické formulaci $T$ vypočtená v 
 $T$ je funkce polohy, tj. $T=T(x).$ Je-li podmínka na tok, figuruje v matematické formulaci tok ve tvaru $-k\frac{\partial T}{\partial x}$, opět vypočtená v jednom z krajních bodů.
 
 
-1. $\frac{\partial T}{\partial x}(L)=0$
+1. $-k\frac{\partial T}{\partial x}(L)=0$
 1. $T(0)=23$
 1. $-k\frac{\partial T}{\partial x}(L)=-Q$, kde $Q$ je teplo za jednotku času dodané ze Slunce. Jedná se výkon Slunce dopadající na stěnu vynásobený koeficientem absorbce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy $x$.
 1. $-k\frac{\partial T}{\partial x}(L)=h(T(L)-T_{\text{okolí}})$, kde $h$ je koeficient přestupu tepla.
