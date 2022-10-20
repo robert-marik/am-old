@@ -239,15 +239,10 @@ Na následujících obrázcích jsou modrou barvou vrstevnice proudové funkce a
 
 https://youtu.be/52W524bSOKQ
 
-[Prezentace](https://user.mendelu.cz/marik/manim/Chyby)
 
 \iffalse 
 
-<div class='obtekat'>
-
-![Každé měření je zatíženo chybou a pokud tato data vstupují do výpočtu, musíme mít nástroj pro posouzení, jak se chyby měření projeví na chybě vypočítané veličiny. Zdroj: pixabay.com](mistake.jpg)
-
-</div>
+manimp:Chyby|Zákon šíření chyb využívá derivaci ke zjištění, jak funkční hodnota reaguje na změny ve vstupních datech.
 
 \fi
 
@@ -309,7 +304,9 @@ Pocitová teplota je tedy $W=-20.2\,{}^\circ\!\text{C}\pm 0.9\,{}^\circ\!\text{C
 
 \iffalse
 
-[Online výpočet.](https://sagecell.sagemath.org/?z=eJx1jEEKgzAQRfeCdxA3zqgJJmJKF7nFgItSoTQVXFTbVOb8jUitXXT3_3t_hi8eMio5wzhqIQS0qpZKF5U0WjU5CaVkfci5g0oqg4HXRxP4RuLIkW2lG_oeCIGtNiXZcIZ5JXWw_LH8a5s4evhhnBNoV56sAjeeCiHSb3W0y_x39nr6GZZxp4tl1-ndS75d58nDyVHp-IxynPwdEN_qCUOs&lang=sage&interacts=eJyLjgUAARUAuQ==)
+* [Online výpočet Sage.](https://sagecell.sagemath.org/?z=eJx1jEEKgzAQRfeCdxA3zqgJJmJKF7nFgItSoTQVXFTbVOb8jUitXXT3_3t_hi8eMio5wzhqIQS0qpZKF5U0WjU5CaVkfci5g0oqg4HXRxP4RuLIkW2lG_oeCIGtNiXZcIZ5JXWw_LH8a5s4evhhnBNoV56sAjeeCiHSb3W0y_x39nr6GZZxp4tl1-ndS75d58nDyVHp-IxynPwdEN_qCUOs&lang=sage&interacts=eJyLjgUAARUAuQ==)
+* [Online výpočet Python.](https://gist.github.com/robert-marik/7bdb6817bde21432434ca8877a49bd56)
+
 
 \fi 
 
