@@ -95,7 +95,9 @@ https://youtu.be/ev3eFilaGpw
 ![Tok kapaliny mezi dvěma rovnoběžnými stěnami jako pole s nenulovou rotací. Rychlost proudu klesá kvadraticky směrem ke břehům a díky tomu se loďka, která odrazí od břehu kolmo, stáčí po proudu.](tok.png)
 
 </div>
-  
+
+manimp:Curl|Rotace vektorového pole pomocí Sarussova pravidla.
+
 * Ve dvourozměrném vektorovém poli doplníme třetí komponentu nulovou. Rotace má potom první dvě komponenty nulové ($R=\frac{\partial Q}{\partial z}=\frac{\partial P}{\partial z}=0$). Třetí komponenta rotace dvourozměrného vektorového pole je nulová právě tehdy, když k tomuto vektorovému poli existuje skalární potenciál.
 * Ve fyzice má důležité postavení vektorové pole s nulovou rotací. Je v něm totiž možno zavést potenciál a potenciální energii. Takové pole se nazývá **nevírové pole**.
 * Představme si vektorové pole charakterizující rychlost proudící       tekutiny. Rotace udává, zda má pole tendenci uvést do rotace objekt unášený tímto prouděním. Jedná se o lokální charakteristiku a nesouvisí se směrem proudění. Rotace může být nulová i pro tok cirkulující okolo jednoho bodu (uvidíme níže). Naopak, pro to v přímce může být rotace nenulová. Příkladem je přímý tok v řece, kdy rychlost u břehu klesá. V důsledku toho se loďka, která odrazí od břehu kolmo stočí po proudu. Mimo středovou osu má pole nenulovou rotaci, i když ve všech bodech míří stejným směrem.  [Online výpočet.](https://sagecell.sagemath.org/?z=eJyNUUFuwyAQvEfKH1ZRUkNLWlz1yrWfqCOLxJAgYWNhkkKi_L1ALLvqqRzMDjO76531JJAru3CLCg8BrgVeLpYLiXx6xwxR4p9RufX4pXz7IDSzvlUdAd9yTyDkOMQYGFACJcnfJGvURTLUKCmR_KI7EmuMoNyRMIH3XWyEXwfV9lrJUMuz1ij2OZytnv8D5tQr3s6pAROYkZ8omnQTRZNwO5fwGPIkw8l8o5NrNbKrdbUXR9XduFbHTjR3qC7iAJ9PDDYDVBVUywUAVC13J9Pf8m3bWxzyfv-X0ho3KYElpeiaqdt6tclZSHMnPIqDszg6S8uJ7hB4PCdL_zIjNdr1m4snDdlr4-rY1xlbSyV0g7Ij2VqKSTJkjGO1GOX1pu0mGEjecHhAPvSxTm25U4bFVR-MNpYVe30WBf4BTyS0Gg==&lang=sage&interacts=eJyLjgUAARUAuQ==)
