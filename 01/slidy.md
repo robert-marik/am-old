@@ -189,10 +189,8 @@ kilometrech za hodinu), se dá odhadnout vzorcem
 $$E(m,v)=2.65 m^{0.66} + \frac{3.5 m^{0.75}}{v}.$$
 Přímým výpočtem je možné určit $$\frac{\partial E}{\partial v}=-\frac{3.5 m^{0.75}}{v^2}.$$ Pro $m=400\,\mathrm{g}$ a $v=8\,\mathrm{km}\,\mathrm{h}^{-1}$ dostáváme $$\frac{\partial E}{\partial v}(400,8)=-4.9\,\mathrm{kcal}\,\mathrm{km}^{-1}\mathrm{h}.$$ Zvýšení rychlosti o kilometr za hodinu vede ke snížení energetického výdeje ještěrky o $4.9\,\mathrm{kcal}$. Podobně, platí
 \dm $$\frac{\partial E}{\partial m}={2.65}\times 0.66 {m^{-0.34}} + \frac{3.5\times 0.75 m^{-0.25}}{v}= \frac{1.749}{m^{0.34}} + \frac{2.625}{m^{0.25} v} $$
-a pro výše uvažované hodnoty dostáváme
-$$\frac{\partial E}{\partial m}(400,8)=
-0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.
-$$
+a pro výše uvažované hodnoty dostáváme $$\frac{\partial E}{\partial m}(400,8)=
+0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.$$
 Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne energetický výdej přibližně o $0.30\,\mathrm{kcal}$.
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
@@ -347,10 +345,8 @@ Tato aproximace první derivace se nazývá *centrální diference* a je přesn�
 Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciální derivaci podle $x$ i $y$. Dva vzorce pro každou parciální derivaci prvního řádu a jeden vzorec pro parciální derivaci druhého řádu. Aproximace uvedeme ve tvaru, ze kterého je možno současně vidět i chybu při použití dané aproximace. (Pro určení chyby u druhé derivace aproximujeme polynomem o řád vyšším.)
 
 > Věta (aproximace parciálních derivací pomocí konečných diferencí).
-> Platí následující aproximace derivace podle $x$.
-> $$\begin{aligned} \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x,y)}{h}+O(h) \\ \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x-h,y)}{2h}+O(h^2)\\\frac{\partial^2 f}{\partial x^2}&=  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}+O(h^2)\end{aligned}$$
-> Platí následující aproximace derivace podle $y$.
-> $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \\ \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\\\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
+> Platí následující aproximace derivace podle $x$. $$\begin{aligned} \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x,y)}{h}+O(h) \\ \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x-h,y)}{2h}+O(h^2)\\\frac{\partial^2 f}{\partial x^2}&=  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}+O(h^2)\end{aligned}$$
+> Platí následující aproximace derivace podle $y$. $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \\ \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\\\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
 >
 
 ww:problems/parcialni_derivace/centralni_diference.pg
@@ -516,9 +512,7 @@ V dalším nastane jedna z nejnebezpečnějších situací v matematice, kdy př
   Množina $\mathbb{E}^3$ prvků z $\mathbb{R}^3$ s metrikou $\rho$ definovanou pro
   $A=(a_x,a_y,a_z)\in\mathbb{R}^3$ a $B=(b_x, b_y, b_z)\in\mathbb{R}^3$
   vztahem
-  $$
-    \rho(A,B)=\sqrt{(a_x-b_x)^2+(a_y-b_y)^2+(a_z-b_z)^2}
-  $$
+  $$\rho(A,B)=\sqrt{(a_x-b_x)^2+(a_y-b_y)^2+(a_z-b_z)^2}$$
   se nazývá *Euklidovský metrický prostor*. Prvky prostoru
   $\mathbb{E}^3$ budeme nazývat *body*. Funkce $\rho$ se nazývá
   *Euklidovská metrika*. Číslo $\rho(A,B)$ se nazývá
@@ -530,15 +524,9 @@ Analogicky je možno definovat metriku v prostoru libovolné konečné dimenze.
   Buď $A\in \mathbb{E}^n$ bod z $\mathbb{E}^n$ a $\varepsilon>0$ kladné reálné
   číslo. *Epsilonovým okolím bodu $X$* rozumíme množinu
   označenou $O_\varepsilon(A)$ skládající se z bodů, jejichž vzdálenost od
-  bodu $A$ je menší než $\varepsilon$, tj.
-$$
-    O_\varepsilon(A)=\{X\in\mathbb{E}^n:\rho(A,X)<\varepsilon\}.
-$$
+  bodu $A$ je menší než $\varepsilon$, tj. $$O_\varepsilon(A)=\{X\in\mathbb{E}^n:\rho(A,X)<\varepsilon\}.$$
   *Ryzím epsilonovým okolím bodu $A$* rozumíme množinu
-  $\overline O_\varepsilon(A)$ definovanou
-  $$
-    \overline O_\varepsilon(A)=O_\varepsilon(A)\setminus\{A\},
-  $$
+  $\overline O_\varepsilon(A)$ definovanou $$\overline O_\varepsilon(A)=O_\varepsilon(A)\setminus\{A\},$$
   tj. $\varepsilon$-okolí bodu $A$, s vyloučením bodu $A$.
 
 ## Významné vlastnosti množin v Euklidovském prostoru
