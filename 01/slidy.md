@@ -190,8 +190,7 @@ $$E(m,v)=2.65 m^{0.66} + \frac{3.5 m^{0.75}}{v}.$$
 Přímým výpočtem je možné určit $$\frac{\partial E}{\partial v}=-\frac{3.5 m^{0.75}}{v^2}.$$ Pro $m=400\,\mathrm{g}$ a $v=8\,\mathrm{km}\,\mathrm{h}^{-1}$ dostáváme $$\frac{\partial E}{\partial v}(400,8)=-4.9\,\mathrm{kcal}\,\mathrm{km}^{-1}\mathrm{h}.$$ Zvýšení rychlosti o kilometr za hodinu vede ke snížení energetického výdeje ještěrky o $4.9\,\mathrm{kcal}$. Podobně, platí
 \dm $$\frac{\partial E}{\partial m}={2.65}\times 0.66 {m^{-0.34}} + \frac{3.5\times 0.75 m^{-0.25}}{v}= \frac{1.749}{m^{0.34}} + \frac{2.625}{m^{0.25} v} $$
 a pro výše uvažované hodnoty dostáváme $$\frac{\partial E}{\partial m}(400,8)=
-0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.$$
-Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne energetický výdej přibližně o $0.30\,\mathrm{kcal}$.
+0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.$$ Každý gram, který má ještěrka navíc oproti hmotnosti $400$ gramů, zvedne energetický výdej přibližně o $0.30\,\mathrm{kcal}$.
 
 [Online výpočet.](https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
