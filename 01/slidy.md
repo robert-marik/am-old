@@ -338,9 +338,9 @@ Tato aproximace první derivace se nazývá *centrální diference* a je přesn�
 Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciální derivaci podle $x$ i $y$. Dva vzorce pro každou parciální derivaci prvního řádu a jeden vzorec pro parciální derivaci druhého řádu. Aproximace uvedeme ve tvaru, ze kterého je možno současně vidět i chybu při použití dané aproximace. (Pro určení chyby u druhé derivace aproximujeme polynomem o řád vyšším.)
 
 > Věta (aproximace parciálních derivací pomocí konečných diferencí).
-> Platí následující aproximace derivace podle $x$. $$\begin{aligned} \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x,y)}{h}+O(h) \cr \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x-h,y)}{2h}+O(h^2)\cr\frac{\partial^2 f}{\partial x^2}&=  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}+O(h^2)\end{aligned}$$
-> Platí následující aproximace derivace podle $y$. $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \cr \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\cr\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
->
+  Platí následující aproximace derivace podle $x$. $$\begin{aligned} \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x,y)}{h}+O(h) \cr \frac{\partial f}{\partial x}&=  \frac{f(x+h,y)-f(x-h,y)}{2h}+O(h^2)\cr\frac{\partial^2 f}{\partial x^2}&=  \frac{f(x-h,y)-2f(x,y)+f(x+h,y)}{h^2}+O(h^2)\end{aligned}$$
+  Platí následující aproximace derivace podle $y$. $$\begin{aligned} \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y)}{h}+O(h) \cr \frac{\partial f}{\partial y}&=  \frac{f(x,y+h)-f(x,y-h)}{2h}+O(h^2)\cr\frac{\partial^2 f}{\partial y^2}&=  \frac{f(x,y-h)-2f(x,y)+f(x,y+h)}{h^2}+O(h^2)\end{aligned}$$	
+
 
 ww:problems/parcialni_derivace/centralni_diference.pg
 
