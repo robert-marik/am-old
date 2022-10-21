@@ -294,14 +294,9 @@ Rovnici je možno použít k simulaci časového vývoje teploty například [ta
 
 https://youtu.be/vJVRrik3EAw
 
-Druhá derivace je derivace první derivace. U funkce dvou proměnných každá ze dvou po sobě jdoucích derivací může být podle některé ze dvou proměnných a v úvahu připadají čtyři kombinace. Pokud derivujeme dvakrát podle stejné proměnné, dostaneme
-  $$
-\frac{\partial^2 f}{\partial x^2}:=\frac{\partial}{\partial x}\frac{\partial f}{\partial x}\quad\text{a}\quad 
-\frac{\partial^2 f}{\partial y^2}:=\frac{\partial}{\partial y}\frac{\partial f}{\partial y}.
-$$
+Druhá derivace je derivace první derivace. U funkce dvou proměnných každá ze dvou po sobě jdoucích derivací může být podle některé ze dvou proměnných a v úvahu připadají čtyři kombinace. Pokud derivujeme dvakrát podle stejné proměnné, dostaneme   $$\frac{\partial^2 f}{\partial x^2}:=\frac{\partial}{\partial x}\frac{\partial f}{\partial x}\quad\text{a}\quad \frac{\partial^2 f}{\partial y^2}:=\frac{\partial}{\partial y}\frac{\partial f}{\partial y}.$$
 Pokud derivujeme pokaždé podle jiné proměnné, dostaneme v závislosti na pořadí
-$$\frac{\partial }{\partial x}\frac{\partial f}{\partial y}\quad\text{a}\quad
-\frac{\partial}{\partial y}\frac{\partial f}{\partial x}.$$
+$$\frac{\partial }{\partial x}\frac{\partial f}{\partial y}\quad\text{a}\quad \frac{\partial}{\partial y}\frac{\partial f}{\partial x}.$$
 Poději si ukážeme, že tyto dvě možnosti jsou v praxi zpravidla vždy totožné.
 
 Je-li tepelná vodivost $k$ v rovnici vedení tepla 
