@@ -584,7 +584,7 @@ Následující věta ukazuje, že u elementárních funkcí je spojitost v libov
 
 \fi
 
-Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát $$\frac{\partial^2 f}{\partial x^2},\quad \frac{\partial^2 f}{\partial x \partial y},\quad \frac{\partial^2 f}{\partial y^2}, $$ nebo $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
+Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát $$\frac{\partial^2 f}{\partial x^2},\quad \frac{\partial^2 f}{\partial x \partial y},\quad \frac{\partial^2 f}{\partial y^2},$$ nebo $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
 
 # Z ptačí perspektivy
 
