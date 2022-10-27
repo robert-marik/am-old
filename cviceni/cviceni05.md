@@ -223,7 +223,7 @@ Vypočtěte tok vektorového pole $$\vec \Phi_2=(y+2)\vec\imath$$ jednotkovou kr
 **Návod:** Platí $$\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0.$$
 
 <div class=reseni>
-Vektorové pole teče směrem doprava. Kromě toho zesiluje směrem nahoru. Dá se čekat, že tok ven pravou polovinou kružnice bude v každý výšce stejný jako tok dovnitř levou polovinou kružnice a celkový tok bude nulový.
+Vektorové pole teče směrem doprava. Kromě toho zesiluje směrem nahoru. Dá se čekat, že tok ven pravou polovinou kružnice bude v každé výšce stejný jako tok dovnitř levou polovinou kružnice a celkový tok bude nulový.
 
 Vektorové pole je $$\vec \Phi_2=(y+2,0)$$ a pro výpočet toku musíme integrovat křivkovým integrálem druhého druhu vektorové pole $$\vec F=(0,y+2).$$
 Vskutku, tok vektorového pole zadaného v komponentách $\Phi_2=(P,Q)$ je vyjádřen integrálem druhého druhu vektorového pole $\vec F=(-Q,P)$ a v našem případě je $P=y+2$ a $Q=0$. Derivací rovnice křivky obdržíme

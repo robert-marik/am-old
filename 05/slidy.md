@@ -279,6 +279,10 @@ $$
 \int_\alpha^\beta\Bigl[ P(\varphi(t),\psi(t))\varphi'(t)\\ &\qquad +Q(\varphi(t),\psi(t))\psi'(t)\Bigr]\;\mathrm{d}t.
 \end{aligned}
 $$ 
+Vektorově
+$$\int_C \vec F\;\mathrm d\vec r = 
+\int_\alpha^\beta \vec F(\vec r(t)) \cdot \frac{\mathrm d\vec r(t)}{\mathrm dt}\; \mathrm dt.
+$$
 
 # Vlastnosti křivkového integrálu druhého druhu
 
@@ -303,6 +307,9 @@ $$
 $$
 
 # Aplikace křivkového integrálu druhého druhu
+
+manimp:integracni_cesta|Křivkový integrál může a nemusí záviset na integrační cestě. Pokud na ní nezávisí, je možné v takovém poli nadefinovat potenciální energii.
+
 
 * Integrál
   $$
