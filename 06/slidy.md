@@ -342,7 +342,13 @@ Fubiniovy věty. Ke slovu přijde spíše numerický výpočet integrálu.
 
 </div>
 
+
+manimp:beam|Odvození ohybové rovnice nosníku.
+
+
 \fi
+
+
 
 
 * **Souřadnice těžiště** množiny jsou podílem lineárních momentů a

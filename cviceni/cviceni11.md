@@ -35,7 +35,7 @@ tj. na konstantní nulovou funkci.
 
 *V určitých speciálních případech má smysl formulovat i jiné typy okrajových podmínek, než podmínky na funkční hodnotu (Dirichletova) nebo derivaci (Neumannova) případně na jejich kombinace. Například může být přirozené požadovat ohraničenost.*
 
-Ve cvičení věnovaném difuzní rovnici jsme se zabývali problematikou žebra chladiče z materiálu s koeficientem tepelné vodivosti $\lambda$ v prostředí o teplotě $T_0$. Naformulovali jsme rovnici pro stacionární rozložení teploty ve tvaru $$\lambda \frac{\mathrm d^2T}{\mathrm dx^2} -h (T-T_0) =0,  $$ kde $h$ je koeficient přestupu tepla z chladiče do vnějšího prostředí. 
+Ve cvičení věnovaném difuzní rovnici jsme se zabývali problematikou žebra chladiče z materiálu s koeficientem tepelné vodivosti $\lambda$ v prostředí o teplotě $T_0$. Naformulovali jsme rovnici pro stacionární rozložení teploty ve tvaru $$\lambda \frac{\mathrm d^2T}{\mathrm dx^2} -h (T-T_0) =0,  $$ kde $h$ je koeficient úměrnosti, popisující přestup tepla z chladiče do vnějšího prostředí. 
 
 * Uvažujte dlouhý chladič a ukažte, že teplota klesá exponenciálně s polohou k teplotě okolí. 
 * Ze zkušenosti očekáváme, že pro materiál, který lépe vede teplo, bude konec chladiče více horký. Teplota jako funkce polohy bude klesat pomaleji. Je to splněno pro případ z předchozího bodu? Vysvětlete, odkud to vidíme, nebo zdůvodněte, v jaké situaci tomu tak být nemusí. 

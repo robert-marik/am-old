@@ -202,7 +202,7 @@ Obsah je $\frac 23$ a souřadnice těžiště jsou $\left[\frac 38,\frac 4{10}\r
 </div> 
 
 
-# Integrál přes čtvrtkružnici
+# Integrál přes čtvrtkruh
 
 https://youtu.be/_YT3FDpfZsQ
 
@@ -217,8 +217,8 @@ $$
   I_3&=\iint_\Omega \,\mathrm dx \mathrm dy,\\
 \end{aligned}
 $$
-přes čtvrtkružnici na obrázku (čtvrtina jednotkové kružnice v prvním kvadrantu).
-Určete obsah a polohu těžiště této čtvrtkružnice.
+přes čtvrtkruh na obrázku (čtvrtina jednotkového kruhu v prvním kvadrantu).
+Určete obsah a polohu těžiště tohoto čtvrtkruhu.
 
 <div class=reseni>
 
@@ -228,7 +228,7 @@ V polárních souřadnicích daných rovnicemi $$
   y&=r\sin\varphi
 \end{aligned}
 $$
-má čtvrtkružnice vyjádření $0\leq r\leq 1$, $0\leq \varphi\leq \frac \pi2$.
+má čtvrtkruh vyjádření $0\leq r\leq 1$, $0\leq \varphi\leq \frac \pi2$.
 $$
 \begin{aligned}
   \iint_\Omega x\,\mathrm dx\mathrm dy
