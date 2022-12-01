@@ -380,8 +380,11 @@ tomto stacionárním bodě.
     bod navíc střed.  Bod rotace souvisí s komplexně sdruženými vlastními čísly s nulovou reálnou částí, ale v těchto případech může stacionární bod být i ohniskem.
 
 ww:problems/autonomni_systemy/10.pg
+
 ww:problems/autonomni_systemy/11.pg
+
 ww:problems/autonomni_systemy/12.pg
+
 ww:problems/autonomni_systemy/14.pg
 
 # Základní modely populační ekologie
