@@ -177,13 +177,10 @@ _Podle Wikipedie kůň Převalského přežil jenom díky péči zoologických z
 
 $$
 \begin{aligned}
-  \frac{\mathrm dx}{\mathrm dt}&=0.15 x-0.01x-0.05xy\\
+  \frac{\mathrm dx}{\mathrm dt}&=0.15 x-0.01x-0.02xy\\
   \frac{\mathrm dy}{\mathrm dt}&=0.1y-0.05y  
 \end{aligned}
 $$
-
-
-[Online model.](https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.15*x%20-%200.01*x%20-%200.05*x*y&dydt=0.1*y%20-0.05*y&x=0,10,20&y=0,10,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B0.6714285714285717,0.6442105263157893%5D,%5B1.1571428571428575,0.6002870813397125%5D,%5B0.9857142857142858,1.155933014354067%5D,%5B0.7142857142857143,2.1442105263157893%5D,%5B2.992857142857143,2.01244019138756%5D,%5B2.7,1.382870813397129%5D,%5B1.4928571428571429,1.8221052631578947%5D,%5B0.45,0.9655980861244018%5D,%5B0.9142857142857143,0.401913875598086%5D,%5B1.2714285714285714,2.1661722488038277%5D)
 
 </div>
 
