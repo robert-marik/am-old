@@ -92,6 +92,14 @@ Pokud se intenzita lovu zvětšuje tak, že se parabola dostane vrcholem na vodo
 
 > Poznámka (strukturální stabilita modelu, bifurkace). Stabilita je u diferenciálních rovnic chápána různým způsobem. V tomto textu budeme *strukturální stabilitou* modelu závislého na parametrech rozumět stav, kdy malá změna parametrů nemění kvalitativní vlastnosti rovnice nebo systému, tj. například zůstává stejný počet stacionárních bodů, zachovává se jejich stabilita. To je přirozené chování, kdy malá změna parametrů modelu způsobí malé změny v řešení. Pro některé hodnoty parametrů však strukturální stabilitu ztrácíme. V takovém případě se i při nepatrných změnách parametrů dramaticky mění chování rovnice nebo systému. Například při zvyšování lovu v právě uvažovaném modelu dva stacionární body splynou v jeden a zaniknou. Takové chování se nazývá *bifurkace* a hodnoty parametrů, při kterých k bifurkaci dojde, jsou důležité pro další vývoj předmětu. Zjednodušeně řečeno, malé změny parametrů v oblasti daleko od bifurkace znamenají, že chování modelu se mění pozvolna. Blízko k bifurkační hodnotě je situace komplikovanější a může se stát, že malá změna parametrů modelu způsobí dramaticky odlišné chování modelu. Rovnice blízká bifurkaci je citlivá na rozkolísání.
 
+## Model ostrovní biogeografie
+
+[viz zde](https://robert-marik.github.io/dmp/prednaska/03.html#model-ostrovni-biogeografie)
+
+## Model metapopulací
+
+
+[viz zde](https://robert-marik.github.io/dmp/cviceni/cviceni_08.html)
 
 ## Model soupeření jestřábí a holubičí povahy
 
