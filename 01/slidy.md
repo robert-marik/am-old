@@ -123,6 +123,26 @@ proměnné. Ostatní proměnné, podle kterých se nederivuje, mají  vlastně r
 
 > Příklad (derivace teploty podle času a polohy). Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas $t$ a dvě proměnné $x$ a $y$ jsou souřadnice v rovině.  Tedy $T=T(t,x,y).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
 
+# Interpretace parciální derivace, vedení tepla  v 1D
+
+Studujme vedení tepla v jednorozměrné tyči. Teplota $T$ je funkcí dvou proměnných: polohy $x$ a času $t$. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává, jak rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase. Například v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce roste teplota ve směru osy $x$. Tato derivace může být vyjádřena například ve stupních Celsia na centimetr.
+
+  * Je-li parciální derivace $\frac{\partial T}{\partial t}$
+    rovna $2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že v daném
+    místě roste teplota v čase rychlostí dva stupně Celsia za minutu.
+  * Pokud je parciální derivace teploty podle času záporná a rovna
+    například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to,
+    že teplota v tomto místě klesá rychlostí dva stupně Celsia za
+    minutu.
+  * Je-li parciální derivace $\frac{\partial T}{\partial x}$
+    rovna $2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to, že v daném
+    místě roste teplota ve směru osy $x$ takovou rychlostí, že na
+    centimetru délky tyče naroste o dva stupně Celsia.
+  * Pokud je parciální derivace teploty podle polohy záporná a rovna
+    například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to,
+    že ve směru osy $x$ teplota klesá takovou rychlostí, že na
+    centimetru délky tyče klesne o dva stupně Celsia.
+
 
 # Interpretace parciálních derivací, brzdná dráha
 
@@ -211,8 +231,12 @@ Následující poznámka je nenápadná a přirozená, protože je analogií ste
 
 https://youtu.be/ilAaBQNoySI
 
-
-Studujme vedení tepla v jednorozměrné tyči. Teplota $T$ je funkcí dvou proměnných: polohy $x$ a času $t$. Tedy $T=T(t,x).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává, jak rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase. Například v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce roste teplota ve směru osy $x$. Tato derivace může být vyjádřena například ve stupních Celsia na centimetr.
+Vraťme se k problematice vedení tepla v jednorozměrné tyči. Teplota
+$T$ je funkcí dvou proměnných: polohy $x$ a času $t$. Tedy $T=T(t,x).$
+Pokusíme se odvodit matematický model vedení tepla. Řešením takového
+modelu bude funkce $T$. Po vyřešení modelu bychom tedy měli vzorec
+udávající teplotu v libovolném bodě tyče a v libovolném čase. Nejprve
+ovšem musíme požadovnou rovnici sestavit.
 
 
 > Poznámka. Potřebujeme fyzikální zákony řídící vedení tepla.  Bez nich matematika model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stává se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta. 
@@ -242,11 +266,7 @@ jednoduchou představu) nebo proudění vlhkosti (pro odvození rovnice
 difuze namísto rovnice vedení tepla). Budeme uvažovat libovolné místo materiálu a budeme matematicky vyjadřovat děje, které přispívají ke změně teploty.
 
 * Rychlost růstu teploty (s časem) je $$\frac{\partial T}{\partial t}.$$ Měříme ji například ve stupních Celsia za minutu. Tato rychlost je úměrná rychlosti s jakou do daného místa dodáváme teplo. Proto v dalším budeme hledat rychlost dodávání tepla a daného místa. Poté se vrátíme do tohoto místa a dáme tuto rychlost do souvislosti s rychlostí růstu teploty.
-  * Například je-li parciální derivace $\frac{\partial T}{\partial t}$ rovna $2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že v daném místě roste teplota v čase rychlostí dva stupně Celsia za minutu. 
-  * Pokud je parciální derivace záporná a rovna například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{min}$, znamená to, že teplota v tomto místě klesá rychlostí dva stupně Celsia za minutu.
 * Rychlost růstu teploty jako funkce polohy je $$\frac{\partial T}{\partial x}.$$ Měříme ji například ve stupních Celsia na centimetr. 
-  * Například je-li parciální derivace $\frac{\partial T}{\partial x}$ rovna $2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to, že v daném místě roste teplota ve směru osy $x$ tak, že na každém centimetru naroste o dva stupně Celsia. 
-  * Pokud je parciální derivace záporná a rovna například hodnotě $-2^{\circ}\mathrm{C}/\mathrm{cm}$, znamená to, že ve směru osy $x$ teplota klesá a na každém centimetru klesne o dva stupně Celsia.
 * Pro přepočet nerovnoměrného rozložení teploty na tok tepla nás zajímá nikoliv jak teplota v prostoru roste, ale jak klesá. Proto musíme vzít derivaci podle prostorové proměnné záporně, abychom dostali pokles teploty. Tento pokles vynásobíme konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme $k$ (nazývá se součinitel tepelné vodivosti a dodá nám ji fyzika a v ní takzvaný Fourierův zákon). Tok tepla $q$ ve směru osy $x$ je tedy $$q=-k\frac{\partial T}{\partial x}.$$ To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času. 
   * Je-li $q$ rovno $7\,\mathrm{J}/\mathrm{min}$ znamená to, že průřezem proteče ve směru osy $x$ sedm joulů za minutu. 
   * Je-li $q$ záporné a rovno $-7\,\mathrm{J}/\mathrm{min}$, znamená to, že sedm joulů za minutu proteče v daném místě proti směru osy $x$.
@@ -573,16 +593,6 @@ Následující věta ukazuje, že u elementárních funkcí je spojitost v libov
 # Schwarzova věta
 
 > Věta (Schwarzova). Jsou-li smíšené derivace spojité na otevřené množině, jsou zde stejné, tj. platí  $$\frac{\partial }{\partial x}   \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}   \frac{\partial f}{\partial x}.$$
-
-\iffalse 
-
-<div class='obtekat'>
-
-![Smíšené derivace jsou (za určitých nepříliš omezujících podmínek) nerozlišitelná dvojčata. Zdroj: pixabay.com](ducks.jpg)
-
-</div>
-
-\fi
 
 Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát $$\frac{\partial^2 f}{\partial x^2},\quad \frac{\partial^2 f}{\partial x \partial y},\quad \frac{\partial^2 f}{\partial y^2},$$ nebo $$f''_{xx},\quad f''_{xy},\quad f''_{yy}.$$
 
