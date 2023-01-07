@@ -370,14 +370,22 @@ stacionární body do několika navzájem disjunktních skupin. Dokážeme je
 identifikovat pomocí vlastních hodnot Jacobiho matice vypočtené v
 tomto stacionárním bodě.
 
-* Stabilní uzel je stacionární bod takový, že pro $t\to\infty$ všechny trajektorie z nějakého okolí konvergují do tohoto bodu bez oscilací. Nestabilní uzel má stejnou vlastnost, ale pro $t\to-\infty$. Stabilní uzel poznáme podle dvou záporných a nestabilní uzel podle dvou kladných reálných vlastních hodnot. 
-* Stabilní a nestabilní ohnisko je stacionární bod se stejnou vlastností jako uzel, ale konvergence je spojena s oscilacemi okolo stacionárního bodu. Stabilní ohnisko poznáme podle dvou komplexně sdružených vlastních hodnot se zápornou reálnou částí, nestabilní ohnisko s kladnou reálnou částí. 
-* Sedlo je stacionární bod, který má v každém  okolí 
-    pouze konečný počet trajektorií, které pro
-    $t\to\pm\infty$ konvergují k tomuto bodu. Poznáme jej podle jedné kladné a jedné záporné vlastní hodnoty.
-* Bod rotace je takový bod, v jehož každém okolí jsou cykly. Pokud navíc
-    v nějakém okolí existují pouze cykly, nazývá se tento
-    bod navíc střed.  Bod rotace souvisí s komplexně sdruženými vlastními čísly s nulovou reálnou částí, ale v těchto případech může stacionární bod být i ohniskem.
+* Stabilní uzel je stacionární bod takový, že pro $t\to\infty$ všechny
+  trajektorie z nějakého okolí konvergují do tohoto bodu bez oscilací.
+  Nestabilní uzel má stejnou vlastnost, ale pro $t\to-\infty$, tedy trajektorie
+  z tohoto bodu vycházejí. Stabilní uzel poznáme podle dvou záporných a
+  nestabilní uzel podle dvou kladných reálných vlastních hodnot. 
+* Stabilní a nestabilní ohnisko je stacionární bod se stejnou vlastností jako
+  uzel, ale konvergence je spojena s oscilacemi okolo stacionárního bodu.
+  Stabilní ohnisko poznáme podle dvou komplexně sdružených vlastních hodnot se
+  zápornou reálnou částí, nestabilní ohnisko s kladnou reálnou částí. 
+* Sedlo je stacionární bod, který má v každém  okolí pouze konečný počet
+  trajektorií, které pro $t\to\pm\infty$ konvergují k tomuto bodu. Poznáme jej
+  podle jedné kladné a jedné záporné vlastní hodnoty.
+* Bod rotace je takový bod, v jehož každém okolí jsou cykly. Pokud navíc v
+  nějakém okolí existují pouze cykly, nazývá se tento bod navíc střed.  Bod
+  rotace souvisí s komplexně sdruženými vlastními čísly s nulovou reálnou částí,
+  ale v těchto případech může stacionární bod být i ohniskem.
 
 ww:problems/autonomni_systemy/10.pg
 
