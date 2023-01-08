@@ -142,6 +142,10 @@ a[href*="sagecell"] {
 .obtekat {max-width:60%}
 figcaption {font-size: 60%;}
 
+.poznamka .obtekat {
+  max-width: 40%;
+}
+
 #TOC ul li {font-size: 85%; display:inline;}
 #TOC ul li:after { content: " \00b7 "; }
 #TOC ul li ul {display:none;}
@@ -231,3 +235,4 @@ blockquote {margin-left:0px; margin-right:0px;box-sizing:border-box; }
 }
 
 .but-video {background-color: #a50a0a;}
+

@@ -55,7 +55,7 @@ $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 
 > Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice $$\frac{\mathrm dx}{\mathrm dt}=r x \left(1-\frac xK\right).$$ V této rovnice vystupuje celková nosná kapacita prostředí $K$ a rovnice vyjadřuje, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Volnou kapacitu prostředí počítáme jako doplněk obsazené části prostředí do sta procent. Obsazenou část prostředí počítáme jako podíl velikosti populace a nosné kapacity prostředí.
 
-> Poznámka (pohybová rovnice). Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je       $\frac{\mathrm dx}{\mathrm dt}$ a zrychlení je $\frac{\mathrm d^2x}{\mathrm dt^2}$. Podle       Newtonova pohybového zákona platí $$m\frac{\mathrm d^2x}{\mathrm dt^2} =F,$$ kde       $F$ je výsledná síla působící na objekt.
+> Poznámka (pohybová rovnice). <div class='obtekat'> ![Při pádu kočky z okna je kritická výška sedmého patra. Čím je toto patro speciální?](kocka.jpeg) </div> Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je $\frac{\mathrm dx}{\mathrm dt}$ a zrychlení je $\frac{\mathrm d^2x}{\mathrm dt^2}$. Podle Newtonova pohybového zákona platí $$m\frac{\mathrm d^2x}{\mathrm dt^2} =F,$$ kde $F$ je výsledná síla působící na objekt. Objevení této zákonitosti byl obrovský skok v poznání. Newton zjistil, že síla souvisí se zrychlením (tedy s časovou změnou rychlosti, v dnešní terminologii s  derivací rychlosti podle času nebo /ekvivalentně/ s druhou derivací polohy podle času). Dříve lidé měli za to, že síla souvisí s rychlostí pohybu (v dnešní terminologii tedy s derivací polohy podle času). To ale byla špatná představa, takto příroda nefunguje. Newton ukázal, jaká je správná cesta a dokázal své myšlenky tím, že pohybové zákony planet, které byly známé z vyhodnocení astronomických pozorování (Koperik), odvodil ryze matmatickou cestou. Pohybová rovnice funguje stejně pro planety jako pro objekty na Zemi a umí vysvětlit i zřejmé i méně zřejmé efekty. Například v práci [Problém ohnuté kolejnice a kouzlo numerické matematiky.](https://www.dml.cz/handle/10338.dmlcz/147070) je rovnice použita k vysvětlení toho, proč je při pádu kočky kritická výška sedmého patra. (Podle záznamů newyorských lékařů je při pádu kočky z výšky sedmého patra největší pravděpodobnost úmrtí, vyšší nebo nižší patro kočka "zvládá" lépe.)
 
 
 # Funkce dvou proměnných, graf
@@ -65,6 +65,11 @@ $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 ![3d graf funkce dvou proměnných](3D_graf_b.png)
 
 </div>
+
+V popisu přírodních dějů si zřídka vystačíme s funkcemi jedné
+proměnné. Děje probíhají v čase (jedna časová proměnná) a v nějakém
+místě (jedna až tři prostorové proměnné). Už pro základní fyzikální
+úlohy tedy musíme umět pracovat s funkcemi více proměnných.
 
 * Zobrazení $f: \mathbb{R}^2\to \mathbb{R}$ se nazývá funkce dvou proměnných.
 * Grafem funkce $f$ je množina uspořádaných trojic  $[x,y,z]$, které splňují $z=f(x,y)$ . Graf kreslíme zpravidla jako body v 3D prostoru.
@@ -121,7 +126,7 @@ proměnné. Ostatní proměnné, podle kterých se nederivuje, mají  vlastně r
 
 > Poznámka (slovní interpretace parciální derivace). Derivace $\frac{\partial f}{\partial x}$ udává, jak se mění veličina $f$ při změnách veličiny $x$ a za předpokladu konstantní veličiny $y$. Interpretace derivace v nematematických disciplínách je proto okamžitá rychlost s jakou veličina $f$ reaguje na změny veličiny $x$.
 
-> Příklad (derivace teploty podle času a polohy). Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas $t$ a dvě proměnné $x$ a $y$ jsou souřadnice v rovině.  Tedy $T=T(t,x,y).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
+> Poznámka (derivace teploty podle času a polohy). Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas $t$ a dvě proměnné $x$ a $y$ jsou souřadnice v rovině.  Tedy $T=T(t,x,y).$ Parciální derivace $\frac{\partial T}{\partial t}$ udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace $\frac{\partial T}{\partial x}$ udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy $x$. 
 
 # Interpretace parciální derivace, vedení tepla  v 1D
 
@@ -216,6 +221,31 @@ a pro výše uvažované hodnoty dostáváme $$\frac{\partial E}{\partial m}(400
 (Zpracováno podle Stewart: Biocalculus)
 
 ww:problems/parcialni_derivace/povrch_tela.pg
+
+# Využití parciálních derivací, ochrana želv
+
+\iffalse
+
+<div class='obtekat'>
+
+![Máme pro ochranu želv chránit vajíčka a malé želvičky, nebo dospělé jedince? Parciální derivace dokážou tuto problematiku rozlousknout. Zdroj: wikimedia.org, Brocken Inaglory ](zelva.jpg)
+
+</div>
+
+\fi
+
+
+V [publikaci](https://www.jstor.org/stable/1939225)  Deborah T. Crouse, Larry B. Crowder, Hal Caswell: A Stage-Based Population Model for Loggerhead Sea Turtles and Implications for Conservation, Ecology, Vol. 68, No. 5 (Oct., 1987), pp. 1412-1423 je představen model populace želvy Karety obecné, kdy je populace rozdělena do sedmi vývojových stadií a jsou sledovány počty jedinců v jednotlivých stadiích. Funkce popisující vývoj v dalším období na základě situace v období předchozím je funkcí sedmi proměnných a je možné ji maticově vyjádřit ve tvaru $$N(t+1)=AN(t),$$ kde $N(t)$ je sedmirozměrný vektor obsahující velikosti jednotlivých populačních tříd a $A$ je matice projekční matice modelující vývoj populace. Má tvar$$ A=\begin{pmatrix}
+  0   &   0   &   0   &   0   & 127   &   4   &  80   \\
+  0.6747&   0.737 &   0   &   0   &   0   &   0   &   0   \\
+  0   &   0.0486&   0.661 &   0   &   0   &   0   &   0   \\
+  0   &   0   &   0.0147&   0.6907&   0   &   0   &   0   \\
+  0   &   0   &   0   &   0.0518&   0   &   0   &   0   \\
+  0   &   0   &   0   &   0   &   0.8091&   0   &   0   \\
+  0   &   0   &   0   &   0   &   0   &   0.8091&   0.8089
+\end{pmatrix}$$ 
+V této matici jsou zohledněny počty potomků želv v plodné fázi, pravděpodobnost přechodu želv do následující vývojové fáze a pravděpodobnost setrvání ve stávající vývojové fázi. Tato čísla se mění v závislosti na tom, kolik má želva nepřátel, jak složité je pro ni přežít, jak obtížné je pro ni se rozmnožovat. Například vysoká čísla v prvním řádku značí, že želvy mají hodně potomků. Číslo v prvním řádku a předposledním sloupci je menší, protože v tomto předposledním stadiu je želva jenom jeden rok a má málo potomků. Dynamika růstu populace je dána dominantní vlastní hodnotu matice. Tuto vlastní hodnotu označíme $\lambda$. Velikost populace roste přibližně geometrickou řadou s kvocientem $\lambda$. Pokud je tato hodnota větší něž jedna, velikost populace roste, v opačném případě populace vymírá. Pro uvedenou matici je $\lambda=0.95$ a populace se tedy mezi jednotlivými obdobími snižuje o pět procent. Hodnota $\lambda$ závisí na třinácti nenulových komponentách matice $A$ a je tedy funkcí třinácti proměnných. Pokud označíme prvky matice $A$ jako $a_{ij}$, je pro biology nesmírně zajímavá veličina $\frac{\partial \lambda}{\partial a_{ij}}$, která udává citlivost koeficientu řídícího růst populace na velikosti komponent matice $A$. Ještě častěji se pracuje s relativní změnou a v tomto případě sledujeme veličinu $\frac{a_{ij}}{\lambda}\frac{\partial \lambda}{\partial a_{ij}},$ která se nazývá elasticita a je bez jednotky. Proto se udává v procentech. Jedná se tedy o třináct parciálních derivací a třináct elasticit (pracujeme jenom s nenulovými komponentami matice). Je pozoruhodné, že hodnoty elasticity spojené s rozmnožováním a přežíváním vajíček a mláďat jsou řádově jednotky procent, ale hodnoty spojené s dospíváním jsou přes deset procent. To znamená, že pro ochranu populace je důležité nepodcenit ochranu dospívajících větších želv. Ochrana vajíček a čerstvě narozených želv má na celkovou kondici malý vliv a posílení těchto parametrů sama o sobě k udržení populace želv nestačí. Proto bylo vyvinuto zařízení [Turtle excluder device](https://en.wikipedia.org/wiki/Turtle_excluder_device), které umožní větším želvám uniknout z rybářských sítí a zvýší tak jejich šanci na přežití.
+
 
 # Linearita parciální derivace
 

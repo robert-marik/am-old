@@ -12,6 +12,7 @@ sed -i 's/<blockquote><p>Důsledek\./<blockquote class="veta"><p class="vetaname
 sed -i 's/<blockquote><p>Důsledek (\([^\.]*\))./<blockquote class="veta"><p class="vetaname">Důsledek (\1).<\/p><p>/' index.html
 sed -i 's/<blockquote><p>Poznámka\./<blockquote class="poznamka"><p class="poznamkaname">Poznámka.<\/p><p>/' index.html
 sed -i 's/<blockquote><p>Poznámka (\([^\.]*\))./<blockquote class="poznamka"><p class="poznamkaname">Poznámka (\1).<\/p><p>/' index.html
+sed -i 's/<blockquote>Poznámka (\([^\.]*\))./<blockquote class="poznamka"><p class="poznamkaname">Poznámka (\1).<\/p>/' index.html
 sed -i 's/<blockquote><p>Anotace./<blockquote class="anotace"><p class="anotacename">Anotace.<\/p><p>/' index.html
 sed -i 's/<blockquote><p>Prerekvizity./<blockquote class="prerekvizity"><p class="prerekvizityname">Prerekvizity.<\/p><p>/' index.html
 
