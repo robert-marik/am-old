@@ -149,7 +149,7 @@ $$
 https://youtu.be/YvAFRS8zeos
 
 V případech, kdy je při tepelné výměně nutno uvažovat vedení tepla (vysoké Biotovo číslo), modelujeme změnu teploty podle rovnice vedení tepla, kterou jsme na přednášce odvodili pro jednorozměrný případ ve tvaru
-$$\varrho c \frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\Bigl(\lambda\frac{\partial T}{\partial x}\Bigr).$$  Typickým případem vedení tepla v jedné dimenzi je vedení tepla ve stěně. 
+$$\varrho c \frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\Bigl(\lambda\frac{\partial T}{\partial x}\Bigr).$$  Typickým případem vedení tepla v jedné dimenzi je vedení tepla ve stěně. **Důležitou vlastností rovnice je, že je stále stejná, ať teplo teče doleva nebo doprava, ať způsobuje ohřev nebo ochlazování, ať tok tepla sílí nebo slábne. Tyto skutečnosti přirozeně rozlišujeme znaménkem. Abychom dokázali úlohu správně zadat nebo abychom dokázali správně interpretovat řešení, je nutné znaménka správně interpretovat a proto si vše ukážeme v následujícím příkladu.**
 
 Uvažujme jednorozměrnou úlohu s vedením tepla. Osa $x$ směřuje doprava, teplota v bodě $x$ a čase $t$ je $T(x,t)$ ve stupních Celsia. Tok tepla v čase $t$ a v bodě $x$ je $q(x,t)$ v joulech za sekundu. Kladný tok je ve směru osy $x$.
 Podle Fourierova zákona je $$q=-\lambda \frac{\partial T}{\partial x}.$$
