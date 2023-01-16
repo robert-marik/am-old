@@ -164,4 +164,30 @@ jQuery(document).bind('reveal.facebox', function() {
 
 </script>
 
+
+
+<style>
+.shorten {border-left: solid; padding-left:1em;}
+.rozbalovatko {background-color:lightgray; padding:1em;}
+</style>
+
+<script>
+
+
+jQuery( document ).ready(function() {
+    jQuery(".shorten").each(function(){
+	popisek = jQuery(this).data("text");
+	if (!popisek) {popisek="";}
+	jQuery(this).before("<span class=\"rozbalovatko\">"+popisek+" Volitelný text. Klikněte pro rozbalení.</span>").css("display","none");	
+	a = jQuery(this).prev();
+	a.click(function() {
+    jQuery( this ).next().slideDown();
+	jQuery( this ).slideUp();
+	})
+	});
+});
+
+</script>
+
+
 </html>

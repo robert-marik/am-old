@@ -362,10 +362,32 @@ konstantní, redukuje se rovnice na rovnici
 $$\rho c\frac{\partial T}{\partial t} = k \frac{\partial^2 T}{\partial x^2},$$
 ve které figuruje druhá derivace podle polohy.
 
+## Fisherova–KPP rovnice
+
+\iffalse 
+
+
+<div class='obtekat'>
+
+
+![Příklad ondatry, která se jako invazivní druh rychle rozšířila z dobříšského panství do celé Evropy, bývá tradičně součástí naprosté většiny učebnic ekologie. Modelování invaze je velice podobné modelování vedení tepla nebo libovolného jiného transportního děje. Foto: rawpixel.com.](ondatra.jpg)
+
+</div>
+
+\fi
+
+Analogický postup jako u vedení tepla funguje pro libovolný transportní děj. Používá se například pro model šíření živočišného druhu v životním prostředí nebo šíření genu v populaci. Ukážeme si zde lineární verzi pro jednorozměrné životní prostředí, například podél řeky. Vícerozměrné zobecnění si uvedeme na konci semestru. 
+
+Tento model se nazývá Fisherova–KPP rovnice a jedná se vlastně o rovnici vedení tepla, do které jsou doplněny zdroje. 
+
+Poněkud kryptický název Fisherovy–KPP rovnice je podle jmen významných vědců spojených s touto rovnicích. Jsou to významný americký statistik a biolog Ronald Fisher a trojice ruských matematiků Andrey Kolmogorov, Ivan Petrovsky a Nikolai Piskunov.
+
+Fisherova–KPP rovnice popisuje populaci, která se může šířit v prostoru. Kromě časové závislosti tedy musíme uvažovat i závislost na poloze. Tato rovnice je vyjádřena pro funkci vyjadřující hustotu populace. Hustotou populace může být například množství jedinců na jednotku délky, v případě zobecnění na více dimenzí množství jedinců na jednotku plochy. Procesy vedoucí k migraci a tedy i změně hustoty populace jsou stejné jako u vedení tepla. Populace má tendenci migrovat z míst, kde je vysoká hustota do míst, kde je hustota menší a v místě, kde převažuje imigrace nad emigrací velikost populace roste. Protože se populace může rozmnožovat, je do rovnice navíc započítán člen modelující vlastní reprodukci. Zpravidla je uvažován logistický růst a rovnice má poté tvar
+$$\frac{\partial u}{\partial t}=D\frac{\partial^2 u}{\partial x^2}+ru\left(1-\frac uK\right).$$
+Tato rovnice byla původně navržena jako model šíření výhodného genu populací. To potvrzuje, že v rovnici máme opravdu nástroj pro šíření nebo transport různých objektů, od energie, přes molekuly nebo částice v látce či geny v populaci až po jedince invazního druhu v ekosystému.
+
+
 # Numerická aproximace derivací: konečné diference 
-
-Instrukce: Z podkapitoly věnované numerickým aproximacím si odneste hlavně vzorce pro aproximaci parciálních derivací. Seznamte se s jejich použitím a s metodou, jak je možno přepsat rovnici obsahující parciální derivace neznámé funkce na soustavu lineárních rovnic. Dle svého zájmu zběžně či důkladněji. Zdůvodnění proč tyto aproximační vzorce fungují a jak jsou odvozeny také přispěje k lepšímu pochopení, ale není zcela nezbytné a seznamte se s ním podle hloubky svého zájmu.
-
 
 https://youtu.be/iGohx4i95FI
 
@@ -400,6 +422,8 @@ Uvedené závěry shrneme do následující věty, kterou vyslovíme pro parciá
 
 
 ww:problems/parcialni_derivace/centralni_diference.pg
+
+<div class="shorten" data-text="Konečné diference je možné použít k převedení parciální diferenciální rovnice (úloha v počítači obtížně řešitelná) na soustavu lineárních rovnic (úloha snadno řešitelná na počítačích).">
 
 ## Diskretizace diferenciálních rovnic pomocí konečných diferencí
 
@@ -528,6 +552,9 @@ xlabel('x')
 ylabel('t')
 
 -->
+
+
+</div>
 
 # Vzdálenost a pojmy s ní související
 
