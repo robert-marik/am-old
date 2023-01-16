@@ -4,7 +4,7 @@
 
 > Anotace.
 >
->  <div class='obtekat'> ![Důležitou aplikací parciálních derivací je formulace rovnic matematické fyziky. Rovnice vedení tepla je mezi rovnicemi matematické fyziky jedou z nejdůležitějších.](chata.jpg) </div>
+>  \iffalse <div class='obtekat'> ![Důležitou aplikací parciálních derivací je formulace rovnic matematické fyziky. Rovnice vedení tepla je mezi rovnicemi matematické fyziky jedou z nejdůležitějších.](chata.jpg) </div> \fi
 >
 > * Naučíme se sledovat rychlost, s jakou se mění veličina, která je objektem našeho zájmu. 
 > * U veličin závisejících na několika parametrech budeme schopni sledovat reakci těchto veličin na změny parametrů. Například u teploty můžeme v daném místě sledovat změnu teploty v čase, nebo můžeme v daném čase sledovat změnu teploty s polohou. 
@@ -59,8 +59,11 @@ $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
 
 > Poznámka (logistický růst populace). Je-li $x(t)$ velikost populace živočichů, je $\frac{\mathrm dx}{\mathrm dt}$ změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice $$\frac{\mathrm dx}{\mathrm dt}=r x \left(1-\frac xK\right).$$ V této rovnice vystupuje celková nosná kapacita prostředí $K$ a rovnice vyjadřuje, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Volnou kapacitu prostředí počítáme jako doplněk obsazené části prostředí do sta procent. Obsazenou část prostředí počítáme jako podíl velikosti populace a nosné kapacity prostředí.
 
+\iffalse
+
 > Poznámka (pohybová rovnice). <div class='obtekat'> ![Při pádu kočky z okna je kritická výška sedmého patra. Čím je toto patro speciální?](kocka.jpeg) </div> Při pohybu po přímce je $x=f(t)$ poloha v čase $t$, rychlost je $\frac{\mathrm dx}{\mathrm dt}$ a zrychlení je $\frac{\mathrm d^2x}{\mathrm dt^2}$. Podle Newtonova pohybového zákona platí $$m\frac{\mathrm d^2x}{\mathrm dt^2} =F,$$ kde $F$ je výsledná síla působící na objekt. *Objevení této zákonitosti byl obrovský skok v poznání.* Newton zjistil, že síla souvisí se zrychlením (tedy s časovou změnou rychlosti, v dnešní terminologii s  derivací rychlosti podle času nebo /ekvivalentně/ s druhou derivací polohy podle času). Dříve lidé měli za to, že síla souvisí s rychlostí pohybu (v dnešní terminologii tedy s derivací polohy podle času). To ale byla špatná představa, takto příroda nefunguje. Newton ukázal, jaká je správná cesta a dokázal své myšlenky tím, že pohybové zákony planet, které byly známé z vyhodnocení astronomických pozorování (Mikuláš Kopernik), odvodil ryze matmatickou cestou. Pohybová rovnice funguje stejně pro planety jako pro objekty na Zemi a umí vysvětlit i zřejmé i méně zřejmé efekty. Například v práci [Problém ohnuté kolejnice a kouzlo numerické matematiky.](https://www.dml.cz/handle/10338.dmlcz/147070) je rovnice použita k vysvětlení toho, proč je při pádu kočky kritická výška sedmého patra. (Podle záznamů newyorských lékařů je při pádu kočky z výšky sedmého patra největší pravděpodobnost úmrtí. Vyšší nebo nižší patro kočka "zvládá" lépe a případná zraněnní nejsou tak závažná. Více v uvedeném odkaze.)
 
+\fi
 
 # Funkce dvou proměnných, graf
 
