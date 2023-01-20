@@ -386,6 +386,8 @@ Fisherova–KPP rovnice popisuje populaci, která se může šířit v prostoru.
 $$\frac{\partial u}{\partial t}=D\frac{\partial^2 u}{\partial x^2}+ru\left(1-\frac uK\right).$$
 Tato rovnice byla původně navržena jako model šíření výhodného genu populací. To potvrzuje, že v rovnici máme opravdu nástroj pro šíření nebo transport různých objektů, od energie, přes molekuly nebo částice v látce či geny v populaci až po jedince invazního druhu v ekosystému.
 
+Uvedená rovnice zřejmě nebude fungovat tam, kde se populace chová jinak, než teplo, například pokud jedinci téhož druhu mají tendenci se shlukovat, což některé druhy jak známo činí. Rovnice a celý přístup jsou dostatečně flexibilní na to, aby zvládly úpravu i na takové případy, to ale již přesahuje ambice tohoto textu.
+
 
 # Numerická aproximace derivací: konečné diference 
 
