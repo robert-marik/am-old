@@ -160,7 +160,7 @@ Vyjádřete následující veličiny a určete jejich znaménko.
 
 1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce času.
 1. Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle  roste teplota směrem doprava.
-1. Rychlost, jak rychle se klesá teplota jako funkce polohy, tj. směrem doprava.
+1. Rychlost, jak rychle klesá teplota jako funkce polohy, tj. směrem doprava.
 1. Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy.
 1. Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy.
 
