@@ -2,7 +2,7 @@ body {margin:0px;}
 
 .container {margin:20px;}
 
-img {max-width:80%; width:80%;  margin-right:auto; margin-left:auto; text-align:center; display:block;}
+img {max-width:100%; width:100%;  margin-right:auto; margin-left:auto; text-align:center; display:block;}
 
 .sloupce{-moz-column-count:2; /* Firefox */
 -webkit-column-count:2; /* Safari and Chrome */
@@ -143,7 +143,7 @@ a[href*="sagecell"] {
 figcaption {font-size: 60%;}
 
 .poznamka .obtekat {
-  max-width: 40%;
+  max-width: 60%;
 }
 
 #TOC ul li {font-size: 85%; display:inline;}
