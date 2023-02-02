@@ -58,7 +58,7 @@ https://youtu.be/irOsyX_k620
 Určete gradient funkce $z=x^2+y^2$ a zkontrolujte, že je v každém bodě kolmý ke kružnici se středem v počátku. Využijte toho, že spojnice bodu na kružnici se středem kružnice je kolmá k této kružnici. 
 
 <div class=reseni>
-$$\begin{aligned} \pdv{z}{x} &= 2x\\ \pdv{z}{y} &= 2y\\ \nabla z &= (2x, 2y) = x\vec \imath + 2y\vec \jmath \end{aligned}$$
+$$\begin{aligned} \pdv{z}{x} &= 2x\\ \pdv{z}{y} &= 2y\\ \nabla z &= (2x, 2y) = 2x\vec \imath + 2y\vec \jmath \end{aligned}$$
 Vektor $(2x,2y)$ v bodě $(x,y)$ míří směrem od počátku, tj ve směru spojnice se středem a tedy je kolmý k vrstevnici.
 </div>
 
