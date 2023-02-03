@@ -36,15 +36,27 @@ manimp:Spojitost|Derivace a její definice pomocí limity.
 \fi
 
 
-Základní informace o funkci jedné proměnné a její derivaci si můžete osvěžit v materiálech k předmětu [Matematika](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/).
+Základní informace o funkci jedné proměnné a její derivaci si můžete osvěžit v materiálech k předmětu [Matematika](http://user.mendelu.cz/marik/mtk/mat-slidy/derivace_I/). Následuje neformální připomenutí pojmu derivace.
 
-* Zobrazení $f: \mathbb{R}\to \mathbb{R}$ se nazývá funkce jedné proměnné. 
-* V kartézské rovině píšeme též $y=f(x)$, kreslíme uspořádané dvojice bodů $[x,y]$ a výstupem je zpravidla křivka v rovině. ([Nakreslit online.](https://sagecell.sagemath.org/?z=eJxL06jQtK3QSq0o0NCt0OTlKsjJL9FQSAOKKugoaFTo6BrqmGgqaAIA3aEKBw==&lang=sage))
-* Rychlost změny je derivace definovaná vztahem
+Zobrazení $f: \mathbb{R}\to \mathbb{R}$ se nazývá funkce jedné proměnné. 
+
+V kartézské soustavě souřadnic pracujeme často s grafem funkce, což je množina uspořádaných dvojic bodů $[x,f(x)]$. Tyto body zpravidla vyplní křivku v rovině. ([Nakreslit online.](https://sagecell.sagemath.org/?z=eJxL06jQtK3QSq0o0NCt0OTlKsjJL9FQSAOKKugoaFTo6BrqmGgqaAIA3aEKBw==&lang=sage))
+
+Jedním ze zásadních úkolů je schopnost měřit růst nebo pokles veličiny a jeho rychlost. Abychom nemuseli rozlišovat nárůst a pokles, pracujeme s jednotným přístupem, kdy pokles uvažujeme jako záporný nárůst a častěji obojí sjednocujeme pod pojem změna veličiny. 
+
+U veličiny závislé na čase změnu veličiny na časovém intervalu určujeme jako rozdíl hodnoty veličiny na konci a na začátku časového intervalu, tj. $$f(t+h)-f(t)$$ je změna veličiny mezi okamžiky $t$ a $t+h$. Pro porovnání rychlostí změny tuto změnu přepočítáváme na jednotku času a definujeme průměrnou rychlost změny vztahem $$\frac{f(t+h)-f(t)}{h}.$$ Kladná rychlost znamená nárůst v čase, záporná pokles. Pro nalezení okamžité rychlosti změny bychom potřebovali dosadit $h=0$, aby byla rychlost počítána na intervalu nulové délky. Toto udělat nemůžeme, protože bychom dostali nedefinovaný výraz, můžeme to však obejít pomocí limity a najít okamžitou rychlost jako limitu $$\lim_{h\to 0}\frac{f(t+h)-f(t)}{h}.$$ Tato limita se nazývá *derivace* a udává, jak rychle se mění funkce $f$ v čase v okamžiku $t$.
+
+U veličiny závislé na poloze postupujeme analogicky, ale rychlostí změny rozumíme změnu na jednotce délky, tj. pro interval délky $h$ a polohu vyjádřenou souřadnicí $x$ je okamžitá rychlost růstu dána vztahem $$\lim_{h\to 0}\frac{f(x+h)-f(x)}h.$$
+
+Výše uvedený koncept je možné použít i pro libovolnou jinou nezávislou
+proměnnou, než je čas nebo poloha. Je-li $f$ funkce proměnné $x$,
+definujeme derivaci $f'(x)$ funkce $f$ v bodě $x$ vztahem
 $$f'(x):=\lim_{h\to 0}\frac{f(x+h)-f(x)}h.$$
-* Podle kontextu a oborových zvyklostí zapisujeme derivaci pomocí čárky (někdy tečky) nebo jako podíl diferenciálů.
+
+Podle kontextu a oborových zvyklostí zapisujeme derivaci pomocí čárky (někdy tečky) nebo jako podíl diferenciálů.
 $$y', \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y$$
-* Rychlost s jakou se mění rychlost změny je druhá derivace označovaná nejčastěji některým z následujících způsobů. $$y'',\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y.$$
+
+Derivace derivace je rychlost s jakou se mění rychlost změny a nazývá se druhá derivace. Je označována nejčastěji některým z následujících způsobů. $$y'',\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y.$$
 
 > Poznámka (Newtonův zákon tepelné výměny). <div class='obtekat'> ![Sobi karibu
 > v polárních krajích nepotřebují sněhule a přesto jim není zima. Jak to dělají?
