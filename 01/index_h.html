@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>  
+
+<!--
+<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+-->
+
+<link href="../facebox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="../facebox/facebox.js" type="text/javascript"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Robert Mařík" />
+  <meta name="date" content="2020-01-01" />
+  <title>Derivace funkce více proměnných</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="..//styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../my.css" />
+
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+          var TEX = MathJax.InputJax.TeX;
+          var PREFILTER = TEX.prefilterMath;
+          TEX.Augment({
+            prefilterMath: function (math,displaymode,script) {
+              math = "\\displaystyle{"+math+"}";
+              return PREFILTER.call(TEX,math,displaymode,script);
+            }
+          });
+        });
+        </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+  <script src="..//scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Derivace funkce více proměnných</h1>
+  <p class="author">
+Robert Mařík
+  </p>
+  <p class="date">2020</p>
+
+<br>
+<small>
+<p style='text-align:left;'>
+Pokud se matematické výrazy nezobrazují korektně, nechejte znovunačíst stránku (Reload, Crtl+R, F5) nebo použijte <a href="index.html">html verzi</a> prezentace.
+</p>
+<p style='text-align:left;'>
+Ovládání: Prezentaci je možno posouvat šipkami nebo mezerníkem. Klávesa "S" zmenšuje písmo, "B" zvětšuje (smaller/bigger). Klávesa "C" zobrazí obsah (content). Klávesou "A" se přepíná režim prezentace/html stránka.
+Kliknutím na obrázek se obrázek zvětší na vertikální rozměr okna. Pro zavření zvětšeniny klikněte do zašedlého zbytku stránky  nebo použijte klávesu "ESC".
+</p>
+</small>
+<br><br>
+<small>
+<p style='text-align:left;'>
+  Slidy jsou doprovodným materiálem k předáškám. Některá tvrzení platí
+  pouze za předpokladů dostatečné spojitosti funkcí nebo jejich
+  derivací. V jednoduchých technických aplikacích bývají tyto
+  předpoklady splněny a proto je nezmiňujeme. Přesná formulace vět je
+  v učebním textu a v odborné literatuře.
+</p>  
+</small>
+
+</div>
+<div class="slide section level1">
+
+<blockquote><p>Anotace.</p>
+<ul>
+<li>Naučíme se sledovat rychlost, s jakou se mění veličina, kterou sledujeme.</li>
+<li>U veličin, které mají více vstupních údajů, budeme sledovat samostatně reakci na změnu vždy u jediného vstupního údaje. Například u teploty budeme sledovat buď jak se v daném místě mění teplota v čase, nebo jak se v daný okamžik mění teplota s polohou.</li>
+<li>Aparát využijeme k tomu, že z fyzikálních zákonů sestavíme rovnici vedení tepla. To bude matematický model umožňující jednak modelování přenosu tepla a jednak kontrolu toho, že fyzikální zákony vedoucí k formulaci této rovnice jsou správné.</li>
+</ul>
+</blockquote>
+<blockquote><p>Prerekvizity.</p>
+<ul>
+<li>Navážeme na znalosti z diferenciálního počtu funkcí jedné proměnných. Zejména definice, využití a výpočet derivace.</li>
+<li>Zopakujte si fyzikální (praktický) význam derivace a pro osahání si konkrétních příkladů také základní metody výpočtu.</li>
+</ul>
+</blockquote>
+</div>
+<div id="funkce-jedné-proměnné" class="slide section level1">
+<h1>Funkce jedné proměnné</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="2D_graf.png" alt="" />
+<p class="caption">2d graf funkce jedné proměnné.</p>
+</div>
+</div>
+<ul>
+<li>Zobrazení <span class="math inline">\(f: \mathbb{R}\to \mathbb{R}\)</span> se nazývá funkce jedné proměnné.</li>
+<li>V kartézské rovině píšeme též <span class="math inline">\(y=f(x)\)</span>, kreslíme uspořádané dvojice bodů <span class="math inline">\([x,y]\)</span> a výstupem je zpravidla křivka v rovině (<a href="https://sagecell.sagemath.org/?z=eJxL06jQtK3QSq0o0NCt0OTlKsjJL9FQSAOKKugoaFTo6BrqmGgqaAIA3aEKBw==&amp;lang=sage">Nakreslit online.</a>)</li>
+<li>Rychlost změny je derivace: <span class="math display">\[f&#39;(x):=\lim_{h\to 0}\frac{f(x+h)-f(x)}h\]</span></li>
+<li>Podle kontextu a oborových zvyklostí zapisujeme derivaci pomocí čárky (někdy tečky) nebo jako podíl diferenciálů <span class="math display">\[y&#39;, \quad \frac{\mathrm dy}{\mathrm dx}, \quad \frac{\mathrm d}{\mathrm dx}y\]</span></li>
+<li>rychlost změny změny je druhá derivace: <span class="math display">\[y&#39;&#39;,\quad  \frac{\mathrm d^2y}{\mathrm dx^2}, \quad\frac{\mathrm d^2}{\mathrm dx^2}y\]</span></li>
+</ul>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka (Newtonův zákon tepelné výměny).</p><p> Je-li <span class="math inline">\(T(t)\)</span> teplota tělesa v čase <span class="math inline">\(t\)</span>, je <span class="math inline">\(\frac{\mathrm dT}{\mathrm dt}\)</span> změna této teploty za jednotku času, tj. rychlost s jakou roste teplota. Častým modelem reálné situace je předpoklad, že tato teplota je úměrná rozdílu teploty tělesa a teploty okolí. Pokud je teplota okolí konstantní a rovna <span class="math inline">\(T_0\)</span>, dostáváme takto modely <span class="math display">\[\frac{\mathrm dT}{\mathrm dt}= k(T_0-T)\]</span> pro ohřev (teplota okolí je vyšší a teplota tělesa roste) a <span class="math display">\[\frac{\mathrm dT}{\mathrm dt}= -k(T-T_0)\]</span> pro ochlazování (teplota okolí je nižší, těleso se ochlazuje a má zápornou derivaci podle času).</p>
+</blockquote>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka (lineární aproximace, materiálové vztahy).</p><p> Změna <span class="math inline">\(\Delta x\)</span> v proměnné <span class="math inline">\(x\)</span> vyvolá změnu <span class="math inline">\(\Delta y\approx f&#39;(x) \Delta x\)</span>. Proto je možné používat lineární aproximaci funkce <span class="math display">\[f(x)\approx f(x_0)+f&#39;(x_0)(x-x_0).  \]</span> Například naprostá většina materiálových vztahů je takovou aproximací pro <span class="math inline">\(x_0=0\)</span> (relativně malé podněty) a <span class="math inline">\(f(x_0)=0\)</span> (bez podnětu není odezva). Lineární aproximace má poté tvar <span class="math display">\[f(x)\approx f&#39;(0)x=kx.\]</span> Proto jsou zákony jako Fourierův, Fickův nebo Darcyho formulovány ve tvaru přímé úměrnosti. S těmito zákony jste se pravděpodobně seznámili v naukách o materiálu, blíže se jim budeme věnovat později. Podobně je možno chápat Newtonův zákon tepelné výměny jako lineární aproximaci případného složitějšího vztahu.</p>
+</blockquote>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka (logistický růst populace).</p><p> Je-li <span class="math inline">\(x(t)\)</span> velikost populace živočichů, je <span class="math inline">\(\frac{\mathrm dx}{\mathrm dt}\)</span> změna této velikosti za jednotku času. Častým modelem reálné situace je modelování pomocí logistické rovnice <span class="math display">\[\frac{\mathrm dx}{\mathrm dt}=r x (K-x)\]</span> kdy předpokládáme, že rychlost růstu je úměrná velikosti populace a volné kapacitě prostředí. Konstanta <span class="math inline">\(K\)</span> je celková kapacita prostředí.</p>
+</blockquote>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka (pohybová rovnice).</p><p> Při pohybu po přímce je <span class="math inline">\(x=f(t)\)</span> poloha v čase <span class="math inline">\(t\)</span>, rychlost je <span class="math inline">\(\frac{\mathrm dx}{\mathrm dt}\)</span> a zrychlení je <span class="math inline">\(\frac{\mathrm d^2x}{\mathrm dt^2}\)</span>. Podle Newtonova pohybového zákona platí <span class="math display">\[m\frac{\mathrm d^2x}{\mathrm dt^2} =F,\]</span> kde <span class="math inline">\(F\)</span> je výsledná síla působící na objekt.</p>
+</blockquote>
+</div>
+<div id="funkce-dvou-proměnných-graf" class="slide section level1">
+<h1>Funkce dvou proměnných, graf</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="3D_graf_b.png" alt="" />
+<p class="caption">3d graf funkce dvou proměnných</p>
+</div>
+</div>
+<ul>
+<li>Zobrazení <span class="math inline">\(f: \mathbb{R}^2\to \mathbb{R}\)</span> se nazývá funkce dvou proměnných.</li>
+<li>Grafem funkce <span class="math inline">\(f\)</span> je množina uspořádaných trojic <span class="math inline">\([x,y,z]\)</span>, které splňují <span class="math inline">\(z=f(x,y)\)</span> . Graf kreslíme zpravidla jako body v 3D prostoru.
+<ul>
+<li><a href="http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&amp;in=%23%20graf%20je%20mo%C5%BEno%20ot%C3%A1%C4%8Det%20a%20p%C5%99ibli%C5%BEovat%20my%C5%A1%C3%AD%0Ay%3Dvar%28%27y%27%29%0Aplot3d%28x%5E2-y%5E2%2C%20%28x%2C-1%2C1%29%2C%20%28y%2C-1%2C1%29%29">Nakreslit online.</a> (Sage),</li>
+<li><a href="http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&amp;lang=python&amp;in=var%28%27y%27%29%0Afrom+sympy.plotting+import+plot3d%0A%0Asurface3D+%3D+plot3d%285*x*y*exp%28-x**2-y**2%29%2C+%28x%2C-2%2C2%29%2C+%28y%2C-2%2C2%29%2C+xlabel%3D%27x%27%2C+ylabel%3D%27y%27%2C+show%3DFalse%29%0Asurface3D.show%28%29">Nakreslit online.</a> (matplotlib),</li>
+<li><a href="http://user.mendelu.cz/marik/yamwi/index.php?in=plot3d%28x%5E2-y%5E2%2C%20%5Bx%2C-1%2C1%5D%2C%20%5By%2C-1%2C1%5D%29%3B">Nakreslit online.</a> (Maxima + GNUplot)</li>
+</ul></li>
+</ul>
+<p><br style="clear:both"></p>
+<div class="obtekat">
+<div class="figure">
+<img src="park.jpg" alt="" />
+<p class="caption">Kvalita života ve městech souvisí s hospodařením s teplem a tzv. tepelnými ostrovy. Zdroj: pixabay.com</p>
+</div>
+</div>
+<p>Příkladem skalární funkce dvou prostorových proměnných je teplota v určitém okamžiku na dvourozměrném povrchu. Aparát funkcí dvou proměnných se tedy jistě uplatní při studiu tepelných ostrovů souvisejících s urbanizací a kvalitou života ve městech.</p>
+<p>Příkladem skalární funkce dvou proměnných, kdy každá z proměnných má jiný charakter, je teplota ve stěně budovy. Tato teplota se mění s časem (studená stěna, na kterou začalo svítit slunce, se ohřívá) a s polohou (vnější a vnitřní okraj stěny mají teplotu přibližně podle teploty venku a teploty uvnitř budovy, uvnitř stěny se teplota spojitě mění).</p>
+</div>
+<div id="parciální-derivace" class="slide section level1">
+<h1>Parciální derivace</h1>
+<p>Pokud sledujeme například ve stěně měnící se teplotní profil, zajímá nás, jak se teplota v jednotlivých místech stěny mění v čase a jak se teplota mění v řezu stěnou. Zdá se býti rozumné oddělit obě změny. Buď v daném bodě fixovat polohu a sledovat časový vývoj v tomto bodě, nebo v daném čase udělat něco jako teplotní snímek a srovnávat teplotu ve vybraném bodě s okolními teplotami ve stejném čase. To vede k následujícímu přístupu, kdy u funkce více proměnných sledujeme reakci na změnu jedné jediné veličiny.</p>
+<blockquote class="definice"><p class="definicename">Definice (parciální derivace).</p><p> Buď <span class="math inline">\(f\colon \mathbb R^2\to\mathbb R\)</span> funkce dvou proměnných, <span class="math inline">\(x\)</span> a <span class="math inline">\(y\)</span>, tj. <span class="math inline">\(f(x,y)\)</span>. Výraz <span class="math display">\[\frac{\partial f}{\partial x}:=\lim_{h\to 0}\frac{f(x+h,y)-f(x,y)}h\]</span> se nazývá <em>parciální derivace funkce <span class="math inline">\(f\)</span> podle <span class="math inline">\(x\)</span></em>. Podobně, <span class="math display">\[\frac{\partial f}{\partial y}:=\lim_{h\to 0}\frac{f(x,y+h)-f(x,y)}h\]</span> je <em>parciální derivace funkce <span class="math inline">\(f\)</span> podle <span class="math inline">\(y\)</span></em>.</p>
+</blockquote>
+<p>Podobně můžeme definovat parciální derivaci pro funkce libovolného konečného počtu proměnných. V těchto parciálních derivacích vlastně sledujeme, jak reaguje veličina <span class="math inline">\(f\)</span> na změny jenom v jedné proměnné. Proměnná, přes kterou se nederivuje, má vlastně roli parametru a nijak se nemění.</p>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka (rozšifrování definice derivace).</p><p></p>
+<ul>
+<li>Výraz z čitatele, tj. <span class="math inline">\(f(x+h,y)-f(x,y)\)</span>, je změna veličiny <span class="math inline">\(f\)</span> na intervalu <span class="math inline">\([x,x+h]\)</span> při konstantní veličině <span class="math inline">\(y\)</span>. Často označujeme též <span class="math inline">\(\Delta f\)</span>.</li>
+<li>Podíl, tj. <span class="math inline">\(\frac{f(x+h,y)-f(x,y)}h\)</span> je změna veličiny <span class="math inline">\(f\)</span> na intervalu <span class="math inline">\([x,x+h]\)</span> při konstantní veličině <span class="math inline">\(y\)</span>, přičemž tato změna je přepočítaná na jednotku veličiny <span class="math inline">\(x\)</span>, tj. v jistém smyslu průměrná rychlost změny vzhledem k <span class="math inline">\(x\)</span> na intervalu <span class="math inline">\([x,x+h]\)</span>. Často označujeme též <span class="math inline">\(\frac{\Delta f}{\Delta x}\)</span>.</li>
+<li>Limita v definici derivace stahuje délku intervalu, na kterém počítáme průměrnou rychlost, k nule. Tím se z průměrné rychlosti stane okamžitá rychlost. Parciální derivace je tedy okamžitá rychlost s jakou se mění funkce <span class="math inline">\(f\)</span> při změnách jedné proměnné.</li>
+</ul>
+</blockquote>
+<p>Jednotka derivace <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> je stejná, jako jednotka podílu <span class="math inline">\(\frac {f}x\)</span>. Jednotka derivace <span class="math inline">\(\frac{\partial f}{\partial y}\)</span> je stejná, jako jednotka podílu <span class="math inline">\(\frac {f}y\)</span>.</p>
+<p>Derivace <span class="math inline">\(\frac{\partial f}{\partial x}\)</span> udává, jak se mění veličina <span class="math inline">\(f\)</span> při změnách veličiny <span class="math inline">\(x\)</span> a předpokladu konstantní veličiny <span class="math inline">\(y\)</span>. Interpretace derivace v nematematických disciplínách je okamžitá rychlost s jakou veličina <span class="math inline">\(f\)</span> reaguje na změny veličiny <span class="math inline">\(x\)</span>.</p>
+<p>Pokud sledujeme vývoj a rozložení teploty na dvourozměrné tepelně vodivé desce, je teplota (udávaná například ve stupních Celsia) funkcí tří proměnných: jedna proměnná je čas <span class="math inline">\(t\)</span> a dvě proměnné <span class="math inline">\(x\)</span> a <span class="math inline">\(y\)</span> jsou souřadnice v rovině. Tedy <span class="math inline">\(T=T(t,x,y).\)</span> Parciální derivace <span class="math inline">\(\frac{\partial T}{\partial t}\)</span> udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Může se měnit i v čase, například deska v prostředí s konstantní teplotou postupně dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace <span class="math inline">\(\frac{\partial T}{\partial x}\)</span> udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy <span class="math inline">\(x\)</span>.</p>
+</div>
+<div id="interpretace-parciálních-derivací---brzdná-dráha" class="slide section level1">
+<h1>Interpretace parciálních derivací - brzdná dráha</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="car.jpg" alt="" />
+<p class="caption">Brzdy v autě musí absorbovat kinetickou energii, která je lineární funkcí hmotnosti a kvadratickou funkcí rychlosti. Zdroj: pixabay.com</p>
+</div>
+</div>
+<p><em>Příklad:</em> Brzdná dráha <span class="math inline">\(L\)</span> (v metrech) auta o hmotnosti <span class="math inline">\(m\)</span> (v kilogramech) brzdícího z rychlosti <span class="math inline">\(v\)</span> (v kilometrech za hodinu) je dána vzorcem <span class="math display">\[L=k m v^2, \]</span> kde <span class="math inline">\(k= 3.45 \times 10 ^{-6}\,(\mathrm{m}\,\mathrm{hod}^2)/(\mathrm{kg}\,\mathrm{km}^2)\)</span>. Pro <span class="math inline">\(m=1100\,\mathrm{kg}\)</span> a <span class="math inline">\(v=100\,\mathrm{km}/\mathrm{hod}\)</span> je brzdná dráha <span class="math inline">\(37.95\,\mathrm{m}\)</span>.</p>
+<ul>
+<li>Parciální derivace podle <span class="math inline">\(m\)</span> je <span class="math inline">\(\frac{\partial L}{\partial m}=kv^2\)</span> a pro zadané hodnoty vychází <span class="math display">\[\frac{\partial L}{\partial m}=0.0345 \mathrm{m}/\mathrm{kg}.\]</span> Každý kilogram hmotnosti nad <span class="math inline">\(1100\,\mathrm{kg}\)</span> auta jedoucího rychlostí <span class="math inline">\(100\,\mathrm{km}/\mathrm{hod}\)</span> prodlouží brzdnou dráhu o cca <span class="math inline">\(3.5\,\mathrm{cm}\)</span>.</li>
+<li>Parciální derivace podle <span class="math inline">\(v\)</span> je <span class="math inline">\(\frac{\partial L}{\partial v}=2kmv\)</span> a pro zadané hodnoty vychází <span class="math display">\[\frac{\partial L}{\partial v}=0.759\,\mathrm{m}/(\mathrm{km}/\mathrm{hod})=7.59\times 10^{-4}\,\mathrm{hod}.\]</span> Každý kilometr za hodinu nad <span class="math inline">\(100\,\mathrm{km}/\mathrm{hod}\)</span> u auta vážícího <span class="math inline">\(1100\,\mathrm{kg}\)</span> prodlouží brzdnou dráhu o cca <span class="math inline">\(76\,\mathrm{cm}\)</span>.</li>
+<li>Zjednodušený vzorec pro brzdnou dráhu auta s hmotností blízkou <span class="math inline">\(1100\,\mathrm{kg}\)</span> a rychlostí blízkou <span class="math inline">\(100\,\mathrm{km}/\mathrm{hod}\)</span> je <span class="math display">\[L\approx 37.95+0.0345(m-1100)+0.759(v-100),\]</span> kde hmotnost a rychlost se dosazují v kilogramech a kilometrech za hodinu a brzdná dráha vychází v metrech.</li>
+</ul>
+<p><a href="https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==https://sagecell.sagemath.org/?z=eJzL1lHI1SmzLUss0lDPVshVKFPX5OXKyE_Jyy-ptNWozrYy1jMx1TI0iNPQNdPUybUyNDQw0CmzApK1QIU-ttlauVplcUZApgZUl6ZecUZ-uQZQFkxH--ilZKalaeRq6sBZcKWx6KrK4KrKUFUBAMMQMSg=&amp;lang=sage">Online výpočet.</a></p>
+</div>
+<div id="interpretace-parciálních-derivací---pohyb-ještěrky" class="slide section level1">
+<h1>Interpretace parciálních derivací - pohyb ještěrky</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="lizard.jpg" alt="" />
+<p class="caption">Energie potřebná pro překonání pevné vzdálenosti závisí na hmotnosti jedince a na rychlosti, kterou vyvíjí. Zdroj: pixabay.com</p>
+</div>
+</div>
+<p>Energie <span class="math inline">\(E\)</span> (v kcal), kterou spotřebuje ještěrka o hmotnosti <span class="math inline">\(m\)</span> (v gramech) na překonání vzdálenosti jednoho kilometru rychlostí <span class="math inline">\(v\)</span> (v kilometrech za hodinu) se dá odhadnout vzorcem <span class="math display">\[E(m,v)=2.65 m^{0.66} + \frac{3.5 m^{0.75}}{v}.\]</span> Přímým výpočtem je možné určit <span class="math display">\[\frac{\partial E}{\partial v}=-\frac{3.5 m^{0.75}}{v^2}.\]</span> Pro <span class="math inline">\(m=400\,\mathrm{g}\)</span> a <span class="math inline">\(v=8\,\mathrm{km}\,\mathrm{h}^{-1}\)</span> dostáváme <span class="math display">\[\frac{\partial E}{\partial v}(400,8)=-4.9\,\mathrm{kcal}\,\mathrm{km}^{-1}\mathrm{h}.\]</span> Zvýšení rychlosti o kilometr za hodinu vede ke snížení energetického výdeje ještěrky o <span class="math inline">\(4.9\,\mathrm{kcal}\)</span>. Podobně, platí <span class="math display">\[\frac{\partial E}{\partial m}={2.65}\times 0.66 {m^{-0.34}} + \frac{3.5\times 0.75 m^{-0.25}}{v}= \frac{1.749}{m^{0.34}} + \frac{2.625}{m^{0.25} v} \]</span> a pro výše uvažované hodnoty dostáváme <span class="math display">\[\frac{\partial E}{\partial m}(400,8)=
+0.30\,\mathrm{kcal}\,\mathrm{g}^{-1}.
+\]</span> Každý gram, který má ještěrka navíc oproti hmotnosti <span class="math inline">\(400\)</span> gramů, zvedne energetický výdej přibližně o <span class="math inline">\(0.30\,\mathrm{kcal}\)</span>.</p>
+<p><a href="https://sagecell.sagemath.org/?z=eJwrSyzSUM9VKFPX5OVytTXSMzPVyo0z0DMzU9BWMNYzVQDzzE31y3i5Cooy80oUNFw1cm1NDAx0ymwtNDURonopmWlpGmWa-GRzUWQBdPEfhw==&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">Online výpočet.</a></p>
+<p>(Zpracováno podle Stewart: Biocalculus)</p>
+</div>
+<div id="linearita-parciální-derivace" class="slide section level1">
+<h1>Linearita parciální derivace</h1>
+<p>Následující poznámka je nenápadná a přirozená, protože je analogií stejného tvrzení pro obyčejné derivace. Má však mimořádnou důležitost, protože udává vlastnost, které se můžeme držet při studiu rovnic obsahujících derivace. Stejné věty zformulujeme i u dalších operací s funkcemi a později se je naučíme využívat.</p>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka (linearita parciální derivace).</p><p> Parciální derivace zachovává součet a násobení konstantou, tj. pro libovolné funkce <span class="math inline">\(f\)</span> a <span class="math inline">\(g\)</span> a konstantu <span class="math inline">\(c\)</span> platí <span class="math display">\[\frac{\partial (f+g)}{\partial x}=\frac{\partial f}{\partial x}+\frac{\partial g}{\partial x}, \qquad \frac{\partial (cf)}{\partial x}=c\frac{\partial f}{\partial x}\]</span> a analogicky pro libovolnou jinou proměnnou.</p>
+</blockquote>
+</div>
+<div id="rovnice-vedení-tepla-v-1d" class="slide section level1">
+<h1>Rovnice vedení tepla v 1D</h1>
+<p>Studujme vedení tepla v jednorozměrné tyči. Teplota je funkcí dvou proměnných, polohy a času. Tedy <span class="math inline">\(T=T(t,x).\)</span> Parciální derivace <span class="math inline">\(\frac{\partial T}{\partial t}\)</span> udává je rychle (například ve stupních Celsia za hodinu) roste v daném místě teplota. V různých částech desky může být tato veličina jiná a vždy se vztahuje k danému bodu. Přirozeně se mění i v čase, například v prostředí s konstantní teplotou postupně systém dospěje do stavu se stacionárním rozložením teploty, kdy se teplota v žádném místě ani neroste ani neklesá a parciální derivace podle času je nulová. Derivace <span class="math inline">\(\frac{\partial T}{\partial x}\)</span> udává jak prudce (například ve stupních Celsia na centimetr) roste teplota ve směru osy <span class="math inline">\(x\)</span>.</p>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka.</p><p> Potřebujeme fyzikální zákony řídící vedení tepla. Bez nich matematika model vedení tepla nemá jak naformulovat. Tyto zákony je potřeba matematice dodat “z venku”, z aplikované vědy. Tou je v tomto případě fyzika, jindy může být biologie nebo geologie. Jakmile jsou potřebné zákony a případně materiálové vztahy k dispozici, stavé se problém čistě matematickým a fyzika přijde ke slovu při závěrečné interpretaci. Použijeme následující fyzikální fakta.</p>
+<ul>
+<li>Rozdílem teplot je způsoben tok tepla. Velikost toku tepla je úměrná teplotnímu rozdílu a teplo teče z místa v větší teplotou do místa s menší teplotou.</li>
+<li>Teplota se zvyšuje dodáním tepla. Změna teploty je úměrná dodanému teplu.</li>
+</ul>
+</blockquote>
+<div class="obtekat">
+<div class="figure">
+<img src="domek.png" alt="" />
+<p class="caption">Jednorozměrná je například úloha, kde tok v jednom směru je dominantní a toky jiným směrem zanedbatelné. Například okno nebo stěna domu. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</p>
+</div>
+</div>
+<p>V dalším už nastupuje matematický popis a ve vhodných chvílích vždy použijeme výše uvedené fyzikální zákony. Mluvíme o teple, ale jako mechanický model si můžeme představit proudění tekutiny (pro jednoduchou představu) nebo proudění vlhkosti (pro odvození rovnice difuze namísto rovnice vedení tepla). Budeme uvažovat libovolné místo materiálu a budeme matematicky vyjadřovat děje, které přispívají ke změně teploty.</p>
+<ul>
+<li>Rychlost s jakou s daném místě roste teplota (v čase) je <span class="math display">\[\frac{\partial T}{\partial t}\]</span> a měříme ji například ve stupních Celsia za minutu. Tato rychlost je úměrná rychlosti s jakou do daného místa dodáváme teplo. Proto v dalším budeme hledat rychlost dodávání tepla a daného místa a poté se sem vrátíme a dáme tuto rychlost do souvislosti s rychlostí růstu teploty.</li>
+<li>Rychlost s jakou s daném místě roste teplota jako funkce polohy je <span class="math inline">\(\frac{\partial T}{\partial x}\)</span> a měříme ji například ve stupních Celsia na centimetr. Tato rychlost musíme vzít záporně, abychom dostali pokles teploty a vynásobit konstantou, která převede spád teploty na tok tepla. Tuto konstantu označíme <span class="math inline">\(k\)</span> (nazývá se součinitel teplné vodivosti a dodá nám ji fyzika, přesněji Fourierův zákon) a tok tepla <span class="math inline">\(q\)</span> ve směru osy <span class="math inline">\(x\)</span> je <span class="math display">\[q=-k\frac{\partial T}{\partial x}.\]</span> To je veličina, která udává, kolik joulů tepla proteče průřezem za jednotku času.</li>
+<li>Pokud do daného místa přitéká teplo stejnou rychlostí jako odtéká, teplota se nemění a dané místo se ani neohřívá ani neochlazuje. Intenzita ochazování je dána bilancí mezi přítokem a odtokem. Můžeme si to představit tak, že z tepla které do daného bodu přiteče, se část “oddělí” a přispěje k navýšení teploty a zbytek teče dál. Pro zjištění, kolik tepla se z toku “oddělí” a způsobí v daném místě navýšení teploty potřebujeme vědět, jak rychle v daném místě tok klesá jako funkce proměnné <span class="math inline">\(x\)</span>. Nárůst určíme derivací podle <span class="math inline">\(x\)</span> a pokles z nárůstu uděláme změnou znaménka. Pokles toku tepla je tedy <span class="math display">\[-\frac{\partial q}{\partial x}=
+-\frac{\partial }{\partial x}\left(-k\frac{\partial T}{\partial x}\right)=
+\frac{\partial }{\partial x}\left(k\frac{\partial T}{\partial x}\right).
+\]</span></li>
+<li>Pokles toku vypočtený v předchozím bodě je úměrný rychlosti růstu teploty. Příslušné konstanty úměrnosti dodá fyzika a platí <span class="math display">\[\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)=\rho c\frac{\partial T}{\partial t},\]</span> kde <span class="math inline">\(c\)</span> je měrná tepelná kapacita a <span class="math inline">\(\rho\)</span> je hustota. (V tomto případě jsou hustota i měrná tepelná kapacita vztaženy ne k jednotce objemu, jak jsme zvyklí, ale k jednotce délky. Například <span class="math inline">\(\rho\)</span> je lineární hustota, tj. v gramech na centimetr).</li>
+<li>Rovnice odvozená v předchozím kroku se nazývá <strong>rovnice vedení tepla</strong> a dokáže modelovat například prostup tepla stěnou domu.</li>
+</ul>
+<p><strong>Shrnutí.</strong> V odvození vidíme, že rovnice vedení tepla je vlastně bilance toku tepla. Rozdíl o kolik se v daném místě snižuje tok tepla udává, kolik tepla se v daném místě spotřebovalo. Tato spotřeba tepla se projeví zvýšením teploty v daném bodě.</p>
+</div>
+<div id="druhá-derivace" class="slide section level1">
+<h1>Druhá derivace</h1>
+<p>Druhá derivace je derivace první derivace. U funkce dvou proměnných připadají v úvahu čtyři kombinace. Buď derivujeme pokaždé podle stejné proměnné, tj. <span class="math display">\[
+\frac{\partial^2 f}{\partial x^2}:=\frac{\partial}{\partial x}\frac{\partial f}{\partial x},\quad 
+\frac{\partial^2 f}{\partial y^2}:=\frac{\partial}{\partial y}\frac{\partial f}{\partial y},
+\]</span> nebo pokaždé podle jiné proměnné. Tady existují teoreticky dvě možnosti <span class="math display">\[\frac{\partial }{\partial x}\frac{\partial f}{\partial y},
+\frac{\partial}{\partial y}\frac{\partial f}{\partial x}\]</span> Poději si ukážeme, že tyto dvě možnosti jsou v praxi zpravidla vždy totožné.</p>
+<p>Je-li tepelná vodivost <span class="math inline">\(k\)</span> v rovnici vedení tepla <span class="math display">\[\rho c\frac{\partial T}{\partial t} = \frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)\]</span> konstantní, redukuje se rovnice na rovnici <span class="math display">\[\rho c\frac{\partial T}{\partial t} = k \frac{\partial^2 T}{\partial x^2},\]</span> ve které figuruje druhá derivace podle polohy.</p>
+</div>
+<div id="numerická-aproximace-konečné-diference-i" class="slide section level1">
+<h1>Numerická aproximace: konečné diference I</h1>
+<p>Základním přístupem při numerickém odhadu derivace je vynechání limitního přechodu v definici derivace. Pro funkci jedné proměnné a její derivaci <span class="math display">\[\frac{\mathrm df}{\mathrm dx}=\lim_{h\to 0}\frac{f(x+h)-f(x)}{h}\]</span> tedy dostáváme <span class="math display">\[\frac{\mathrm df}{\mathrm dx}\approx\frac{f(x+h)-f(x)}{h}.\]</span> Okamžitá rychlost je nahrazena průměrnou rychlostí na intervalu <span class="math inline">\((x,x+h).\)</span> Tento podíl se nazývá <em>dopředná poměrná diference</em> nebo zkráceně <em>dopředná diference</em>. Pokud použijeme tento postup pro parciální derivace, dostáváme <span class="math display">\[\frac{\partial f}{\partial x}\approx\frac{f(x+\Delta x,y)-f(x,y)}{\Delta x}\]</span> a <span class="math display">\[\frac{\partial f}{\partial y}\approx\frac{f(x,y+\Delta y)-f(x,y)}{\Delta y}\]</span></p>
+</div>
+<div id="opakování-taylorův-polynom-a-polynomiální-aproximace-v-1d" class="slide section level1">
+<h1>Opakování: Taylorův polynom a polynomiální aproximace v 1D</h1>
+<p>V diferenciálním počtu funkcí jedné proměnné se zabýváme otázkou hledání nejlepší polynomiální aproximace nějaké funkce. Odpovědí je Taylorův polynom jako nejlepší polynomiální aproximace funkce</p>
+<blockquote class="veta"><p class="vetaname">Věta (Taylorova věta pro kvadratickou aproximaci).</p><p> Platí <span class="math display">\[f(x+h)=f(x)+\frac {\mathrm df(x)}{\mathrm dx}h+\frac{1}{2!} \frac {\mathrm d^2f(x)}{\mathrm dx^2} h^2+O(h^3),\]</span> kde <span class="math inline">\(O(h^3)\)</span> je funkce, která v okolí nuly konverguje k nule alespoň tak rychle, jako konstantní násobek funkce <span class="math inline">\(h^3\)</span>.</p>
+</blockquote>
+</div>
+<div id="numerická-aproximace-konečné-diference-ii" class="slide section level1">
+<h1>Numerická aproximace: konečné diference II</h1>
+<p>Přesnější aproximace derivace vychází z Taylorova polynomu druhého řádu napsaného pro <span class="math inline">\(f(x+h)\)</span> a <span class="math inline">\(f(x-h)\)</span>, tj. ze vztahů <span class="math display">\[\begin{aligned}
+f(x+h)&amp;\approx f(x)+f&#39;(x)h+\frac 12 f&#39;&#39;(x)h^2,\\
+f(x-h)&amp;\approx f(x)-f&#39;(x)h+\frac 12 f&#39;&#39;(x)h^2.
+\end{aligned}\]</span> Pokud tyto vztahy sečteme a odečteme, dostaneme <span class="math display">\[\begin{aligned}
+f(x+h)+f(x-h)&amp;\approx2f(x)+ f&#39;&#39;(x)h^2,\\
+f(x+h)-f(x-h)&amp;\approx2f&#39;(x)h.
+\end{aligned}\]</span> Odsud dostáváme aproximace první a druhé derivace <span class="math display">\[ f&#39;(x)=\frac{\mathrm d f}{\mathrm dx}\approx  \frac{f(x+h)-f(x-h)}{2h}  \]</span> a <span class="math display">\[ f&#39;&#39;(x)=\frac{\mathrm d^2f}{\mathrm dx^2}\approx  \frac{f(x-h)-2f(x)+f(x+h)}{h^2}.  \]</span> Analogicky pro parciální derivaci podle <span class="math inline">\(x\)</span> <span class="math display">\[ \frac{\partial f}{\partial x}\approx  \frac{f(x+\Delta x,y)-f(x-\Delta x,y)}{2\Delta x}  \]</span> a <span class="math display">\[ \frac{\partial^2f}{\partial x^2}\approx  \frac{f(x-\Delta x,y)-2f(x,y)+f(x+\Delta x,y)}{\Delta x^2}.  \]</span> Tato aproximace první derivace se nazývá <em>centrální diference</em> a je přesnější, než dopředná diference, protože je založena na přesnější aproximaci funkce <span class="math inline">\(f\)</span>. Používá totiž polynom druhého stupně, kdežto dopředná diference je založena pouze na lineární aproximaci.</p>
+</div>
+<div id="nutná-dávka-terminologie" class="slide section level1">
+<h1>Nutná dávka terminologie</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="bored_cat.jpg" alt="" />
+<p class="caption">Názvosloví a terminologie jsou nejnudnější pasáže. Prolétneme pro rychlé seznámení a můžeme se se vrátit, kdykoliv bude potřeba. Zdroj: pixabay.com, chudamay</p>
+</div>
+</div>
+<p>V dalším budeme pracovat s pojmy jako množina a její hranice, množina obsahující hranici, množina neobsahující hranici, spojitá funkce apod. Ač v technicky nejvýznamnějších aplikacích často můžeme tyto pojmy chápat intuitivně, historie ukázala, že přesná formální definice je nezbytná.</p>
+<p>V dalším nastane jedna z nejnebezpečnějších situací v matematice, kdy přesně definovanému pojmu dáme název, který lidé znají z prostého života. Například hranice, oblast, spojitost, uzávěr, okolí, … Podrobný rozbor ukazuje, že tyto definice jsou v jednoduchých případech v souladu s intuicí.</p>
+</div>
+<div id="euklidovský-metrický-prostor" class="slide section level1">
+<h1>Euklidovský metrický prostor</h1>
+<blockquote class="definice"><p class="definicename">Definice (metrický prostor, metrika).</p><p> Množina <span class="math inline">\(\mathbb{E}^3\)</span> prvků z <span class="math inline">\(\mathbb{R}^3\)</span> s metrikou <span class="math inline">\(\rho\)</span> definovanou pro <span class="math inline">\(A=(a_x,a_y,a_z)\in\mathbb{R}^3\)</span> a <span class="math inline">\(B=(b_x, b_y, b_z)\in\mathbb{R}^3\)</span> vztahem <span class="math display">\[
+\rho(A,B)=\sqrt{(a_x-b_x)^2+(a_y-b_y)^2+(a_z-b_z)^2}
+\]</span> se nazývá <em>Euklidovský metrický prostor</em>. Prvky prostoru <span class="math inline">\(\mathbb{E}^3\)</span> budeme nazývat <em>body</em>. Funkce <span class="math inline">\(\rho\)</span> se nazývá <em>Euklidovská metrika</em>. Číslo <span class="math inline">\(\rho(A,B)\)</span> se nazývá <em>Euklidovská vzdálenost</em> bodů <span class="math inline">\(A\)</span>, <span class="math inline">\(B\)</span>.</p>
+</blockquote>
+<p>Analogicky je možno definovat metriku v prostoru libovolné konečné dimenze.</p>
+<blockquote class="definice"><p class="definicename">Definice (okolí).</p><p> Buď <span class="math inline">\(A\in \mathbb{E}^n\)</span> bod z <span class="math inline">\(\mathbb{E}^n\)</span> a <span class="math inline">\(\varepsilon&gt;0\)</span> kladné reálné číslo. <em>Epsilonovým okolím bodu <span class="math inline">\(X\)</span></em> rozumíme množinu označenou <span class="math inline">\(O_\varepsilon(A)\)</span> skládající se z bodů, jejichž vzdálenost od bodu <span class="math inline">\(A\)</span> je menší než <span class="math inline">\(\varepsilon\)</span>, tj. <span class="math display">\[
+O_\varepsilon(A)=\{X\in\mathbb{E}^n:\rho(A,X)&lt;\varepsilon\}.
+\]</span> <em>Ryzím epsilonovým okolím bodu <span class="math inline">\(A\)</span></em> rozumíme množinu <span class="math inline">\(\overline O_\varepsilon(A)\)</span> definovanou <span class="math display">\[
+\overline O_\varepsilon(A)=O_\varepsilon(A)\setminus\{A\},
+\]</span> tj. <span class="math inline">\(\varepsilon\)</span>-okolí bodu <span class="math inline">\(A\)</span>, s vyloučením bodu <span class="math inline">\(A\)</span>.</p>
+</blockquote>
+</div>
+<div id="významné-vlastnosti-množin-v-euklidovském-prostoru" class="slide section level1">
+<h1>Významné vlastnosti množin v Euklidovském prostoru</h1>
+<p>V následujících definicích je <span class="math inline">\(X\in\mathbb{E}^n\)</span> bod a <span class="math inline">\(M\subseteq \mathbb{E}^n\)</span> podmnožina v Euklidovském prostoru <span class="math inline">\(\mathbb{E}^n\)</span> (<span class="math inline">\(n=2\)</span> nebo <span class="math inline">\(3\)</span>). Abstraktně je možno s těmito pojmy pracovat i v prostorech libovolné konečné dimenze.</p>
+<p><strong>Ohraničená množina</strong>: Množina <span class="math inline">\(M\)</span> se nazývá <em>ohraničená</em>, jestliže leží v (dostatečně velkém) okolí nějakého bodu <span class="math inline">\(Y\in\mathbb{E}^n\)</span>.</p>
+<p><strong>Vnitřní bod, vnitřek, otevřená množina</strong>: Bod <span class="math inline">\(X\)</span> se nazývá <em>vnitřním bodem množiny <span class="math inline">\(M\)</span></em>, jestliže <span class="math inline">\(X\in M\)</span> a existuje nějaké okolí <span class="math inline">\(O(X)\)</span> bodu <span class="math inline">\(X\)</span> ležící celé v množině <span class="math inline">\(M\)</span>, tj. <span class="math inline">\(O(X)\subseteq M\)</span>. Množina všech vnitřních bodů množiny <span class="math inline">\(M\)</span> se nazývá  a označuje <span class="math inline">\(M^o\)</span>. Je-li množina <span class="math inline">\(M\)</span> totožná se svým vnitřkem, tj. je-li každý bod množiny <span class="math inline">\(M\)</span> vnitřní, říkáme, že množina <span class="math inline">\(M\)</span> je <em>otevřená</em>.</p>
+<p><strong>Hraniční bod, hranice</strong>: Bod <span class="math inline">\(X\)</span> se nazývá <em>hraničním bodem množiny <span class="math inline">\(M\)</span></em>, jestliže každé okolí bodu <span class="math inline">\(X\)</span> obsahuje alespoň jeden bod ležící v množině <span class="math inline">\(M\)</span> a současně alespoň jeden bod neležící v množině <span class="math inline">\(M\)</span>. Množina všech hraničních bodů množiny <span class="math inline">\(M\)</span> se nazývá <em>hranice množiny <span class="math inline">\(M\)</span></em> a označuje <span class="math inline">\(\partial M\)</span>.</p>
+<p><strong>Uzávěr, uzavřená množina</strong>: <em>Uzávěrem množiny <span class="math inline">\(M\)</span></em> rozumíme množinu <span class="math inline">\(\overline M\)</span> definovanou jako sjednocení vnitřku a hranice množiny <span class="math inline">\(M\)</span>, tj. <span class="math inline">\(\overline M=M^o\cup\partial M\)</span>. Je-li množina totožná se svým uzávěrem (tj. obsahuje-li všechny své hraniční body), nazývá se <em>uzavřená</em>.</p>
+<p><strong>Souvislá množina</strong>: Množina <span class="math inline">\(M\)</span> se nazývá souvislá, jestliže každé dva body, ležící v množině <span class="math inline">\(M\)</span> lze spojit lomenou čarou, ležící v <span class="math inline">\(M\)</span>.</p>
+<p><strong>Oblast, uzavřená oblast, kompaktní množina</strong>: Otevřená souvislá množina se nazývá <em>oblast</em>. Uzavřená souvislá množina se nazývá <em>uzavřená oblast</em>. Uzavřená ohraničená množina se nazývá <em>kompaktní</em>.</p>
+</div>
+<div id="spojitost-funkce" class="slide section level1">
+<h1>Spojitost funkce</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="epmty.jpg" alt="" />
+<p class="caption">Spojitost dokáže potrápit i u funkce jedné proměnné. Například Weistrassova funkce je spojitá, ale její graf není možné nakreslit ani jedním tahem, ani nijak jinak. To rozhodně jde proti intuitivnímu chápání spojitosti ze střední školy či běžného života. Zdroj: pixabay.com</p>
+</div>
+</div>
+<p><strong>Spojitost skalární funkce</strong>: Nechť <span class="math inline">\(f:\mathbb{R}^n\to \mathbb{R}\)</span> je skalární funkce <span class="math inline">\(n\)</span> proměnných definovaná v nějakém okolí bodu <span class="math inline">\(A\in\mathbb{R}^n\)</span>. Řekneme, že funkce <span class="math inline">\(f\)</span> je v bodě <span class="math inline">\(A\)</span> <em>spojitá</em>, pokud pro každé okolí <span class="math inline">\(O(f(A))\)</span> bodu <span class="math inline">\(f(A)\)</span> existuje okolí <span class="math inline">\(\overline O(A)\)</span> bodu <span class="math inline">\(A\)</span> takové, že obrazy všech bodů z tohoto okolí bodu <span class="math inline">\(A\)</span> leží v okolí bodu <span class="math inline">\(O(f(A))\)</span>, tj. pro všechna <span class="math inline">\(X\in \overline O(A)\)</span> platí <span class="math inline">\(f(X)\in O(f(A))\)</span>.</p>
+<p><strong>Spojitost vektorové funkce</strong>: Nechť <span class="math inline">\(f:\mathbb{R}^n\to \mathbb{R}^m\)</span> je vektorová funkce <span class="math inline">\(n\)</span> proměnných definovaná v nějakém okolí bodu <span class="math inline">\(A\in\mathbb{R}^n\)</span>. Řekneme, že funkce <span class="math inline">\(f\)</span> je v bodě <span class="math inline">\(A\)</span> <em>spojitá</em>, jestliže je v tomto bodě spojitá každá její komponenta.</p>
+<p><strong>Elementární funkce</strong>: Všechny mnohočleny, goniometrické, cyklometrické, exponenciální a logaritmické funkce a obecná mocnina se nazývají <em>základní elementární funkce</em> Všechny funkce, které ze základních elementárních funkcí získáme konečným počtem operací sčítání, odečítání, násobení, dělení a skládání těchto funkcí navzájem se nazývají <em>elementární funkce</em>.</p>
+<p>Elementární funkce jsou tedy všechny funkce, které umíme v konečném tvaru vyjádřit explicitním vzorcem za použití funkcí známých ze střední školy a cyklometrických funkcí.</p>
+<p>Elementární neznamená jednoduchý. Funkce <span class="math display">\[f(x,y)=\frac{x^2+\sin(x^2-y^2)}{\ln(x^2+y^2-1)},\quad g(x,y)=\frac{1}{1+\frac x{1+\frac {y}{x^2}}} \]</span> jsou elementárními funkcemi ve smyslu výše uvedené definice. Funkce <span class="math display">\[h(x,y)=\begin{cases} 1 &amp; x=0 \text{ nebo }y=0\\0 &amp;\text{jinak}\end{cases}\]</span> není elementární funkce.</p>
+<p>Následující věta ukazuje, že u elementárních funkcí je spojitost v libovolném bodě zaručena již tím, že je funkce v tomto bodě definována.</p>
+<blockquote class="veta"><p class="vetaname">Věta (spojitost elementárních funkcí).</p><p> Všechny <a href="http://cs.wikipedia.org/wiki/Elementární_funkce%7D">elementární funkce</a> jsou spojité v každém vnitřním bodě svého definičního oboru.</p>
+</blockquote>
+</div>
+<div id="schwarzova-věta" class="slide section level1">
+<h1>Schwarzova věta</h1>
+<blockquote class="veta"><p class="vetaname">Věta (Schwarzova).</p><p> Jsou-li smíšené derivace spojité na otevřené množině, jsou zde stejné, tj. platí <span class="math display">\[ \frac{\partial }{\partial x}   \frac{\partial f}{\partial y}= \frac{\partial }{\partial y}   \frac{\partial f}{\partial x}.\]</span></p>
+</blockquote>
+<div class="obtekat">
+<div class="figure">
+<img src="ducks.jpg" alt="" />
+<p class="caption">Smíšené derivace jsou (za určitých nepříliš omezujících podmínek) nerozlišitelná dvojčata. Zdroj: pixabay.com</p>
+</div>
+</div>
+<p>Vzhledem k této větě existují jenom tři druhé parciální derivace. Je tedy bezpečné psát <span class="math display">\[
+\frac{\partial^2 f}{\partial x^2},\quad 
+\frac{\partial^2 f}{\partial x \partial y},\quad 
+\frac{\partial^2 f}{\partial y^2},
+\]</span> nebo <span class="math display">\[f&#39;&#39;_{xx},\quad f&#39;&#39;_{xy},\quad f&#39;&#39;_{yy}.\]</span></p>
+</div>
+</body>
+
+
+<script>
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageHeight() {
+    var windowHeight
+    if (self.innerHeight) {	// all except Explorer
+      windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowHeight = document.body.clientHeight;
+    }
+    return windowHeight
+  }
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageWidth() {
+    var windowWidth
+    if (self.innerWidth) {	// all except Explorer
+      windowWidth = self.innerWidth;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowWidth = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowWidth = document.body.clientHeight;
+    }
+    return windowWidth
+  }
+
+jQuery('a[href^="http://"]').attr('target','_blank');
+jQuery('img[class!=nofacebox]').css("cursor","zoom-in");
+jQuery('img[class!=nofacebox]').click(function(){
+  jQuery.facebox("<img class='myimg' src='"+jQuery(this).prop('src')+"'>" );
+});
+   jQuery(document).ready(function() {
+     jQuery('a[rel*=facebox]').facebox()
+   })
+
+
+jQuery(document).bind('reveal.facebox', function() { 
+  obrazek=jQuery('#facebox .myimg');
+  width=jQuery(obrazek).width();
+  height=jQuery(obrazek).height();
+  ratio1=getPageHeight()/height*0.94;
+  ratio2=getPageWidth()/width*0.94;
+  ratio=Math.min(ratio1, ratio2);
+  jQuery(obrazek).css("width", width * ratio); // Set new width
+  jQuery(obrazek).css("height", height * ratio);  // S
+  jQuery(obrazek).css("min-width", width * ratio); // Set new width
+  jQuery(obrazek).css("min-height", height * ratio);  // S
+  jQuery(obrazek).css("max-width", width * ratio); // Set new width
+  jQuery(obrazek).css("max-height", height * ratio);  // S
+  jQuery('#facebox').css("left", "10px");
+  jQuery('#facebox').css('left', jQuery(window).width() / 2 - (jQuery('#facebox').width() / 2))
+  jQuery('#facebox').css("top", getPageScroll()[1]+10);
+})
+
+</script>
+
+</html>

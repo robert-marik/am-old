@@ -1,0 +1,232 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Rotace, kmenová funkce gradientu</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+
+   function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+  
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+    
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css?ver=2021-01-27" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css?ver=2020-03-20" type="text/css" />
+
+  <style>
+    .Ycontainer, .reseni {display: none;}
+  </style>
+  
+
+  <script>
+window.MathJax = {
+  loader: {load: ['[tex]/physics']},
+  tex: {packages: {'[+]': ['physics']}}
+};
+</script>
+  
+
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+  
+  
+</head>
+<body>
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+  
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu ACTIVE' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>  
+
+
+<div class="container">
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<!--
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p> -->
+<div id="header">
+<h1 class="title">Rotace, kmenová funkce gradientu</h1>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#rotace-vektorového-pole-v-rovině"><span class="toc-section-number">1</span> Rotace vektorového pole v rovině</a></li>
+<li><a href="#rotace-vektorového-pole-v-prostoru"><span class="toc-section-number">2</span> Rotace vektorového pole v prostoru</a></li>
+<li><a href="#divergence-a-rotace-2d-funkce-s-parametrem"><span class="toc-section-number">3</span> Divergence a rotace 2D funkce s parametrem</a></li>
+<li><a href="#nalezení-kmenové-funkce-13"><span class="toc-section-number">4</span> Nalezení kmenové funkce 1/3</a></li>
+<li><a href="#nalezení-kmenové-funkce-23"><span class="toc-section-number">5</span> Nalezení kmenové funkce 2/3</a></li>
+<li><a href="#nalezení-kmenové-funkce-33"><span class="toc-section-number">6</span> Nalezení kmenové funkce 3/3</a></li>
+</ul>
+</div>
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+</div>
+
+
+<blockquote class="anotace"><p class="anotacename">Anotace.</p><p></p>
+<ul>
+<li>V úvodu si zkusíme vypočítat několik rotací pro získání určité míry jistoty při práci s tímto operátorem.</li>
+<li>V další části se budeme věnovat hledání kmenové funkce vektorového pole. Rotace informuje o tom, zda tato úloha má řešení, k nalezení tohoto řešení však už nijak nepřispívá. Protože však vzhledem k výše uvedenému problematika k rotaci logicky patří, jsou tyto úlohy zařazeny pospolu. Protože ve dvourozměrném poli se rotace výrazně zjednodušuje, může být nulovost rotace nahrazena rovností mezi jistými dvěma parciálními derivacemi.</li>
+</ul>
+</blockquote>
+<h1 id="rotace-vektorového-pole-v-rovině"><span class="header-section-number">1</span> Rotace vektorového pole v rovině</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/IRjknyO2_yo"></iframe> </div>
+<p>Vypočtěte rotaci funkce <span class="math inline">\(\displaystyle \vec F=xy^2\vec \imath + 2xy\vec\jmath\)</span>.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+ \begin{aligned}
+\curl \vec F=
+ \begin{vmatrix}
+   \vec\imath &amp; \vec \jmath &amp; \vec k\\
+   \pdv{x} &amp; \pdv{y} &amp; \pdv{z} \\
+   xy^2 &amp; 2xy &amp; 0
+ \end{vmatrix}
+ &amp;=\vec k\qty({\pdv {2xy}{x}-\pdv {xy^2}{y}})\\&amp;
+ =\vec k(2y-2xy)\\&amp;=2y(1-x)\vec k
+\end{aligned}
+ \]</span></p>
+</div>
+<h1 id="rotace-vektorového-pole-v-prostoru"><span class="header-section-number">2</span> Rotace vektorového pole v prostoru</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/U_USLTQF5fM"></iframe> </div>
+<p>Vypočtěte rotaci funkce <span class="math inline">\(\displaystyle \vec F=xyz\vec \imath + 5x^2y\vec\jmath-3x^2z\vec k\)</span>.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+ \begin{aligned}
+\curl \vec F&amp;=
+ \begin{vmatrix}
+   \vec\imath &amp; \vec \jmath &amp; \vec k\\[4pt]
+   \pdv{x} &amp; \pdv{y} &amp; \pdv{z} \\[10pt]
+   xyz&amp; 5x^2y &amp; -3x^2z
+ \end{vmatrix}\\
+ &amp;=
+\vec \imath \ \qty[\pdv {(-3x^2z)}{y}-\pdv {5x^2y}{z}]
+ +\vec \jmath \ \qty[\pdv {xyz}{z}-\pdv {(-3x^2z)}{x}] 
+ +\vec k\ \qty[{\pdv {5x^2y}{x}-\pdv {xyz}{y}}]\\
+ &amp;=(xy+6xz)\vec\jmath + (10xy-xz)\vec k
+\\&amp;=x(y+6z)\vec\jmath + x(10y-z)\vec k
+\end{aligned}
+ \]</span></p>
+</div>
+<h1 id="divergence-a-rotace-2d-funkce-s-parametrem"><span class="header-section-number">3</span> Divergence a rotace 2D funkce s parametrem</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ZRIHxmBzf5s"></iframe> </div>
+<p>Vypočtěte divergenci a rotaci funkce <span class="math inline">\(\displaystyle \vec F=ax^2y^3\vec \imath + (x^2+y)\vec\jmath\)</span>.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[\nabla\cdot \vec F=\pdv{x}(ax^2y^3)+\pdv{y}(x^2+y)=2axy^3+1\]</span></p>
+<p><span class="math display">\[\curl \vec F=
+ \begin{vmatrix}
+   \vec\imath &amp; \vec \jmath &amp; \vec k\\
+   \pdv{x} &amp; \pdv{y} &amp; \pdv{z} \\
+   ax^2y^3 &amp; x^2+y &amp; 0
+ \end{vmatrix}
+ =\vec k(2x-3ax^2y^2)
+ \]</span></p>
+</div>
+<h1 id="nalezení-kmenové-funkce-13"><span class="header-section-number">4</span> Nalezení kmenové funkce 1/3</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/cjN80-0M77Q"></iframe> </div>
+<p>Pro vektorové pole <span class="math display">\[\frac 45 x y^3\vec \imath + \frac 65x^2y^2\vec\jmath\]</span> najděte funkci <span class="math inline">\(\displaystyle \varphi\)</span> tak, že zadané vektorové pole je rovno gradientu <span class="math inline">\(\displaystyle \nabla \varphi.\)</span></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Platí <span class="math inline">\(\displaystyle \pdv {\varphi}{x}=\frac 45 xy^3\)</span> a <span class="math inline">\(\displaystyle \pdv{\varphi}{y}=\frac 65 x^2y^2\)</span>.</p>
+<p>Odsud <span class="math display">\[\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int \frac 45 xy^3 \,\mathrm dx
+=\frac 45 \frac {x^2}{2}y^3=\frac 25 x^2y^3+C_1(y)\]</span> a <span class="math display">\[\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 \,\mathrm dy
+=\frac 65 {x^2}\frac{y^3}3=\frac 25 x^2y^3+C_2(x).\]</span> Porovnáním musí být <span class="math inline">\(\displaystyle C_1(y)=C_2(x)=C\in\mathbb R\)</span> a <span class="math display">\[\varphi(x,y)=\frac 25 x^2y^3+C,\quad C\in\mathbb R.\]</span></p>
+</div>
+<h1 id="nalezení-kmenové-funkce-23"><span class="header-section-number">5</span> Nalezení kmenové funkce 2/3</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Km-_WWQi_kg"></iframe> </div>
+<p>Pro vektorové pole <span class="math display">\[\left(x^2+\frac 45 x y^3\right)\vec \imath + \left(\frac 65x^2y^2+y\right)\vec\jmath\]</span> najděte funkci <span class="math inline">\(\displaystyle \varphi\)</span> tak, že zadané vektorové pole je rovno gradientu <span class="math inline">\(\displaystyle \nabla \varphi.\)</span></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Platí <span class="math inline">\(\displaystyle \pdv {\varphi}{x}=x^2+\frac 45 xy^3\)</span> a <span class="math inline">\(\displaystyle \pdv{\varphi}{y}=\frac 65 x^2y^2+y\)</span>.</p>
+<p>Odsud <span class="math display">\[\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int x^2+\frac 45 xy^3 \,\mathrm dx
+=\frac {x^3}3+\frac 45 \frac {x^2}{2}y^3=\frac {x^3}3+\frac 25 x^2y^3+C_1(y)\]</span> a <span class="math display">\[\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 +y \,\mathrm dy
+=\frac 65 {x^2}\frac{y^3}{3}+\frac 12 y^2=\frac 25 x^2y^3+\frac 12 y^2 + C_2(x).\]</span> Porovnáním musí být <span class="math inline">\(\displaystyle C_1(y)=\frac 12 y^2+C\)</span> a <span class="math inline">\(\displaystyle C_2(x)=\frac {x^3}3+C\)</span>, <span class="math inline">\(\displaystyle C\in\mathbb R\)</span> a <span class="math display">\[\varphi(x,y)=\frac {1}{3}x^3+\frac 25 x^2y^3+\frac 12 y^2+C,\quad C\in\mathbb R.\]</span></p>
+</div>
+<h1 id="nalezení-kmenové-funkce-33"><span class="header-section-number">6</span> Nalezení kmenové funkce 3/3</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/mgZl8AScBgI"></iframe> </div>
+<p>Pro vektorové pole <span class="math display">\[\left(y+\frac 45 x y^3\right)\vec \imath + \left(\frac 65x^2y^2+x^2\right)\vec\jmath\]</span> najděte funkci <span class="math inline">\(\displaystyle \varphi\)</span> tak, že zadané vektorové pole je rovno gradientu <span class="math inline">\(\displaystyle \nabla \varphi.\)</span></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Platí <span class="math inline">\(\displaystyle \pdv {\varphi}{x}=y+\frac 45 xy^3\)</span> a <span class="math inline">\(\displaystyle \pdv{\varphi}{y}=\frac 65 x^2y^2+x^2\)</span>.</p>
+<p>Odsud <span class="math display">\[\varphi =\int \pdv{\varphi}{x} \,\mathrm dx=\int y+\frac 45 xy^3 \,\mathrm dx
+=xy+\frac 45 \frac {x^2}{2}y^3=xy+\frac 25 x^2y^3+C_1(y)\]</span> a <span class="math display">\[\varphi =\int \pdv{\varphi}{y} \,\mathrm dy=\int \frac 65 x^2y^2 +x^2 \,\mathrm dy
+=\frac 65 {x^2}\frac{y^3}3+x^2y=\frac 25 x^2y^3+x^2y+ C_2(x).\]</span> Porovnáním musí být <span class="math display">\[xy+C_1(y)=x^2y+C_2(x),\]</span> což není možné splnit.</p>
+<p>Ověříme, že parciální derivace <span class="math inline">\(\displaystyle \pdv {y} \qty(y+\frac 45 xy^3)\)</span> a <span class="math inline">\(\displaystyle \pdv{x}\qty(\frac 65 x^2y^2+x^2)\)</span> jsou různé. Platí <span class="math display">\[\pdv {y} \qty(y+\frac 45 xy^3)=1+\frac{12}5xy^2\]</span> a <span class="math display">\[\pdv{x}\qty(\frac 65 x^2y^2+x^2)=\frac {12}5 xy^2+2x\]</span> a protože obě parciální derivace jsou různé, kmenová funkce neexistuje.</p>
+</div>
+
+
+</div>  <!-- container -->
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu ACTIVE' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>
+
+<div class="footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; width:81px; display:inline-block" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+
+  <script type="text/javascript">
+
+//jQuery(document).ready(function(){
+    //var current_path = window.location.pathname.split('/').pop();
+	//var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/am/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+//});
+  </script>
+  
+</body>
+</html>

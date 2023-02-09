@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>  
+
+<!--
+<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+-->
+
+<link href="../facebox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="../facebox/facebox.js" type="text/javascript"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Robert Mařík" />
+  <meta name="date" content="2020-01-01" />
+  <title>Základní integrální věty z vektorové analýzy</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="..//styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../my.css" />
+
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+          var TEX = MathJax.InputJax.TeX;
+          var PREFILTER = TEX.prefilterMath;
+          TEX.Augment({
+            prefilterMath: function (math,displaymode,script) {
+              math = "\\displaystyle{"+math+"}";
+              return PREFILTER.call(TEX,math,displaymode,script);
+            }
+          });
+        });
+        </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+  <script src="..//scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Základní integrální věty z vektorové analýzy</h1>
+  <p class="author">
+Robert Mařík
+  </p>
+  <p class="date">2020</p>
+
+<br>
+<small>
+<p style='text-align:left;'>
+Pokud se matematické výrazy nezobrazují korektně, nechejte znovunačíst stránku (Reload, Crtl+R, F5) nebo použijte <a href="index.html">html verzi</a> prezentace.
+</p>
+<p style='text-align:left;'>
+Ovládání: Prezentaci je možno posouvat šipkami nebo mezerníkem. Klávesa "S" zmenšuje písmo, "B" zvětšuje (smaller/bigger). Klávesa "C" zobrazí obsah (content). Klávesou "A" se přepíná režim prezentace/html stránka.
+Kliknutím na obrázek se obrázek zvětší na vertikální rozměr okna. Pro zavření zvětšeniny klikněte do zašedlého zbytku stránky  nebo použijte klávesu "ESC".
+</p>
+</small>
+<br><br>
+<small>
+<p style='text-align:left;'>
+  Slidy jsou doprovodným materiálem k předáškám. Některá tvrzení platí
+  pouze za předpokladů dostatečné spojitosti funkcí nebo jejich
+  derivací. V jednoduchých technických aplikacích bývají tyto
+  předpoklady splněny a proto je nezmiňujeme. Přesná formulace vět je
+  v učebním textu a v odborné literatuře.
+</p>  
+</small>
+
+</div>
+<div id="úvod" class="slide section level1">
+<h1>Úvod</h1>
+<p>V této přednášce se seznámíme s nástroji pro pohodlný výpočet křivkového integrálu v případě, kdy tento integrál nezávisí na integrační cestě a s metodou převodu křivkového integrálu na dvojný integrál. Tyto myšlenky dnes stojí v samotném základu mnoha dalších teorií a jsou důležité pro přechod mezi lokálním a globálním (mikroskopickým a makroskopickým) popisem transportních jevů. Proto je až neuvěřitelné, že uvedený postup odvodil pekař a samouk <a href="https://cs.wikipedia.org/wiki/George_Green">George Green</a>, který absolvoval jenom jediný rok školní docházky ve věku od osmi do devíti let! Své dílo opublikoval vlastním nákladem a povětšinou rozdal přátelům, kteří však textu pravděpodobně nemohli vůbec rozumět. Proto nevešlo okamžitě ve známost. Nezávisle na Greenovi podobný přístup objevili i někteří další fyzikové.</p>
+<div class="obtekat">
+<div class="figure">
+<img src="cesta.jpg" alt="" />
+<p class="caption">Integrační cesta je nedílnou součástí zadání křivkového integrálu. Přesto na ní někdy nemusí záležet. Potom je možné volit cestu co nejvýhodněji. Zdroj: pixabay.com</p>
+</div>
+</div>
+<p>V následujících větách si ukážeme některé souvislosti mezi studovanými pojmy. Tyto souvislosti existují, pokud objekty se kterými pracujeme jsou dostatečně pěkné - funkce jsou dostatečně hladké, oblasti mají dostatečně hladkou hranici a neobsahují díry apod. Pro úplnost uvedeme nebo zopakujeme potřebné pojmy. Některé pojmy pro názornost uvedeme poněkud volnější interpretací, jejich přesnější zavedení je možno nalézt v literatuře.</p>
+<ul>
+<li>Vektorové pole <span class="math inline">\(\vec F\)</span> se nazývá <strong>potenciálové</strong>, pokud existuje skalární funkce <span class="math inline">\(\varphi\)</span> s vlastností <span class="math inline">\(\nabla \varphi=\vec F\)</span>. Funkce <span class="math inline">\(\varphi\)</span> se nazývá <strong>kmenová funkce</strong> vektorového pole.</li>
+<li>Křivka <span class="math inline">\(C\)</span> se nazývá <strong>uzavřená</strong>, pokud její počáteční a koncový bod splývají.</li>
+<li>Křivka se nazývá <strong>jednoduchá</strong>, pokud sama sebe neprotíná (s případnou výjimkou stejného počátečního a koncového bodu u uzavřených křivek).</li>
+<li>Křivka se nazývá <strong>regulární</strong>, pokud funkce z jejího parametrického vyjádření jsou hladké (mají spojité derivace) a v každém bodě je aspoň jedna z těchto funkcí nenulová.</li>
+<li>Pokud platí pro libovolné dvě regulární křivky <span class="math inline">\(C\)</span> a <span class="math inline">\(C_1\)</span>, které leží v <span class="math inline">\(\Omega\)</span> a mají stejné počáteční body a stejné koncové body, platí <span class="math display">\[
+\int_C \vec F\mathrm{d}\vec r=\int_{C_1} \vec F\mathrm{d}\vec r,
+\]</span> říkáme, že integrál v <span class="math inline">\(\Omega\)</span> <strong>nezávisí na integrační cestě</strong>. Vektorové pole ve kterém křivkový integrál nezávisí na integrační cestě se nazývá <strong>konzervativní pole</strong>.</li>
+<li>Oblast se nazývá <strong>jednoduše souvislá</strong>, pokud je souvislá a neobsahuje otvory.</li>
+</ul>
+</div>
+<div id="věta-o-nezávislosti-integrálu-na-integrační-cestě" class="slide section level1">
+<h1>Věta o nezávislosti integrálu na integrační cestě</h1>
+<p>Podle této věty je tedy vektorové pole v prostoru konzervativní právě tehdy, když je jeho rotace nulová a to je právě tehdy, když pro toto pole existuje kmenová funkce a je tedy možno zavést potenciál (záporně vzatá kmenová funkce).</p>
+<blockquote class="veta"><p class="vetaname">Věta (o nezávislosti integrálu na integrační cestě).</p><p> Uvažujme vektorovou funkci <span class="math inline">\(\vec F\)</span>, křivku <span class="math inline">\(C\)</span> a oblast <span class="math inline">\(\Omega\)</span> v <span class="math inline">\(\mathbb{R}^3\)</span>. Následující výroky jsou ekvivalentní za předpokladu hladkosti funkcí, regulárnosti křivek a jednoduše souvislé oblasti <span class="math inline">\(\Omega\)</span>.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Integrál <span class="math inline">\(\int_C \vec F\mathrm{d}\vec r\)</span> nezávisí v <span class="math inline">\(\Omega\)</span> na integrační cestě.</li>
+<li>Křivkový integrál <span class="math inline">\(\oint_C \vec F\mathrm{d}\vec r\)</span> po libovolné uzavřené křivce <span class="math inline">\(C\)</span> v <span class="math inline">\(\Omega\)</span> je roven nule.</li>
+<li>Rotace <span class="math inline">\(\nabla\times \vec F\)</span> vektorového pole <span class="math inline">\(\vec F\)</span> je v <span class="math inline">\(\Omega\)</span> rovna nulovému vektoru.</li>
+<li>Existuje funkce <span class="math inline">\(\varphi\)</span> s vlastností <span class="math inline">\(\nabla\varphi=\vec F\)</span> na <span class="math inline">\(\Omega\)</span>.</li>
+</ol>
+<p>Pokud jsou předchozí podmínky splněny (platnost jedné z nich vynutí platnost i všech ostatních), je možno křivkový integrál vypočítat podle vzorce <span class="math display">\[
+   \int_C \vec F\mathrm{d}\vec r=\varphi(B)-\varphi(A)
+ \]</span> kde <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span> jsou počáteční a koncový bod křivky <span class="math inline">\(C\)</span> a <span class="math inline">\(\varphi\)</span> je kmenová funkce vektorového pole <span class="math inline">\(\vec F\)</span>.</p>
+</blockquote>
+</div>
+<div id="poznámky-k-větě-o-nezávislosti-křivkového-integrálu-na-integrační-cestě" class="slide section level1">
+<h1>Poznámky k větě o nezávislosti křivkového integrálu na integrační cestě</h1>
+<p>Větu je možno formálně vyslovit i pro jiný než trojrozměrný prostor. Pokud je pole v předchozí větě pouze v rovině, tj. <span class="math inline">\(\vec F=(F_x, F_y)\)</span>, doplníme třetí komponentu pro výpočet rotace nulou. Protože <span class="math inline">\(\nabla \times\vec F=\left(\frac {\partial F_x}{\partial y}-\frac {\partial F_y}{\partial x}\right)\vec k\)</span>, přechází podmínka na nulovost rotace v nám již známou nutnou a postačující podmínku <span class="math display">\[
+\frac {\partial F_x}{\partial y}=\frac {\partial F_y}{\partial x}
+\]</span> pro to aby výraz <span class="math display">\[F_x\mathrm{d}x+F_y\mathrm{d}y\]</span> byl totálním diferenciálem.</p>
+<p>Pokud pracujeme v prostoru vyšší dimenze, podmínka na rotaci je nahrazena jinou, komplikovanější podmínkou. Všechny další body věty o nezávislosti na integrační cestě však zůstávají v platnosti beze změny.</p>
+<p>Podmínka hladkosti funkcí na jednoduše souvislé oblasti je podstatná. Například pole <span class="math inline">\(\vec v=-\frac{y}{x^2+y^2}\vec i+\frac{x}{x^2+y^2}\vec j\)</span> má rotaci rovnu nule ve všech bodech, kde je definované, tj. v celém prostoru kromě osy <span class="math inline">\(z\)</span>. Přímým výpočtem je možno ukázat, že křivkový integrál po jednotkové kružnici v rovině <span class="math inline">\(z=0\)</span> je roven <span class="math inline">\(2\pi\)</span>.</p>
+</div>
+<div id="závislost-a-nezávislost-integrálu-na-integrační-cestě" class="slide section level1">
+<h1>Závislost a nezávislost integrálu na integrační cestě</h1>
+<div class="sloupce">
+<div class="figure">
+<img src="nezavislost_na_ceste_1.png" alt="" />
+<p class="caption">Křivkový integrál v nekonzervativním poli (obsahy jsou různé)</p>
+</div>
+<div class="figure">
+<img src="nezavislost_na_ceste_2.png" alt="" />
+<p class="caption">Křivkový integrál v konzervativním poli (obsahy jsou stejné)</p>
+</div>
+</div>
+<ul>
+<li><a href="https://sagecell.sagemath.org/?z=eJx1kUFOwzAQRfeVeoeRlQgbDK3THcIsEVI2XbALKTKJS6OEJNhOSY7CgbgX4zQVrRCWLHs0_4-fvvfKAL3o-cDdBZvP2qbSAiTQ62FhP4yj_Sa6GjYR4_15PWmjSfurg_63AFTNZ5mQVFw77rDKIkmzxtK2uHQLr7ZFfSy8OlsdtOA2q9Gc6y2UptiXzX54KWqn34yqgLZLDq3gUOJZCnY7nwEuo11nalp379oUmarODDe2e7W0l94ySDRd5sV2S7F07KoV_7UFtvmSC5Ys05Fo2xhYQ1HjTB8Wcvgcjgh213zSnXuvKLnbmXu_iQ_rvGewGd2v0XgLwfNeZ_AgaWh5aFlwt8AWCYFWyumerv27_HgXKWNjUH6eU69dVSqZJCT-_sKMFOHkscnrximSpgeRx41H3AxZswj36gh7MuRGta2uc5oYEvQytAGHYJhO91zUCUaQBiScqOITqnik4n9-aUTn4KE5xON9lKYMnz1JBAkqTScODjutcm1eTPMpn0ynGfsB9VrANw==&amp;lang=sage">online výpočet integrálů z obrázků</a></li>
+<li><a href="https://sagecell.sagemath.org/?z=eJyNUsFywiAQvTvjP-w42sBI2pg71_5Eoxk0QZkhISVoQcd_L2Am6dgeygF22bc89u1a4siVXphGiQUH1wTPZ_MZRzbcY4pS99Z_aoPsLl-7XY6JffKzmGAb0RKwDbMEXLSdt4FCRmBD4h5glbhwiirBOeIf2ZZYvB6czZa40cm3nhu_9qLppOCu5Gcpkec5nLWcvgZoyr3idMp1v3PJCM4Dazp94Q-iCZyFx9KJxv4GQ6y_P6kvdDKNRHqxLPb1UbQ3JsWxras7FJf6AO8vFFY9FAUU8xkAFA0zJ9Xd4qmbm5fmfv8XUiszIoEGZN1WI9tysYpZSDJTW-Tlol4wGrrsSyXwuA6NeI4MoUHknzG_QpGdVKb0vEbpkotaVihKFBuSYRIUGuwgoSVxKMJMBNeROBfu4bK-8--UmhmhqB-Qg5JK02Qvz3WCvwFPt855&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">online výpočet rotace nekonzervativního pole z obrázku</a></li>
+<li><a href="https://sagecell.sagemath.org/?z=eJyNUsGOwiAQvZv4DxOjW4h0t_bOdX9iq021oCS0NBRd0PjvC9i0Zt3DcoAZ5g2PeTOWOHKll0qjxIKDa4Lns_mMIxvuMUWp-0B2l6_dLsfEPtlZBNpGtARsU1kCLtrO20AhI7AhcQ-wWlw4RbXgHPGvbEssXg_OZkvc6ORbz4nfe9F0UnBX8rOUyPMczlpOXwI05V5xOuW611wygvPAmk5f-INoAmfhsXSisa9giPX3J_WNTqaRSC-WxZ4dRXurpDi2rL5DcWEH-HyjsOqhKKCYzwCgaCpzUt0tnrq5eWnu938htTIjEmhAsrYe2ZaLVcxCsjLMIi8X9YLR0F1fKoHHdWjE78gQGkR-jvkViuykMqXnNUqXXDBZoyhRbEiGSVBosIOElsShCDMRXEfiXLiHW_Wdf6fUlRGK-gE5KKk0TfbyzBL8A1uuyuU=&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">online výpočet rotace konzervativního pole z obrázku</a></li>
+</ul>
+<!--
+
+* [online výpočet integrálů z\ obrázků](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=var+%28%27x%2Cy%2Ct%27%29%0D%0Apole1+%3D+%28-y%2Fsqrt%28x%5E2%2By%5E2%29%2Cx%2Fsqrt%28x%5E2%2By%5E2%29%29%0D%0Apole2+%3D+%28-y%2F%28x%5E2%2By%5E2%29%2C+x%2F%28x%5E2%2By%5E2%29+%29%0D%0A%0D%0Ac1%3D%281-t%2Ct%29%0D%0Ac2%3D%28cos%28pi%2At%2F2%29%2C+sin%28pi%2At%2F2%29+%29%0D%0Ac3%3D%281-t%2C+t%5E3%29%0D%0A%0D%0Adef+krivkovy_integral+%28p0%2C+p1%2C+k0%2C+k1%29%3A%0D%0A++++return%28numerical_integral+%28p0.subs%28x%3Dk0%2C+y%3Dk1%29%2Adiff%28k0%2Ct%29%2Bp1.subs%28x%3Dk0%2C+y%3Dk1%29%2Adiff%28k1%2Ct%29%2C0%2C1%29%5B0%5D%29%0D%0A%0D%0Afor+P+in+%28pole1%2C+pole2%29%3A%0D%0A++++show%28html%28%22%3Chr%3E%3Chr%3E%22%29%29%0D%0A++++show%28html%28r%22%3Ch2%3EPole%3A+%24%5Cvec+F%3D%28%25s%2C%25s%29%24%3C%2Fh2%3E%22%25+%28latex%28P%5B0%5D%29%2Clatex%28P%5B1%5D%29%29%29+%29%0D%0A++++tabulka%3D%5B%5B%22K%C5%99ivka%22%2C%22Hodnota%22%5D%5D%0D%0A++++for+K+in+%28c1%2C+c2%2C+c3%29%3A%0D%0A++++++++tabulka.append%28%5Br%22%24x%3D%25s%24%2C+%24y%3D%25s%24%2C+%24t%5Cin%5B0%2C1%5D%24%22%25%28latex%28K%5B0%5D%29%2Clatex%28K%5B1%5D%29%29%2Ckrivkovy_integral%28P%5B0%5D%2C+P%5B1%5D%2C+K%5B0%5D%2C+K%5B1%5D%29%5D%29+++%0D%0A++++show%28table%28tabulka%2C+header_row%3DTrue%29%29)
+* [online výpočet rotace nekonzervativního pole z\ obrázku](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=x%2Cy%2Cz%3Dvar%28%27x+y+z%27%29%0D%0A%0D%0Af%28x%2Cy%2Cz%29%3D%28-y%2Fsqrt%28x%5E2%2By%5E2%29%2Cx%2Fsqrt%28x%5E2%2By%5E2%29%2C0%29%0D%0A%0D%0Axmin%2C+xmax%2C+ymin%2C+ymax+%3D+0%2C+1%2C+0%2C+1%0D%0A%0D%0Adivf%3D%28diff%28f%5B0%5D%2Cx%29%2Bdiff%28f%5B1%5D%2Cy%29%2Bdiff%28f%5B2%5D%2Cz%29%29.simplify_full%28%29%0D%0Acurlf%28x%2Cy%2Cz%29%3Dmap%28lambda+x%3Ax.simplify_full%28%29%2C%5C%0D%0A+++++++++++++++++%28+diff%28f%5B1%5D%2Cz%29-diff%28f%5B2%5D%2Cy%29%2C+diff%28f%5B2%5D%2Cx%29-diff%28f%5B0%5D%2Cz%29%2C+diff%28f%5B0%5D%2Cy%29-diff%28f%5B1%5D%2Cx%29+%29%29%0D%0A%0D%0Ashow%28html%28r%22%24%5Cbegin%7Baligned%7D+%5Cvec+F%26%3D+%25s+%5C%5C+%5C%0D%0A+++%5Cmathop%7B%5Cmathrm%7Bdiv%7D%7D%5Cvec+F%26%3D+%25s+%5C%5C+%5C%0D%0A+++%5Cmathop%7B%5Cmathrm%7Brot%7D%7D%5Cvec+F%26+%3D%25s+%5Cend%7Baligned%7D%24%22%25%0D%0A+++%28latex%28f%28x%3Dx%2Cy%3Dy%2Cz%3Dz%29%29%2C+latex%28divf%28x%3Dx%2Cy%3Dy%2Cz%3Dz%29%29%2C++latex%28curlf%28x%3Dx%2Cy%3Dy%2Cz%3Dz%29%29%29%29%29%0D%0A%0D%0Aplot_vector_field%28%28f%5B0%5D%28x%2Cy%2C0%29%2Cf%5B1%5D%28x%2Cy%2C0%29%29%2C+%28x%2Cxmin%2Cxmax%29%2C+%28y%2Cymin%2Cymax%29%2C+aspect_ratio%3D1%2C+color%3D%27blue%27%29)
+* [online výpočet rotace konzervativního pole z\ obrázku](http://user.mendelu.cz/marik/akademie/sagecell.php?short=1&in=x%2Cy%2Cz%3Dvar%28%27x+y+z%27%29%0D%0A%0D%0Af%28x%2Cy%2Cz%29%3D%28-y%2F%28x%5E2%2By%5E2%29%2Cx%2F%28x%5E2%2By%5E2%29%2C0%29%0D%0A%0D%0Axmin%2C+xmax%2C+ymin%2C+ymax+%3D+0%2C+1%2C+0%2C+1%0D%0A%0D%0Adivf%3D%28diff%28f%5B0%5D%2Cx%29%2Bdiff%28f%5B1%5D%2Cy%29%2Bdiff%28f%5B2%5D%2Cz%29%29.simplify_full%28%29%0D%0Acurlf%28x%2Cy%2Cz%29%3Dmap%28lambda+x%3Ax.simplify_full%28%29%2C%5C%0D%0A+++++++++++++++++%28+diff%28f%5B1%5D%2Cz%29-diff%28f%5B2%5D%2Cy%29%2C+diff%28f%5B2%5D%2Cx%29-diff%28f%5B0%5D%2Cz%29%2C+diff%28f%5B0%5D%2Cy%29-diff%28f%5B1%5D%2Cx%29+%29%29%0D%0A%0D%0Ashow%28html%28r%22%24%5Cbegin%7Baligned%7D+%5Cvec+F%26%3D+%25s+%5C%5C+%5C%0D%0A+++%5Cmathop%7B%5Cmathrm%7Bdiv%7D%7D%5Cvec+F%26%3D+%25s+%5C%5C+%5C%0D%0A+++%5Cmathop%7B%5Cmathrm%7Brot%7D%7D%5Cvec+F%26+%3D%25s+%5Cend%7Baligned%7D%24%22%25%0D%0A+++%28latex%28f%28x%3Dx%2Cy%3Dy%2Cz%3Dz%29%29%2C+latex%28divf%28x%3Dx%2Cy%3Dy%2Cz%3Dz%29%29%2C++latex%28curlf%28x%3Dx%2Cy%3Dy%2Cz%3Dz%29%29%29%29%29%0D%0A%0D%0Aplot_vector_field%28%28f%5B0%5D%28x%2Cy%2C0%29%2Cf%5B1%5D%28x%2Cy%2C0%29%29%2C+%28x%2Cxmin%2Cxmax%29%2C+%28y%2Cymin%2Cymax%29%2C+aspect_ratio%3D1%2C+color%3D%27blue%27%29)
+
+-->
+</div>
+<div id="greenova-věta" class="slide section level1">
+<h1>Greenova věta</h1>
+<blockquote class="veta"><p class="vetaname">Věta (Greenova věta).</p><p> Nechť <span class="math inline">\(\Omega\subseteq\mathbb{R}^2\)</span> je jednoduše souvislá regulární oblast,jejíž hranicí je po částech regulární křivka <span class="math inline">\(\partial \Omega\)</span> orientovaná tak, že při obíhání podél křivky <span class="math inline">\(\partial \Omega\)</span> je oblast <span class="math inline">\(\Omega\)</span> vlevo. Nechť vektorová funkce <span class="math inline">\(\vec F(x,y)=P(x,y)\vec i+Q(x,y)\vec j\)</span> je hladká uvnitř nějaké oblasti, obsahující množinu <span class="math inline">\(\Omega\)</span> a její hranici <span class="math inline">\(\partial \Omega\)</span>. Platí <span class="math display">\[   \underbrace{\oint_{\partial \Omega}P(x,y)\mathrm{d}x +Q(x,y)\mathrm{d}y }_{\text{Cirkulace po hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}\right)}_{[\nabla \times (P\vec i+Q\vec j)]_z}\mathrm{d}x \mathrm{d}y. \]</span></p>
+</blockquote>
+<p><a href="https://sagecell.sagemath.org/?z=eJy1VcuO2zYU3RvwP7CCDZMx7diTnREGmCabwBNEaptNLcegRlRGNSU51CMiDH9IlvmAfkJXg_5XSVGvGXsGXbQGLF_dc5-H99IFFXBSAgmyCRoOhoOCpF9FBpez8vOVUuRkMRxQ_fDIcjiwyUy-fDUcOKTUPz4LQHqXRRyWaDUcAPURLMtFrLTJN1gjVVxjZr2-e_Xmd-rf_4jv_3z9Ur1YqMHEZOR-jNgXStwjLLFEbhi7Ec3uPO_4y-nz1Wqcupx9BSWofsYpBrVGNhr3NJqMIacZKyFF2AgewsBIeSsVCLV5rZFdpSPjdGSNDW73YecMdjpYqJbEG93WuyL5I77_C4Rxxr6I-x_8cX_WyA0EvT26ByqykHLgnDq5PJ1l8cMggA4u0TwNowMPA7kLcs4hQs_EtHsx5RMxbaW8FHM4MLXT2AcEdPnBDLR-Z47V0MiUM5_td7U_z0mcR0yEt5S3OnUukedTUK7A06BcAdcMUlvKPM29FJakxEASiTDMWw3CRScDhDaLLYYUe5WkC-vzFKqIu6MZsdOzJzF7ltO6vmo0RXT0T2Unyj7X56z0V6EbnPXf38NinxQXZ8cs2V5UFrINBdRhAAeD_UJ9l83yNRnJBYaVR8OVdpJEub2ojlW9ZmjqPIUuFYoXeGk47e142yAGwjJN0BUYlUSvpqyemdrhjfLdKlLqvdwvmsVUKZB2VUejTuYtsP1y6vg1hc0YqM9DNjWHWqup-fXTh2t9N2nNcLBfEDrNXkBvRpGx2C9JOywtpPzX5IzQh3zWofVjuq76_u36508362uy2aw3yy1eb66222rEVFbPZAsDAONuOj00KzoZ_URiuJgvUHNW_dqUqSruKU9j_y9q1maP69a6uvY5PRxY7MNeB6jpYPaYt66A2X_B2zO56UX2aI8DepG9Hjzts_fI8_9mz2xzRj3OYG2KwR2jPhM7kXwjm2Y1LGy9b9bb2vbv8LeM71mkVsdNqk14sAhm-nVN5vawb8iBJxnMsbrc9V2HQRByTgpUYfbNtIKLDr5NeCLIRDB_8sBmV7DbLBG7IGTch4oORxkrL_tmXkZhDJGRaAn1nkKpX2ULSANUEefV3z1NDyrgTtAsTMgS_QPNIoky&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">online výpočet</a> - pro množiny typu <span class="math inline">\(\Omega=\{(x,y)\in\mathbb{R}^2: a\leq x \leq b, u(x)\leq y \leq v(x)\}\)</span></p>
+<p>Použijeme-li pro funkci <span class="math inline">\(\vec F\)</span> vystupující v Greenově větě třídimenzionální rozšíření (třetí komponenta nulová), vidíme, že vpravo v dvojném integrálu figuruje třetí komponenta rotace <span class="math inline">\(\nabla \times \vec F\)</span>. Je to současně jediná nenulová komponenta vektoru rotace, zbylé dvě komponenty vektoru rotace jsou rovny nule.</p>
+<p>Pokud zvolíme funkce <span class="math inline">\(P\)</span> a <span class="math inline">\(Q\)</span> tak, že platí <span class="math inline">\(\frac{\partial Q(x,y)}{\partial x}-\frac{\partial P(x,y)}{\partial y}=1\)</span>, potom vpravo vychází obsah množiny <span class="math inline">\(\Omega\)</span> a Greenova věta umožňuje najít obsah množiny <span class="math inline">\(\Omega\)</span> pouze z informace podél hranice! Na tomto principu fungují planimetry.</p>
+</div>
+<div id="varianta-greenovy-věty-pro-tok-křivkou" class="slide section level1">
+<h1>Varianta Greenovy věty pro tok křivkou</h1>
+<p>Nahradíme-li formálně vektorové pole <span class="math inline">\(P\vec i+Q\vec j\)</span> vektorovým polem <span class="math inline">\(-Q\vec i+P\vec j\)</span>, dostáváme následující vztah mezi dvojným integrálem divergence vektorového pole přes oblast <span class="math inline">\(\Omega\)</span> a křivkovým integrálem vyjadřujícím tok vektorového pole <span class="math inline">\(P\vec i+Q\vec j\)</span> protékající přes hranici <span class="math inline">\(\partial \Omega\)</span>. <span class="math display">\[  \underbrace{\oint_{\partial \Omega}-Q(x,y)\mathrm{d}x +P(x,y)\mathrm{d}y }_{\text{Tok přes hranici $\partial \Omega$}}=   \iint_{\Omega}\underbrace{\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)}_{\mathop{\mathrm{div}} (P\vec i +Q\vec j)}\mathrm{d}x \mathrm{d}y \]</span> Výše popsaně dvě varianty Greenovy věty nám dávají možnost najít fyzikální interpretaci operátorů divergence a rotace. Podíl dvojného integrálu funkce <span class="math inline">\(f\)</span> přes oblast <span class="math inline">\(\Omega\)</span> a obsahu této oblasti je roven střední hodnotě funkce <span class="math inline">\(f\)</span> na množině <span class="math inline">\(\Omega\)</span>. Při limitním přechodu, kdy rozměry množiny <span class="math inline">\(\Omega\)</span> jdou k nule, dostaneme přímo funkční hodnotu funkce <span class="math inline">\(f\)</span>. Toto nám umožňuje dostat se do integrandů na pravých stranách vztahů.</p>
+<p>Rotaci je tedy možno chápat jako limitu podílu cirkulace vektorového pole po uzavřené křivce a obsahu množiny uvnitř této křivky, kdy v limitním procesu stahujeme délku křivky k nule. Zejména pokud je práce po libovolné uzavřené křivce nulová, je nulová i rotace.</p>
+<p>Podobně divergenci je možno chápat jako limitu podílu toku uzavřenou křivkou a obsahu množiny ohraničené touto křivkou, když rozměry uvažované oblasti jdou k nule. V ustáleném stavu a při absenci zdrojů ani spotřebičů je tok dovnitř křivky stejný jako tok ven (co do uzavřeného prostoru vteče, to i vyteče ven) a divergence je rovna nule.</p>
+</div>
+<div id="greenova-věta-a-přechod-mezi-lokálním-a-globálním-tvarem-rovnice-kontinuity" class="slide section level1">
+<h1>Greenova věta a přechod mezi lokálním a globálním tvarem rovnice kontinuity</h1>
+<p>Greenova věta umožňuje přechod mezi lokálním tvarem fyzikálních zákonů (co se děje v daném bodě prostoru) a globálním tvarem (co se děje v konečném objemu). Z fyzikálního hlediska je zajímavější lokální tvar, protože dává náhled, jak fungují studované procesy. Z hlediska pozorovatele je zajímavější globální tvar, protože pracuje s reálně měřitelnými pojmy. Vzhledem k možnosti přechodu mezi těmito přístupy je užitečnost Greenovy věty a jejího trojrozměrného zobecnění nezastupitelná.</p>
+<p>Navážeme na koncept představený v přednášce o divergenci vektorového pole a podobnou bilanci stavové veličiny, jakou jsme použili v odvození rovnice kontinuity a difuzní rovnice použijeme pro konečně velký objem.</p>
+<p>Je-li <span class="math inline">\(u(x,y)\)</span> hustota stavové veličiny v množině <span class="math inline">\(M\)</span>, <span class="math inline">\(\sigma(x,y)\)</span> vydatnost zdrojů a <span class="math inline">\(\vec J=(P,Q)\)</span> pole popisující tok stavové veličiny, je rychlost s jakou roste množství stavové veličiny v množině <span class="math inline">\(M\)</span> (tj. derivace množství podle času) dána vydatností zdrojů stavové veličiny snížené o odtok stavové veličiny přes hranici množiny <span class="math inline">\(M\)</span>. Matematicky vyjádřeno platí <span class="math display">\[\frac{\mathrm d}{\mathrm dt}\left(\iint_M u\,\mathrm dx\mathrm dy\right)=\iint_M \sigma\,\mathrm dx\mathrm dy-\oint_{\partial M}-Q\,\mathrm dx+P\,\mathrm dy.\]</span> Díky nezávislosti <span class="math inline">\(x\)</span> a <span class="math inline">\(y\)</span> na čase <span class="math inline">\(t\)</span> můžeme zaměnit pořadí derivace podle času a dvojného integrálu vlevo. Křivkový integrál vpravo můžeme přepsat pomocí Greenovy věty na dvojný integrál. Tím dostáváme <span class="math display">\[\iint_M\frac{\partial u}{\partial t}\,\mathrm dx\mathrm dy=\iint_M \sigma\,\mathrm dx\mathrm dy-\iint_{M}\left(\frac{\partial P(x,y)}{\partial x}+\frac{\partial Q(x,y)}{\partial y}\right)\,\mathrm dx\mathrm dy\]</span> a po zkrácení označení v posledním dvojném integrálu a využití linearity integrálu vztah přejde do tvaru <span class="math display">\[\iint_M\frac{\partial u}{\partial t}\,\mathrm dx\mathrm dy=\iint_M \sigma-\nabla\cdot \vec J\,\mathrm dx\mathrm dy.\]</span> Protože tato rovnost má platit pro libovolnou množinu <span class="math inline">\(M\)</span>, musí se rovnat nejenom integrály, ale i integrované funkce, tj. musí platit <span class="math display">\[\frac{\partial u}{\partial t}= \sigma-\nabla\cdot \vec J.\]</span> Toto je stejná rovnice jako rovnice odvozená lokálními úvahami v přednášce o divergenci. Stejně jako v této přednášce poté můžeme pomocí konstitutivního vztahu <span class="math display">\[\vec J=-D\nabla u\]</span> obdržet difuzní rovnici <span class="math display">\[\frac{\partial u}{\partial t}= \sigma+\nabla\cdot (D\nabla u).\]</span></p>
+</div>
+</body>
+
+
+<script>
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageHeight() {
+    var windowHeight
+    if (self.innerHeight) {	// all except Explorer
+      windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowHeight = document.body.clientHeight;
+    }
+    return windowHeight
+  }
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageWidth() {
+    var windowWidth
+    if (self.innerWidth) {	// all except Explorer
+      windowWidth = self.innerWidth;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowWidth = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowWidth = document.body.clientHeight;
+    }
+    return windowWidth
+  }
+
+jQuery('a[href^="http://"]').attr('target','_blank');
+jQuery('img[class!=nofacebox]').css("cursor","zoom-in");
+jQuery('img[class!=nofacebox]').click(function(){
+  jQuery.facebox("<img class='myimg' src='"+jQuery(this).prop('src')+"'>" );
+});
+   jQuery(document).ready(function() {
+     jQuery('a[rel*=facebox]').facebox()
+   })
+
+
+jQuery(document).bind('reveal.facebox', function() { 
+  obrazek=jQuery('#facebox .myimg');
+  width=jQuery(obrazek).width();
+  height=jQuery(obrazek).height();
+  ratio1=getPageHeight()/height*0.94;
+  ratio2=getPageWidth()/width*0.94;
+  ratio=Math.min(ratio1, ratio2);
+  jQuery(obrazek).css("width", width * ratio); // Set new width
+  jQuery(obrazek).css("height", height * ratio);  // S
+  jQuery(obrazek).css("min-width", width * ratio); // Set new width
+  jQuery(obrazek).css("min-height", height * ratio);  // S
+  jQuery(obrazek).css("max-width", width * ratio); // Set new width
+  jQuery(obrazek).css("max-height", height * ratio);  // S
+  jQuery('#facebox').css("left", "10px");
+  jQuery('#facebox').css('left', jQuery(window).width() / 2 - (jQuery('#facebox').width() / 2))
+  jQuery('#facebox').css("top", getPageScroll()[1]+10);
+})
+
+</script>
+
+</html>

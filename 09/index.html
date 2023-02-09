@@ -1,0 +1,539 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Robert Mařík" />
+  <title>Lineární operátory a lineární diferenciální rovnice</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;} h1 {clear:both;}</style>
+  <link rel="stylesheet" href="../my.css?ver=2021-06-16" type="text/css" />
+
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+
+  
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+
+   function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+       function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+        
+
+jQuery( document ).ready(function() {
+	jQuery(".Ycontainer").slideToggle();
+});
+
+   
+  </script>
+  
+</head>
+<body>
+
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4 ACTIVE' href='./'>Přednáška</a><a class='menu menu4' href='../cviceni/cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+ <div class='menu-obalka'><a class='menu' href='../00'>0</a><a class='menu  ' href='../01'>1</a><a class='menu  ' href='../02'>2</a><a class='menu  ' href='../03'>3</a><a class='menu  ' href='../04'>4</a><a class='menu  ' href='../05'>5</a><a class='menu  ' href='../06'>6</a><a class='menu  ' href='../07'>7</a><a class='menu  ' href='../08'>8</a><a class='menu ACTIVE ' href='../09'>9</a><a class='menu  ' href='../10'>10</a><a class='menu  ' href='../11'>11</a> </div> 
+
+<div class="container">
+<div id="header">
+<h1 class="title">Lineární operátory a lineární diferenciální rovnice</h1>
+<h2 class="author">Robert Mařík</h2>
+<p class="date"><em><small>Poslední modifikace: 2022-07-03 </small></em></p>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#lineární-operátory">Lineární operátory</a><ul>
+<li><a href="#příklady-lineárních-operátorů">Příklady lineárních operátorů</a></li>
+<li><a href="#princip-superpozice">Princip superpozice</a></li>
+</ul></li>
+<li><a href="#operátorové-rovnice-s-lineárním-operátorem">Operátorové rovnice s lineárním operátorem</a><ul>
+<li><a href="#příklad-využití-linearity-v-jedné-dimenzi">Příklad využití linearity v jedné dimenzi</a></li>
+</ul></li>
+<li><a href="#lineární-diferenciální-rovnice-prvního-řádu-s-konstantními-koeficienty">Lineární diferenciální rovnice prvního řádu s konstantními koeficienty</a><ul>
+<li><a href="#další-lineární-rovnice">Další lineární rovnice</a></li>
+</ul></li>
+<li><a href="#lineární-autonomní-systémy">Lineární autonomní systémy</a><ul>
+<li><a href="#lineární-autonomní-systém-ve-dvou-dimenzích">Lineární autonomní systém ve dvou dimenzích</a></li>
+<li><a href="#systém-xax">Systém <span class="math inline">\(X&#39;=AX\)</span></a></li>
+</ul></li>
+<li><a href="#mechanický-oscilátor">Mechanický oscilátor</a></li>
+</ul>
+</div>
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+</div>
+
+<blockquote class="anotace"><p class="anotacename">Anotace.</p><p></p>
+<ul>
+<li>Pasáže o lineární diferenciální rovnici prvního řádu jsou omezeny na rovnici s konstantními koeficienty. Rovnicím s nekonstantními koeficienty se nevěnujte. V tomto textu nejsou pokryty, nebudou ve cvičeních, nebudou v domácích úlohách ani písemkách. Pokud na ně narazíte při počítání starších písemek, nevěnujte se jim. Tato úprava souvisí s tím, že se více věnujeme aplikačnímu potenciálu než se tak činilo v letech minulých.</li>
+<li>Řešením lineární rovnice <span class="math inline">\(y=ax+b\)</span> je přímka a k jejímu zadání stačí jediný bod a jediný směr. Ukážeme si, že podobná tvrzení platí i pro celou řadu dalších rovnic, včetně diferenciálních rovnic a soustav diferenciálních rovnic.</li>
+<li>Výstupem bude dovednost popsat u některých speciálních rovnic množinu řešení tak, že nalezneme dva nebo více relativně jednoduše nalezitelné objekty a pomocí nich sestavíme všechna řešení. Podobně jako dokážeme z jednoho bodu a směru zrekonstruovat všechny body přímky.</li>
+<li>Naučíme se posoudit, jak se chovají řešení diferenciálních rovnic, kde pravá strana je lineární. Toto se později využije tak, že pomocí těchto rovnic budeme aproximovat obecnější nelineární modely.</li>
+<li>Pokud vám jde o to, pochopit proč výpočty fungují tak jak fungují, projděte si všechny materiály. Pokud máte ambice nižší, můžete se věnovat jenom pasáži “Lineární diferenciální rovnice prvního řádu s konstantními koeficienty” a k ostatním pasážím se vrátit, jakmile je budete potřebovat (pokud vůbec). Důležité pasáže jsou poptávány ve WeBWorKových úlohách a problematika toho, jak se chovají řešení nelineárních systémů, je lineárním systémům nadřazena a bude součástí příští přednášky. Pokud budete ovládat nelineární systémy, lineární systémy se dají chápat jako jejich podmnožina.</li>
+</ul>
+</blockquote>
+<blockquote class="prerekvizity"><p class="prerekvizityname">Prerekvizity.</p><p></p>
+<ul>
+<li>Co se týká využitých metod studia lineárních operátorů, je přednáška relativně nezávislá. Nemá v tomto ohledu žádné prerekvizity.</li>
+<li>Užitečnost linearity si ukážeme na příkladech diferenciálních rovnic několika typů. Proto je vhodné si zopakovat význam derivace, využití derivace v modelech založených a na diferenciálních rovnicích a interpretaci členů difuzní rovnice.</li>
+<li>Lineární systémy je vhodné zapisovat a studovat maticově. Budeme proto potřebovat maticový součin, maticovou formulaci soustavy lineárních rovnic, nutnou a postačující podmínku jednoznačné řešitelnosti této soustavy pomocí determinantu.</li>
+<li>Studentům obeznámeným s komplexními čísly se bude hodit Eulerova identita. Ostatní studenti budou muset příslušné pasáže akceptovat jako fakt.</li>
+</ul>
+</blockquote>
+<h1 id="lineární-operátory">Lineární operátory</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/_PcHv1GeEq4"></iframe> </div>
+<p><strong>Operátorem</strong> rozumíme zobrazení, které má na vstupu i na výstupu funkci. Například pro funkce jedné proměnné mohou být operátory derivace, druhá derivace, vynásobení funkce funkcí <span class="math inline">\(\ln x\)</span> anebo vnoření zadané funkce do funkce <span class="math inline">\(\ln x\)</span>. Tj. pro <span class="math inline">\(y=y(x)\)</span> můžeme uvažovat operátory <span class="math inline">\(F_1[y]=\frac{\mathrm dy}{\mathrm dx}\)</span>, <span class="math inline">\(F_2[y]=\frac{d^2y}{dx^2}\)</span>, <span class="math inline">\(F_3[y](x)=y(x)\ln(x)\)</span>, <span class="math inline">\(F_4[y](x)=\ln(y(x)).\)</span></p>
+
+<div class="obtekat">
+<figure>
+<img src="rails.jpg" alt="Lineární zobrazení zachovávají některé vlastnosti. V geometrii například rovnoběžnost, v matematické analýze zachovávají lineární zobrazení lineární kombinaci. Rovnice s lineárním operátorem jsou díky tomu velmi předvídatelné. Proto je (lineární operátory i rovnice) v matematice máme tak rádi. Zdroj: pixabay.com" /><figcaption>Lineární zobrazení zachovávají některé vlastnosti. V geometrii například rovnoběžnost, v matematické analýze zachovávají lineární zobrazení lineární kombinaci. Rovnice s lineárním operátorem jsou díky tomu velmi předvídatelné. Proto je (lineární operátory i rovnice) v matematice máme tak rádi. Zdroj: pixabay.com</figcaption>
+</figure>
+</div>
+
+<p><strong>Lineárním operátorem</strong> rozumíme zobrazení, které zachovává součet funkcí a násobek konstantou, tj. platí <span class="math display">\[L[y_1+y_2]=L[y_1]+L[y_2]\]</span> a <span class="math display">\[L[C y_1]=C L[y_1]\]</span> pro libovolné reálné číslo <span class="math inline">\(C\)</span> a libovolné funkce <span class="math inline">\(y_1\)</span> a <span class="math inline">\(y_2\)</span> z definičního oboru operátoru <span class="math inline">\(L\)</span>.</p>
+<h2 id="příklady-lineárních-operátorů">Příklady lineárních operátorů</h2>
+<p>Linearitu se naučíme využívat k tomu, abychom úlohu najít řešení rovnice rozkouskovali na řešení jednodušších úloh. Například je možné zkombinovat úlohu na stacionární proudění podzemní vody a úlohu na radiální proudění ke studni. Každou z těchto úloh umíme redukovat na separovatelnou diferenciální rovnici a vyřešit. Zkombinováním těchto úloh je možné modelovat chování studny v rovinném toku. Používá se například k zachycení kontaminace spodní vody.</p>
+
+<div class="obtekat">
+<figure>
+<img src="snizeni_toku_se_studnou_03_001.png" alt="Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity." /><figcaption>Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity.</figcaption>
+</figure>
+</div>
+
+<ul>
+<li>Operátor derivace, tj. operátor definovaný vztahem <span class="math inline">\(L[y]=\frac{\mathrm dy}{\mathrm dx}\)</span> je lineární. Toto plyne ze vzorců pro derivaci součtu a konstantního násobku.</li>
+<li>Buď dána funkce <span class="math inline">\(a(x)\)</span>. Operátor násobení funkcí <span class="math inline">\(a(x)\)</span>, tj. <span class="math inline">\(L[y](x)=a(x)y(x)\)</span> je lineární. To plyne z komutativity násobení a z distributivního zákona (roznásobování závorek).</li>
+<li>Složení (postupná aplikace) lineárních operátorů je lineární operátor. Například tedy <span class="math display">\[\frac{\mathrm d^2 y}{\mathrm dx^2}\]</span> je lineární operátor.</li>
+<li>Součet lineárních operátorů je lineární operátor.</li>
+<li>Buď pevně dána funkce <span class="math inline">\(a(x)\)</span>. Lineární operátor <span class="math display">\[L[y]=\frac{\mathrm dy}{\mathrm dx}+a(x)y\]</span> se nazývá <em>lineární diferenciální operátor prvního řádu</em>.</li>
+<li>Buďte pevně dány funkce <span class="math inline">\(p(x)\)</span> a <span class="math inline">\(q(x)\)</span>. Lineární operátor <span class="math display">\[L[y]=\frac{\mathrm d^2y}{\mathrm dx^2}+p(x)\frac{\mathrm dy}{\mathrm dx}+q(x)y\]</span> se nazývá <em>lineární diferenciální operátor druhého řádu</em>.</li>
+<li>Buď dána <span class="math inline">\(n\times n\)</span> matice reálných čísel <span class="math inline">\(A\)</span> a <span class="math inline">\(n\)</span>-vektorová funkce <span class="math inline">\(\vec F(x)\)</span>. Zobrazení, které funkci <span class="math inline">\(\vec F(x)\)</span> přiřadí součin <span class="math inline">\(A\vec F(x)\)</span> je lineární. To plyne z distributivnosti násobení vzhledem ke sčítání matic a z toho, že součin matice a reálného čísla komutuje.</li>
+<li>Operátor z levé strany difuzní rovnice <span class="math display">\[
+    {\frac{\partial u}{\partial t}-\nabla\cdot \bigl(D\nabla u\bigr)=\sigma, }\]</span> tj. operátor <span class="math display">\[L[u]=\frac{\partial u}{\partial t}-\nabla\cdot \bigl(D\nabla u\bigr)\]</span> je lineární. Po rozepsání divergence a gradientu pomocí parciálních derivací (které jsou lineární) jenom kombinujeme lineární operátory a tedy zachováváme linearitu.</li>
+<li>Rovnice podzemní vody pro proudění s napjatou hladinou <span class="math display">\[ {S_S\frac{\partial h}{\partial t} - \nabla\cdot \bigl(T\nabla h\bigr)=  \sigma }\]</span> je speciálním případem difuzní rovnice a operátor definovaný levou stranou je lineární. Rovnice podzemní vody pro proudění s volnou hladinou <span class="math display">\[ {S_S\frac{\partial h}{\partial t} - \nabla\cdot \bigl(kh\nabla h\bigr)=  \sigma }\]</span> definuje operátor <span class="math display">\[F[h]={S_S\frac{\partial h}{\partial t} - \nabla\cdot \bigl(kh\nabla h\bigr)}\]</span> a není lineární. Pokud však využijeme rovnost <span class="math display">\[h\frac{\partial h}{\partial x}=\frac 12 \frac{\partial h^2}{\partial x}\]</span> a analogickou rovnost i pro další parciální derivace, je ve stacionárním případě (derivace podle času je nulová) rovnici možno přepsat do tvaru <span class="math display">\[ - \frac 12 \nabla\cdot \bigl(k\nabla (h^2)\bigr)= \sigma \]</span> a levá strana definuje lineární operátor v proměnné <span class="math inline">\(h^2\)</span>.</li>
+</ul>
+<h2 id="princip-superpozice">Princip superpozice</h2>
+<blockquote class="veta"><p class="vetaname">Věta (princip superpozice).</p><p> Každý lineární operátor zachovává lineární kombinaci funkcí, tj. platí <span class="math display">\[L[C_1 y_1+C_2 y_2]=C_1 L[y_1]+C_2 L[y_2]\]</span> vždy, když <span class="math inline">\(C_{1,2}\in\mathbb{R}\)</span> a <span class="math inline">\(y_{1,2}\)</span> jsou funkce z definičního oboru operátoru <span class="math inline">\(L\)</span>.</p>
+</blockquote>
+<p>Plyne přímo rozepsáním <span class="math display">\[
+\begin{aligned}L[C_1 y_1+C_2 y_2]&amp;=
+L[C_1 y_1]+L[C_2 y_2]\\
+&amp;=
+C_1 L[y_1]+C_2 L[y_2]
+\end{aligned}
+\]</span></p>
+<h1 id="operátorové-rovnice-s-lineárním-operátorem">Operátorové rovnice s lineárním operátorem</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/i3By7KBu6ec"></iframe> </div>
+<p>Operátorovou rovnicí budeme rozumět rovnici <span class="math display">\[L[x]=b(t),\]</span> kde <span class="math inline">\(b(t)\)</span> je funkce a <span class="math inline">\(L\)</span> operátor.</p>
+<ul>
+<li>Například pro <span class="math inline">\(b(t)=0\)</span> a <span class="math inline">\(L[x]=\frac{\mathrm dx}{\mathrm dt}-x\)</span> má rovnice tvar <span class="math display">\[\frac{\mathrm dx}{\mathrm dt}-x=0,\]</span> tj. <span class="math display">\[\frac{\mathrm dx}{\mathrm dt}=x.\]</span></li>
+</ul>
+<p>Následující věta vlastně vyjadřuje totéž co princip superpozice z předchozího textu, pouze v jiných pojmech: v pojmech řešení rovnice s lineárním operátorem.</p>
+<blockquote class="veta"><p class="vetaname">Věta (princip superpozice při řešení rovnic).</p><p> Jsou-li funkce <span class="math inline">\(x_1(t)\)</span> a <span class="math inline">\(x_2(t)\)</span> po řadě řešeními rovnic <span class="math display">\[L[x]=b_1(t),\quad L[x]=b_2(t),\]</span> Je funkce <span class="math display">\[x(t)=C_1 x_1(t)+C_2 x_2(t)\]</span> řešením rovnice <span class="math display">\[L[x]=C_1 b_1(t)+C_2 b_2(t).\]</span></p>
+</blockquote>
+<p>Pro <span class="math inline">\(b_1(t)=b_2(t)=0\)</span> všechny tři výše uvedené rovnice splynou a lineární kombinace dvou řešení homogenní lineární rovnice je také řešením. Toto je možné pochopitelně rozšířit na libovolný konečný počet funkcí.</p>
+<p>Pro <span class="math inline">\(b_1(t)=0\)</span> a <span class="math inline">\(C_2=1\)</span> jsou obě nehomogenní rovnice stejné a pokud k řešení rovnice přičteme řešení asociované homogenní rovnice (se stejným operátorem na levé straně, ale nulou na pravé straně), dostaneme řešení stejné rovnice.</p>
+<p>Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.</p>
+<ul>
+<li>Pokud máme k dispozici několik řešení homogenní rovnice, libovolná jejich lineární kombinace je také řešením.</li>
+<li>Za určitých okolností lineární kombinace z předchozího bodu umožní splnit libovolnou počáteční podmínku a vzhledem k jednoznačnosti řešení, která lineární rovnice zpravidla provází, je jistota, že žádné další řešení neexistuje. Nalezení těchto funkcí je tedy zásadní krok při řešení rovnice.</li>
+<li>U nehomogenní rovnice se úloha najít všechna řešení dá rozdělit na dvě dílčí úlohy: najít jenom jedno řešení a k tomu najít všechna řešení homogenní rovnice se stejnou levou stranou. Každá z těchto dvou úloh je mnohem lehčí než úloha celková a součtem jednoho řešení nehomogenní rovnice a obecného řešení asociované homogenní rovnice dostaneme obecné řešení nehomogenní rovnice.</li>
+</ul>
+<h2 id="příklad-využití-linearity-v-jedné-dimenzi">Příklad využití linearity v jedné dimenzi</h2>
+<p>Pro konkrétnost specifikujeme myšlenky z předchozího textu na příkladě.</p>
+<p>Pro jednu funkci lineární kombinace degenerují na násobky. Proto je obecné řešení rovnice součtem jednoho řešení rovnice a obecného řešení asociované homogenní rovnice. Toto jedno řešení vlastně udává pozici v prostoru funkcí a řešení asociované homogenní rovnice udává směr. Například funkce <span class="math inline">\(x=e^t\)</span> splňuje rovnici <span class="math display">\[x&#39;-x=0\]</span> a funkce <span class="math inline">\(x=-\pi\)</span> splňuje rovnici <span class="math display">\[x&#39;-x=\pi.\]</span> Všechna řešení rovnice <span class="math display">\[x&#39;-x=\pi\]</span> jsou tvaru <span class="math inline">\(x=Ce^t-\pi\)</span></p>
+<h1 id="lineární-diferenciální-rovnice-prvního-řádu-s-konstantními-koeficienty">Lineární diferenciální rovnice prvního řádu s konstantními koeficienty</h1>
+<p>V aplikacích často vídáme rovnici tvaru <span class="math display">\[\frac{\mathrm dx}{\mathrm dt}+ax=b,\tag{N}\]</span> která vznikne například úpravou rovnice <span class="math display">\[\frac{\mathrm dx}{\mathrm dt}=b-ax.\]</span><br />
+Podobně jako v předchozím příkladě stačí najít jedno řešení rovnice (N) a jedno nenulové řešení rovnice <span class="math display">\[\frac{\mathrm dx}{\mathrm dt}+ax=0.\tag{H}\]</span> První z řešení udává bod v prostoru funkcí, druhé řešení jakýsi směr a společně definují jakousi přímku obsahující všechna řešení. Rovnici (N) splňuje konstantní funkce <span class="math inline">\(x(t)=\frac ba\)</span> a rovnici (H) exponenciální funkce <span class="math inline">\(x(t)=e^{-at}.\)</span> Obecné řešení rovnice (N) je proto <span class="math display">\[x(t)=\frac ba+Ce^{-at}.\]</span> Pro <span class="math inline">\(t\)</span> jdoucí do nekonečna toto řešení za předpokladu <span class="math inline">\(a&gt;0\)</span> konverguje ke stacionárnímu řešení <span class="math inline">\(\frac ba\)</span>. Partikulární řešení odpovídající počáteční podmínce <span class="math inline">\(x(0)=0\)</span> je <span class="math display">\[x(t)=\frac ba-\frac bae^{-at}=\frac ba\Bigl(1-e^{-at}\Bigr).\]</span> To znamená, že řešení se exponenciálně přibližuje ke stacionárnímu řešení. Pro <span class="math inline">\(a&lt;0\)</span> se naopak od stacionárního řešení exponenciálně vzdaluje.</p>
+<blockquote class="veta"><p class="vetaname">Věta (řešení lineární diferenciální rovnice prvního řádu s konstantními koeficienty).</p><p> Obecným řešením rovnice <span class="math display">\[\frac{\mathrm dx}{\mathrm dt}+ax=b\]</span> je <span class="math display">\[x(t)=x_{\text{st}}+Ce^{-at},\]</span> kde <span class="math inline">\(x_{\text{st}}=\frac ba\)</span> je stacionárním řešením této rovnice. Pro <span class="math inline">\(a&gt;0\)</span> je toto řešení stabilní a globálně atraktivní. Pro <span class="math inline">\(a&lt;0\)</span> je nestabilní.</p>
+</blockquote>
+<p>Obrat, že stacionární řešení je globálně atraktivní znamená, že všechna řešení k tomuto stacionárním stavu konvergují nezávisle na počáteční podmínce.</p>
+<h2 id="další-lineární-rovnice">Další lineární rovnice</h2>
+<p>Pro skalární lineární diferenciální rovnice druhého řádu je situace obdobná, pouze pro řešení asociované homogenní diferenciální rovnice potřebujeme dvě lineárně nezávislá řešení (jedno není násobkem druhého).<br />
+Například <span class="math inline">\(x_1(t)=e^t\)</span> a <span class="math inline">\(x_2(t)=e^{-t}\)</span> nejsou jedno násobkem druhého a obě splňují rovnici <span class="math display">\[x&#39;&#39;-x=0.\]</span> Proto všechna řešení jsou tvaru <span class="math display">\[x(t)=C_1 e^t+C_2 e^{-t},\]</span> kde <span class="math inline">\(C_{1,2}\in\mathbb{R}.\)</span> Funkce <span class="math inline">\(x=-t\)</span> splňuje rovnici <span class="math display">\[x&#39;&#39;-x=t\]</span> a všechna řešení této rovnice jsou <span class="math display">\[x(t)=C_1 e^t+C_2 e^{-t}-t.\]</span> Rovnicím majícím derivace vyššího řádu se budeme věnovat později.</p>
+<!--
+
+# Lineární diferenciální rovnice prvního řádu
+
+> Definice (Lineární diferenciální rovnice prvního řádu). Nechť funkce $a$, $b$ jsou spojité na intervalu $I$.
+> Rovnice
+> $$  y'+a(x)y=b(x) \tag{LDE}$$
+> se nazývá *obyčejná lineární diferenciální rovnice prvního řádu*
+> (zkráceně píšeme LDE). Je-li navíc $b(x)\equiv 0$ na $I$, nazývá se
+> rovnice *homogenní*, v opačném případě *nehomogenní*.
+
+> Věta (o řešitelnosti LDE prvního řádu). Jsou-li funkce $a$, $b$ spojité na
+> intervalu $I$, $x_0\in I$ a $y_0\in\mathbb{R}$ libovolné, má každá počáteční
+> úloha právě jedno řešení definované na celém
+> intervalu $I$.
+
+> Definice (asociovaná homogenní rovnice). Buď dána lineární diferenciální rovnice. Homogenní rovnice, která
+> vznikne z\ rovnice nahrazením pravé strany nulovou funkcí, tj.
+> rovnice
+> $$    y'+a(x)y=0$$
+> se nazývá *homogenní rovnice, asociovaná s nehomogenní rovnicí (LDE)*
+
+Homogenní LDE má vždy (bez
+ohledu na konkrétní tvar funkce $a(x)$) konstantní řešení $y=0$, jak lze
+ověřit přímým dosazením. Toto řešení se nazývá *triviální řešení*.
+
+-->
+<!--
+
+### Operátorová symbolika a linearita operátoru
+
+Definujeme-li na množině všech funkcí
+diferencovatelných na intervalu $I$ operátor $L$ vztahem
+
+$$L[y](x)=y'(x)+a(x)y(x)$$
+
+pro každé $x\in I$, je možno LDE a s\ ní
+asociovanou homogenní rovnici zapsat v\ krátkém tvaru $L[y]=b(x)$ a
+$L[y]=0$.
+
+Operátor $L$ splňuje pro všechna
+reálná čísla $C_1$, $C_2$ a všechny diferencovatelné funkce $y_1(x)$,
+$y_2(x)$ vztah
+
+$$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2].$$
+
+Vskutku. Platí
+
+$$\begin{aligned}
+    L[C_1y_1+C_2y_2](x)&{}=\Bigl(C_1y_1(x)+C_2y_2(x)\Bigr)'+a(x)\Bigl(C_1y_1(x)+C_2y_2(x)\Bigr)\\
+    &{}=C_1y_1'(x)+C_2y_2'(x)+a(x)C_1y_1(x)+a(x)C_2y_2(x)\\
+    &{}=C_1\Bigl(y_1'(x)+a(x)y_1(x)\Bigr)+C_2\Bigl(y_2'(x)+a(x)y_2(x)\Bigr)\\ 
+    &{}=C_1L[y_1](x)+C_2L[y_2](x).
+  \end{aligned}$$
+
+Důsledkem vztahu $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2],$$
+tj. důsledkem skutečnosti že lineární operátor zachovává lineární
+kombinaci funkcí jsou vztahy $$L[Cy]=CL[y]$$ (pro $C_2=0$, $C_1=C$, $y_1=y$) a 
+$$L[y_1+y_2]=L[y_1]+L[y_2]$$ (pro $C_1=C_2=1$). 
+
+Tedy lineární operátor aplikovaný na
+součet je možno zapsat jako součet lineárních operátorů aplikovaných
+na jednotlivé sčítance a dále je možno z operátoru vytáhnout ven
+multiplikativní konstanty. To jsou obraty dobře známé při výpočtu
+derivací a je možné je použít i při dosazování do lineárního
+operátoru.
+
+### Násobek řešení homogenní LDE je řešením téže LDE
+
+<div class=sloupce>
+Buď $y_{p0}(x)$ řešením rovnice $$L[y]=0,$$ tj. nechť platí
+$L[y_{p0}]=0$. Buď $C\in\mathbb{R}$ libovolné reálné číslo.
+
+**Násobek řešení hom. LDE je také řešením.**
+
+Ukážeme, že $y_1=Cy_{p0}(x)$ je řešením téže rovnice, tj. že platí $L[y_1]=0$. Toto však platí, neboť
+$$L[y_1]=L[Cy_{p0}]=CL[y_{p0}]=C\cdot 0=0.$$
+
+Máme-li jedno řešení homogenní lineární diferenciální rovnice,
+vynásobením konstantou dostaneme další řešení téže rovnice. Ještě
+ukážeme, že pokud řešení které násobíme není triviální, dostaneme
+tímto způsobem dokonce všechna řešení.
+
+<div>
+**$C$-násobek nenulového řešení hom. LDE je obecným řešením.**
+
+Ukážeme, že je-li $y_{p0}(x)$ nenulovým řešením rovnice $L[y]=0$, je
+obecným řešením této rovnice $$y(x)=Cy_{p0}(x), \qquad C\in\mathbb{R}.$$ Vskutku, podle
+předchozího se jedná o řešení a stačí ukázat, že zde jsou zahrnuta
+všechna možná řešení. Stačí ukázat, že pro libovolnou počáteční
+podmínku $y(x_0)=y_0$, kde $x_0,y_0\in\mathbb{R}$ je možno
+partikulární řešení IVP dostat vhodnou volbou konstanty. Toto je však
+triviální, protože funkce $$y(x)=\frac{y_0}{y_{p0}(x_0)}y_{p0(x)}$$ má
+požadované vlastnosti.
+
+</div>
+</div>
+
+
+### Obecné řešení homogenní LDE
+
+Uvažujme homogenní LDE
+$$y'+a(x)y=0. \tag{HLDE}$$
+Přepsáním do 
+$$y'=-a(x)y$$
+a přímým dosazením vidíme, že 
+$$y_{p0}=e^{-\int a(x)\mathrm{d}x}$$
+je řešením této rovnice. Obecné řešení rovnice (HLDE) je potom 
+$$y=Ce^{-\int a(x)\mathrm{d}x}.$$
+
+
+
+-->
+<!-- 
+### Obecné řešení homogenní LDE
+
+Uvažujme homogenní LDE
+$$y'+a(x)y=0. \tag{HLDE}$$
+
+* Přepsáním do 
+$$y'=-a(x)y$$
+vidíme, že jedno řešení je možno uhodnout. Je to řešení
+$$y_{p0}=e^{-\int a(x)\mathrm{d}x}.$$
+* Další řešení dostaneme z linearity. Funkce 
+$$y(x)=Cy_{p0}(x)$$
+je řešením  rovnice (HLDE) pro libovolné $C$.
+* Pro počáteční podmínku $y(x_0)=y_0$ stačí najít $C$ takové, aby platilo
+$$y_0=C y_{p0}(x_0)$$ a tuto rovnici je možno vyřešit vzhledem k $C$ vždy, protože $y_{p0}(x_0)\neq 0$.
+
+**Závěr:** Obecné řešení rovnice (HLDE) je 
+$$y(x)=C e^{-\int a(x)\mathrm{d}x}.$$
+
+
+### Obecné řešení nehomogenní LDE pomocí partikulárního řešení
+
+Je-li $y_p$ řešením nehomogenní LDE
+$$y'+a(x)y=b(x),$$ je obecným řešením této rovnice
+$$y(x)=Cy_{p0}(x)+y_p(x),$$
+kde $Cy_{p0}(x)$ je obecným řešením asociované homogenní LDE.
+
+**Závěr:** Stačí mít jedno řešení nehomogenní rovnice a jedno nenulové
+  řešení asociované homogenní rovnice. Protože množina všech řešení má
+  pevnou strukturu, dokážeme z těchto informací napsat libovolné
+  řešení.
+
+
+* Vskutku, jestliže $L[y_p]=b(x)$ a $L[y_{p0}(x)]=0$, potom 
+  \dm$$L[y]=L[Cy_{p0}+y_p]=CL[y_{p0}]+L[y_p]=C\cdot 0+b(x)=b(x).$$
+  Funkce $y(x)$ tedy je řešením.
+* Pokud potřebujeme splnit libovolnou počáteční podmínku $y(x_0)=y_0$,
+  kde $x_0,y_0\in\mathbb{R}$, stačí vzít řešení
+  $$y(x)=\frac{y_0-y_{p}(x_0)}{y_{p0}(x_0)}y_{p0}(x)+y_p(x),$$
+
+
+
+### Obecné řešení nehomogenní LDE ještě jednou a prakticky
+
+Slovně:
+
+-   Všechna řešení homogenní lineární rovnice jsou násobky jednoho
+    libovolného nenulového řešení této rovnice.
+
+-   Součet jednoho libovolného řešení zadané nehomogenní a obecného
+    řešení asociované homogenní lineární rovnice je obecným řešením dané
+    nehomogenní rovnice.
+
+Stačí tedy najít dvě (do jisté míry speciální) řešení a z\ nich snadno
+sestavíme obecné řešení zadané rovnice. 
+
+**Příklad.** Rovnice $$y'+y=3 \tag{*}$$ má partikulární řešení $y=3$ (vidíme
+  hned po dosazení). Asociovaná homogenní rovnice $$y'+y=0$$ má obecné
+  řešení $y=Ce^{-x}$. Obecné řešení rovnice (*) tedy je 
+      $$y=3+Ce^{-x}.$$
+-->
+<!--
+
+### Nehomogenní LDE – metoda variace konstanty
+ 
+ <div class=sloupce>
+Než začneme hledat řešení
+nehomogenní rovnice, prozkoumejme, jak se lineární operátor $L$ chová
+vzhledem k\ součinu funkcí. Buďte $u=u(x)$ a $v=v(x)$ funkce. Platí
+$$\begin{aligned}
+  L[u\cdot v]&{}=\Bigl(uv\Bigr)'+auv\\
+  &{}=u'v+uv'+auv\\
+  &{}=v\Bigl(u'+au\Bigr)+uv'\\
+  &{}=vL[u]+uv'.\end{aligned}$$
+Tento výpočet ukazuje, že pokud $L[u]=0$, tj. pokud je funkce $u$
+řešením asociované homogenní diferenciální rovnice, je možno řešení
+nehomogenní rovnice $L[y]=b(x)$ hledat ve tvaru součinu $y(x)=u(x)v(x)$,
+kde funkce $v(x)$ splňuje vztah
+$$\begin{aligned}b(x)&=L[u\cdot v]\\&=vL[u]+uv'\\&=0+uv'\\&=uv'.\end{aligned}$$
+tj. $$v'(x)=\frac{b(x)}{u(x)}.$$ Odsud však funkci $v$ můžeme nalézt již
+pouhou integrací a součin $u(x)v(x)$ poté bude řešením nehomogenní
+rovnice. V\ praxi je také obvyklé, že si pamatujeme pouze hlavní myšlenku
+– *budeme hledat řešení nehomogenní rovnice ve tvaru součinu nějaké
+funkce a řešení asociované homogenní rovnice* – a provádíme všechny
+úvahy pro konkrétní funkce $a$, $b$ v\ běžném neoperátorovém označení.
+
+</div>
+
+
+ <div class=sloupce> 
+Pokud v předchozím volíme $u=e^{-\int a(x)\mathrm{d}x}$, je $$v'=b(x)e^{\int a(x)\mathrm{d}x}$$ a odsud $$v=\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x.$$ Partikulární řešení je $$uv=e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$ a obecné řešení LDE
+$$y'+a(x)y=b(x)$$ je 
+$$y=Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$
+</div>
+
+
+-->
+<!--
+### Nehomogenní LDE – metoda integračního faktoru
+
+Zůstává otázka, jak najít partikulární řešení nehomogenní rovnice.
+
+Protože platí
+$$\left(y e^{\int a(x)\mathrm{d}x}\right)'=y'e^{\int a(x)\mathrm{d}x}+y a(x) e^{\int a(x)\mathrm{d}x},$$
+je možno rovinci 
+$$y'+a(x)y=b(x)$$
+přepsat do tvaru
+$$y'e^{\int a(x)\mathrm{d}x}+a(x)ye^{\int a(x)\mathrm{d}x}=b(x)e^{\int a(x)\mathrm{d}x}$$
+a odsud
+$$\left (y e^{\int a(x)\mathrm{d}x}\right)'=b(x)e^{\int a(x)\mathrm{d}x}.$$
+Integrací dostáváme
+$$y e^{\int a(x)\mathrm{d}x}=\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x+C$$
+a explicitní tvar řešení je
+$$y =Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$
+
+Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x.$$
+
+</div>
+
+-->
+<h1 id="lineární-autonomní-systémy">Lineární autonomní systémy</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/AjpQ0Zh1jkU"></iframe> </div>
+<p>Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice <span class="math display">\[\frac{\mathrm dX}{\mathrm dt}-AX= B\]</span> operátorová rovnice s lineárním operátorem. Tyto rovnice se v případě, kdy matice <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span> nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat za chvíli. Pro tyto rovnice je souvislost mezi homogenní a nehomogenní rovnicí obdobná jako v minulých případech. Řešením nehomogenní úlohy najdeme jedno řešení (bod v prostoru) a řešením asociované úlohy najdeme směry definující množinu všech řešení. Vzhledem k vícedimenzionalitě úlohy bude těchto řešení více. Situace je podobná jako to, že v geometrii je rovina dána dvěma směry. Nakonec dané informace můžeme využít k vygenerování množiny všech řešení. Popsaná metoda je komplikovanější na konkrétní použití, ale často se ani nemusí provádět. Často stačí například informace o chování řešení v nekonečnu. To je také to, na co se omezíme na příští přednášce.</p>
+<h2 id="lineární-autonomní-systém-ve-dvou-dimenzích">Lineární autonomní systém ve dvou dimenzích</h2>
+<p>Následující příklad je mírně modifikovaný příklad z <a href="https://youtu.be/MCrDzhpu3-s?t=671">kurzu MIT o diferenciálních rovnicích</a>. Ve formulaci s vařením vajíčka se zdá triviální a prakticky neužitečný. Toto je však voleno pro jednoduchost výkladu a snadnou představu povahy zkoumaného jevu. V praxi se stejným modelem předává teplo vrstveným materiálem (jako je tepelná ochrana domů nebo raketoplánů) nebo chemické látky vstupující do dalších reakcí (jako například řetěz reakcí vedoucí k syntéze bílkovin, které buňka v reakci na okolní prostředí potřebuje k přežití).</p>
+
+<div class="obtekat">
+<figure>
+<img src="vajicko.jpg" alt="Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com" /><figcaption>Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com</figcaption>
+</figure>
+</div>
+
+<p>Budeme modelovat ohřívání vejce ve vodě o konstantní teplotě <span class="math inline">\(T_0\)</span>. Na počátku mají bílek a žloutek teplotu <span class="math inline">\(T_1\)</span> a <span class="math inline">\(T_2\)</span>. Žloutek přebírá teplo od bílku rychlostí úměrnou rozdílu teplot žloutku a bílku. Bílek přebírá teplo od vodní lázně rychlostí úměrnou rozdílu teplot a předává teplo žloutku procesem popsaným v předchozí větě. Vody je hodně a její teplota se nemění. Proces můžeme modelovat soustavou diferenciálních rovnic <span class="math display">\[\begin{aligned}T_1^\prime &amp;= k_1(T_0-T_1)-k_2(T_1-T_2) \\ T_2^\prime&amp;=k_2(T_1-T_2)\end{aligned}\]</span> Tento systém je možno přepsat do tvaru <span class="math display">\[\begin{aligned}T_1^\prime &amp;= -(k_1+k_2)T_1+k_2T_2+T_0k_1 \\ T_2^\prime&amp;=k_2T_1-k_2T_2\end{aligned}\]</span> a zapsat maticově <span class="math display">\[\begin{pmatrix}T_1\\T_2\end{pmatrix}&#39;=
+\begin{pmatrix}-(k_1+k_2) &amp; k_2 \\ k_2 &amp; -k_2\end{pmatrix}
+\begin{pmatrix}T_1\\T_2\end{pmatrix}
++
+\begin{pmatrix}k_1T_0\\0\end{pmatrix}.
+\]</span> Pokud zvolíme teplotní stupnici tak, že teplota vroucí vody je v naší nové stupnici nula, můžeme dokonce eliminovat druhý člen a dostáváme <span class="math display">\[\begin{pmatrix}T_1\\T_2\end{pmatrix}&#39;=
+\begin{pmatrix}-(k_1+k_2) &amp; k_2 \\ k_2 &amp; -k_2\end{pmatrix}
+\begin{pmatrix}T_1\\T_2\end{pmatrix} \tag{V}
+\]</span> tj. symbolicky <span class="math inline">\(X&#39;=AX\)</span>, kde <span class="math inline">\(X=(T_1,T_2)^T\)</span> je vektorová funkce (sloupcový vektor) a <span class="math inline">\(A\)</span> je <span class="math inline">\(2\times 2\)</span> matice.</p>
+<h2 id="systém-xax">Systém <span class="math inline">\(X&#39;=AX\)</span></h2>
+<p>Je-li determinant matice nenulový, má soustava <span class="math inline">\(AX=0\)</span> pouze nulové řešení a systém <span class="math display">\[X&#39;=AX\tag{1}\]</span> má jediné konstantní řešení, kterým je počátek. Konstantní řešení bude nazývat stacionární bod.</p>
+<p>Tento systém můžeme přepsat na <span class="math display">\[X&#39;-AX=0\]</span> a tento systém je lineární, protože díky distributivnímu zákonu pro matice pro operátor <span class="math inline">\(L[X]=X&#39;-AX\)</span> platí <span class="math display">\[\begin{aligned}L[X_1+X_2]&amp;=(X_1+X_2)&#39;-A(X_1+X_2)\\&amp;=X_1^\prime+X_2^\prime-AX_1 -AX_2\\&amp;=(X_1^\prime -AX_1)+(X_2^\prime-AX_2)\\&amp;=L[X_1]+L[X_2]\end{aligned}\]</span> a díky komutativitě při násobení s konstantou <span class="math inline">\(C\in\mathbb R\)</span> také <span class="math display">\[L[CX]=(CX)&#39;-A(CX)=CX&#39;-CAX=C(X&#39;-AX)=CL[X].\]</span></p>
+<p>Je možné ukázat, že každá počáteční úloha je jednoznačně řešitelná a pro obecné řešení stačí najít tolik nezávislých řešení, kolik komponent má neznámá vektorová funkce <span class="math inline">\(X\)</span>. Platí následující věta, kterou je možno ověřit přímo dosazením.</p>
+<blockquote class="veta"><p class="vetaname">Věta (souvislost vlastních čísel matice a řešení lineárního autonomního systému).</p><p> Má-li matice <span class="math inline">\(A\)</span> vlastní číslo <span class="math inline">\(\lambda\)</span> a příslušný vlastní vektor je <span class="math inline">\(v\)</span>, tj. platí <span class="math inline">\(A v =\lambda v\)</span>, je funkce <span class="math inline">\(X(t)=v e^{\lambda t}\)</span> řešením systému <span class="math inline">\(X&#39;=AX.\)</span> Jsou-li <span class="math inline">\(\lambda\)</span> a <span class="math inline">\(v\)</span> komplexní, je řešením i samostatně reálná část a imaginární část.</p>
+</blockquote>
+<p>Systém <span class="math display">\[X&#39;=AX+B\tag{2}\]</span> je možno na tvar (1) převést po přepsání do tvaru <span class="math inline">\((X-X_0)&#39;=A(X-X_0)\)</span>, kde <span class="math inline">\(X_0\)</span> je řešením soustavy <span class="math inline">\(AX+B=0\)</span>, což odpovídá posunu stacionárního bodu do počátku.</p>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka (vlastní hodnoty a řešení).</p><p> Následující poznatky jsou shrnutím a specifikací výše uvedeného a klasifikují stabilitu některých řešení systému (2), tj. <span class="math display">\[X&#39;=AX+B.\]</span></p>
+<ul>
+<li>Jakmile má matice <span class="math inline">\(A\)</span> reálnou kladnou vlastní hodnotu, existuje řešení, které se vzdaluje od stacionárního bodu směrem daným příslušným vlastním vektorem.</li>
+<li>Jakmile má matice <span class="math inline">\(A\)</span> reálnou zápornou vlastní hodnotu, existuje řešení, které se přibližuje ke stacionárnímu bodu ze směru daného příslušným vlastním vektorem.</li>
+<li>Jakmile má matice <span class="math inline">\(A\)</span> komplexní hodnotu s kladnou reálnou částí, existuje řešení, které se v oscilacích vzdaluje od stacionárního bodu.</li>
+<li>Jakmile má matice <span class="math inline">\(A\)</span> komplexní hodnotu se zápornou reálnou částí, existuje řešení, které se v oscilacích přibližuje ke stacionárnímu bodu.</li>
+</ul>
+</blockquote>
+<div class="obtekat"><figure><img src="/marik/manim/thumbs/AS_vlastni_cisla.jpg"><figcaption>O chování trajektorií v okolí stacionárního bodu rozhoduje znaménko vlastních čísel (u reálných vlastních čísel), nebo znaménko reálné části (u komplexně sdružených vlastních čísel) <a href="/marik/manim/AS_vlastni_cisla" class=but-prez target=_blank>Otevřít prezentaci</a></figcaption></figure></div>
+<p>Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté každé z nich generuje řešení konvergující do stacionárního bodu. Díky linearitě, jednoznačnosti řešení a tomu, že máme tolik řešení, kolik je nutno pro splnění libovolné podmínky, je možné pomocí těchto dílčích řešení zapsat i libovolné jiné řešení. Tím pádem ale všechna řešení konvergují do stacionárního bodu. Pokud jsou vlastní čísla komplexní se zápornou reálnou částí, je situace stejná, ale řešení navíc konvergují do stacionárního bodu postupnými oscilacemi. Podobně, pokud všechny vlastní hodnoty jsou kladné, všechna řešení se od stacionárního bodu vzdalují a pokud jsou všechny vlastní hodnoty komplexní s kladnou reálnou částí, probíhá toto vzdalování oscilacemi s narůstající amplitudou.</p>
+
+<div class="obtekat">
+<figure>
+<img src="krvinky.jpg" alt="Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156" /><figcaption>Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156</figcaption>
+</figure>
+</div>
+
+<p><strong>Příklad.</strong> Model ohřívání vajíčka (V) z předchozí části této přednášky má (v posunuté teplotní stupnici, na které teplota varu vody odpovídá nule) stacionární bod <span class="math inline">\((0,0)\)</span>. Zkusíme zvolit parametry <span class="math inline">\(k_1\)</span> a <span class="math inline">\(k_2\)</span> a určit chování trajektorií v okolí tohoto bodu. Pro <span class="math inline">\(k_1=1\)</span> a <span class="math inline">\(k_2=2\)</span> dostáváme <span class="math display">\[\begin{pmatrix}T_1\\T_2\end{pmatrix}&#39;=
+\begin{pmatrix}-3 &amp; 2 \\ 2 &amp; -2\end{pmatrix}
+\begin{pmatrix}T_1\\T_2\end{pmatrix}.
+\]</span> Charakteristická rovnice je <span class="math display">\[\lambda^2+5\lambda+2=0\]</span> se dvěma zápornými kořeny <span class="math inline">\(\lambda_{1,2}=\frac{-5\pm\sqrt{25-8}}{2}=\cdots\)</span>. Budou tedy existovat dvě nezávislá řešení konvergující do počátku a všechna další řešení dostaneme jako jejich lineární kombinaci. Proto všechna řešení konvergují k počátku tj. <span class="math inline">\(T_1=T_2=0\)</span>. Obě teploty v naší posunuté stupnici se tedy ustálí na teplotě vodní lázně. Nic jiného jsme ani nečekali, ať mají žloutek a bílek na začátku jakoukoliv teplotu, po čase se teplota ustálí na teplotě vodní lázně. V tomto případě není zajímavé vědět, do jakého stavu systém konverguje, ale například za jak dlouho bude dosaženo potřebné teploty ve žloutku nebo v bílku. V praxi se podobným způsobem neřeší vaření vajec, ale předávání chemických látek jako jsou léky nebo enzymy mezi tkáněmi, prostřednictvím krve. Podobně jako u Newtonova zákona tepelné výměny, i zde je rychlost procesu úměrná množství, v tomto případě úměrná rozdílu koncentrací.</p>
+<a onclick="otevrit('problems/autonomni_systemy/13.pg');" target="_blank" class="WWotazka">WW-otázka</a>
+<h1 id="mechanický-oscilátor">Mechanický oscilátor</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/8KQ9qG1eQtU"></iframe> </div>
+
+<div class="obtekat">
+<figure>
+<img src="houpacka.jpg" alt="Příklad mechanického oscilátoru Zdroj: pixabay.com, Couleur" /><figcaption>Příklad mechanického oscilátoru Zdroj: pixabay.com, Couleur</figcaption>
+</figure>
+<figure>
+<img src="kmity_stromu.png" alt="Kmity kmene stromu. Jejich analýza pomáhá k pochopení stability stromů ve větru. Zdroj: projekt DYNATREE" /><figcaption>Kmity kmene stromu. Jejich analýza pomáhá k pochopení stability stromů ve větru. Zdroj: projekt DYNATREE</figcaption>
+</figure>
+</div>
+
+<p>S mechanickým oscilátorem se setkáváme tam, kde je systém vychýlen z rovnovážné polohy a nějaká síla jej do této rovnovážné polohy vrací. Přičemž v některých situacích dojde (například vlivem setrvačnosti) k tomu, že systém se přehoupne přes rovnovážnou polohu na opačnou stranu a vrací se zpět. Klasickým případem je těleso o hmotnosti <span class="math inline">\(m\)</span> na pružině. Pokud sílu závisející na rychlosti <span class="math inline">\(v\)</span> a výchylce <span class="math inline">\(x\)</span> označíme <span class="math inline">\(F\)</span>, dostáváme <span class="math display">\[\begin{aligned}\frac {\mathrm dx}{\mathrm dt}&amp;=v, \\ \frac {\mathrm dv}{\mathrm dt}&amp;=\frac 1m F(v,x), \end{aligned}\]</span> přičemž první rovnice vyjadřuje, že rychlost je derivace polohy a druhá rovnice je Newtonův zákon síly. Pro pružinu tuhosti <span class="math inline">\(k\)</span> a odpor prostředí úměrný rychlosti dostáváme <span class="math display">\[\begin{aligned}\frac {\mathrm dx}{\mathrm dt}&amp;=v, \\ \frac {\mathrm dv}{\mathrm dt}&amp;=-\frac km x - bv,\end{aligned}\]</span> nebo ve vektorovém tvaru <span class="math display">\[\frac{\mathrm d}{\mathrm dt}\begin{pmatrix}x\\v \end{pmatrix}=\begin{pmatrix}0&amp;1\\-\frac km &amp; -b \end{pmatrix}\begin{pmatrix}x\\v \end{pmatrix}.\]</span> Charakteristická rovnice je <span class="math display">\[\begin{vmatrix}-\lambda&amp;1\\-\frac km &amp; -b-\lambda \end{vmatrix}=-\lambda (-b-\lambda)+\frac km = \lambda^2+b\lambda + \frac km=0.\]</span> Pro velké tlumení, tj. <span class="math inline">\(b^2&gt; \frac {4k}m\)</span> má rovnice dva záporné reálné kořeny <span class="math display">\[\lambda_{1,2}=\frac{- b \pm \sqrt{b^2-\frac{4k}{m}}}{2}\]</span> Systém se tedy bez oscilací překlopí do rovnovážného stavu. Při opačné nerovnosti jsou kořeny charakteristické rovnice <span class="math display">\[\lambda_{1,2}=-\frac{b}{2} \pm \frac 12 i \sqrt{-b^2+\frac{4k}{m}}\]</span> komplexní se zápornou reálnou částí a systém osciluje okolo rovnovážné polohy. Pro <span class="math inline">\(b&gt;0\)</span> mají tyto kořeny zápornou reálnou část a systém osciluje okolo rovnovážné polohy se zmenšující se amplitudou. Pro <span class="math inline">\(b=0\)</span> se amplituda nezmenšuje a oscilátor kmitá do nekonečna. Případ <span class="math inline">\(b&lt;0\)</span> neuvažujeme, protože odpor prostředí je síla působící proti pohybu.</p>
+<blockquote class="poznamka"><p class="poznamkaname">Poznámka (diferenciální rovnice druhého řádu).</p><p> Uvažovaný systém se v literatuře často vyskytuje ve tvaru, kdy je rychlost <span class="math inline">\(v\)</span> dosazena do druhé rovnice a poté dostáváme model ve tvaru <span class="math display">\[\frac{\mathrm d^2 x}{\mathrm dt^2}=-\frac km x - b \frac{\mathrm dx}{\mathrm dt}, \]</span> tj. ve tvaru rovnice obsahující první dvě derivace neznámé funkce. V podstatě celá klasická mechanika je založena právě na rovnicích tohoto typu.</p>
+</blockquote>
+
+</div>  <!-- container -->
+<div style="clear:both;"></div>
+
+
+
+  <div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4 ACTIVE' href='./'>Přednáška</a><a class='menu menu4' href='../cviceni/cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+  </div>
+	
+ <div class='menu-obalka'><a class='menu' href='../00'>0</a><a class='menu  ' href='../01'>1</a><a class='menu  ' href='../02'>2</a><a class='menu  ' href='../03'>3</a><a class='menu  ' href='../04'>4</a><a class='menu  ' href='../05'>5</a><a class='menu  ' href='../06'>6</a><a class='menu  ' href='../07'>7</a><a class='menu  ' href='../08'>8</a><a class='menu ACTIVE ' href='../09'>9</a><a class='menu  ' href='../10'>10</a><a class='menu  ' href='../11'>11</a> </div> 
+
+<div class="footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; width:81px; display:inline-block" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+
+<style>
+  .shorten {
+      border-left: solid;
+      border-left-color:gray;
+      padding-left:1em;
+      max-height:300px;
+      overflow:hidden;
+      margin-bottom:20px;
+      margin-top:20px;
+          -webkit-mask-image: linear-gradient(180deg, #000 20%, transparent);
+  }
+  .rozbalovatko {
+      color:gray;
+      margin-bottom:30px;
+      display:block;
+      background-color: gainsboro;
+  }
+  .rozbalovatko p {padding:10px; margin-top:0px;}
+  .rozbalovatkoPopisek {
+      color:orangered;
+      background-color:#444;
+      font-weight: bold;
+      display:block;
+      padding:5px;
+      margin-left: -20px;
+      padding-left: 20px;
+  }
+  .rozbalovatko p {
+      color:crimson;
+  }
+</style>
+
+<script>
+
+
+jQuery( document ).ready(function() {
+    jQuery(".shorten").each(function(){
+	popisek = jQuery(this).data("text");
+	if (!popisek) {popisek="";}
+	jQuery(this).prepend("<span class=\"rozbalovatko\"><span class=\"rozbalovatkoPopisek\">Volitelný text. Klikněte pro rozbalení.</span><p>"+popisek+"</p></span>").css("background-color","gainsboro");
+    });
+
+    jQuery(".rozbalovatko").each(function(){
+    	jQuery(this).parent().click(function() {
+            jQuery( this ).css("max-height","100%").css("-webkit-mask-image","none").css("background-color","inherit");
+	    jQuery( this ).children(".rozbalovatko").slideUp();
+	    jQuery( this ).unbind("click");
+	})
+    });
+});
+
+</script>
+
+
+</body>
+</html>

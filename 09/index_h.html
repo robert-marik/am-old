@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>  
+
+<!--
+<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+-->
+
+<link href="../facebox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="../facebox/facebox.js" type="text/javascript"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Robert Mařík" />
+  <title>Lineární operátory a lineární diferenciální rovnice</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="..//styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../my.css" />
+
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+          var TEX = MathJax.InputJax.TeX;
+          var PREFILTER = TEX.prefilterMath;
+          TEX.Augment({
+            prefilterMath: function (math,displaymode,script) {
+              math = "\\displaystyle{"+math+"}";
+              return PREFILTER.call(TEX,math,displaymode,script);
+            }
+          });
+        });
+        </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+  <script src="..//scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Lineární operátory a lineární diferenciální rovnice</h1>
+  <p class="author">
+Robert Mařík
+  </p>
+  <p class="date">2014–2020</p>
+
+<br>
+<small>
+<p style='text-align:left;'>
+Pokud se matematické výrazy nezobrazují korektně, nechejte znovunačíst stránku (Reload, Crtl+R, F5) nebo použijte <a href="index.html">html verzi</a> prezentace.
+</p>
+<p style='text-align:left;'>
+Ovládání: Prezentaci je možno posouvat šipkami nebo mezerníkem. Klávesa "S" zmenšuje písmo, "B" zvětšuje (smaller/bigger). Klávesa "C" zobrazí obsah (content). Klávesou "A" se přepíná režim prezentace/html stránka.
+Kliknutím na obrázek se obrázek zvětší na vertikální rozměr okna. Pro zavření zvětšeniny klikněte do zašedlého zbytku stránky  nebo použijte klávesu "ESC".
+</p>
+</small>
+<br><br>
+<small>
+<p style='text-align:left;'>
+  Slidy jsou doprovodným materiálem k předáškám. Některá tvrzení platí
+  pouze za předpokladů dostatečné spojitosti funkcí nebo jejich
+  derivací. V jednoduchých technických aplikacích bývají tyto
+  předpoklady splněny a proto je nezmiňujeme. Přesná formulace vět je
+  v učebním textu a v odborné literatuře.
+</p>  
+</small>
+
+</div>
+<div id="lineární-operátor" class="slide section level1">
+<h1>Lineární operátor</h1>
+<p><strong>Operátorem</strong> rozumíme zobrazení, které má na vstupu i na výstupu funkci. Například pro funkce jedné proměnné mohou být operátory derivace, druhá derivace, vynásobení funkce funkcí <span class="math inline">\(\ln x\)</span> anebo vnoření zadané funkce do funkce <span class="math inline">\(\ln x\)</span>. Tj. pro <span class="math inline">\(y=y(x)\)</span> můžeme uvažovat operátory <span class="math inline">\(F_1[y]=\frac{\mathrm dy}{\mathrm dx}\)</span>, <span class="math inline">\(F_2[y]=\frac{d^2y}{dx^2}\)</span>, <span class="math inline">\(F_3[y](x)=y(x)\ln(x)\)</span>, <span class="math inline">\(F_4[y](x)=\ln(y(x)).\)</span></p>
+<div class="obtekat">
+<div class="figure">
+<img src="rails.jpg" alt="" />
+<p class="caption">Lineární zobrazení zachovávají některé vlastnosti. V geometrii například rovnoběžnost, v matematické analýze zachovávají lineární zobrazení lineární kombinaci. Rovnice s lineárním operátorem jsou díky tomu velmi předvídatelné. Proto je (lineární operátory i rovnice) v matematice máme tak rádi. Zdroj: pixabay.com</p>
+</div>
+</div>
+<p><strong>Lineárním operátorem</strong> rozumíme zobrazení, které zachovává součet funkcí a násobek konstantou, tj. platí <span class="math display">\[L[y_1+y_2]=L[y_1]+L[y_2]\]</span> a <span class="math display">\[L[C y_1]=C L[y_1]\]</span> pro libovolné reálné číslo <span class="math inline">\(C\)</span> a libovolné funkce <span class="math inline">\(y_1\)</span> a <span class="math inline">\(y_2\)</span> z definičního oboru operátoru <span class="math inline">\(L\)</span>.</p>
+</div>
+<div id="příklady-lineárních-operátorů" class="slide section level1">
+<h1>Příklady lineárních operátorů</h1>
+<p>Linearitu se naučíme využívat k tomu, abychom úlohu najít řešení rovnice rozkouskovali na řešení jednodušších úloh. Například je možné zkombinovat úlohu na stacionární proudění podzemní vody a úlohu na radiální proudění ke studni. Každou z těchto úloh umíme redukovat na separovatelnou diferenciální rovnici a vyřešit. Zkombinováním těchto úloh je možné modelovat chování studny v rovinném toku. Používá se například k zachycení kontaminace spodní vody.</p>
+<div class="obtekat">
+<div class="figure">
+<img src="snizeni_toku_se_studnou_03_001.png" alt="" />
+<p class="caption">Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity.</p>
+</div>
+</div>
+<ul>
+<li>Operátor derivace, tj. operátor definovaný vztahem <span class="math inline">\(L[y]=\frac{\mathrm dy}{\mathrm dx}\)</span> je lineární. Toto plyne ze vzorců pro derivaci součtu a konstantního násobku.</li>
+<li>Buď dána funkce <span class="math inline">\(a(x)\)</span>. Operátor násobení funkcí <span class="math inline">\(a(x)\)</span>, tj. <span class="math inline">\(L[y](x)=a(x)y(x)\)</span> je lineární. To plyne z komutativity násobení a z distributivního zákona (roznásobování závorek).</li>
+<li>Složení (postupná aplikace) lineárních operátorů je lineární operátor. Například tedy <span class="math display">\[\frac{\mathrm d^2 y}{\mathrm dx^2}\]</span> je lineární operátor.</li>
+<li>Součet lineárních operátorů je lineární operátor.</li>
+<li>Buď pevně dána funkce <span class="math inline">\(a(x)\)</span>. Lineární operátor <span class="math display">\[L[y]=\frac{\mathrm dy}{\mathrm dx}+a(x)y\]</span> se nazývá <em>lineární diferenciální operátor prvního řádu</em>.</li>
+<li>Buďte pevně dány funkce <span class="math inline">\(p(x)\)</span> a <span class="math inline">\(q(x)\)</span>. Lineární operátor <span class="math display">\[L[y]=\frac{\mathrm d^2y}{\mathrm dx^2}+p(x)\frac{\mathrm dy}{\mathrm dx}+q(x)y\]</span> se nazývá <em>lineární diferenciální operátor druhého řádu</em>.</li>
+<li>Buď dána <span class="math inline">\(n\times n\)</span> matice reálných čísel <span class="math inline">\(A\)</span> a <span class="math inline">\(n\)</span>-vektorová funkce <span class="math inline">\(\vec F(x)\)</span>. Zobrazení, které funkci <span class="math inline">\(\vec F(x)\)</span> přiřadí součin <span class="math inline">\(A\vec F(x)\)</span> je lineární. To plyne z distributivnosti násobení vzhledem ke sčítání matic a z toho, že součin matice a reálného čísla komutuje.</li>
+<li>Operátor z levé strany difuzní rovnice <span class="math display">\[
+    {\frac{\partial u}{\partial t}-\nabla\cdot \bigl(D\nabla u\bigr)=\sigma, }\]</span> tj. operátor <span class="math display">\[L[u]=\frac{\partial u}{\partial t}-\nabla\cdot \bigl(D\nabla u\bigr)\]</span> je lineární. Po rozepsání divergence a gradientu pomocí parciálních derivací (které jsou lineární) jenom kombinujeme lineární operátory a tedy zachováváme linearitu.</li>
+<li>Rovnice podzemní vody pro proudění s napjatou hladinou <span class="math display">\[ {S_S\frac{\partial h}{\partial t} - \nabla\cdot \bigl(T\nabla h\bigr)=  \sigma }\]</span> je speciálním případem difuzní rovnice a operátor definovaný levou stranou je lineární. Rovnice podzemní vody pro proudění s volnou hladinou <span class="math display">\[ {S_S\frac{\partial h}{\partial t} - \nabla\cdot \bigl(kh\nabla h\bigr)=  \sigma }\]</span> definuje operátor <span class="math display">\[F[h]={S_S\frac{\partial h}{\partial t} - \nabla\cdot \bigl(kh\nabla h\bigr)}\]</span> a není lineární. Pokud však využijeme rovnost <span class="math display">\[h\frac{\partial h}{\partial x}=\frac 12 \frac{\partial h^2}{\partial x}\]</span> a analogickou rovnost i pro další parciální derivace, je ve stacionárním případě (derivace podle času je nulová) rovnici možno přepsat do tvaru <span class="math display">\[ - \frac 12 \nabla\cdot \bigl(k\nabla (h^2)\bigr)= \sigma \]</span> a levá strana definuje lineární operátor v proměnné <span class="math inline">\(h^2\)</span>.</li>
+</ul>
+</div>
+<div id="princip-superpozice" class="slide section level1">
+<h1>Princip superpozice</h1>
+<blockquote class="veta"><p class="vetaname">Věta (princip superpozice).</p><p> Každý lineární operátor zachovává lineární kombinaci funkcí, tj. platí <span class="math display">\[L[C_1 y_1+C_2 y_2]=C_1 L[y_1]+C_2 L[y_2]\]</span> vždy, když <span class="math inline">\(C_{1,2}\in\mathbb{R}\)</span> a <span class="math inline">\(y_{1,2}\)</span> jsou funkce z definičního oboru operátoru <span class="math inline">\(L\)</span>.</p>
+</blockquote>
+<p>Plyne přímo rozepsáním <span class="math display">\[
+\begin{aligned}L[C_1 y_1+C_2 y_2]&amp;=
+L[C_1 y_1]+L[C_2 y_2]\\
+&amp;=
+C_1 L[y_1]+C_2 L[y_2]
+\end{aligned}
+\]</span></p>
+</div>
+<div id="operátorové-rovnice-s-lineárním-operátorem" class="slide section level1">
+<h1>Operátorové rovnice s lineárním operátorem</h1>
+<p>Operátorovou rovnicí budeme rozumět rovnici <span class="math display">\[L[y]=b(x),\]</span> kde <span class="math inline">\(b(x)\)</span> je funkce a <span class="math inline">\(L\)</span> operátor. Například pro <span class="math inline">\(b(x)=0\)</span> a <span class="math inline">\(L[y]=y&#39;-y\)</span> má rovnice tvar <span class="math display">\[y&#39;-y=0,\]</span> tj. <span class="math display">\[y&#39;=y.\]</span></p>
+<p>Operátorovými rovnicemi (na množině konstantních vektorových funkcí) jsou i soustavy lineárních rovnic <span class="math display">\[AX=B.\]</span> Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice <span class="math display">\[\frac{\mathrm dX}{\mathrm dt}-AX= B\]</span> operátorová rovnice s lineárním operátorem. Tyto rovnice se v případě, kdy matice <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span> nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat v příští přednášce.</p>
+<p>Následující věta vlastně vyjadřuje totéž co princip superpozice z minulého slidu, pouze v jiných pojmech: v pojmech řešení rovnice s lineárním operátorem.</p>
+<blockquote class="veta"><p class="vetaname">Věta (princip superpozice při řešení rovnic).</p><p> Jsou-li funkce <span class="math inline">\(y_1(x)\)</span> a <span class="math inline">\(y_2(x)\)</span> po řadě řešeními rovnic <span class="math display">\[L[y]=b_1(x),\quad L[y]=b_2(x),\]</span> Je funkce <span class="math display">\[y(x)=C_1 y_1(x)+C_2 y_2(x)\]</span> řešením rovnice <span class="math display">\[L[y]=C_1 b_1(x)+C_2 b_2(x).\]</span></p>
+</blockquote>
+<p>Pro <span class="math inline">\(b_1(x)=b_2(x)=0\)</span> všechny tři výše uvedené rovnice splynou a lineární kombinace dvou řešení homogenní lineární rovnice je také řešením. Toto je možné pochopitelně rozšířit na libovolný konečný počet funkcí.</p>
+<p>Pro <span class="math inline">\(b_1(x)=0\)</span> a <span class="math inline">\(C_2=1\)</span> jsou obě nehomogenní rovnice stejné a pokud k řešení rovnie přičteme řešení asociované homogenní rovnice (se stejným operátorem na levé straně, ale nulou na pravé straně), dostaneme řešení stejné rovnice.</p>
+<p>Z těchto jednoduchých tvrzení plyne několik zásadních pozorování.</p>
+<ul>
+<li>Pokud máme k dispozici několik řešení homogenní rovnice, libovolná jejich lineární kombinace je také řešením.</li>
+<li>Za určitých okolností lineární kombinace z předchozího bodu umožní splnit libovolnou počáteční podmínku a vzhledem k jednoznačnosti řešení, která lineární rovnice zpravidla provází, je jistota, že žádné další řešení neexistuje. Nalezení těchto funkcí je tedy zásadní krok při řešení rovnice.</li>
+<li>U nehomogenní rovnice stačí najít jedno řešení. Obecné řešení (zahrnující všechna řešení) potom dostaneme tak, že k tomuto řešení přičteme obecné řešení homogenní rovnice, která má stejný lineární operátor, ale pravá strana je nahrazena nulou. Že dostaneme řešení stejné nehomogenní rovnice zajišťuje linearita, že žádné další řešení neexistuje zajišťuje jednoznačnost řešení.</li>
+</ul>
+</div>
+<div id="příklady-využití-linearity" class="slide section level1">
+<h1>Příklady využití linearity</h1>
+<p>Pro konkrétnost specifikujeme myšlenky z předchozího slidu na příkladech.</p>
+<ul>
+<li>V další části této přednášky se seznámíme se skalárními lineárními diferenciálními rovnicemi prvního řádu. Pro jednu funkci lineární kombinace degenerují na násobky. Proto je obecné řešení rovnice součtem jednoho řešení rovnice a obecného řešení asociované homogenní rovnice. Toto řešení asociované homogenní rovnice je násobkem jednoho nenulového řešení. Například funkce <span class="math inline">\(y=e^x\)</span> splňuje rovnici <span class="math display">\[y&#39;-y=0\]</span> a funkce <span class="math inline">\(y=-\pi\)</span> splňuje rovnici <span class="math display">\[y&#39;-y=\pi.\]</span> Všechna řešení této rovnice jsou tvaru <span class="math inline">\(y=Ce^x-\pi\)</span></li>
+<li>Pro skalární lineární diferenciální rovnice druhého řádu je situace obdobná, pouze pro řešení asociované homogenní diferenciální rovnice potřebujeme dvě lineárně nezávislé řešení (jedno není násobkem druhého).<br />
+Například <span class="math inline">\(y_1(x)=e^x\)</span> a <span class="math inline">\(y_2(x)=e^{-x}\)</span> nejsou jedna násobkem druhé a obě splňují rovnici <span class="math display">\[y&#39;&#39;-y=0.\]</span> Proto všechna řešení jsou tvaru <span class="math display">\[y(x)=C_1 e^x+C_2 e^{-x},\]</span> kde <span class="math inline">\(C_{1,2}\in\mathbb{R}.\)</span> Funkce <span class="math inline">\(y=-x\)</span> splňuje rovnici <span class="math display">\[y&#39;&#39;-y=x\]</span> a všechna řešení této rovnice jsou <span class="math display">\[y(x)=C_1 e^x+C_2 e^{-x}-x.\]</span></li>
+<li>Pro vektorové diferenciální rovnice prvního řádu <span class="math display">\[\frac{\mathrm dX}{\mathrm dt}-AX= B\]</span> je souvislost mezi homogenní a nehomogenní rovnicí obdobná jako v minulých případech. Pouze pro řešení homogenní rovnice (<span class="math inline">\(B=0\)</span>) potřebujeme tolik nezávislých řešení, kolik je dimenze vektoru. (Lineární závislost a nezávislost je definována stejně jako u algebraických vektorů.) Z nich lineárními kombinacemi dostaneme řešení libovolné počáteční podmínky a proto jsou v obecné lineární kombinaci zahrnuta všechna řešení. Pro nalezení obecného řešení nehomogenní úlohy stačí najít jedno řešení a všechna další řešení dostaneme sečtením s obecným řešením homogenní rovnice se stejnou levou stranou. Úloha už je složitější na provedení, ale můžeme pracovat kvalitativně. Pokud například máme tolik nezávislých řešení, kolik je dimenze úlohy, a všechna řešení konvergují k nule, potom i všechny jejich lineární kombinace konvergují k nule. Všechna řešení rovnice v takovém případě konvergují k nule. Řešení nehomogenní rovnice by byla součtem jednoho pevného řešení a řešení jdoucích k nule. Všechny by tady konvergovaly ke stejnému řešení nehomogenní úlohy. To odpovídá systému, který po čase přejde do rovnovážného stavu.</li>
+</ul>
+</div>
+<div id="lineární-diferenciální-rovnice-prvního-řádu" class="slide section level1">
+<h1>Lineární diferenciální rovnice prvního řádu</h1>
+<blockquote class="definice"><p class="definicename">Definice (Lineární diferenciální rovnice prvního řádu).</p><p> Nechť funkce <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> jsou spojité na intervalu <span class="math inline">\(I\)</span>. Rovnice <span class="math display">\[  y&#39;+a(x)y=b(x) \tag{LDE}\]</span> se nazývá <em>obyčejná lineární diferenciální rovnice prvního řádu</em> (zkráceně píšeme LDE). Je-li navíc <span class="math inline">\(b(x)\equiv 0\)</span> na <span class="math inline">\(I\)</span>, nazývá se rovnice <em>homogenní</em>, v opačném případě <em>nehomogenní</em>.</p>
+</blockquote>
+<blockquote class="veta"><p class="vetaname">Věta (o řešitelnosti LDE prvního řádu).</p><p> Jsou-li funkce <span class="math inline">\(a\)</span>, <span class="math inline">\(b\)</span> spojité na intervalu <span class="math inline">\(I\)</span>, <span class="math inline">\(x_0\in I\)</span> a <span class="math inline">\(y_0\in\mathbb{R}\)</span> libovolné, má každá počáteční úloha právě jedno řešení definované na celém intervalu <span class="math inline">\(I\)</span>.</p>
+</blockquote>
+<blockquote class="definice"><p class="definicename">Definice (asociovaná homogenní rovnice).</p><p> Buď dána lineární diferenciální rovnice. Homogenní rovnice, která vznikne z rovnice nahrazením pravé strany nulovou funkcí, tj. rovnice <span class="math display">\[    y&#39;+a(x)y=0\]</span> se nazývá <em>homogenní rovnice, asociovaná s nehomogenní rovnicí (LDE)</em></p>
+</blockquote>
+<p>Homogenní LDE má vždy (bez ohledu na konkrétní tvar funkce <span class="math inline">\(a(x)\)</span>) konstantní řešení <span class="math inline">\(y=0\)</span>, jak lze ověřit přímým dosazením. Toto řešení se nazývá <em>triviální řešení</em>.</p>
+</div>
+<!--
+
+# Operátorová symbolika a linearita operátoru
+
+Definujeme-li na množině všech funkcí
+diferencovatelných na intervalu $I$ operátor $L$ vztahem
+
+$$L[y](x)=y'(x)+a(x)y(x)$$
+
+pro každé $x\in I$, je možno LDE a s\ ní
+asociovanou homogenní rovnici zapsat v\ krátkém tvaru $L[y]=b(x)$ a
+$L[y]=0$.
+
+Operátor $L$ splňuje pro všechna
+reálná čísla $C_1$, $C_2$ a všechny diferencovatelné funkce $y_1(x)$,
+$y_2(x)$ vztah
+
+$$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2].$$
+
+Vskutku. Platí
+
+$$\begin{aligned}
+    L[C_1y_1+C_2y_2](x)&{}=\Bigl(C_1y_1(x)+C_2y_2(x)\Bigr)'+a(x)\Bigl(C_1y_1(x)+C_2y_2(x)\Bigr)\\
+    &{}=C_1y_1'(x)+C_2y_2'(x)+a(x)C_1y_1(x)+a(x)C_2y_2(x)\\
+    &{}=C_1\Bigl(y_1'(x)+a(x)y_1(x)\Bigr)+C_2\Bigl(y_2'(x)+a(x)y_2(x)\Bigr)\\ 
+    &{}=C_1L[y_1](x)+C_2L[y_2](x).
+  \end{aligned}$$
+
+# Operátorová symbolika a linearita operátoru (pokračování)
+
+Důsledkem vztahu $$L[C_1y_1+C_2y_2]=C_1L[y_1]+C_2L[y_2],$$
+tj. důsledkem skutečnosti že lineární operátor zachovává lineární
+kombinaci funkcí jsou vztahy $$L[Cy]=CL[y]$$ (pro $C_2=0$, $C_1=C$, $y_1=y$) a 
+$$L[y_1+y_2]=L[y_1]+L[y_2]$$ (pro $C_1=C_2=1$). 
+
+Tedy lineární operátor aplikovaný na
+součet je možno zapsat jako součet lineárních operátorů aplikovaných
+na jednotlivé sčítance a dále je možno z operátoru vytáhnout ven
+multiplikativní konstanty. To jsou obraty dobře známé při výpočtu
+derivací a je možné je použít i při dosazování do lineárního
+operátoru.
+
+# Násobek řešení homogenní LDE je řešením téže LDE
+
+<div class=sloupce>
+Buď $y_{p0}(x)$ řešením rovnice $$L[y]=0,$$ tj. nechť platí
+$L[y_{p0}]=0$. Buď $C\in\mathbb{R}$ libovolné reálné číslo.
+
+**Násobek řešení hom. LDE je také řešením.**
+
+Ukážeme, že $y_1=Cy_{p0}(x)$ je řešením téže rovnice, tj. že platí $L[y_1]=0$. Toto však platí, neboť
+$$L[y_1]=L[Cy_{p0}]=CL[y_{p0}]=C\cdot 0=0.$$
+
+Máme-li jedno řešení homogenní lineární diferenciální rovnice,
+vynásobením konstantou dostaneme další řešení téže rovnice. Ještě
+ukážeme, že pokud řešení které násobíme není triviální, dostaneme
+tímto způsobem dokonce všechna řešení.
+
+<div>
+**$C$-násobek nenulového řešení hom. LDE je obecným řešením.**
+
+Ukážeme, že je-li $y_{p0}(x)$ nenulovým řešením rovnice $L[y]=0$, je
+obecným řešením této rovnice $$y(x)=Cy_{p0}(x), \qquad C\in\mathbb{R}.$$ Vskutku, podle
+předchozího se jedná o řešení a stačí ukázat, že zde jsou zahrnuta
+všechna možná řešení. Stačí ukázat, že pro libovolnou počáteční
+podmínku $y(x_0)=y_0$, kde $x_0,y_0\in\mathbb{R}$ je možno
+partikulární řešení IVP dostat vhodnou volbou konstanty. Toto je však
+triviální, protože funkce $$y(x)=\frac{y_0}{y_{p0}(x_0)}y_{p0(x)}$$ má
+požadované vlastnosti.
+
+</div>
+</div>
+
+
+# Obecné řešení homogenní LDE
+
+Uvažujme homogenní LDE
+$$y'+a(x)y=0. \tag{HLDE}$$
+Přepsáním do 
+$$y'=-a(x)y$$
+a přímým dosazením vidíme, že 
+$$y_{p0}=e^{-\int a(x)\mathrm{d}x}$$
+je řešením této rovnice. Obecné řešení rovnice (HLDE) je potom 
+$$y=Ce^{-\int a(x)\mathrm{d}x}.$$
+
+
+
+-->
+</div>
+<div id="obecné-řešení-homogenní-lde" class="slide section level1">
+<h1>Obecné řešení homogenní LDE</h1>
+<p>Uvažujme homogenní LDE <span class="math display">\[y&#39;+a(x)y=0. \tag{HLDE}\]</span></p>
+<ul>
+<li>Přepsáním do <span class="math display">\[y&#39;=-a(x)y\]</span> vidíme, že jedno řešení je možno uhodnout. Je to řešení <span class="math display">\[y_{p0}=e^{-\int a(x)\mathrm{d}x}.\]</span></li>
+<li>Další řešení dostaneme z linearity. Funkce <span class="math display">\[y(x)=Cy_{p0}(x)\]</span> je řešením rovnice (HLDE) pro libovolné <span class="math inline">\(C\)</span>.</li>
+<li>Pro počáteční podmínku <span class="math inline">\(y(x_0)=y_0\)</span> stačí najít <span class="math inline">\(C\)</span> takové, aby platilo <span class="math display">\[y_0=C y_{p0}(x_0)\]</span> a tuto rovnici je možno vyřešit vzhledem k <span class="math inline">\(C\)</span> vždy, protože <span class="math inline">\(y_{p0}(x_0)\neq 0\)</span>.</li>
+</ul>
+<p><strong>Závěr:</strong> Obecné řešení rovnice (HLDE) je <span class="math display">\[y(x)=C e^{-\int a(x)\mathrm{d}x}.\]</span></p>
+</div>
+<div id="obecné-řešení-nehomogenní-lde-pomocí-partikulárního-řešení" class="slide section level1">
+<h1>Obecné řešení nehomogenní LDE pomocí partikulárního řešení</h1>
+<p>Je-li <span class="math inline">\(y_p\)</span> řešením nehomogenní LDE <span class="math display">\[y&#39;+a(x)y=b(x),\]</span> je obecným řešením této rovnice <span class="math display">\[y(x)=Cy_{p0}(x)+y_p(x),\]</span> kde <span class="math inline">\(Cy_{p0}(x)\)</span> je obecným řešením asociované homogenní LDE.</p>
+<p><strong>Závěr:</strong> Stačí mít jedno řešení nehomogenní rovnice a jedno nenulové řešení asociované homogenní rovnice. Protože množina všech řešení má pevnou strukturu, dokážeme z těchto informací napsat libovolné řešení.</p>
+<ul>
+<li>Vskutku, jestliže <span class="math inline">\(L[y_p]=b(x)\)</span> a <span class="math inline">\(L[y_{p0}(x)]=0\)</span>, potom <span class="math display">\[L[y]=L[Cy_{p0}+y_p]=CL[y_{p0}]+L[y_p]=C\cdot 0+b(x)=b(x).\]</span> Funkce <span class="math inline">\(y(x)\)</span> tedy je řešením.</li>
+<li>Pokud potřebujeme splnit libovolnou počáteční podmínku <span class="math inline">\(y(x_0)=y_0\)</span>, kde <span class="math inline">\(x_0,y_0\in\mathbb{R}\)</span>, stačí vzít řešení <span class="math display">\[y(x)=\frac{y_0-y_{p}(x_0)}{y_{p0}(x_0)}y_{p0}(x)+y_p(x),\]</span></li>
+</ul>
+</div>
+<div id="obecné-řešení-nehomogenní-lde-ještě-jednou-a-prakticky" class="slide section level1">
+<h1>Obecné řešení nehomogenní LDE ještě jednou a prakticky</h1>
+<p>Slovně:</p>
+<ul>
+<li><p>Všechna řešení homogenní lineární rovnice jsou násobky jednoho libovolného nenulového řešení této rovnice.</p></li>
+<li><p>Součet jednoho libovolného řešení zadané nehomogenní a obecného řešení asociované homogenní lineární rovnice je obecným řešením dané nehomogenní rovnice.</p></li>
+</ul>
+<p>Stačí tedy najít dvě (do jisté míry speciální) řešení a z nich snadno sestavíme obecné řešení zadané rovnice.</p>
+<p><strong>Příklad.</strong> Rovnice <span class="math display">\[y&#39;+y=3 \tag{*}\]</span> má partikulární řešení <span class="math inline">\(y=3\)</span> (vidíme hned po dosazení). Asociovaná homogenní rovnice <span class="math display">\[y&#39;+y=0\]</span> má obecné řešení <span class="math inline">\(y=Ce^{-x}\)</span>. Obecné řešení rovnice (*) tedy je <span class="math display">\[y=3+Ce^{-x}.\]</span></p>
+<!--
+
+# Nehomogenní LDE – metoda variace konstanty
+ 
+ <div class=sloupce>
+Než začneme hledat řešení
+nehomogenní rovnice, prozkoumejme, jak se lineární operátor $L$ chová
+vzhledem k\ součinu funkcí. Buďte $u=u(x)$ a $v=v(x)$ funkce. Platí
+$$\begin{aligned}
+  L[u\cdot v]&{}=\Bigl(uv\Bigr)'+auv\\
+  &{}=u'v+uv'+auv\\
+  &{}=v\Bigl(u'+au\Bigr)+uv'\\
+  &{}=vL[u]+uv'.\end{aligned}$$
+Tento výpočet ukazuje, že pokud $L[u]=0$, tj. pokud je funkce $u$
+řešením asociované homogenní diferenciální rovnice, je možno řešení
+nehomogenní rovnice $L[y]=b(x)$ hledat ve tvaru součinu $y(x)=u(x)v(x)$,
+kde funkce $v(x)$ splňuje vztah
+$$\begin{aligned}b(x)&=L[u\cdot v]\\&=vL[u]+uv'\\&=0+uv'\\&=uv'.\end{aligned}$$
+tj. $$v'(x)=\frac{b(x)}{u(x)}.$$ Odsud však funkci $v$ můžeme nalézt již
+pouhou integrací a součin $u(x)v(x)$ poté bude řešením nehomogenní
+rovnice. V\ praxi je také obvyklé, že si pamatujeme pouze hlavní myšlenku
+– *budeme hledat řešení nehomogenní rovnice ve tvaru součinu nějaké
+funkce a řešení asociované homogenní rovnice* – a provádíme všechny
+úvahy pro konkrétní funkce $a$, $b$ v\ běžném neoperátorovém označení.
+
+</div>
+
+# Nehomogenní LDE – metoda variace konstanty (pokračování)
+
+ <div class=sloupce> 
+Pokud v předchozím volíme $u=e^{-\int a(x)\mathrm{d}x}$, je $$v'=b(x)e^{\int a(x)\mathrm{d}x}$$ a odsud $$v=\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x.$$ Partikulární řešení je $$uv=e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$ a obecné řešení LDE
+$$y'+a(x)y=b(x)$$ je 
+$$y=Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x$$
+</div>
+
+
+-->
+</div>
+<div id="nehomogenní-lde-metoda-integračního-faktoru" class="slide section level1">
+<h1>Nehomogenní LDE – metoda integračního faktoru</h1>
+<p>Zůstává otázka, jak najít partikulární řešení nehomogenní rovnice.</p>
+<p>Protože platí <span class="math display">\[\left(y e^{\int a(x)\mathrm{d}x}\right)&#39;=y&#39;e^{\int a(x)\mathrm{d}x}+y a(x) e^{\int a(x)\mathrm{d}x},\]</span> je možno rovinci <span class="math display">\[y&#39;+a(x)y=b(x)\]</span> přepsat do tvaru <span class="math display">\[y&#39;e^{\int a(x)\mathrm{d}x}+a(x)ye^{\int a(x)\mathrm{d}x}=b(x)e^{\int a(x)\mathrm{d}x}\]</span> a odsud <span class="math display">\[\left (y e^{\int a(x)\mathrm{d}x}\right)&#39;=b(x)e^{\int a(x)\mathrm{d}x}.\]</span> Integrací dostáváme <span class="math display">\[y e^{\int a(x)\mathrm{d}x}=\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x+C\]</span> a explicitní tvar řešení je <span class="math display">\[y =Ce^{-\int a(x)\mathrm{d}x}+e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x\]</span></p>
+<p>Pozn: Partikulární řešení nehomogenní rovnice je <span class="math display">\[y_p(x)=e^{-\int a(x)\mathrm{d}x}\int b(x)e^{\int a(x)\mathrm{d}x}\mathrm{d}x.\]</span></p>
+</div>
+</body>
+
+
+<script>
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageHeight() {
+    var windowHeight
+    if (self.innerHeight) {	// all except Explorer
+      windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowHeight = document.body.clientHeight;
+    }
+    return windowHeight
+  }
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageWidth() {
+    var windowWidth
+    if (self.innerWidth) {	// all except Explorer
+      windowWidth = self.innerWidth;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowWidth = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowWidth = document.body.clientHeight;
+    }
+    return windowWidth
+  }
+
+jQuery('a[href^="http://"]').attr('target','_blank');
+jQuery('img[class!=nofacebox]').css("cursor","zoom-in");
+jQuery('img[class!=nofacebox]').click(function(){
+  jQuery.facebox("<img class='myimg' src='"+jQuery(this).prop('src')+"'>" );
+});
+   jQuery(document).ready(function() {
+     jQuery('a[rel*=facebox]').facebox()
+   })
+
+
+jQuery(document).bind('reveal.facebox', function() { 
+  obrazek=jQuery('#facebox .myimg');
+  width=jQuery(obrazek).width();
+  height=jQuery(obrazek).height();
+  ratio1=getPageHeight()/height*0.94;
+  ratio2=getPageWidth()/width*0.94;
+  ratio=Math.min(ratio1, ratio2);
+  jQuery(obrazek).css("width", width * ratio); // Set new width
+  jQuery(obrazek).css("height", height * ratio);  // S
+  jQuery(obrazek).css("min-width", width * ratio); // Set new width
+  jQuery(obrazek).css("min-height", height * ratio);  // S
+  jQuery(obrazek).css("max-width", width * ratio); // Set new width
+  jQuery(obrazek).css("max-height", height * ratio);  // S
+  jQuery('#facebox').css("left", "10px");
+  jQuery('#facebox').css('left', jQuery(window).width() / 2 - (jQuery('#facebox').width() / 2))
+  jQuery('#facebox').css("top", getPageScroll()[1]+10);
+})
+
+</script>
+
+</html>

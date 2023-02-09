@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+
+   function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+  
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+    
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css?ver=2021-01-27" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css?ver=2020-03-20" type="text/css" />
+
+  <style>
+    .Ycontainer, .reseni {display: none;}
+  </style>
+  
+
+  <script>
+window.MathJax = {
+  loader: {load: ['[tex]/physics']},
+  tex: {packages: {'[+]': ['physics']}}
+};
+</script>
+  
+
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+  
+  
+</head>
+<body>
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+  
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu ACTIVE' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>  
+
+
+<div class="container">
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<!--
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p> -->
+<div id="header">
+<h1 class="title">Křivkový integrál pomocí potenciálu, Greenova věta, rovnice kontinuity</h1>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#křivkový-integrál-pomocí-kmenové-funkce"><span class="toc-section-number">1</span> Křivkový integrál pomocí kmenové funkce</a></li>
+<li><a href="#křivkový-integrál-pomocí-kmenové-funkce-2"><span class="toc-section-number">2</span> Křivkový integrál pomocí kmenové funkce 2</a></li>
+<li><a href="#kmenová-funkce-pomocí-křivkového-integrálu"><span class="toc-section-number">3</span> Kmenová funkce pomocí křivkového integrálu</a></li>
+<li><a href="#greenova-věta"><span class="toc-section-number">4</span> Greenova věta</a></li>
+<li><a href="#rovnice-vedení-tepla-v-materiálech-různých-vlastností"><span class="toc-section-number">5</span> Rovnice vedení tepla v materiálech různých vlastností</a></li>
+<li><a href="#stacionární-vedení-tepla-v-žebru-chladiče"><span class="toc-section-number">6</span> Stacionární vedení tepla v žebru chladiče</a></li>
+</ul>
+</div>
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+</div>
+
+
+<blockquote class="anotace"><p class="anotacename">Anotace.</p><p></p>
+<ul>
+<li>V úvodních příkladech ilustrujeme výpočet křivkového integrálu pomocí kmenové funkce. Příkladů je několik, aby se zapsalo do paměti to nejdůležitější: že se křivkový integrál dá v některých případech vypočítat snadno pomocí kmenové funkce. Jak konkrétně postupovat je již dovednost navazující.</li>
+<li>Greenova věta pro nás bude mít spíše teoretický význam. Umožňuje přepis křivkového integrálu na dvojný. Vlastní použití není těžké a osaháme si jej i v domácích úlohách. I zde je důležité v první řadě vědět, že to jde a teprve potom přemýšlet nad tím, jak konkrétně se to dělá.</li>
+<li>V příkladě se vrátíme i k difuzní rovnici.</li>
+</ul>
+</blockquote>
+<h1 id="křivkový-integrál-pomocí-kmenové-funkce"><span class="header-section-number">1</span> Křivkový integrál pomocí kmenové funkce</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/-VCnGpRz3K0"></iframe> </div>
+<p>Určete, pro jakou hodnotu parametru <span class="math inline">\(\displaystyle a\in \mathbb R\)</span> křivkový integrál vektorového pole <span class="math display">\[\vec F=ax^2y\vec\imath + (x^3+1)\vec\jmath\]</span> po křivce <span class="math inline">\(\displaystyle C\)</span>, tj. <span class="math display">\[\int_C ax^2y\,\mathrm dx+(x^3+1)\,\mathrm dy\]</span> nezávisí na integrační cestě v <span class="math inline">\(\displaystyle \mathbb R^2\)</span>. Najděte kmenovou funkci příslušného vektorového pole a vypočtěte křivkový integrál po křivce z bodu <span class="math inline">\(\displaystyle [0,0]\)</span> do bodu <span class="math inline">\(\displaystyle [1,2]\)</span>.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Podmínka pro nezávislost na integrační cestě je <span class="math display">\[
+\begin{aligned}
+0&amp;=\nabla \times  \vec F
+=\begin{vmatrix}
+  \vec i &amp; \vec j&amp; \vec k \\
+  \frac{\partial}{\partial x} &amp;  \frac{\partial}{\partial y} &amp;  \frac{\partial}{\partial z}\\
+  ax^2y &amp;  x^3+1 &amp;  0
+\end{vmatrix}
+\\&amp;=\vec k \left(  \frac{\partial}{\partial x} (x^3+1) - \frac{\partial }{\partial y} (ax^2y)\right)
+  =\vec k(3x^2-ax^2y)=\vec k x^2(3-a)
+\end{aligned}
+  \]</span> a odsud <span class="math inline">\(\displaystyle a=3\)</span>. Totéž dokážeme určit pomocí věty, kterou jsme se ukázali již v souvislosti s pojmem gradient, ze které vyplývá podmínka na existenci kmenové funkce ve tvaru <span class="math display">\[
+\begin{aligned}
+  \pdv{y}(ax^2y)&amp;=\pdv{x}(x^3+1)\\
+  ax^2&amp;=3x^2\\
+  a&amp;=3
+\end{aligned}
+\]</span> Kmenová funkce <span class="math inline">\(\displaystyle \varphi(x,y)\)</span> vektorového pole <span class="math inline">\(\displaystyle \vec F=(3x^2y,x^3+1)\)</span> splňuje <span class="math display">\[
+\begin{aligned}
+  \pdv{\varphi}{x}&amp;=3x^2y \\  \pdv{\varphi}{y}&amp;=x^3+1.
+\end{aligned}
+\]</span> Integrací dostáváme <span class="math display">\[
+\begin{aligned}
+  \varphi &amp;= \int 3x^2y\,\mathrm dx=x^3y+C_1(y)\\
+  \varphi &amp;= \int x^3+1\,\mathrm dy=x^3y+y+C_2(x)
+\end{aligned}
+\]</span> Porovnáním dostáváme kmenovou funkci <span class="math display">\[\varphi (x,y)=x^3y+y+C,\]</span> kde <span class="math inline">\(\displaystyle C\)</span> je integrační konstanta. Integrál po křivce (tvar není důležitý, vzhledem k nezávislosti na integrační cestě stačí počáteční a koncový bod) je <span class="math display">\[\int _C \vec F\mathrm d\vec r=\varphi(1,2)-\varphi(0,0)=2+2-0=4.\]</span></p>
+</div>
+<h1 id="křivkový-integrál-pomocí-kmenové-funkce-2"><span class="header-section-number">2</span> Křivkový integrál pomocí kmenové funkce 2</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/WtLoQ79wUdo"></iframe> </div>
+<p>Pro jakou hodnotu parametru <span class="math inline">\(\displaystyle m\)</span> je křivkový integrál <span class="math display">\[\int (6x^2y+x+y)\,\mathrm dx+(mx^3+x)\,\mathrm dy\]</span> nezávislý na integrační cestě v <span class="math inline">\(\displaystyle \mathbb R^2\)</span>? Vypočtěte hodnotu tohoto integrálu po křivce z bodu <span class="math inline">\(\displaystyle (2,1)\)</span> do bodu <span class="math inline">\(\displaystyle (1,3)\)</span>.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Podmínka pro nezávislost na integrační cestě je <span class="math display">\[\pdv{y}\qty(6x^2y+x+y)=\pdv{x}\qty(mx^3+x).\]</span> Po výpočtu derivací dostáváme <span class="math display">\[6x^2+1=3mx^2+1\]</span> a odsud <span class="math inline">\(\displaystyle m=2\)</span>.</p>
+<p>Hledáme funkci, jejímž gradientem je vektorové pole <span class="math inline">\(\displaystyle \vec F=(6x^2y+x+y,2x^3+x)\)</span>. Integrací podle <span class="math inline">\(\displaystyle x\)</span> a podle <span class="math inline">\(\displaystyle y\)</span> dostáváme <span class="math display">\[\int (6x^2y+x+y)\,\mathrm dx= 2x^3y+\frac 12 x^2+xy+C_1(y) \]</span> a <span class="math display">\[\int (2x^3+x)\,\mathrm dy=2x^3y+xy+C_2(x).\]</span> Porovnáním získáme kmenovou funkci <span class="math display">\[\varphi(x,y)=2x^3y+\frac 12 x^2+xy+C,
+\quad C
+\in
+\mathbb R.\]</span></p>
+<p>Integrál po křivce z bodu <span class="math inline">\(\displaystyle (2,1)\)</span> do bodu <span class="math inline">\(\displaystyle (1,3)\)</span> má hodnotu <span class="math display">\[\varphi(1,3)-\varphi(2,1)=6+\frac 12 +3-\qty(16+2+2)=-\frac{21}2.\]</span></p>
+</div>
+<h1 id="kmenová-funkce-pomocí-křivkového-integrálu"><span class="header-section-number">3</span> Kmenová funkce pomocí křivkového integrálu</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/y-gTOlGVRXI"></iframe> </div>
+<p>Ukažte, že vektorové pole <span class="math inline">\(\displaystyle \vec F=(6x^2y+x+y,2x^3+x)\)</span> má kmenovou funkci. Vypočtěte z definice křivkový integrál v tomto vektorovém poli po křivce <span class="math inline">\(\displaystyle \vec r(t)=(at,bt)\)</span>, <span class="math inline">\(\displaystyle t\in[0,1]\)</span>, tj. po úsečce z počátku do bodu <span class="math inline">\(\displaystyle (a,b)\)</span> a ukažte, že tímto způsobem obdržíme kmenovou funkci.</p>
+<p>Toto je metoda, jak určit skalární potenciál z numerických dat. Pokud je vektorové pole dáno numericky, je hledání skalárního potenciálu integrováním těžce realizovatelné. Ale derivováním a výpočtem rotace je jednoduché zkontrolovat podmínku existence skalárního potenciálu a poté se dá hodnota skalárního potenciálu v libovolném bodě počítat pomocí křivkového integrálu vedoucího z počátku do daného bodu.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Platí <span class="math display">\[\pdv{y}\qty(6x^2y+x+y)=6x^2+1=\pdv{x}\qty(2x^3+x)\]</span> a proto kmenová funkce existuje.</p>
+<p>Derivací křivky dostáváme rovnici tečného vektoru <span class="math display">\[\frac{\mathrm d\vec r}{\mathrm dt}=(a,b)\]</span> a dosazením křivky do vektorového pole <span class="math display">\[\vec F(\vec r(t))=(6a^2t^2bt+at+bt,2a^3t^3+at)=(6a^2bt^3+at+bt,2a^3t^3+at).\]</span> Skalární součin je daný vztahem <span class="math display">\[\vec F\frac{\mathrm d\vec r}{\mathrm dt}=a(6a^2bt^3+at+bt)+b(2a^3t^3+at)
+=8a^3b t^3+a^2t+2abt.
+\]</span> Křivkový integrál je tedy roven <span class="math display">\[\int_C \vec F\,\mathrm d\vec r=
+\int_0^1 8a^3b t^3+a^2t+2abt\,\mathrm dt=
+\qty[2a^3bt^4+\frac 12 a^2 t^2+abt^2]_0^1=2a^3b+\frac 12 a^2+ab.
+\]</span> Podle věty o nezávislosti křivkového integrálu na integrační cestě máme <span class="math display">\[\varphi(a,b)-\varphi(0,0)=2a^3b+\frac 12 a^2+ab\]</span> a odsud <span class="math display">\[\varphi(a,b)=2a^3b+\frac 12 a^2+ab+\varphi(0,0),\]</span> neboli (po přejmenování proměnných a zavedení konstanty <span class="math inline">\(\displaystyle C\)</span> místo <span class="math inline">\(\displaystyle \varphi(0,0)\)</span>) <span class="math display">\[\varphi(x,y)=2x^3y+\frac 12 x^2+xy+C.\]</span></p>
+</div>
+<h1 id="greenova-věta"><span class="header-section-number">4</span> Greenova věta</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/J6BVkOzg0mg"></iframe> </div>
+<p>Určete integrál <span class="math display">\[\oint_C \vec F\,\mathrm d\vec r\]</span> po křivce, která je kladně orientovanou hranicí jednotkového čtverce s vrcholy v bodech <span class="math inline">\(\displaystyle (0,0)\)</span>, <span class="math inline">\(\displaystyle (1,0)\)</span>, <span class="math inline">\(\displaystyle (0,1)\)</span>, <span class="math inline">\(\displaystyle (1,1)\)</span> pro vektorovou funkci <span class="math display">\[\vec F=x^7\vec i+xy\vec j.\]</span></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \oint_C \vec F\,\mathrm d\vec r
+  &amp;=
+  \oint_C x^7\,\mathrm dx+ xy\,\mathrm dy\\&amp;
+  =\int_0^1 \int_0^1 \frac{\partial}{\partial x}(xy)-\frac{\partial}{\partial y}(x^7) \,\mathrm dy\mathrm dx\\
+  &amp;=\int_0^1 \int_0^1 y \,\mathrm dy\mathrm dx\\&amp;
+  =\int_0^1 y \,\mathrm dy \times \int_0^1 \,\mathrm dx \\&amp;= \left[\frac 12 y^2\right]_0^1 \times 1\\&amp;= \frac 12
+\end{aligned}
+\]</span></p>
+</div>
+<h1 id="rovnice-vedení-tepla-v-materiálech-různých-vlastností"><span class="header-section-number">5</span> Rovnice vedení tepla v materiálech různých vlastností</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/CKZNkuyDd5Y"></iframe> </div>
+<p>Rovnice vedení tepla v ortotropním materiálu umístěném do souřadné soustavy tak, aby vlastní směry tenzoru tepelné vodivosti (jako např. anatomické směry dřeva) byly ve směru souřadnicových os má nejobecnější možné vyjádření <span class="math display">\[c\rho\pdv{T}{t}=\pdv{x}\qty(\lambda_x\pdv{T}{x} )+\pdv{y}\qty(\lambda_y\pdv{T}{y}) . \]</span> Za jakých okolností je možno veličiny <span class="math inline">\(\displaystyle \lambda_x\)</span> a <span class="math inline">\(\displaystyle \lambda_y\)</span> napsat před vnější derivaci tak, aby v rovnici vznikly druhé derivace?</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>V případě, že tyto veličiny nezávisí na poloze. Materiál tedy musí být homogenní. Závislost na poloze nesmí být ani zprostředkovaná přes teplotu. Tyto veličiny tedy nesmí být ani funkcemi teploty. Jinými slovy, konstanta úměrnosti ve Fourierově zákoně se nesmí měnit s teplotou, vztah z Fourierova zákona musí být přesně lineární a takové materiály se nazývají materiály s lineární materiálovou odezvou (zkráceně lineární materiály). Veličiny <span class="math inline">\(\displaystyle \lambda_x\)</span> a <span class="math inline">\(\displaystyle \lambda_y\)</span> se dají napsat před vnější derivace pouze pokud je materiál homogenní a lineární.</p>
+</div>
+<h1 id="stacionární-vedení-tepla-v-žebru-chladiče"><span class="header-section-number">6</span> Stacionární vedení tepla v žebru chladiče</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/zvs3TsvBrho"></iframe> </div>
+<figure>
+<img src="chladic.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+</figure>
+<p>Někdy jsme nuceni do rovnice vedení tepla zahrnout i zdroje. Modelujte vedení tepla jednom v žebru chladiče.</p>
+<p>Úlohu uvažujte jako jednorozměrnou, materiál homogenní izotropní s konstantní tepelnou vodivostí. Kolem chladiče proudí vzduch o teplotě <span class="math inline">\(\displaystyle T_0\)</span> a tím se chladič ochlazuje. V místě, kde je teplota chladiče vysoká je proces odevzdávání tepla do okolí intenzivnější. Obvykle se předpokládá, že v každém místě chladič ztrácí teplo rychlostí úměrnou rozdílu teploty v daném místě a teploty okolního vzduchu. (Koeficient úměrnosti je dán koeficientem přestupu tepla a šířkou žebra). Uvažujte stacionární děj.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[0=-h(T-T_0)+\frac{\mathrm d}{\mathrm dx}\left(\lambda \frac{\mathrm dT}{\mathrm dx}\right)\]</span></p>
+<p>Protože máme konstantní tepelnou vodivost (a homogenita je v kovech splněna přirozeně), je možné místo kvaziderivace použít druhou derivaci.</p>
+<p><span class="math display">\[0=-h(T-T_0)+\lambda \frac{\mathrm d^2T}{\mathrm dx^2}\]</span></p>
+<p>Ke stejnému závěru je možné dojít i přesnou analýzou ve 3D, viz Cengel, Heat transfer, kapitola 3–6 Heat transfer from finned surfaces.</p>
+<p>Máme rovnici, kde neznámou je funkce a v rovnici figuruje druhá derivace této funkce. Takové rovnice se naučíme řešit na konci semestru. To nám odpoví na otázku, zda teplota bude podél chladiče klesat lineárně, nebo exponenciálně či nějak jinak.</p>
+</div>
+
+
+</div>  <!-- container -->
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu ACTIVE' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>
+
+<div class="footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; width:81px; display:inline-block" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+
+  <script type="text/javascript">
+
+//jQuery(document).ready(function(){
+    //var current_path = window.location.pathname.split('/').pop();
+	//var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/am/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+//});
+  </script>
+  
+</body>
+</html>

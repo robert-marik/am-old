@@ -1,0 +1,183 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Diferenciální rovnice druhého řádu</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+
+   function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+  
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+    
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css?ver=2021-01-27" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css?ver=2020-03-20" type="text/css" />
+
+  <style>
+    .Ycontainer, .reseni {display: none;}
+  </style>
+  
+
+  <script>
+window.MathJax = {
+  loader: {load: ['[tex]/physics']},
+  tex: {packages: {'[+]': ['physics']}}
+};
+</script>
+  
+
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+  
+  
+</head>
+<body>
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+  
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu ACTIVE' href='cviceni11.md.html'>11</a></div>  
+
+
+<div class="container">
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<!--
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p> -->
+<div id="header">
+<h1 class="title">Diferenciální rovnice druhého řádu</h1>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#okrajová-úloha"><span class="toc-section-number">1</span> Okrajová úloha</a></li>
+<li><a href="#okrajová-úloha-pro-rovnici-žebra-chladiče"><span class="toc-section-number">2</span> Okrajová úloha pro rovnici žebra chladiče</a></li>
+<li><a href="#separce-proměnných-ve-vlnové-rovnici-kmity-struny"><span class="toc-section-number">3</span> Separce proměnných ve vlnové rovnici, kmity struny</a></li>
+</ul>
+</div>
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+</div>
+
+
+<!--
+
+https://youtu.be/a308Zs_6bq0
+
+-->
+<h1 id="okrajová-úloha"><span class="header-section-number">1</span> Okrajová úloha</h1>
+<p>Ukažte, že úloha <span class="math display">\[y&#39;&#39;-my=0, \quad y(0)=0=y(1), \ m&gt;0\]</span> má pouze nulové řešení.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Charakteristcká rovnice je <span class="math display">\[\lambda^2-m=0\]</span> s reálnými kořeny <span class="math inline">\(\displaystyle \lambda_{1,2}=-\sqrt m\)</span>. Obecným řešením je funkce <span class="math display">\[y(t)=C_1 e^{\sqrt m t} + C_2 e^{-\sqrt m t}\]</span> a dosazením získáváme <span class="math display">\[y(0)=C_1  + C_2 =0\]</span> a <span class="math display">\[y(1)=C_1 e^{\sqrt m} + C_2 e^{-\sqrt m}=0.\]</span> Z první rovnice dostáváme <span class="math inline">\(\displaystyle C_2=-C_1\)</span> a druhá rovnice má tvar <span class="math display">\[C_1 e^{\sqrt m} - C_1 e^{-\sqrt m}=0.\]</span> Odsud <span class="math display">\[C_1 (e^{\sqrt m} - e^{-\sqrt m})=0 \]</span> a <span class="math inline">\(\displaystyle C_1=0\)</span>. Poto však <span class="math inline">\(\displaystyle C_2=-C_1=0\)</span> a řešení se redukuje na <span class="math display">\[y(t)=0 e^{\sqrt m t} + 0 e^{-\sqrt m t}=0\]</span> tj. na konstantní nulovou funkci.</p>
+</div>
+<h1 id="okrajová-úloha-pro-rovnici-žebra-chladiče"><span class="header-section-number">2</span> Okrajová úloha pro rovnici žebra chladiče</h1>
+<p><em>V určitých speciálních případech má smysl formulovat i jiné typy okrajových podmínek, než podmínky na funkční hodnotu (Dirichletova) nebo derivaci (Neumannova) případně na jejich kombinace. Například může být přirozené požadovat ohraničenost.</em></p>
+<p>Ve cvičení věnovaném difuzní rovnici jsme se zabývali problematikou žebra chladiče z materiálu s koeficientem tepelné vodivosti <span class="math inline">\(\displaystyle \lambda\)</span> v prostředí o teplotě <span class="math inline">\(\displaystyle T_0\)</span>. Naformulovali jsme rovnici pro stacionární rozložení teploty ve tvaru <span class="math display">\[\lambda \frac{\mathrm d^2T}{\mathrm dx^2} -h (T-T_0) =0,  \]</span> kde <span class="math inline">\(\displaystyle h\)</span> je koeficient úměrnosti, popisující přestup tepla z chladiče do vnějšího prostředí.</p>
+<ul>
+<li>Uvažujte dlouhý chladič a ukažte, že teplota klesá exponenciálně s polohou k teplotě okolí.</li>
+<li>Ze zkušenosti očekáváme, že pro materiál, který lépe vede teplo, bude konec chladiče více horký. Teplota jako funkce polohy bude klesat pomaleji. Je to splněno pro případ z předchozího bodu? Vysvětlete, odkud to vidíme, nebo zdůvodněte, v jaké situaci tomu tak být nemusí.</li>
+<li>Ze zkušenosti očekáváme, že pokud bude teplo intenzivněji vyzařováno do okolí, bude teplota na konci nižší. Při pomalejším vyzařování (například světlá barva chladiče a izolující nános prachu) bude teplota na konci vyšší. Je to splněno pro případ z předchozího bodu? Vysvětlete, odkud to vidíme, nebo zdůvodněte, v jaké situaci tomu tak být nemusí.</li>
+</ul>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Jedná se o nehomogenní rovnici <span class="math display">\[\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = -\frac {h}{\lambda} T_0.\]</span> Tato rovnice má evidentně konstantní řešení, protože pokud je teplota ochlazované součástky stejná jako teplota okolí, bude teplota žebra chladiče v každém bodě rovna hodnotě <span class="math inline">\(\displaystyle T_0\)</span>. Tuto skutečnost můžeme ověřit i dosazením.</p>
+<p>Asociovaná homogenní rovnice má tvar <span class="math display">\[\frac{\mathrm d^2T}{\mathrm dx^2} - \frac {h}{\lambda} T = 0.\]</span> Charakteristický polynom (v proměnné <span class="math inline">\(\displaystyle z\)</span>) <span class="math display">\[z^2 - \frac {h}{\lambda}  = 0\]</span> má kořeny <span class="math display">\[z_{1,2}=\pm\sqrt{\frac{h}\lambda}\]</span> a obecné řešení rovnice je <span class="math display">\[ T (x) = T_0 + C_1 e^{\sqrt{\frac{h}\lambda} x} + C_2 e^{-\sqrt{\frac{h}\lambda} x}.\]</span></p>
+<ul>
+<li>Pro dlouhý chladič musí být teplota ohraničená, proto platí <span class="math inline">\(\displaystyle C_1=0.\)</span></li>
+<li>Teplota chladiče je větší než teplota okolí. Proto dále platí <span class="math inline">\(\displaystyle C_2&gt;0\)</span>.</li>
+</ul>
+<p>Stacionární teplota jako funkce polohy je tedy dána vztahem <span class="math display">\[ T (x) = T_0 + C e^{-\sqrt{\frac{h}\lambda} x},\]</span> kde <span class="math inline">\(\displaystyle C\)</span> je kladná konstanta. Teplota podél žebra klesá exponenciálně s polohou k hodnotě <span class="math inline">\(\displaystyle T_0\)</span>.</p>
+<p>Pokles je exponenciální funkce <span class="math inline">\(\displaystyle e^{-z x}\)</span> je rychlejší, pokud je numericky větší hodnota <span class="math inline">\(\displaystyle z\)</span>.</p>
+<p>Pokud materiál lépe vede teplo, je hodnota <span class="math inline">\(\displaystyle \lambda\)</span> větší. Protože je tato hodnota ve jmenovateli zlomku, je hodnota <span class="math display">\[ \sqrt{\frac h\lambda} \]</span> menší. To znamená, že exponenciální faktor se mění pomaleji a funkce klesá pomaleji. Pro hodně dobrý vodič tepla je teplota podél žebra prakticky konstantní.</p>
+<p>Pokud je teplo intenzivněji vyzařováno do okolí, je vyšší hodnota <span class="math inline">\(\displaystyle h\)</span>. Proto je i vyšší hodnota <span class="math display">\[ \sqrt{\frac h\lambda}.\]</span> To znamená, že koeficient v exponentu je zápornější a exponenciální část klesá rychleji k nule.</p>
+<p>Pro zadané pevné <span class="math inline">\(\displaystyle x\)</span> a kladné <span class="math inline">\(\displaystyle C\)</span> je funkce <span class="math display">\[T=T_0+C e^{-\sqrt{\frac h\lambda}x}\]</span> rostoucí funkcí proměnné <span class="math inline">\(\displaystyle \lambda\)</span> a klesající funkcí proměnné <span class="math inline">\(\displaystyle h\)</span>. Řešení úlohy se tedy chová v souladu s očekáváním.</p>
+</div>
+<h1 id="separce-proměnných-ve-vlnové-rovnici-kmity-struny"><span class="header-section-number">3</span> Separce proměnných ve vlnové rovnici, kmity struny</h1>
+<p>Rovnice kmitů struny je (po eliminaci konstant) <span class="math display">\[\frac{\partial^2 u}{\partial t^2}=\frac{\partial^2 u}{\partial x^2}\]</span> s nulovými okrajovými podmínkami na koncích. Je-li délka struny <span class="math inline">\(\displaystyle l\)</span>, platí pro výchylku <span class="math inline">\(\displaystyle u(x,t)\)</span> podmínky <span class="math inline">\(\displaystyle u(0,t)=u(l,t)\)</span> v libovolném čase <span class="math inline">\(\displaystyle t\)</span>.</p>
+<p>Budeme řešení hledat ve tvaru <span class="math inline">\(\displaystyle u(x,t)=\varphi(x)\psi(t)\)</span>, kde <span class="math inline">\(\displaystyle \varphi\)</span> a <span class="math inline">\(\displaystyle \psi\)</span> jsou funkcemi jedné proměnné. Platí <span class="math display">\[\frac{\partial^2 u}{\partial t^2}=\varphi(x)\psi&#39;&#39;(t), \quad \frac{\partial^2 u}{\partial x^2}=\varphi&#39;&#39;(x) \psi(t)\]</span> a rovnice má tvar <span class="math display">\[\varphi(x)\psi&#39;&#39;(t)=\varphi&#39;&#39;(x)\psi (t).\]</span> Vydělením této rovnice součinem <span class="math inline">\(\displaystyle \varphi(x)\psi(t)\)</span> dostáváme <span class="math display">\[\frac {\psi&#39;&#39;(t)}{\psi(t)}=\frac{\varphi&#39;&#39;(x)}{\varphi (x)}.\]</span> Toto je rovnice, kde levá strana je funkcí proměnné <span class="math inline">\(\displaystyle t\)</span> a pravá strana funkcí proměnné <span class="math inline">\(\displaystyle x\)</span>. Obě proměnné jsou však nezávislé a uvedená rovnost může být splněna jen tehdy, když se rovnají společné konstantě. Označme tuto konstantu <span class="math inline">\(\displaystyle -\lambda^2\)</span>. Platí tedy <span class="math display">\[\frac {\psi&#39;&#39;(t)}{\psi(t)}=-\lambda ^2,\quad \frac{\varphi&#39;&#39;(x)}{\varphi (x)}=-\lambda ^2.\]</span></p>
+<ul>
+<li>První rovnice představuje lineární diferenciální rovnici druhého řádu <span class="math display">\[\psi&#39;&#39;+\lambda^2\psi=0.\]</span> Její charakteristická rovnice <span class="math display">\[z^2 +\lambda^2=0\]</span> má řešení <span class="math display">\[z_{1,2}=\pm i\lambda\]</span> a proto platí <span class="math display">\[\psi(t)=C_1\cos(\lambda t) + C_2\sin(\lambda t).\]</span> Konstanta <span class="math inline">\(\displaystyle C_1\)</span> souvisí s počáteční výchylkou, konstanta <span class="math inline">\(\displaystyle C_2\)</span> s počáteční rychlostí a konstanta <span class="math inline">\(\displaystyle \lambda\)</span> s frekvencí kmitů.</li>
+<li>Druhá rovnice představuje lineární diferenciální rovnici druhého řádu <span class="math display">\[\varphi&#39;&#39;+\lambda^2\varphi=0\]</span> a okrajové podmínky si vynucují platnost vztahů <span class="math inline">\(\displaystyle \varphi(0)=\varphi(l)=0\)</span>. Máme tedy Dirichletovu úlohu na vlastní čísla a vlastní funkce, jak jsme ji použili <a href="http://user.mendelu.cz/marik/am/slidy/11/">v přednášce</a>. Řešením je funkce <span class="math inline">\(\displaystyle \varphi(x)=\sin\left (k\frac{\pi}l x\right)\)</span>, kde <span class="math inline">\(\displaystyle k\in\mathbb N\)</span>.</li>
+<li>Spojením obdržených výsledků dostáváme rovnici popisující kmity na <span class="math inline">\(\displaystyle k\)</span>-t0 vlastní frekvenci ve tvaru <span class="math display">\[u_k(x,t)=\psi(t)\varphi(x)=\left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).\]</span></li>
+<li>Spojením kmitů na všech frekvencích dostaneme řešení rovnice ve tvaru <span class="math display">\[u(x,t) = \sum_{k=1}^\infty \left[C_1\cos\left(k\frac{\pi}l t\right) + C_2\sin\left(k\frac{\pi}l t\right)\right]\sin\left (k\frac{\pi}l x\right).\]</span> Tento vzorec je dostatečně flexibilní, abychom dokázali splnit libovolné počáteční podmínky a proto v sobě obsahuje všechna řešení. Praktická využitelnost vzorce v reálných případech je diskutabilní, proto často používáme numerické simulace využívající numerické řešení zadané rovnice za daných počátečních a okrajových podmínek.</li>
+</ul>
+
+
+</div>  <!-- container -->
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu ACTIVE' href='cviceni11.md.html'>11</a></div>
+
+<div class="footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; width:81px; display:inline-block" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+
+  <script type="text/javascript">
+
+//jQuery(document).ready(function(){
+    //var current_path = window.location.pathname.split('/').pop();
+	//var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/am/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+//});
+  </script>
+  
+</body>
+</html>

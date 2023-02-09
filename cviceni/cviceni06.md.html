@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Dvojné integrály</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+
+   function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+  
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+    
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css?ver=2021-01-27" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css?ver=2020-03-20" type="text/css" />
+
+  <style>
+    .Ycontainer, .reseni {display: none;}
+  </style>
+  
+
+  <script>
+window.MathJax = {
+  loader: {load: ['[tex]/physics']},
+  tex: {packages: {'[+]': ['physics']}}
+};
+</script>
+  
+
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+  
+  
+</head>
+<body>
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+  
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu ACTIVE' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>  
+
+
+<div class="container">
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<!--
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p> -->
+<div id="header">
+<h1 class="title">Dvojné integrály</h1>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#integrál-přes-obdélník"><span class="toc-section-number">1</span> Integrál přes obdélník</a></li>
+<li><a href="#kvadratický-moment-pro-obdélník"><span class="toc-section-number">2</span> Kvadratický moment pro obdélník</a></li>
+<li><a href="#integrál-závislý-na-parametru"><span class="toc-section-number">3</span> Integrál závislý na parametru</a></li>
+<li><a href="#integrál-přes-trojúhelník"><span class="toc-section-number">4</span> Integrál přes trojúhelník</a></li>
+<li><a href="#integrál-pod-parabolou"><span class="toc-section-number">5</span> Integrál pod parabolou</a></li>
+<li><a href="#integrál-přes-čtvrtkruh"><span class="toc-section-number">6</span> Integrál přes čtvrtkruh</a></li>
+<li><a href="#kvadratický-moment-kruhu"><span class="toc-section-number">7</span> Kvadratický moment kruhu</a></li>
+</ul>
+</div>
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+</div>
+
+
+<blockquote class="anotace"><p class="anotacename">Anotace.</p><p></p>
+<ul>
+<li>V úvodu si osaháme integrační metody. Nejprve pro obdélník. Tam se dá často (ujistěte se, že perfektně poznáte kdy) úloha na výpočet dvojného integrálu redukovat na nezávislý výpočet dvou jednoduchých integrálů, které se mezi sebou vynásobí.</li>
+<li>Další příklady jsou věnovány integraci na jiných než obdélníkových množinách. Zde je nutné dvojný integrál převést na dvojnásobný, tj. integrál z integrálu.</li>
+<li>Poslední dva příklady jsou věnovány integraci v jiných než kartézských souřadnicích. Suveréně nejčastěji se vedle kartézských souřadnic používají souřadnice polární a proto se zaměříme právě na ně.</li>
+</ul>
+</blockquote>
+<h1 id="integrál-přes-obdélník"><span class="header-section-number">1</span> Integrál přes obdélník</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/oFbhyqFRjmQ"></iframe> </div>
+<figure>
+<img src="fig0.png" alt="Nákres integrační množiny" /><figcaption>Nákres integrační množiny</figcaption>
+</figure>
+<p>Vypočtěte dvojný integrál <span class="math display">\[\iint_\Omega xy^2\mathrm dx\mathrm dy\]</span> přes obdélník <span class="math display">\[
+\begin{gathered}
+  0\leq x\leq 3\\1\leq y\leq 2.
+\end{gathered}
+\]</span></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \iint_\Omega xy^2\mathrm dx\mathrm dy
+  &amp;=\int_0^3x\,\mathrm dx \int _1^2 y^2 \,\mathrm dy
+\\&amp;=\left[\frac {x^2}2\right]_0^3 \times \left[\frac 13 y^3 \right]_1^2
+\\&amp;=\left[\frac 92-0\right]\times \left [\frac 13 2^3 - \frac 13 \right]
+=\frac 92 \times \frac 73 = \frac {21}2
+\end{aligned}
+\]</span></p>
+</div>
+<h1 id="kvadratický-moment-pro-obdélník"><span class="header-section-number">2</span> Kvadratický moment pro obdélník</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ykJy7r7Ena4"></iframe> </div>
+<p>Vypočtěte integrál <span class="math display">\[
+\begin{aligned}
+ \iint_\Omega y^2\,\mathrm dx \mathrm dy,\\
+\end{aligned}
+\]</span> přes obdélník se stranami podél os, se středem v počátku a délkou stran <span class="math inline">\(\displaystyle a\)</span> a <span class="math inline">\(\displaystyle b\)</span>, tj. přes množinu <span class="math inline">\(\displaystyle \Omega\)</span> danou nerovnostmi <span class="math display">\[
+\begin{aligned}
+  -\frac a2\leq &amp;x\leq \frac a2,\\
+  -\frac b2\leq &amp;y \leq \frac b2.
+\end{aligned}
+\]</span></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \iint_\Omega y^2\,\mathrm dx \mathrm dy
+  = \int_{-\frac a2}^{\frac a2} \,\mathrm dx \times \int_{-\frac b2}^{\frac b2}y^2\,\mathrm dy=a\times \left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2}=a\times \left(\frac 13 \times \frac {b^3}{8} + \frac 13 \times \frac {b^3}{8}\right)=
+  \frac 1{12}ab^3
+\end{aligned}
+\]</span></p>
+</div>
+<h1 id="integrál-závislý-na-parametru"><span class="header-section-number">3</span> Integrál závislý na parametru</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/GhdGvrx_pks"></iframe> </div>
+<figure>
+<img src="fig1.png" alt="Nákres integrační množiny" /><figcaption>Nákres integrační množiny</figcaption>
+</figure>
+<p>Vypočtěte dvojný integrál <span class="math display">\[I_n=\iint_\Omega y^n\mathrm dx\mathrm dy\]</span> přes jednotkový čtverec <span class="math display">\[
+\begin{gathered}
+  0\leq x\leq 1\\0\leq y\leq 1
+\end{gathered}
+\]</span> v závislosti na parametru <span class="math inline">\(\displaystyle n\geq 0\)</span>.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \iint_\Omega y^n\mathrm dx\mathrm dy
+  &amp;=\int_0^1\,\mathrm dx \int _0^1 y^n \,\mathrm dy
+  =1 \times \left[\frac 1{n+1} y^{n+1} \right]_0^1
+  =\frac 1{n+1}
+\end{aligned}\]</span></p>
+<p>Správnost můžeme ověřit pomocí vzorců pro obsah <span class="math display">\[I_0=1\]</span> a polohu težiště <span class="math display">\[\frac{I_1}{I_0}=\frac 12,\]</span> což porovnáme s očekávanými výsledky. Dalším využitím je působiště tlakové síly na přehradu (viz přednáška), které je při orientaci osy <span class="math inline">\(\displaystyle y\)</span> od hladiny směrem dolů v místě <span class="math display">\[\frac{I_2}{I_1}=\frac {\frac 13}{\frac 12}=\frac 23,\]</span> tj. ve dvou třetinách hloubky.</p>
+</div>
+<h1 id="integrál-přes-trojúhelník"><span class="header-section-number">4</span> Integrál přes trojúhelník</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/w0iqtpQvhAE"></iframe> </div>
+<figure>
+<img src="fig2.png" alt="Nákres integrační množiny" /><figcaption>Nákres integrační množiny</figcaption>
+</figure>
+<p>Vypočtěte integrál <span class="math display">\[  \iint_\Omega xy^2\,\mathrm dx \mathrm dy
+\]</span> přes trojúhelník <span class="math inline">\(\displaystyle \Omega\)</span> s vrcholy v bodech <span class="math inline">\(\displaystyle (0,0)\)</span>, <span class="math inline">\(\displaystyle (1,0)\)</span> a <span class="math inline">\(\displaystyle (0,1)\)</span>.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Rovnice přímky, ve které leží přepona trojúhelníka, je <span class="math display">\[y=1-x\]</span> a trojúhelník tedy je možno zapsat soustavou nerovností</p>
+<p><span class="math display">\[
+\begin{aligned}
+  0\leq &amp;x\leq 1,\\
+  0\leq &amp;y \leq 1-x.
+\end{aligned}
+\]</span></p>
+<p>Použitím těchto nerovností můžeme dvojný integrál transformovat na dvojnásobný a vypočítat. <span class="math display">\[
+\begin{aligned}
+  \iint_\Omega xy^2\,\mathrm dx\mathrm dy
+  &amp;=\int_0^1 \int_0^{1-x} xy^2\,\mathrm dy\mathrm dx
+  =\int_0^1 \left[\frac 13 xy^3\right]_0^{1-x}\,\mathrm dx
+  =\int_0^1 \frac 13x(1-x)^3\,\mathrm dx
+  \\&amp;=\frac 13 \int_0^1 x-3x^2+3x^3-x^4\,\mathrm dx
+  =\frac 13\left[\frac 12 x^2 - x^3 +\frac 34 x^4-\frac 15 x^5\right]_0^1
+  \\&amp;=\frac 13\left[\frac 12 -1 +\frac 34 -\frac 15\right] =\frac 1{60}
+\end{aligned}
+\]</span></p>
+</div>
+<h1 id="integrál-pod-parabolou"><span class="header-section-number">5</span> Integrál pod parabolou</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Sur6lhdR3ts"></iframe> </div>
+<figure>
+<img src="fig3.png" alt="Nákres integrační množiny" /><figcaption>Nákres integrační množiny</figcaption>
+</figure>
+<p>Vypočtěte integrály <span class="math display">\[
+\begin{aligned}
+  I_1&amp;=\iint_\Omega x\,\mathrm dx \mathrm dy,\\
+  I_2&amp;=\iint_\Omega y\,\mathrm dx \mathrm dy,\\
+  I_3&amp;=\iint_\Omega \,\mathrm dx \mathrm dy,\\
+\end{aligned}
+\]</span> přes množinu <span class="math inline">\(\displaystyle \Omega\)</span> danou nerovnostmi <span class="math display">\[
+\begin{aligned}
+  0\leq &amp;x\leq 1,\\
+  0\leq &amp;y \leq 1-x^2.
+\end{aligned}
+\]</span> Určete obsah a polohu těžiště této množiny.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[
+\begin{aligned}
+  \iint_\Omega x\,\mathrm dx\mathrm dy
+  &amp;=\int_0^1 \int_0^{1-x^2} x\,\mathrm dy\mathrm dx
+  =\int_0^1 \left[xy\right]_0^{1-x^2}\,\mathrm dx
+  =\int_0^1 x(1-x^2)\,\mathrm dx
+  =\int_0^1 x-x^3\,\mathrm dx
+  \\&amp;=\left[\frac 12 x^2 - \frac 14 x^4\right]_0^1=\frac 12-\frac 14 =\frac 14
+\end{aligned}
+\]</span> <span class="math display">\[
+\begin{aligned}
+  \iint_\Omega y\,\mathrm dx\mathrm dy
+  &amp;=\int_0^1 \int_0^{1-x^2} y\,\mathrm dy\mathrm dx
+  =\int_0^1 \left[\frac 12 y^2\right]_0^{1-x^2}\,\mathrm dx
+  =\int_0^1 \frac 12 (1-x^2)^2\,\mathrm dx
+  \\&amp;=\frac 12 \int_0^1 1-2x^2+x^4\,\mathrm dx
+  =\frac 12 \left[x-\frac 23 x^3 + \frac 15 x^5\right]_0^1=\frac 12\left[1-\frac 23 + \frac 15\right]=\frac 4{15}
+\end{aligned}
+\]</span></p>
+<p><span class="math display">\[
+\begin{aligned}
+  \iint_\Omega \,\mathrm dx\mathrm dy
+  &amp;=\int_0^1 \int_0^{1-x^2} \,\mathrm dy\mathrm dx
+%  =\int_0^1 \left[y\right]_0^{1-x^2}\,\mathrm dx
+  =\int_0^1 1-x^2\,\mathrm dx
+  =\left[x - \frac 13 x^3\right]_0^1=1-\frac 13 =\frac 23
+\end{aligned}
+\]</span></p>
+<p>Obsah je <span class="math inline">\(\displaystyle \frac 23\)</span> a souřadnice těžiště jsou <span class="math inline">\(\displaystyle \left[\frac 38,\frac 4{10}\right]\)</span>. Toto je možné porovnat s obsahem a souřadnicemi těžiště trojúhelníka, který vznikne nahrazením paraboly přímkou a tento trojúhelník má obsah <span class="math inline">\(\displaystyle \frac 12\)</span> a souřadnice těžiště <span class="math inline">\(\displaystyle \left[\frac 13,\frac 13\right].\)</span></p>
+</div>
+<h1 id="integrál-přes-čtvrtkruh"><span class="header-section-number">6</span> Integrál přes čtvrtkruh</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/_YT3FDpfZsQ"></iframe> </div>
+<figure>
+<img src="fig4.png" alt="Nákres integrační množiny" /><figcaption>Nákres integrační množiny</figcaption>
+</figure>
+<p>Vypočtěte integrály <span class="math display">\[
+\begin{aligned}
+  I_1&amp;=\iint_\Omega x\,\mathrm dx \mathrm dy,\\
+  I_2&amp;=\iint_\Omega y\,\mathrm dx \mathrm dy,\\
+  I_3&amp;=\iint_\Omega \,\mathrm dx \mathrm dy,\\
+\end{aligned}
+\]</span> přes čtvrtkruh na obrázku (čtvrtina jednotkového kruhu v prvním kvadrantu). Určete obsah a polohu těžiště tohoto čtvrtkruhu.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>V polárních souřadnicích daných rovnicemi <span class="math display">\[
+\begin{aligned}
+  x&amp;=r\cos\varphi\\
+  y&amp;=r\sin\varphi
+\end{aligned}
+\]</span> má čtvrtkruh vyjádření <span class="math inline">\(\displaystyle 0\leq r\leq 1\)</span>, <span class="math inline">\(\displaystyle 0\leq \varphi\leq \frac \pi2\)</span>. <span class="math display">\[
+\begin{aligned}
+  \iint_\Omega x\,\mathrm dx\mathrm dy
+  &amp;=\int_0^1 \int_0^{\frac \pi2} r\cos\varphi \times r\,\mathrm d\varphi\mathrm dr
+  =\int_0^1 r^2 \,\mathrm dr \times \int_0^{\frac \pi2}\cos\varphi \mathrm d \varphi
+  \\&amp;=\left[\frac 13 r^3\right]_0^1\times \left[\sin\varphi\right]_0^{\frac \pi2}=\frac 13 \times 1=\frac 13
+\end{aligned}
+\]</span><span class="math display">\[
+\begin{aligned}
+  \iint_\Omega y\,\mathrm dx\mathrm dy
+  &amp;=\int_0^1 \int_0^{\frac \pi2} r\sin\varphi \times r\,\mathrm d\varphi\mathrm dr
+  =\int_0^1 r^2 \,\mathrm dr \times \int_0^{\frac \pi2}\sin\varphi \mathrm d \varphi
+  \\&amp;=\left[\frac 13 r^3\right]_0^1\times \left[-\cos\varphi\right]_0^{\frac \pi2}=\frac 13 \times 1=\frac 13
+\end{aligned}
+\]</span> <span class="math display">\[
+\begin{aligned}
+  \iint_\Omega \,\mathrm dx\mathrm dy
+  &amp;=\int_0^1 \int_0^{\frac \pi2} 1 \times r\,\mathrm d\varphi\mathrm dr
+  =\int_0^1 r \,\mathrm dr \times \int_0^{\frac \pi2}\mathrm d \varphi
+  \\&amp;=\left[\frac 12 r^2\right]_0^1\times {\frac \pi2}=\frac 12 \times \frac \pi 2=\frac \pi 4
+\end{aligned}
+\]</span></p>
+<p>Obsah je <span class="math inline">\(\displaystyle \frac \pi 4\)</span>, což odpovídá čtvtině vzorce pro obsah jednotkového kruhu. Souřadnice težište jsou obě stejné, což odpovídá symetrii množiny. Tyto souřadnice leží v bodě <span class="math display">\[\frac {4}{3\pi}\approx 0.42,\]</span> což odpovídá tomu, že těžište je posunuto doprava nahoru ve srovnání těžištěm trojúhelníka, který by vznikl nahrazením oblouku úsečkou.</p>
+</div>
+<h1 id="kvadratický-moment-kruhu"><span class="header-section-number">7</span> Kvadratický moment kruhu</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/OPqy2AU-SKU"></iframe> </div>
+<p>Vypočtěte kvadratický moment kruhu o poloměru <span class="math inline">\(\displaystyle R\)</span> vzhledem k ose procházející středem.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Vypočteme kvadratický moment kruhu daného v polárních souřadnicích nerovnicemi <span class="math display">\[
+\begin{aligned}
+  0&amp;\leq r\leq R,\\
+  0&amp;\leq \varphi\leq 2\pi.  
+\end{aligned}
+\]</span></p>
+<p>Přímým výpočtem dostáváme <span class="math display">\[
+\begin{aligned}
+  \iint_{\Omega}y^2\,\mathrm dx\mathrm dy&amp;=
+  \int_{0}^R \int_0^{2\pi} r^2\sin^2\varphi \times r\,\mathrm d\varphi \mathrm dr
+  =\int_{0}^R  r^3  \mathrm dr \int_0^{2\pi}\sin^2\varphi \,\mathrm d\varphi
+  =\left[\frac {r^4}{4}\right]_0^R \pi
+  =\frac {\pi}{4} R^4,
+\end{aligned}
+\]</span> kde při výpočtu integrálu přes proměnnou <span class="math inline">\(\displaystyle \varphi\)</span> využijeme nápovědu, kterou jsme měli již v sadě úloh s křivkovým integrálem.</p>
+<p>Že je výsledkem veličina úměrná čtvrté mocnině poloměru je zřejmé i z rozměrové analýzy (resp. z Buckinghamova <span class="math inline">\(\displaystyle \Pi\)</span> teorému), uvedeným výpočtem však vidíme i konstantu úměrnosti.</p>
+<p>To že kvadratický moment roste se čtvrtou mocninou poloměru značí, že snížení průměru tyče na polovinu vede k redukci tuhosti na přibližně <span class="math inline">\(\displaystyle (0.5)^4\)</span> tj. na šest procent. Devadesát šest procent tuhosti je v materiálu, který se při tomto odstraní. Proto jsou trubky při stejné spotřebě materiálu odolnější vůči ohnutí než tyče. Proto mají listy rostlin nebo listy vrtulí větrných elektráren materiál odpovídající za tuhost na povrchu. Proto máme kosti duté.</p>
+</div>
+<!--
+%
+
+%## Jacobiho matice pro polární souřadnice
+
+%  Najděte Jacobiho matici a její determinant pro transformaci 
+% \begin{equation*}
+%   \begin{aligned}
+%     x&=r\cos \varphi\\
+%     y&=r\sin \varphi
+%   \end{aligned}
+% \end{equation*}
+% mezi polárními a kartézskými souřadnicemi.
+
+-->
+
+
+</div>  <!-- container -->
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu ACTIVE' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>
+
+<div class="footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; width:81px; display:inline-block" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+
+  <script type="text/javascript">
+
+//jQuery(document).ready(function(){
+    //var current_path = window.location.pathname.split('/').pop();
+	//var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/am/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+//});
+  </script>
+  
+</body>
+</html>

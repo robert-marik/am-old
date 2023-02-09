@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Divergence, rovnice vedení tepla</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+
+   function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+  
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+    
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css?ver=2021-01-27" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css?ver=2020-03-20" type="text/css" />
+
+  <style>
+    .Ycontainer, .reseni {display: none;}
+  </style>
+  
+
+  <script>
+window.MathJax = {
+  loader: {load: ['[tex]/physics']},
+  tex: {packages: {'[+]': ['physics']}}
+};
+</script>
+  
+
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+  
+  
+</head>
+<body>
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+  
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu ACTIVE' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>  
+
+
+<div class="container">
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<!--
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p> -->
+<div id="header">
+<h1 class="title">Divergence, rovnice vedení tepla</h1>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#divergence-vektorového-pole"><span class="toc-section-number">1</span> Divergence vektorového pole</a></li>
+<li><a href="#divegrence-vektorového-pole-s-parametrem"><span class="toc-section-number">2</span> Divegrence vektorového pole s parametrem</a></li>
+<li><a href="#rovnice-vedení-tepla-v-dvourozměrném-materiálu"><span class="toc-section-number">3</span> Rovnice vedení tepla v dvourozměrném materiálu</a></li>
+<li><a href="#vedení-tepla-v-různých-materiálech"><span class="toc-section-number">4</span> Vedení tepla v různých materiálech</a></li>
+</ul>
+</div>
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+</div>
+
+
+<blockquote class="anotace"><p class="anotacename">Anotace.</p><p></p>
+<ul>
+<li>V úvodu si zkusíme vypočítat několik divergencí pro získání určité míry jistoty při práci s tímto operátorem.</li>
+<li>Poté vypočteme divergenci vektorového pole, které dostaneme jako záporně vzatý gradient stavové veličiny vynásobený difuzní maticí. Přesně takto se s divergencí pracuje v aplikacích, abychom zjistili, kde tok nabývá na intenzitě a kde naopak slábne.</li>
+<li>V závěru si zopakujeme difuzní rovnici a jak se některé členy této rovnice mohou za speciálních podmínek zjednodušit.</li>
+</ul>
+</blockquote>
+<h1 id="divergence-vektorového-pole"><span class="header-section-number">1</span> Divergence vektorového pole</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/bdnxbITOIrM"></iframe> </div>
+<ol type="1">
+<li>Vypočtěte divergenci vektorového pole <span class="math display">\[\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath.\]</span></li>
+<li>Zakreslete do obrázku směr toku vektorového pole v bodě <span class="math inline">\(\displaystyle (2,1)\)</span>.</li>
+<li>Vypočtěte divergenci vektorového pole v bodě <span class="math inline">\(\displaystyle (2,1)\)</span> a podle toho, zda je kladná nebo záporná rozhodněte, zda tok v daném bodě sílí nebo slábne.</li>
+<li>Předpokládejme, že dané vektorové pole reprezentuje stacionární tok. Je v bodě <span class="math inline">\(\displaystyle (2,1)\)</span> zdroj nebo spotřebič?</li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle \nabla \cdot \vec F=\pdv{x}(x^2y)+\pdv{y}(x+y^2) =2xy+(0+2y)=2y(x+1)\)</span></li>
+<li><span class="math inline">\(\displaystyle \vec F(2,1)=2^2\cdot 1\cdot \vec \imath + (2+1^2)\vec \jmath=4\vec\imath+3\vec\jmath=(4,3)\)</span>, tj. vektorové pole teče směrem doprava nahoru směrem daným směrnicí <span class="math inline">\(\displaystyle 0.75\)</span>, tj. pod úhlem menším než <span class="math inline">\(\displaystyle 45^\circ\)</span>.</li>
+<li><span class="math inline">\(\displaystyle \nabla\cdot\vec F(2,1)=2\cdot 1 \cdot(2+1)=6&gt;0\)</span>. Divergence je kladná a proto se tok zahušťuje.</li>
+<li>Zdroj (kladná divergence).</li>
+</ol>
+</div>
+<h1 id="divegrence-vektorového-pole-s-parametrem"><span class="header-section-number">2</span> Divegrence vektorového pole s parametrem</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/zwYPRlEIrHI"></iframe> </div>
+<ol type="1">
+<li>Vypočtěte divergenci vektorového pole <span class="math display">\[\vec F=ax^3y^2\vec \imath + 3x^2y\vec \jmath,\]</span> kde <span class="math inline">\(\displaystyle a\in\mathbb R\)</span> je reálný parametr.</li>
+<li>Určete hodnotu parametru <span class="math inline">\(\displaystyle a\)</span> tak, aby pole bylo v bodě <span class="math inline">\(\displaystyle (-1,2)\)</span> nezřídlové, tj. aby mělo nulovou divergenci v bodě <span class="math inline">\(\displaystyle (-1,2)\)</span>.</li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle \nabla \cdot \vec F=\pdv{x}(ax^3y^2)+\pdv{y}(3x^2y) =3ax^2y^2+3x^2=3x^2(ay^2+1)\)</span></li>
+<li><span class="math inline">\(\displaystyle \nabla \cdot \vec F (-1,2)=3(-1)^2(a\cdot 2^2+1)=3(4a+1)\)</span> a <span class="math inline">\(\displaystyle \nabla \cdot \vec F (-1,2)=0\)</span> pokud <span class="math inline">\(\displaystyle 3(4a+1)=0\)</span>, tj. <span class="math inline">\(\displaystyle a=-\frac 14\)</span>.</li>
+</ol>
+</div>
+<h1 id="rovnice-vedení-tepla-v-dvourozměrném-materiálu"><span class="header-section-number">3</span> Rovnice vedení tepla v dvourozměrném materiálu</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/U9_0wbKT_2I"></iframe> </div>
+<figure>
+<img src="drevo_textura.jpg" alt="Zdroj: pixabay.com" /><figcaption>Zdroj: pixabay.com</figcaption>
+</figure>
+<p>Teplota ve dvourozměrné desce pro <span class="math inline">\(\displaystyle 0\leq x\leq 10\)</span> a <span class="math inline">\(\displaystyle 0\leq y\leq 10\)</span> zachycené v určitém okamžiku termokamerou je popsána rovnicí <span class="math display">\[T(x,y)=(2x-y)^2+x^4.\]</span> Rozměry jsou v centimetrech a teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která jeho rozměr opraví. Pro jednoduchost tuto komplikaci vynecháme.)</p>
+<ol type="1">
+<li>Vypočtěte gradient <span class="math inline">\(\displaystyle \nabla T\)</span> a tok tepla <span class="math inline">\(\displaystyle -k \cdot \nabla T.\)</span> Součinitel tepelné vodivosti (v jednotkách kompatibilních se zadáním) je <span class="math inline">\(\displaystyle k=  \begin{pmatrix}  4 &amp; 1\\1&amp;6  \end{pmatrix}.\)</span></li>
+<li>Určete, zda na levém okraji desky teče teplo dovnitř do desky nebo z desky ven.</li>
+<li>Vypočtěte divergenci toku tepla, tj. <span class="math inline">\(\displaystyle \nabla\cdot(-k \cdot \nabla T).\)</span></li>
+<li>V desce nejsou zdroje tepla. Ochlazuje se deska uprostřed, nebo otepluje?</li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li>Gradient je vektor složený z parciálních derivací. <span class="math display">\[\nabla T=\qty(
+  4(2x-y)+4x^3,-2(2x-y))^T\]</span> Tok je tenzor vodivosti maticově vynásobený s gradientem teploty a faktorem <span class="math inline">\(\displaystyle (-1)\)</span>. <span class="math display">\[-k\cdot \nabla T=-
+  \begin{pmatrix}
+ 4&amp;1\\1&amp;6
+  \end{pmatrix}
+  \begin{pmatrix}
+ 4(2x-y)+4x^3\\-2(2x-y)
+  \end{pmatrix}
+  =-
+  \begin{pmatrix}
+ 14(2x- y)+16x^3\\-8(2x- y)+4x^3
+  \end{pmatrix}
+\]</span></li>
+<li>Do vztahu pro tok dosadíme rovnici levého okraje desky, tj. <span class="math inline">\(\displaystyle x=0\)</span>. <span class="math display">\[-k\cdot \nabla T (x=0)=
+  \begin{pmatrix}
+ 14y\\-8y
+  \end{pmatrix}
+  \]</span> Na levém okraji desky je <span class="math inline">\(\displaystyle y&gt;0\)</span> a proto <span class="math inline">\(\displaystyle 14y&gt;0\)</span>. Tok míří doprava a teplo teče na tomto okraji do desky.</li>
+<li>Vypočteme divergenci toku určeného v prvním bodě. <span class="math display">\[
+  \begin{aligned}
+\nabla \cdot (-k\cdot \nabla T )&amp;=\pdv{x}(-14(2x- y)-16x^3)+\pdv{y}(8(2x- y)-4x^3)\\&amp;=-48x^2-28-8\\&amp;=-48x^2-36
+\end{aligned}
+\]</span></li>
+<li>Do vztahu pro diveregenci dosadíme bod, který nás zajímá. <span class="math display">\[\nabla \cdot (-k\cdot \nabla T )(x=5,y=5)=-1236\]</span> Tok tepla se zmenšuje a protože jde o stav bez zdrojů, teplo se v daném místě akumuluje a deska se proto otepluje. Z rovnice vedení tepla <span class="math display">\[\rho c\pdv{T}{t}=\nabla\cdot(k \cdot \nabla T)\]</span> plyne v daném bodě <span class="math display">\[\rho c\pdv{T}{t}=1236\]</span> a můžeme dokonce odhadnout, jak rychle teplota roste.</li>
+</ol>
+<p><a href="https://sagecell.sagemath.org/?z=eJxNT8GOwiAUvJPwDy_uBRQ3anQPm_QfNllvTU3Y8qrYCoZCF_z6hUN1SUiGycwwM0nHFhHSggO8gcJOG90i3J29oTGpvVByZFEkDhWw3TKuEz_tYAXxtC8Gj_fBeklJX92kdzqyut6LbSPqrfhomhyaRaMNbY71OBQ9DgZhskpPdvSaEkrOTiqNxlfH9xmy4izemaDE275a98uZgNfJNWxPSU5Ed0bTYqV017FM1ptGRL56PnOxvCTvfEqLNQjQRmFMMMG3PCNI-Er-Yk2AEaHV4xCuGqwCE4ZUCnfWgc4eYHMbkWPKZbHacPGK_wfZQRw4_8y_P-yPkw80GqY0Dqj6kMHdtj5QUvaMF_vLNP8D8_-DMQ==&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">Sage</a></p>
+</div>
+<!--
+% var('x,y')
+% k=matrix([[5,1],[1,4]])
+% T(x,y)=(x+2*y)^2+x^3
+% show(T.gradient())
+% show(-k*T.gradient())
+% show(-k*T.gradient()(x=0))
+% show((-k*T.gradient())[0].diff(x)+(-k*T.gradient())[1].diff(y))
+-->
+<h1 id="vedení-tepla-v-různých-materiálech"><span class="header-section-number">4</span> Vedení tepla v různých materiálech</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/MnThGZphPps"></iframe> </div>
+<ol type="1">
+<li>Zapište rovnici vedení tepla v trojrozměrném izotropním a v trojrozměrném ortotropním materiálu. Ve druhém případě volte osy ve směru vlastních vektorů.</li>
+<li>Napište, jak je možné zjednodušit rovnice z předchozího bodu, pokud jsou materiálové konstanty nezávislé na poloze (homogenní materiál) a na teplotě (lineární materiál).</li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Pomůže <a href="https://github.com/robert-marik/apl-slidy/blob/master/cheatsheet/cheatsheet-AM.pdf">cheatsheet</a></p>
+<ol type="1">
+<li><p>Izotropní: <span class="math inline">\(\displaystyle \varrho c \pdv{T}{t} = \pdv{x}(k\pdv{T}{x})+\pdv{y}(k\pdv{T}{y})+\pdv{z}(k\pdv{T}{z})\)</span></p>
+Ortotropní: <span class="math inline">\(\displaystyle \varrho c \pdv{T}{t} = \pdv{x}(k_x\pdv{T}{x})+\pdv{y}(k_y\pdv{T}{y})+\pdv{z}(k_z\pdv{T}{z})\)</span></li>
+<li><p>Izotropní: <span class="math inline">\(\displaystyle \varrho c \pdv{T}{t} = k\left(\pdv[2]{T}{x} + \pdv[2]{T}{y} + \pdv[2]{T}{z}\right)\)</span></p>
+<p>Ortotropní: <span class="math inline">\(\displaystyle \varrho c \pdv{T}{t} = k_x\pdv[2]{T}{x}+k_y\pdv[2]{T}{y}+k_z\pdv[2]{T}{z}\)</span></p></li>
+</ol>
+</div>
+<a onclick="otevrit('problems/difuzni_rce/napis_rovnici.pg');" target="_blank" class="WWotazka">WW-otázka</a>
+
+
+</div>  <!-- container -->
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu ACTIVE' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>
+
+<div class="footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; width:81px; display:inline-block" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+
+  <script type="text/javascript">
+
+//jQuery(document).ready(function(){
+    //var current_path = window.location.pathname.split('/').pop();
+	//var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/am/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+//});
+  </script>
+  
+</body>
+</html>

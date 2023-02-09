@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>  
+
+<!--
+<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+-->
+
+<link href="../facebox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="../facebox/facebox.js" type="text/javascript"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Robert Mařík" />
+  <title>LaTeXové snippety</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="..//styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../my.css" />
+
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+          var TEX = MathJax.InputJax.TeX;
+          var PREFILTER = TEX.prefilterMath;
+          TEX.Augment({
+            prefilterMath: function (math,displaymode,script) {
+              math = "\\displaystyle{"+math+"}";
+              return PREFILTER.call(TEX,math,displaymode,script);
+            }
+          });
+        });
+        </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+  <script src="..//scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">LaTeXové snippety</h1>
+  <p class="author">
+Robert Mařík
+  </p>
+  <p class="date">2018–2021</p>
+
+<br>
+<small>
+<p style='text-align:left;'>
+Pokud se matematické výrazy nezobrazují korektně, nechejte znovunačíst stránku (Reload, Crtl+R, F5) nebo použijte <a href="index.html">html verzi</a> prezentace.
+</p>
+<p style='text-align:left;'>
+Ovládání: Prezentaci je možno posouvat šipkami nebo mezerníkem. Klávesa "S" zmenšuje písmo, "B" zvětšuje (smaller/bigger). Klávesa "C" zobrazí obsah (content). Klávesou "A" se přepíná režim prezentace/html stránka.
+Kliknutím na obrázek se obrázek zvětší na vertikální rozměr okna. Pro zavření zvětšeniny klikněte do zašedlého zbytku stránky  nebo použijte klávesu "ESC".
+</p>
+</small>
+<br><br>
+<small>
+<p style='text-align:left;'>
+  Slidy jsou doprovodným materiálem k předáškám. Některá tvrzení platí
+  pouze za předpokladů dostatečné spojitosti funkcí nebo jejich
+  derivací. V jednoduchých technických aplikacích bývají tyto
+  předpoklady splněny a proto je nezmiňujeme. Přesná formulace vět je
+  v učebním textu a v odborné literatuře.
+</p>  
+</small>
+
+</div>
+<div id="snippety" class="slide section level1">
+<h1>Snippety</h1>
+<style>
+
+li code{
+background-color: #E4E5E7;
+}
+
+.menu-obalka {display:none;}
+</style>
+<ul>
+<li><p>V tomto dokumenty jsou snippety pro LaTeX. Můžete si je vykopírovat do svého dokumentu a upravit dle potřeby. Fungují pro <a href="https://www.latex-project.org/">LaTeX</a> a <a href="https://www.mathjax.org/">MathJax</a> a <a href="https://katex.org/">KaTeX</a>. Tedy fungují i v systémech WeBWorK a Markdown.</p></li>
+<li><p>Jednořádkové fungují i pro <a href="https://support.office.com/cs-cz/article/rovnice-v-line%C3%A1rn%C3%ADm-form%C3%A1tu-pomoc%C3%AD-unicodemath-a-latex%C5%AF-ve-wordu-2e00618d-b1fd-49d8-8cb4-8d17f25754f8">MS Word</a>, ale je někdy nutné kód doladit podle požadavků software, například <code>\sin{x}</code> místo úspornějšího <code>\sin x</code>. Značka napravo od výrazu na samostatném řádku se do Wordu nevkládá jako <code>rovnice \tag{znacka}</code> ale <code>rovnice # (znacka)</code></p></li>
+<li><p>Obecně v matematickém prostředí nezáleží na mezerách, ale některé interpretace toto pravidlo mohou porušovat. Například pro matematiku v textu na <a href="https://stackedit.io/">https://stackedit.io/</a> nesmí být mezera za prvním a před druhým dolarem.</p></li>
+<li><p>Obecně v LaTeXu nezáleží na koncích řádku, ale některé interpretace toto pravidlo mohou porušovat. Například v textu na <a href="https://stackedit.io/">https://stackedit.io/</a> způsobí konec řádku na vstupu ukončení řádku na výstupu (což zpravidla nechceme).</p></li>
+<li><p>LaTeXový příkaz k ručně nakreslenému symbolu najde služba <a href="http://detexify.kirelabs.org/classify.html">Detexify</a></p></li>
+<li><p>LaTeX slouží matematikům více než 30 let. Je tedy na síti spousta návodů nebo dotazů a odpovědí. Jsou i <a href="https://www.codecogs.com/latex/eqneditor.php">nástroje</a>, kde si naklikáte vzorec interaktivně a poté zkopírujete LaTeX kód. Odpadá tím rychlost, jedna z hlavních výhod zápisu v LaTeXu, ale pro začátečníka se to může hodit.</p></li>
+</ul>
+</div>
+<div id="zásady-pro-latex" class="slide section level1">
+<h1>Zásady pro LaTeX</h1>
+<ul>
+<li>LaTeX je vlastně programovací jazyk pro texty. Ale běžný text v něm vypadá běžně. Něco jiného než běžný text se dělá pomocí příkazů.</li>
+<li>Příkazy v LaTeXu začínají lomítkem. Například <code>\frac</code> je příkaz pro zlomek.</li>
+<li>Kromě příkazů máme aktivní znaky. Nejčastější jsou následující.
+<ul>
+<li>Dolar. Mezi dolary píšeme matematický text. Bude jiným fontem, se speciálním mezerováním a spousta dalšího. Ve WeBWorK používejte zpětné lomítko a kulaté závorky.</li>
+<li>Dvojdolar. Jako dolar, ale matematický text bude navíc na samostatném řádku, centrovaný na osu. Pořád ale bude pokračovat jeden odstavec. Ve WeBWorK používejte zpětné lomítko a hranaté závorky.</li>
+<li>Složené závorky. Závorky ohraničují působení příkazu. Dají se vynechat, pokud je argumentem jeden znak. Například <code>$\sqrt 2$</code> a <code>$\sqrt {121}$</code> vede na <span class="math inline">\(\sqrt 2\)</span> a <span class="math inline">\(\sqrt{121}\)</span>. Špatně by bylo <code>$\sqrt 121$</code>, které vede na <span class="math inline">\(\sqrt 121\)</span>. Podobně jednu polovinu můžu zapsat jako <code>$\frac 12$</code>, ale jednu desetinu už jako <code>$\frac 1{10}$</code></li>
+</ul></li>
+<li>Mezera se v matematickém prostředí ignoruje, protože zde platí speciální pravidla. Pokud potřebujeme vložit mezeru, děláme to speciálním příkazem. Krátká mezera je <code>\,</code>, normální mezera je <code>\␣</code> (zpětné lomítko a mezera), dlouhá mezera je <code>\quad</code>.</li>
+<li>LaTeX je typografický systém. My využijeme jenom jeho schopnost sázet matematiku. Nenechte se proto odradit tlustými návody. Nic takového nepotřebujete.</li>
+</ul>
+</div>
+<div id="zásady-pro-webwork" class="slide section level1">
+<h1>Zásady pro WeBWorK</h1>
+<ul>
+<li>WeBWorK je napsaný v jazyce PERL, kde má symbol dolaru speciální postavení. Proto používejte pro matematické prostředí dvojici <code>\(</code> a <code>\)</code>. Pro matematické prostředí naformátované na samostatný řádek potom <code>\[</code> a <code>\]</code>. Na dolary a dvojdolary raději zapomeňte.</li>
+</ul>
+</div>
+<div id="zásady-pro-markdown" class="slide section level1">
+<h1>Zásady pro Markdown</h1>
+<ul>
+<li>LaTeX je nejjednodušší způsob, jak psát matematiku. Nejjednodušší způsob jak psát formátovaný text je jazyk Markdown. I v něm běžný text vypadá běžně a něco jiného než běžný text se dělá pomocí značek. Proto se oba systémy vhodně doplňují.</li>
+<li>Nový odstavec v Markdownu začíná prázdným řádkem.</li>
+</ul>
+</div>
+<div id="základní-výrazy" class="slide section level1">
+<h1>Základní výrazy</h1>
+<style>
+
+table, th, td {
+   border: 2px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: green;
+    color: white;
+}
+
+th {text-align: center;}
+</style>
+<p>Vykopírujte text z prostředního sloupce mezi značky <code>$ $</code> pro matematiku v textu, mezi <code>$$ $$</code> pro matematiku na samostatném řádku.</p>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="67%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>název</th>
+<th>TeX</th>
+<th>výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mocnina</td>
+<td><code>x^2 y^{10}</code></td>
+<td><span class="math inline">\(x^2 y^{10}\)</span></td>
+</tr>
+<tr class="even">
+<td>index</td>
+<td><code>x_0 y_{10}^3</code></td>
+<td><span class="math inline">\(x_0 y_{10}^3\)</span></td>
+</tr>
+<tr class="odd">
+<td>zlomek</td>
+<td><code>\frac {A} {B+C}</code></td>
+<td><span class="math inline">\(\frac {A}{B+C}\)</span></td>
+</tr>
+<tr class="even">
+<td>funkce</td>
+<td><code>f\colon \mathbb R^n \to \mathbb R^m</code></td>
+<td><span class="math inline">\(f\colon\mathbb R^n\to\mathbb R^m\)</span></td>
+</tr>
+<tr class="odd">
+<td>vektor</td>
+<td><code>\vec F(x,y)</code></td>
+<td><span class="math inline">\(\vec F(x,y)\)</span></td>
+</tr>
+<tr class="even">
+<td>přibližná rovnost</td>
+<td><code>f(x,y)\approx \text{formula}</code></td>
+<td><span class="math inline">\(f(x,y)\approx \text{formula}\)</span></td>
+</tr>
+<tr class="odd">
+<td>řecká písmena</td>
+<td><code>\alpha \beta \varepsilon \varphi \dots</code></td>
+<td><span class="math inline">\(\alpha \beta \varepsilon \varphi \dots\)</span></td>
+</tr>
+<tr class="even">
+<td>funkce</td>
+<td><code>\sin x\cos x\arctan x</code></td>
+<td><span class="math inline">\(\sin x\cos x\arctan x\)</span></td>
+</tr>
+<tr class="odd">
+<td>nepředdefinované funkce</td>
+<td><code>\mathop{\text{grad}} f</code></td>
+<td><span class="math inline">\(\mathop{\text{grad}} f\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="derivace" class="slide section level1">
+<h1>Derivace</h1>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="67%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>název</th>
+<th>TeX</th>
+<th>výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>derivace</td>
+<td><code>y',\ y'',\ y''',\ y^{(n)}</code></td>
+<td><span class="math inline">\(y&#39;,\ y&#39;&#39;,\ y&#39;&#39;&#39;,\ y^{(n)}\)</span></td>
+</tr>
+<tr class="even">
+<td>derivace</td>
+<td><code>\frac {\mathrm dy} {\mathrm dx}</code></td>
+<td><span class="math inline">\(\displaystyle\frac {\mathrm dy} {\mathrm dx}\)</span></td>
+</tr>
+<tr class="odd">
+<td>parciální derivace</td>
+<td><code>\frac {\partial f} {\partial x}</code></td>
+<td><span class="math inline">\(\displaystyle\frac {\partial f}{\partial x}\)</span></td>
+</tr>
+<tr class="even">
+<td>druhá derivace</td>
+<td><code>\frac {\mathrm d^2y} {\mathrm dx^2}</code></td>
+<td><span class="math inline">\(\displaystyle\frac {\mathrm d^2y} {\mathrm dx^2}\)</span></td>
+</tr>
+<tr class="odd">
+<td>druhá derivace</td>
+<td><code>\frac {\mathrm d^2} {\mathrm dx^2}y</code></td>
+<td><span class="math inline">\(\displaystyle\frac {\mathrm d^2} {\mathrm dx^2}y\)</span></td>
+</tr>
+<tr class="even">
+<td>smíšená parciální derivace druhého řádu</td>
+<td><code>\frac {\partial^2 f} {\partial x\partial y}</code></td>
+<td><span class="math inline">\(\displaystyle\frac {\partial^2 f}{\partial x\partial y}\)</span></td>
+</tr>
+<tr class="odd">
+<td>parciální derivace druhého řádu</td>
+<td><code>\frac {\partial^2 f} {\partial x^2}</code></td>
+<td><span class="math inline">\(\displaystyle\frac {\partial^2 f}{\partial x^2}\)</span></td>
+</tr>
+<tr class="even">
+<td>parciální derivace z difuzní rovnice</td>
+<td><code>\frac {\partial} {\partial x}\left( D_x \frac {\partial} {\partial y} T \right)</code></td>
+<td><span class="math inline">\(\displaystyle\frac {\partial} {\partial x}\left( D_x \frac {\partial} {\partial y} T \right)\)</span></td>
+</tr>
+<tr class="odd">
+<td>gradient</td>
+<td><code>\nabla u</code></td>
+<td><span class="math inline">\(\nabla u\)</span></td>
+</tr>
+<tr class="even">
+<td>divergence</td>
+<td><code>\nabla \cdot \vec j</code></td>
+<td><span class="math inline">\(\nabla \cdot \vec j\)</span></td>
+</tr>
+<tr class="odd">
+<td>rotace</td>
+<td><code>\nabla \times \vec j</code></td>
+<td><span class="math inline">\(\nabla \times \vec j\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="integrály" class="slide section level1">
+<h1>Integrály</h1>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="67%" />
+<col width="25%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>název</th>
+<th>TeX</th>
+<th>výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>neurčitý integrál</td>
+<td><code>\int (x^2-\arctan x)^{\sin x} \,\mathrm dx</code></td>
+<td><span class="math inline">\(\int (x^2-\arctan x)^{\sin x} \,\mathrm dx\)</span></td>
+</tr>
+<tr class="even">
+<td>určitý integrál</td>
+<td><code>\int_a^b \ln x \,\mathrm dx</code></td>
+<td><span class="math inline">\(\int_a^b \ln x \,\mathrm dx\)</span></td>
+</tr>
+<tr class="odd">
+<td>dvojný integrál</td>
+<td><code>\iint_M \frac 1{\sqrt{x^2+y^2}} \,\mathrm dx\mathrm dy</code></td>
+<td><span class="math inline">\(\iint_M \frac 1{\sqrt{x^2+y^2}} \,\mathrm dx\mathrm dy\)</span></td>
+</tr>
+<tr class="even">
+<td>dvojný integrál</td>
+<td><code>\iint_M \frac 1{\sqrt{x^2+y^2}} \,\mathrm dS</code></td>
+<td><span class="math inline">\(\iint_M \frac 1{\sqrt{x^2+y^2}} \,\mathrm dS\)</span></td>
+</tr>
+<tr class="odd">
+<td>křivkový integrál</td>
+<td><code>\oint_C \frac 1{\sqrt{x^2+y^2}} \,\mathrm ds</code></td>
+<td><span class="math inline">\(\oint_C \frac 1{\sqrt{x^2+y^2}} \,\mathrm ds\)</span></td>
+</tr>
+<tr class="even">
+<td>křivkový integrál</td>
+<td><code>\int_C \vec F \,\mathrm d\vec r</code></td>
+<td><span class="math inline">\(\int_C \vec F \,\mathrm d\vec r\)</span></td>
+</tr>
+<tr class="odd">
+<td>dosazení mezí</td>
+<td><code>\left[ \frac {x^4}{4} \right]_{0}^{\sqrt 2}</code></td>
+<td><span class="math inline">\(\left[ \frac {x^4}{4} \right]_{0}^{\sqrt 2}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="matice" class="slide section level1">
+<h1>Matice</h1>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="81%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>název</th>
+<th>TeX</th>
+<th>výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>matice</td>
+<td><code>\begin{pmatrix} A &amp; B \\ C &amp; D \end{pmatrix}</code></td>
+<td><span class="math inline">\(\begin{pmatrix} A &amp; B \\ C &amp; D \end{pmatrix}\)</span></td>
+</tr>
+<tr class="even">
+<td>matice s hranatými závorkami</td>
+<td><code>\begin{bmatrix} A &amp; B \\ C &amp; D \end{bmatrix}</code></td>
+<td><span class="math inline">\(\begin{bmatrix} A &amp; B \\ C &amp; D \end{bmatrix}\)</span></td>
+</tr>
+<tr class="odd">
+<td>sloupcový vektor</td>
+<td><code>\begin{pmatrix} A  \\ B \end{pmatrix}</code></td>
+<td><span class="math inline">\(\begin{pmatrix} A \\ B \end{pmatrix}\)</span></td>
+</tr>
+<tr class="even">
+<td>determinant</td>
+<td><code>\begin{vmatrix} A &amp; B \\ C &amp; D \end{vmatrix}</code></td>
+<td><span class="math inline">\(\begin{vmatrix} A &amp; B \\ C &amp; D \end{vmatrix}\)</span></td>
+</tr>
+<tr class="odd">
+<td>maticový součin</td>
+<td><code>\begin{pmatrix} A &amp; B \\ C &amp; D \end{pmatrix}\begin{pmatrix} x \\ y \end{pmatrix}</code></td>
+<td><span class="math inline">\(\begin{pmatrix} A &amp; B \\ C &amp; D \end{pmatrix}\begin{pmatrix} x \\ y \end{pmatrix}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="elipsy" class="slide section level1">
+<h1>Elipsy</h1>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="81%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>název</th>
+<th>TeX</th>
+<th>výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>cdots</td>
+<td><code>A+B+\cdots+Z</code></td>
+<td><span class="math inline">\(A+B+\cdots+Z\)</span></td>
+</tr>
+<tr class="even">
+<td>vdots</td>
+<td><code>\begin{pmatrix} x_0 \\ \vdots \\ x_n\end{pmatrix}</code></td>
+<td><span class="math inline">\(\begin{pmatrix} x_0 \\ \vdots \\ x_n\end{pmatrix}\)</span></td>
+</tr>
+<tr class="odd">
+<td>dots</td>
+<td><code>i\in\{1,2,\dots,n\}</code></td>
+<td><span class="math inline">\(i\in\{1,2,\dots,n\}\)</span></td>
+</tr>
+<tr class="even">
+<td>ddots</td>
+<td><code>\begin{pmatrix}1&amp;&amp;\\&amp;\ddots&amp;\\&amp;&amp;1\end{pmatrix}</code></td>
+<td><span class="math inline">\(\begin{pmatrix}1&amp;&amp;\\&amp;\ddots&amp;\\&amp;&amp;1\end{pmatrix}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="závorky" class="slide section level1">
+<h1>Závorky</h1>
+<table>
+<colgroup>
+<col width="6%" />
+<col width="81%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>název</th>
+<th>TeX</th>
+<th>výstup</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>big</td>
+<td><code>\bigl( x+y \bigr)</code></td>
+<td><span class="math inline">\(\bigl( x+y \bigr)\)</span></td>
+</tr>
+<tr class="even">
+<td>Big</td>
+<td><code>\Bigl[ x+y \Bigr]^5</code></td>
+<td><span class="math inline">\(\Bigl[ x+y \Bigr]^5\)</span></td>
+</tr>
+<tr class="odd">
+<td>bigg</td>
+<td><code>\biggl( x+y \biggr)</code></td>
+<td><span class="math inline">\(\biggl( x+y \biggr)\)</span></td>
+</tr>
+<tr class="even">
+<td>Bigg</td>
+<td><code>\Biggl( x+y \Biggr)^{\sin x}</code></td>
+<td><span class="math inline">\(\Biggl( x+y \Biggr)^{\sin x}\)</span></td>
+</tr>
+<tr class="odd">
+<td>natahovací</td>
+<td><code>\left( x+y \right)</code></td>
+<td><span class="math inline">\(\left( x+y \right)\)</span></td>
+</tr>
+<tr class="even">
+<td>natahovací</td>
+<td><code>\left( x+\frac{y^{e^{x^{14}}}}{1-x^{12}} \right)</code></td>
+<td><span class="math inline">\(\left( x+\frac{y^{e^{x^{14}}}}{1-x^{12}} \right)\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="víceřádkové-výrazy-a-výrazy-na-samostatný-řádek" class="slide section level1">
+<h1>Víceřádkové výrazy a výrazy na samostatný řádek</h1>
+<ul>
+<li>Nezáleží na koncích řádků, ty slouží pouze pro přehlednost.</li>
+<li>Pro vynechání značky nepoužívete řádek s příkazem <code>\tag</code>.</li>
+</ul>
+<h2 id="zarovnávání-podle-rovnítek">Zarovnávání podle rovnítek</h2>
+<pre><code>$$
+\begin{aligned}
+ a + b &amp;= c\\
+ e &amp;= x + y
+\end{aligned}
+\tag{N}
+$$</code></pre>
+<p><span class="math display">\[
+\begin{aligned}
+ a + b &amp;= c\\
+ e &amp;= x + y
+\end{aligned}
+\tag{N}
+\]</span></p>
+<h2 id="jiné-zarovnávání">Jiné zarovnávání</h2>
+<pre><code>$$
+\begin{aligned}
+ a = b &amp; + c\\
+ &amp; + y
+\end{aligned}
+\tag{M}
+$$</code></pre>
+<p><span class="math display">\[
+\begin{aligned}
+ a = b &amp; + c\\
+ &amp; + y
+\end{aligned}
+\tag{M}
+\]</span></p>
+</div>
+<div id="komentované-ukázky-chybných-zápisů" class="slide section level1">
+<h1>Komentované ukázky chybných zápisů</h1>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="30%" />
+<col width="30%" />
+<col width="30%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Číslo</th>
+<th>Špatně</th>
+<th>Správně</th>
+<th>Vysvětlení</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>Derivace rychlosti dinosaura podle délky kroku je <span class="math display">\[\frac{\mathrm dv}{\mathrm dl}=1.336*l^{0.67}.\]</span></td>
+<td>Derivace rychlosti dinosaura podle délky kroku je <span class="math display">\[\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.\]</span></td>
+<td>Špatně je zápis násobení. Násobení zapisujeme hvězdičkou jenom ve vstupech pro počítač. Pro texty určené lidem <strong>hvězdičku nepoužíváme</strong>. Nepíšeme buď nic, nebo <code>\times</code> nebo <code>\cdot</code>, tj. <span class="math inline">\(1.336\times l^{0.67}\)</span> nebo <span class="math inline">\(1.336\cdot l^{0.67}\)</span>.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Derivace rychlosti dinosaura podle délky kroku je <span class="math display">\[\frac{\mathrm dv}{\mathrm dl}=1.336 \mathrm l^{0.67}.\]</span></td>
+<td>Derivace rychlosti dinosaura podle délky kroku je <span class="math display">\[\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.\]</span></td>
+<td>Špatně je font pro proměnnou označující délku kroku. Matematické proměnné zapisujeme matematickou kurzívou. To je defaultní font v matematickém prostředí, tedy v praxi to znamená, že <strong>nic ručně nepřepínáme</strong>, pokud si opravdu nejsme jisti, že to je potřeba (jako například u jednotek).</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Derivace rychlosti dinosaura podle délky kroku je <span class="math display">\[\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}\]</span></td>
+<td>Derivace rychlosti dinosaura podle délky kroku je <span class="math display">\[\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.\]</span></td>
+<td>Špatně je chybějící konec věty. Na konci věty píšeme <strong>tečku</strong>. (Pozor, toto pravidlo nemusí platit v anglickém textu, tam záleží na typografovi publikace.)</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Jednotka derivace rychlosti dinosaura podle délky kroku je <span class="math inline">\(s^{-1}.\)</span></td>
+<td>Jednotka derivace rychlosti dinosaura podle délky kroku je <span class="math inline">\(\mathrm s^{-1}.\)</span></td>
+<td>Špatně je font pro zápis jednotky. Úmysl byl zapsat převrácenou hodnotu sekundy, ale zapsána je převrácená hodnota dráhy. Fyzikální jednotky se nepíšou matematickou kurzívou, ta je vyhrazena pro proměnné. Přepínáme do <strong>textového fontu</strong> příkazem <code>\mathrm</code>.</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Jednotka derivace rychlosti dinosaura podle délky kroku je <span class="math display">\[\mathrm s^{-1}.\]</span></td>
+<td>Jednotka derivace rychlosti dinosaura podle délky kroku je <span class="math inline">\(\mathrm s^{-1}.\)</span></td>
+<td>Špatně je umístění vzorce s jednotkou na samostatný řádek. Velmi krátké vzorce si umístění na <strong>samostatný řádek</strong> zaslouží jenom vyjímečně. Napříkad pokud vzorec potřebujeme očíslovat. Krátké matematické výrazy píšeme do textu odstavce.</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Derivace rychlosti dinosaura podle délky kroku je: <span class="math display">\[\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.\]</span></td>
+<td>Derivace rychlosti dinosaura podle délky kroku je <span class="math display">\[\frac{\mathrm dv}{\mathrm dl}=1.336 l^{0.67}.\]</span></td>
+<td>Špatně je použití dvojtečky. Snažíme se o co nejhladší začlenění matematických výrazů do textu. Kdyby místo vzorce bylo slovo, tak taky žádnou <strong>dvojtečku nepoužíváme</strong>. Proto není potřeba ji psát ani v situaci, kdy je místo slova vzorec. Co není potřeba psát a nepřispívá k čitelnosti, to ani nepíšeme. (Podobně jako tečka za větou, pravidlo nemusí platit v jiných jazycích a při speciálních požadavcích typografa.)</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Z Buckinghamova II teorému vyplývá pro kužel s daným úhlem u vrcholu vztah mezi objemem <span class="math inline">\(V\)</span> a výškou <span class="math inline">\(h\)</span> ve tvaru <span class="math display">\[V = kh^3.\]</span></td>
+<td>Pro kužel s daným úhlem u vrcholu je objem <span class="math inline">\(V\)</span> úměrný třetí mocnině výšky <span class="math inline">\(h\)</span>, tj. platí <span class="math display">\[V = kh^3\]</span> pro vhodnou konstantu <span class="math inline">\(k\)</span>.</td>
+<td>Špatně je název věty, v názvu není římská dvojka, ale velké řecké písmeno “pí”. Obecně platí, že ve vlastních textech nepoužíváme informace, o kterých nejsme přesvědčeni, že jsou správně. Pokud si například nejsme jisti názvem věty, v naprosté většině textů je možné se mu vyhnout.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td><span class="math inline">\(k\)</span> je konstanta úměrnosti.</td>
+<td>Veličina <span class="math inline">\(k\)</span> je konstanta úměrnosti.</td>
+<td>Není vhodné začínat větu matematickým výrazem. Vždy je možné použít formulaci, kdy <strong>věta začíná běžným slovem</strong>. Poté je možné toto slovo napsat s velkým písmenem na začátku a je zcela zřejmé, že zde začíná nová věta.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+
+
+<script>
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageHeight() {
+    var windowHeight
+    if (self.innerHeight) {	// all except Explorer
+      windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowHeight = document.body.clientHeight;
+    }
+    return windowHeight
+  }
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageWidth() {
+    var windowWidth
+    if (self.innerWidth) {	// all except Explorer
+      windowWidth = self.innerWidth;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowWidth = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowWidth = document.body.clientHeight;
+    }
+    return windowWidth
+  }
+
+jQuery('a[href^="http://"]').attr('target','_blank');
+jQuery('img[class!=nofacebox]').css("cursor","zoom-in");
+jQuery('img[class!=nofacebox]').click(function(){
+  jQuery.facebox("<img class='myimg' src='"+jQuery(this).prop('src')+"'>" );
+});
+   jQuery(document).ready(function() {
+     jQuery('a[rel*=facebox]').facebox()
+   })
+
+
+jQuery(document).bind('reveal.facebox', function() { 
+  obrazek=jQuery('#facebox .myimg');
+  width=jQuery(obrazek).width();
+  height=jQuery(obrazek).height();
+  ratio1=getPageHeight()/height*0.94;
+  ratio2=getPageWidth()/width*0.94;
+  ratio=Math.min(ratio1, ratio2);
+  jQuery(obrazek).css("width", width * ratio); // Set new width
+  jQuery(obrazek).css("height", height * ratio);  // S
+  jQuery(obrazek).css("min-width", width * ratio); // Set new width
+  jQuery(obrazek).css("min-height", height * ratio);  // S
+  jQuery(obrazek).css("max-width", width * ratio); // Set new width
+  jQuery(obrazek).css("max-height", height * ratio);  // S
+  jQuery('#facebox').css("left", "10px");
+  jQuery('#facebox').css('left', jQuery(window).width() / 2 - (jQuery('#facebox').width() / 2))
+  jQuery('#facebox').css("top", getPageScroll()[1]+10);
+})
+
+</script>
+
+</html>

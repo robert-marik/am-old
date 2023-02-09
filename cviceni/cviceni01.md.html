@@ -1,0 +1,284 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Parciální derivace</title>
+  <style type="text/css">code{white-space: pre;} body {  font-family: "Open Sans", Sans-Serif;}</style>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+ <script type="text/javascript">
+
+   function otevrit(co)
+   {
+       seed=Math.round(Math.random()*1000);
+       window.open('http://um.mendelu.cz/webwork2/html2xml?&answersSubmitted=0&sourceFilePath='+co+'&problemSeed='+seed+'&displayMode=MathJax&courseID=daemon&userID=demon&course_password=demonek&outputformat=simpleM&language=cs_CZ', '_blank');
+   };
+
+  
+        function cislo(kolik)
+    {
+	if (kolik==-1) {return "00";}
+	if (kolik==0) {return "00";}
+	if (kolik>=13) {return "13";}
+	if (kolik==12) {return "12";}
+	if (kolik==10) {return "10";}
+	if (kolik==11) {return "11";}
+	return "0"+kolik;
+    };
+
+    
+    function    myFunction()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(event.target).next().slideToggle();
+    }
+    
+    function    myFunctionYTB()
+    {
+        //jQuery(".reseni").slideToggle();
+	jQuery(".Ycontainer").slideToggle();
+    }
+    
+    
+ </script>
+
+    <link rel="stylesheet" href="../my.css?ver=2021-01-27" type="text/css" />
+  <link rel="stylesheet" href="cviceni.css?ver=2020-03-20" type="text/css" />
+
+  <style>
+    .Ycontainer, .reseni {display: none;}
+  </style>
+  
+
+  <script>
+window.MathJax = {
+  loader: {load: ['[tex]/physics']},
+  tex: {packages: {'[+]': ['physics']}}
+};
+</script>
+  
+
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+</script>
+
+
+  
+  
+</head>
+<body>
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+  
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu ACTIVE' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>  
+
+
+<div class="container">
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<!--
+  <p>
+<a class="PDF"> Stáhnout ve formátu PDF </a>
+  </p> -->
+<div id="header">
+<h1 class="title">Parciální derivace</h1>
+</div>
+<div id="TOC">
+<ul>
+<li><a href="#výpočet-pomocí-vzorců"><span class="toc-section-number">1</span> Výpočet pomocí vzorců</a></li>
+<li><a href="#parciální-derivace-pocitová-teplota-analyticky"><span class="toc-section-number">2</span> Parciální derivace, pocitová teplota analyticky</a></li>
+<li><a href="#pocitová-teplota-numericky"><span class="toc-section-number">3</span> Pocitová teplota numericky</a></li>
+<li><a href="#parciální-derivace-tepelná-kapacita-dřeva"><span class="toc-section-number">4</span> Parciální derivace, tepelná kapacita dřeva</a></li>
+<li><a href="#veličiny-z-rovnice-vedení-tepla"><span class="toc-section-number">5</span> Veličiny z rovnice vedení tepla</a></li>
+<li><a href="#okrajové-podmínky-pro-rovnici-vedení-tepla"><span class="toc-section-number">6</span> Okrajové podmínky pro rovnici vedení tepla</a></li>
+</ul>
+</div>
+
+<div>
+<button onclick="myFunctionYTB()">Videa on/off</button>
+</div>
+
+
+<blockquote class="anotace"><p class="anotacename">Anotace.</p><p></p>
+<ul>
+<li>V úvodu si osaháme vzorce pro derivování.</li>
+<li>Poté si na poměrně jednoduše představitelném příkladě reálně používaného vzorce pro pocitovou teplotu naformulujeme slovní interpretaci derivace.</li>
+<li>V dalších dvou příkladech si vyzkoušíme numerické derivování. Pokud Vám to však bude připadat jako naivní počítání pomocí trojčlenky a selské logiky, gratuluji. Nic jiného to totiž vlastně není, jenom je to teď pevněji uchopeno pro případné použití v matematických modelech.</li>
+<li>Základním modelem postaveným na parciálních derivacích je rovnice vedení tepla v jedné dimenzi. V tomto případě spád teploty podél jednorozměrné tyče vyvolá tok tepla. Změny v toku tepla v různých místech tyče zase určují, jestli se mezi těmito průřezy teplo kumuluje, ubývá, či zachovává. Tento fakt ovlivní teplotu v daném místě a ta zase má vliv na spád teploty podél tyče. Tím se uzavře jakási zpětná vazba řídící celý proces. Situace je dostatečně jednoduchá na představu, ideální pro popis pomocí parciálních derivací a současně dostatečně obecná, aby se později dala zobecnit je libovolný transportní děj přenášející energii nebo hmotu. Abychom formulaci co nejlépe porozuměli a za možná děsivě vyhlížejícími symboly viděli opravdu vyjádření používaná v tomto odstavci, ještě jednou si rovnici tepla rozebereme. Ať již z hlediska slovní interpretace jednotlivých členů, či z hlediska formulace okrajových podmínek pro zachycení vlivu okolního prostředí.</li>
+</ul>
+</blockquote>
+<h1 id="výpočet-pomocí-vzorců"><span class="header-section-number">1</span> Výpočet pomocí vzorců</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/KykczBw2Kcg"></iframe> </div>
+<p>Vypočtěte následující parciální derivace.</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}(x^2y+2xy^3+x+1)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}(x^2y+2xy^3+x+1)\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}(3x(3-x-2y))\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}(3x(3-x-2y))\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}\sqrt{1-x^2-y^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}\sqrt{1-x^2-y^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}\frac x{x^2+y^2}\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}\frac x{x^2+y^2}\)</span></li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}(x^2y+2xy^3+x+1)=2x\cdot y+2y^3+1+0=2xy+2y^3+1\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}(x^2y+2xy^3+x+1)=x^2+2x\cdot 3y^2+0+0=x^2+6xy\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial x}(3x(3-x-2y))=\pdv x (9x-3x^2-6xy)=9-3\cdot 2x-6\cdot 1\cdot y=9-6x-6y\)</span></li>
+<li><span class="math inline">\(\displaystyle \frac{\partial }{\partial y}(3x(3-x-2y))=3x\frac{\partial }{\partial y}(3-x-2y)=3x(-2)=-6x\)</span> (pozor, ve videu je u tohoto příkladu překlep a zapomněl jsem derivovat člen <span class="math inline">\(\displaystyle 2y\)</span>)</li>
+<li><span class="math inline">\(\displaystyle \pdv {x} \sqrt{1-x^2-y^2}=\pdv {x} (1-x^2-y^2)^{\frac 12}=\frac 12 (1-x^2-y^2)^{-\frac 12} (0-2x-0)=  -\frac {x}{\sqrt{1-x^2-y^2}}\)</span></li>
+<li><span class="math inline">\(\displaystyle \pdv {y} \sqrt{1-x^2-y^2}= -\frac {y} {\sqrt{1-x^2-y^2}}\)</span> (z předchozího výpočtu a symetrie)<br />
+</li>
+<li><span class="math inline">\(\displaystyle \pdv {x} \frac x{x^2+y^2}=\frac{1(x^2+y^2)-x(2x+0)}{(x^2+y^2)^2}=\frac{y^2-x^2}{(x^2+y^2)^2}\)</span> (derivace podílu)</li>
+<li><span class="math inline">\(\displaystyle \pdv{y} \frac x{x^2+y^2}=\pdv {y} x(x^2+y^2)^{-1}=x(-1)(x^2+y^2)^{-2}(0+2y)=-\frac{2xy}{(x^2+y^2)^2}\)</span> (derivace konstantního násobku mocninné funkce s vnitřní složkou)</li>
+</ol>
+</div>
+<a onclick="otevrit('problems/parcialni_derivace/parcialni_derivace.pg');" target="_blank" class="WWotazka">WW-otázka</a>
+<a onclick="otevrit('problems/parcialni_derivace/parcialni_derivace_s_parametrem.pg');" target="_blank" class="WWotazka">WW-otázka</a>
+<a onclick="otevrit('problems/parcialni_derivace/parcialni_derivace_druheho_radu.pg');" target="_blank" class="WWotazka">WW-otázka</a>
+<h1 id="parciální-derivace-pocitová-teplota-analyticky"><span class="header-section-number">2</span> Parciální derivace, pocitová teplota analyticky</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/VdtIj5TGBZE"></iframe> </div>
+<figure>
+<img src="blizzard.jpg" alt="Zdroj: pixabay.com" /><figcaption>Zdroj: pixabay.com</figcaption>
+</figure>
+<p>Kanadský empirický vzorec pro pocitovou teplotu v zimě (wind chill factor) je nesmírně důležitý vzorec, který v drsných severských podmínkách rozhoduje o přežití. Je založen na tom, že pocitově je teplota vnímána i podle intenzity větru. Tento odjakživa známý efekt byl v roce 2001 proměřen a původní vzorec z roku 1961 byl nahrazen vzorcem <span class="math display">\[
+W(T,v) = 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},
+\]</span> kde <span class="math inline">\(\displaystyle W\)</span> a <span class="math inline">\(\displaystyle T\)</span> jsou pocitová teplota a naměřená teplota (obě ve stupních Celsia) a <span class="math inline">\(\displaystyle v\)</span> je rychlost větru (v km/hod).</p>
+<p>Uvažujte situaci, kdy teplota je <span class="math inline">\(\displaystyle -11.0\,{}^\circ\!\text{C}\)</span> a rychlost větru <span class="math inline">\(\displaystyle 26 \,\text{km/hod}\)</span>.</p>
+<p>Určete parciální derivace pocitové teploty podle skutečné teploty a podle rychlosti větru (včetně jednotky) a výsledky interpretujte slovně.</p>
+<p><em>Další informace: Wikipedia a Wind chill.</em></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Dosazením do vzorce dostáváme <span class="math inline">\(\displaystyle W(-11,26)=-20.212\,{}^\circ\!\text{C}\)</span>. Derivováním dostáváme <span class="math display">\[\begin{aligned}\frac{\partial W}{\partial T}(T,v)&amp;=0.6215+0.3965 v^{0.16},\\
+\frac{\partial W}{\partial v}(T,v)&amp;=-11.37\times 0.16 v^{-0.84}+0.3965 \times 0.16 Tv^{-0.84}
+\end{aligned}
+\]</span> a po dosazení <span class="math display">\[\begin{aligned}\frac{\partial W}{\partial T}(-11,26)&amp;=1.289,\\
+\frac{\partial W}{\partial v}(-11,26)&amp;=-0.163 \,{}^\circ\!\text{C}\, /(\mathrm{km}\, \text{hod}^{-1})=-0.163 \,{}^\circ\!\text{C}\, \text{hod} \,\mathrm{km}^{-1}.
+\end{aligned}
+\]</span> Za dané teploty a rychlosti větru je pocitová teplota <span class="math inline">\(\displaystyle -20.2\)</span> stupňů Celsia. Nárůst teploty o jeden stupeň způsobí nárůst pocitové teploty přibližně o <span class="math inline">\(\displaystyle 1.3\)</span> stupně. Tedy změna teploty se projeví na pocitové teplotě <span class="math inline">\(\displaystyle 1.3\)</span>-násobkem. K každou změnu teploty vnímáme o třicet procent intenzivněji.</p>
+<p>Hodnota derivace podle rychlosti větru říká, že zesílení větru o jeden kilometr za hodinu způsobí snížení pocitové teploty přibližně o <span class="math inline">\(\displaystyle 0.16\)</span> stupně.</p>
+</div>
+<h1 id="pocitová-teplota-numericky"><span class="header-section-number">3</span> Pocitová teplota numericky</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/J0pTAxDwZj8"></iframe> </div>
+<p><img src="air-temperature.jpg" /></p>
+<p>Běžný kanaďan nenosí kalkulačku a nepočítá pocitovou teplotu z minulého příkladu pomocí výše uvedeného vzorce, ale má tabulku jako je na obrázku. Nám tato tabulka poslouží jako model funkce dvou proměnných zadané funkčními hodnotami v konečném počtu bodů.</p>
+<ol type="1">
+<li>Vypočtěte pomocí centrální diference parciální derivaci <span class="math inline">\(\displaystyle \frac {\partial W}{\partial v}\)</span> pro teplotu <span class="math inline">\(\displaystyle -15^\circ\mathrm C\)</span> a rychlost větru <span class="math inline">\(\displaystyle 40\,\mathrm{km}\,\mathrm{hod}^{-1}\)</span> a interpretujte výsledek slovně.</li>
+<li>Pocitová teplota <span class="math inline">\(\displaystyle W\)</span> je lineární v proměnné <span class="math inline">\(\displaystyle T\)</span>. Proto derivace <span class="math inline">\(\displaystyle \frac{\partial W}{\partial T}\)</span> nezávisí na <span class="math inline">\(\displaystyle T\)</span>. Jak se tato skutečnost odrazí v tabulce?</li>
+<li>Odhadněte z tabulky, zda vliv větru klesá nebo roste s rychlostí větru. Potvrďte svou hypotézu analytickým výpočtem parciální derivace <span class="math inline">\(\displaystyle \frac{\partial W}{\partial v}\)</span> a vysvětlete fyzikálně.</li>
+</ol>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li><span class="math display">\[\frac {\partial W}{\partial v}(T=-15,v=40)\approx\frac{-29-(-26)}{50-30}\frac{{}^\circ \mathrm C}{\mathrm{km}\,\mathrm{hod}^{-1}}=-0.15^\circ \mathrm C/(\mathrm{km}\,\mathrm{hod}^{-1})\]</span> Za podmínek, kde je <span class="math inline">\(\displaystyle 15\)</span> stupňů pod nulou a vane vítr o rychlosti <span class="math inline">\(\displaystyle 40\)</span> kilometrů za hodinu každé další zesílení větru o kilometr za hodinu sníží pocitovou teplotu přibližně o patnáct setin stupně.</li>
+<li>Neformálně: V rámci každého řádku jsou stejně velké skoky. Přesněji: V každém řádku je přibližně aritmetická posloupnost, data se mění odečtením pevné konstanty. Případné fluktuace od tohoto pravidla jsou způsobeny zaokrouhlením.</li>
+<li>Pokud se díváme na data po sloupcích, s rostoucí silou větru jsou skoky menší a proto parciální derivace podle větru s rostoucí rychlostí větru klesá. To potvrzuje i analytický výpočet, protože u rychlosti je mocnina menší než jedna a ta se po zderivování změní na zápornou mocninu. Tím se změní charakter závislosti na rychlosti větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je vítr silný, nestačí se tato mikrovrstva vytvořit ani v minimální míře a proto je jedno, jestli fouká hodně nebo ještě více.</li>
+</ol>
+</div>
+<h1 id="parciální-derivace-tepelná-kapacita-dřeva"><span class="header-section-number">4</span> Parciální derivace, tepelná kapacita dřeva</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/PjPYisnQa0A"></iframe> </div>
+<figure>
+<img src="wood_heat_capacity.png" alt="Zdroj: Wood handbook" /><figcaption>Zdroj: Wood handbook</figcaption>
+</figure>
+<p>Vypočtěte a slovně interpretujte parciální derivaci měrné tepelné kapacity dřeva <span class="math inline">\(\displaystyle c\)</span> podle teploty <span class="math inline">\(\displaystyle T\)</span> a podle obsahu vody MC <span class="math inline">\(\displaystyle w\)</span> v bodě o hodnotě MC 12% a teplotě <span class="math inline">\(\displaystyle 27^\circ\mathrm C\)</span>.</p>
+<p>Pro obě derivace použijte dopřednou diferenci (v tabulce nejsou ekvidistantní kroky MC).</p>
+<p><em>Poznámka:</em> Kromě dopředné diference je možné uvažovat ještě zpětnou diferenci definovanou vztahem <span class="math display">\[\frac{f(x)-f(x-h)}{h},\]</span> což je vlastně dopředná diference na předchozím intervalu. Ukažte, že centrální diference je průměrem dopředné a zpětné diference.</p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p><span class="math display">\[\pdv{c}{T}=\frac{1.8-1.7}{47-27}=0.005 \,\mathrm{kJ}\,\mathrm{kg}^{-1}\mathrm{K}^{-2}=5 \,\mathrm{J}\,\mathrm{kg}^{-1}\mathrm{K}^{-2}\]</span> Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané teploty a vlhkosti při zvýšení teploty o jeden stupeň Celsia (o jeden Kelvin).</p>
+<p><span class="math display">\[\pdv{c}{w}=\frac{1.9-1.7}{20-12}=0.025 \,\mathrm{kJ}\,\mathrm{kg}^{-1}\mathrm{K}^{-1}(\text{procento MC})^{-1}=25 \,\mathrm{J}\,\mathrm{kg}^{-1}\mathrm{K}^{-1}(\text{procento MC})^{-1}\]</span> Tato hodnota udává, o kolik vzroste měrná tepelná kapacita dřeva dané teploty a vlhkosti při zvýšení obsahu vody o jedno procento.</p>
+<p>Průměr dopředné a zpětné diference: <span class="math display">\[
+  \frac{\frac{f(x)-f(x-h)}{h} + \frac{f(x+h)-f(x)}{h}}{2}=
+  \frac{\frac{f(x)-f(x-h)+f(x+h)-f(x)}{h}}{2}=
+\frac{f(x+h)-f(x-h)}{2h}
+\]</span></p>
+</div>
+<h1 id="veličiny-z-rovnice-vedení-tepla"><span class="header-section-number">5</span> Veličiny z rovnice vedení tepla</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/YvAFRS8zeos"></iframe> </div>
+<p>V případech, kdy je při tepelné výměně nutno uvažovat vedení tepla (vysoké Biotovo číslo), modelujeme změnu teploty podle rovnice vedení tepla, kterou jsme na přednášce odvodili pro jednorozměrný případ ve tvaru <span class="math display">\[\varrho c \frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\Bigl(\lambda\frac{\partial T}{\partial x}\Bigr).\]</span> Typickým případem vedení tepla v jedné dimenzi je vedení tepla ve stěně. <strong>Důležitou vlastností rovnice je, že je stále stejná, ať teplo teče doleva nebo doprava, ať způsobuje ohřev nebo ochlazování, ať tok tepla sílí nebo slábne. Tyto skutečnosti přirozeně rozlišujeme znaménkem. Abychom dokázali úlohu správně zadat nebo abychom dokázali správně interpretovat řešení, je nutné znaménka správně interpretovat a proto si vše ukážeme v následujícím příkladu.</strong></p>
+<p>Uvažujme jednorozměrnou úlohu s vedením tepla. Osa <span class="math inline">\(\displaystyle x\)</span> směřuje doprava, teplota v bodě <span class="math inline">\(\displaystyle x\)</span> a čase <span class="math inline">\(\displaystyle t\)</span> je <span class="math inline">\(\displaystyle T(x,t)\)</span> ve stupních Celsia. Tok tepla v čase <span class="math inline">\(\displaystyle t\)</span> a v bodě <span class="math inline">\(\displaystyle x\)</span> je <span class="math inline">\(\displaystyle q(x,t)\)</span> v joulech za sekundu. Kladný tok je ve směru osy <span class="math inline">\(\displaystyle x\)</span>. Podle Fourierova zákona je <span class="math display">\[q=-\lambda \frac{\partial T}{\partial x}.\]</span></p>
+<p>Tyč má teplotu <span class="math inline">\(\displaystyle 0\,^{\circ}\mathrm{C}\)</span>, pravý konec udržujeme na této teplotě, levý konec ohříváme na <span class="math inline">\(\displaystyle 20\,^{\circ}\mathrm{C}\)</span> a udržujeme na této teplotě. Ve zbytku tyče (stěny) se postupně nastolí rovnováha vlivem vedení tepla.</p>
+<p>Vyjádřete následující veličiny a určete jejich znaménko.</p>
+<ol type="1">
+<li>Rychlost, s jakou v daném místě a čase roste teplota jako funkce času.</li>
+<li>Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle roste teplota směrem doprava.</li>
+<li>Rychlost, jak rychle klesá teplota jako funkce polohy, tj. směrem doprava.</li>
+<li>Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy.</li>
+<li>Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy.</li>
+</ol>
+<p><em>Tato úloha je jednoduchá a vlastně není na počítání, ale jenom na ujasnění si toho, co derivace vyjadřují a kdy jsou kladné a kdy záporné. To je nutné znát při zadávání modelů do numerických simulací. Výpočet za člověka udělají počítače, ale slovní interpretaci ani kontrolu, že je model relevantní a nemá popletená znaménka, za člověka nikdo neudělá.</em></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<ol type="1">
+<li>Rychlost, s jakou v daném místě a čase roste teplota jako funkce času je <span class="math inline">\(\displaystyle \frac {\partial T}{\partial t}\)</span> a tato derivace je v každém bodě kladná, protože tyč se ohřívá. Po čase se asi ustálí rovnováha a derivace bude nulová, teplota se přestane měnit. Měříme ve stupních celsia za sekundu. <span class="math inline">\(\displaystyle \left[\frac {\partial T}{\partial t}\right]={}^\circ\mathrm{C}\,\mathrm{s}^{-1}\)</span></li>
+<li>Rychlost, s jakou v daném místě a čase roste teplota jako funkce polohy, tj. jak rychle se roste teplota směrem doprava, je <span class="math inline">\(\displaystyle \frac {\partial T}{\partial x}\)</span> a tato derivace je záporná, protože vlevo je horký konec a teplota směrem doprava klesá. Měříme ve stupních celsia na metr. <span class="math inline">\(\displaystyle \left[\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}\)</span></li>
+<li>Rychlost, jak rychle se klesá teplota jako funkce polohy, tj. směrem doprava, je <span class="math inline">\(\displaystyle -\frac {\partial T}{\partial x}\)</span> a tato veličina je kladná, protože vlevo je horký konec a teplota směrem doprava opravdu klesá. Měříme ve stupních celsia na metr. <span class="math inline">\(\displaystyle \left[-\frac {\partial T}{\partial x}\right]={}^\circ\mathrm{C}\,\mathrm{m}^{-1}\)</span></li>
+<li>Rychlost, se kterou roste (směrem doprava) tok tepla jako funkce polohy je <span class="math inline">\(\displaystyle \frac {\partial q}{\partial x}\)</span>. Teplo teče doprava a přitom se spotřebovává, protože se ohřívá tyč. Proto tok klesá a parciální derivace je záporná. Měříme v joulech za sekundu na metr. <span class="math inline">\(\displaystyle \left[\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}\)</span></li>
+<li>Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy je <span class="math inline">\(\displaystyle -\frac {\partial q}{\partial x}\)</span> a tato veličina je kladná, což plyne z předchozího bodu a z toho, že jsme změnili znaménko. Měříme v joulech za sekundu na metr. <span class="math inline">\(\displaystyle \left[-\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}\)</span> Tato veličina udává, kolik tepla se za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže ``ztratit’’, ale použije se na zvýšení teploty, což je vyjádřeno právě v rovnici vedení tepla.</li>
+</ol>
+</div>
+<h1 id="okrajové-podmínky-pro-rovnici-vedení-tepla"><span class="header-section-number">6</span> Okrajové podmínky pro rovnici vedení tepla</h1>
+<div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/8OMwzxEZSvU"></iframe> </div>
+<p>K modelu stěny pomocí rovnice vedení tepla je ještě nutné přidat podmínky související s počátečním stavem (počáteční podmínky) a s chováním na okrajích (okrajové podmínky).</p>
+<p>Nechť stěna je na intervalu <span class="math inline">\(\displaystyle x\in[0,L]\)</span>, <span class="math inline">\(\displaystyle x=0\)</span> je vnitřní okraj a <span class="math inline">\(\displaystyle x=L\)</span> je vnější okraj. Výraz <span class="math inline">\(\displaystyle -k\frac{\partial T}{\partial x}\)</span> udává tok tepla ve směru osy <span class="math inline">\(\displaystyle x\)</span>. Tok ve směru osy <span class="math inline">\(\displaystyle x\)</span> má kladné znaménko. Naformulujte okrajové podmínky v následujících scénářích.</p>
+<ol type="1">
+<li>Z venku dokonale izolovaná stěna. Na hranici <span class="math inline">\(\displaystyle x=L\)</span> nedochází k toku tepla.</li>
+<li>Vnitřní část stěny je udržovaná na konstantní teplotě <span class="math inline">\(\displaystyle T=23^\circ \mathrm C\)</span>.</li>
+<li>Stěna je zvenku osvětlená a zahřívaná Sluncem. Na vnější hranici je konstantní tok tepla směrem do stěny.</li>
+<li>Stěna je zvenku ochlazována prouděním vzduchu. Tok tepla mezi stěnou a okolím je úměrný rozdílu teplot stěny a okolí.</li>
+<li>Stěna je zevnitř ohřívána prouděním vzduchu od radiátorů. Tok tepla mezi stěnou a okolím je úměrný rozdílu teplot stěny a okolí.</li>
+</ol>
+<p><em>Zpracováno podle Cengel: Mass and heat transfer.</em></p>
+<p><em>Opět úloha jednoduchá co není na počítání, ale jenom na ujasnění si toho, jak dodáme do modelu informaci o tom, jakým podmínkám je náš studovaný systém vystaven. I toto je nutné znát při zadávání modelů do numerických simulací. I zde platí, že výpočet za člověka udělají počítače, ale kontrolu, že je model relevantní a modeluje opravdu to co chceme, za člověka nikdo neudělá.</em></p>
+<button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
+<p>Je-li podmínka na teplotu, figuruje v matematické formulaci <span class="math inline">\(\displaystyle T\)</span> vypočtená v bodě <span class="math inline">\(\displaystyle x=0\)</span> nebo <span class="math inline">\(\displaystyle x=L\)</span> podle toho, jedná-li se o vnitřní nebo vnější část stěny. <span class="math inline">\(\displaystyle T\)</span> je funkce polohy, tj. <span class="math inline">\(\displaystyle T=T(x).\)</span> Je-li podmínka na tok, figuruje v matematické formulaci tok ve tvaru <span class="math inline">\(\displaystyle -k\frac{\partial T}{\partial x}\)</span>, opět vypočtená v jednom z krajních bodů.</p>
+<ol type="1">
+<li><span class="math inline">\(\displaystyle -k\frac{\partial T}{\partial x}(L)=0\)</span></li>
+<li><span class="math inline">\(\displaystyle T(0)=23\)</span></li>
+<li><span class="math inline">\(\displaystyle -k\frac{\partial T}{\partial x}(L)=-Q\)</span>, kde <span class="math inline">\(\displaystyle Q\)</span> je teplo za jednotku času dodané ze Slunce. Jedná se výkon Slunce dopadající na stěnu vynásobený koeficientem absorbce, protože část tepelného výkonu se odráží. Záporné znaménko je proto, že teplo teče do stěny, tj. proti směru osy <span class="math inline">\(\displaystyle x\)</span>.</li>
+<li><span class="math inline">\(\displaystyle -k\frac{\partial T}{\partial x}(L)=h(T(L)-T_{\text{okolí}})\)</span>, kde <span class="math inline">\(\displaystyle h\)</span> je koeficient přestupu tepla.</li>
+<li><span class="math inline">\(\displaystyle -k\frac{\partial T}{\partial x}(0)=h(T_{\text{místnost}}-T(0))\)</span>, kde <span class="math inline">\(\displaystyle h\)</span> je koeficient přestupu tepla.</li>
+</ol>
+<p>Všimněte si, že poslední dvě podmínky se liší znaménkem u veličiny <span class="math inline">\(\displaystyle T\)</span>. To proto, že v jednom případě je kladný směr toku tepla do materiálu a jednou z materiálu. Pokud chceme mít popis jednotný, nebo nezávislý na zvolené souřadné soustavě, formulujeme podmínky pro tok tepla ven z materiálu. Tento tok získáme tak, že tok tepla vynásobíme skalárně s jednotkovým vektorem směřujícím ven z materiálu kolmo na jeho povrch. V tomto případě by pro tok ze stěny do místnosti bylo <span class="math inline">\(\displaystyle k\frac{\partial T}{\partial x}(0)=h(T-T_{\text{místnost}})\)</span>. Tento tok by byl záporný, protože ve skutečnosti teplo uniká z místnosti stěnou ven.</p>
+</div>
+
+
+</div>  <!-- container -->
+
+<!--  <div class="links"><a href="cviceni00.md.html">Začátek</a><a class="prev-a">Předchozí cvičení</a><a class="next-a">Další cvičení</a><a href="cviceni13.md.html">Konec</a></div> -->
+
+<div class='menu-obalka'>
+    <a class='menu menu4' href='../../'>Aplikovaná matematika</a><a class='menu menu4' href='../'>Přednáška</a><a class='menu menu4 ACTIVE' href='cviceni00.md.html'>Cvičení</a><a class='menu menu4' href='https://um.mendelu.cz/'>WeBWorK</a>
+</div>
+
+<div class='menu-obalka'><a class='menu' href='cviceni00.md.html'>0</a><a class='menu ACTIVE' href='cviceni01.md.html'>1</a><a class='menu' href='cviceni02.md.html'>2</a><a class='menu' href='cviceni03.md.html'>3</a><a class='menu' href='cviceni04.md.html'>4</a><a class='menu' href='cviceni05.md.html'>5</a><a class='menu' href='cviceni06.md.html'>6</a><a class='menu' href='cviceni07.md.html'>7</a><a class='menu' href='cviceni08.md.html'>8</a><a class='menu' href='cviceni09.md.html'>9</a><a class='menu' href='cviceni10.md.html'>10</a><a class='menu' href='cviceni11.md.html'>11</a></div>
+
+<div class="footer">
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0; width:81px; display:inline-block" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>. Built with <a href="https://www.pandoc.org" target="_blank" rel="noopener">Pandoc</a>
+</div>
+
+
+  <script type="text/javascript">
+
+//jQuery(document).ready(function(){
+    //var current_path = window.location.pathname.split('/').pop();
+	//var d=Number(current_path[7]+current_path[8]);
+	//var next=d+1;
+	//var prev=d-1;
+
+        //nextnum=cislo(next);
+        //prevnum=cislo(prev);
+	//var nextlink="cviceni"+nextnum+".md.html";
+        //var prevlink="cviceni"+prevnum+".md.html";
+
+    //jQuery('.PDF').prop('href', "http://user.mendelu.cz/marik/am/Cviceni_"+d+".pdf");
+    //jQuery('.prev-a').prop('href', prevlink);
+    //jQuery('.next-a').prop('href', nextlink);
+//});
+  </script>
+  
+</body>
+</html>

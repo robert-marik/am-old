@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="cs" xml:lang="cs">
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>  
+
+<!--
+<script type="text/javascript" src="/fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+-->
+
+<link href="../facebox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="../facebox/facebox.js" type="text/javascript"></script>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <meta name="author" content="Robert Mařík" />
+  <meta name="date" content="2020-01-01" />
+  <title>Křivkový integrál</title>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="..//styles/slidy.css" />
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+   href="../my.css" />
+
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+          var TEX = MathJax.InputJax.TeX;
+          var PREFILTER = TEX.prefilterMath;
+          TEX.Augment({
+            prefilterMath: function (math,displaymode,script) {
+              math = "\\displaystyle{"+math+"}";
+              return PREFILTER.call(TEX,math,displaymode,script);
+            }
+          });
+        });
+        </script>
+  <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+
+
+  <script src="..//scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div class="slide titlepage">
+  <h1 class="title">Křivkový integrál</h1>
+  <p class="author">
+Robert Mařík
+  </p>
+  <p class="date">2020</p>
+
+<br>
+<small>
+<p style='text-align:left;'>
+Pokud se matematické výrazy nezobrazují korektně, nechejte znovunačíst stránku (Reload, Crtl+R, F5) nebo použijte <a href="index.html">html verzi</a> prezentace.
+</p>
+<p style='text-align:left;'>
+Ovládání: Prezentaci je možno posouvat šipkami nebo mezerníkem. Klávesa "S" zmenšuje písmo, "B" zvětšuje (smaller/bigger). Klávesa "C" zobrazí obsah (content). Klávesou "A" se přepíná režim prezentace/html stránka.
+Kliknutím na obrázek se obrázek zvětší na vertikální rozměr okna. Pro zavření zvětšeniny klikněte do zašedlého zbytku stránky  nebo použijte klávesu "ESC".
+</p>
+</small>
+<br><br>
+<small>
+<p style='text-align:left;'>
+  Slidy jsou doprovodným materiálem k předáškám. Některá tvrzení platí
+  pouze za předpokladů dostatečné spojitosti funkcí nebo jejich
+  derivací. V jednoduchých technických aplikacích bývají tyto
+  předpoklady splněny a proto je nezmiňujeme. Přesná formulace vět je
+  v učebním textu a v odborné literatuře.
+</p>  
+</small>
+
+</div>
+<div id="křivkový-integrál" class="slide section level1">
+<h1>Křivkový integrál</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="krivkovy_integral_prvniho_druhu_1.png" alt="" />
+<p class="caption">Křivkový integrál prvního druhu</p>
+</div>
+<div class="figure">
+<img src="krivkovy_integral_druheho_druhu_1.png" alt="" />
+<p class="caption">Křivkový integrál druhého druhu</p>
+</div>
+</div>
+<p>Jedná se o rozšíření Riemannova integrálu, kdy množinou přes kterou integrujeme není úsečka, ale křivka. Pro jednoduchost budeme uvažovat dvourozměrnou křivku v rovině <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>.</p>
+<p>Rozeznáváme dva druhy křivkových integrálů. První z nich používáme, pokud pracujeme se skalárními veličinami, jako například kvadratický moment. Druhý z nich používáme pokud pracujeme ve vektorovém poli, například při výpočtu práce vykonané po křivce.</p>
+</div>
+<div id="parametrické-rovnice-křivky" class="slide section level1">
+<h1>Parametrické rovnice křivky</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="parametricke_krivky.png" alt="" />
+<p class="caption">Dvě různé parametrizace jednotkové kružnice</p>
+</div>
+</div>
+<p>Nejprve představíme matematický aparát pro popis křivek. Rovinné křivky nejčastěji popisujeme vektorovou funkcí jedné proměnné, resp. dvojicí skalárních funkcí.</p>
+<ul>
+<li><span class="math inline">\(\vec r: \mathbb{R}\to \mathbb{R}^2\)</span></li>
+<li><span class="math inline">\(\vec r(t)=[\varphi(t),\psi(t)]=\varphi(t) \vec i + \psi(t)\vec j\)</span>, <span class="math inline">\(t\in [\alpha,\beta]\)</span></li>
+<li>Skalární popis křivky: <span class="math display">\[C=\begin{cases}
+  x=\varphi(t)\\y=\psi(t), \quad t\in[\alpha,\beta]
+\end{cases}\]</span></li>
+<li>Graf křivky dostaneme tak, že pro každé <span class="math inline">\(t\)</span> z intervalu <span class="math inline">\([\alpha, \beta]\)</span> kreslíme ve 2D bod <span class="math inline">\([\varphi(t), \psi(t)]\)</span>.</li>
+<li>Funkce <span class="math inline">\(\varphi(t)\)</span>, <span class="math inline">\(\psi(t)\)</span> nazýváme <em>parametrizace</em> křivky <span class="math inline">\(C\)</span></li>
+<li>Pro danou křivku <span class="math inline">\(C\)</span> v rovině <span class="math inline">\(xy\)</span>, nejsou její parametrické rovnice dány jednoznačně. <a href="https://sagecell.sagemath.org/?z=eJxtkcFugzAMhu9IvEMEhyRbpC1o2i3nXfMERR5Nu4iQoGAx0qcfgY5DVd8s-_v_3_IMkdGFJMrLoizquiYxzN52howxkD7auU9l4ZUsi4UhV12YGJ78up1yO1l_b3d4MLedHCHCYDCWBQ7WCxxgUe-CNS-j5Scm33Zkg55UnmipRheQZVvBUBw6XBBnrsafWwffximaN3L-ldDydYPSE6gLLkRFoznTR4V0V5h-wi_TUpCLvU72ZhT7FB8rihadUdVXhEsi2Y4ASSzxartCN-r_XNu1m_-eOss-xDhMGgHTaDpsI6ANSh4m-pDqYX8AVPwPID58GQ==&amp;lang=sage">Nakreslit online.</a></li>
+<li>Parametrizace kružnice, úsečky a grafu funkce jedné proměnné: viz <a href="http://user.mendelu.cz/marik/am/cheatsheet.pdf">seznam vzorců</a></li>
+</ul>
+</div>
+<div id="křivkový-integrál-prvního-druhu" class="slide section level1">
+<h1>Křivkový integrál prvního druhu</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="krivkovy_integral_prvniho_druhu_1.png" alt="" />
+<p class="caption">Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a></p>
+</div>
+</div>
+<p>Pokud uvažujeme drát o lineární hustotě <span class="math inline">\(f\)</span> a délce <span class="math inline">\(s\)</span>, je hmotnost drátu rovna součinu <span class="math inline">\(m=fs\)</span>. Uvažujme drát, který není homogenní, leží podél rovinné křivky <span class="math inline">\(C\)</span> a jeho specifická hmotnost se mění a bodě <span class="math inline">\((x,y)\)</span> je dána funkcí <span class="math inline">\(f(x,y)\)</span>. Celkovou hmotnost můžeme odhadnout takto:</p>
+<ul>
+<li>Myšlenkově rozdělíme drát na malé kousíčky a každém z nich odhadneme lineární hustotu konstantou. Můžeme například použít minimální hodnotu hustoty v tomto kousíčku.</li>
+<li>Vynásobením délkou každého kousíčku obdržíme jeho hmotnost a sečtením přes všechny kousky dostaneme dolní odhad pro hmotnost drátu. Tento odhad bude tím přesnější, čím jemnější dělení použijeme.</li>
+<li>Zjemňováním dělení se tyto odhady zpřesňují.</li>
+</ul>
+<p>V limitním procesu, kdy se délka všech kousíčků blíží k nule, dostáváme objekt, který se nazývá <em>křivkový integrál prvního druhu</em>, označuje <span class="math display">\[ \int_C f\;\mathrm{d} s \]</span> a fyzikálně vyjadřuje hmotnost drátu z výše uvažované úlohy. Pokud počáteční a koncový bod křivky <span class="math inline">\(C\)</span> splývají, píšeme též <span class="math display">\[ \oint_C f\;\mathrm{d} s \]</span> a integrál nazýváme <em>integrálem po uzavřené křivce</em>.</p>
+</div>
+<div id="převod-na-riemannův-integrál-rovinná-křivka" class="slide section level1">
+<h1>Převod na Riemannův integrál (rovinná křivka)</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="delkovy_element.png" alt="" />
+<p class="caption">Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky</p>
+</div>
+</div>
+<p>Mějme parametrické rovnice křivky <span class="math inline">\(C\)</span> ve vektorovém tvaru <span class="math display">\[\vec r(t)=\varphi(t) \vec i + \psi(t)\vec j,\]</span> kde <span class="math inline">\(t\in[\alpha,\beta]\)</span>. Derivováním křivky dostaneme <span class="math display">\[\frac{\mathrm{d} \vec r(t)}{\mathrm{d}t}=\varphi&#39;(t) \vec i + \psi&#39;(t)\vec j.\]</span> Výpočtem délky vektoru (a formálním vynásobením výrazem <span class="math inline">\(\mathrm{d}t\)</span>) dále <span class="math display">\[\mathrm{d}s=|\mathrm{d}\vec r(t)|=\sqrt{(\varphi&#39;(t))^2 + (\psi&#39;(t))^2}\mathrm{d}t.\]</span> Tím se křivkový integrál prvního druhu funkce <span class="math inline">\(f(x,y)\)</span> po křivce <span class="math inline">\(C\)</span> transformuje na Riemannův integrál <span class="math display">\[
+\int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t))\sqrt{\varphi^{\prime 2}(t)+\psi^{\prime 2}(t)}\;\mathrm{d} t.
+\]</span></p>
+</div>
+<div id="převod-na-riemannův-integrál-prostorová-křivka" class="slide section level1">
+<h1>Převod na Riemannův integrál (prostorová křivka)</h1>
+<p>Podobně jako v rovině převádíme na Riemannův integrál i křivkový integrál prvního druhu po prostorové křivce <span class="math display">\[
+  C:\quad \varphi(t)\vec i + \psi(t)\vec j + \xi(t) \vec k, \quad t\in[\alpha,\beta].
+\]</span> Délkový element je <span class="math display">\[
+\mathrm{d}s=\sqrt{\varphi^{\prime 2}(t)+\psi^{\prime 2}(t)+\xi^{\prime 2}(t)}\mathrm{dt}
+\]</span> a integrál má tvar <span class="math display">\[ \int_C f\;\mathrm{d} s=\int_\alpha^\beta f(\varphi(t),\psi(t),\xi(t))\sqrt{\varphi^{\prime 2}(t)+\psi^{\prime 2}(t)+\xi^{\prime 2}(t)}\;\mathrm{d} t. \]</span></p>
+</div>
+<div id="aplikace-křivkového-integrálu-prvního-druhu" class="slide section level1">
+<h1>Aplikace křivkového integrálu prvního druhu</h1>
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+</style>
+<style>
+table, th, td {
+   border: 2px solid green;
+} 
+table {width:97%;}
+td {padding:10px}
+tr td:first-child {color:green; background: #E9E9E9;}
+table {
+    border-collapse: collapse;
+}
+
+th {
+    background-color: green;
+    color: white;
+    border-color: gray;
+}
+
+th {text-align: center;}
+</style>
+<table>
+<colgroup>
+<col width="28%" />
+<col width="71%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Funkce <span class="math inline">\(f(x,y)\)</span></th>
+<th>Integrál <span class="math inline">\(\int_C f\;\mathrm{d}s\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(1\)</span></td>
+<td>délka křivky <span class="math inline">\(C\)</span></td>
+</tr>
+<tr class="even">
+<td>lineární hustota <span class="math inline">\(\tau(x,y)\)</span></td>
+<td>hmotnost <span class="math inline">\(m_C\)</span> křivky <span class="math inline">\(C\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\frac {1}{m_C}[x\tau(x,y),y\tau(xy)]\)</span></td>
+<td>souřadnice těžiště křivky <span class="math inline">\(C\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(x^2\tau(x,y)\)</span></td>
+<td>moment setrvačnosti křivky <span class="math inline">\(C\)</span> vzhledem k ose <span class="math inline">\(y\)</span></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(y^2\tau(x,y)\)</span></td>
+<td>moment setrvačnosti křivky <span class="math inline">\(C\)</span> vzhledem k ose <span class="math inline">\(x\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\rho^2(x,y)\tau(x,y)\)</span></td>
+<td>moment setrvačnosti křivky <span class="math inline">\(C\)</span> vzhledem k obecné ose, kde <span class="math inline">\(\rho(x,y)\)</span> je vzdálenost bodu <span class="math inline">\([x,y]\)</span> od osy otáčení.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="vlastnosti-křivkového-integrálu-prvního-druhu" class="slide section level1">
+<h1>Vlastnosti křivkového integrálu prvního druhu</h1>
+<blockquote class="veta"><p class="vetaname">Věta (nezávislost na zvolené parametrizaci).</p><p> Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci křivky <span class="math inline">\(C\)</span>. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.</p>
+</blockquote>
+<blockquote class="veta"><p class="vetaname">Věta (linearita).</p><p> Pro funkce <span class="math inline">\(f\)</span> a <span class="math inline">\(g\)</span> a konstantu <span class="math inline">\(k\)</span> platí následující. <span class="math display">\[
+\begin{aligned}
+\int_C f+g\;\mathrm{d}s &amp; = \int_C f\;\mathrm{d}s + \int_C g\;\mathrm{d}s \\
+\int_C kf\;\mathrm{d}s &amp; = k\int_C f\;\mathrm{d}s\\
+\end{aligned}
+\]</span></p>
+</blockquote>
+<blockquote class="veta"><p class="vetaname">Věta (aditivita vzhledem k integračnímu oboru).</p><p> Je-li křivka <span class="math inline">\(C\)</span> rozdělena na dvě disjunktní (až na koncové body) křivky <span class="math inline">\(C_1\)</span> a <span class="math inline">\(C_2\)</span>, platí <span class="math display">\[
+\int_{C} f\;\mathrm{d}s = \int_{C_1} f\;\mathrm{d}s + \int_{C_2} f\;\mathrm{d}s .
+\]</span></p>
+</blockquote>
+</div>
+<div id="proč-trubky-praskají-podélně" class="slide section level1">
+<h1>Proč trubky praskají podélně?</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="hoop_stress.png" alt="" />
+<p class="caption">Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.</p>
+</div>
+<div class="figure">
+<img src="impregnacni_komora.jpg" alt="" />
+<p class="caption">Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových nádob. Zdroj: J. Dömény.</p>
+</div>
+<div class="figure">
+<img src="popraskane_trubky.jpg" alt="" />
+<p class="caption">Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.</p>
+</div>
+</div>
+<p>Uvažujme natlakovanou válcovou nádobu s tlakem <span class="math inline">\(p\)</span>, výškou <span class="math inline">\(L\)</span>, poloměrem podstavy <span class="math inline">\(r\)</span> a stěnou o tloušťce <span class="math inline">\(t\)</span>.</p>
+<p>Vypočteme namáhání silou v ose, tj. namáhání řezu A. Obsah řezu (vyšrafováno červeně) je <span class="math inline">\(2\pi r t\)</span>. Na dno a víko působí síla <span class="math inline">\(F=p\pi r^2\)</span> a v řezu A kolmém na osu válce je tahové napětí <span class="math display">\[\sigma_{p} = \frac FS=\frac {p\pi r^2}{2\pi rt}=\frac {pr}{2t}.\]</span></p>
+<p>Směrem radiálně od osy se tlaková síla rozkládá na celou plochu pláště válce a v tomto směru je tahové napětí minimální.</p>
+<p>Vypočteme poslední složku přispívající k namáhání pláště válce, obvodové napětí. K tomu musíme vypočítat sílu, která působí po obvodě válce, tj. která se snaží válec roztrhnout v řezu B. Tento řez má obsah (červeně vyznačeno) <span class="math inline">\(2Lt\)</span>. Nejtěžší bude najít celkovou sílu, která od sebe oddaluje dvě poloviny pláště. To je místo, kde zapojíme integrál.</p>
+<p>Křivka vzniklá průmětem poloviny pláště má rovnici <span class="math inline">\(\vec r(t)=r\cos(t)\vec i+r\sin (t)\vec j\)</span>, kde <span class="math inline">\(r\)</span> je poloměr a <span class="math inline">\(t\in\left[-\frac \pi 2,\frac \pi 2\right]\)</span> je úhel mezi spojnicí elementu v bodě <span class="math inline">\((x,y)\)</span> a mezi kladnou částí osy <span class="math inline">\(x\)</span>. Kousek pláště válce odpovídající úseku <span class="math inline">\(\Delta s\)</span> má obsah <span class="math inline">\(L\Delta s\)</span> a tlaková síla na tento kousek je součin tlaku a obsahu, tj. <span class="math display">\[\Delta F=pS=p L\Delta s.\]</span> Směr je kolmý k plášti válce a s vodorovnou osou svírá úhel <span class="math inline">\(t\)</span>. Průmět této síly do vodorovného směru je <span class="math display">\[\Delta F_x=pL\Delta s \cos t\]</span> a tyto příspěvky musíme posčítat křivkovým integrálem přes celou křivku. Platí <span class="math inline">\(\mathrm ds=r\mathrm dt\)</span>. Celková síla, která se snaží nádobu roztrhnout podélně je <span class="math display">\[F_x=\int_C pL \cos t \,\mathrm d s
+\int_{-\frac \pi 2}^{\frac \pi 2} pLr \cos t \,\mathrm d t
+=prL [\sin t]_{-\frac \pi 2}^{\frac \pi 2}=prL \left[\sin\frac \pi 2 -\sin\left(-\frac \pi2 \right)\right]=2p rL.\]</span> Povrch na který tato síla působí odpovídá dvěma podélným hranám (červeně na řezu B), tj. má obsah <span class="math inline">\(2Lt\)</span> a napětí je tedy <span class="math display">\[\sigma_{h}=\frac{2pLr}{2Lt}=\frac{pr}t=2\sigma_p.\]</span> Vidíme, že toto napětí je dvojnásobkem napětí v podélné ose.</p>
+<p>Ještě je vhodné ověřit, že svislý průmět, tj . <span class="math display">\[\Delta F_y=pL\Delta s \sin t\]</span> k namáhání nepřispívá, protože <span class="math display">\[F_y=\int_{C} pL \sin t \,\mathrm d s
+=0.\]</span> To však je možné očekávat i ze symetrie.</p>
+<p>Pokud se chcete dozvědět více, zkuste Google a heslo “hoop stress”.</p>
+</div>
+<div id="křivkový-integrál-druhého-druhu" class="slide section level1">
+<h1>Křivkový integrál druhého druhu</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="krivkovy_integral_druheho_druhu_1.png" alt="" />
+<p class="caption">Křivkový integrál druhého druhu. Výška plochy je v každém bodě křivky určena skalárním součinem tečného vektoru jednotkové délky a vektorem zadaného vektorového pole.</p>
+</div>
+</div>
+<p>Pokud působíme na těleso silou <span class="math inline">\(F\)</span> a přemísťujeme toto těleso ve směru působící síly po dráze délky <span class="math inline">\(s\)</span>, <a href="http://cs.wikipedia.org/wiki/Mechanická_práce">konáme práci</a> <span class="math inline">\(W=Fs\)</span>. Pokud přemísťování neprobíhá ve směru působící síly a má-li síla směr <span class="math inline">\(\vec F\)</span> a posunutí <span class="math inline">\(\vec s\)</span>, je práce rovna skalárnímu součinu <span class="math inline">\(\vec F\cdot\vec s\)</span>.</p>
+<p>Předpokládejme, že na těleso působí (obecně nekonstantní) síla <span class="math inline">\(\vec F\)</span> a těleso se pohybuje podél křivky <span class="math inline">\(C\)</span> určené polohovým vektorem <span class="math inline">\(\vec r(t)\)</span>. Pro výpočet práce můžeme použít stejný trik jako u křivkového integrálu prvního druhu. Rozdělíme dráhu na malé kousíčky a v rámci těchto kousíčků považujeme <span class="math inline">\(\vec F\)</span> i <span class="math inline">\(\Delta \vec r\)</span> za konstantu. Tato aproximace bude tím přesnější, čím jemnější dělení použijeme.</p>
+<p>V limitě dostáváme veličinu, která se nazývá <em>křivkový integrál druhého druhu</em> funkce <span class="math inline">\(\vec F\)</span> po křivce <span class="math inline">\(C\)</span> a zapisujeme <span class="math display">\[
+\int_C\vec F\;\mathrm{d}\vec r .\]</span> Je-li <span class="math display">\[ \vec F(x,y)=P(x,y)\vec
+i+Q(x,y)\vec j, \]</span> zapisujeme někdy křivkový integrál ve složkách <span class="math display">\[ \int_C P(x,y)\mathrm{d}
+x+Q(x,y)\mathrm{d} y.  \]</span></p>
+<p>Protože při pohybu tělesa po křivce jedním směrem se práce koná a při pohybu opačným směrem spotřebovává, je nutné, aby křivka figurující v křivkovém integrálu druhého druhu byla orientovaná - tj. abychom prohlásili, který bod je <em>počáteční</em> a který <em>koncový</em>. Vždy budeme předpokládat, že křivka je <em>orientovaná v souladu se svým parametrickým vyjádřením</em>, tj. že počáteční bod křivky odpovídá hodnotě parametru <span class="math inline">\(t=\alpha\)</span> a koncový bod odpovídá hodnotě parametru <span class="math inline">\(t=\beta\)</span>.</p>
+</div>
+<div id="převod-na-riemannův-integrál" class="slide section level1">
+<h1>Převod na Riemannův integrál</h1>
+<div class="obtekat">
+<div class="figure">
+<img src="element_posunuti.png" alt="" />
+<p class="caption">Aproximace posunutí pomocí funkcí z parametrického vyjádření křivky</p>
+</div>
+</div>
+<p>Známe-li parametrické rovnice <span class="math display">\[\vec r = \varphi(t)\vec i + \psi(t) \vec j,\quad t\in[\alpha,\beta],\]</span> křivky <span class="math inline">\(C\)</span>, je možno křivkový integrál druhého druhu funkce <span class="math display">\[\vec F(x,y)=P(x,y)\vec i + Q(x,y)\vec j\]</span> po křivce <span class="math inline">\(C\)</span> zapsat následovně <span class="math display">\[
+\begin{aligned}
+\int_C\vec F\;\mathrm{d}\vec r&amp;=
+\int_\alpha^\beta\Bigl[ P(\varphi(t),\psi(t))\varphi&#39;(t)\\ &amp;\qquad +Q(\varphi(t),\psi(t))\psi&#39;(t)\Bigr]\;\mathrm{d}t
+\end{aligned}
+\]</span></p>
+</div>
+<div id="vlastnosti-křivkového-integrálu-druhého-druhu" class="slide section level1">
+<h1>Vlastnosti křivkového integrálu druhého druhu</h1>
+<blockquote class="veta"><p class="vetaname">Věta (souvislost křivkového integrálu a orientace křivky).</p><p> Změnou orientace křivky křivkový integrál druhého druhu mění znaménko.</p>
+</blockquote>
+<blockquote class="veta"><p class="vetaname">Věta (nezávislost na zvolené parametrizaci).</p><p> Křivkový integrál druhého druhu nezávisí na konkrétní parametrizaci křivky <span class="math inline">\(C\)</span>. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.</p>
+</blockquote>
+<p>Následující vlastnosti jsou stejné jako u křivkového integrálu prvního druhu.</p>
+<blockquote class="veta"><p class="vetaname">Věta (lineatira a aditivita vzhledem k integračnímu oboru).</p><p> Křivkový integrál druhého druhu je lineární vzhledem k funkci a aditivní vzhledem k oboru integrace. Přesněji, pro funkce <span class="math inline">\(\vec F\)</span> a <span class="math inline">\(\vec G\)</span> a konstantu <span class="math inline">\(k\)</span> platí následující. <span class="math display">\[
+\begin{aligned}
+\int_C \vec F+\vec G\;\mathrm{d}\vec {r} &amp; = \int_C \vec F\;\mathrm{d}\vec {r} + \int_C \vec {G}\;\mathrm{d}\vec{r} \\
+\int_C k\vec {F}\;\mathrm{d}\vec{r} &amp; = k\int_C \vec{F}\;\mathrm{d}\vec{r}\\
+\end{aligned}
+\]</span> Je-li křivka <span class="math inline">\(C\)</span> rozdělena na dvě disjunktní (až na koncové body) křivky <span class="math inline">\(C_1\)</span> a <span class="math inline">\(C_2\)</span>, platí <span class="math display">\[
+\int_{C} \vec F\;\mathrm{d}\vec{r} = \int_{C_1} \vec F\;\mathrm{d}\vec{r} + \int_{C_2} \vec F\;\mathrm{d}\vec{r} .
+\]</span></p>
+</blockquote>
+</div>
+<div id="aplikace-křivkového-integrálu-druhého-druhu" class="slide section level1">
+<h1>Aplikace křivkového integrálu druhého druhu</h1>
+<ul>
+<li>Integrál <span class="math display">\[
+\int_C\vec F\;\mathrm{d}\vec r
+\]</span> vyjadřuje <strong>práci</strong> kterou vykoná síla <span class="math inline">\(\vec F\)</span> při přemístění tělesa podél orientované křivky <span class="math inline">\(C\)</span>.</li>
+<li>Je-li křivka <span class="math inline">\(C\)</span> uzavřená, píšeme <span class="math display">\[
+\oint_C\vec F\;\mathrm{d}\vec r.
+\]</span> Fyzikálně se jedná o <strong>práci</strong> kterou vykoná síla <span class="math inline">\(\vec F\)</span> při přemístění tělesa po uzavřené orientované křivce. Tato práce se též nazývá <em>cirkulace vektorového pole po orientované křivce <span class="math inline">\(C\)</span></em>. Pokud je možno v poli zavést potenciální energii a pokud tedy práce závisí jenom na počáteční a koncové poloze, musí tato práce být nulová. To je důsledkem věty kterou si uvedeme později.</li>
+<li>Při odvození křivkového integrálu druhého druhu jako vykonané práce hraje roli vlastně jenom ta složka silového pole, která při posunu ve směru křivky koná práci, tj. složka, která je tečná ke křivce. Pokud použijeme naopak normálovou komponentu, dostaneme veličinu vyjadřující <strong>tok vektorového pole orientovanou křivkou <span class="math inline">\(C\)</span></strong>. Výsledný vzorec vyjadřující tok vektorového pole <span class="math inline">\(\vec F(x,y)=P(x,y)\vec i+Q(x,y)\vec j,\)</span> je <span class="math display">\[
+\int_{C}-Q(x,y)\mathrm{d}x+P(x,y)\mathrm{d}y.
+\]</span></li>
+<li>Je-li množina <span class="math inline">\(\Omega\)</span> “dostatečně pěkná” (např. souvislá, bez děr, s počástech hladkou hranicí <span class="math inline">\(\partial \Omega\)</span> která se nikde neprotíná, detaily uvedeme později u Greenovy věty), potom každý z integrálů <span class="math display">\[\oint_{\partial\Omega}x\mathrm{d}y\qquad\text{a}\qquad\oint_{\partial\Omega}y\mathrm{d}x\]</span> udává (až na případné znaménko) obsah množiny <span class="math inline">\(\Omega\)</span>. Na tomto principu fungují planimetry.</li>
+</ul>
+</div>
+<div id="shrnutí-vlastnosti-křivkových-integrálů" class="slide section level1">
+<h1>Shrnutí: vlastnosti křivkových integrálů</h1>
+<ul>
+<li>Oba integrály jsou <strong>aditivní vzhledem k oboru integrace</strong>. Pokud je nutné při parametrizaci křivku rozdělit na konečný počet navzájem disjunktních částí, můžeme vypočítat integrál na každé části samostatně a výsledky sečíst.<br />
+</li>
+<li>Křivkový integrál prvního ani druhého druhu <strong>nezávisí na konkrétní parametrizaci křivky</strong>.</li>
+<li>Křivkový integrál prvního druhu <strong>nezávisí na orientaci</strong> křivky.</li>
+<li>Křivkový integrál druhého druhu <strong>při změně orientace křivky mění znaménko</strong>.</li>
+</ul>
+</div>
+<div id="steinerova-věta" class="slide section level1">
+<h1>Steinerova věta</h1>
+<div class="sloupce">
+<p>Nechť je dána křivka <span class="math inline">\(C\)</span> s lineární hustotou <span class="math inline">\(\tau(x,y)\)</span>. Nechť křivka <span class="math inline">\(C\)</span> splňuje <span class="math inline">\(\int_C x \tau(x,y)\;\mathrm{d}s=0\)</span>, tj. nechť osa <span class="math inline">\(y\)</span> prochází těžištěm křivky <span class="math inline">\(C\)</span>. Určete moment setrvačnosti křivky vhledem k ose <span class="math inline">\(o\)</span> rovnoběžné s <span class="math inline">\(y\)</span> ve vzdálenosti <span class="math inline">\(d\)</span> od osy <span class="math inline">\(y\)</span>.</p>
+<p><em>Řešení</em> Podle toho zda osa <span class="math inline">\(o\)</span> je nalevo nebo napravo od osy <span class="math inline">\(y\)</span> dostáváme jednu z následujících variant. <span class="math display">\[\begin{aligned}
+J_o&amp;=\int_C(x\pm d)^2\tau \;\mathrm{d}s\\
+&amp;=\int_C(x^2\pm 2xd+d^2)\tau \;\mathrm{d}s\\
+&amp;=\int_C x^2\tau \;\mathrm{d}s \pm 2d\int_C x\tau \;\mathrm{d}s + d^2 \int_C \tau \;\mathrm{d}s.
+\end{aligned}
+\]</span> Na pravé straně vidíme, že prvním členem je moment otáčení vzhledem k ose <span class="math inline">\(y\)</span> <span class="math display">\[J_{yT}=\int_C x^2\tau \;\mathrm{d}s\]</span> a ve třetím členu je obsažena hmotnost křivky <span class="math display">\[m=\int_C \tau \;\mathrm{d}s.\]</span> Dále ze zadání vidíme, že prostřední člen je roven nule. V označení výše náš vztah dostává tvar <span class="math display">\[J_o=J_{yT}+m d^2.\]</span> Tento vztah se nazývá Steinerova věta. Ukazuje, že moment setrvačnosti je nejmenší vzhledem k ose otáční procházející těžišťěm (člen <span class="math inline">\(m d^2\)</span> je vždy nezáporný) a umožňuje přepočet momentu setrvačnosti pro rovnoběžné osy.</p>
+</div>
+</div>
+<div id="závěrečné-informace" class="slide section level1">
+<h1>Závěrečné informace</h1>
+<h2 id="parametrizace-úsečky">Parametrizace úsečky</h2>
+<ul>
+<li>Hledáme parametrické rovnice orientované úsečky <span class="math inline">\(AB\)</span>, kde je dán počáteční bod <span class="math inline">\(A=[x_A,y_A]\)</span> a koncový bod <span class="math inline">\(B=[x_B,y_B]\)</span>.</li>
+<li>Leží-li bod <span class="math inline">\(X\)</span> na úsečce <span class="math inline">\(AB\)</span>, potom vektor <span class="math inline">\(\vec {AX}\)</span> má stejný směr (včetně orientace) jako vektor <span class="math inline">\(\vec {AB}\)</span> a nejvýše stejnou délku.</li>
+<li>Platí tedy <span class="math inline">\(\vec {AX}=t\vec {AB}\)</span> pro nějaké <span class="math inline">\(t\in[0,1]\)</span>, tj. <span class="math inline">\(X-A=t(B-A)\)</span> a odsud <span class="math inline">\(X=A+t(B-A)\)</span>.</li>
+<li>V souřadnicích zapsáno, parametrické rovnice úsečky jsou <span class="math display">\[\begin{aligned}x&amp;=x_A+t(x_B-x_A)\\y&amp;=y_A+t(y_B-y_A), \quad t\in[0,1]\end{aligned}\]</span></li>
+<li>Pro úsečku v prostoru platí totéž, pouze přibývá třetí souřadnice.</li>
+</ul>
+<h2 id="online-výpočet-křivkového-integrálu">Online výpočet křivkového integrálu</h2>
+<ul>
+<li><a href="http://um.mendelu.cz/maw-html/index.php?lang=cs&amp;form=lineintegral">Mathematical assistant on web</a> - i s postupem a grafem křivky</li>
+<li>Křivkový integrál prvního druhu. <a href="https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&amp;lang=sage">numericky pomocí Sage</a></li>
+<li>Křivkový integrál druhého druhu, <a href="https://sagecell.sagemath.org/?z=eJxtkMFuwyAQRO-W_A8r5RBIaepGOVXi6p-o2ogaUiEbcDGxgK8v2CFqoywXntjRzDAzi7Zui-tqs9lAZJxpCeeL7jtRV61HngQSMX0OiUIhnyAWaOoqnyy3ZtayEzBaA72Vc59UHjlMD7vOTOlSVyHjJPUCMUNT1ErEVToyy5Rwtq6ckpo4xTxtyOvLcTfKm9mDWV70RQkrOzacpHbi27IBwRl5mnOQQLM_iTQ7Y9jB9GMd4vKcNvKDw5-HpwXDf4wFMYE0t1z4vfnIttxMLAotT2ttqtiIYGDqizMY38biD9cAcE1AALWetIFAG3H6kBSXS6HdvX6_hMjCNefaYumAs_2D0rPonLHoLhjec-NO6ZP5pXNlp7jiP-WgtPsFHlShKA==&amp;lang=sage">numericky pomocí Sage</a></li>
+</ul>
+<style>
+.sloupce4{-moz-column-count:4; /* Firefox */
+-webkit-column-count:4; /* Safari and Chrome */
+column-count:4;}
+.sloupce6{-moz-column-count:6; /* Firefox */
+-webkit-column-count:6; /* Safari and Chrome */
+column-count:6;}
+.sloupce5{-moz-column-count:5; /* Firefox */
+-webkit-column-count:5; /* Safari and Chrome */
+column-count:5;}
+.sloupce3{-moz-column-count:3; /* Firefox */
+-webkit-column-count:3; /* Safari and Chrome */
+column-count:3;}
+.sloupce4 ul li {display:inline-block; max-width:100%;}
+</style>
+</div>
+</body>
+
+
+<script>
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageHeight() {
+    var windowHeight
+    if (self.innerHeight) {	// all except Explorer
+      windowHeight = self.innerHeight;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowHeight = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowHeight = document.body.clientHeight;
+    }
+    return windowHeight
+  }
+
+  // Adapted from getPageSize() by quirksmode.com
+  function getPageWidth() {
+    var windowWidth
+    if (self.innerWidth) {	// all except Explorer
+      windowWidth = self.innerWidth;
+    } else if (document.documentElement && document.documentElement.clientHeight) { // Explorer 6 Strict Mode
+      windowWidth = document.documentElement.clientHeight;
+    } else if (document.body) { // other Explorers
+      windowWidth = document.body.clientHeight;
+    }
+    return windowWidth
+  }
+
+jQuery('a[href^="http://"]').attr('target','_blank');
+jQuery('img[class!=nofacebox]').css("cursor","zoom-in");
+jQuery('img[class!=nofacebox]').click(function(){
+  jQuery.facebox("<img class='myimg' src='"+jQuery(this).prop('src')+"'>" );
+});
+   jQuery(document).ready(function() {
+     jQuery('a[rel*=facebox]').facebox()
+   })
+
+
+jQuery(document).bind('reveal.facebox', function() { 
+  obrazek=jQuery('#facebox .myimg');
+  width=jQuery(obrazek).width();
+  height=jQuery(obrazek).height();
+  ratio1=getPageHeight()/height*0.94;
+  ratio2=getPageWidth()/width*0.94;
+  ratio=Math.min(ratio1, ratio2);
+  jQuery(obrazek).css("width", width * ratio); // Set new width
+  jQuery(obrazek).css("height", height * ratio);  // S
+  jQuery(obrazek).css("min-width", width * ratio); // Set new width
+  jQuery(obrazek).css("min-height", height * ratio);  // S
+  jQuery(obrazek).css("max-width", width * ratio); // Set new width
+  jQuery(obrazek).css("max-height", height * ratio);  // S
+  jQuery('#facebox').css("left", "10px");
+  jQuery('#facebox').css('left', jQuery(window).width() / 2 - (jQuery('#facebox').width() / 2))
+  jQuery('#facebox').css("top", getPageScroll()[1]+10);
+})
+
+</script>
+
+</html>
