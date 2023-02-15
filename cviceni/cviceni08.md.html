@@ -92,7 +92,8 @@ window.MathJax = {
 </div>
 <div id="TOC">
 <ul>
-<li><a href="#jednoduché-modely-založené-na-diferenciálních-rovnicích"><span class="toc-section-number">1</span> Jednoduché modely založené na diferenciálních rovnicích</a><ul>
+<li><a href="#jednoduché-modely-založené-na-diferenciálních-rovnicích"><span class="toc-section-number">1</span> Jednoduché modely založené na diferenciálních rovnicích</a>
+<ul>
 <li><a href="#model-růstu-úměrného-velikosti-chybějícího-množství"><span class="toc-section-number">1.1</span> Model růstu úměrného velikosti chybějícího množství</a></li>
 <li><a href="#kontaminace-a-čištění"><span class="toc-section-number">1.2</span> Kontaminace a čištění</a></li>
 <li><a href="#populace-jelenů"><span class="toc-section-number">1.3</span> Populace jelenů</a></li>
@@ -119,20 +120,20 @@ window.MathJax = {
 <li>Nakonec se naučíme řešit diferenciální rovnice se separovanými proměnnými dvojím integrováním.</li>
 </ul>
 </blockquote>
-<h1 id="jednoduché-modely-založené-na-diferenciálních-rovnicích"><span class="header-section-number">1</span> Jednoduché modely založené na diferenciálních rovnicích</h1>
+<h1 data-number="1" id="jednoduché-modely-založené-na-diferenciálních-rovnicích"><span class="header-section-number">1</span> Jednoduché modely založené na diferenciálních rovnicích</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/QckWe55HikI"></iframe> </div>
-<h2 id="model-růstu-úměrného-velikosti-chybějícího-množství"><span class="header-section-number">1.1</span> Model růstu úměrného velikosti chybějícího množství</h2>
+<h2 data-number="1.1" id="model-růstu-úměrného-velikosti-chybějícího-množství"><span class="header-section-number">1.1</span> Model růstu úměrného velikosti chybějícího množství</h2>
 <figure>
-<img src="mladata.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+<img src="mladata.jpg" alt="" /><figcaption>pixabay.com</figcaption>
 </figure>
 <p>Mnoho živočichů roste tak, že mohou dorůstat jisté maximální délky a rychlost jejich růstu je úměrná délce, která jim do této maximální délky chybí (tj. kolik ještě musí do této maximální délky dorůst). Sestavte matematický model popisující takovýto růst (von Bertalanffy growth model).</p>
 <p><em>Jakmile vidíme, že v zadání figuruje rychlost změny veličiny, která nás zajímá, je jasné, že kvantitativní model bude obsahovat derivaci. Zatím se učíme model zapsat, později ho budeme umět i vyřešit.</em></p>
 <button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
 <p>Je-li <span class="math inline">\(\displaystyle L\)</span> délka a <span class="math inline">\(\displaystyle L_{\max}\)</span> maximální délka, potom do maximální délky chybí <span class="math inline">\(\displaystyle L_{\max}-L\)</span> a model má tvar <span class="math display">\[\dv {L}{t}=k (L_{\max}-L).\]</span> Konstanta <span class="math inline">\(\displaystyle k\)</span> vyjadřuje rychlost s jakou roste délka při jednotkovém rozdílu mezi aktuální délkou a délkou maximální.</p>
 </div>
-<h2 id="kontaminace-a-čištění"><span class="header-section-number">1.2</span> Kontaminace a čištění</h2>
+<h2 data-number="1.2" id="kontaminace-a-čištění"><span class="header-section-number">1.2</span> Kontaminace a čištění</h2>
 <figure>
-<img src="kontaminace.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+<img src="kontaminace.jpg" alt="" /><figcaption>pixabay.com</figcaption>
 </figure>
 <p>Znečišťující látky se v kontaminované oblasti rozkládají tak, že za den se samovolně rozloží <span class="math inline">\(\displaystyle 8\%\)</span> aktuálního znečištění. Kromě toho pracovníci odstraňují látky rychlostí <span class="math inline">\(\displaystyle 30\)</span> galonů denně. Vyjádřete tento proces kvantitativně pomocí vhodného modelu.</p>
 <p><em>Tento příklad opět zmiňuje rychlost změny, tj. derivaci. Tentokrát se na změně podílejí dva procesy a jejich účinek se sčítá. Příklad navíc připomíná, jak se pracuje se změnou vyjádřenou procenty. Toto je používané například při úročení spojitým úrokem. Pokud pokles změníme na růst, tj. pokud změníme znaménka u derivace, máme okamžitě model růstu financí na účtu, na kterém se pravidelně připisuje úrok a k tomu se přidává fixní úložka.</em></p>
@@ -162,36 +163,36 @@ window.MathJax = {
 % </div>
 
 -->
-<h2 id="populace-jelenů"><span class="header-section-number">1.3</span> Populace jelenů</h2>
+<h2 data-number="1.3" id="populace-jelenů"><span class="header-section-number">1.3</span> Populace jelenů</h2>
 <figure>
-<img src="deer.jpg" alt="pixabay.com, autor Free-Photos" /><figcaption>pixabay.com, autor Free-Photos</figcaption>
+<img src="deer.jpg" alt="" /><figcaption>pixabay.com, autor Free-Photos</figcaption>
 </figure>
 <p>Populace jelenů v národním parku přibývá rychlostí 10% za rok. Správa parku každý rok odebere 50 jedinců. Napište matematický model pro velikost populace jelenů v tomto parku.</p>
 <button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
 <p>Je-li <span class="math inline">\(\displaystyle x\)</span> velikost populace jelenů, platí <span class="math display">\[ \dv {x}{t}=0.10 x-50, \]</span> kde <span class="math inline">\(\displaystyle t\)</span> je čas v letech.</p>
 </div>
-<h2 id="hrubý-model-chřipkové-epidemie"><span class="header-section-number">1.4</span> Hrubý model chřipkové epidemie</h2>
+<h2 data-number="1.4" id="hrubý-model-chřipkové-epidemie"><span class="header-section-number">1.4</span> Hrubý model chřipkové epidemie</h2>
 <p>Rychlost s jakou roste počet nemocných chřipkou je úměrný současně počtu nemocných a počtu zdravých jedinců. Sestavte model takového šíření chřipky.</p>
 <p><em>Toto je současně model popisující šíření informace v populaci, stačí si místo chřipky představit nějakou informaci předávanou mezi lidmi (sociální difuze).</em></p>
 <button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
 <p>Je-li <span class="math inline">\(\displaystyle M\)</span> velikost populace a <span class="math inline">\(\displaystyle y\)</span> počet nemocných, je v populaci <span class="math inline">\(\displaystyle M-y\)</span> zdravých a model má tvar <span class="math display">\[\dv {y}{t}=ky(M-y).\]</span></p>
 </div>
-<h2 id="ropná-skvrna"><span class="header-section-number">1.5</span> Ropná skvrna</h2>
+<h2 data-number="1.5" id="ropná-skvrna"><span class="header-section-number">1.5</span> Ropná skvrna</h2>
 <figure>
-<img src="olej.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+<img src="olej.jpg" alt="" /><figcaption>pixabay.com</figcaption>
 </figure>
 <p>Kruhová ropná skvrna na hladině se rozšiřuje tak, že její poloměr jako funkce času roste rychlostí, která je nepřímo úměrná druhé mocnině poloměru. Vyjádřete proces kvantitativně pomocí derivací.</p>
 <button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
 <p>Je-li <span class="math inline">\(\displaystyle r\)</span> poloměr, je <span class="math inline">\(\displaystyle r^2\)</span> druhá mocnina a protože se jedná o nepřímou úměrnost, platí <span class="math display">\[\dv {r}{t}=\frac{k}{r^2}.\]</span> Konstanta <span class="math inline">\(\displaystyle k\)</span> vyjadřuje rychlost s jakou roste ropná skvrna ve fázi, kdy má jednotkový poloměr <span class="math inline">\(\displaystyle r\)</span>.</p>
 </div>
-<h2 id="model-učení"><span class="header-section-number">1.6</span> Model učení</h2>
+<h2 data-number="1.6" id="model-učení"><span class="header-section-number">1.6</span> Model učení</h2>
 <p>Rychlost učení (tj. časová změna objemu osvojené látky nebo procento z maximální manuální zručnosti) je úměrná objemu dosud nenaučené látky. Vyjádřete proces kvantitativně pomocí derivací.</p>
 <button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
 <p>Je-li <span class="math inline">\(\displaystyle L\)</span> objem naučené látky a <span class="math inline">\(\displaystyle L_{\max}\)</span> maximální objem látky kterou je možné se naučit, je objem dosud nenaučené látky <span class="math inline">\(\displaystyle L_{\max}-L\)</span> a model má tvar <span class="math display">\[\dv {L}{t}=k (L_{\max}-L).\]</span></p>
 </div>
-<h2 id="tloušťka-ledu"><span class="header-section-number">1.7</span> Tloušťka ledu</h2>
+<h2 data-number="1.7" id="tloušťka-ledu"><span class="header-section-number">1.7</span> Tloušťka ledu</h2>
 <figure>
-<img src="ledni_medved.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+<img src="ledni_medved.jpg" alt="" /><figcaption>pixabay.com</figcaption>
 </figure>
 <p>Takzvaný Stefanův zákon (J. Stefan, Uber die Theorie der Eisbildung, insbesondere uber die Eisbildung im Polarmeere, 1891) vyjadřuje že tloušťka ledu na hladině moře roste ve stabilních podmínkách rychlostí nepřímo úměrnou této tloušťce. Zapište tento fakt pomocí vhodného matematického modelu a najděte řešení vzniklé diferenciální rovnice.</p>
 <button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
@@ -204,10 +205,10 @@ h\,\mathrm dh&amp;=k\, \mathrm dt\\
 \end{aligned}
 \]</span></p>
 </div>
-<h1 id="model-vypouštění-nádrže"><span class="header-section-number">2</span> Model vypouštění nádrže</h1>
+<h1 data-number="2" id="model-vypouštění-nádrže"><span class="header-section-number">2</span> Model vypouštění nádrže</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/K08zq2cC0DM"></iframe> </div>
 <figure>
-<img src="voda_plastovky.jpg" alt="Zdroj: www.rodovystatek.cz" /><figcaption>Zdroj: www.rodovystatek.cz</figcaption>
+<img src="voda_plastovky.jpg" alt="" /><figcaption>Zdroj: www.rodovystatek.cz</figcaption>
 </figure>
 <p>Z fyziky je známo, že rychlost s jakou vytéká tekutina otvorem u dna nádoby je úměrná odmocnině výšky hladiny (protože se mění potenciální energie úměrná výšce na kinetickou energii úměrnou druhé mocnině rychlosti). Proto je i rychlost s jakou se zmenšuje objem vody v nádrži úměrná odmocnině výšky hladiny.</p>
 <p>Ukažte, že matematickým popisem procesu je diferenciální rovnice. Napište rovnici pro výšku hladiny vody v nádrži jako funkci času. Uvažujte tři případy: nádrž <em>cylindrického tvaru</em> (válec postavený na podstavu), nádrž ve tvaru <em>kvádru</em> a nádrž ve tvaru <em>kužele</em> otočeného vrcholem dolů (trychtýř).</p>
@@ -217,10 +218,10 @@ h\,\mathrm dh&amp;=k\, \mathrm dt\\
 <p>Pro cylindr, kvádr nebo jakoukoliv nádrž se svislými stěnami je objem úměrný výšce hladiny, <span class="math inline">\(\displaystyle V=k_2 h\)</span>, a proto <span class="math inline">\(\displaystyle \frac {\mathrm dV}{\mathrm dt}=k_2\frac {\mathrm dh}{\mathrm dt}\)</span>. Odsud <span class="math display">\[k_2\frac {\mathrm dh}{\mathrm dt}=\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h,\]</span> tj. <span class="math display">\[\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{k_2}\sqrt h\]</span> a pro <span class="math inline">\(\displaystyle k=\frac{k_1}{k_2}\)</span> má model tvar <span class="math display">\[\frac {\mathrm dh}{\mathrm dt}=-k\sqrt h.\]</span></p>
 <p>Pro kužel platí <span class="math inline">\(\displaystyle V=k_3h^3\)</span> (díky podobnosti je objem přímo úměrný třetí mocnině libovolného délkového parametru) a proto <span class="math inline">\(\displaystyle \frac {\mathrm dV}{\mathrm dt}=k_3 \times 3h^2 \frac {\mathrm dh}{\mathrm dt}\)</span>. Odsud <span class="math display">\[3k_3 h^2 \frac {\mathrm dh}{\mathrm dt}=\frac {\mathrm dV}{\mathrm dt}=-k_1\sqrt h,\]</span> tj. <span class="math display">\[\frac {\mathrm dh}{\mathrm dt}=-\frac{k_1}{3k_3}h^{-3/2}\]</span> a po přeznačení konstanty má model pro kuželovou nádrž tvar <span class="math display">\[\frac {\mathrm dh}{\mathrm dt}=-kh^{-3/2}.\]</span></p>
 </div>
-<h1 id="problematika-jednoznačnosti-v-modelu-vypouštění-nádrže"><span class="header-section-number">3</span> Problematika jednoznačnosti v modelu vypouštění nádrže</h1>
+<h1 data-number="3" id="problematika-jednoznačnosti-v-modelu-vypouštění-nádrže"><span class="header-section-number">3</span> Problematika jednoznačnosti v modelu vypouštění nádrže</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/FAatA34JeEo"></iframe> </div>
 <figure>
-<img src="voda_plastovky.jpg" alt="Zdroj: www.rodovystatek.cz" /><figcaption>Zdroj: www.rodovystatek.cz</figcaption>
+<img src="voda_plastovky.jpg" alt="" /><figcaption>Zdroj: www.rodovystatek.cz</figcaption>
 </figure>
 <p>Dříve jsme odvodili rovnici <span class="math display">\[\dv {h}{t}=-k\sqrt h\]</span> popisující úbytek hladiny vody v nádrži tvaru kvádru, ze které vypouštíme vodu.</p>
 <ol type="1">
@@ -250,7 +251,7 @@ Pokud je tedy v nádrži nějaká voda, je jednoznačně dáno, jak bude vytéka
  \]</span> a obě strany rovnice jsou stejné. Pro <span class="math inline">\(\displaystyle h=0\)</span> je dosazení triviální. Je-li <span class="math inline">\(\displaystyle h(t_0)=0\)</span>, může to být proto, že voda v čase <span class="math inline">\(\displaystyle t_0\)</span> právě vytekla, nebo proto, že vytekla před hodinou nebo proto, že v nádrži nikdy voda nebyla. Proto je nejednoznačnost přirozená. Například <span class="math inline">\(\displaystyle h(t)=0\)</span> je řešení odpovídající tomu, že voda v nádrži nikdy nebyla. Funkce <span class="math inline">\(\displaystyle h(t)=\frac 14 k^2t^2\)</span> pro <span class="math inline">\(\displaystyle t&lt;0\)</span> odpovídá tomu, že pro <span class="math inline">\(\displaystyle t&lt;0\)</span> v nádrži voda byla a vytekla v čase <span class="math inline">\(\displaystyle t=0\)</span>.</li>
 </ol>
 </div>
-<h1 id="řešení-ode-a-ivp"><span class="header-section-number">4</span> Řešení ODE a IVP</h1>
+<h1 data-number="4" id="řešení-ode-a-ivp"><span class="header-section-number">4</span> Řešení ODE a IVP</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/XUKvuqSgA6U"></iframe> </div>
 <ol type="1">
 <li><span class="math inline">\(\displaystyle \frac{\mathrm dy}{\mathrm dx}=xy^2\)</span></li>

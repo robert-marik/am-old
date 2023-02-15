@@ -52,7 +52,7 @@ jQuery( document ).ready(function() {
 <div id="header">
 <h1 class="title">Divergence vektorového pole, rovnice kontinuity</h1>
 <h2 class="author">Robert Mařík</h2>
-<p class="date"><em><small>Poslední modifikace: 2022-07-03 </small></em></p>
+<p class="date"><em><small>Poslední modifikace: 2022-05-25 </small></em></p>
 </div>
 <div id="TOC">
 <ul>
@@ -64,7 +64,8 @@ jQuery( document ).ready(function() {
 <li><a href="#rovnice-mělké-vody">Rovnice mělké vody</a></li>
 <li><a href="#difuzní-rovnice">Difuzní rovnice</a></li>
 <li><a href="#vedení-tepla">Vedení tepla</a></li>
-<li><a href="#rovnice-vedení-tepla-ve-2d-v-různých-podmínkách">Rovnice vedení tepla ve 2D v různých podmínkách</a><ul>
+<li><a href="#rovnice-vedení-tepla-ve-2d-v-různých-podmínkách">Rovnice vedení tepla ve 2D v různých podmínkách</a>
+<ul>
 <li><a href="#stacionární-stav">Stacionární stav</a></li>
 <li><a href="#homogenní-izotropní-materiál-a-lineární-materiálové-vztahy">Homogenní izotropní materiál a lineární materiálové vztahy</a></li>
 <li><a href="#ortotropní-materiál-nehomogenní-nebo-nelineární">Ortotropní materiál, nehomogenní nebo nelineární</a></li>
@@ -117,14 +118,12 @@ jQuery( document ).ready(function() {
 <p>Toto je jednoduchý, ale přitom neuvěřitelně silný nástroj. Umožní jednotným způsobem popsat řadu zcela odlišných dějů. Pro použití v matematickém modelu ale musíme jednotlivé pojmy nejprve kvantifikovat. Měřit rychlost změny množství veličiny v daném místě umíme pomocí derivace podle času. Měřit změny v <em>jednodimenzionálním</em> toku přenášejícím sledovanou veličinu jsme se naučili jako jednu z prvních aplikací parciálních derivací: jedná se o derivaci toku podle prostorové proměnné. Ještě se musíme naučit měřit změny v toku ve dvou nebo třech dimenzích.</p>
 <h1 id="změna-toku-vektorového-pole">Změna toku vektorového pole</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/cXT6ULeZFJs"></iframe> </div>
-
 <div class="obtekat"><figure><img src="https://user.mendelu.cz/marik/manim/thumbs/Divergence.jpg"><figcaption>Divergence umožňuje identifikovat, zda tok sílí či slábne. Tato znalost je důležitým stavebním kamenem do matematického modelu liboovolného transportního děje probíhajícího v přírodě (rovnice kontinuity a difuzní rovnice). <a href="https://user.mendelu.cz/marik/manim/Divergence" class=but-prez target=_blank>Otevřít prezentaci</a> <a href="https:\\youtu.be/Vk8OAq3_40g" class=but-video target=_blank>Spustit video</a></figcaption></figure></div>
 <div class="obtekat">
 <figure>
-<img src="divergence_kostka.png" alt="Divergence a tok pole \vec q=(0,Q, R) tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny." /><figcaption>Divergence a tok pole <span class="math inline">\(\vec q=(0,Q, R)\)</span> tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.</figcaption>
+<img src="divergence_kostka.png" alt="" /><figcaption>Divergence a tok pole <span class="math inline">\(\vec q=(0,Q, R)\)</span> tělesem nenulového objemu. Tok je zobrazen vždy ve středu stěny. Červené vektory vstupují do krychle a příslušné toky se počítají záporně. Modré vystupují ven a počítají se kladně. V tomto případě je celková bilance kladná, z objemu více vyteče, než vteče dovnitř. Divergence je kladná. Pokud v krychli množství veličiny neubývá, musí tam být zdroj této veličiny.</figcaption>
 </figure>
 </div>
-
 <p>Budeme sledovat tok vektorového pole a bude nás zajímat, o kolik se tok v daném místě mění.</p>
 <ul>
 <li>Pro jednoduchost rozdělíme tok na tři nezávislé části ve směru jednotlivých os a vztáhneme vše k jednotkám času a průřezu. Tedy budeme uvažovat hustotu toku stavové veličiny.
@@ -186,13 +185,11 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 <p>Viz <a href="http://user.mendelu.cz/marik/am/slidy/cviceni/cviceni03.md.html">cvičení</a>. Jedná se o prosté derivování se následným sečtením derivací.</p>
 <h1 id="rovnice-kontinuity">Rovnice kontinuity</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/HiOmERpTdV0"></iframe> </div>
-
 <div class="obtekat">
 <figure>
-<img src="stacionarni_vedeni_tepla_Utechov.jpg" alt="V celkové bilanci se nemusí nutně uplatnit všechny tři členy. Například při studiu tepelné vodivosti dřevěných panelů se měří tok tepla po dosažení rovnovážného ustáleného stavu, tj. derivace podle času je nulová. Na obrázku měřící zařízení ve VCJR v Útěchově." /><figcaption>V celkové bilanci se nemusí nutně uplatnit všechny tři členy. Například při studiu tepelné vodivosti dřevěných panelů se měří tok tepla po dosažení rovnovážného ustáleného stavu, tj. derivace podle času je nulová. Na obrázku měřící zařízení ve VCJR v Útěchově.</figcaption>
+<img src="stacionarni_vedeni_tepla_Utechov.jpg" alt="" /><figcaption>V celkové bilanci se nemusí nutně uplatnit všechny tři členy. Například při studiu tepelné vodivosti dřevěných panelů se měří tok tepla po dosažení rovnovážného ustáleného stavu, tj. derivace podle času je nulová. Na obrázku měřící zařízení ve VCJR v Útěchově.</figcaption>
 </figure>
 </div>
-
 <ul>
 <li>Přírůstek stavové veličiny za jednotku času v jednotkovém objemu (nebo ploše, nebo délce, podle dimenzionality úlohy) je derivace hustoty <span class="math inline">\(u\)</span> podle času. <span class="math display">\[\text{Přírůstek}=\frac{\partial u}{\partial t}\]</span></li>
 <li>Přírůstek veličiny v jednotkovém objemu (nebo ploše, nebo délce) za jednotku času způsobený tokem <span class="math inline">\(\vec \jmath\)</span> je záporně vzatá divergence vektorového pole <span class="math inline">\(\vec \jmath\)</span>. Tento přírůstek je způsobený snížením toku, proto ho počítáme jako záporné navýšení, tj. záporně vzatou divergenci. <span class="math display">\[    \text{
@@ -216,7 +213,7 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 <h1 id="rovnice-mělké-vody">Rovnice mělké vody</h1>
 <div class="obtekat">
 <figure>
-<img src="ricka.jpg" alt="Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay." /><figcaption>Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.</figcaption>
+<img src="ricka.jpg" alt="" /><figcaption>Rovnici kontiuity známe ze středoškolské fyziky pro ustálené proudění. Naše obecnější formulace umí zachytit i nestacionární stav. Zdroj: pixabay.</figcaption>
 </figure>
 </div>
 <p>Rovnici kontinuity můžeme použít pro popis vody v řečišti. Úloha je jednodimenzionální a tok <span class="math inline">\(Q\)</span> je proto skalární veličina. Divergence toku se díky jednodimenzionálnosti redukuje na derivaci podle prostorové proměnné <span class="math inline">\(\frac{\partial Q}{\partial x}\)</span>. Zachovávající se veličinou je množství vody. Hustota zachovávající se veličiny je množství vody na metr délky toku, tj. <em>průtočný průřez</em> <span class="math inline">\(A\)</span> (obsah průřezu říčního toku v daném místě). Zdroje zpravidla neuvažujeme, tj. <span class="math inline">\(\sigma=0\)</span>. Rovnice kontinuity má potom tvar <span class="math display">\[
@@ -241,13 +238,11 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
       {\frac{\partial u}{\partial t}=\sigma + \frac{\partial }{\partial x} \left(D\frac{\partial u}{\partial x}\right)}.\]</span> To jsme viděli již v první přednášce, jenom bez zdrojů.</p>
 <a onclick="otevrit('problems/difuzni_rce/interpretace_clenu.pg');" target="_blank" class="WWotazka">WW-otázka</a>
 <h1 id="vedení-tepla">Vedení tepla</h1>
-
 <div class="obtekat">
 <figure>
-<img src="teplo.jpg" alt="Stromy umí ochlazovat své okolí. Ulice v Melbourne vyfocená termokamerou to dokazuje. A difuzní rovnice toto dokáže modelovat. Photograph: City of Melbourne. Zdroj: theguardian.com." /><figcaption>Stromy umí ochlazovat své okolí. Ulice v Melbourne vyfocená termokamerou to dokazuje. A difuzní rovnice toto dokáže modelovat. Photograph: City of Melbourne. Zdroj: theguardian.com.</figcaption>
+<img src="teplo.jpg" alt="" /><figcaption>Stromy umí ochlazovat své okolí. Ulice v Melbourne vyfocená termokamerou to dokazuje. A difuzní rovnice toto dokáže modelovat. Photograph: City of Melbourne. Zdroj: theguardian.com.</figcaption>
 </figure>
 </div>
-
 <p>Důležitým speciálním případem difuzní rovnice je rovnice vedení tepla. Stavovou veličinou, která se zachovává v úlohách s vedením tepla, je vnitřní energie ve formě tepla. V materiálu se teplo zpravidla pouze předává z místa na místo. Nijak se v něm teplo negeneruje ani nespotřebovává. Proto zpravidla nemá smysl uvažovat členy vyjadřující zdroje, tj. <span class="math inline">\(\sigma =0\)</span>. Protože teplo neměříme přímo, je vhodnější model formulovat pro teplotu <span class="math inline">\(T\)</span>. Jsou-li <span class="math inline">\(\varrho\)</span> a <span class="math inline">\(c\)</span> po řadě hustota a měrná tepelná kapacita materiálu, má člen vyjadřující změnu hustoty energie v daném místě tvar <span class="math inline">\(\varrho c\frac{\partial T}{\partial t}.\)</span> Úměrnost mezi gradientem teploty a tokem tepla zprostředkovává <em>Fourierův zákon</em>. Difuzní rovnice má v tomto případě tvar <span class="math display">\[{\varrho c\frac{\partial T}{\partial t}=  \nabla\cdot\bigl(k\nabla T\bigr)}\]</span> a nazývá se <em>rovnice vedení tepla</em>.</p>
 <blockquote class="poznamka"><p class="poznamkaname">Poznámka (interpretace rovnice vedení tepla).</p><p></p>
 <ul>
@@ -257,31 +252,27 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 <li>Rovnice jako celek vyjadřuje to, že pokud z daného místa více energie odtéká, než kolik do místa proudí, dojde v tomto místě k odpovídajícímu snížení teploty. V tomto bodě je totiž divergence toku <span class="math inline">\(\nabla\cdot (-k\nabla T)\)</span> kladná a výraz z rovnice <span class="math inline">\(\nabla\cdot (k\nabla T)\)</span> je proto záporný.</li>
 </ul>
 </blockquote>
-
 <div class="obtekat">
 <figure>
-<img src="vrstvy.png" alt="Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla. Zdroj: Cengel, Ghajar: Heat and Mass Transfer." /><figcaption>Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</figcaption>
+<img src="vrstvy.png" alt="" /><figcaption>Na rozhraní vrstev ve vrstveném materiálu je spojité teplotní pole a tok tepla. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</figcaption>
 </figure>
 </div>
-
 <p>Uvedená rovnice je zobecněním rovnice vedení tepla v jedné dimenzi, kterou jsme odvodili primitivními prostředky (jenom pomocí parciálních derivací, bez gradientu a divergence) ve tvaru <span class="math display">\[\rho c\frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\left(k\frac{\partial T}{\partial x}\right)\]</span> v úvodní přednášce.</p>
 <p>Rovnice vedení tepla se používá například při <em>tepelné ochraně budov</em>, při modelování <em>tepelných ostrovů</em> v krajině, při <em>tepelné modifikaci dřeva</em>, nebo při studiu <em>permafrostu</em>.</p>
 <p>V literatuře věnované problematice dřeva se rovnice vedení tepla ve dřevě označuje jako Druhý Fourierův zákon (P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 88).</p>
 <p>V některých případech člen charakterizující zdroje nemusí být nulový. Teplo může vznikat například při tření nebo při průchodu elektrického proudu transformací z jiného druhu energie. Dále teplo vzniká například při betonování po <a href="http://www.ebeton.cz/pojmy/hydratacni-teplo">přidání vody do cementu</a>, známý je problém jak <a href="http://www.ebeton.cz/encyklopedie/hooverova-prehrada">uchladit Hooverovu přehradu</a> při stavbě.</p>
 <h1 id="rovnice-vedení-tepla-ve-2d-v-různých-podmínkách">Rovnice vedení tepla ve 2D v různých podmínkách</h1>
-
 <div class="obtekat">
 <figure>
-<img src="VCJR_modifikace_pravidelne.jpg" alt="Teplotní modifikace dřeva ve VCJR v Útěchově. Díky jednoduché geometrii vzorků je možno provést i přesný analytický výpočet teplotního pole. Výřez ukazuje detail čtyř vzorků. Jeden z nich je nařezán šikmo. V takovém případě je výpočet mnohem obtížnější než u vzorků, jejichž tvar respektuje anatomické směry ve dřevě. Zdroj: J. Dömény." /><figcaption>Teplotní modifikace dřeva ve VCJR v Útěchově. Díky jednoduché geometrii vzorků je možno provést i přesný analytický výpočet teplotního pole. Výřez ukazuje detail čtyř vzorků. Jeden z nich je nařezán šikmo. V takovém případě je výpočet mnohem obtížnější než u vzorků, jejichž tvar respektuje anatomické směry ve dřevě. Zdroj: J. Dömény.</figcaption>
+<img src="VCJR_modifikace_pravidelne.jpg" alt="" /><figcaption>Teplotní modifikace dřeva ve VCJR v Útěchově. Díky jednoduché geometrii vzorků je možno provést i přesný analytický výpočet teplotního pole. Výřez ukazuje detail čtyř vzorků. Jeden z nich je nařezán šikmo. V takovém případě je výpočet mnohem obtížnější než u vzorků, jejichž tvar respektuje anatomické směry ve dřevě. Zdroj: J. Dömény.</figcaption>
 </figure>
 <figure>
-<img src="VCJR_sindel.jpg" alt="Teplotní modifikace šindele ve VCJR v Útěchově. Řídí se stejnou rovnicí jako hranoly na obrázku výše. Vinou komplikovaného tvaru je však matematické modelování teplotního pole možné jenom numerickou cestou. Skutečně, v podobných úlohách hraje geometrie úlohy důležitou roli a netriviální geometrie zpravidla znemožní efektivní řešení analytickou cestou. Zdroj: J. Dömény." /><figcaption>Teplotní modifikace šindele ve VCJR v Útěchově. Řídí se stejnou rovnicí jako hranoly na obrázku výše. Vinou komplikovaného tvaru je však matematické modelování teplotního pole možné jenom numerickou cestou. Skutečně, v podobných úlohách hraje geometrie úlohy důležitou roli a netriviální geometrie zpravidla znemožní efektivní řešení analytickou cestou. Zdroj: J. Dömény.</figcaption>
+<img src="VCJR_sindel.jpg" alt="" /><figcaption>Teplotní modifikace šindele ve VCJR v Útěchově. Řídí se stejnou rovnicí jako hranoly na obrázku výše. Vinou komplikovaného tvaru je však matematické modelování teplotního pole možné jenom numerickou cestou. Skutečně, v podobných úlohách hraje geometrie úlohy důležitou roli a netriviální geometrie zpravidla znemožní efektivní řešení analytickou cestou. Zdroj: J. Dömény.</figcaption>
 </figure>
 <figure>
-<img src="rtb.png" alt="Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik." /><figcaption>Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.</figcaption>
+<img src="rtb.png" alt="" /><figcaption>Nestacionární rovnice vedení tepla. Měření teplotních charakteristik pomocí sledování odezvy na teplotní impuls na ÚNOD LDF MENDELU. Zdroj: R. Slávik.</figcaption>
 </figure>
 </div>
-
 <p>Uvažujme rovnici vedení tepla ve dvou rozměrech a v prostředí bez zdrojů. <span class="math display">\[\rho c\frac{\partial T}{\partial t}=\nabla \cdot (k\nabla T)\tag{***}\]</span></p>
 <h2 id="stacionární-stav">Stacionární stav</h2>
 <p>Stacionární stav znamená, že stavové veličiny nezávisí na čase. Derivace podle času je v takovém případě nulová. Rovnice (***) se redukuje na <span class="math display">\[\nabla \cdot (k\nabla T)=0.\]</span></p>
@@ -289,9 +280,7 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 <p>Nejjednodušší tvar má rovnice vedení tepla v prostředí, které je homogenní a izotropní (má ve všech místech a ve všech směrech stejné vlastnosti). Veličina <span class="math inline">\(k\)</span> je v takovém případě skalární veličina (reálná konstanta).</p>
 <p>Podle pravidla derivace konstantního násobku se rovnice vedení tepla (***) v takovém případě redukuje na<br />
 <span class="math display">\[\rho c\frac{\partial T}{\partial t}=k\nabla \cdot (\nabla T)\]</span> a ve složkách <span class="math display">\[\rho c\frac{\partial T}{\partial t}=k\left(\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}\right).\]</span></p>
-
 <p>Pro <span class="math inline">\(\tau=\frac{kt}{\rho c}\)</span> (změna jednotky času) dostáváme ještě jednodušší vyjádření ve tvaru <span class="math display">\[\frac{\partial T}{\partial \tau}=\frac{\partial^2 T}{\partial x^2}+\frac{\partial^2 T}{\partial y^2}.\]</span></p>
-
 <h2 id="ortotropní-materiál-nehomogenní-nebo-nelineární">Ortotropní materiál, nehomogenní nebo nelineární</h2>
 <p>Dvourozměrný ortotropní materiál má dva charakteristické směry související s rovinami symetrie. Zvolíme soustavu souřadnic tak, aby osy byly orientovány ve směru vlastních vektorů.</p>
 <p>Veličina <span class="math inline">\(k\)</span> je v takovém případě diagonální matice. Pro <span class="math display">\[k=\begin{pmatrix}k_x &amp; 0\\ 0&amp; k_y\end{pmatrix}\]</span> je tvar rovnice (***) ve složkách <span class="math display">\[\rho c\frac{\partial T}{\partial t}=\frac{\partial }{\partial x}\left(k_x\frac{\partial T}{\partial x}\right)
@@ -299,26 +288,22 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 <h2 id="homogenní-ortotropní-materiál-a-lineární-materiálové-vztahy">Homogenní ortotropní materiál a lineární materiálové vztahy</h2>
 <p>Takový materiál má dva charakteristické směry související s rovinami symetrie (ortotropní) a materiálové charakteristiky jsou ve všech místech stejné a nezávislé na <span class="math inline">\(T\)</span> (homogenní a lineární). Situace je stejná jako předchozí případ, ale <span class="math inline">\(k_x\)</span> a <span class="math inline">\(k_y\)</span> jsou navíc konstanty. Podle pravidla pro derivaci konstantního násobku se rovnice (***) redukuje na <span class="math display">\[\rho c\frac{\partial T}{\partial t}=k_x\frac{\partial^2 T}{\partial x^2}+k_y\frac{\partial^2 T}{\partial y^2}.\]</span></p>
 <h1 id="voda-v-porézním-materiálu">Voda v porézním materiálu</h1>
-
 <div class="obtekat">
 <figure>
-<img src="drevo.jpg" alt="Difuzní rovnice se používá k modelování sušení dřeva. Zdroj: pixabay.com." /><figcaption>Difuzní rovnice se používá k modelování sušení dřeva. Zdroj: pixabay.com.</figcaption>
+<img src="drevo.jpg" alt="" /><figcaption>Difuzní rovnice se používá k modelování sušení dřeva. Zdroj: pixabay.com.</figcaption>
 </figure>
 </div>
-
 <p>V porézním materiálu voda prostupuje materiálem a zachovává se její množství. Množství vody bude představovat stavovou veličinu. Hustotu tohoto množství, tj. obsah vody v jednotce objemu, označíme <span class="math inline">\(c\)</span> a pro tuto veličinu formulujeme matematický model. Zdroje neuvažujeme, voda je dřevem pouze transportována. Nevzniká ani nezaniká. Úměrnost mezi gradientem koncentrace vody a jejím tokem zprostředkovává <em>Fickův zákon</em>. Modelem difuzního děje je potom difuzní rovnice bez zdrojů. <span class="math display">\[
       {\frac{\partial c}{\partial t}= \nabla\cdot \bigl(k\nabla c\bigr)}
       \]</span> Tato rovnice se používá například při modelování procesu <em>sušení dřeva</em> v sušárnách nebo při modelování <em>dřeva ve vlhkém prostředí</em>. Stejná rovnice napsaná pro vzduch se používá k modelování proudění v atmosféře při <em>předpovídání počasí</em>.</p>
 <p>V literatuře věnované problematice dřeva se rovnice difuze použitá na modelování vlhkosti ve dřevě označuje jako Druhý Fickův zákon (A. Požgaj a kol., Štruktúra a vlastnosti dreva, str. 202, P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 60).</p>
 <p>V praxi je dřevo často s jistou přesností homogenní, ale difuzní koeficient dřeva závisí na vlhkosti. Tedy vztah mezi gradientem vlhkosti a difuzním tokem není lineární. Přesto i v tomto případě používáme Fickův zákon, ovšem složky difuzního koeficientu nepovažujeme za konstanty. Jsou závislé na <span class="math inline">\(c\)</span> a jejím prostřednictvím i na <span class="math inline">\(x\)</span>.</p>
 <h1 id="rovnice-podzemní-vody">Rovnice podzemní vody</h1>
-
 <div class="obtekat">
 <figure>
-<img src="voda.jpg" alt="Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com." /><figcaption>Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.</figcaption>
+<img src="voda.jpg" alt="" /><figcaption>Difuzní rovnice umí popsat proudění podzemní vody. Díky tomu dokážeme zabránit kontaminacím pitné vody z chemických provozů. Zdroj: pixabay.com.</figcaption>
 </figure>
 </div>
-
 <p>Proudění podzemní vody je vlastně úloha s řekou se zasypaným korytem. Taková voda teče ve srovnání s povrchovou vodou velmi pomalu, protože prosakuje půdou. Prostor, ve kterém se podzemní voda nachází, se nazývá <em>zvodeň</em>. Voda v podzemní zvodni teče v jistém smyslu “z kopce”. Narozdíl od vody povrchové však kromě nadmořské výšky může hrát roli i rozdíl tlaků nebo další efekty. Vliv všech těchto efektů shrnujeme do jediného pojmu <em>piezometrická výška</em>. Směr “z kopce” pro podzemní vodu je poté směr poklesu piezometrické výšky. V daném místě se může voda hromadit, což se projeví nárůstem hladiny spodní vody. Také může z hlediska zvodně část vody zanikat. Například pokud je zde čerpaná studna nebo průsak do jiné zvodně. Voda může ve zvodni i vznikat. Například zasakovacím vrtem nebo průsakem dešťových srážek. Pokud do celkové bilance započteme rozdíl mezi přítokem a odtokem a všechny zdroje a spotřebiče, množství vody se zachovává.</p>
 <p>Úloha se většinou uvažuje ve dvou dimenzích, protože horizontální rozměry zvodně jsou mnohem větší než její hloubka. Podzemní zvodeň je typickým porézním materiálem, přesto k modelování vody v tomto prostředí přistupujeme speciálním způsobem. Zachovává se množství vody, ale stejně jako u vedení tepla je výhodné formulovat model pro lépe měřitelnou veličinu. Tou je v tomto případě <em>piezometrická výška</em> <span class="math inline">\(h\)</span>. Přírůstek množství podzemní vody za časovou jednotku na jednotkové ploše v daném místě zvodně má tvar <span class="math inline">\(S_S \frac{\partial h}{\partial t}\)</span>, kde <span class="math inline">\(S_S\)</span> je <em>specifická zásobnost</em>. Úměrnost mezi gradientem piezometrické výšky a filtračním tokem byla prokázána experimentálně i teoreticky a je známa jako <em>Darcyho zákon</em>. Difuzní rovnice má (s konstantou úměrnosti <span class="math inline">\(T\)</span>, <em>transmisivitou</em>) tvar <span class="math display">\[ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(T\nabla h\bigr).}\]</span> Tato rovnice se nazývá <em>rovnice podzemní vody</em>. Zdroje v této rovnici jsou nejčastěji zasakovací nebo odvodňovací vrty, dále studny, poldry, výkopy nebo zářezy. Informace získané z rovnice podzemní vody se využívají například k ochraně lomů, dolů a stavebních jam před <em>zaplavením</em>, k hospodaření s <em>pitnou vodou</em>, k ochraně před šířením <em>kontaminace z chemických provozů</em>. Aplikace jsou dále v detekci zdroje kontaminace pitné vody a odhadu rychlosti šíření kontaminace, včetně <em>kontaminace slanou mořskou vodou</em> v přímořských oblastech.</p>
 <p>U proudění s napjatou hladinou (mezi dvěma nepropustnými vrstvami, angl. <em>confined aquifer</em>) transmisitiva závisí pouze na fyzikálních vlastnostech zvodně. Například pro homogenní izotropní materiál je konstantní. U proudění s volnou hladinou (bez horní nepropustné vrstvy, angl. <em>unconfined aquifer</em>) je transmisivita úměrná tloušťce vrstvy obsahující vodu. Zpravidla nulovou hodnotu piezometrické hladiny volíme na dolní nepropustné vrstvě a potom platí <span class="math inline">\(T=kh\)</span>, kde <span class="math inline">\(k\)</span> závisí pouze na fyzikálních vlastnostech půdy. Proto se často rovnice podzemní vody pro proudění s volnou hladinou zapisuje ve tvaru <span class="math display">\[ {S_S\frac{\partial h}{\partial t}=  \sigma + \nabla\cdot \bigl(kh\nabla h\bigr).}\]</span></p>
@@ -331,13 +316,11 @@ V případě proudění i v ose $x$ bude přítomen ještě další analogick
 <li>Laplaceův operátor vystupuje například v problémech popsaných difuzní rovnicí a lineárním konstitučním vztahem s konstantním skalárním difuzním koeficientem (homogenní izotropní prostředí s lineární materiálovou odezvou).</li>
 </ul>
 <h1 id="z-ptačí-perspektivy">Z ptačí perspektivy</h1>
-
 <div class="obtekat">
 <figure>
-<img src="../falcon.jpg" alt="Ještě pohled s trochou nadhledu. Zdroj: pixabay.com" /><figcaption>Ještě pohled s trochou nadhledu. Zdroj: pixabay.com</figcaption>
+<img src="../falcon.jpg" alt="" /><figcaption>Ještě pohled s trochou nadhledu. Zdroj: pixabay.com</figcaption>
 </figure>
 </div>
-
 <ul>
 <li>U vektorového pole popisujícího tok nás zajímá, jestli tok nabírá na intenzitě nebo naopak slábne. Toto je skryto v pojmu divergence.</li>
 <li>Formulováním bilance dávající do souvislosti intenzitu změny toku s vydatností zdrojů a s časovou změnou je možno formulovat matematické modely popisující transportní jevy. Nezáleží na charakteru přenášené veličiny, může se jednat o energii i o látku. Nezáleží ani na tom, pomocí jakého parametru množství přenášené tokem měříme. Výsledkem je rovnice kontinuity.</li>

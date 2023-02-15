@@ -53,7 +53,7 @@ jQuery( document ).ready(function() {
 <div id="header">
 <h1 class="title">Lineární diferenciální rovnice druhého řádu</h1>
 <h2 class="author">Robert Mařík</h2>
-<p class="date"><em><small>Poslední modifikace: 2022-07-03 </small></em></p>
+<p class="date"><em><small>Poslední modifikace: 2022-05-03 </small></em></p>
 </div>
 <div id="TOC">
 <ul>
@@ -66,7 +66,8 @@ jQuery( document ).ready(function() {
 <li><a href="#homogenní-lde-2.-řádu-s-konstantními-koeficienty">Homogenní LDE 2. řádu s konstantními koeficienty</a></li>
 <li><a href="#nehomogenní-lde-2.-řádu">Nehomogenní LDE 2. řádu</a></li>
 <li><a href="#dirichletova-okrajová-úloha-vlastní-čísla">Dirichletova okrajová úloha, vlastní čísla</a></li>
-<li><a href="#výpočet-vlastních-hodnot">Výpočet vlastních hodnot</a><ul>
+<li><a href="#výpočet-vlastních-hodnot">Výpočet vlastních hodnot</a>
+<ul>
 <li><a href="#případ-lambda0">Případ <span class="math inline">\(\lambda&gt;0\)</span></a></li>
 <li><a href="#případ-lambda0-1">Případ <span class="math inline">\(\lambda&lt;0\)</span></a></li>
 <li><a href="#obvyklá-formulace">Obvyklá formulace</a></li>
@@ -101,16 +102,14 @@ jQuery( document ).ready(function() {
 </blockquote>
 <p><strong>Zkratky:</strong> LDE - lineární diferenciální rovnice, IC - počáteční podmínka, IVP - počáteční úloha</p>
 <h1 id="příklad---těleso-na-pružině">Příklad - těleso na pružině</h1>
-
 <div class="obtekat">
 <figure>
-<img src="pruzina.jpg" alt="Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh, které se týkají oscilací. Chemické oscilace, považované za základ tzv. buněčných hodin i jiných vnitřních cyklů biologických organismů, jsou ale založeny na jiném popisu. (Viz Brusselator.) Zdroj: pixabay.com" /><figcaption>Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh, které se týkají oscilací. Chemické oscilace, považované za základ tzv. buněčných hodin i jiných vnitřních cyklů biologických organismů, jsou ale založeny na jiném popisu. (Viz Brusselator.) Zdroj: pixabay.com</figcaption>
+<img src="pruzina.jpg" alt="" /><figcaption>Těleso na pružině je nejjednodušší model pro rovnice druhého řádu. Přesto není vhodné tento model podceňovat, dokáže být velmi užitečný i u jiných úloh, které se týkají oscilací. Chemické oscilace, považované za základ tzv. buněčných hodin i jiných vnitřních cyklů biologických organismů, jsou ale založeny na jiném popisu. (Viz Brusselator.) Zdroj: pixabay.com</figcaption>
 </figure>
 <figure>
-<img src="kmity_stromu.png" alt="Vlastní kmity bodu na kmeni stromu ve výšce 4m po vychýlení stromu z rovnovážné polohy a vypuštění. Až na úvodní pasáž v čase cca 52 sekund výchylka odpovídá tlumenému kmitání tělesa na pružině. Zdroj: projekt DYNATREE" /><figcaption>Vlastní kmity bodu na kmeni stromu ve výšce 4m po vychýlení stromu z rovnovážné polohy a vypuštění. Až na úvodní pasáž v čase cca 52 sekund výchylka odpovídá tlumenému kmitání tělesa na pružině. Zdroj: projekt DYNATREE</figcaption>
+<img src="kmity_stromu.png" alt="" /><figcaption>Vlastní kmity bodu na kmeni stromu ve výšce 4m po vychýlení stromu z rovnovážné polohy a vypuštění. Až na úvodní pasáž v čase cca 52 sekund výchylka odpovídá tlumenému kmitání tělesa na pružině. Zdroj: projekt DYNATREE</figcaption>
 </figure>
 </div>
-
 <p>Kmity tělesa o hmotnosti <span class="math inline">\(m\)</span> pružně připevněného k nehybné podložce spojem tuhosti <span class="math inline">\(k\)</span> jsou popsány diferenciální rovnicí <span class="math inline">\({\ddot x+\frac km x=0}.\)</span> Zde navíc používáme fyzikální úzus označovat derivace podle času pomocí tečky a ne čárky. Symbol <span class="math inline">\(\ddot x\)</span> tedy značí druhou derivaci funkce <span class="math inline">\(x\)</span>, kde <span class="math inline">\(x\)</span> bereme jako funkci času.</p>
 <p>Jednoduchým mechanickým modelem je těleso na pružině. Zde je deformace úměrná působící síle. Analogické situace vedoucí na stejnou rovnici však dostáváme i obecněji. Pokud pro jednoduchost předpokládáme, že těleso s jedním stupněm volnosti se nachází ve stabilním stavu s minimem potenciální energie a energie závisí na poloze <span class="math inline">\(x\)</span>, můžeme v okolí minima <span class="math inline">\(x_0\)</span> potenciální energii aproximovat Taylorovým rozvojem druhého řádu <span class="math display">\[E(x)\approx E(x_0)+E&#39;(x_0)(x-x_0)+\frac 12E&#39;&#39;(x_0)(x-x_0)^2.\]</span> Vzhledem k tomu, že v <span class="math inline">\(x_0\)</span> je minimum, platí <span class="math inline">\(E&#39;(x_0)=0\)</span>. Je výhodné volit počátek v rovnovážné poloze, protože poté platí <span class="math inline">\(x_0=0\)</span>. Síla je poté dána vztahem <span class="math display">\[F(x)=-\frac{\partial}{\partial x}E(x)=-E&#39;&#39;(0)x.\]</span> Síla <span class="math inline">\(F\)</span> je tedy úměrná výchylce <span class="math inline">\(x\)</span> a vrací těleso do rovnovážné polohy.</p>
 <p>Situace tedy perfektně koresponduje s kmitáním na pružině i když potenciální energie uvažovaná v tomto odstavci může být jiného charakteru. Něco podobného jsme viděli již u autonomních systémů, kdy systém modelující tlumený oscilátor z přednášky byl stejný jako systém modelující regulaci topení ze cvičení a tento systém byl jenom lépe představitelnou realizací systému regulace syntézy proteinů.</p>
@@ -250,7 +249,6 @@ $$y''+p(x)y'+q(x)y=f(x) \tag{LDE0}$$
 <blockquote class="definice"><p class="definicename">Definice (fundamentální systém řešení).</p><p> Dvojici funkcí <span class="math inline">\(y_1\)</span> a <span class="math inline">\(y_2\)</span> z předchozí věty nazýváme <em>fundamentální systém řešení rovnice (LDE0)</em>.</p>
 </blockquote>
 <h1 id="homogenní-lde-2.-řádu-s-konstantními-koeficienty">Homogenní LDE 2. řádu s konstantními koeficienty</h1>
-
 <!--
 
 Budeme studovat rovnici tvaru
@@ -268,7 +266,6 @@ Pouze v\ tomto případě bude uvažovaná funkce řešením rovnice (1).
 # Homogenní LDE 2. řádu s\ konstantními koeficienty
 
 -->
-
 <p>Rovnici <span class="math display">\[y&#39;&#39;+py&#39;+qy=0\]</span> je možno přepsat na <span class="math display">\[(y&#39;)^\prime=-qy-py&#39;\]</span> a tato rovnice je po substituci <span class="math inline">\(x_1=y\)</span>, <span class="math inline">\(x_2=y&#39;\)</span> ekvivalentní autonomnímu systému <span class="math display">\[\begin{pmatrix}x_1\\x_2\end{pmatrix}&#39;=
 \begin{pmatrix}0 &amp;1\\ -q &amp;-p\end{pmatrix}
 \begin{pmatrix}x_1\\x_2\end{pmatrix}
@@ -313,31 +310,27 @@ Pouze v\ tomto případě bude uvažovaná funkce řešením rovnice (1).
 <h2 id="obvyklá-formulace">Obvyklá formulace</h2>
 <p>V praktických úlohách, kdy požadujeme existenci nenulového řešení, zpravidla pracujeme s rovnicí ve tvaru <span class="math display">\[y&#39;&#39;+\lambda^2 y=0,\]</span> abychom zdůraznili kladnou hodnotu parametru a abychom dostávali řešení formálně bez druhé odmocniny. Tedy okrajová úloha <span class="math display">\[y&#39;&#39;+\lambda^2 y=0,\quad y(0)=0=y(1)\]</span> má vlastní čísla <span class="math inline">\(\lambda=k\pi\)</span>, kde <span class="math inline">\(k\)</span> je kladné celé číslo.</p>
 <h1 id="kmity-struny">Kmity struny</h1>
-
 <div class="obtekat">
 <figure>
-<img src="housle.jpg" alt="Kmitání jednorozměrných objektů je popsáno lineární diferenciální rovnicí druhého řádu. Zdroj: pixabay.com" /><figcaption>Kmitání jednorozměrných objektů je popsáno lineární diferenciální rovnicí druhého řádu. Zdroj: pixabay.com</figcaption>
+<img src="housle.jpg" alt="" /><figcaption>Kmitání jednorozměrných objektů je popsáno lineární diferenciální rovnicí druhého řádu. Zdroj: pixabay.com</figcaption>
 </figure>
 </div>
-
 <p>Při kmitání struny délky <span class="math inline">\(l\)</span> upevněné na koncích se ukazuje, že proces je možno modelovat okrajovou úlohou <span class="math display">\[y&#39;&#39;+\lambda^2 y=0,\quad
 y(0)=0=y(l),\]</span> kde <span class="math inline">\(y\)</span> je amplituda kmitů v místě <span class="math inline">\(x\)</span> a <span class="math inline">\(\lambda\)</span> souvisí s frekvencí. Rovnice má obecné řešení <span class="math display">\[y(x)=C_1\sin(
 \lambda x)+C_2\cos( \lambda x)\]</span> Z podmínky <span class="math inline">\(y(0)=0\)</span> dostáváme <span class="math inline">\(C_2=0\)</span> a z podmínky <span class="math inline">\(y(l)=0\)</span> dostáváme <span class="math display">\[y(x)=C_1\sin(\lambda x)\]</span> pokud <span class="math display">\[\lambda l=k\pi \tag{***}\]</span> a <span class="math inline">\(y=0\)</span> jinak. Při podrobnějším popisu se ukazuje, že <span class="math inline">\(\lambda\)</span> souvisí s hmotností struny, napětím ve struně a frekvencí, kterou slyšíme. Podmínka (***) určuje spektrum slyšitelných frekvencí, na kterých může struna kmitat, výsledný pohyb (a zvuk) je díky linearitě složením jednotlivých variant. Toho se dá s výhodou vyžívat a stejnou strunu je možné <a href="https://www.youtube.com/watch?v=kn92TLYA4rE">rozeznívat více způsoby</a> a dosahovat různý výsledný zvuk.</p>
 <h1 id="vzpěry">Vzpěry</h1>
 <div class="obtekat">
 <figure>
-<img src="vzpera.jpg" alt="Nosníky, ať už samostatné vzpěry, nebo součásti příhradových konstrukcí, je nutné posuzovat i z hlediska axiálního namáhání. Ignorování tohoto způsobu namáhání vedlo v 19. století k pádu několika příhradových železničních mostů a následnému stržení řady chybně dimenzovaných mostů. Zdroj: pixabay.com" /><figcaption>Nosníky, ať už samostatné vzpěry, nebo součásti příhradových konstrukcí, je nutné posuzovat i z hlediska axiálního namáhání. Ignorování tohoto způsobu namáhání vedlo v 19. století k pádu několika příhradových železničních mostů a následnému stržení řady <a href="https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures">chybně dimenzovaných mostů</a>. Zdroj: pixabay.com</figcaption>
+<img src="vzpera.jpg" alt="" /><figcaption>Nosníky, ať už samostatné vzpěry, nebo součásti příhradových konstrukcí, je nutné posuzovat i z hlediska axiálního namáhání. Ignorování tohoto způsobu namáhání vedlo v 19. století k pádu několika příhradových železničních mostů a následnému stržení řady <a href="https://en.wikipedia.org/wiki/Cast-iron_architecture#Catastrophic_failures">chybně dimenzovaných mostů</a>. Zdroj: pixabay.com</figcaption>
 </figure>
 </div>
 <p>Předpokládejme, že máme nosník namáhaný na vzpěr. Nosník je uchycen na dolním a horním konci tak, že se nemůže pohybovat do stran, ale může se otáčet. Osu <span class="math inline">\(x\)</span> zvolíme podélně v ose vzpěry, osu <span class="math inline">\(y\)</span> kolmo. Při namáhání takového nosníku, je výchylka dána okrajovou úlohou (<a href="https://katalog.mendelu.cz/documents/21654">A. Požgaj a kol., Štruktúra a vlastnosti dreva</a>, str. 359) <span class="math display">\[\frac{\mathrm d^2 y}{\mathrm dx^2}+\alpha^2 y=0,\quad y(0)=y(l)=0,\]</span> kde <span class="math inline">\(\alpha^2=\frac{F}{EI}\)</span> je parametr závislý na působící síle, materiálu a kvadratickém momentu průřezu nosníku. (Pro jiné způsoby uchycení se rovnice a okrajové podmínky mohou mírně lišit, rovnice může být například i nehomogenní a pro jiné druhy zatížení i vyššího řádu, zásadní vlastnosti jsou však stejné.) Toto je stejná úloha jako u kmitání struny. Při síle, která se postupně zvětšuje, se nenulové řešení objeví v bodě, kde platí <span class="math display">\[\alpha l=\pi,\]</span> (odpovídá základní frekvenci struny) tj. <span class="math display">\[\sqrt{\frac {F}{EI}}l=\pi\]</span> a <span class="math display">\[F=\frac{\pi^2 EI}{l^2}.\]</span> Toto je pro daný nosník kritická síla a ta je pro daný materiál nepřímo úměrná druhé mocnině délky a přímo úměrná kvadratickému momentu <span class="math inline">\(I\)</span>.</p>
 <h1 id="neumannova-a-smíšená-okrajová-úloha">Neumannova a smíšená okrajová úloha</h1>
-
 <div class="obtekat">
 <figure>
-<img src="array_mbira.jpg" alt="Array mbira - hudební nástroj se smíšenou okrajovou úlohou" /><figcaption>Array mbira - <a href="https://www.youtube.com/watch?v=5fAAGheYTFA">hudební nástroj</a> se smíšenou okrajovou úlohou</figcaption>
+<img src="array_mbira.jpg" alt="" /><figcaption>Array mbira - <a href="https://www.youtube.com/watch?v=5fAAGheYTFA">hudební nástroj</a> se smíšenou okrajovou úlohou</figcaption>
 </figure>
 </div>
-
 <p>Při řešení Dirichletovy úlohy hledáme řešení diferenciální rovnice druhého řádu s předepsanými hodnotami ve dvou různých bodech <span class="math display">\[y(a)=\alpha,\quad y(b)=\beta.\]</span> Tento požadavek se uplatní při studiu kmitů struny nebo tyče s pevnými konci.</p>
 <p>V praxi je možné si představit i jiné podmínky. Například v termodynamice se používají podmínky na hodnotu derivací ve dvou různých bodech <span class="math display">\[y&#39;(a)=\alpha, \quad y&#39;(b)=\beta.\]</span> Takové podmínky se nazývají Neumannovy podmínky a úloha najít řešení rovnice, které tyto podmínky splňuje se nazývá <strong>Neumannova okrajová úloha</strong>, též <strong>Neumannova úloha</strong>.</p>
 <p>Existují i smíšené úlohy, například při kmitání tělesa s jedním upevněným a jedním volným koncem je přirozené formulovat <strong>smíšenou okrajovou podmínku</strong> <span class="math display">\[y(a)=0,\quad y&#39;(b)=0,\]</span> kde <span class="math inline">\(a\)</span> je upevněný konec a <span class="math inline">\(b\)</span> volný konec.</p>

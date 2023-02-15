@@ -53,7 +53,7 @@ jQuery( document ).ready(function() {
 <div id="header">
 <h1 class="title">Dvojný integrál</h1>
 <h2 class="author">Robert Mařík</h2>
-<p class="date"><em><small>Poslední modifikace: 2022-11-05 </small></em></p>
+<p class="date"><em><small>Poslední modifikace: 2022-11-03 </small></em></p>
 </div>
 <div id="TOC">
 <ul>
@@ -62,13 +62,15 @@ jQuery( document ).ready(function() {
 <li><a href="#motivace-3-průtok">Motivace 3 (průtok)</a></li>
 <li><a href="#dvojný-integrál">Dvojný integrál</a></li>
 <li><a href="#linearita-a-aditivita">Linearita a aditivita</a></li>
-<li><a href="#výpočet-dvojného-integrálu">Výpočet dvojného integrálu</a><ul>
+<li><a href="#výpočet-dvojného-integrálu">Výpočet dvojného integrálu</a>
+<ul>
 <li><a href="#výpočet-oblast-mezi-funkcemi-proměnné-x">Výpočet (oblast mezi funkcemi proměnné <span class="math inline">\(x\)</span>)</a></li>
 <li><a href="#výpočet-oblast-mezi-funkcemi-proměnné-y">Výpočet (oblast mezi funkcemi proměnné <span class="math inline">\(y\)</span>)</a></li>
 <li><a href="#záměna-pořadí-integrace">Záměna pořadí integrace</a></li>
 </ul></li>
 <li><a href="#výpočet-obdélníková-oblast">Výpočet (obdélníková oblast)</a></li>
-<li><a href="#aplikace-dvojného-integrálu">Aplikace dvojného integrálu</a><ul>
+<li><a href="#aplikace-dvojného-integrálu">Aplikace dvojného integrálu</a>
+<ul>
 <li><a href="#matematické-aplikace-dvojného-integrálu">Matematické aplikace dvojného integrálu</a></li>
 <li><a href="#objem-kopce-nebo-jezera-pomocí-vrstevnic">Objem kopce nebo jezera pomocí vrstevnic</a></li>
 <li><a href="#fyzikální-aplikace-dvojného-integrálu">Fyzikální aplikace dvojného integrálu</a></li>
@@ -79,7 +81,8 @@ jQuery( document ).ready(function() {
 <li><a href="#tlak-na-svislou-plochu">Tlak na svislou plochu</a></li>
 <li><a href="#působiště-tlakové-síly">Působiště tlakové síly</a></li>
 </ul></li>
-<li><a href="#dvojný-integrál-v-polárních-souřadnicích">Dvojný integrál v polárních souřadnicích</a><ul>
+<li><a href="#dvojný-integrál-v-polárních-souřadnicích">Dvojný integrál v polárních souřadnicích</a>
+<ul>
 <li><a href="#polární-souřadnice">Polární souřadnice</a></li>
 <li><a href="#množiny-s-jednoduchým-vyjádřením-v-polárních-souřadnicích">Množiny s jednoduchým vyjádřením v polárních souřadnicích</a></li>
 <li><a href="#převod-dvojného-integrálu-do-polárních-souřadnic">Převod dvojného integrálu do polárních souřadnic</a></li>
@@ -116,12 +119,10 @@ jQuery( document ).ready(function() {
 <p>U křivkového integrálu jsme se setkali s momentem setrvačnosti. Ukázali jsme si, jak stanovit moment setrvačnosti množiny, která má hmotnost rozloženu na křivce a třeba i nerovnoměrně. Při výpočtu namáhání nosníků, trámů, polic nebo stromů řešíme podobnou úlohu, ale pro množiny v rovině namísto křivek. Potřebujeme zohlednit, že při deformaci nosníků se pro jednotlivé body průřezu liší vzdálenost od neutrální osy.</p>
 <p>Řešení uvedených nesnází je stejné: další rozšíření integrálního počtu a zavedení dvojného integrálu. Ten si nyní představíme.</p>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/DYySq6o6WTk"></iframe> </div>
-
-
 <h1 id="motivace-1-hmotnost-nehomogenní-desky">Motivace 1 (hmotnost nehomogenní desky)</h1>
 <div class="obtekat">
 <figure>
-<img src="table.jpg" alt="Deska s nekonstantní plošnou hustotou. Zdroj: https://www.flickr.com/photos/svacher, licence CC BY-NC-ND 2.0" /><figcaption>Deska s nekonstantní plošnou hustotou. Zdroj: https://www.flickr.com/photos/svacher, licence CC BY-NC-ND 2.0</figcaption>
+<img src="table.jpg" alt="" /><figcaption>Deska s nekonstantní plošnou hustotou. Zdroj: https://www.flickr.com/photos/svacher, licence CC BY-NC-ND 2.0</figcaption>
 </figure>
 </div>
 <ul>
@@ -133,7 +134,7 @@ jQuery( document ).ready(function() {
 <h1 id="motivace-2-objem-vody-v-jezeře">Motivace 2 (objem vody v jezeře)</h1>
 <div class="obtekat">
 <figure>
-<img src="lake.jpg" alt="Nádrž s proměnnou hloubkou. Zdroj: https://www.pixabay.com" /><figcaption>Nádrž s proměnnou hloubkou. Zdroj: https://www.pixabay.com</figcaption>
+<img src="lake.jpg" alt="" /><figcaption>Nádrž s proměnnou hloubkou. Zdroj: https://www.pixabay.com</figcaption>
 </figure>
 </div>
 <ul>
@@ -144,7 +145,7 @@ jQuery( document ).ready(function() {
 <h1 id="motivace-3-průtok">Motivace 3 (průtok)</h1>
 <div class="obtekat">
 <figure>
-<img src="pipe.jpg" alt="Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji než ve středu, potrubí na Aljašce. Zdroj: https://www.pixabay.com" /><figcaption>Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji než ve středu, potrubí na Aljašce. Zdroj: https://www.pixabay.com</figcaption>
+<img src="pipe.jpg" alt="" /><figcaption>Průtok potrubím je ovlivněn tím, že u stěny teče tekutina pomaleji než ve středu, potrubí na Aljašce. Zdroj: https://www.pixabay.com</figcaption>
 </figure>
 </div>
 <ul>
@@ -152,7 +153,6 @@ jQuery( document ).ready(function() {
 <li>Teče-li různými místy průřezu voda různou rychlostí, sečteme jednotlivé příspěvky podle vzorce <span class="math display">\[Q=v_1S_1+v_2S_2+\dots +v_nS_n.\]</span></li>
 <li>Myšlenku z předchozího bodu není snadné udělat, pokud se rychlost mění spojitě. Například v potrubí je rychlost rozdělena parabolicky a ubývá se vzdáleností od středu. Situaci zachraňuje dvojný integrál <span class="math display">\[Q=\iint_\Omega v\,\mathrm dS.\]</span></li>
 </ul>
-
 <h1 id="dvojný-integrál">Dvojný integrál</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tPf-7dZ4Il0"></iframe> </div>
 <div class="obtekat">
@@ -177,7 +177,7 @@ jQuery( document ).ready(function() {
 <h3 id="výpočet-oblast-mezi-funkcemi-proměnné-x">Výpočet (oblast mezi funkcemi proměnné <span class="math inline">\(x\)</span>)</h3>
 <div class="obtekat">
 <figure>
-<img src="fub_1.png" alt="Oblast mezi funkcemi proměnné x." /><figcaption>Oblast mezi funkcemi proměnné <span class="math inline">\(x\)</span>.</figcaption>
+<img src="fub_1.png" alt="" /><figcaption>Oblast mezi funkcemi proměnné <span class="math inline">\(x\)</span>.</figcaption>
 </figure>
 </div>
 <p>V závislosti na tom, jakými nerovnostmi množinu <span class="math inline">\(\Omega\)</span> definujeme, můžeme pro výpočet dvojného integrálu použít následující věty. Tyto věty udávají, jak je možno dvojný integrál přepsat jako dvojnásobný integrál. Mají název <strong>Fubiniovy věty</strong>.</p>
@@ -192,7 +192,7 @@ jQuery( document ).ready(function() {
 <h3 id="výpočet-oblast-mezi-funkcemi-proměnné-y">Výpočet (oblast mezi funkcemi proměnné <span class="math inline">\(y\)</span>)</h3>
 <div class="obtekat">
 <figure>
-<img src="fub_2.png" alt="Oblast mezi funkcemi proměnné y." /><figcaption>Oblast mezi funkcemi proměnné <span class="math inline">\(y\)</span>.</figcaption>
+<img src="fub_2.png" alt="" /><figcaption>Oblast mezi funkcemi proměnné <span class="math inline">\(y\)</span>.</figcaption>
 </figure>
 </div>
 <blockquote class="veta"><p class="vetaname">Věta (Fubiniova věta pro jiné pořadí integrace).</p><p> Nechť <span class="math inline">\(f\)</span> je funkce spojitá v uzavřené oblasti <span class="math display">\[  \Omega=\{(x,y)\in\mathbb{R}^2:{a\leq y\leq b}\text{ a }
@@ -207,7 +207,7 @@ jQuery( document ).ready(function() {
 <h3 id="záměna-pořadí-integrace">Záměna pořadí integrace</h3>
 <div class="obtekat">
 <figure>
-<img src="fub_4.png" alt="Oblast, pro kterou jsou možná obě pořadí integrace." /><figcaption>Oblast, pro kterou jsou možná obě pořadí integrace.</figcaption>
+<img src="fub_4.png" alt="" /><figcaption>Oblast, pro kterou jsou možná obě pořadí integrace.</figcaption>
 </figure>
 </div>
 <p>Často je možné oblast integrace zapsat pomocí obou možností uvedených na předchozích slidech. Například oblast na obrázku je možno zapsat buď jako <span class="math display">\[\begin{gathered}
@@ -223,7 +223,7 @@ jQuery( document ).ready(function() {
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/o38mi3tTAvw"></iframe> </div>
 <div class="obtekat">
 <figure>
-<img src="fub_3.png" alt="Integrál přes obdélník." /><figcaption>Integrál přes obdélník.</figcaption>
+<img src="fub_3.png" alt="" /><figcaption>Integrál přes obdélník.</figcaption>
 </figure>
 </div>
 <p>Výše uvedené problémy se stanovením a případným přepočítáváním mezí při záměně pořadí integrace se nevyskytují při integrování přes obdélníkovou oblast.</p>
@@ -245,13 +245,11 @@ jQuery( document ).ready(function() {
 <li><strong>Integrální střední hodnota</strong> funkce <span class="math inline">\(f(x,y)\)</span> definované na množině <span class="math inline">\(\Omega\)</span> je <span class="math display">\[ \frac{\iint_\Omega f(x,y)\mathrm{d}x \mathrm{d}y }{\mu (\Omega)},\]</span> kde <span class="math inline">\(\mu (\Omega)=\iint_\Omega\mathrm{d}x\mathrm{d}y\)</span> je obsah množiny <span class="math inline">\(\Omega\)</span>.</li>
 </ul>
 <h3 id="objem-kopce-nebo-jezera-pomocí-vrstevnic">Objem kopce nebo jezera pomocí vrstevnic</h3>
-
 <div class="obtekat">
 <figure>
-<img src="fuji.jpg" alt="Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic. Zdroj: https://www.pixabay.com" /><figcaption>Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic. Zdroj: https://www.pixabay.com</figcaption>
+<img src="fuji.jpg" alt="" /><figcaption>Posvátná hora Japonska. Objem se dá určit pomocí obsahů vrstevnic. Zdroj: https://www.pixabay.com</figcaption>
 </figure>
 </div>
-
 <ul>
 <li>Obsah množiny ohraničené vrstevnicí na mapě vynásobený rozestupem mezi vrstevnicemi je přibližně roven objemu vrstvy mezi dvěma vrstevnicemi.</li>
 <li>Pokud sečteme obsahy všech vrstevnic a vynásobíme rozestupem mezi těmito vrstevnicemi, dostaneme odhad pro objem kopce. Vlastně je to jako bychom kopec rozřezali na stejně tlusté plátky, naskládali je vedle sebe, sečetli obsahy postav takto vzniklých těles a vynásobili výškou.</li>
@@ -268,17 +266,15 @@ dx\mathrm dy\right)\]</span> a odsud odvozujeme rovnici vedení tepla.</li>
 <li><strong>Moment setrvačnosti</strong> hmotné množiny <span class="math inline">\(M\)</span> vzhledem k ose je <span class="math display">\[J=\iint_M \rho^2(x,y)\sigma(x,y)\mathrm{d}x \mathrm{d}y ,\]</span> kde <span class="math inline">\(\rho(x,y)\)</span> je vzdálenost bodu <span class="math inline">\((x,y)\)</span> od osy otáčení. Například pro osu <span class="math inline">\(x\)</span> je <span class="math inline">\(\rho(x,y)=y\)</span> a pro osu <span class="math inline">\(y\)</span> je <span class="math inline">\(\rho (x,y)=x\)</span>. Pro osu procházející kolmo počátkem je <span class="math inline">\(\rho(x,y)=\sqrt{x^2+y^2}\)</span>.</li>
 </ul>
 <h3 id="technické-aplikace-dvojného-integrálu">Technické aplikace dvojného integrálu</h3>
-
 <div class="obtekat">
 <figure>
-<img src="I-nosniky.jpg" alt="Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR realizována 2011. Zdroj: https://www.taus.eu" /><figcaption>Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR <a href="https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico">realizována 2011</a>. Zdroj: https://www.taus.eu</figcaption>
+<img src="I-nosniky.jpg" alt="" /><figcaption>Dřevostavba realizovaná pomocí I-nosníků. I-nosníky mají vysoký kvadratický moment při nízké spotřebě materiálu. Proto jsou tuhé a silné i při nízké hmotnosti. Ve strojařině se používají odedávna, první dřevostavba z nosníků tohoto typu byla v ČR <a href="https://stavba.tzb-info.cz/7551-prvni-rodinny-dum-v-cr-s-konstrukcnim-systemem-i-nosniku-fermacell-steico">realizována 2011</a>. Zdroj: https://www.taus.eu</figcaption>
 </figure>
 <figure>
-<img src="vetrna_turbina.jpg" alt="Větrné turbíny jsou konstruovány podobně jako I nosníky, pevný materiál na vnějších stranách a materiál s menší pevností uvnitř. Například balzové dřevo. A podobně jsou “konstruovány” například listy rostlin. Zdroj: pixabay.com, tpsdave" /><figcaption>Větrné turbíny jsou konstruovány podobně jako I nosníky, pevný materiál na vnějších stranách a materiál s menší pevností uvnitř. Například balzové dřevo. A podobně jsou “konstruovány” například listy rostlin. Zdroj: pixabay.com, tpsdave</figcaption>
+<img src="vetrna_turbina.jpg" alt="" /><figcaption>Větrné turbíny jsou konstruovány podobně jako I nosníky, pevný materiál na vnějších stranách a materiál s menší pevností uvnitř. Například balzové dřevo. A podobně jsou “konstruovány” například listy rostlin. Zdroj: pixabay.com, tpsdave</figcaption>
 </figure>
 </div>
 <div class="obtekat"><figure><img src="https://user.mendelu.cz/marik/manim/thumbs/beam.jpg"><figcaption>Odvození ohybové rovnice nosníku. <a href="https://user.mendelu.cz/marik/manim/beam" class=but-prez target=_blank>Otevřít prezentaci</a></figcaption></figure></div>
-
 <ul>
 <li><strong>Souřadnice těžiště</strong> množiny jsou podílem lineárních momentů a celkové hmotnosti množiny.</li>
 <li><strong>Kvadratický moment průřezu</strong> (což je moment setrvačnosti pro <span class="math inline">\(\sigma(x,y)=1\)</span>, anglicky <em>second moment of area</em>) je veličina, která hraje podstatnou roli v mechanice (nábytek, stavby) při dimenzování (polic, nosných tyčí, nosníků).</li>
@@ -291,16 +287,14 @@ dx\mathrm dy\right)\]</span> a odsud odvozujeme rovnici vedení tepla.</li>
 \]</span> kde <span class="math inline">\(S=\mu (M)\)</span> je obsah množiny <span class="math inline">\(M\)</span>. Poloha těžiště je tedy střední hodnotou funkcí <span class="math inline">\(x\)</span> a <span class="math inline">\(y\)</span>.</li>
 </ul>
 <h3 id="tuhost-nosníků-stabilita-stromů">Tuhost nosníků, stabilita stromů</h3>
-
 <div class="obtekat">
 <figure>
-<img src="beam.jpg" alt="Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com" /><figcaption>Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com</figcaption>
+<img src="beam.jpg" alt="" /><figcaption>Tuhost a nosnost nosníků nebo podpěr souvisí s kvadratickým momentem průřezu. Zdroj: pixabay.com</figcaption>
 </figure>
 <figure>
-<img src="vanocni_strom.jpg" alt="Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník" /><figcaption>Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník</figcaption>
+<img src="vanocni_strom.jpg" alt="" /><figcaption>Poloviční poloměr znamená u homogenního materiálu šestnáctkrát menší tuhost. Tedy jenom šest procent původní tuhosti! U stromu je tento poměr ještě horší díky různým druhům dřeva uprostřed a na kraji. Vánoční strom pro Prahu na Vánoce 2019. Zdroj: Taiko, Pražský deník</figcaption>
 </figure>
 </div>
-
 <p>Tuhost (odolnost vůči deformaci) pro nosník obdélníkového průřezu o výšce <span class="math inline">\(b\)</span> a šířce <span class="math inline">\(a\)</span> je dána kvadratickým momentem obdélníkového průřezu vzhledem k vodorovné ose procházející těžištěm. <span class="math display">\[\begin{aligned}I_x&amp;=
 \iint_{\left[-\frac a2,\frac a2\right]\times \left[-\frac b2,\frac b2\right]} y^2\,\mathrm dx\mathrm dy\\
 &amp;=
@@ -315,7 +309,6 @@ a\left[\frac 13 y^3\right]_{-\frac b2}^{\frac b2}
 <li>Pro nosník čtvercového průřezu (<span class="math inline">\(a=b\)</span>) roste tuhost se čtvrtou mocninou rozměrů. Obsah (a tedy i hmotnost) roste s druhou mocninou. Uvažujme tři nosníky. První má čtvercový průřez. Druhý také, ale průřez má dvojnásobný obsah. (Strana je tedy <span class="math inline">\(\sqrt 2\)</span>-krát delší.) Třetí nosník bude krabicový nosník. Bude mít vnější rozměry stejné jako větší nosník, ale uvnitř bude čtvercová dutina o rozměrech prvního nosníku. Tuhost prvního nosníku bude referenční, označme ji <span class="math inline">\(I\)</span>. Tuhost druhého nosníku bude čtyřnásobná, tj. <span class="math inline">\(4I\)</span> a za toto navýšení tuhosti “platíme” použitím dvojnásobného množství materiálu. Tuhost třetího nosníku najdeme jako rozdíl prvních dvou, tj. <span class="math inline">\(3I\)</span>, protože i geometricky největší nosník vznikne zasunutím prvního nosníku do dutiny ve třetím krabicovém nosníku. Nyní porovnjeme původní nosník a krabicový nosník. Oba používají stejné množství materiálu, ale tuhost krabicového nosníku je trojnásobná. To proto, že část materiálu je dál od osy symetrie průřezu. Podobně se dá zdůvodnit a výpočtem ukázat, že profil ve tvaru písmene I, známé íčko, je tužší než tyč vykovaná ze stejného množství materiálu.</li>
 <li>Pro čtvercový průřez roste tuhost se čtvrtou mocninou délky strany. Podobná závislost musí být u každého průřezu jednoparametrického tvaru, například pro kruh. Jako na nosník s kruhovým průřezem můžeme pohlížet i na stromy. Například strom, ve kterém je dutina o velikosti poloviny průměru kmene většinou vyvolá obavy ze stability. I když taková dutina vypadá obrovská, tuhost se sníží o původní tuhost vynásobenou koeficientem <span class="math display">\[(0.5)^4=0.0625\approx 6\%.\]</span> Vidíme, že i s hrozivě vypadající dutinou má kmen pořád tuhost <span class="math inline">\(94\%\)</span> původní tuhosti (za předpokladu dutiny uprostřed kmene). Pevnost roste jenom s třetí mocninou a proto odolnost vůči zlomení neklesne tak dramaticky jako tuhost.</li>
 </ul>
-
 <h3 id="těžiště-složeného-obrazce">Těžiště složeného obrazce</h3>
 <p>Uvažujme množinu <span class="math inline">\(M\)</span> s jednotkovou plošnou hustotou, rozdělenou na dvě disjunktní části <span class="math inline">\(M_1\)</span> a <span class="math inline">\(M_2\)</span>. Tyto množiny mají <span class="math inline">\(x\)</span>-ovou polohu těžiště v bodě <span class="math display">\[x_{0i}=\frac1{S_i}{\iint_{M_i}x\,\mathrm dx\mathrm dy}, \qquad S_i=\iint_{M_i}\,\mathrm dx\mathrm dy,\qquad i=1,2.\]</span> Poloha těžiště není aditivní veličinou. Dvojný integrál však aditivní veličinou je. Platí <span class="math display">\[
 \begin{aligned}
@@ -353,20 +346,15 @@ y_0^2 m
 -m y_0^2.
 \end{aligned}
 \]</span> Odsud dostáváme <span class="math display">\[I_{x0}=I_{xT}+my_0^2,\]</span> což lze interpretovat tak, že <em>moment setrvačnosti vhledem k ose <span class="math inline">\(o\)</span> je součtem momentu setrvačnosti vzhledem k ose procházející těžištěm rovnoběžně s <span class="math inline">\(o\)</span> a momentu setrvačnosti hmotného bodu ležícího v těžišti množiny a o stejné hmotnosti jako je hmotnost množiny vzhledem k ose <span class="math inline">\(o\)</span>.</em></p>
-
 <h3 id="tlak-na-svislou-plochu">Tlak na svislou plochu</h3>
-
 <div class="obtekat">
 <figure>
-<img src="bobri.jpeg" alt="Bobři v ZOO v Brně jsou za skleněnou stěnou obdélníkového tvaru." /><figcaption>Bobři v ZOO v Brně jsou za skleněnou stěnou obdélníkového tvaru.</figcaption>
+<img src="bobri.jpeg" alt="" /><figcaption>Bobři v ZOO v Brně jsou za skleněnou stěnou obdélníkového tvaru.</figcaption>
 </figure>
 </div>
-
 <p>Vzorec pro tlakovou sílu <span class="math inline">\(F=pS\)</span> není možné použít například pro výpočet celkové síly působící na svislou hráz, protože tlak <span class="math inline">\(p\)</span> se mění s hloubkou a není tedy konstantní na celém průřezu o obsahu <span class="math inline">\(S\)</span>. Ukážeme, jak tuto nesnáz překonat.</p>
 <p>Uvažujme svislou rovinnou hráz <span class="math inline">\(M\)</span>. Hrází je přitom myšlena rovinná množina s jednotkovou plošnou hustotou, ne postavený trojrozměrný objekt. Počátek kartézské soustavy souřadnic volíme u hladiny, osa <span class="math inline">\(y\)</span> směřuje dolů, osa <span class="math inline">\(x\)</span> vodorovně. Tlak v hloubce <span class="math inline">\(y\)</span> je roven <span class="math inline">\(p=y\rho g\)</span>, kde <span class="math inline">\(\rho\)</span> je hustota vody a <span class="math inline">\(g\)</span> tíhové zrychlení. Na plochu o rozměrech <span class="math inline">\(\Delta S\)</span> v hloubce <span class="math inline">\(y\)</span> působí tlaková síla <span class="math display">\[\Delta F=y\rho g \Delta S.\]</span> Tato tlaková síla má ve všech bodech hráze stejný směr a celkovou sílu na hráz je možno zjistit sečtením sil v jednotlivých bodech. Podobná myšlenková úvaha jako v úvodu pro hmotnost desky, nebo přesný matematický popis, nás dovedou k tomu, že celková síla na hráz je dána integrálem <span class="math display">\[F=\iint _M y\rho g \,\mathrm d x\mathrm dy.\]</span> Protože <span class="math inline">\(g\)</span> a <span class="math inline">\(\rho\)</span> jsou konstanty, je možno psát <span class="math display">\[F=\rho g\iint _M y \,\mathrm d x\mathrm dy.\]</span> Využijeme-li vzorec pro <span class="math inline">\(y\)</span>-ovou souřadnici těžiště, má výsledný vztah tvar <span class="math display">\[F=\rho g y_0 S,\]</span> kde <span class="math inline">\(S\)</span> je obsah hráze. Formálně tento vztah odpovídá vzorci <span class="math display">\[F=p_0 S,\tag{H1}\label{H1}\]</span> kde <span class="math inline">\(p_0=\rho g y_0\)</span> je tlak v těžišti. <em>Proto v praxi stačí znát těžiště hráze a pro výpočet síly na hráz použít celkovou plochu hráze a tlak v těžišti.</em> Protože jsme pracovali s obecnou množinou <span class="math inline">\(M\)</span>, není tento poznatek nijak vázán na konkrétní tvar hráze. Musí být však splněna podmínka, že všechny body hráze leží v jedné rovině.</p>
-
 <p>Ve výpočtu výše jsme uvažovali svislou rovinu, ale zobecnění na šikmou rovinu je snadné. Stačí opravit vztah pro hloubku, protože když svislou množinu i s kartézskými souřadnicemi pootočíme okolo osy procházející hladinou, hloubka všech bodů se sníží faktorem <span class="math inline">\(\sin \alpha\)</span>, kde <span class="math inline">\(\alpha\)</span> je úhel mezi vodorovnou hladinou a rovinou hráze. Formálně tato operace dopadne stejně, jako kdybychom tekutinu nahradili tekutinou s hustotou <span class="math inline">\(\sin\alpha\)</span>-krát nižší. Protože však vztah <span class="math inline">\(\eqref{H1}\)</span> nezávisí na hustotě, nic se na něm nezmění. Také zobecnění na několik rovin je snadné. Zobecnění na zakřivenou plochu je náročnější a vyžaduje jiný typ integrálu.</p>
-
 <p>V předchozím textu jsme proměnnou veličinu popisující tlak na hráz jako funkci hloubky nahradili konstantní veličinou, udávající tlak v těžišti. Výsledný účinek na hráz se nezměnil. To je přesně smysl střední hodnoty. V matematických pojmech je možno říci, že střední hodnota tlaku na svislou hráz je rovna tlaku v těžišti hráze. (Protože hrází myslíme spíše rovinnou plochu, tak by přesnější terminologie měla používat raději pojem geometrický střed. Budeme se však držet ustálené terminologie.)</p>
 <p>Nikde ve výpočtu jsme nepoužili konkrétní meze pro integraci. Výsledek tedy platí nejenom pro hráz dosahující k hladině, ale například i pro poklop výpusti, který je celý pod vodou.</p>
 <h3 id="působiště-tlakové-síly">Působiště tlakové síly</h3>
@@ -375,9 +363,7 @@ y_0^2 m
 \iint_{[0,1]\times [0,1]}y^2\,\mathrm dx\mathrm dy=\frac 13,
 \]</span> dostáváme <span class="math inline">\(y_c=\frac{\frac 13}{\frac 12}=\frac 23\)</span> a působiště na obdélníkovou hráz je v hloubce odpovídající dvěma třetinám celkové hloubky.</p>
 <p>Formálně vztah pro <span class="math inline">\(y_c\)</span> odpovídá vztahu pro těžiště množiny s plošnou hustotou <span class="math inline">\(y\)</span>. Na tomto pozorování a na skutečnosti, že u pravidelných množin umíme těžiště najít geometricky, je založena metoda nalezení působiště tlakové síly pomocí <a href="https://en.wikipedia.org/wiki/Pressure_prism">zatěžovacího obrazce</a>.</p>
-
 <p>Kvadratický moment v čitateli zlomku <span class="math inline">\(\eqref{H2}\)</span> vyjadřujícího <span class="math inline">\(y_c\)</span> je často výhodnější rozepsat pomocí Steinerovy věty. Ve jmenovateli je součin obsahu <span class="math inline">\(S\)</span> a <span class="math inline">\(y\)</span>-ové souřadnice těžiště <span class="math inline">\(y_0\)</span>. Tím dostaneme <span class="math display">\[y_c=\frac{I_{x0}+Sy_0^2}{Sy_0}=\frac{I_{x0}}{Sy_0}+y_0,\]</span> kde <span class="math inline">\(I_{x0}\)</span> je kvadratický moment vzhledem k ose procházející vodorovně těžištěm. Působiště tlakové síly <span class="math inline">\(y_c\)</span> je tedy posunuto směrem dolů od těžiště <span class="math inline">\(y_0\)</span> o hodnotu odpovídající kvadratickému momentu vzhledem k vodorovné ose těžištěm <span class="math inline">\(I_{x0}\)</span> vyděleném součinem obsahu hráze <span class="math inline">\(S\)</span> a <span class="math inline">\(y\)</span>-ové polohy těžiště <span class="math inline">\(y_0\)</span>.</p>
-
 <h1 id="dvojný-integrál-v-polárních-souřadnicích">Dvojný integrál v polárních souřadnicích</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/lEObYHpX72w"></iframe> </div>
 <h3 id="polární-souřadnice">Polární souřadnice</h3>
@@ -385,10 +371,9 @@ y_0^2 m
 <p>Dosud jsme používali pouze kartézské souřadnice: dvojici čísel udávající vzdálenost bodu od osy <span class="math inline">\(y\)</span> a od osy <span class="math inline">\(x\)</span>, která jednoznačně určuje polohu bodu v rovině. V praxi je někdy výhodnější použít i jiný způsob jak pomocí dvojice čísel charakterizovat polohu bodu v rovině - takové souřadnice potom nazýváme <strong>křivočaré</strong> souřadnice.</p>
 <p>Z křivočarých souřadnic jsou nejdůležitější <strong>polární souřadnice</strong>. Při jejich použití polohu bodu <span class="math inline">\(A\)</span> zadáváme tak, že určíme vzdálenost <span class="math inline">\(r\)</span> bodu od počátku soustavy souřadnic <span class="math inline">\(O\)</span> a úhel <span class="math inline">\(\varphi\)</span>, který svírá spojnice bodů <span class="math inline">\(O\)</span> a <span class="math inline">\(A\)</span> s kladnou částí osy <span class="math inline">\(x\)</span>.</p>
 <figure>
-<img src="polarni_souradnice.png" alt="Polární souřadnice." /><figcaption>Polární souřadnice.</figcaption>
+<img src="polarni_souradnice.png" alt="" /><figcaption>Polární souřadnice.</figcaption>
 </figure>
 </div>
-
 <h3 id="množiny-s-jednoduchým-vyjádřením-v-polárních-souřadnicích">Množiny s jednoduchým vyjádřením v polárních souřadnicích</h3>
 <p>Nejsnáze se při výpočtu dvojného integrálu pracuje s obdélníkovými množinami, tj. s množinami charakterizovanými nerovnostmi pro jednotlivé proměnné a konstantním omezením pro tyto proměnné. Analogicky se bude snadno pracovat v polárních souřadnicích s množinami, které by se staly obdélníky pro překreslení do souřadné soustavy <span class="math inline">\(r\)</span> a <span class="math inline">\(\varphi\)</span>. Takové množiny jsou zobrazeny na následujících obrázcích.</p>
 <style>
@@ -421,9 +406,6 @@ th {
 
 th {text-align: center;}
 </style>
-
-
-
 <table>
 <colgroup>
 <col style="width: 25%" />
@@ -455,13 +437,10 @@ th {text-align: center;}
 </tr>
 </tbody>
 </table>
-
-
 <h3 id="převod-dvojného-integrálu-do-polárních-souřadnic">Převod dvojného integrálu do polárních souřadnic</h3>
-
 <div class="obtekat">
 <figure>
-<img src="jakobian.png" alt="Element plochy v polárních souřadnicích" /><figcaption>Element plochy v polárních souřadnicích</figcaption>
+<img src="jakobian.png" alt="" /><figcaption>Element plochy v polárních souřadnicích</figcaption>
 </figure>
 </div>
 <p>Chceme-li převést dvojný integrál do polárních souřadnic, provádíme v něm vlastně substituci <span class="math inline">\(x=r\cos \varphi\)</span> a <span class="math inline">\(y=r\sin \varphi\)</span>. Přitom se transformují i diferenciály <span class="math inline">\(\mathrm{d}x\)</span> a <span class="math inline">\(\mathrm{d}y\)</span>. Při změně úhlu o <span class="math inline">\(\mathrm{d}\varphi\)</span> a změně vzdálenosti o <span class="math inline">\(\mathrm{d}r\)</span> má odpovídající část roviny rozměry <span class="math inline">\(\mathrm{d}r\)</span> a <span class="math inline">\(r\mathrm{d}\varphi\)</span> a její obsah je <span class="math inline">\(r\mathrm{d}\varphi\mathrm{d}r\)</span> (viz obrázek). Platí tedy, že obsah elementární oblasti <span class="math inline">\(\mathrm{d} A=\mathrm{d} x\mathrm{d}y\)</span> se transformuje na <span class="math inline">\(\mathrm{d} A=r\mathrm{d}\varphi\mathrm{d}r\)</span>. Podíl <span class="math inline">\(\frac{\mathrm{d}\varphi\mathrm{d}r }{\mathrm{d}x \mathrm{d}y }\)</span> udává, kolikrát se změní obsah elementární oblasti při změně souřadnic a nazývá se <strong>jakobián</strong>. V případě polárních souřadnic je jakobián jak vidíme roven <span class="math inline">\(r\)</span> a platí tedy <span class="math display">\[
@@ -470,13 +449,11 @@ th {text-align: center;}
 \]</span></p>
 <p>V diferenciálním počtu polární souřadnice používáme především tam, kde má problém radiální symetrii. Například při studiu ochlazování nebo kmitů kruhových desek či válcovitých součástek. V integrálním počtu tyto souřadnice použijeme zejména v případě, kdy integrujeme přes kružnici nebo její část (např. mezikruží či kruhová výseč). V takovém případě mají totiž integrály které vzniknou po transformaci dvojného integrálu na dvojnásobný pevné meze a výpočet druhého integrálu je zpravidla jednodušší.</p>
 <h1 id="z-ptačí-perspektivy">Z ptačí perspektivy</h1>
-
 <div class="obtekat">
 <figure>
-<img src="../falcon.jpg" alt="Ještě pohled s trochou nadhledu. Zdroj: pixabay.com" /><figcaption>Ještě pohled s trochou nadhledu. Zdroj: pixabay.com</figcaption>
+<img src="../falcon.jpg" alt="" /><figcaption>Ještě pohled s trochou nadhledu. Zdroj: pixabay.com</figcaption>
 </figure>
 </div>
-
 <ul>
 <li>Dvojný integrál využijeme tam, kde nás zajímá celková hodnota aditivní veličiny, jejíž příspěvky jsou rozloženy ve dvourozměrné ploše. Například celková tlaková síla na stěnu akvária.</li>
 <li>Dvojný integrál počítáme jako integrál z integrálu aparátem integrálního počtu funkcí jedné proměnné. V řadě případů se však problém dá zjednodušit. Například při integrování funkcí se separovanými proměnnými přes obdélníkové množiny se integrál dá zapsat jako součin integrálů. Podobně, při integrování přes množiny které jsou částmi kruhu se dá v mnoha případech integrál přepsat pomocí polárních souřadnic na integrál přes obdélník (v polárních souřadnicích).</li>

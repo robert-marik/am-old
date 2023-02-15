@@ -37,7 +37,6 @@ do
   cp slidy.log $i.log
   #cp slidy.pdf ../$jj.pdf
   cd ..
-#  rsync -e "ssh -o StrictHostKeyChecking=no" -av $i cornus.mendelu.cz:html/mt/mat-slidy/
 done
 
 

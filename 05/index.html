@@ -53,13 +53,14 @@ jQuery( document ).ready(function() {
 <div id="header">
 <h1 class="title">Křivkový integrál</h1>
 <h2 class="author">Robert Mařík</h2>
-<p class="date"><em><small>Poslední modifikace: 2022-11-05 </small></em></p>
+<p class="date"><em><small>Poslední modifikace: 2022-10-27 </small></em></p>
 </div>
 <div id="TOC">
 <ul>
 <li><a href="#křivkový-integrál">Křivkový integrál</a></li>
 <li><a href="#parametrické-rovnice-křivky">Parametrické rovnice křivky</a></li>
-<li><a href="#křivkový-integrál-prvního-druhu">Křivkový integrál prvního druhu</a><ul>
+<li><a href="#křivkový-integrál-prvního-druhu">Křivkový integrál prvního druhu</a>
+<ul>
 <li><a href="#převod-na-riemannův-integrál-rovinná-křivka">Převod na Riemannův integrál (rovinná křivka)</a></li>
 <li><a href="#převod-na-riemannův-integrál-prostorová-křivka">Převod na Riemannův integrál (prostorová křivka)</a></li>
 <li><a href="#aplikace-křivkového-integrálu-prvního-druhu">Aplikace křivkového integrálu prvního druhu</a></li>
@@ -71,7 +72,8 @@ jQuery( document ).ready(function() {
 <li><a href="#vlastnosti-křivkového-integrálu-druhého-druhu">Vlastnosti křivkového integrálu druhého druhu</a></li>
 <li><a href="#aplikace-křivkového-integrálu-druhého-druhu">Aplikace křivkového integrálu druhého druhu</a></li>
 <li><a href="#shrnutí-vlastnosti-křivkových-integrálů">Shrnutí: vlastnosti křivkových integrálů</a></li>
-<li><a href="#závěrečné-informace">Závěrečné informace</a><ul>
+<li><a href="#závěrečné-informace">Závěrečné informace</a>
+<ul>
 <li><a href="#parametrizace-úsečky">Parametrizace úsečky</a></li>
 <li><a href="#online-výpočet-křivkového-integrálu">Online výpočet křivkového integrálu</a></li>
 </ul></li>
@@ -100,10 +102,10 @@ jQuery( document ).ready(function() {
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/n2roVUrXgcw"></iframe> </div>
 <div class="obtekat">
 <figure>
-<img src="krivkovy_integral_prvniho_druhu_1.png" alt="Křivkový integrál prvního druhu" /><figcaption>Křivkový integrál prvního druhu</figcaption>
+<img src="krivkovy_integral_prvniho_druhu_1.png" alt="" /><figcaption>Křivkový integrál prvního druhu</figcaption>
 </figure>
 <figure>
-<img src="krivkovy_integral_druheho_druhu_1.png" alt="Křivkový integrál druhého druhu" /><figcaption>Křivkový integrál druhého druhu</figcaption>
+<img src="krivkovy_integral_druheho_druhu_1.png" alt="" /><figcaption>Křivkový integrál druhého druhu</figcaption>
 </figure>
 </div>
 <p>Křivkový integrál je rozšíření Riemannova integrálu na případ, kdy množinou, přes kterou integrujeme, je místo úsečky obecnější křivka. Pro jednoduchost budeme uvažovat dvourozměrnou křivku v rovině <span class="math inline">\(x\)</span>, <span class="math inline">\(y\)</span>.</p>
@@ -112,7 +114,7 @@ jQuery( document ).ready(function() {
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/MRk4HRAWlA4"></iframe> </div>
 <div class="obtekat">
 <figure>
-<img src="parametricke_krivky.png" alt="Dvě různé parametrizace jednotkové kružnice" /><figcaption>Dvě různé parametrizace jednotkové kružnice</figcaption>
+<img src="parametricke_krivky.png" alt="" /><figcaption>Dvě různé parametrizace jednotkové kružnice</figcaption>
 </figure>
 </div>
 <p>Nejprve představíme matematický aparát pro popis křivek. Rovinné křivky nejčastěji popisujeme vektorovou funkcí jedné proměnné <span class="math inline">\(\vec r\colon \mathbb{R}\to \mathbb{R}^2\)</span>. Zpravidla s touto vektorovou funkcí pracujeme v komponentách, kdy každá její komponenta je dána skalární funkcí. Vektorově píšeme <span class="math display">\[\vec r(t)=[\varphi(t),\psi(t)]=\varphi(t) \vec\imath + \psi(t)\vec\jmath,\quad t\in [\alpha,\beta]\]</span> a tato vektorová funkce se nazývá <em>parametrizace</em> křivky <span class="math inline">\(C\)</span>. Často píšeme parametrické rovnice pro jednotlivé souřadnice ve tvaru <span class="math display">\[C=\begin{cases} x=\varphi(t)\\y=\psi(t), \quad t\in[\alpha,\beta].\end{cases}\]</span></p>
@@ -125,7 +127,7 @@ jQuery( document ).ready(function() {
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/ZRed88fgDkI"></iframe> </div>
 <div class="obtekat">
 <figure>
-<img src="krivkovy_integral_prvniho_druhu_1.png" alt="Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. Animace" /><figcaption>Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a></figcaption>
+<img src="krivkovy_integral_prvniho_druhu_1.png" alt="" /><figcaption>Křivkový integrál prvního druhu. Výška plochy je určena zadanou skalární funkcí. <a href="animation.gif" rel="facebox" alt="Nahrava se ...">Animace</a></figcaption>
 </figure>
 </div>
 <p>Pokud uvažujeme rovný drát o lineární hustotě <span class="math inline">\(f\)</span> a délce <span class="math inline">\(s\)</span>, je hmotnost drátu rovna součinu <span class="math display">\[m=fs.\]</span> Pokud by drát nebyl homogenní, je nutné v tomto vzorci místo součinu použít Riemannův integrál <span class="math display">\[m=\int _a^b f\,\mathrm ds.\]</span> Budeme ve zobecňování pokračovat. Uvažujme drát, který není ani homogenní, ani rovný. Nechť leží podél rovinné křivky <span class="math inline">\(C\)</span> a nechť je jeho lineární hustota (specifická hmotnost) v bodě <span class="math inline">\((x,y)\)</span> dána funkcí <span class="math inline">\(f(x,y)\)</span>. Zde již Riemannův integrál nepomůže. Celkovou hmotnost můžeme odhadnout následovně.</p>
@@ -138,7 +140,7 @@ jQuery( document ).ready(function() {
 <h2 id="převod-na-riemannův-integrál-rovinná-křivka">Převod na Riemannův integrál (rovinná křivka)</h2>
 <div class="obtekat">
 <figure>
-<img src="delkovy_element.png" alt="Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky" /><figcaption>Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky</figcaption>
+<img src="delkovy_element.png" alt="" /><figcaption>Aproximace délky oblouku křivky pomocí funkcí z parametrického vyjádření křivky</figcaption>
 </figure>
 </div>
 <p>Mějme parametrické rovnice křivky <span class="math inline">\(C\)</span> ve vektorovém tvaru <span class="math display">\[\vec r(t)=\varphi(t) \vec\imath + \psi(t)\vec\jmath,\]</span> kde <span class="math inline">\(t\in[\alpha,\beta]\)</span>. Derivováním křivky dostaneme <span class="math display">\[\frac{\mathrm{d} \vec r(t)}{\mathrm{d}t}=\varphi&#39;(t) \vec\imath + \psi&#39;(t)\vec\jmath.\]</span> Výpočtem délky vektoru (a formálním vynásobením výrazem <span class="math inline">\(\mathrm{d}t\)</span>) dále <span class="math display">\[\mathrm{d}s=|\mathrm{d}\vec r(t)|=\sqrt{(\varphi&#39;(t))^2 + (\psi&#39;(t))^2}\mathrm{d}t.\]</span> Tím se křivkový integrál prvního druhu funkce <span class="math inline">\(f(x,y)\)</span> po křivce <span class="math inline">\(C\)</span> transformuje na Riemannův integrál <span class="math display">\[
@@ -172,9 +174,6 @@ th {
     }
 
 </style>
-
-
-
 <table>
 <colgroup>
 <col style="width: 28%" />
@@ -213,8 +212,6 @@ th {
 </tr>
 </tbody>
 </table>
-
-
 <h2 id="vlastnosti-křivkového-integrálu-prvního-druhu">Vlastnosti křivkového integrálu prvního druhu</h2>
 <blockquote class="veta"><p class="vetaname">Věta (nezávislost na zvolené parametrizaci).</p><p> Křivkový integrál prvního druhu nezávisí na konkrétní parametrizaci křivky <span class="math inline">\(C\)</span>. Pro různé parametrizace stejné křivky má integrál stejnou hodnotu.</p>
 </blockquote>
@@ -232,13 +229,13 @@ th {
 <h2 id="proč-trubky-praskají-podélně">Proč trubky praskají podélně?</h2>
 <div class="obtekat">
 <figure>
-<img src="hoop_stress.png" alt="Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání." /><figcaption>Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.</figcaption>
+<img src="hoop_stress.png" alt="" /><figcaption>Schema válcové nádoby pod tlakem a řezy, v nichž počítáme namáhání.</figcaption>
 </figure>
 <figure>
-<img src="impregnacni_komora.jpg" alt="Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových nádob. Zdroj: J. Dömény." /><figcaption>Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových nádob. Zdroj: J. Dömény.</figcaption>
+<img src="impregnacni_komora.jpg" alt="" /><figcaption>Znalost napětí, které tlak způsobí na obalu nádoby, je důležitá pro práci s tlakovými a podtlakovými nádobami. Ty jsou nejčastěji cylindrické nebo kulové. Na obrázku unikátní zařízení pro tlakovou impregnaci ve VCJR v Útěchově se soustavou trubek a tlakových nádob. Zdroj: J. Dömény.</figcaption>
 </figure>
 <figure>
-<img src="popraskane_trubky.jpg" alt="Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer." /><figcaption>Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.</figcaption>
+<img src="popraskane_trubky.jpg" alt="" /><figcaption>Natlakovaná válcová nádoba modeluje i trubku pod tlakem. Takové trubky praskají podélně, protože v tom směru je dvojnásobné tahové napětí. Na obrázku jsou vodovodní trubky roztrhané mrazem. Zdroj: http://datagenetics.com/blog/december22013, Ian Mercer.</figcaption>
 </figure>
 </div>
 <p>Ukážeme si aplikaci křivkového integrálu prvního druhu k tomu, abychom sečetli komponenty síly, snažící se roztrhnout natlakovanou válcovou nádobu. Tlaková síla je ve všech částech nádoby stejně velká. Protože je však kolmá ke stěně nádoby, mění se směr síly a tím i průměty síly do směru, ve kterém počítáme namáhání. Zjednodušíme si situaci tím, že budeme uvažovat průmět stěny do roviny podstavy, kdy se stěna redukuje na křivku.</p>
@@ -253,7 +250,7 @@ th {
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/GeJgtBHy_sM"></iframe> </div>
 <div class="obtekat">
 <figure>
-<img src="krivkovy_integral_druheho_druhu_1.png" alt="Křivkový integrál druhého druhu. Výška plochy je v každém bodě křivky určena skalárním součinem tečného vektoru jednotkové délky a vektorem zadaného vektorového pole." /><figcaption>Křivkový integrál druhého druhu. Výška plochy je v každém bodě křivky určena skalárním součinem tečného vektoru jednotkové délky a vektorem zadaného vektorového pole.</figcaption>
+<img src="krivkovy_integral_druheho_druhu_1.png" alt="" /><figcaption>Křivkový integrál druhého druhu. Výška plochy je v každém bodě křivky určena skalárním součinem tečného vektoru jednotkové délky a vektorem zadaného vektorového pole.</figcaption>
 </figure>
 </div>
 <p>Pokud působíme na těleso silou <span class="math inline">\(F\)</span> a přemísťujeme toto těleso ve směru působící síly po dráze délky <span class="math inline">\(s\)</span>, <a href="http://cs.wikipedia.org/wiki/Mechanická_práce">konáme práci</a> <span class="math inline">\(W=Fs\)</span>. Pokud přemísťování neprobíhá ve směru působící síly a má-li síla směr <span class="math inline">\(\vec F\)</span> a posunutí <span class="math inline">\(\vec s\)</span>, je práce rovna skalárnímu součinu <span class="math inline">\(\vec F\cdot\vec s\)</span>.</p>
@@ -266,7 +263,7 @@ x+Q(x,y)\mathrm{d} y.  \]</span></p>
 <h1 id="převod-na-riemannův-integrál">Převod na Riemannův integrál</h1>
 <div class="obtekat">
 <figure>
-<img src="element_posunuti.png" alt="Aproximace posunutí pomocí funkcí z parametrického vyjádření křivky" /><figcaption>Aproximace posunutí pomocí funkcí z parametrického vyjádření křivky</figcaption>
+<img src="element_posunuti.png" alt="" /><figcaption>Aproximace posunutí pomocí funkcí z parametrického vyjádření křivky</figcaption>
 </figure>
 </div>
 <p>Známe-li parametrické rovnice <span class="math display">\[\vec r(t) = \varphi(t)\vec\imath + \psi(t) \vec\jmath,\quad t\in[\alpha,\beta],\]</span> křivky <span class="math inline">\(C\)</span>, je možno křivkový integrál druhého druhu funkce <span class="math display">\[\vec F(x,y)=P(x,y)\vec\imath + Q(x,y)\vec\jmath\]</span> po křivce <span class="math inline">\(C\)</span> zapsat následovně <span class="math display">\[
@@ -360,14 +357,12 @@ rovnoběžné osy.
 <li>V souřadnicích zapsáno, parametrické rovnice úsečky jsou <span class="math display">\[\begin{aligned}x&amp;=x_A+t(x_B-x_A)\\y&amp;=y_A+t(y_B-y_A), \quad t\in[0,1]\end{aligned}\]</span></li>
 <li>Pro úsečku v prostoru platí totéž, pouze přibývá třetí souřadnice.</li>
 </ul>
-
 <h2 id="online-výpočet-křivkového-integrálu">Online výpočet křivkového integrálu</h2>
 <ul>
 <li>Křivkový integrál druhého druhu, <a href="https://gist.github.com/robert-marik/6e203ee18958a4154ef0f2151d823bd1">numerický výpočet, Python.</a></li>
 <li>Křivkový integrál prvního druhu, <a href="https://sagecell.sagemath.org/?z=eJxtjsEKgzAQRO-B_EPAg4nNQbznS0otQWNZNNGuUUy-vkaxUOhclsfMsLNq5LnPBSVZlrGoW-2AdYvrG0NJxzcZZBRqqytKzgiOq4PGsAlH1iOsfaBk416oZpz3Q0lIMIM7ICYor6418SxOGrU1HinxFpz0Vm-qlFUxQYoe4T9KjlusQWj08ATnzQv1wNk-U6UJMqj0XEaV3gpWsPmNnrfQ7YlkeFFXtwPDL8YLhWS7vqPEvXx8AHukUPY=&amp;lang=sage">výpočet pomocí Sage (derivace symbolicky, integrace numericky).</a></li>
 <li>Křivkový integrál druhého druhu, <a href="https://sagecell.sagemath.org/?z=eJxtkMFuwyAQRO-W_A8r5RBIaepGOVXi6p-o2ogaUiEbcDGxgK8v2CFqoywXntjRzDAzi7Zui-tqs9lAZJxpCeeL7jtRV61HngQSMX0OiUIhnyAWaOoqnyy3ZtayEzBaA72Vc59UHjlMD7vOTOlSVyHjJPUCMUNT1ErEVToyy5Rwtq6ckpo4xTxtyOvLcTfKm9mDWV70RQkrOzacpHbi27IBwRl5mnOQQLM_iTQ7Y9jB9GMd4vKcNvKDw5-HpwXDf4wFMYE0t1z4vfnIttxMLAotT2ttqtiIYGDqizMY38biD9cAcE1AALWetIFAG3H6kBSXS6HdvX6_hMjCNefaYumAs_2D0rPonLHoLhjec-NO6ZP5pXNlp7jiP-WgtPsFHlShKA==&amp;lang=sage">výpočet pomocí Sage (derivace symbolicky, integrace numericky).</a></li>
 </ul>
-
 <style>
 .sloupce4{-moz-column-count:4; /* Firefox */
 -webkit-column-count:4; /* Safari and Chrome */
@@ -384,13 +379,11 @@ column-count:3;}
 .sloupce4 ul li {display:inline-block; max-width:100%;}
 </style>
 <h1 id="z-ptačí-perspektivy">Z ptačí perspektivy</h1>
-
 <div class="obtekat">
 <figure>
-<img src="../falcon.jpg" alt="Ještě pohled s trochou nadhledu. Zdroj: pixabay.com" /><figcaption>Ještě pohled s trochou nadhledu. Zdroj: pixabay.com</figcaption>
+<img src="../falcon.jpg" alt="" /><figcaption>Ještě pohled s trochou nadhledu. Zdroj: pixabay.com</figcaption>
 </figure>
 </div>
-
 <ul>
 <li>Křivkový integrál druhého druhu souvisí s prací silového pole. Vzhledem ke zkušenostem z mechaniky by toto měla být cesta ke skalárnímu popisu vektorového pole. Protože v minulém týdnu jsme jednu takovou cestu otevřeli (pojem rotace a její nulovost či nenulovost), dá se očekávat, že obě problematiky budou souviset. Tuto souvislost si ukážeme později, za dva týdny (Greenova věta).</li>
 <li>Křivkový integrál druhého druhu může souviset s i s tokem vektorového pole křivkou a to je zase doména difuzní rovnice a divergence vektorového pole. Oba pojmy, křivkový integrál a divergence spolu opravdu souvisí a přesvědčí nás o tom později opět Greenova věta.</li>

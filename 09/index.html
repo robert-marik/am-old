@@ -52,21 +52,25 @@ jQuery( document ).ready(function() {
 <div id="header">
 <h1 class="title">Lineární operátory a lineární diferenciální rovnice</h1>
 <h2 class="author">Robert Mařík</h2>
-<p class="date"><em><small>Poslední modifikace: 2022-07-03 </small></em></p>
+<p class="date"><em><small>Poslední modifikace: 2022-05-18 </small></em></p>
 </div>
 <div id="TOC">
 <ul>
-<li><a href="#lineární-operátory">Lineární operátory</a><ul>
+<li><a href="#lineární-operátory">Lineární operátory</a>
+<ul>
 <li><a href="#příklady-lineárních-operátorů">Příklady lineárních operátorů</a></li>
 <li><a href="#princip-superpozice">Princip superpozice</a></li>
 </ul></li>
-<li><a href="#operátorové-rovnice-s-lineárním-operátorem">Operátorové rovnice s lineárním operátorem</a><ul>
+<li><a href="#operátorové-rovnice-s-lineárním-operátorem">Operátorové rovnice s lineárním operátorem</a>
+<ul>
 <li><a href="#příklad-využití-linearity-v-jedné-dimenzi">Příklad využití linearity v jedné dimenzi</a></li>
 </ul></li>
-<li><a href="#lineární-diferenciální-rovnice-prvního-řádu-s-konstantními-koeficienty">Lineární diferenciální rovnice prvního řádu s konstantními koeficienty</a><ul>
+<li><a href="#lineární-diferenciální-rovnice-prvního-řádu-s-konstantními-koeficienty">Lineární diferenciální rovnice prvního řádu s konstantními koeficienty</a>
+<ul>
 <li><a href="#další-lineární-rovnice">Další lineární rovnice</a></li>
 </ul></li>
-<li><a href="#lineární-autonomní-systémy">Lineární autonomní systémy</a><ul>
+<li><a href="#lineární-autonomní-systémy">Lineární autonomní systémy</a>
+<ul>
 <li><a href="#lineární-autonomní-systém-ve-dvou-dimenzích">Lineární autonomní systém ve dvou dimenzích</a></li>
 <li><a href="#systém-xax">Systém <span class="math inline">\(X&#39;=AX\)</span></a></li>
 </ul></li>
@@ -98,23 +102,19 @@ jQuery( document ).ready(function() {
 <h1 id="lineární-operátory">Lineární operátory</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/_PcHv1GeEq4"></iframe> </div>
 <p><strong>Operátorem</strong> rozumíme zobrazení, které má na vstupu i na výstupu funkci. Například pro funkce jedné proměnné mohou být operátory derivace, druhá derivace, vynásobení funkce funkcí <span class="math inline">\(\ln x\)</span> anebo vnoření zadané funkce do funkce <span class="math inline">\(\ln x\)</span>. Tj. pro <span class="math inline">\(y=y(x)\)</span> můžeme uvažovat operátory <span class="math inline">\(F_1[y]=\frac{\mathrm dy}{\mathrm dx}\)</span>, <span class="math inline">\(F_2[y]=\frac{d^2y}{dx^2}\)</span>, <span class="math inline">\(F_3[y](x)=y(x)\ln(x)\)</span>, <span class="math inline">\(F_4[y](x)=\ln(y(x)).\)</span></p>
-
 <div class="obtekat">
 <figure>
-<img src="rails.jpg" alt="Lineární zobrazení zachovávají některé vlastnosti. V geometrii například rovnoběžnost, v matematické analýze zachovávají lineární zobrazení lineární kombinaci. Rovnice s lineárním operátorem jsou díky tomu velmi předvídatelné. Proto je (lineární operátory i rovnice) v matematice máme tak rádi. Zdroj: pixabay.com" /><figcaption>Lineární zobrazení zachovávají některé vlastnosti. V geometrii například rovnoběžnost, v matematické analýze zachovávají lineární zobrazení lineární kombinaci. Rovnice s lineárním operátorem jsou díky tomu velmi předvídatelné. Proto je (lineární operátory i rovnice) v matematice máme tak rádi. Zdroj: pixabay.com</figcaption>
+<img src="rails.jpg" alt="" /><figcaption>Lineární zobrazení zachovávají některé vlastnosti. V geometrii například rovnoběžnost, v matematické analýze zachovávají lineární zobrazení lineární kombinaci. Rovnice s lineárním operátorem jsou díky tomu velmi předvídatelné. Proto je (lineární operátory i rovnice) v matematice máme tak rádi. Zdroj: pixabay.com</figcaption>
 </figure>
 </div>
-
 <p><strong>Lineárním operátorem</strong> rozumíme zobrazení, které zachovává součet funkcí a násobek konstantou, tj. platí <span class="math display">\[L[y_1+y_2]=L[y_1]+L[y_2]\]</span> a <span class="math display">\[L[C y_1]=C L[y_1]\]</span> pro libovolné reálné číslo <span class="math inline">\(C\)</span> a libovolné funkce <span class="math inline">\(y_1\)</span> a <span class="math inline">\(y_2\)</span> z definičního oboru operátoru <span class="math inline">\(L\)</span>.</p>
 <h2 id="příklady-lineárních-operátorů">Příklady lineárních operátorů</h2>
 <p>Linearitu se naučíme využívat k tomu, abychom úlohu najít řešení rovnice rozkouskovali na řešení jednodušších úloh. Například je možné zkombinovat úlohu na stacionární proudění podzemní vody a úlohu na radiální proudění ke studni. Každou z těchto úloh umíme redukovat na separovatelnou diferenciální rovnici a vyřešit. Zkombinováním těchto úloh je možné modelovat chování studny v rovinném toku. Používá se například k zachycení kontaminace spodní vody.</p>
-
 <div class="obtekat">
 <figure>
-<img src="snizeni_toku_se_studnou_03_001.png" alt="Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity." /><figcaption>Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity.</figcaption>
+<img src="snizeni_toku_se_studnou_03_001.png" alt="" /><figcaption>Rovinný tok podzemní vody se studnou. Podle šipek je možno určit oblast zachytáváni. Řeší se samostatně rovinný tok (kartézské souřadnice) a tok ke studni (polární souřadnice) a obě úlohy se zkombinují pomocí linearity.</figcaption>
 </figure>
 </div>
-
 <ul>
 <li>Operátor derivace, tj. operátor definovaný vztahem <span class="math inline">\(L[y]=\frac{\mathrm dy}{\mathrm dx}\)</span> je lineární. Toto plyne ze vzorců pro derivaci součtu a konstantního násobku.</li>
 <li>Buď dána funkce <span class="math inline">\(a(x)\)</span>. Operátor násobení funkcí <span class="math inline">\(a(x)\)</span>, tj. <span class="math inline">\(L[y](x)=a(x)y(x)\)</span> je lineární. To plyne z komutativity násobení a z distributivního zákona (roznásobování závorek).</li>
@@ -404,13 +404,11 @@ Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\ma
 <p>Pokud pracujeme s nekonstantními vektorovými funkcemi tak, že při derivaci derivujeme každou komponentu samostatně, je rovnice <span class="math display">\[\frac{\mathrm dX}{\mathrm dt}-AX= B\]</span> operátorová rovnice s lineárním operátorem. Tyto rovnice se v případě, kdy matice <span class="math inline">\(A\)</span> a <span class="math inline">\(B\)</span> nezávisí na čase, nazývají autonomní systémy a budeme se jim věnovat za chvíli. Pro tyto rovnice je souvislost mezi homogenní a nehomogenní rovnicí obdobná jako v minulých případech. Řešením nehomogenní úlohy najdeme jedno řešení (bod v prostoru) a řešením asociované úlohy najdeme směry definující množinu všech řešení. Vzhledem k vícedimenzionalitě úlohy bude těchto řešení více. Situace je podobná jako to, že v geometrii je rovina dána dvěma směry. Nakonec dané informace můžeme využít k vygenerování množiny všech řešení. Popsaná metoda je komplikovanější na konkrétní použití, ale často se ani nemusí provádět. Často stačí například informace o chování řešení v nekonečnu. To je také to, na co se omezíme na příští přednášce.</p>
 <h2 id="lineární-autonomní-systém-ve-dvou-dimenzích">Lineární autonomní systém ve dvou dimenzích</h2>
 <p>Následující příklad je mírně modifikovaný příklad z <a href="https://youtu.be/MCrDzhpu3-s?t=671">kurzu MIT o diferenciálních rovnicích</a>. Ve formulaci s vařením vajíčka se zdá triviální a prakticky neužitečný. Toto je však voleno pro jednoduchost výkladu a snadnou představu povahy zkoumaného jevu. V praxi se stejným modelem předává teplo vrstveným materiálem (jako je tepelná ochrana domů nebo raketoplánů) nebo chemické látky vstupující do dalších reakcí (jako například řetěz reakcí vedoucí k syntéze bílkovin, které buňka v reakci na okolní prostředí potřebuje k přežití).</p>
-
 <div class="obtekat">
 <figure>
-<img src="vajicko.jpg" alt="Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com" /><figcaption>Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com</figcaption>
+<img src="vajicko.jpg" alt="" /><figcaption>Vajíčko je vhodný model pro zprostředkování přenosu tepla a tím i pro popis změny teploty pomocí systému dvou diferenciálních rovnic. Zdroj: pixabay.com</figcaption>
 </figure>
 </div>
-
 <p>Budeme modelovat ohřívání vejce ve vodě o konstantní teplotě <span class="math inline">\(T_0\)</span>. Na počátku mají bílek a žloutek teplotu <span class="math inline">\(T_1\)</span> a <span class="math inline">\(T_2\)</span>. Žloutek přebírá teplo od bílku rychlostí úměrnou rozdílu teplot žloutku a bílku. Bílek přebírá teplo od vodní lázně rychlostí úměrnou rozdílu teplot a předává teplo žloutku procesem popsaným v předchozí větě. Vody je hodně a její teplota se nemění. Proces můžeme modelovat soustavou diferenciálních rovnic <span class="math display">\[\begin{aligned}T_1^\prime &amp;= k_1(T_0-T_1)-k_2(T_1-T_2) \\ T_2^\prime&amp;=k_2(T_1-T_2)\end{aligned}\]</span> Tento systém je možno přepsat do tvaru <span class="math display">\[\begin{aligned}T_1^\prime &amp;= -(k_1+k_2)T_1+k_2T_2+T_0k_1 \\ T_2^\prime&amp;=k_2T_1-k_2T_2\end{aligned}\]</span> a zapsat maticově <span class="math display">\[\begin{pmatrix}T_1\\T_2\end{pmatrix}&#39;=
 \begin{pmatrix}-(k_1+k_2) &amp; k_2 \\ k_2 &amp; -k_2\end{pmatrix}
 \begin{pmatrix}T_1\\T_2\end{pmatrix}
@@ -437,13 +435,11 @@ Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\ma
 </blockquote>
 <div class="obtekat"><figure><img src="https://user.mendelu.cz/marik/manim/thumbs/AS_vlastni_cisla.jpg"><figcaption>O chování trajektorií v okolí stacionárního bodu rozhoduje znaménko vlastních čísel (u reálných vlastních čísel), nebo znaménko reálné části (u komplexně sdružených vlastních čísel) <a href="https://user.mendelu.cz/marik/manim/AS_vlastni_cisla" class=but-prez target=_blank>Otevřít prezentaci</a></figcaption></figure></div>
 <p>Pokud jsou například všechna vlastní čísla v daném bodě záporná, poté každé z nich generuje řešení konvergující do stacionárního bodu. Díky linearitě, jednoznačnosti řešení a tomu, že máme tolik řešení, kolik je nutno pro splnění libovolné podmínky, je možné pomocí těchto dílčích řešení zapsat i libovolné jiné řešení. Tím pádem ale všechna řešení konvergují do stacionárního bodu. Pokud jsou vlastní čísla komplexní se zápornou reálnou částí, je situace stejná, ale řešení navíc konvergují do stacionárního bodu postupnými oscilacemi. Podobně, pokud všechny vlastní hodnoty jsou kladné, všechna řešení se od stacionárního bodu vzdalují a pokud jsou všechny vlastní hodnoty komplexní s kladnou reálnou částí, probíhá toto vzdalování oscilacemi s narůstající amplitudou.</p>
-
 <div class="obtekat">
 <figure>
-<img src="krvinky.jpg" alt="Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156" /><figcaption>Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156</figcaption>
+<img src="krvinky.jpg" alt="" /><figcaption>Podobný model jako ohřívání vajíčka je možno použít pro transport látek mezi krví a orgány. Zdroj: pixabay.com, 10918156</figcaption>
 </figure>
 </div>
-
 <p><strong>Příklad.</strong> Model ohřívání vajíčka (V) z předchozí části této přednášky má (v posunuté teplotní stupnici, na které teplota varu vody odpovídá nule) stacionární bod <span class="math inline">\((0,0)\)</span>. Zkusíme zvolit parametry <span class="math inline">\(k_1\)</span> a <span class="math inline">\(k_2\)</span> a určit chování trajektorií v okolí tohoto bodu. Pro <span class="math inline">\(k_1=1\)</span> a <span class="math inline">\(k_2=2\)</span> dostáváme <span class="math display">\[\begin{pmatrix}T_1\\T_2\end{pmatrix}&#39;=
 \begin{pmatrix}-3 &amp; 2 \\ 2 &amp; -2\end{pmatrix}
 \begin{pmatrix}T_1\\T_2\end{pmatrix}.
@@ -451,16 +447,14 @@ Pozn: Partikulární řešení nehomogenní rovnice je $$y_p(x)=e^{-\int a(x)\ma
 <a onclick="otevrit('problems/autonomni_systemy/13.pg');" target="_blank" class="WWotazka">WW-otázka</a>
 <h1 id="mechanický-oscilátor">Mechanický oscilátor</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/8KQ9qG1eQtU"></iframe> </div>
-
 <div class="obtekat">
 <figure>
-<img src="houpacka.jpg" alt="Příklad mechanického oscilátoru Zdroj: pixabay.com, Couleur" /><figcaption>Příklad mechanického oscilátoru Zdroj: pixabay.com, Couleur</figcaption>
+<img src="houpacka.jpg" alt="" /><figcaption>Příklad mechanického oscilátoru Zdroj: pixabay.com, Couleur</figcaption>
 </figure>
 <figure>
-<img src="kmity_stromu.png" alt="Kmity kmene stromu. Jejich analýza pomáhá k pochopení stability stromů ve větru. Zdroj: projekt DYNATREE" /><figcaption>Kmity kmene stromu. Jejich analýza pomáhá k pochopení stability stromů ve větru. Zdroj: projekt DYNATREE</figcaption>
+<img src="kmity_stromu.png" alt="" /><figcaption>Kmity kmene stromu. Jejich analýza pomáhá k pochopení stability stromů ve větru. Zdroj: projekt DYNATREE</figcaption>
 </figure>
 </div>
-
 <p>S mechanickým oscilátorem se setkáváme tam, kde je systém vychýlen z rovnovážné polohy a nějaká síla jej do této rovnovážné polohy vrací. Přičemž v některých situacích dojde (například vlivem setrvačnosti) k tomu, že systém se přehoupne přes rovnovážnou polohu na opačnou stranu a vrací se zpět. Klasickým případem je těleso o hmotnosti <span class="math inline">\(m\)</span> na pružině. Pokud sílu závisející na rychlosti <span class="math inline">\(v\)</span> a výchylce <span class="math inline">\(x\)</span> označíme <span class="math inline">\(F\)</span>, dostáváme <span class="math display">\[\begin{aligned}\frac {\mathrm dx}{\mathrm dt}&amp;=v, \\ \frac {\mathrm dv}{\mathrm dt}&amp;=\frac 1m F(v,x), \end{aligned}\]</span> přičemž první rovnice vyjadřuje, že rychlost je derivace polohy a druhá rovnice je Newtonův zákon síly. Pro pružinu tuhosti <span class="math inline">\(k\)</span> a odpor prostředí úměrný rychlosti dostáváme <span class="math display">\[\begin{aligned}\frac {\mathrm dx}{\mathrm dt}&amp;=v, \\ \frac {\mathrm dv}{\mathrm dt}&amp;=-\frac km x - bv,\end{aligned}\]</span> nebo ve vektorovém tvaru <span class="math display">\[\frac{\mathrm d}{\mathrm dt}\begin{pmatrix}x\\v \end{pmatrix}=\begin{pmatrix}0&amp;1\\-\frac km &amp; -b \end{pmatrix}\begin{pmatrix}x\\v \end{pmatrix}.\]</span> Charakteristická rovnice je <span class="math display">\[\begin{vmatrix}-\lambda&amp;1\\-\frac km &amp; -b-\lambda \end{vmatrix}=-\lambda (-b-\lambda)+\frac km = \lambda^2+b\lambda + \frac km=0.\]</span> Pro velké tlumení, tj. <span class="math inline">\(b^2&gt; \frac {4k}m\)</span> má rovnice dva záporné reálné kořeny <span class="math display">\[\lambda_{1,2}=\frac{- b \pm \sqrt{b^2-\frac{4k}{m}}}{2}\]</span> Systém se tedy bez oscilací překlopí do rovnovážného stavu. Při opačné nerovnosti jsou kořeny charakteristické rovnice <span class="math display">\[\lambda_{1,2}=-\frac{b}{2} \pm \frac 12 i \sqrt{-b^2+\frac{4k}{m}}\]</span> komplexní se zápornou reálnou částí a systém osciluje okolo rovnovážné polohy. Pro <span class="math inline">\(b&gt;0\)</span> mají tyto kořeny zápornou reálnou část a systém osciluje okolo rovnovážné polohy se zmenšující se amplitudou. Pro <span class="math inline">\(b=0\)</span> se amplituda nezmenšuje a oscilátor kmitá do nekonečna. Případ <span class="math inline">\(b&lt;0\)</span> neuvažujeme, protože odpor prostředí je síla působící proti pohybu.</p>
 <blockquote class="poznamka"><p class="poznamkaname">Poznámka (diferenciální rovnice druhého řádu).</p><p> Uvažovaný systém se v literatuře často vyskytuje ve tvaru, kdy je rychlost <span class="math inline">\(v\)</span> dosazena do druhé rovnice a poté dostáváme model ve tvaru <span class="math display">\[\frac{\mathrm d^2 x}{\mathrm dt^2}=-\frac km x - b \frac{\mathrm dx}{\mathrm dt}, \]</span> tj. ve tvaru rovnice obsahující první dvě derivace neznámé funkce. V podstatě celá klasická mechanika je založena právě na rovnicích tohoto typu.</p>
 </blockquote>

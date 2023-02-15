@@ -56,7 +56,8 @@ jQuery( document ).ready(function() {
 </div>
 <div id="TOC">
 <ul>
-<li><a href="#opakování">Opakování</a><ul>
+<li><a href="#opakování">Opakování</a>
+<ul>
 <li><a href="#vrstevnice">Vrstevnice</a></li>
 <li><a href="#geometrie">Geometrie</a></li>
 <li><a href="#lineární-algebra">Lineární algebra</a></li>
@@ -64,11 +65,13 @@ jQuery( document ).ready(function() {
 <li><a href="#diferenciální-operátory">Diferenciální operátory</a></li>
 <li><a href="#gradient">Gradient</a></li>
 <li><a href="#gradient-v-přírodě">Gradient v přírodě</a></li>
-<li><a href="#lineární-aproximace">Lineární aproximace</a><ul>
+<li><a href="#lineární-aproximace">Lineární aproximace</a>
+<ul>
 <li><a href="#lineární-aproximace-skalární-funkce">Lineární aproximace skalární funkce</a></li>
 <li><a href="#lineární-aproximace-vektorové-funkce">Lineární aproximace vektorové funkce</a></li>
 </ul></li>
-<li><a href="#vícerozměrné-konstitutivní-zákony">Vícerozměrné konstitutivní zákony</a><ul>
+<li><a href="#vícerozměrné-konstitutivní-zákony">Vícerozměrné konstitutivní zákony</a>
+<ul>
 <li><a href="#fickův-zákon-difuze">Fickův zákon (difuze)</a></li>
 <li><a href="#darcyho-zákon-proudění-podzemní-vody">Darcyho zákon (proudění podzemní vody)</a></li>
 <li><a href="#fourierův-zákon-vedení-tepla">Fourierův zákon (vedení tepla)</a></li>
@@ -76,7 +79,8 @@ jQuery( document ).ready(function() {
 <li><a href="#soretův-efekt-termodifuze">Soretův efekt (termodifuze)</a></li>
 <li><a href="#ohmův-zákon">Ohmův zákon</a></li>
 </ul></li>
-<li><a href="#speciální-případy-vztahu-mezi-gradientem-a-tokem">Speciální případy vztahu mezi gradientem a tokem</a><ul>
+<li><a href="#speciální-případy-vztahu-mezi-gradientem-a-tokem">Speciální případy vztahu mezi gradientem a tokem</a>
+<ul>
 <li><a href="#obecný-případ-anizotropní">Obecný případ (anizotropní)</a></li>
 <li><a href="#ortotropní-případ-vhodně-zvolené-osy">Ortotropní případ, vhodně zvolené osy</a></li>
 <li><a href="#ortotropní-případ-ve-2d">Ortotropní případ ve 2D</a></li>
@@ -112,7 +116,7 @@ jQuery( document ).ready(function() {
 <h1 id="opakování">Opakování</h1>
 <div class="obtekat">
 <figure>
-<img src="vrstevnice_drevo.png" alt="Rovnovážná vlhkost dřeva v závislosti na teplotě a relativní vlhkosti. Pro přehlednost jsou vrstevnice označeny funkční hodnotou a prostor mezi vrstevnicemi barevně rozlišen. Zdroj: Wood handbook, Wood as an Engineering Material." /><figcaption>Rovnovážná vlhkost dřeva v závislosti na teplotě a relativní vlhkosti. Pro přehlednost jsou vrstevnice označeny funkční hodnotou a prostor mezi vrstevnicemi barevně rozlišen. Zdroj: Wood handbook, Wood as an Engineering Material.</figcaption>
+<img src="vrstevnice_drevo.png" alt="" /><figcaption>Rovnovážná vlhkost dřeva v závislosti na teplotě a relativní vlhkosti. Pro přehlednost jsou vrstevnice označeny funkční hodnotou a prostor mezi vrstevnicemi barevně rozlišen. Zdroj: Wood handbook, Wood as an Engineering Material.</figcaption>
 </figure>
 </div>
 <h2 id="vrstevnice">Vrstevnice</h2>
@@ -148,7 +152,7 @@ f}{\partial x}, \frac{\partial f}{\partial y},
 </blockquote>
 <div class="obtekat">
 <figure>
-<img src="gradient.svg" alt="Gradient je kolmý na vrstevnice" /><figcaption>Gradient je kolmý na vrstevnice</figcaption>
+<img src="gradient.svg" alt="" /><figcaption>Gradient je kolmý na vrstevnice</figcaption>
 </figure>
 </div>
 <p>Symbol <span class="math inline">\(\nabla\)</span> je operátor nabla definovaný formálně vztahem <span class="math display">\[\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z}\right)\]</span> nebo <span class="math display">\[\nabla=\left(\frac{\partial}{\partial x}, \frac{\partial}{\partial y}\right)\]</span> (v závislosti na počtu proměnných funkce <span class="math inline">\(f\)</span>). “Násobení” <span class="math inline">\(\frac{\partial }{\partial x}\)</span> s funkcí <span class="math inline">\(f\)</span> přitom chápeme jako parciální derivaci <span class="math inline">\(\frac{\partial f}{\partial x}\)</span>.</p>
@@ -158,16 +162,14 @@ f}{\partial x}, \frac{\partial f}{\partial y},
 </blockquote>
 <h1 id="gradient-v-přírodě">Gradient v přírodě</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Mpb4EAdIPPM"></iframe> </div>
-
 <div class="obtekat">
 <figure>
-<img src="ptacek.jpg" alt="U teplokrevných živočichů vystavených chladu vzniká velký gradient teploty. Pro snížení tohoto gradientu a lepší ochranu před mrazem je výhodné mít silnou vrstvu chlupů nebo tuku, nebo znát trik na snížení teplotního gradientu. Například ptáci se v zimě umí proměnit v načepýřené koule. Zdroj: pixabay.com" /><figcaption>U teplokrevných živočichů vystavených chladu vzniká velký gradient teploty. Pro snížení tohoto gradientu a lepší ochranu před mrazem je výhodné mít silnou vrstvu chlupů nebo tuku, nebo znát trik na snížení teplotního gradientu. Například ptáci se v zimě umí proměnit v načepýřené koule. Zdroj: pixabay.com</figcaption>
+<img src="ptacek.jpg" alt="" /><figcaption>U teplokrevných živočichů vystavených chladu vzniká velký gradient teploty. Pro snížení tohoto gradientu a lepší ochranu před mrazem je výhodné mít silnou vrstvu chlupů nebo tuku, nebo znát trik na snížení teplotního gradientu. Například ptáci se v zimě umí proměnit v načepýřené koule. Zdroj: pixabay.com</figcaption>
 </figure>
 <figure>
-<img src="flow.png" alt="Hydroizohypsy. Křivky spojující místa se stejnou výškou podzemní vody. Zdroj: Principles of GW Flow https://web.viu.ca/earle/geol304/geol-304-c.pdf" /><figcaption>Hydroizohypsy. Křivky spojující místa se stejnou výškou podzemní vody. Zdroj: Principles of GW Flow https://web.viu.ca/earle/geol304/geol-304-c.pdf</figcaption>
+<img src="flow.png" alt="" /><figcaption>Hydroizohypsy. Křivky spojující místa se stejnou výškou podzemní vody. Zdroj: Principles of GW Flow https://web.viu.ca/earle/geol304/geol-304-c.pdf</figcaption>
 </figure>
 </div>
-
 <ul>
 <li>V matematice se gradientem rozumí vektor z parciálních derivací podle všech proměnných. V aplikacích tomu bývá poněkud jinak. Často je funkce popisující studovaný systém funkcí času i prostorových proměnných. V takovém případě gradientem rozumíme vektor složený jenom z parciálních derivací podle prostorových proměnných. Čas při výpočtu gradientu za proměnnou nepovažujeme.</li>
 <li>V jednorozměrném případě je gradient totéž co derivace. Přesto se někdy z tradičních důvodů respektujících zvyklosti oboru nemluví o derivaci, ale o gradientu. Například mluvíme o gradientu teploty při studiu <em>tepelně izolačních vlastností</em> materiálů. Pokud máme na mysli vrstvu z jednoho materiálu (a ne například sendvičovou stěnu), je rozložení teploty lineární a dokonce v tomto případě pojmem gradient vlastně označujeme směrnici přímky.</li>
@@ -201,22 +203,18 @@ f}{\partial x}, \frac{\partial f}{\partial y},
 <p>V roce 1855 německý lékař A. Fick objevil, že difuzní tok <span class="math inline">\(\vec J\)</span> (množství látky které projde při difuzi jednotkovou plochou za jednotku času) je úměrný gradientu koncentrace <span class="math inline">\(c\)</span> této látky. Vyjádřeno moderní terminologií to znamená, že platí <span class="math display">\[\vec J=-D\nabla c. \]</span> Veličina <span class="math inline">\(D\)</span> se nazývá difuzní koeficient. Pokud má <span class="math inline">\(\vec J\)</span> stejný směr jako <span class="math inline">\(\nabla c\)</span>, je <span class="math inline">\(D\)</span> skalární veličina. Pokud směry nejsou stejné, je <span class="math inline">\(D\)</span> tenzor. Z fyzikálních důvodů je tenzor <span class="math inline">\(D\)</span> symetrický.</p>
 <p>Difuzí se například dřevo zbavuje vlhkosti při vysoušení.</p>
 <h2 id="darcyho-zákon-proudění-podzemní-vody">Darcyho zákon (proudění podzemní vody)</h2>
-
 <div class="obtekat">
 <figure>
-<img src="karany.jpg" alt="Vodárna Káraný infiltruje vodu do podzemí. Pro funkci je nezbytná znalost toho, co se tam s vodou děje a kudy a jak teče. Základním zákonem pro popis tohoto děje je Darcyho zákon. Zdroj: nase-voda.cz, Nina Havlová" /><figcaption>Vodárna <a href="http://www.vodarnakarany.cz/">Káraný</a> infiltruje vodu do podzemí. Pro funkci je nezbytná znalost toho, co se tam s vodou děje a kudy a jak teče. Základním zákonem pro popis tohoto děje je Darcyho zákon. Zdroj: nase-voda.cz, Nina Havlová</figcaption>
+<img src="karany.jpg" alt="" /><figcaption>Vodárna <a href="http://www.vodarnakarany.cz/">Káraný</a> infiltruje vodu do podzemí. Pro funkci je nezbytná znalost toho, co se tam s vodou děje a kudy a jak teče. Základním zákonem pro popis tohoto děje je Darcyho zákon. Zdroj: nase-voda.cz, Nina Havlová</figcaption>
 </figure>
 </div>
-
 <p>V letech 1855 a 1856 francouzský inženýr H. Darcy pokusy prokázal přímou úměru mezi rozdílem tlaků na koncích trubice naplněné porézní zeminou (jednalo se vlastně o rozdíl výšek pro šikmou trubici) a rychlostí proudění vody touto trubicí. Pro tok podzemní vody je vhodné rozdíl tlaků vyjadřovat pomocí veličiny nazývané <em>piezometrická výška</em> <span class="math inline">\(h\)</span>. Do této veličiny se sčítá vliv nadmořské výšky, tlaku geologických vrstev a případné další efekty. Tok (množství vody, která proteče jednotkovou plochou za jednotku času) je dán vztahem <span class="math display">\[\vec q=-K\nabla h,\]</span> kde <span class="math inline">\(h\)</span> je piezometrická výška a <span class="math inline">\(K\)</span> je koeficient filtrace. Veličina <span class="math inline">\(K\)</span> je v obecném případě symetrický tenzor. V izotropním případě má tok <span class="math inline">\(\vec q\)</span> opačný směr než gradient veličiny <span class="math inline">\(h\)</span> a v takovém případě se <span class="math inline">\(K\)</span> redukuje na skalární hodnotu.</p>
 <h2 id="fourierův-zákon-vedení-tepla">Fourierův zákon (vedení tepla)</h2>
-
 <div class="obtekat">
 <figure>
-<img src="rozhrani.png" alt="Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem. Zdroj: Cengel, Ghajar: Heat and Mass Transfer." /><figcaption>Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</figcaption>
+<img src="rozhrani.png" alt="" /><figcaption>Na hranici tělesa je tok tepla dán okrajovou podmínkou vyjádřenou Fourierovým zákonem. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</figcaption>
 </figure>
 </div>
-
 <p>Fourierův zákon se týká vedení tepla a vyjadřuje, že vektor hustoty tepelného toku <span class="math inline">\(\vec q\)</span> je úměrný záporně vzatému gradientu teploty <span class="math inline">\(\nabla T\)</span>, tj. <span class="math display">\[\vec q=-k\nabla T.\]</span> Je-li materiál anizotropní, což je nejobecnější případ, je veličina <span class="math inline">\(k\)</span> symetrickým tenzorem. Je-li materiál izotropní, je <span class="math inline">\(k\)</span> skalární veličinou, případně skalární veličina násobená jednotkovou maticí, pokud potřebujeme zachovat její maticový charakter. Veličina <span class="math inline">\(k\)</span> se nazývá součinitel tepelné vodivosti, koeficient tepelné vodivosti nebo Fourierův koeficient.</p>
 <h2 id="různé-podoby-fourierova-zákona">Různé podoby Fourierova zákona</h2>
 <p>V souvislosti s Fourierovým zákonem prodiskutujeme různé tvary konstitutivních zákonů. Tento zákon udává tok tepla vyvolaný teplotním gradientem. Je to velmi používaný zákon a proto má několik variant. Začneme od nejjednodušší formulace (F.1), kterou můžeme formulovat pomocí základních matematických operací, násobení a dělení. Tento tvar se snadno používá, ale je vhodný jenom pro jednoduché výpočty, jako například teplotní únik stěnou domu. Složitější formulace (F.2) a (F.3), využívající derivace, dokáží modelovat i to, co se děje uvnitř stěny a jak vypadá teplotní profil. Nejsou však užitečné při studiu vedení tepla v rovině nebo v prostoru. K tomu je nutno použít ještě obecnější (a složitější) formulaci (F.4), využívající gradient místo derivace. I zde jsou však omezení: je-li součinitel tepelné vodivosti skalární hodnota, je možné takto spolehlivě modelovat pouze izotropní materiály. Není možné zohlednit skutečnost, že v některém směru je přenos tepla snadnější než ve směru jiném. Tuto nesnáz odstraňuje až nejobecnější tenzorová formulace (F.5), která kromě gradientu používá i tenzorový tvar součinitele tepelné vodivosti a díky tomu dovoluje modelovat i anizotropní materiály.</p>
@@ -312,28 +310,24 @@ th {
 </tr>
 </tbody>
 </table>
-
 <h2 id="soretův-efekt-termodifuze">Soretův efekt (termodifuze)</h2>
 <p>Většinou je hybatelem transportního děje nerovnoměrnost v rozložení té stejné veličiny, která se tímto dějem transportuje. Například tok tepla (vnitřní energie) je vyvolaný nerovnoměrným rozložením vnitřní energie, kterou vyjadřujeme pohodlněji pomocí teplotu. Nebo difuze chemické látky je vyvolána nerovnoměrným rozložením koncentrace této látky. Nemusí tomu však být vždy. Příkladem je termodifuze, což je pohyb prvků vyvolaný nerovnoměrným rozložením teploty. Například při difúzi vody ve dřevě s nerovnoměrným rozložením teploty je tok dán vztahem <span class="math display">\[\vec J=-D\nabla c - sD\nabla T, \]</span> kde <span class="math inline">\(s\)</span> je koeficient termodifuze.</p>
 <p>Rozeznáváme kladný a záporný Soretův efekt. Při kladném dochází k transportu ve směru klesající teploty, při záporném naopak ve směru rostoucí teploty. To je v kontrastu s ostatními konstitutivními zákony, kde tok stavové veličiny směřuje vždy jenom do míst s menší hustotou stavové veličiny. Viz Wikipedia a heslo Thermophoresis.</p>
 <h2 id="ohmův-zákon">Ohmův zákon</h2>
 <div class="obtekat">
 <figure>
-<img src="elektricky_obvod.jpg" alt="Všechny zde uvedené konstitutivní zákony mají stejný charakter. Proto můžeme vedení tepla znázorňovat stejně jako vedení elektrického proudu. Zdroj: pixabay.com, T_Tide." /><figcaption>Všechny zde uvedené konstitutivní zákony mají stejný charakter. Proto můžeme vedení tepla znázorňovat stejně jako vedení elektrického proudu. Zdroj: pixabay.com, T_Tide.</figcaption>
+<img src="elektricky_obvod.jpg" alt="" /><figcaption>Všechny zde uvedené konstitutivní zákony mají stejný charakter. Proto můžeme vedení tepla znázorňovat stejně jako vedení elektrického proudu. Zdroj: pixabay.com, T_Tide.</figcaption>
 </figure>
 </div>
 <p>Ohmův zákon je velice známý vztah mezi napětím a proudem. Přeformulováno z integrálního tvaru <span class="math inline">\(I=\frac 1R U\)</span> (pro elektrické obvody) do diferenciálního tvaru (pro popis děje v látce) tento zákon říká, že hustota elektrického proudu <span class="math inline">\(\vec j\)</span> je dána intenzitou elektrického pole <span class="math inline">\(\vec E\)</span>. A tato intenzita je gradientem potenciálu <span class="math inline">\(\varphi\)</span> elektrického pole, tj. <span class="math inline">\(\vec E=\nabla \varphi\)</span>. Spojenením těchto poznatků a při použití lineární aproximace dostáváme <span class="math display">\[\vec j=-\gamma \nabla \varphi,\]</span> což je Ohmův zákon v diferenciálním tvaru. Formálně máme tedy stejný tvar zákona jako u vedení tepla, tok tepla je nahrazen tokem elektrického proudu a rozdíl teplot je nahrazen rozdílem potenciálů. Znalost zapojování elektrických obvodů, jako je například paralelní nebo sériové zapojení rezistorů, bývá běžná a toho se často využívá při modelování tepelného odporu pomocí elektrického odporu. Formálně jsou vztahy identické.</p>
 <p>Elektrický proud studujeme v kovech a ty bývají izotropní. Proto je v případě Ohmova zákona konstanta úměrnosti uvažována jako reálné číslo, nikoliv matice. Tím se věci znatelně zjednodušují, ale vyplývají odsud i limity použitelnosti při modelování vedení tepla jako vedení elektrického proudu. Například při průchodu elektrického proudu dřevem je konstanta úměrnosti z Ohmova zákona tenzorová a její nahrazení jedinou skalární hodnotou je pouze zjednodušení reálné situace.</p>
-
 <h1 id="speciální-případy-vztahu-mezi-gradientem-a-tokem">Speciální případy vztahu mezi gradientem a tokem</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/vrPhbc-GJqc"></iframe> </div>
-
 <div class="obtekat">
 <figure>
-<img src="rezistory.png" alt="Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer." /><figcaption>Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</figcaption>
+<img src="rezistory.png" alt="" /><figcaption>Formálně jsou všechny konstitutivní zákony stejné a jsou stejné i jako zákon mezi elektrickým proudem a napětím. Proto je možné izolační vrstvy modelovat pomocí elektrických obvodů, rezistorů a vzorců pro jejich spojování z Ohmova zákona. Na obrázku je řez stěnou z dutých cihel a izolace. Zdroj: Cengel, Ghajar: Heat and Mass Transfer.</figcaption>
 </figure>
 </div>
-
 <p>Uvažujme vztah mezi gradientem a tokem ve tvaru <span class="math display">\[\vec j=-K\nabla u ,\]</span> kde <span class="math inline">\(K\)</span> je symetrický tenzor. Gradient má ve trojrozměrném případě vyjádření <span class="math display">\[\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y},\frac{\partial u }{\partial z}\right)^T\]</span> a ve 2D <span class="math display">\[\nabla u  =\left(\frac{\partial u }{\partial x},\frac{\partial u }{\partial y}\right)^T.\]</span></p>
 <h2 id="obecný-případ-anizotropní">Obecný případ (anizotropní)</h2>
 <p>Veličina <span class="math inline">\(K\)</span> je matice <span class="math display">\[K=
@@ -351,13 +345,11 @@ th {
 \end{aligned}
 \]</span> což zjistíme prostým maticovým násobením. Prostor pro další úpravu není.</p>
 <h2 id="ortotropní-případ-vhodně-zvolené-osy">Ortotropní případ, vhodně zvolené osy</h2>
-
 <div class="obtekat">
 <figure>
-<img src="lepenka.jpg" alt="Ortotropní materiál je typicky materiál z jednotlivých vrstev. Typicky dřevo, půda z různých vrstev, lepenka. Zdroj: pixabay.com" /><figcaption>Ortotropní materiál je typicky materiál z jednotlivých vrstev. Typicky dřevo, půda z různých vrstev, lepenka. Zdroj: pixabay.com</figcaption>
+<img src="lepenka.jpg" alt="" /><figcaption>Ortotropní materiál je typicky materiál z jednotlivých vrstev. Typicky dřevo, půda z různých vrstev, lepenka. Zdroj: pixabay.com</figcaption>
 </figure>
 </div>
-
 <p>V obecném případě je zpravidla možné transformovat soustavu souřadnic tak, aby tenzor <span class="math inline">\(K\)</span> byl diagonální. Pokud je studovaný problém ortotropní, má charakteristické směry (přesněji, má tři roviny symetrie materiálových vlastností), bude tato diagonalita tenzoru <span class="math inline">\(K\)</span> v případě, že zvolíme souřadnice v souladu s těmito charakteristickými směry.</p>
 <p><span class="math display">\[K=
 \begin{pmatrix}
@@ -380,36 +372,28 @@ th {
 <p>Stejné jako ortotropní případ, ale navíc platí <span class="math inline">\(k_{11}=k_{22}=k_{33}=k.\)</span> Potom <span class="math inline">\(\vec j=-k\nabla u\)</span>, kde <span class="math inline">\(k\)</span> je konstanta a vektory toku a gradientu mají opačný směr. V tomto případě, na rozdíl od ortotropního případu, nezávisí na volbě souřadné soustavy, tenzor materiálových vlastností se redukuje na jednorozměrnou konstantu v libovolné souřadné soustavě. Toto je nejjednodušší případ. Proto je studium izotropních materiálů mnohem mnohem jednodušší, než studium materiálů obecnějších. To je nejzásadnější vlastnost, která činí studium biologických materiálů mnohem komplikovanějším, než je třeba studium vlastností kovů. Biologické materiály mají typicky určitou vnitřní strukturu, která jim dává v různých směrech různé vlastnosti. Postupy odvozené pro izotropní materiály zde nefungují.</p>
 <h1 id="tečna-k-vrstevnici">Tečna k vrstevnici</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tc8pmUNyhhI"></iframe> </div>
-
 <div class="obtekat">
 <figure>
-<img src="tecna.png" alt="Tečna k vrstevnici" /><figcaption>Tečna k vrstevnici</figcaption>
+<img src="tecna.png" alt="" /><figcaption>Tečna k vrstevnici</figcaption>
 </figure>
 </div>
-
 <p>Vyjdeme z rovnice pro tečnou rovinu v bodě <span class="math inline">\((x_0,y_0)\)</span>, který je na vrstevnici na úrovni nula, tj. platí <span class="math inline">\(f(x_0,y_0)=0\)</span>. V řezu vodorovnou rovinou <span class="math inline">\(z=0\)</span> z grafu funkce a z tečné roviny zůstanou vrstevnice na úrovni nula a tečna k vrstevnici v bodě <span class="math inline">\((x_0,y_0)\)</span>. Rovnici tečny získáme dosazením <span class="math inline">\(z=0=z_0\)</span> do rovnice tečné roviny. <span class="math display">\[0=\nabla f(x_0,y_0)\cdot (x-x_0,y-y_0).\]</span></p>
-
 <p><a href="https://sagecell.sagemath.org/?z=eJxtkc1ygyAUhffO-A7MZBFIrtafdMk7ZNFdp3EIYqRRcBAN9umL5qeLujtw7v0u97BB1aCuXCCGrOCKoRGddSnQp0tgSr7CoMIOJkLdKdtNkdtNpzzKwmBxaQZpGGycF_HBC39TSVUWRmuLfZ-vIZBASsIgDO50iqr4YlgphbKYLCUJiUtti87ocuAWj4JbbTB20WxG3iaE0mRGbJA-G_Yjrmg0vRWjkhz-pECePxjtNVJDw2BZaPKLPQcOYXCkXCurB1N0zfxI8NulkBPAk39pRgA17Cyann6YQQB6FPfUMHURODrAwa8DvGUd3X4LuyUz8riXbddILu2d-khyZicvdv5sq_tx68dIJW6ytDXN1xn33BGlKPlPWmlnxugbfiQKrxSXI9mvpP6mtGnxikGW_zrGfe2BrO88qjDMSk1TcK1UNI3fYWqZmwX5BYh4r2w=&amp;lang=sage">Nakreslit online</a></p>
-
 <h1 id="implicitně-definovaná-funkce">Implicitně definovaná funkce</h1>
-
 <div class="obtekat">
 <figure>
-<img src="implicitni_3.png" alt="Tečna k vrstevnici" /><figcaption>Tečna k vrstevnici</figcaption>
+<img src="implicitni_3.png" alt="" /><figcaption>Tečna k vrstevnici</figcaption>
 </figure>
 </div>
-
 <p>Pokud tečna k vrstevnici není rovnoběžná s osou <span class="math inline">\(y\)</span>, je možno vrstevnici chápat jako graf funkce jedné proměnné. Taková funkce je do jisté míry určena jednoznačně, jak ukazuje následující věta.</p>
 <blockquote class="veta"><p class="vetaname">Věta (o implicitní funkci).</p><p> Uvažujme funkci <span class="math inline">\(f(x,y)\)</span> dvou proměnných, splňující v nějakém bodě <span class="math inline">\((x_0, y_0)\)</span> podmínku <span class="math inline">\(f(x_0, y_0)=0\)</span> a mající v okolí bodu <span class="math inline">\((x_0,  y_0)\)</span> spojité parciální derivace. Platí-li <span class="math display">\[\frac{\partial f (x_0,y_0)}{\partial y}\neq 0,\]</span> je rovnicí <span class="math display">\[f(x,y)=0\]</span> v okolí bodu <span class="math inline">\((x_0, y_0)\)</span> implicitně určena <strong>právě jedna spojitá funkce</strong> <span class="math inline">\(y=g(x)\)</span>.</p>
 </blockquote>
 <h1 id="lokální-extrémy-funkce-více-proměnných">Lokální extrémy funkce více proměnných</h1>
-
 <div class="obtekat">
 <figure>
-<img src="extrem_2.png" alt="V bodě kde nastává extrém je každá parciální derivace která existuje nulová, tj. křivka na řezu má vodorovnou tečnu" /><figcaption>V bodě kde nastává extrém je každá parciální derivace která existuje nulová, tj. křivka na řezu má vodorovnou tečnu</figcaption>
+<img src="extrem_2.png" alt="" /><figcaption>V bodě kde nastává extrém je každá parciální derivace která existuje nulová, tj. křivka na řezu má vodorovnou tečnu</figcaption>
 </figure>
 </div>
-
 <p>Pro funkce více proměnných definujeme <strong>lokální extrémy</strong> stejně jako pro funkce jedné proměnné. Funkce má tedy v daném bodě <strong>lokální minimum</strong>, pokud v nějakém okolí tohoto bodu neexistuje bod s menší funkční hodnotou. Funkce má v bodě <strong>lokální maximum</strong>, pokud v okolí tohoto bodu neexistuje bod s vyšší funkční hodnotou.</p>
 <p>Funkce jedné proměnné určitě nemá lokální extrém v bodě, ve kterém má kladnou derivaci (protože tam funkce roste). Stejně tak nemá lokální extrém v bodě, ve kterém má zápornou derivaci (protože tam funkce klesá). Derivace v bodě lokálního extrému tedy musí být buď nulová nebo nesmí existovat. Stejná myšlenková úvaha se dá provést pro křivky vzniklé na svislých řezech funkce dvou proměnných. Proto platí následující věta.</p>
 <blockquote class="veta"><p class="vetaname">Věta (Fermatova nutná podmínka pro lokální extrémy).</p><p> Jestliže funkce více proměnných má v nějakém bodě svůj lokální extrém, pak každá parciální derivace, která v tomto bodě existuje, je nulová.</p>
@@ -418,7 +402,7 @@ th {
 <h1 id="tenzor-malých-deformací">Tenzor malých deformací</h1>
 <div class="obtekat">
 <figure>
-<img src="beer-mugs-deformace.jpg" alt="Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou. Tedy posunutí a otočení. V souvislosti s deformací nás zajímá jednom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos." /><figcaption>Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou. Tedy posunutí a otočení. V souvislosti s deformací nás zajímá jednom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos.</figcaption>
+<img src="beer-mugs-deformace.jpg" alt="" /><figcaption>Při popisu deformace musíme od změny polohy jednotlivých bodů odfiltrovat efekty, které s deformací spojeny nejsou. Tedy posunutí a otočení. V souvislosti s deformací nás zajímá jednom změna tvaru. Zdroj: pixabay.com, Alexas_Fotos.</figcaption>
 </figure>
 </div>
 <p>Na závěr jedna aplikace z oblasti parciálních derivací a lineárních aproximací vektorových funkcí více proměnných. Ukážeme si, že parciální derivace jsou vhodné k popisu deformací.</p>
@@ -428,13 +412,11 @@ th {
 <p>Pro využití v dřevařských úlohách viz též A. Požgaj, Štruktúra a vlastnosti dreva str 318 nebo P. Horáček, Fyzikální a mechanické vlastnosti dřeva I, str. 40. Analogicky jako tenzor deformace je definován tenzor rychlosti přetvoření (deformační rychlost) používaný v hydrodynamice. Můžeme jej dostat jako derivaci tenzoru malých deformací (při studiu deformací), nebo jako <a href="https://en.wikipedia.org/wiki/Strain-rate_tensor#Symmetric_and_antisymmetric_parts">symetrickou část</a> matice vytvořené gradienty jednotlivých komponent rychlosti proudění. Pro proudění vody viz J. Říha, Matematické modelování hydrodynamických a disperzních jevů, kap. 3.3.</p>
 <p><a href="https://sagecell.sagemath.org/?z=eJydU8tq20AU3Rv8DxdlESmaKLbadBEyBbeFkoU3behGmDCWbuKpRzNiNHIr_UO-oKt8QL7C-bBePeq42FCoQGIe555z7kMnMI3gi2nWSmRglphqBGeFLu-NzUWKoAUYZ1LUEgSUdY7OynRtqn2UHI9OIH7l2cEOuWRjnDUFsaWidESZ4UYKZywtdmTj0aYxtuZ-MmGTBUumw3dK30l0yabRu3bV7-kuGI9mPBck-dNPkojgUXzZYSeX7DyKFx3ils-izk5hSvTp5MMdGeX-LJzdBhdxuxf9wflwcALf6nKDTrXZ97dXsIbCyrLAzbpisHZoa7BYWGxQu-o7QpOjrv7ULGctOhM5gswIIB0FiWWdrkwOOSoqA6qDYrZWqFC8M9h6TsnvRXw2UNR3Q65xlwRVsEeed1EHtun-3667NqQSTDa0SMuVaWMKkVX_mQQtYQ5SQ5LMmPcR1fZp12X0qD99SZk3I87dzBDo5XH7VDpSNVTGl0fU22eCQ9JlybyvR6BN_vKLxstthK0GLOXBvJth3rbPA7RH1n8hKXnmfaIKbJ_2J7FVXVyNR0CPWVrR1Dzx58lkER42IjjbYErBvgygzVu2eXdTvOgJbuafeWGkdn5PxSA1ylh-ajE7ZVDKBvnbSRAWRtUPRh9HCVWsBKdfIAiV1HgMFLzK0Rv2kp2RncgOv1QVHgb0-kPIvVSK39oK98SPxpcr88NfuVz53vUqfu-F82S6CL3ri3YT7IHA110RGWTyQbqSv9m_9ckDSdGkpu7OCicNnx5TsC3pb7sKl7c=&amp;lang=sage&amp;interacts=eJyLjgUAARUAuQ==">Obrázky a online výpočty.</a></p>
 <h1 id="z-ptačí-perspektivy">Z ptačí perspektivy</h1>
-
 <div class="obtekat">
 <figure>
-<img src="../falcon.jpg" alt="Ještě pohled s trochou nadhledu. Zdroj: pixabay.com" /><figcaption>Ještě pohled s trochou nadhledu. Zdroj: pixabay.com</figcaption>
+<img src="../falcon.jpg" alt="" /><figcaption>Ještě pohled s trochou nadhledu. Zdroj: pixabay.com</figcaption>
 </figure>
 </div>
-
 <ul>
 <li>Parciální derivace z minulé přednášky sleduje vliv každé vstupní proměnné na funkční hodnotu funkce samostatně. Gradient se snaží podchytit informaci od všech prostorových proměnných současně do vektoru, který míří směrem maximálního růstu funkčních hodnot a má velikost odpovídající nárůstu na intervalu jednotkové délky.</li>
 <li>Pomocí gradientu dokážeme formulovat lineární aproximaci funkce. U vektorových funkcí tuto aproximaci můžeme formulovat pro každou komponentu samostatně a dostáváme tak nástroj, jak pomocí maticového násobení aproximovat funkční vztahy, kde na vstupu i na výstupu je vektor. Tím získáme jednotný popis všech materiálových vztahů, kde vektorová veličina, která je podnětem, vyvolává jako odezvu jinou vektorovou veličinu. Například pokles teploty, definovaný směrem a intenzitou, vyvolává tok tepla odpovídajícím směrem a odpovídající intenzitou.</li>

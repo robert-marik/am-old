@@ -111,7 +111,7 @@ window.MathJax = {
 <li>V závěru si zopakujeme difuzní rovnici a jak se některé členy této rovnice mohou za speciálních podmínek zjednodušit.</li>
 </ul>
 </blockquote>
-<h1 id="divergence-vektorového-pole"><span class="header-section-number">1</span> Divergence vektorového pole</h1>
+<h1 data-number="1" id="divergence-vektorového-pole"><span class="header-section-number">1</span> Divergence vektorového pole</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/bdnxbITOIrM"></iframe> </div>
 <ol type="1">
 <li>Vypočtěte divergenci vektorového pole <span class="math display">\[\vec F=x^2y\vec \imath + (x+y^2)\vec \jmath.\]</span></li>
@@ -127,7 +127,7 @@ window.MathJax = {
 <li>Zdroj (kladná divergence).</li>
 </ol>
 </div>
-<h1 id="divegrence-vektorového-pole-s-parametrem"><span class="header-section-number">2</span> Divegrence vektorového pole s parametrem</h1>
+<h1 data-number="2" id="divegrence-vektorového-pole-s-parametrem"><span class="header-section-number">2</span> Divegrence vektorového pole s parametrem</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/zwYPRlEIrHI"></iframe> </div>
 <ol type="1">
 <li>Vypočtěte divergenci vektorového pole <span class="math display">\[\vec F=ax^3y^2\vec \imath + 3x^2y\vec \jmath,\]</span> kde <span class="math inline">\(\displaystyle a\in\mathbb R\)</span> je reálný parametr.</li>
@@ -139,10 +139,10 @@ window.MathJax = {
 <li><span class="math inline">\(\displaystyle \nabla \cdot \vec F (-1,2)=3(-1)^2(a\cdot 2^2+1)=3(4a+1)\)</span> a <span class="math inline">\(\displaystyle \nabla \cdot \vec F (-1,2)=0\)</span> pokud <span class="math inline">\(\displaystyle 3(4a+1)=0\)</span>, tj. <span class="math inline">\(\displaystyle a=-\frac 14\)</span>.</li>
 </ol>
 </div>
-<h1 id="rovnice-vedení-tepla-v-dvourozměrném-materiálu"><span class="header-section-number">3</span> Rovnice vedení tepla v dvourozměrném materiálu</h1>
+<h1 data-number="3" id="rovnice-vedení-tepla-v-dvourozměrném-materiálu"><span class="header-section-number">3</span> Rovnice vedení tepla v dvourozměrném materiálu</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/U9_0wbKT_2I"></iframe> </div>
 <figure>
-<img src="drevo_textura.jpg" alt="Zdroj: pixabay.com" /><figcaption>Zdroj: pixabay.com</figcaption>
+<img src="drevo_textura.jpg" alt="" /><figcaption>Zdroj: pixabay.com</figcaption>
 </figure>
 <p>Teplota ve dvourozměrné desce pro <span class="math inline">\(\displaystyle 0\leq x\leq 10\)</span> a <span class="math inline">\(\displaystyle 0\leq y\leq 10\)</span> zachycené v určitém okamžiku termokamerou je popsána rovnicí <span class="math display">\[T(x,y)=(2x-y)^2+x^4.\]</span> Rozměry jsou v centimetrech a teplota ve stupních Celsia. (Formálně to nevychází, ale ke každému členu můžeme dodat konstantu, která jeho rozměr opraví. Pro jednoduchost tuto komplikaci vynecháme.)</p>
 <ol type="1">
@@ -189,7 +189,7 @@ window.MathJax = {
 % show(-k*T.gradient()(x=0))
 % show((-k*T.gradient())[0].diff(x)+(-k*T.gradient())[1].diff(y))
 -->
-<h1 id="vedení-tepla-v-různých-materiálech"><span class="header-section-number">4</span> Vedení tepla v různých materiálech</h1>
+<h1 data-number="4" id="vedení-tepla-v-různých-materiálech"><span class="header-section-number">4</span> Vedení tepla v různých materiálech</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/MnThGZphPps"></iframe> </div>
 <ol type="1">
 <li>Zapište rovnici vedení tepla v trojrozměrném izotropním a v trojrozměrném ortotropním materiálu. Ve druhém případě volte osy ve směru vlastních vektorů.</li>
@@ -199,7 +199,7 @@ window.MathJax = {
 <p>Pomůže <a href="https://github.com/robert-marik/apl-slidy/blob/master/cheatsheet/cheatsheet-AM.pdf">cheatsheet</a></p>
 <ol type="1">
 <li><p>Izotropní: <span class="math inline">\(\displaystyle \varrho c \pdv{T}{t} = \pdv{x}(k\pdv{T}{x})+\pdv{y}(k\pdv{T}{y})+\pdv{z}(k\pdv{T}{z})\)</span></p>
-Ortotropní: <span class="math inline">\(\displaystyle \varrho c \pdv{T}{t} = \pdv{x}(k_x\pdv{T}{x})+\pdv{y}(k_y\pdv{T}{y})+\pdv{z}(k_z\pdv{T}{z})\)</span></li>
+<p>Ortotropní: <span class="math inline">\(\displaystyle \varrho c \pdv{T}{t} = \pdv{x}(k_x\pdv{T}{x})+\pdv{y}(k_y\pdv{T}{y})+\pdv{z}(k_z\pdv{T}{z})\)</span></p></li>
 <li><p>Izotropní: <span class="math inline">\(\displaystyle \varrho c \pdv{T}{t} = k\left(\pdv[2]{T}{x} + \pdv[2]{T}{y} + \pdv[2]{T}{z}\right)\)</span></p>
 <p>Ortotropní: <span class="math inline">\(\displaystyle \varrho c \pdv{T}{t} = k_x\pdv[2]{T}{x}+k_y\pdv[2]{T}{y}+k_z\pdv[2]{T}{z}\)</span></p></li>
 </ol>

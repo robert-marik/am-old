@@ -97,7 +97,8 @@ window.MathJax = {
 <li><a href="#křivkový-integrál-druhého-druhu-po-kubické-parabole"><span class="toc-section-number">3</span> Křivkový integrál druhého druhu po kubické parabole</a></li>
 <li><a href="#tok-vektorového-pole-uzavřenou-křivkou"><span class="toc-section-number">4</span> Tok vektorového pole uzavřenou křivkou</a></li>
 <li><a href="#tok-vektorového-pole-uzavřenou-křivkou-ii"><span class="toc-section-number">5</span> Tok vektorového pole uzavřenou křivkou II</a></li>
-<li><a href="#křivkový-integrál-a-tok-graficky"><span class="toc-section-number">6</span> Křivkový integrál a tok graficky</a><ul>
+<li><a href="#křivkový-integrál-a-tok-graficky"><span class="toc-section-number">6</span> Křivkový integrál a tok graficky</a>
+<ul>
 <li><a href="#křivkový-integrál"><span class="toc-section-number">6.1</span> Křivkový integrál</a></li>
 <li><a href="#tok"><span class="toc-section-number">6.2</span> Tok</a></li>
 </ul></li>
@@ -117,7 +118,7 @@ window.MathJax = {
 <li>Odhadu křivkového integrálu a toku křivkou se budeme věnovat v posledním příkladě. Naučíme se, čeho si všímat, když chceme zjistit, zda je výsledný integrál nebo tok kladný nebo záporný.</li>
 </ul>
 </blockquote>
-<h1 id="křivkový-integrál-druhého-druhu-po-třech-různých-křivkách"><span class="header-section-number">1</span> Křivkový integrál druhého druhu po třech různých křivkách</h1>
+<h1 data-number="1" id="křivkový-integrál-druhého-druhu-po-třech-různých-křivkách"><span class="header-section-number">1</span> Křivkový integrál druhého druhu po třech různých křivkách</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/i-y8bRLmopE"></iframe> </div>
 <p>Vypočtěte <span class="math display">\[\int_{C_i} \vec F \mathrm d\vec r\]</span> pro vektorové pole <span class="math display">\[\vec F=-y\vec \imath + x\vec\jmath\]</span> po třech různých křivkách <span class="math inline">\(\displaystyle C_1\)</span>, <span class="math inline">\(\displaystyle C_2\)</span> a <span class="math inline">\(\displaystyle C_3\)</span>. <span class="math display">\[\begin{aligned}
   C_1&amp;\colon \vec r=\cos(t)\vec \imath + \sin (t)\vec\jmath, \quad t\in\qty[0,\frac\pi 2]\\
@@ -138,14 +139,14 @@ window.MathJax = {
 \qty[\frac 13 t^3 + t]_0^1 = \frac 13 + 1 - 0 =\frac 43.
 \]</span></p>
 <figure>
-<img src="priklad_5_1_prace.png" alt="Zdroj: vlastní" /><figcaption>Zdroj: vlastní</figcaption>
+<img src="priklad_5_1_prace.png" alt="" /><figcaption>Zdroj: vlastní</figcaption>
 </figure>
 <p><strong>Interpretace jako práce, srovnání.</strong></p>
 <p>Všechny křivky jsou z bodu <span class="math inline">\(\displaystyle [1,0]\)</span> do bodu <span class="math inline">\(\displaystyle [0,1]\)</span>. Nejblíže k počátku je úsečka <span class="math inline">\(\displaystyle C_2\)</span>, nejdále je čvrtkružnice <span class="math inline">\(\displaystyle C_1\)</span>, křivka <span class="math inline">\(\displaystyle C_2\)</span> je mezi nimi.</p>
 <p>Integrál fyzikálně znamená práci vektorového pole <span class="math inline">\(\displaystyle (-y,x)\)</span> po zadané křivce. Toto vektorové pole míří po kružnicích okolo počátku proti směru hodinových ručiček. Délka vektoru je rovna vzdálenosti od počátku.</p>
 <p>Křivka <span class="math inline">\(\displaystyle C_1\)</span> je nejdále od počátku a vektorové pole je na ní nejsilnější. Navíc v každém bodě je síla ve směru křivky a proto se projeví ve výsledném příspěvku bez redukování. Díky tomu můžeme integrál po kružnici počítat stejně jako práci na přímce, tj. součinem délky křivky <span class="math inline">\(\displaystyle \frac \pi 2\)</span> a velikosti síly <span class="math inline">\(\displaystyle |\vec F|=1\)</span>. Po dalších křivkách je síla menší (křivky jdou blíže ke středu) a navíc se neuplatní celá velikost síly, protože síla svírá s křivkou nenulový úhel a při práci se projeví pouze tečná komponenta.</p>
 <figure>
-<img src="priklad_5_1.png" alt="Zdroj: vlastní" /><figcaption>Zdroj: vlastní</figcaption>
+<img src="priklad_5_1.png" alt="" /><figcaption>Zdroj: vlastní</figcaption>
 </figure>
 <!--
 %https://sagecell.sagemath.org/?z=eJx1kMFuwjAQRO-R8g8rgRRHMW3snH3iB3LgRmgUEkMNxo5sQ5u_r01SlbbhtCPN7hvN3hqDkiFJ40hcem0cqOulH-LIEXZXL1Io2zctRzkGhXrxSlNM8twfODqzQiZzTdh222qLRIqtUH7s4KANCBAKHNn5Deo3yEpg8ejQ4BSj80b_eyVhUlhX91I7tCYYgjhpoXjHNubKMUh-5KqrZbPnkplkua5J1WqpFSA_LThc2UBLl0laxVH2gKMzuHBqWGJ4l8yx6chGZOXwHLJ4jjwaztUstPiB-h_csXHku1MWWPWNt06b-iC47BD6xEOKwY8ckyCGSUwpe9m053Bv3_UHKklW-paN7T2jNo0TmpE7PI4WZTHHHzKK8zFhRb4jJvWriccsxpCsLP5mYHDCSe77bfQZei05LCsfBCc2JfiSX8c_x8Q=&lang=sage&interacts=eJyLjgUAARUAuQ==
@@ -155,7 +156,7 @@ window.MathJax = {
 <p>Integrál fyzikálně znamená tok vektorového pole <span class="math inline">\(\displaystyle (x,y)\)</span> křivkou. Toto vektorové pole míří směrem z počátku a zesiluje směrem od počátku, protože délka vektoru je rovna vzdálenosti od počátku.</p>
 <p>Proto je hodnota po křivce nejblíže počátku nejmenší atd. Na křivce <span class="math inline">\(\displaystyle C_1\)</span> (kružnice) je tok v každém bodě kolmý ke křivce a stejně velký a proto je celkový tok snadné určit jako součin velikosti vektorového pole na křivce (<span class="math inline">\(\displaystyle |\vec F|=1\)</span>) a délky křivky <span class="math inline">\(\displaystyle \frac \pi 2\)</span>.</p>
 </div>
-<h1 id="křivkový-integrál-druhého-druhu-po-parabole"><span class="header-section-number">2</span> Křivkový integrál druhého druhu po parabole</h1>
+<h1 data-number="2" id="křivkový-integrál-druhého-druhu-po-parabole"><span class="header-section-number">2</span> Křivkový integrál druhého druhu po parabole</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/udS4xy2WIws"></iframe> </div>
 <p>Vypočtěte <span class="math display">\[\int_{C} \vec F \mathrm d\vec r\]</span> pro vektorové pole <span class="math display">\[\vec F=x^2\vec \imath + (x+y)\vec\jmath\]</span> po části paraboly <span class="math display">\[\begin{aligned}
   C&amp;\colon \vec r=t\vec \imath + t^2\vec\jmath, \quad t\in\qty[0,1]
@@ -167,7 +168,7 @@ window.MathJax = {
 \]</span> Odsud formálně <span class="math display">\[\vec F\mathrm d\vec r=(3t^2+2t^3)\mathrm dt\]</span> a integrál má tvar <span class="math display">\[\int_C\vec F\mathrm d\vec r=\int_0^{1}(3t^2+2t^3)\,\mathrm dt
 =\qty[t^3+\frac 12 t^4]_0^1=1+\frac 12 - 0 = \frac 32.\]</span></p>
 </div>
-<h1 id="křivkový-integrál-druhého-druhu-po-kubické-parabole"><span class="header-section-number">3</span> Křivkový integrál druhého druhu po kubické parabole</h1>
+<h1 data-number="3" id="křivkový-integrál-druhého-druhu-po-kubické-parabole"><span class="header-section-number">3</span> Křivkový integrál druhého druhu po kubické parabole</h1>
 <p>Vypočtěte <span class="math display">\[\int_{C} \vec F \mathrm d\vec r\]</span> pro vektorové pole <span class="math display">\[\vec F=2y\vec \imath + x^2y\vec\jmath\]</span> po části kubické paraboly <span class="math display">\[\begin{aligned}
   C&amp;\colon \vec r=t\vec \imath + t^3\vec\jmath, \quad t\in\qty[0,1],
 \end{aligned}\]</span> tj. počítáme <span class="math display">\[\int_C 2y\,\mathrm dx + x^2y\,\mathrm dy\]</span> po zadané křivce <span class="math inline">\(\displaystyle C\)</span>.</p>
@@ -180,10 +181,10 @@ window.MathJax = {
 </div>
 <a onclick="otevrit('problems/krivkovy_integral/09.pg');" target="_blank" class="WWotazka">WW-otázka</a>
 <a onclick="otevrit('problems/krivkovy_integral/10.pg');" target="_blank" class="WWotazka">WW-otázka</a>
-<h1 id="tok-vektorového-pole-uzavřenou-křivkou"><span class="header-section-number">4</span> Tok vektorového pole uzavřenou křivkou</h1>
+<h1 data-number="4" id="tok-vektorového-pole-uzavřenou-křivkou"><span class="header-section-number">4</span> Tok vektorového pole uzavřenou křivkou</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/nqbi-7hwcD4"></iframe> </div>
 <figure>
-<img src="priklad_5_4.png" alt="Zdroj: vlastní" /><figcaption>Zdroj: vlastní</figcaption>
+<img src="priklad_5_4.png" alt="" /><figcaption>Zdroj: vlastní</figcaption>
 </figure>
 <p>Vypočtěte tok vektorového pole <span class="math display">\[\vec \Phi_1=(x+2)\vec\imath\]</span> jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. <span class="math display">\[C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].\]</span></p>
 <p><strong>Návod:</strong> Platí <span class="math display">\[\int_0^{2\pi}\sin^2 t\,\mathrm dt=\int_0^{2\pi}\cos^2 t\,\mathrm dt= \pi\]</span> a tento integrál je možno najít například grafickou cestou.</p>
@@ -193,9 +194,9 @@ window.MathJax = {
 (-\sin t,\cos t)\cdot (0,2+\cos (t)) = 2\cos t+\cos^2 t .
 \]</span> Odsud formálně <span class="math display">\[\vec F\mathrm d\vec r=(2\cos t+\cos^2 t)\mathrm dt\]</span> a integrál má tvar <span class="math display">\[\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos^2 t)\,\mathrm dt= \pi ,\]</span> kde poslední Riemannův integrál není nutné počítat, protože integrál z první části je nulový díky geometrické interpretaci integrálu a periodicitě funkce <span class="math inline">\(\displaystyle \cos t\)</span> a integrál z druhého sčítance byl součástí zadání.</p>
 </div>
-<h1 id="tok-vektorového-pole-uzavřenou-křivkou-ii"><span class="header-section-number">5</span> Tok vektorového pole uzavřenou křivkou II</h1>
+<h1 data-number="5" id="tok-vektorového-pole-uzavřenou-křivkou-ii"><span class="header-section-number">5</span> Tok vektorového pole uzavřenou křivkou II</h1>
 <figure>
-<img src="priklad_5_5.png" alt="Zdroj: vlastní" /><figcaption>Zdroj: vlastní</figcaption>
+<img src="priklad_5_5.png" alt="" /><figcaption>Zdroj: vlastní</figcaption>
 </figure>
 <p>Vypočtěte tok vektorového pole <span class="math display">\[\vec \Phi_2=(y+2)\vec\imath\]</span> jednotkovou kružnicí se středem v počátku orientovanou proti směru hodinových ručiček, tj. <span class="math display">\[C\colon \vec r=\cos(t)\vec \imath+\sin(t)\vec\jmath, \quad t\in[0,2\pi].\]</span></p>
 <p><strong>Návod:</strong> Platí <span class="math display">\[\int_0^{2\pi}\sin t\cos t\,\mathrm dt=0.\]</span></p>
@@ -206,10 +207,10 @@ window.MathJax = {
 \]</span> Odsud formálně <span class="math display">\[\vec F\mathrm d\vec r=(2\cos t+\cos t\sin t)\mathrm dt\]</span> a integrál má tvar <span class="math display">\[\oint_C\vec F\mathrm d\vec r=\int_0^{2\pi }(2\cos t+\cos t\sin t)\,\mathrm dt.\]</span></p>
 <p>Integrál z prvního sčítance můžeme vypočítat pomocí primitivní funkce <span class="math display">\[\int_0^{2\pi} 2\cos x\,\mathrm dx=\qty[2\sin x]_0^{2\pi}=2\sin(2\pi)-2\sin 0 =0\]</span> a integrál z druhého sčítance je nulový, proto je nulový i celý integrál. <span class="math display">\[\int_C\vec F\mathrm d\vec r=0\]</span></p>
 </div>
-<h1 id="křivkový-integrál-a-tok-graficky"><span class="header-section-number">6</span> Křivkový integrál a tok graficky</h1>
+<h1 data-number="6" id="křivkový-integrál-a-tok-graficky"><span class="header-section-number">6</span> Křivkový integrál a tok graficky</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/h_LWsGTTUl4"></iframe> </div>
 <p>Vyřešte příklady na následujících odkazech. Řiďte se popsaným pravidlem, nebo pravidlem uvedeným ve videokomentáři.</p>
-<h2 id="křivkový-integrál"><span class="header-section-number">6.1</span> Křivkový integrál</h2>
+<h2 data-number="6.1" id="křivkový-integrál"><span class="header-section-number">6.1</span> Křivkový integrál</h2>
 <ul>
 <li>Pokud křivka a vektorové pole svírají ostrý úhel, je příspěvek k celkové hodnotě integrálu kladný. Pokud jsou přesně stejným směrem (nulový úhel) je příspěvek roven součinu.</li>
 <li>Pokud křivka a vektorové pole svírají tupý úhel, je příspěvek k celkové hodnotě integrálu záporný. Pokud jsou přesně opačným směrem (úhel <span class="math inline">\(\displaystyle 180^\circ\)</span>) je příspěvek roven záporně vzatém součinu.</li>
@@ -219,7 +220,7 @@ window.MathJax = {
 <a onclick="otevrit('problems/krivkovy_integral/30_02.pg');" target="_blank" class="WWotazka">WW-otázka</a>
 <a onclick="otevrit('problems/krivkovy_integral/30_03.pg');" target="_blank" class="WWotazka">WW-otázka</a>
 <a onclick="otevrit('problems/krivkovy_integral/30_04.pg');" target="_blank" class="WWotazka">WW-otázka</a>
-<h2 id="tok"><span class="header-section-number">6.2</span> Tok</h2>
+<h2 data-number="6.2" id="tok"><span class="header-section-number">6.2</span> Tok</h2>
 <ul>
 <li>Pravidla pro souvislost toku s intenzitou pole a délkou křivky jsou analogická jako u křivkového integrálu (delší křivka a intenzivnější vektorové pole způsobují větší tok).</li>
 <li>Pokud se díváme ve směru křivky a pole přestupuje přes křivku zleva doprava, je tok kladný, v opačném případě záporný.</li>

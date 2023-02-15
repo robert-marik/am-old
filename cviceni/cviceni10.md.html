@@ -94,7 +94,8 @@ window.MathJax = {
 <ul>
 <li><a href="#skladování-stavebního-recyklátu"><span class="toc-section-number">1</span> Skladování stavebního recyklátu</a></li>
 <li><a href="#propeptid-kolagenu"><span class="toc-section-number">2</span> Propeptid kolagenu</a></li>
-<li><a href="#modely-interagujících-populací"><span class="toc-section-number">3</span> Modely interagujících populací</a><ul>
+<li><a href="#modely-interagujících-populací"><span class="toc-section-number">3</span> Modely interagujících populací</a>
+<ul>
 <li><a href="#jelen-a-los"><span class="toc-section-number">3.1</span> Jelen a los</a></li>
 <li><a href="#puštík-obecný"><span class="toc-section-number">3.2</span> Puštík obecný</a></li>
 <li><a href="#kůň-převalského"><span class="toc-section-number">3.3</span> Kůň Převalského</a></li>
@@ -118,10 +119,10 @@ window.MathJax = {
 * Stacionární body jsou u systémů to, co nás zajímá v první řadě. Skutečně, všechna ohraničená řešení systému v rovině konvergují k některému stacionárnímu bodu nebo okolo něj obíhají v cyklu. Proto si v poslední úloze ukážeme, jak se dá odhalit chování trajektorií v okolí stacionárního bodu nelineárního systému. Ukážeme si, jak systém linearizovat pomocí Jacobiho matice ve stacionárním bodě. Najdeme vlastní čísla této matice a pomocí nich určíme typ stacionárního bodu. To nám dodá informaci, zda si bod "přitáhne" všechny trajektorie ze svého okolí, zda je naopak odpuzuje, nebo zda se chová ještě nějak jinak. 
 
 -->
-<h1 id="skladování-stavebního-recyklátu"><span class="header-section-number">1</span> Skladování stavebního recyklátu</h1>
+<h1 data-number="1" id="skladování-stavebního-recyklátu"><span class="header-section-number">1</span> Skladování stavebního recyklátu</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/5gOGLPv8BeU"></iframe> </div>
 <figure>
-<img src="pokros.jpg" alt="Zdroj: vlastní" /><figcaption>Zdroj: vlastní</figcaption>
+<img src="pokros.jpg" alt="" /><figcaption>Zdroj: vlastní</figcaption>
 </figure>
 <p>Hromada sypkého materiálu má tvar kužele. Úhel u vrcholu je konstantní, daný mechanickými vlastnostmi materiálu a je nezávislý na objemu. Předpokládejme, že personál stavebnin přisypává na hromadu materiál konstantní rychlostí (v jednotkách objemu za jednotku času). Tato hromada je však v poměrně otevřené krajině a vítr rozfoukává materiál po okolí. Je rozumné předpokládat, že rozfoukávání (opět v jednotkách objemu za jednotku času) se děje rychlostí úměrnou povrchu návětrné strany pláště.</p>
 <ol type="1">
@@ -136,10 +137,10 @@ window.MathJax = {
 <p>Protože <span class="math inline">\(\displaystyle f(0)&gt;0\)</span>, malá hromada vždy roste a proto nemůže skončit celá rozfoukaná. Pro malý objem je přisypávání intenzivnější než rozfoukávání.</p>
 <p>Protože <span class="math inline">\(\displaystyle f\)</span> je pro velké <span class="math inline">\(\displaystyle V\)</span> záporná, pro velkou hromadu objem ubývá (více se rozfouká než přisype) a hromadu není možné navršit libovolně velkou.</p>
 </div>
-<h1 id="propeptid-kolagenu"><span class="header-section-number">2</span> Propeptid kolagenu</h1>
+<h1 data-number="2" id="propeptid-kolagenu"><span class="header-section-number">2</span> Propeptid kolagenu</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/yAHdtic9b18"></iframe> </div>
 <figure>
-<img src="kost.jpg" alt="pixabay.com" /><figcaption>pixabay.com</figcaption>
+<img src="kost.jpg" alt="" /><figcaption>pixabay.com</figcaption>
 </figure>
 <p>Kolagen je klíčový protein pojivových tkání. Jeden z kroků při syntéze kolagenu spočívá v reakci tří molekul propeptidu kolagenu, zkráceně propeptidu. Tento propeptid se formuje konstantní rychlostí a kromě toho, že je surovinou pro produkci kolagenu, se ještě rozpadá rychlostí úměrnou koncentraci.</p>
 <ol type="1">
@@ -150,11 +151,11 @@ window.MathJax = {
 <button onclick="myFunction()">Řešení on/off</button><div class="reseni"><p class="p_reseni">Řešení</p>
 <p>Rovnice má tvar <span class="math display">\[\frac{\mathrm dP}{\mathrm dt}=-k_1 P^3 +k_2-k_3 P,\]</span> kde <span class="math inline">\(\displaystyle k_1\)</span>, <span class="math inline">\(\displaystyle k_2\)</span> a <span class="math inline">\(\displaystyle k_3\)</span> jsou kladné konstanty úměrnosti. Rovnici je možno zapsat ve tvaru <span class="math display">\[\frac{\mathrm dP}{\mathrm dt}=\Bigl(k_2-k_3 P\Bigr)-\Bigl(k_1 P^3\Bigr) \]</span> s rozdílem klesající a rostoucí funkce na pravé straně. Tyto funkce mají jediný průsečík a proto má rovnice jediný stacionární bod. Tento bod je stabilní, protože pro vysoké hodnoty <span class="math inline">\(\displaystyle P\)</span> je pravá strana rovnice záporná (dominantní člen je <span class="math inline">\(\displaystyle -k_1 P^3\)</span>) a pro malé hodnoty <span class="math inline">\(\displaystyle P\)</span> je pravá strana kladná (v nule je rovna konstantě <span class="math inline">\(\displaystyle k_2\)</span>).</p>
 </div>
-<h1 id="modely-interagujících-populací"><span class="header-section-number">3</span> Modely interagujících populací</h1>
+<h1 data-number="3" id="modely-interagujících-populací"><span class="header-section-number">3</span> Modely interagujících populací</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/Rd_5KC2iFtE"></iframe> </div>
-<h2 id="jelen-a-los"><span class="header-section-number">3.1</span> Jelen a los</h2>
+<h2 data-number="3.1" id="jelen-a-los"><span class="header-section-number">3.1</span> Jelen a los</h2>
 <figure>
-<img src="moose.jpg" alt="Jelen a los" /><figcaption>Jelen a los</figcaption>
+<img src="moose.jpg" alt="" /><figcaption>Jelen a los</figcaption>
 </figure>
 <p>Uvažujme populaci jelenů a losů. Tyto populace spolu soupeří o potravu.</p>
 <ol type="1">
@@ -184,9 +185,9 @@ window.MathJax = {
 
 % %https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&dxdt=0.1*x*(1-x/10000)-5*0.00001*x*y&dydt=0.25*y*(1-y/6000)-3*0.00001*x*y&x=0,10000,20&y=0,6000,15&method=rk4&h=0.1&f1=80-30cos(2pi%20x/24)&f2=exp(2x)&f3=zeta(x)&f4=gamma(x)&pts1=%5B4907.407407407408,5229.428571428572%5D,%5B7444.444444444444,3746.6985645933014%5D,%5B8407.407407407407,2633.9712918660284%5D,%5B9259.25925925926,1111.2918660287078%5D,%5B9648.148148148148,423.1578947368416%5D,%5B3240.740740740741,306.0287081339711%5D,%5B1407.4074074074074,935.5980861244016%5D,%5B4611.111111111111,203.5406698564584%5D,%5B5518.518518518518,57.129186602870504%5D
 -->
-<h2 id="puštík-obecný"><span class="header-section-number">3.2</span> Puštík obecný</h2>
+<h2 data-number="3.2" id="puštík-obecný"><span class="header-section-number">3.2</span> Puštík obecný</h2>
 <figure>
-<img src="pustik.jpg" alt="wikimedia" /><figcaption>wikimedia</figcaption>
+<img src="pustik.jpg" alt="" /><figcaption>wikimedia</figcaption>
 </figure>
 <p>Puštík obecný se téměř výhradně živí malými hlodavci. Předpokládejme následující vztahy.</p>
 <ol type="1">
@@ -206,9 +207,9 @@ window.MathJax = {
 \]</span></p>
 <p><a href="https://homepages.bluffton.edu/~nesterd/apps/slopefields.html?flags=2&amp;dxdt=0.1*x%20-%200.025*x-0.01*x*y&amp;dydt=-0.1*y+0.05*x*y&amp;x=0,10,20&amp;y=0,40,15&amp;method=rk4&amp;h=0.1&amp;f1=80-30cos(2pi%20x/24)&amp;f2=exp(2x)&amp;f3=zeta(x)&amp;f4=gamma(x)&amp;pts1=%5B0.7894736842105263,10.577142857142857%5D,%5B1.795774647887324,12.09377990430622%5D,%5B0.7394366197183099,22.830622009569378%5D">Online model.</a></p>
 </div>
-<h2 id="kůň-převalského"><span class="header-section-number">3.3</span> Kůň Převalského</h2>
+<h2 data-number="3.3" id="kůň-převalského"><span class="header-section-number">3.3</span> Kůň Převalského</h2>
 <figure>
-<img src="prevalski.jpg" alt="Kůň Převalského" /><figcaption>Kůň Převalského</figcaption>
+<img src="prevalski.jpg" alt="" /><figcaption>Kůň Převalského</figcaption>
 </figure>
 <p>Kůň Převalského je divoký kůň ze střední Asie, jediný druh koně, který nebyl domestikován. V divočině jsou tyto koně loveni vlky. Napište matematický model založený na následujících předpokladech.</p>
 <ol type="1">
@@ -238,7 +239,7 @@ window.MathJax = {
 % https://homepages.bluffton.edu/~nesterd/apps/compartmentalanalysis.html?O&S,29,F,80,10;H,0,T,290,100;M,0,T,130,200;R,0,T,325,280;O,0,T,490,230&S,H,S*15/2900;M,H,M*38/1180;H,R,H*68/850;R,O,R*85/116;O,s,O*99/393&The%20compartments%20represent%20levels%20of%20some%20pollutant%20in%20the%20Great%20Lakes.%20%28R%20%3D%20Erie%2C%20because%20E%20is%20not%20an%20allowed%20variable%20name.%29%20The%20model%20assumes%20that%20the%20initial%20concentration%20of%20the%20pollutant%20is%20the%20same%20in%20all%20the%20lakes%2C%20so%20the%20initial%20value%20is%20proportional%20to%20the%20lake%27s%20volume.%20No%20more%20of%20that%20pollutant%20is%20being%20introduced%2C%20and%20pure%20%28rain%29%20water%20flows%20in%20to%20the%20lakes%2C%20with%20the%20resulting%20mixture%20flowing%20from%20each%20lake%20into%20the%20next%2C%20and%20eventually%20to%20the%20ocean.%20From%20Fundamentals%20of%20Differential%20Equations%20%28Nagle%20and%20Saff%2C%201996%29%2C%20page%20317.
 
 -->
-<h1 id="analýza-2d-systému-pomocí-vlastních-čísel"><span class="header-section-number">4</span> Analýza 2D systému pomocí vlastních čísel</h1>
+<h1 data-number="4" id="analýza-2d-systému-pomocí-vlastních-čísel"><span class="header-section-number">4</span> Analýza 2D systému pomocí vlastních čísel</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/bEc6CTxRB3g"></iframe> </div>
 <p>Autonomní systém <span class="math display">\[
 \begin{aligned}

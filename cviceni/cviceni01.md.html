@@ -114,7 +114,7 @@ window.MathJax = {
 <li>Základním modelem postaveným na parciálních derivacích je rovnice vedení tepla v jedné dimenzi. V tomto případě spád teploty podél jednorozměrné tyče vyvolá tok tepla. Změny v toku tepla v různých místech tyče zase určují, jestli se mezi těmito průřezy teplo kumuluje, ubývá, či zachovává. Tento fakt ovlivní teplotu v daném místě a ta zase má vliv na spád teploty podél tyče. Tím se uzavře jakási zpětná vazba řídící celý proces. Situace je dostatečně jednoduchá na představu, ideální pro popis pomocí parciálních derivací a současně dostatečně obecná, aby se později dala zobecnit je libovolný transportní děj přenášející energii nebo hmotu. Abychom formulaci co nejlépe porozuměli a za možná děsivě vyhlížejícími symboly viděli opravdu vyjádření používaná v tomto odstavci, ještě jednou si rovnici tepla rozebereme. Ať již z hlediska slovní interpretace jednotlivých členů, či z hlediska formulace okrajových podmínek pro zachycení vlivu okolního prostředí.</li>
 </ul>
 </blockquote>
-<h1 id="výpočet-pomocí-vzorců"><span class="header-section-number">1</span> Výpočet pomocí vzorců</h1>
+<h1 data-number="1" id="výpočet-pomocí-vzorců"><span class="header-section-number">1</span> Výpočet pomocí vzorců</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/KykczBw2Kcg"></iframe> </div>
 <p>Vypočtěte následující parciální derivace.</p>
 <ol type="1">
@@ -143,10 +143,10 @@ window.MathJax = {
 <a onclick="otevrit('problems/parcialni_derivace/parcialni_derivace.pg');" target="_blank" class="WWotazka">WW-otázka</a>
 <a onclick="otevrit('problems/parcialni_derivace/parcialni_derivace_s_parametrem.pg');" target="_blank" class="WWotazka">WW-otázka</a>
 <a onclick="otevrit('problems/parcialni_derivace/parcialni_derivace_druheho_radu.pg');" target="_blank" class="WWotazka">WW-otázka</a>
-<h1 id="parciální-derivace-pocitová-teplota-analyticky"><span class="header-section-number">2</span> Parciální derivace, pocitová teplota analyticky</h1>
+<h1 data-number="2" id="parciální-derivace-pocitová-teplota-analyticky"><span class="header-section-number">2</span> Parciální derivace, pocitová teplota analyticky</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/VdtIj5TGBZE"></iframe> </div>
 <figure>
-<img src="blizzard.jpg" alt="Zdroj: pixabay.com" /><figcaption>Zdroj: pixabay.com</figcaption>
+<img src="blizzard.jpg" alt="" /><figcaption>Zdroj: pixabay.com</figcaption>
 </figure>
 <p>Kanadský empirický vzorec pro pocitovou teplotu v zimě (wind chill factor) je nesmírně důležitý vzorec, který v drsných severských podmínkách rozhoduje o přežití. Je založen na tom, že pocitově je teplota vnímána i podle intenzity větru. Tento odjakživa známý efekt byl v roce 2001 proměřen a původní vzorec z roku 1961 byl nahrazen vzorcem <span class="math display">\[
 W(T,v) = 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},
@@ -164,7 +164,7 @@ W(T,v) = 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},
 \]</span> Za dané teploty a rychlosti větru je pocitová teplota <span class="math inline">\(\displaystyle -20.2\)</span> stupňů Celsia. Nárůst teploty o jeden stupeň způsobí nárůst pocitové teploty přibližně o <span class="math inline">\(\displaystyle 1.3\)</span> stupně. Tedy změna teploty se projeví na pocitové teplotě <span class="math inline">\(\displaystyle 1.3\)</span>-násobkem. K každou změnu teploty vnímáme o třicet procent intenzivněji.</p>
 <p>Hodnota derivace podle rychlosti větru říká, že zesílení větru o jeden kilometr za hodinu způsobí snížení pocitové teploty přibližně o <span class="math inline">\(\displaystyle 0.16\)</span> stupně.</p>
 </div>
-<h1 id="pocitová-teplota-numericky"><span class="header-section-number">3</span> Pocitová teplota numericky</h1>
+<h1 data-number="3" id="pocitová-teplota-numericky"><span class="header-section-number">3</span> Pocitová teplota numericky</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/J0pTAxDwZj8"></iframe> </div>
 <p><img src="air-temperature.jpg" /></p>
 <p>Běžný kanaďan nenosí kalkulačku a nepočítá pocitovou teplotu z minulého příkladu pomocí výše uvedeného vzorce, ale má tabulku jako je na obrázku. Nám tato tabulka poslouží jako model funkce dvou proměnných zadané funkčními hodnotami v konečném počtu bodů.</p>
@@ -180,10 +180,10 @@ W(T,v) = 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},
 <li>Pokud se díváme na data po sloupcích, s rostoucí silou větru jsou skoky menší a proto parciální derivace podle větru s rostoucí rychlostí větru klesá. To potvrzuje i analytický výpočet, protože u rychlosti je mocnina menší než jedna a ta se po zderivování změní na zápornou mocninu. Tím se změní charakter závislosti na rychlosti větru. Fyzikálně vítr odfoukává izolační mikrovrstvu vzduchu kolem tváře nebo těla a proto cítíme ve větším větru větší chlad. Pokud je vítr silný, nestačí se tato mikrovrstva vytvořit ani v minimální míře a proto je jedno, jestli fouká hodně nebo ještě více.</li>
 </ol>
 </div>
-<h1 id="parciální-derivace-tepelná-kapacita-dřeva"><span class="header-section-number">4</span> Parciální derivace, tepelná kapacita dřeva</h1>
+<h1 data-number="4" id="parciální-derivace-tepelná-kapacita-dřeva"><span class="header-section-number">4</span> Parciální derivace, tepelná kapacita dřeva</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/PjPYisnQa0A"></iframe> </div>
 <figure>
-<img src="wood_heat_capacity.png" alt="Zdroj: Wood handbook" /><figcaption>Zdroj: Wood handbook</figcaption>
+<img src="wood_heat_capacity.png" alt="" /><figcaption>Zdroj: Wood handbook</figcaption>
 </figure>
 <p>Vypočtěte a slovně interpretujte parciální derivaci měrné tepelné kapacity dřeva <span class="math inline">\(\displaystyle c\)</span> podle teploty <span class="math inline">\(\displaystyle T\)</span> a podle obsahu vody MC <span class="math inline">\(\displaystyle w\)</span> v bodě o hodnotě MC 12% a teplotě <span class="math inline">\(\displaystyle 27^\circ\mathrm C\)</span>.</p>
 <p>Pro obě derivace použijte dopřednou diferenci (v tabulce nejsou ekvidistantní kroky MC).</p>
@@ -197,7 +197,7 @@ W(T,v) = 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},
 \frac{f(x+h)-f(x-h)}{2h}
 \]</span></p>
 </div>
-<h1 id="veličiny-z-rovnice-vedení-tepla"><span class="header-section-number">5</span> Veličiny z rovnice vedení tepla</h1>
+<h1 data-number="5" id="veličiny-z-rovnice-vedení-tepla"><span class="header-section-number">5</span> Veličiny z rovnice vedení tepla</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/YvAFRS8zeos"></iframe> </div>
 <p>V případech, kdy je při tepelné výměně nutno uvažovat vedení tepla (vysoké Biotovo číslo), modelujeme změnu teploty podle rovnice vedení tepla, kterou jsme na přednášce odvodili pro jednorozměrný případ ve tvaru <span class="math display">\[\varrho c \frac{\partial T}{\partial t}=\frac{\partial}{\partial x}\Bigl(\lambda\frac{\partial T}{\partial x}\Bigr).\]</span> Typickým případem vedení tepla v jedné dimenzi je vedení tepla ve stěně. <strong>Důležitou vlastností rovnice je, že je stále stejná, ať teplo teče doleva nebo doprava, ať způsobuje ohřev nebo ochlazování, ať tok tepla sílí nebo slábne. Tyto skutečnosti přirozeně rozlišujeme znaménkem. Abychom dokázali úlohu správně zadat nebo abychom dokázali správně interpretovat řešení, je nutné znaménka správně interpretovat a proto si vše ukážeme v následujícím příkladu.</strong></p>
 <p>Uvažujme jednorozměrnou úlohu s vedením tepla. Osa <span class="math inline">\(\displaystyle x\)</span> směřuje doprava, teplota v bodě <span class="math inline">\(\displaystyle x\)</span> a čase <span class="math inline">\(\displaystyle t\)</span> je <span class="math inline">\(\displaystyle T(x,t)\)</span> ve stupních Celsia. Tok tepla v čase <span class="math inline">\(\displaystyle t\)</span> a v bodě <span class="math inline">\(\displaystyle x\)</span> je <span class="math inline">\(\displaystyle q(x,t)\)</span> v joulech za sekundu. Kladný tok je ve směru osy <span class="math inline">\(\displaystyle x\)</span>. Podle Fourierova zákona je <span class="math display">\[q=-\lambda \frac{\partial T}{\partial x}.\]</span></p>
@@ -220,7 +220,7 @@ W(T,v) = 13.12+0.6215 T-11.37 v^{0.16}+0.3965 T v^{0.16},
 <li>Rychlost, se kterou klesá (směrem doprava) tok tepla jako funkce polohy je <span class="math inline">\(\displaystyle -\frac {\partial q}{\partial x}\)</span> a tato veličina je kladná, což plyne z předchozího bodu a z toho, že jsme změnili znaménko. Měříme v joulech za sekundu na metr. <span class="math inline">\(\displaystyle \left[-\frac {\partial q}{\partial x}\right]=\mathrm{J}\,\mathrm{s}^{-1}\,\mathrm{m}^{-1}\)</span> Tato veličina udává, kolik tepla se za jednotku času ubude v toku na metrovém úseku tyče. Ze zákona zachování energie se toto teplo nemůže ``ztratit’’, ale použije se na zvýšení teploty, což je vyjádřeno právě v rovnici vedení tepla.</li>
 </ol>
 </div>
-<h1 id="okrajové-podmínky-pro-rovnici-vedení-tepla"><span class="header-section-number">6</span> Okrajové podmínky pro rovnici vedení tepla</h1>
+<h1 data-number="6" id="okrajové-podmínky-pro-rovnici-vedení-tepla"><span class="header-section-number">6</span> Okrajové podmínky pro rovnici vedení tepla</h1>
 <div class="Ycontainer"> <iframe class="responsive-iframe" src="https://www.youtube.com/embed/8OMwzxEZSvU"></iframe> </div>
 <p>K modelu stěny pomocí rovnice vedení tepla je ještě nutné přidat podmínky související s počátečním stavem (počáteční podmínky) a s chováním na okrajích (okrajové podmínky).</p>
 <p>Nechť stěna je na intervalu <span class="math inline">\(\displaystyle x\in[0,L]\)</span>, <span class="math inline">\(\displaystyle x=0\)</span> je vnitřní okraj a <span class="math inline">\(\displaystyle x=L\)</span> je vnější okraj. Výraz <span class="math inline">\(\displaystyle -k\frac{\partial T}{\partial x}\)</span> udává tok tepla ve směru osy <span class="math inline">\(\displaystyle x\)</span>. Tok ve směru osy <span class="math inline">\(\displaystyle x\)</span> má kladné znaménko. Naformulujte okrajové podmínky v následujících scénářích.</p>
