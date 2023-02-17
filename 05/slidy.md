@@ -151,7 +151,7 @@ th {
 |----------------|-----------------------------------------|
 |$1$ | délka křivky $C$|
 |lineární hustota $\tau(x,y)$ | hmotnost $m_C$ křivky $C$|
-|$\frac {1}{m_C}[x\tau(x,y),y\tau(xy)]$| souřadnice těžiště křivky $C$ |
+|$\frac {1}{m_C}[x\tau(x,y),y\tau(x,y)]$| souřadnice těžiště křivky $C$ |
 |$x^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $y$|
 |$y^2\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k  ose $x$|
 |$\rho^2(x,y)\tau(x,y)$| moment setrvačnosti křivky $C$ vzhledem k obecné ose, kde $\rho(x,y)$ je vzdálenost bodu $[x,y]$ od osy otáčení.|
